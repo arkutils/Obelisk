@@ -1,0 +1,1571 @@
+{
+	"version": "305.13.1577517190",
+	"format": "1",
+	"mod": {
+		"id": "1734595558",
+		"tag": "Pyria2",
+		"title": "Pyria: The Second Chapter"
+	},
+	"species": [
+		{
+			"name": "Xolotl",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/DragonKing/Xolotl/Xolotl_Character_BP.Xolotl_Character_BP_C",
+			"dinoNameTag": "Ryu",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 3000,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"swim": { "base": 1600 }
+			},
+			"movementD": {
+				"swim": { "base": 1600 }
+			},
+			"attack": {
+				"defaultDmg": 115,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 435, "radius": 500, "stamina": 0 },
+					{
+						"name": "BoulderThrow", "interval": 15, "dmg": 0, "radius": 0, "stamina": 830,
+						"isProjectile": true
+					},
+					{ "name": "NeccSwing", "interval": 5, "dmg": 480, "radius": 600, "stamina": 0 },
+					{ "name": "TailAttack", "interval": 0.4, "dmg": 120, "radius": 400, "stamina": 0 },
+					{ "name": "Breath", "interval": 30, "dmg": 0, "radius": 0, "stamina": 1200 },
+					{ "name": "Roar/Instruct", "interval": 0.4, "dmg": 480, "radius": 400, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Fae Warrior",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/FaeWarrior/FaeWarrior_Character_BP.FaeWarrior_Character_BP_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Berserker",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 165,
+			"dragWeight": 120,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 280, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Charolette",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Heretic/Char/MegaWyvern_Character_BP_Pyria.MegaWyvern_Character_BP_Pyria_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 210,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 200, "radius": 495, "stamina": 10 },
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 150, "radius": 2000, "stamina": 2 }
+				]
+			}
+		},
+		{
+			"name": "Charolette",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Heretic/Char/MegaWyvern_Character_BP_PyriaTamed.MegaWyvern_Character_BP_PyriaTamed_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 700,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 210,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 200, "radius": 495, "stamina": 10 },
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 150, "radius": 2000, "stamina": 2 },
+					{ "name": "Taunt", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Stygian Drachenthorn",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Heretic/DrachenThorn_Character_bp_Child.DrachenThorn_Character_bp_Child_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1200 },
+				"fly": { "base": 1300, "sprint": 1040 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1200 },
+				"fly": { "base": 1300, "sprint": 1040 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 85, "radius": 220, "stamina": 0 },
+					{
+						"name": "BiteNomFury", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			}
+		},
+		{
+			"name": "Eilerris Ophan",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Heretic/Eminence_Character_BP_General_Eilerris.Eminence_Character_BP_General_Eilerris_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Berserker",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 2000,
+			"dragWeight": 180,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isBossDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 75, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 3, "dmg": 100, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 6, "dmg": 120, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 8, "dmg": 135, "radius": 200, "stamina": 0 },
+					{ "name": "None", "interval": 200, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Saenyra Amiti",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Heretic/Eminence_Character_BP_General_Saenyra.Eminence_Character_BP_General_Saenyra_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Berserker",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 2000,
+			"dragWeight": 180,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isBossDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 100, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 3, "dmg": 120, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 6, "dmg": 135, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 8, "dmg": 135, "radius": 200, "stamina": 0 },
+					{ "name": "None", "interval": 200, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Ertossi Zariel",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Heretic/Heretic_Character_BP.Heretic_Character_BP_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Berserker",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 2000,
+			"dragWeight": 12000,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isBossDino",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1800 },
+				"fly": { "base": 600 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1800 },
+				"fly": { "base": 600 },
+				"swim": { "base": 600 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Dark Blades", "interval": 0.2, "dmg": 600, "radius": 240, "stamina": 0 },
+					{ "name": "Consuming Claw", "interval": 0.2, "dmg": 700, "radius": 240, "stamina": 0 },
+					{ "name": "Dark Flame", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Dark Lightning", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Finger of Death", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Einherjar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Darkest Night", "interval": 0.2, "dmg": 999999999, "radius": 2000, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Einherjar",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Heretic/Heretic_Character_BP_EinTwin.Heretic_Character_BP_EinTwin_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Berserker",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 2000,
+			"dragWeight": 12000,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isBossDino"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 600 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 300, "radius": 500, "stamina": 0 },
+					{ "name": "Melee", "interval": 60, "dmg": 300, "radius": 500, "stamina": 0 },
+					{ "name": "Melee", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee", "interval": 40, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Ash Plume Rock Drake",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Heretic/RockDrake_Character_BP_Ashen_Child.RockDrake_Character_BP_Ashen_Child_C",
+			"dinoNameTag": "RockDrake",
+			"customTag": "RockDrake",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 345,
+			"dragWeight": 425,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isCarnivore",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 10,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 520, "sprint": 1820 },
+				"swim": { "base": 480 }
+			},
+			"movementD": {
+				"walk": { "base": 585, "sprint": 2047.5 },
+				"swim": { "base": 540 }
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 600,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 75, "radius": 600, "stamina": 20 },
+					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 270, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 170, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 75, "radius": 900, "stamina": 20 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 60, "radius": 650, "stamina": 20 }
+				]
+			}
+		},
+		{
+			"name": "Origin Manticore",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Heretic/ShadCore_Character_bp_Child.ShadCore_Character_bp_Child_C",
+			"dinoNameTag": "Manticore",
+			"customTag": "Shadcore",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 1750 },
+				"fly": { "base": 700, "sprint": 560 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 1750 },
+				"fly": { "base": 700, "sprint": 560 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 50, "radius": 280, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 5, "dmg": 80, "radius": 1600, "stamina": 500 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 46, "radius": 280, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 1, "dmg": 53, "radius": 340, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0, "dmg": 50, "radius": 300, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Dimorphodon",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Titania.Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Titania_C",
+			"dinoNameTag": "Dimorph",
+			"customTag": "Dimorph",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 70,
+			"dragWeight": 70,
+			"flags": [ "canBeDragged", "canBeTorpid", "isBossDino", "isFlyerDino" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 1000 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 1000 },
+				"swim": { "base": 400 }
+			},
+			"attack": {
+				"defaultDmg": 23,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 23, "radius": 200, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Alpha Fulgur Carnotaurus",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/MegaCarno_Character_BP_Fulgur_Titania.MegaCarno_Character_BP_Fulgur_Titania_C",
+			"dinoNameTag": "Carno",
+			"customTag": "Carno",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 222,
+			"dragWeight": 450,
+			"flags": [ "allowRiding", "canBeDragged", "canDrag" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 550, "sprint": 1925 }
+			},
+			"movementD": {
+				"walk": { "base": 550, "sprint": 1925 }
+			},
+			"attack": {
+				"defaultDmg": 80,
+				"defaultSwingRadius": 180,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 50, "radius": 180, "stamina": 0 },
+					{ "name": "Gore", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Gore", "interval": 15, "dmg": 60, "radius": 700, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Alpha Infernal Tyrannosaurus",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/MegaRex_Character_BP_Infernal_Titania.MegaRex_Character_BP_Infernal_Titania_C",
+			"dinoNameTag": "Rex",
+			"customTag": "Rex",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 2002 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 2002 }
+			},
+			"attack": {
+				"defaultDmg": 170,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "None", "interval": 0.3, "dmg": 100, "radius": 450, "stamina": 0 },
+					{ "name": "None", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.5, "dmg": 1, "radius": 2600, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Orthros",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/Orthros_Character_bp_Titania.Orthros_Character_bp_Titania_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1800 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1800 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 45, "radius": 200, "stamina": 0 },
+					{ "name": "HeadSlam", "interval": 1.3, "dmg": 58, "radius": 200, "stamina": 0 },
+					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Titania",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/Titania_Character_BP.Titania_Character_BP_C",
+			"dinoNameTag": "Zenith",
+			"customTag": "Offhand",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 165,
+			"dragWeight": 580,
+			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isBigDino" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "MeleeSpin", "interval": 0.3, "dmg": 70, "radius": 450, "stamina": 0 },
+					{ "name": "Hallucinate", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "RangedBlast", "interval": 4, "dmg": 70, "radius": 450, "stamina": 0 },
+					{ "name": "SummonDimos", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "SummonOrthros", "interval": 120, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "SummonElement", "interval": 400, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BigHeal", "interval": 120, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Lycan Bastion",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Bastion/Bastion_Character_BP.Bastion_Character_BP_C",
+			"dinoNameTag": "Paladin",
+			"customTag": "",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 165,
+			"dragWeight": 500,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 800 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 60, "radius": 350, "stamina": 0 },
+					{ "name": "Melee", "interval": 15, "dmg": 50, "radius": 300, "stamina": 0 },
+					{ "name": "Melee", "interval": 220, "dmg": 50, "radius": 300, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Tveir Aurrean",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Druden/Druden_Character_BP.Druden_Character_BP_C",
+			"dinoNameTag": "Paladin",
+			"customTag": "Offhand",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 165,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBossDino"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 1100 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 1100 },
+				"swim": { "base": 600 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "SwordSwings", "interval": 0.2, "dmg": 500, "radius": 220, "stamina": 0 },
+					{ "name": "Ranged", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "SMITE", "interval": 30, "dmg": 4850, "radius": 750, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Lycan Glaiver",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Glaiver/Glaiver_Character_BP.Glaiver_Character_BP_C",
+			"dinoNameTag": "Paladin",
+			"customTag": "Offhand",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 165,
+			"dragWeight": 120,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 1600 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 1600 },
+				"swim": { "base": 600 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 42, "radius": 220, "stamina": 0 },
+					{ "name": "HitRider", "interval": 3, "dmg": 52, "radius": 120, "stamina": 0 },
+					{ "name": "BlockingAdvance", "interval": 15, "dmg": 42, "radius": 220, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Lycan Templar",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Templar/Templar_Character_BP.Templar_Character_BP_C",
+			"dinoNameTag": "Paladin",
+			"customTag": "Offhand",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 165,
+			"dragWeight": 120,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 800 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 800 },
+				"swim": { "base": 600 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "SingleSwing", "interval": 0.2, "dmg": 38, "radius": 220, "stamina": 0 },
+					{ "name": "ShieldStab", "interval": 3, "dmg": 45, "radius": 120, "stamina": 0 },
+					{ "name": "Spin2Win", "interval": 8, "dmg": 42, "radius": 220, "stamina": 0 },
+					{ "name": "HitterCombo", "interval": 5, "dmg": 48, "radius": 220, "stamina": 0 },
+					{ "name": "CancelCounter", "interval": 800, "dmg": 60, "radius": 220, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Lycan Vanguard",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Vanguard/Vanguard_Character_BP.Vanguard_Character_BP_C",
+			"dinoNameTag": "Paladin",
+			"customTag": "",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 165,
+			"dragWeight": 300,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 800 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 85, "radius": 250, "stamina": 0 },
+					{ "name": "Melee", "interval": 2, "dmg": 62, "radius": 250, "stamina": 350 },
+					{ "name": "HitRider", "interval": 15, "dmg": 160, "radius": 250, "stamina": 620 }
+				]
+			}
+		},
+		{
+			"name": "Dark Lord",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/NearKin/DarkLord/DarkLord_Character_BP.DarkLord_Character_BP_C",
+			"dinoNameTag": "Orc",
+			"customTag": "Orc",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 223.2, "sprint": 669.6 }
+			},
+			"movementD": {
+				"walk": { "base": 223.2, "sprint": 669.6 }
+			},
+			"attack": {
+				"defaultDmg": 33,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "None", "interval": 0.08, "dmg": 650, "radius": 240, "stamina": 0 },
+					{ "name": "None", "interval": 0.08, "dmg": 725, "radius": 240, "stamina": 0 },
+					{ "name": "None", "interval": 0.08, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Lesser Titan",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Unknown/LesserTitan/LesserTitan_Character_BP.LesserTitan_Character_BP_C",
+			"dinoNameTag": "RockElemental",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 50000,
+			"dragWeight": 5900,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1000, "sprint": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 1000, "sprint": 3000 }
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "ArmSlams", "interval": 0.4, "dmg": 940, "radius": 1000, "stamina": 0 },
+					{ "name": "BigArmSlam", "interval": 15, "dmg": 1800, "radius": 1000, "stamina": 0 },
+					{ "name": "BigLeap", "interval": 5, "dmg": 2500, "radius": 1000, "stamina": 0 },
+					{ "name": "FireBreath", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "FireBreathRain", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Alicorn",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/Alicorn/Alicorn_Character_bp.Alicorn_Character_bp_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Pyria",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 400,
+			"dragWeight": 125,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 2100 },
+				"fly": { "base": 800, "sprint": 480 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 2100 },
+				"fly": { "base": 800, "sprint": 480 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0, "dmg": 35, "radius": 200, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 15, "dmg": 0, "radius": 0, "stamina": 370 },
+					{ "name": "BiteNomFury", "interval": 0, "dmg": 40, "radius": 200, "stamina": 40 }
+				]
+			}
+		},
+		{
+			"name": "Arduros",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/Arduros/Arduros_character_bp.Arduros_character_bp_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 200,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 180, "sprint": 900 },
+				"fly": { "base": 540, "sprint": 324 },
+				"swim": { "base": 180 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1500 },
+				"fly": { "base": 900, "sprint": 540 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.3, "dmg": 45, "radius": 280, "stamina": 0 },
+					{ "name": "Claws", "interval": 2, "dmg": 40, "radius": 280, "stamina": 0 },
+					{ "name": "SWEEP", "interval": 8, "dmg": 40, "radius": 280, "stamina": 0 },
+					{ "name": "TailWhip", "interval": 8, "dmg": 38, "radius": 280, "stamina": 0 },
+					{ "name": "RawrMF", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Iridomex",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/Iridomex/Iridomex_Character_bp.Iridomex_Character_bp_C",
+			"dinoNameTag": "Arthropleura",
+			"customTag": "Pyria",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 450, "sprint": 2700 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 450, "sprint": 2700 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "HeadSlam", "interval": 5, "dmg": 55, "radius": 280, "stamina": 0 },
+					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Lava Golem",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/LavaGolem/LavaGolem_Character_BP_Pyria.LavaGolem_Character_BP_Pyria_C",
+			"dinoNameTag": "RockElemental",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 1920 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 1920 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 2400,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 0.4, "dmg": 200, "radius": 750, "stamina": 0 },
+					{
+						"name": "ThrowRock", "interval": 11, "dmg": 120, "radius": 1200, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "Swipe", "interval": 3, "dmg": 150, "radius": 750, "stamina": 25 }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Earth Wyvern",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/TrueWyvern/PyriaWyvern_Character_BP_Earth.PyriaWyvern_Character_BP_Earth_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 105, "radius": 400, "stamina": 0 },
+					{ "name": "FireBreath", "interval": 10, "dmg": 130, "radius": 450, "stamina": 450 },
+					{ "name": "FistSlam", "interval": 0.4, "dmg": 90, "radius": 450, "stamina": 0 },
+					{ "name": "TailAttacc", "interval": 0.4, "dmg": 80, "radius": 450, "stamina": 0 },
+					{ "name": "Grab", "interval": 0.4, "dmg": 0, "radius": 400, "stamina": 0 },
+					{ "name": "Dodge", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 300 }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Fire Wyvern",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/TrueWyvern/PyriaWyvern_Character_BP_Fire.PyriaWyvern_Character_BP_Fire_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 400, "stamina": 0 },
+					{ "name": "FireBreath", "interval": 10, "dmg": 0, "radius": 450, "stamina": 100 },
+					{ "name": "FistSlam", "interval": 0.4, "dmg": 70, "radius": 450, "stamina": 0 },
+					{ "name": "TailAttacc", "interval": 0.4, "dmg": 60, "radius": 450, "stamina": 0 },
+					{ "name": "Grab", "interval": 0.4, "dmg": 0, "radius": 400, "stamina": 0 },
+					{ "name": "Dodge", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 300 }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Ice Wyvern",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/TrueWyvern/PyriaWyvern_Character_BP_Ice.PyriaWyvern_Character_BP_Ice_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 400, "stamina": 0 },
+					{ "name": "FireBreath", "interval": 10, "dmg": 0, "radius": 450, "stamina": 100 },
+					{ "name": "FistSlam", "interval": 0.4, "dmg": 70, "radius": 450, "stamina": 0 },
+					{ "name": "TailAttacc", "interval": 0.4, "dmg": 60, "radius": 450, "stamina": 0 },
+					{ "name": "Grab", "interval": 0.4, "dmg": 0, "radius": 400, "stamina": 0 },
+					{ "name": "Dodge", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 300 }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Icebolt Wyvern",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/TrueWyvern/PyriaWyvern_Character_BP_Icebolt.PyriaWyvern_Character_BP_Icebolt_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 115, "radius": 400, "stamina": 0 },
+					{ "name": "FireBreath", "interval": 10, "dmg": 0, "radius": 450, "stamina": 100 },
+					{ "name": "FistSlam", "interval": 0.4, "dmg": 95, "radius": 450, "stamina": 0 },
+					{ "name": "TailAttacc", "interval": 0.4, "dmg": 85, "radius": 450, "stamina": 0 },
+					{ "name": "Grab", "interval": 0.4, "dmg": 0, "radius": 400, "stamina": 0 },
+					{ "name": "Dodge", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 300 },
+					{ "name": "CrossBreath", "interval": 10, "dmg": 0, "radius": 0, "stamina": 200 }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Lightning Wyvern",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/TrueWyvern/PyriaWyvern_Character_BP_Lightning.PyriaWyvern_Character_BP_Lightning_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 400, "stamina": 0 },
+					{ "name": "FireBreath", "interval": 10, "dmg": 0, "radius": 450, "stamina": 100 },
+					{ "name": "FistSlam", "interval": 0.4, "dmg": 70, "radius": 450, "stamina": 0 },
+					{ "name": "TailAttacc", "interval": 0.4, "dmg": 60, "radius": 450, "stamina": 0 },
+					{ "name": "Grab", "interval": 0.4, "dmg": 0, "radius": 400, "stamina": 0 },
+					{ "name": "Dodge", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 300 }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Poison Wyvern",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/TrueWyvern/PyriaWyvern_Character_BP_Poison.PyriaWyvern_Character_BP_Poison_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 400, "stamina": 0 },
+					{ "name": "FireBreath", "interval": 10, "dmg": 0, "radius": 450, "stamina": 100 },
+					{ "name": "FistSlam", "interval": 0.4, "dmg": 70, "radius": 450, "stamina": 0 },
+					{ "name": "TailAttacc", "interval": 0.4, "dmg": 60, "radius": 450, "stamina": 0 },
+					{ "name": "Grab", "interval": 0.4, "dmg": 0, "radius": 400, "stamina": 0 },
+					{ "name": "Dodge", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 300 }
+				]
+			}
+		},
+		{
+			"name": "Template Wyvern",
+			"blueprintPath": "/Game/Mods/Pyria2/Creatures/Wildlife/TrueWyvern/PyriaWyvern_Character_BP_Template.PyriaWyvern_Character_BP_Template_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2500 },
+				"fly": { "base": 1200, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 400, "stamina": 0 },
+					{ "name": "FireBreath", "interval": 10, "dmg": 0, "radius": 450, "stamina": 100 },
+					{ "name": "FistSlam", "interval": 0.4, "dmg": 70, "radius": 450, "stamina": 0 },
+					{ "name": "TailAttacc", "interval": 0.4, "dmg": 60, "radius": 450, "stamina": 0 },
+					{ "name": "Grab", "interval": 0.4, "dmg": 0, "radius": 400, "stamina": 0 },
+					{ "name": "Dodge", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 300 }
+				]
+			}
+		},
+		{
+			"name": "Skeletal Carnotaurus",
+			"blueprintPath": "/Game/Mods/Pyria2/PrimalEarth/Dinos/Carno/Bone_MegaCarno_Character_BP.Bone_MegaCarno_Character_BP_C",
+			"dinoNameTag": "Elite Carno",
+			"customTag": "Carno",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 467.5, "sprint": 1309 }
+			},
+			"movementD": {
+				"walk": { "base": 550, "sprint": 1540 }
+			},
+			"attack": {
+				"defaultDmg": 80,
+				"defaultSwingRadius": 180,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 80, "radius": 180, "stamina": 0 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 80, "radius": 190, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Skeletal Rex",
+			"blueprintPath": "/Game/Mods/Pyria2/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
+			"dinoNameTag": "Bone Rex",
+			"customTag": "Rex",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 377.5, "sprint": 1079.6 }
+			},
+			"movementD": {
+				"walk": { "base": 566.2, "sprint": 1619.5 }
+			},
+			"attack": {
+				"defaultDmg": 170,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "None", "interval": 0.3, "dmg": 170, "radius": 450, "stamina": 0 },
+					{ "name": "None", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Skeletal Bronto",
+			"blueprintPath": "/Game/Mods/Pyria2/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
+			"dinoNameTag": "Bronto",
+			"customTag": "Bronto",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 500,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 225, "sprint": 607.5 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 405 }
+			},
+			"attack": {
+				"defaultDmg": 90,
+				"defaultSwingRadius": 1000,
+				"attacks": [ { "name": "melee", "interval": 1.2, "dmg": 90, "radius": 1000, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Dodo Wyvern",
+			"blueprintPath": "/Game/Mods/Pyria2/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 1000,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventCharacterBasing",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 650, "sprint": 1300 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 650, "sprint": 1300 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite (AI)", "interval": 1, "dmg": 600, "radius": 1000, "stamina": 10 },
+					{
+						"name": "Breathe_Lightning", "interval": 6.5, "dmg": 0, "radius": 0, "stamina": 125,
+						"isProjectile": true
+					},
+					{ "name": "Breathe_Fire", "interval": 5, "dmg": 0, "radius": 0, "stamina": 125 },
+					{
+						"name": "Breathe_Poison", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					}
+				]
+			}
+		}
+	]
+}

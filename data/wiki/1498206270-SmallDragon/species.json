@@ -1,0 +1,93 @@
+{
+	"version": "305.13.1563727344",
+	"format": "1",
+	"mod": {
+		"id": "1498206270",
+		"tag": "SmallDragon",
+		"title": "Small Dragons!"
+	},
+	"species": [
+		{
+			"name": "Dino Flyer",
+			"blueprintPath": "/Game/Mods/SmallDragon/Dino_Character_BP_DivingDragonFlyer.Dino_Character_BP_DivingDragonFlyer_C",
+			"dinoNameTag": "Diving Flyer",
+			"customTag": "",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 900 },
+				"fly": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 900 },
+				"fly": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90
+			}
+		},
+		{
+			"name": "Small Dragon",
+			"blueprintPath": "/Game/Mods/SmallDragon/SmallDragon_Character_BP.SmallDragon_Character_BP_C",
+			"dinoNameTag": "Small Dragon",
+			"customTag": "Small Dragon",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 1000,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 330, "sprint": 990 },
+				"fly": { "base": 915, "sprint": 503.3 },
+				"swim": { "base": 60 }
+			},
+			"movementD": {
+				"walk": { "base": 552.8, "sprint": 1658.3 },
+				"fly": { "base": 1532.6, "sprint": 842.9 },
+				"swim": { "base": 100.5 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.75, "dmg": 75, "radius": 1200, "stamina": 30 },
+					{ "name": "Flame", "interval": 15, "dmg": 0, "radius": 1200, "stamina": 100 },
+					{ "name": "PickUp", "interval": 1, "dmg": 1, "radius": 370, "stamina": 30 },
+					{ "name": "WingAttack", "interval": 1, "dmg": 60, "radius": 2000, "stamina": 10 },
+					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 10 },
+					{ "name": "Swipe", "interval": 0.75, "dmg": 27, "radius": 1200, "stamina": 10 },
+					{ "name": "Divebomb", "interval": 2, "dmg": 185, "radius": 2000, "stamina": 30 },
+					{ "name": "Sweep", "interval": 1, "dmg": 27, "radius": 750, "stamina": 0 }
+				]
+			}
+		}
+	]
+}
