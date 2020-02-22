@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" class="creatureMap" style="position:absolute;">
+    <defs>
+        <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3" />
+        </filter>
+        <pattern id="pattern-untameable" width="10" height="10" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">'
+            <rect width="4" height="10" fill="black"></rect>
+        </pattern>
+        <filter id="groupStroke">
+            <feFlood result="outsideColor" flood-color="black"/>
+            <feMorphology in="SourceAlpha" operator="dilate" radius="2"/>
+            <feComposite result="strokeoutline1" in="outsideColor" operator="in"/>
+            <feComposite result="strokeoutline2" in="strokeoutline1" in2="SourceAlpha" operator="out"/>
+            <feGaussianBlur in="strokeoutline2" result="strokeblur" stdDeviation="1"/>
+        </filter>
+        <style>
+            .spawningMap-very-common { fill: #0F0; }
+            .spawningMap-common { fill: #B2FF00; }
+            .spawningMap-uncommon { fill: #FF0; }
+            .spawningMap-very-uncommon { fill: #FC0; }
+            .spawningMap-rare { fill: #F60; }
+            .spawningMap-very-rare { fill: #F00; }
+            .spawning-map-point { stroke:black; stroke-width:1; }
+        </style>
+    </defs>
+
+<g class="spawning-map-point" opacity="0.8">
+<g class="spawningMap-very-uncommon">
+<circle cx="258" cy="17" r="4" />
+<circle cx="230" cy="21" r="4" />
+<circle cx="230" cy="19" r="4" />
+<circle cx="226" cy="16" r="4" />
+<circle cx="225" cy="19" r="4" />
+<circle cx="226" cy="24" r="4" />
+<circle cx="215" cy="27" r="4" />
+<circle cx="257" cy="20" r="4" />
+<circle cx="251" cy="22" r="4" />
+<circle cx="246" cy="21" r="4" />
+<circle cx="241" cy="23" r="4" />
+</g>
+</g>
+</svg>

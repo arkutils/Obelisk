@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" class="creatureMap" style="position:absolute;">
+    <defs>
+        <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3" />
+        </filter>
+        <pattern id="pattern-untameable" width="10" height="10" patternTransform="rotate(135)" patternUnits="userSpaceOnUse">'
+            <rect width="4" height="10" fill="black"></rect>
+        </pattern>
+        <filter id="groupStroke">
+            <feFlood result="outsideColor" flood-color="black"/>
+            <feMorphology in="SourceAlpha" operator="dilate" radius="2"/>
+            <feComposite result="strokeoutline1" in="outsideColor" operator="in"/>
+            <feComposite result="strokeoutline2" in="strokeoutline1" in2="SourceAlpha" operator="out"/>
+            <feGaussianBlur in="strokeoutline2" result="strokeblur" stdDeviation="1"/>
+        </filter>
+        <style>
+            .spawningMap-very-common { fill: #0F0; }
+            .spawningMap-common { fill: #B2FF00; }
+            .spawningMap-uncommon { fill: #FF0; }
+            .spawningMap-very-uncommon { fill: #FC0; }
+            .spawningMap-rare { fill: #F60; }
+            .spawningMap-very-rare { fill: #F00; }
+            .spawning-map-point { stroke:black; stroke-width:1; }
+        </style>
+    </defs>
+
+<g filter="url(#blur)" opacity="0.7">
+<g class="spawningMap-common">
+<rect x="243" y="291" width="14" height="9" />
+<rect x="273" y="275" width="14" height="13" />
+<rect x="275" y="289" width="11" height="11" />
+<rect x="280" y="294" width="15" height="6" />
+</g>
+<g class="spawningMap-very-common">
+<rect x="216" y="280" width="8" height="7" />
+<rect x="279" y="280" width="8" height="11" />
+<rect x="279" y="286" width="8" height="9" />
+<rect x="214" y="281" width="8" height="8" />
+<rect x="214" y="283" width="8" height="8" />
+<rect x="217" y="285" width="8" height="8" />
+<rect x="219" y="288" width="8" height="9" />
+<rect x="220" y="291" width="8" height="9" />
+<rect x="223" y="294" width="11" height="6" />
+<rect x="226" y="295" width="17" height="5" />
+<rect x="235" y="289" width="10" height="11" />
+<rect x="239" y="288" width="14" height="9" />
+<rect x="251" y="291" width="9" height="9" />
+<rect x="261" y="295" width="18" height="5" />
+<rect x="263" y="286" width="11" height="10" />
+<rect x="268" y="276" width="11" height="12" />
+<rect x="266" y="282" width="13" height="10" />
+<rect x="273" y="284" width="12" height="11" />
+</g>
+</g>
+<g fill="url(#pattern-untameable)" opacity="0.3">
+<rect x="273" y="275" width="14" height="13"/>
+<rect x="275" y="289" width="11" height="11"/>
+<rect x="280" y="294" width="15" height="6"/>
+<rect x="216" y="280" width="8" height="7"/>
+<rect x="279" y="280" width="8" height="11"/>
+<rect x="279" y="286" width="8" height="9"/>
+<rect x="214" y="281" width="8" height="8"/>
+<rect x="214" y="283" width="8" height="8"/>
+<rect x="217" y="285" width="8" height="8"/>
+<rect x="219" y="288" width="8" height="9"/>
+<rect x="220" y="291" width="8" height="9"/>
+<rect x="223" y="294" width="11" height="6"/>
+<rect x="226" y="295" width="17" height="5"/>
+<rect x="235" y="289" width="10" height="11"/>
+<rect x="239" y="288" width="14" height="9"/>
+<rect x="251" y="291" width="9" height="9"/>
+<rect x="261" y="295" width="18" height="5"/>
+<rect x="263" y="286" width="11" height="10"/>
+<rect x="268" y="276" width="11" height="12"/>
+<rect x="266" y="282" width="13" height="10"/>
+<rect x="273" y="284" width="12" height="11"/>
+</g>
+<g filter="url(#groupStroke)" opacity="0.8">
+<rect x="243" y="291" width="14" height="9"/>
+<rect x="273" y="275" width="14" height="13"/>
+<rect x="275" y="289" width="11" height="11"/>
+<rect x="280" y="294" width="15" height="6"/>
+<rect x="216" y="280" width="8" height="7"/>
+<rect x="279" y="280" width="8" height="11"/>
+<rect x="279" y="286" width="8" height="9"/>
+<rect x="214" y="281" width="8" height="8"/>
+<rect x="214" y="283" width="8" height="8"/>
+<rect x="217" y="285" width="8" height="8"/>
+<rect x="219" y="288" width="8" height="9"/>
+<rect x="220" y="291" width="8" height="9"/>
+<rect x="223" y="294" width="11" height="6"/>
+<rect x="226" y="295" width="17" height="5"/>
+<rect x="235" y="289" width="10" height="11"/>
+<rect x="239" y="288" width="14" height="9"/>
+<rect x="251" y="291" width="9" height="9"/>
+<rect x="261" y="295" width="18" height="5"/>
+<rect x="263" y="286" width="11" height="10"/>
+<rect x="268" y="276" width="11" height="12"/>
+<rect x="266" y="282" width="13" height="10"/>
+<rect x="273" y="284" width="12" height="11"/>
+</g>
+</svg>
