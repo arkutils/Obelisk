@@ -1,5 +1,5 @@
 {
-	"version": "306.41.1578731044",
+	"version": "306.41.1582723095",
 	"format": "1",
 	"mod": {
 		"id": "893735676",
@@ -2142,6 +2142,127 @@
 				"resourceMult": 0.5
 			},
 			"statEffects": {}
+		},
+		{
+			"name": "Nova, the Destroyer Armor",
+			"description": "Equip a Nova, the Destroyer with this to gain armor.",
+			"blueprintPath": "/Game/Mods/AE/Dinos/DodoReaper/Armor/PrimalItemArmor_PFDestroyerReaperArmor.PrimalItemArmor_PFDestroyerReaperArmor_C",
+			"icon": "/Game/Mods/Primal_Fear/Armor/Dino_Armor_Icon/Armor_Icon.Armor_Icon",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Destroyer" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 72.4,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 475,
+						"type": "PrimalItemResource_Hide_Celestial_C"
+					},
+					{
+						"exact": false,
+						"qty": 475,
+						"type": "PrimalItemResource_Hide_Demonic_C"
+					},
+					{
+						"exact": false,
+						"qty": 1450,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 1625,
+						"type": "PrimalItemResource_ChitinOrKeratin_C"
+					},
+					{
+						"exact": false,
+						"qty": 1025,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_DestroyerSoul_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 72.4,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Fertilized Nova, the Destroyer Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"blueprintPath": "/Game/Mods/AE/Dinos/DodoReaper/Eggs/PrimalItemConsumable_Egg_Destroyer_Fertilized_V2.PrimalItemConsumable_Egg_Destroyer_Fertilized_V2_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 15,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 20
+				},
+				"health": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 20
+				},
+				"stamina": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 20
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AE/Dinos/DodoReaper/TamedVersion/Destroyer_Character_BP_Male_Tamed.Destroyer_Character_BP_Male_Tamed_C",
+				"temperature": [ 32, 34 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 0, 0, 0, 1 ]
+					},
+					"cyan": {
+						"intensity": 1.5,
+						"color": [ 0.981561, 0.00637, 1, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
 		},
 		{
 			"name": "Elemental Dragon Armor",
@@ -6555,73 +6676,6 @@
 			"statEffects": {}
 		},
 		{
-			"name": "Fertilized Dimetrodon Egg",
-			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/PrimalItemConsumable_Egg_Dimetrodon_FertilizedAE.PrimalItemConsumable_Egg_Dimetrodon_FertilizedAE_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 15,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Dimetro_Character_BP_AE.Dimetro_Character_BP_AE_C",
-				"temperature": [ 30, 34 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.7,
-						"color": [ 0.7, 0.7, 0.1, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.15, 0.85, 0.15, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
 			"name": "Fertilized Parasaur Egg",
 			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/PrimalItemConsumable_Egg_Para_Fertilized_AE.PrimalItemConsumable_Egg_Para_Fertilized_AE_C",
@@ -6678,140 +6732,6 @@
 					"cyan": {
 						"intensity": 1,
 						"color": [ 0.18, 0.372203, 0.9, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
-			"name": "Fertilized Argentavis Egg",
-			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/FlyerEggs/PrimalItemConsumable_Egg_Argent_FertilizedAE.PrimalItemConsumable_Egg_Argent_FertilizedAE_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Dino/Argent_Character_BP_AE.Argent_Character_BP_AE_C",
-				"temperature": [ 12, 13.5 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.420848, 0.8, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 1, 1, 1, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
-			"name": "Fertilized Pteranodon Egg",
-			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/FlyerEggs/PrimalItemConsumable_Egg_Ptero_FertilizedAE.PrimalItemConsumable_Egg_Ptero_FertilizedAE_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Dino/Ptero_Character_BP_AE.Ptero_Character_BP_AE_C",
-				"temperature": [ 29, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 2,
-						"color": [ 0.1, 0.31, 0.3, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.952024, 0.99, 0.1386, 1 ]
 					}
 				}
 			},
@@ -6890,73 +6810,6 @@
 			}
 		},
 		{
-			"name": "Fertilized Kairuku Egg",
-			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/PrimalItemConsumable_Egg_Kairuku_FertilizedAE.PrimalItemConsumable_Egg_Kairuku_FertilizedAE_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 3,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 20,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 5
-				},
-				"health": {
-					"value": 20,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 5
-				},
-				"stamina": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Kairuku_Character_BP_AE.Kairuku_Character_BP_AE_C",
-				"temperature": [ 22, 30 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.4, 0.4, 0.4, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.1, 0.19, 1, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
 			"name": "Fertilized Enlightened Oviraptor Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/PrimalItemConsumable_Egg_Oviraptor_Fertilized.PrimalItemConsumable_Egg_Oviraptor_Fertilized_C",
@@ -7021,6 +6874,50 @@
 				"stamina": 0.8,
 				"food": 0.8,
 				"weight": 0.3
+			}
+		},
+		{
+			"name": "Eternal Wyvern Saddle",
+			"description": "Equip a Wyvern with this to ride it. This will fit on all Eternal Wyverns.",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Wyverns/WyvernSaddle/PrimalItemArmor_EternalWyvernSaddle.PrimalItemArmor_EternalWyvernSaddle_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/Icons/SabertoothSaddle_Icon.SabertoothSaddle_Icon",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Normal" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 72.4,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 220,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 250,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 75,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 30,
+						"type": "PrimalItemResource_Silicon_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 72.4,
+				"time": 5,
+				"resourceMult": 0.5
 			}
 		},
 		{
@@ -26523,6 +26420,12 @@
 					"descriptionIndex": 2,
 					"duration": 3
 				}
+			},
+			"cookingStats": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05
 			}
 		},
 		{
@@ -42533,14 +42436,15 @@
 			}
 		},
 		{
-			"name": "Scarecrow",
-			"description": "Decorate your base with this scarecrow.  Guaranteed to scare the crows away.",
-			"blueprintPath": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_Scarecrow.PrimalItemStructure_Scarecrow_C",
-			"icon": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Scarecrow_Icon.Scarecrow_Icon",
-			"type": "Structure",
-			"folders": [ "Structures", "Halloween" ],
+			"name": "Bunny Egg",
+			"description": "Put it in a Cooking Pot to craft fun costumes or place on the ground as a festive decoration!",
+			"blueprintPath": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_EasterEgg.PrimalItemStructure_EasterEgg_C",
+			"icon": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/EasterEgg_Icon.EasterEgg_Icon",
+			"type": "Resource",
+			"folders": [],
 			"weight": 4,
 			"maxQuantity": 100,
+			"spoilage": { "time": 1209600 },
 			"durability": {
 				"min": 0,
 				"ignoreInWater": false
@@ -42552,7 +42456,7 @@
 				"productCount": 1,
 				"skillQualityMult": [ 0, 0.05 ]
 			},
-			"structureTemplate": "/Game/Mods/AE/PrimalEarth/Structures/Halloween/Structure_Scarecrow.Structure_Scarecrow_C"
+			"structureTemplate": "/Game/Mods/AE/PrimalEarth/Structures/Halloween/Sign_EasterEgg.Sign_EasterEgg_C"
 		},
 		{
 			"name": "Titanboa Egg",

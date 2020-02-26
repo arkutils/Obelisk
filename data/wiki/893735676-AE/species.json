@@ -1,5 +1,5 @@
 {
-	"version": "305.13.1578731044",
+	"version": "306.41.1582723095",
 	"format": "1",
 	"mod": {
 		"id": "893735676",
@@ -203,6 +203,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 100000,
 			"dragWeight": 20000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -241,6 +242,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 100000,
 			"dragWeight": 20000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -279,6 +281,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000000,
 			"dragWeight": 85,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -314,6 +317,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -660,6 +664,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 222,
 			"dragWeight": 250,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -822,6 +827,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -1413,6 +1419,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 950,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -2418,6 +2425,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
 			"dragWeight": 149,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
@@ -2583,6 +2591,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -2900,6 +2909,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 550,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -4235,6 +4245,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 800,
 			"dragWeight": 666,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -4413,6 +4424,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 4000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -4497,6 +4509,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 4000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canDrag",
@@ -4538,6 +4551,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 4000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -4569,6 +4583,188 @@
 						"isProjectile": true
 					},
 					{ "name": "Bite", "interval": 15, "dmg": 0, "radius": 850, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Reaper King",
+			"blueprintPath": "/Game/Mods/AE/Dinos/DodoReaper/Base/BaseXenomorph_Character_BP_Male.BaseXenomorph_Character_BP_Male_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 524.2, "sprint": 1467.9 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 5, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 52, "radius": 1000, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
+				]
+			}
+		},
+		{
+			"name": "Nova, the Destroyer",
+			"blueprintPath": "/Game/Mods/AE/Dinos/DodoReaper/Destroyer_Character_BP_Male.Destroyer_Character_BP_Male_C",
+			"dinoNameTag": "Destroyer",
+			"customTag": "Destroyer",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 525,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isBossDino",
+				"isCarnivore",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 2097, "sprint": 7129.8 }
+			},
+			"movementD": {
+				"walk": { "base": 1864, "sprint": 6337.6 }
+			},
+			"attack": {
+				"defaultDmg": 65,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 450000, "radius": 2400, "stamina": 0 },
+					{
+						"name": "Web Attack", "interval": 25, "dmg": 32000, "radius": 2400, "stamina": 7500,
+						"isProjectile": true
+					},
+					{ "name": "Tail Explosion", "interval": 30, "dmg": 1900000, "radius": 10000, "stamina": 15000 },
+					{
+						"name": "Tail spike", "interval": 10, "dmg": 32000, "radius": 2400, "stamina": 4500,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 2400, "stamina": 0 },
+					{ "name": "Fireballs", "interval": 10, "dmg": 0, "radius": 0, "stamina": 15000 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 16000, "radius": 800, "stamina": 5 },
+					{ "name": "Tail swipe", "interval": 4, "dmg": 900000, "radius": 4000, "stamina": 30 },
+					{ "name": "Summon Minions", "interval": 20, "dmg": 11700, "radius": 1500, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Destroyer Seeker Minion",
+			"blueprintPath": "/Game/Mods/AE/Dinos/DodoReaper/Minions/DestroyerPteroteuthis_Char_BP_Child.DestroyerPteroteuthis_Char_BP_Child_C",
+			"dinoNameTag": "CreatorSeeker",
+			"customTag": "CreatorSeeker",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 125,
+			"dragWeight": 150,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1050, "sprint": 1732.5 },
+				"fly": { "base": 2550 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 1050, "sprint": 1732.5 },
+				"fly": { "base": 2550 },
+				"swim": { "base": 240 }
+			},
+			"attack": {
+				"defaultDmg": 175,
+				"defaultSwingRadius": 555,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 550, "radius": 555, "stamina": 0 },
+					{ "name": "Claw", "interval": 1, "dmg": 550, "radius": 555, "stamina": 0 },
+					{ "name": "Charge Breath", "interval": 5, "dmg": 550, "radius": 600, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Nova, the Destroyer",
+			"blueprintPath": "/Game/Mods/AE/Dinos/DodoReaper/TamedVersion/Destroyer_Character_BP_Male_Tamed.Destroyer_Character_BP_Male_Tamed_C",
+			"dinoNameTag": "Destroyer",
+			"customTag": "Destroyer",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 525,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 2097, "sprint": 7129.8 }
+			},
+			"movementD": {
+				"walk": { "base": 1864, "sprint": 6337.6 }
+			},
+			"attack": {
+				"defaultDmg": 65,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 7500, "radius": 2400, "stamina": 0 },
+					{
+						"name": "Web Attack", "interval": 25, "dmg": 5500, "radius": 2400, "stamina": 7500,
+						"isProjectile": true
+					},
+					{ "name": "Tail Explosion", "interval": 30, "dmg": 10500, "radius": 10000, "stamina": 15000 },
+					{
+						"name": "Tail spike", "interval": 10, "dmg": 4500, "radius": 2400, "stamina": 4500,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 2400, "stamina": 0 },
+					{ "name": "Fireballs", "interval": 10, "dmg": 0, "radius": 0, "stamina": 15000 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 16000, "radius": 800, "stamina": 5 },
+					{ "name": "Tail swipe", "interval": 4, "dmg": 9000, "radius": 4000, "stamina": 30 },
+					{ "name": "Summon Minions", "interval": 20, "dmg": 0, "radius": 1500, "stamina": 0 }
 				]
 			}
 		},
@@ -11648,6 +11844,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 10000,
 			"dragWeight": 1200,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -11693,6 +11890,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 10000,
 			"dragWeight": 1200,
+			"variants": [ "Boss", "Hard" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -11738,6 +11936,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
 			"dragWeight": 1200,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -11780,6 +11979,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1200,
 			"dragWeight": 1000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
@@ -11824,6 +12024,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1200,
 			"dragWeight": 1000,
+			"variants": [ "Boss", "Hard" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
@@ -12888,6 +13089,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 90,
 			"dragWeight": 90,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -13869,14 +14071,14 @@
 				"swim": { "base": 825 }
 			},
 			"attack": {
-				"defaultDmg": 8000,
+				"defaultDmg": 540000,
 				"defaultSwingRadius": 1200,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 8000, "radius": 495, "stamina": 10 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 540000, "radius": 495, "stamina": 10 },
 					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 125 },
-					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
-					{ "name": "Taunt", "interval": 0, "dmg": 4000, "radius": 2000, "stamina": 2 },
-					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 8000, "radius": 614, "stamina": 10 }
+					{ "name": "Grab", "interval": 1, "dmg": 540000, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 540000, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 540000, "radius": 614, "stamina": 10 }
 				]
 			}
 		},
@@ -14092,6 +14294,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 300,
 			"dragWeight": 160,
+			"variants": [ "Boss" ],
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isBossDino" ],
 			"falling": {
 				"dmgMult": 5,
@@ -14119,6 +14322,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 300,
 			"dragWeight": 120,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canBeDragged",
@@ -14152,6 +14356,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 300,
 			"dragWeight": 160,
+			"variants": [ "Boss" ],
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isBossDino" ],
 			"falling": {
 				"dmgMult": 5,
@@ -14179,6 +14384,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 120,
 			"dragWeight": 110,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canBeDragged",
@@ -14215,6 +14421,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 50,
 			"dragWeight": 35,
+			"variants": [ "Boss" ],
 			"flags": [ "canBeDragged", "canDrag", "isBossDino" ],
 			"falling": {
 				"dmgMult": 80,
@@ -15636,6 +15843,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
 			"dragWeight": 1000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canBeDragged",
@@ -15672,6 +15880,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
 			"dragWeight": 1000,
+			"variants": [ "Boss", "Hard" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canBeDragged",
@@ -15747,6 +15956,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 4000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canDrag",
@@ -15785,6 +15995,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 4000,
+			"variants": [ "Boss", "Hard" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canDrag",
@@ -15826,6 +16037,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 4000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -15867,6 +16079,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 340,
 			"dragWeight": 400,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canBeDragged",
@@ -15901,6 +16114,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 340,
 			"dragWeight": 400,
+			"variants": [ "Boss", "Hard" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canBeDragged",
@@ -15935,6 +16149,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 330,
 			"dragWeight": 375,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -15970,6 +16185,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 330,
 			"dragWeight": 375,
+			"variants": [ "Boss", "Hard" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -16005,6 +16221,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 800,
 			"dragWeight": 555,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
@@ -16051,6 +16268,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 800,
 			"dragWeight": 555,
+			"variants": [ "Boss", "Hard" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
@@ -19334,39 +19552,6 @@
 			}
 		},
 		{
-			"name": "Harvestable Defense Unit",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Robot/Extinction/Defender_Character_BP_AE.Defender_Character_BP_AE_C",
-			"dinoNameTag": "EndTank",
-			"customTag": "EndTank",
-			"targetingTeamName": "Robot_Aggressive",
-			"mass": 225,
-			"dragWeight": 300,
-			"flags": [ "allowMountedWeaponry", "allowRiding", "canBeTorpid", "isCarnivore" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 325 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 325 },
-				"swim": { "base": 300 }
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.65, "dmg": 35, "radius": 200, "stamina": 0 },
-					{ "name": "Melee Slam", "interval": 6, "dmg": 35, "radius": 200, "stamina": 0 },
-					{ "name": "RollUp", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Unroll", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Melee Jump Attack", "interval": 10, "dmg": 30, "radius": 200, "stamina": 0 }
-				]
-			}
-		},
-		{
 			"name": "Eternal Robot Enforcer",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Robot/Extinction/Enforcer/Enforcer_Character_BP_AE.Enforcer_Character_BP_AE_C",
 			"dinoNameTag": "Enforcer_AE",
@@ -20402,6 +20587,7 @@
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 195,
 			"dragWeight": 120,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"canBeDragged",
@@ -20683,6 +20869,36 @@
 			}
 		},
 		{
+			"name": "Elemental Crystal Jug Bug",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Special/JugBugs/ElementalCrystal_Jugbug_Character_BP.ElementalCrystal_Jugbug_Character_BP_C",
+			"dinoNameTag": "Jugbug_Elem_Crystal",
+			"customTag": "Jugbug",
+			"targetingTeamName": "Herbivores",
+			"mass": 100,
+			"dragWeight": 30,
+			"flags": [ "canBeDragged", "canBeTorpid", "isFlyerDino" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 60, "sprint": 150 },
+				"fly": { "base": 120 }
+			},
+			"movementD": {
+				"walk": { "base": 60, "sprint": 150 },
+				"fly": { "base": 120 }
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [
+					{ "name": "Ground bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Fly bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Eternal Dino Blood Jug Bug",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Special/JugBugs/Jugbug_Character_BP_Blood.Jugbug_Character_BP_Blood_C",
 			"dinoNameTag": "Jugbug_DinoBlood",
@@ -20803,6 +21019,36 @@
 			}
 		},
 		{
+			"name": "Eternal Prime Blood Jug Bug",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Special/JugBugs/Jugbug_Character_BP_PrimeBlood.Jugbug_Character_BP_PrimeBlood_C",
+			"dinoNameTag": "Jugbug_PrimeBlood",
+			"customTag": "Jugbug",
+			"targetingTeamName": "Herbivores",
+			"mass": 100,
+			"dragWeight": 30,
+			"flags": [ "canBeDragged", "canBeTorpid", "isFlyerDino" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 60, "sprint": 150 },
+				"fly": { "base": 120 }
+			},
+			"movementD": {
+				"walk": { "base": 60, "sprint": 150 },
+				"fly": { "base": 120 }
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [
+					{ "name": "Ground bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Fly bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Eternal Token Jug Bug",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Special/JugBugs/Jugbug_Character_BP_Token.Jugbug_Character_BP_Token_C",
 			"dinoNameTag": "Jugbug_Token",
@@ -20864,8 +21110,8 @@
 		},
 		{
 			"name": "Eternal Lava Golem",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Special/LavaGolem/LavaGolem_Character_BP.LavaGolem_Character_BP_C",
-			"dinoNameTag": "LavaGolem",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Special/LavaGolem/LavaGolem_Character_BP_AE.LavaGolem_Character_BP_AE_C",
+			"dinoNameTag": "LavaGolem_AE",
 			"customTag": "RockElemental",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
@@ -21702,7 +21948,7 @@
 				"isFlyerDino"
 			],
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -21878,6 +22124,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 4000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -23485,76 +23732,6 @@
 			}
 		},
 		{
-			"name": "Ankylosaurus",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Ankylo_Character_BP_AE.Ankylo_Character_BP_AE_C",
-			"dinoNameTag": "Anky",
-			"customTag": "Anky",
-			"targetingTeamName": "Herbivores",
-			"mass": 300,
-			"dragWeight": 160,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 264 }
-			},
-			"movementD": {
-				"walk": { "base": 120, "sprint": 264 }
-			},
-			"attack": {
-				"defaultDmg": 50,
-				"defaultSwingRadius": 370,
-				"attacks": [
-					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.67, "dmg": 30, "radius": 250, "stamina": 0 },
-					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Ankylosaurus",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Ankylo_Character_BP_AE_NoHarvest.Ankylo_Character_BP_AE_NoHarvest_C",
-			"dinoNameTag": "Anky_NoHarvest",
-			"customTag": "Anky",
-			"targetingTeamName": "Herbivores",
-			"mass": 300,
-			"dragWeight": 160,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 264 }
-			},
-			"movementD": {
-				"walk": { "base": 120, "sprint": 264 }
-			},
-			"attack": {
-				"defaultDmg": 50,
-				"defaultSwingRadius": 370,
-				"attacks": [
-					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.67, "dmg": 30, "radius": 250, "stamina": 0 },
-					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 }
-				]
-			}
-		},
-		{
 			"name": "Corrupted Arthropluera",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/CorruptedRemaps/Arthro_Character_BP_Corrupt.Arthro_Character_BP_Corrupt_C",
 			"dinoNameTag": "Arthro Corrupt",
@@ -23562,6 +23739,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 160,
 			"dragWeight": 110,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -23602,6 +23780,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 222,
 			"dragWeight": 250,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -23638,6 +23817,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -23695,6 +23875,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 70,
 			"dragWeight": 35,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"canBeDragged",
 				"canBeTorpid",
@@ -23734,6 +23915,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 70,
 			"dragWeight": 70,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"canBeDragged",
 				"canBeTorpid",
@@ -23769,6 +23951,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 950,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -23807,6 +23990,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 360,
 			"dragWeight": 600,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -23845,6 +24029,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
 			"dragWeight": 149,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
@@ -23890,6 +24075,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -23931,6 +24117,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 550,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -23970,6 +24157,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 345,
 			"dragWeight": 425,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -24014,6 +24202,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 500,
 			"dragWeight": 550,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -24059,6 +24248,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 260,
 			"dragWeight": 250,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -24096,6 +24286,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -24136,6 +24327,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 800,
 			"dragWeight": 555,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
@@ -24186,6 +24378,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 385,
 			"dragWeight": 525,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -24230,106 +24423,6 @@
 			}
 		},
 		{
-			"name": "Dimetrodon",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dimetro_Character_BP_AE.Dimetro_Character_BP_AE_C",
-			"dinoNameTag": "Dimetro",
-			"customTag": "Dimetro",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 220,
-			"dragWeight": 170,
-			"flags": [
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isAmphibious",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 110, "sprint": 253 }
-			},
-			"movementD": {
-				"walk": { "base": 110, "sprint": 253 }
-			},
-			"attack": {
-				"defaultDmg": 20,
-				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "Melee", "interval": 0.1, "dmg": 20, "radius": 180, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Argentavis",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Argent_Character_BP_AE.Argent_Character_BP_AE_C",
-			"dinoNameTag": "Argent",
-			"customTag": "Argent",
-			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
-			"mass": 190,
-			"dragWeight": 150,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isFlyerDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 140.1, "sprint": 315.3 },
-				"fly": { "base": 323.3 },
-				"swim": { "base": 161.7 }
-			},
-			"movementD": {
-				"walk": { "base": 260, "sprint": 585 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
-			},
-			"attack": {
-				"defaultDmg": 20,
-				"defaultSwingRadius": 210,
-				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 20, "radius": 210, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 10, "radius": 200, "stamina": 120 }
-				]
-			}
-		},
-		{
-			"name": "Onyc",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Bat_Character_BP_AE.Bat_Character_BP_AE_C",
-			"dinoNameTag": "Bat_AE",
-			"customTag": "",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 190,
-			"dragWeight": 35,
-			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isFlyerDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 577.5 },
-				"fly": { "base": 350 },
-				"swim": { "base": 240 }
-			},
-			"movementD": {
-				"walk": { "base": 350, "sprint": 577.5 },
-				"fly": { "base": 350 },
-				"swim": { "base": 240 }
-			},
-			"attack": {
-				"defaultDmg": 35,
-				"defaultSwingRadius": 185,
-				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 35, "radius": 185, "stamina": 0 } ]
-			}
-		},
-		{
 			"name": "Carnotaurus",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Carno_Character_BP_Child.Carno_Character_BP_Child_C",
 			"dinoNameTag": "Carno",
@@ -24362,66 +24455,6 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.6, "dmg": 35, "radius": 110, "stamina": 0 },
 					{ "name": "Gore", "interval": 0.5, "dmg": 35, "radius": 120, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Dodo",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Dodo_Character_BP_AE.Dodo_Character_BP_AE_C",
-			"dinoNameTag": "Dodo",
-			"customTag": "Dodo",
-			"targetingTeamName": "Herbivores",
-			"mass": 50,
-			"dragWeight": 25,
-			"flags": [ "canBeDragged", "canBeTorpid", "canDrag" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 65, "sprint": 136.5 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 45.5, "sprint": 95.5 },
-				"swim": { "base": 210 }
-			},
-			"attack": {
-				"defaultDmg": 5,
-				"defaultSwingRadius": 90,
-				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Gasbags",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/GasBags_Character_BP_AE.GasBags_Character_BP_AE_C",
-			"dinoNameTag": "GasBags_AE",
-			"customTag": "GasBags",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 480,
-			"dragWeight": 300,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 2000
-			},
-			"movementW": {
-				"walk": { "base": 490 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 490 },
-				"swim": { "base": 300 }
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Melee", "interval": 1.5, "dmg": 5, "radius": 250, "stamina": 20 },
-					{ "name": "Inhale", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "ExhaleAttack", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Launch", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Inhale_AI", "interval": 3, "dmg": 0, "radius": 0, "stamina": 10 }
 				]
 			}
 		},
@@ -24467,73 +24500,6 @@
 					{ "name": "Grab", "interval": 1, "dmg": 12, "radius": 500, "stamina": 60 },
 					{ "name": "DivingSwipe", "interval": 3, "dmg": 188, "radius": 1500, "stamina": 25 },
 					{ "name": "DiveBomb", "interval": 2, "dmg": 115, "radius": 2000, "stamina": 30 }
-				]
-			}
-		},
-		{
-			"name": "NarWhal",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Leedsichthys_Character_BP_AE.Leedsichthys_Character_BP_AE_C",
-			"dinoNameTag": "Leedsichthys_AE",
-			"customTag": "Leedsichthys",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 300,
-			"dragWeight": 1300,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isCarnivore",
-				"isWaterDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 900 }
-			},
-			"movementD": {
-				"swim": { "base": 1440 }
-			},
-			"attack": {
-				"defaultDmg": 115,
-				"defaultSwingRadius": 930,
-				"attacks": [ { "name": "Bite", "interval": 10, "dmg": 115, "radius": 650, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Liopleurodon",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Liopleurodon_Character_BP_AE.Liopleurodon_Character_BP_AE_C",
-			"dinoNameTag": "Liopleurodon_AE",
-			"customTag": "Liopleurodon",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 300,
-			"dragWeight": 12000,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore",
-				"isWaterDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 200 }
-			},
-			"movementD": {
-				"swim": { "base": 200 }
-			},
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 170,
-				"attacks": [
-					{ "name": "Lunge", "interval": 2, "dmg": 40, "radius": 170, "stamina": 15 },
-					{ "name": "Spin", "interval": 2, "dmg": 0, "radius": 170, "stamina": 0 }
 				]
 			}
 		},
@@ -24668,79 +24634,6 @@
 			}
 		},
 		{
-			"name": "Snow Owl",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Owl_Character_BP_AE.Owl_Character_BP_AE_C",
-			"dinoNameTag": "Owl_AE",
-			"customTag": "Owl",
-			"targetingTeamName": "",
-			"mass": 250,
-			"dragWeight": 250,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"isFlyerDino",
-				"preventCharacterBasing"
-			],
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 260, "sprint": 728 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 260, "sprint": 728 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.6, "dmg": 25, "radius": 240, "stamina": 0 },
-					{ "name": "Encapsulate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "PredatorVision", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Pachy",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Pachy_Character_BP_AE.Pachy_Character_BP_AE_C",
-			"dinoNameTag": "Pachy",
-			"customTag": "Pachy",
-			"targetingTeamName": "Herbivores",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 182, "sprint": 546 },
-				"swim": { "base": 273 }
-			},
-			"movementD": {
-				"walk": { "base": 173, "sprint": 519 },
-				"swim": { "base": 259.5 }
-			},
-			"attack": {
-				"defaultDmg": 10,
-				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 10, "radius": 65, "stamina": 0 } ]
-			}
-		},
-		{
 			"name": "Parasaur",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Para_Character_BP_AE.Para_Character_BP_AE_C",
 			"dinoNameTag": "Para",
@@ -24810,46 +24703,6 @@
 			}
 		},
 		{
-			"name": "Pteranodon",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Ptero_Character_BP_AE.Ptero_Character_BP_AE_C",
-			"dinoNameTag": "Ptera_AE",
-			"customTag": "Ptera",
-			"targetingTeamName": "Herbivores",
-			"mass": 190,
-			"dragWeight": 149,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isFlyerDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 226.1, "sprint": 715 },
-				"fly": { "base": 521.7 },
-				"swim": { "base": 260.9 }
-			},
-			"movementD": {
-				"walk": { "base": 260, "sprint": 822.2 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 200,
-				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
-					{ "name": "None", "interval": 0.6, "dmg": 50, "radius": 260, "stamina": 85 }
-				]
-			}
-		},
-		{
 			"name": "Quetzal",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Quetz_Character_BP_AE.Quetz_Character_BP_AE_C",
 			"dinoNameTag": "Quetz",
@@ -24886,46 +24739,6 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.6, "dmg": 32, "radius": 720, "stamina": 16 },
 					{ "name": "None", "interval": 1, "dmg": 32, "radius": 370, "stamina": 80 }
-				]
-			}
-		},
-		{
-			"name": "Sarco",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Sarco_Character_BP_AE.Sarco_Character_BP_AE_C",
-			"dinoNameTag": "Sarco",
-			"customTag": "Sarco",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 220,
-			"dragWeight": 200,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isAmphibious",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 437.4 }
-			},
-			"movementD": {
-				"walk": { "base": 165, "sprint": 601.4 }
-			},
-			"attack": {
-				"defaultDmg": 35,
-				"defaultSwingRadius": 160,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.1, "dmg": 35, "radius": 160, "stamina": 10 },
-					{ "name": "Roll", "interval": 10, "dmg": 45, "radius": 160, "stamina": 95 },
-					{ "name": "Lunge", "interval": 1, "dmg": 40, "radius": 210, "stamina": 125 },
-					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 35, "radius": 160, "stamina": 30 },
-					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 35, "radius": 160, "stamina": 35 }
 				]
 			}
 		},
@@ -24968,451 +24781,6 @@
 			}
 		},
 		{
-			"name": "Thylacoleo",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Dino/Thylacoleo_Character_BP_AE.Thylacoleo_Character_BP_AE_C",
-			"dinoNameTag": "Thylacoleo_AE",
-			"customTag": "Thylacoleo",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 195,
-			"dragWeight": 180,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 20,
-				"maxSpeed": 1900
-			},
-			"movementW": {
-				"walk": { "base": 230, "sprint": 1150 },
-				"swim": { "base": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 230, "sprint": 1150 },
-				"swim": { "base": 600 }
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Claw", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
-					{ "name": "Release", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
-					{ "name": "Pounce", "interval": 0, "dmg": 30, "radius": 0, "stamina": 0 },
-					{ "name": "Maul", "interval": 0, "dmg": 40, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Diplodocus",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Diplodocus_Character_BP_AE.Diplodocus_Character_BP_AE_C",
-			"dinoNameTag": "Diplo_AE",
-			"customTag": "Diplo",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 384,
-			"dragWeight": 575,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 1350 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 1350 }
-			},
-			"attack": {
-				"defaultDmg": 60,
-				"defaultSwingRadius": 1000,
-				"attacks": [ { "name": "melee", "interval": 0.1, "dmg": 60, "radius": 650, "stamina": 10 } ]
-			}
-		},
-		{
-			"name": "Gacha",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Gacha_Character_BP_AE.Gacha_Character_BP_AE_C",
-			"dinoNameTag": "Gacha_AE",
-			"customTag": "Gacha",
-			"targetingTeamName": "Herbivores",
-			"mass": 400,
-			"dragWeight": 350,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 750 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 750 }
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 150,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.67, "dmg": 32, "radius": 200, "stamina": 0 },
-					{ "name": "MeleeSmash", "interval": 0.7, "dmg": 30, "radius": 150, "stamina": 0 },
-					{ "name": "Gather", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Giganotosaurus",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Gigant_Character_BP_AE.Gigant_Character_BP_AE_C",
-			"dinoNameTag": "Gigant_AE",
-			"customTag": "Gigant",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 400,
-			"dragWeight": 950,
-			"flags": [
-				"allowRiding",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 60,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 588, "sprint": 1681.7 }
-			},
-			"movementD": {
-				"walk": { "base": 588, "sprint": 1681.7 }
-			},
-			"attack": {
-				"defaultDmg": 300,
-				"defaultSwingRadius": 850,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Giganotosaurus",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Gigant_Character_BP_Base.Gigant_Character_BP_Base_C",
-			"dinoNameTag": "Gigant",
-			"customTag": "Gigant",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 400,
-			"dragWeight": 950,
-			"flags": [
-				"allowRiding",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 588, "sprint": 1681.7 }
-			},
-			"movementD": {
-				"walk": { "base": 588, "sprint": 1681.7 }
-			},
-			"attack": {
-				"defaultDmg": 300,
-				"defaultSwingRadius": 850,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 1200, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 1200, "radius": 850, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Kairuku",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Kairuku_Character_BP_AE.Kairuku_Character_BP_AE_C",
-			"dinoNameTag": "Kairu",
-			"customTag": "Kairu",
-			"targetingTeamName": "Herbivores",
-			"mass": 50,
-			"dragWeight": 35,
-			"flags": [ "canBeDragged", "canBeTorpid", "canDrag" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 70, "sprint": 147 },
-				"swim": { "base": 450 }
-			},
-			"movementD": {
-				"walk": { "base": 38.5, "sprint": 80.8 },
-				"swim": { "base": 247.5 }
-			},
-			"attack": {
-				"defaultDmg": 8,
-				"defaultSwingRadius": 105,
-				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 8, "radius": 105, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Kaprosuchus",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Kaprosuchus_Character_BP_AE.Kaprosuchus_Character_BP_AE_C",
-			"dinoNameTag": "Kaprosuchus_AE",
-			"customTag": "Kaprosuchus",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 190,
-			"dragWeight": 120,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isAmphibious",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 180, "sprint": 675 }
-			},
-			"movementD": {
-				"walk": { "base": 180, "sprint": 675 }
-			},
-			"attack": {
-				"defaultDmg": 20,
-				"defaultSwingRadius": 120,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 25, "radius": 140, "stamina": 0 },
-					{ "name": "LeapAttack", "interval": 5, "dmg": 45, "radius": 140, "stamina": 80 },
-					{ "name": "Grab", "interval": 8, "dmg": 1, "radius": 140, "stamina": 35 }
-				]
-			}
-		},
-		{
-			"name": "Phiomia",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Phiomia_Character_BP_AE.Phiomia_Character_BP_AE_C",
-			"dinoNameTag": "Phiomia_AE",
-			"customTag": "Phiomia",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 195,
-			"dragWeight": 120,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 495, "sprint": 1831.5 }
-			},
-			"movementD": {
-				"walk": { "base": 450, "sprint": 1665 }
-			},
-			"attack": {
-				"defaultDmg": 75,
-				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 75, "radius": 160, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Rex",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Rex_Character_BP_AE.Rex_Character_BP_AE_C",
-			"dinoNameTag": "Rex",
-			"customTag": "Rex",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 257.5, "sprint": 736.4 }
-			},
-			"movementD": {
-				"walk": { "base": 386.2, "sprint": 1104.7 }
-			},
-			"attack": {
-				"defaultDmg": 60,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 },
-					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (AI)", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Stegosaurus",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Stego_Character_BP_AE.Stego_Character_BP_AE_C",
-			"dinoNameTag": "Stego",
-			"customTag": "Stego",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 260,
-			"dragWeight": 250,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 221, "sprint": 607.7 }
-			},
-			"movementD": {
-				"walk": { "base": 76.5, "sprint": 210.4 }
-			},
-			"attack": {
-				"defaultDmg": 42,
-				"defaultSwingRadius": 450,
-				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Stegosaurus",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Stego_Character_BP_AE_NoHarvest.Stego_Character_BP_AE_NoHarvest_C",
-			"dinoNameTag": "Stego_NoHarvest",
-			"customTag": "Stego",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 260,
-			"dragWeight": 250,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 221, "sprint": 607.7 }
-			},
-			"movementD": {
-				"walk": { "base": 76.5, "sprint": 210.4 }
-			},
-			"attack": {
-				"defaultDmg": 42,
-				"defaultSwingRadius": 450,
-				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Tapejara",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Tapejara_Character_BP_AE.Tapejara_Character_BP_AE_C",
-			"dinoNameTag": "Tapejara",
-			"customTag": "Tapejara",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 190,
-			"dragWeight": 149,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isFlyerDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 539, "sprint": 862.4 },
-				"fly": { "base": 1540 },
-				"swim": { "base": 660 }
-			},
-			"movementD": {
-				"walk": { "base": 245, "sprint": 392 },
-				"fly": { "base": 700 },
-				"swim": { "base": 300 }
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 200,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
-					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
-					{ "name": "Taunt", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Triceratops",
-			"blueprintPath": "/Game/Mods/AE/Dinos/Vanilla/Trike_Character_BP_AE.Trike_Character_BP_AE_C",
-			"dinoNameTag": "Trike",
-			"customTag": "Trike",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 225,
-			"dragWeight": 300,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 202.5, "sprint": 607.5 }
-			},
-			"movementD": {
-				"walk": { "base": 94.5, "sprint": 283.5 }
-			},
-			"attack": {
-				"defaultDmg": 32,
-				"defaultSwingRadius": 430,
-				"attacks": [
-					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 430, "stamina": 0 },
-					{ "name": "Ram", "interval": 30, "dmg": 32, "radius": 430, "stamina": 0 }
-				]
-			}
-		},
-		{
 			"name": "Desert Titan",
 			"blueprintPath": "/Game/Mods/AE/Dinos/VanillaBosses/Titans/DesertKaiju_Character_BP_AE.DesertKaiju_Character_BP_AE_C",
 			"dinoNameTag": "DesertTitan",
@@ -25420,6 +24788,7 @@
 			"targetingTeamName": "",
 			"mass": 5000,
 			"dragWeight": 35,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowRiding",
@@ -25461,6 +24830,7 @@
 			"targetingTeamName": "",
 			"mass": 4000,
 			"dragWeight": 35,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -25503,6 +24873,7 @@
 			"targetingTeamName": "",
 			"mass": 4000,
 			"dragWeight": 6000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -26008,6 +25379,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 222,
 			"dragWeight": 250,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26044,6 +25416,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 222,
 			"dragWeight": 250,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26080,6 +25453,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 222,
 			"dragWeight": 250,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26116,6 +25490,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26173,6 +25548,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26230,6 +25606,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26287,6 +25664,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 360,
 			"dragWeight": 600,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26325,6 +25703,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 360,
 			"dragWeight": 600,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26363,6 +25742,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 360,
 			"dragWeight": 600,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26401,6 +25781,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26442,6 +25823,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26483,6 +25865,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26524,6 +25907,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 345,
 			"dragWeight": 425,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26565,6 +25949,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 345,
 			"dragWeight": 425,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26606,6 +25991,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 345,
 			"dragWeight": 425,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26647,6 +26033,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26689,6 +26076,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26731,6 +26119,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -26773,6 +26162,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 550,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -26811,6 +26201,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 550,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -26849,6 +26240,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 550,
+			"variants": [ "Corrupted" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -27360,38 +26752,6 @@
 					{ "name": "Pounce", "interval": 0, "dmg": 300, "radius": 0, "stamina": 0 },
 					{ "name": "Maul", "interval": 0, "dmg": 400, "radius": 0, "stamina": 0 }
 				]
-			}
-		},
-		{
-			"name": "Skeletal Bronto",
-			"blueprintPath": "/Game/Mods/AE/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
-			"dinoNameTag": "Bronto",
-			"customTag": "Bronto",
-			"targetingTeamName": "Herbivores_Large",
-			"mass": 500,
-			"dragWeight": 1000,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 225, "sprint": 607.5 }
-			},
-			"movementD": {
-				"walk": { "base": 150, "sprint": 405 }
-			},
-			"attack": {
-				"defaultDmg": 90,
-				"defaultSwingRadius": 1000,
-				"attacks": [ { "name": "melee", "interval": 1.2, "dmg": 90, "radius": 1000, "stamina": 0 } ]
 			}
 		},
 		{
