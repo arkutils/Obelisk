@@ -1,5 +1,5 @@
 {
-	"version": "306.41.1559375984",
+	"version": "306.67.1582885862",
 	"format": "1",
 	"mod": {
 		"id": "909297874",
@@ -48,7 +48,36 @@
 			}
 		},
 		{
-			"name": "Griffin",
+			"name": "Gacha",
+			"blueprintPath": "/Game/Mods/NorwegianVikings/Dinos/Gacha/Gacha_Character_BP.Gacha_Character_BP_C",
+			"dinoNameTag": "Gacha",
+			"customTag": "Gacha",
+			"targetingTeamName": "Herbivores",
+			"mass": 400,
+			"dragWeight": 350,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 750 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 750 }
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 150,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.67, "dmg": 32, "radius": 200, "stamina": 0 },
+					{ "name": "MeleeSmash", "interval": 0.7, "dmg": 30, "radius": 150, "stamina": 0 },
+					{ "name": "Gather", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Old Griffin",
 			"blueprintPath": "/Game/Mods/NorwegianVikings/Dinos/Griffin/Griffin_Character_BP.Griffin_Character_BP_C",
 			"dinoNameTag": "Griffin",
 			"customTag": "Griffin",
@@ -490,47 +519,6 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.6, "dmg": 32, "radius": 720, "stamina": 16 },
 					{ "name": "None", "interval": 1, "dmg": 32, "radius": 370, "stamina": 80 }
-				]
-			}
-		},
-		{
-			"name": "Rock Drake",
-			"blueprintPath": "/Game/Mods/NorwegianVikings/Dinos/RockDrake/RockDrake_Character_BP.RockDrake_Character_BP_C",
-			"dinoNameTag": "RockDrake",
-			"customTag": "RockDrake",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 345,
-			"dragWeight": 425,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"doStepDamage",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 10,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 520, "sprint": 1820 },
-				"swim": { "base": 480 }
-			},
-			"movementD": {
-				"walk": { "base": 585, "sprint": 2047.5 },
-				"swim": { "base": 540 }
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 600,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 60, "radius": 600, "stamina": 20 },
-					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 240, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_AOE", "interval": 0, "dmg": 150, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 60, "radius": 900, "stamina": 20 }
 				]
 			}
 		},
@@ -1026,6 +1014,33 @@
 						"isProjectile": true
 					}
 				]
+			}
+		},
+		{
+			"name": "Bunny Dodo",
+			"blueprintPath": "/Game/Mods/NorwegianVikings/PrimalEarth/Dinos/Dodo/Dodo_Character_BP_Bunny.Dodo_Character_BP_Bunny_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "Dodo",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65, "sprint": 136.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5, "sprint": 95.5 },
+				"swim": { "base": 210 }
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
 			}
 		}
 	]

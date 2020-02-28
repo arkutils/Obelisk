@@ -1,5 +1,5 @@
 {
-	"version": "305.13.1559375984.2",
+	"version": "306.67.1582885862",
 	"format": "1",
 	"mod": {
 		"id": "909297874",
@@ -999,6 +999,70 @@
 			}
 		},
 		{
+			"name": "Statwipe Tonic",
+			"description": "Drink this tonic to reset your stats (relearns learned engrams).",
+			"blueprintPath": "/Game/Mods/NorwegianVikings/Items/Consumables/PrimalItemConsumableRespecSoupStats_NV.PrimalItemConsumableRespecSoupStats_NV_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/AmnesiaSoup_Icon.AmnesiaSoup_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables" ],
+			"weight": 0.1,
+			"maxQuantity": 100,
+			"spoilage": { "time": 18000 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 30,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementDust_C"
+					},
+					{
+						"exact": false,
+						"qty": 200,
+						"type": "PrimalItemConsumable_Berry_Mejoberry_C"
+					},
+					{
+						"exact": false,
+						"qty": 24,
+						"type": "PrimalItemConsumable_CookedPrimeMeat_C"
+					},
+					{
+						"exact": false,
+						"qty": 72,
+						"type": "PrimalItemConsumable_Narcotic_C"
+					},
+					{
+						"exact": false,
+						"qty": 72,
+						"type": "PrimalItemConsumable_Stimulant_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_RareFlower_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_RareMushroom_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
 			"name": "Dino Snack",
 			"description": "Heals your dino for up to 1000 over 5 seconds.\nAlso gives up to 200 food over 2 minutes.",
 			"blueprintPath": "/Game/Mods/NorwegianVikings/Items/Consumables/PrimalItemConsumable_DinoSnack.PrimalItemConsumable_DinoSnack_C",
@@ -1724,63 +1788,6 @@
 						"color": [ 1, 0.409826, 0, 1 ]
 					}
 				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
-			"name": "Fertilized Rock Drake Egg",
-			"description": "",
-			"blueprintPath": "/Game/Mods/NorwegianVikings/Items/Eggs/PrimalItemConsumable_Egg_RockDrake_Fertilized.PrimalItemConsumable_Egg_RockDrake_Fertilized_C",
-			"icon": "/Game/ScorchedEarth/Icons/Resources/RockDrakeEgg_Icon.RockDrakeEgg_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/NorwegianVikings/Dinos/RockDrake/RockDrake_Character_BP.RockDrake_Character_BP_C",
-				"temperature": [ -90, -80 ]
 			},
 			"cookingStats": {
 				"health": 0.8,
@@ -2817,6 +2824,29 @@
 			"structureTemplate": "/Game/Mods/NorwegianVikings/PackingStation/StorageBox_PackingStation.StorageBox_PackingStation_C"
 		},
 		{
+			"name": "Bunny Egg",
+			"description": "Put it in a Cooking Pot to craft fun costumes or place on the ground as a festive decoration!",
+			"blueprintPath": "/Game/Mods/NorwegianVikings/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_EasterEgg.PrimalItemStructure_EasterEgg_C",
+			"icon": "/Game/Mods/NorwegianVikings/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/EasterEgg_Icon.EasterEgg_Icon",
+			"type": "Resource",
+			"folders": [],
+			"weight": 4,
+			"maxQuantity": 100,
+			"spoilage": { "time": 1209600 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"structureTemplate": "/Game/Mods/NorwegianVikings/PrimalEarth/Structures/Halloween/Sign_EasterEgg.Sign_EasterEgg_C"
+		},
+		{
 			"name": "2x2 Stone Ceiling",
 			"description": "A stable brick-and-mortar ceiling that insulates the inside from the outside, and doubles as a floor for higher levels.",
 			"blueprintPath": "/Game/Mods/NorwegianVikings/Structures/2x2Ceiling/PrimalItemStructure_StoneCeiling_2x2.PrimalItemStructure_StoneCeiling_2x2_C",
@@ -3042,7 +3072,7 @@
 			"blueprintPath": "/Game/Mods/NorwegianVikings/Structures/Converter/PrimalItemStructure_Converter_NV.PrimalItemStructure_Converter_NV_C",
 			"icon": "/Game/Mods/NorwegianVikings/Structures/Converter/NV_Converter.NV_Converter",
 			"type": "Structure",
-			"folders": [ "Misc" ],
+			"folders": [ "Structures" ],
 			"weight": 4,
 			"maxQuantity": 100,
 			"durability": {
@@ -3438,60 +3468,12 @@
 			"structureTemplate": "/Game/Mods/NorwegianVikings/Structures/TekShield/StorageBox_TekShield_NV.StorageBox_TekShield_NV_C"
 		},
 		{
-			"name": "Summon Desert Titan",
-			"description": "Use this to summon the Desert Titan.",
-			"blueprintPath": "/Game/Mods/NorwegianVikings/Structures/TitanTributes/BossTribute/PrimalItem_BossTribute_DesertKaiju_NV.PrimalItem_BossTribute_DesertKaiju_NV_C",
-			"icon": "/Game/Extinction/Icons/BossFight/DesertTitanSummon_Icon.DesertTitanSummon_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [],
-			"weight": 0.5,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 0.01,
-				"minLevelReq": 1,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_Extinction_DesertKaiju_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_RareDrop_CorruptHeart_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ApexDrop_FireWyvern_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ApexDrop_Sarco_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
-			"name": "Desert Titan Terminal",
-			"description": "Summon Desert Titan here!",
-			"blueprintPath": "/Game/Mods/NorwegianVikings/Structures/TitanTributes/PrimalItemStructure_DesertTerminal_NV.PrimalItemStructure_DesertTerminal_NV_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/SmallStorage_Icon.SmallStorage_Icon",
+			"name": "NV Teleporter",
+			"description": "Allows instantaneous traversal between Teleporters! \n\n- Requires Tek Generator to power.\n- Teleport radius can be adjusted via radial menu.\n- Can be placed on saddles & rafts.",
+			"blueprintPath": "/Game/Mods/NorwegianVikings/Structures/Teleporter/PrimalItemStructure_Teleporter_NV.PrimalItemStructure_Teleporter_NV_C",
+			"icon": "/Game/Mods/StructuresPlusMod/Misc/Teleporter/Icon_TeleporterPlus.Icon_TeleporterPlus",
 			"type": "Structure",
-			"folders": [ "Structures", "Wood", "Storage" ],
+			"folders": [ "Structures" ],
 			"weight": 4,
 			"maxQuantity": 100,
 			"durability": {
@@ -3499,35 +3481,45 @@
 				"ignoreInWater": false
 			},
 			"crafting": {
-				"xp": 3.7,
-				"bpCraftTime": 5,
+				"xp": 33,
+				"bpCraftTime": 90,
 				"minLevelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": [ 0, 0.05 ],
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Wood_C"
+						"qty": 85,
+						"type": "PrimalItemResource_Element_C"
 					},
 					{
 						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Thatch_C"
+						"qty": 2500,
+						"type": "PrimalItemResource_MetalIngot_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_Fibers_C"
+						"qty": 600,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 150,
+						"type": "PrimalItemResource_BlackPearl_C"
+					},
+					{
+						"exact": false,
+						"qty": 1200,
+						"type": "PrimalItemResource_Polymer_C"
 					}
 				]
 			},
 			"repair": {
-				"xp": 3.7,
+				"xp": 33,
 				"time": 5,
 				"resourceMult": 0.5
 			},
-			"structureTemplate": "/Game/Mods/NorwegianVikings/Structures/TitanTributes/DesertTerminal_NV.DesertTerminal_NV_C"
+			"structureTemplate": "/Game/Mods/NorwegianVikings/Structures/Teleporter/BP_Teleporter_NV.BP_Teleporter_NV_C"
 		},
 		{
 			"name": "NV WorkBench",
