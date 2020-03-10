@@ -1,6 +1,6 @@
 {
-	"version": "306.41.1580743769",
-	"format": "1",
+	"version": "306.84.1583723897",
+	"format": "2",
 	"mod": {
 		"id": "1576299694",
 		"tag": "ElementalDinos",
@@ -2980,6 +2980,65 @@
 			"description": "Eating this will apply stone elemental affinity to the consuming creature.  \n\nNOTE: if eaten by a player, they will die.\nNOTE: if eaten by a creature with elemental affinity, nothing will happen.",
 			"blueprintPath": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_Elemental_Stone_Incarnate.PrimalItemConsumable_Elemental_Stone_Incarnate_C",
 			"icon": "/Game/Mods/ElementalDinos/Crafting/Consumables/HUD_ElementalStoneIncarnate_Icon.HUD_ElementalStoneIncarnate_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.1,
+			"maxQuantity": 100,
+			"spoilage": { "time": 259200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 30,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumableEatable_WaterContainer_C"
+					},
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemConsumable_Egg_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemResource_ElementalStoneCrystal_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 1,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"qualityMult": 5,
+					"duration": 0.2
+				}
+			},
+			"cookingStats": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05
+			}
+		},
+		{
+			"name": "Water incarnate kibble",
+			"description": "Eating this will apply water elemental affinity to the consuming creature.  \n\nNOTE: if eaten by a player, they will die.\nNOTE: if eaten by a creature with elemental affinity, nothing will happen.",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_Elemental_Water_Incarnate.PrimalItemConsumable_Elemental_Water_Incarnate_C",
+			"icon": "/Game/Mods/ElementalDinos/Crafting/Consumables/HUD_ElementalWaterIncarnate_Icon.HUD_ElementalWaterIncarnate_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Crafted Foods" ],
 			"weight": 0.1,
@@ -27867,6 +27926,66 @@
 			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapElementalRailgun.WeapElementalRailgun_C"
 		},
 		{
+			"name": "Small elemental gem",
+			"description": "Drag some luminescent essence over this gem.  The energy will flow into you.  Then use this launch small projectiles of the selected element.  \n\nUse numpad +/- to switch your current element affinity.",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Weapons/PrimalItem_ElementalSiphon.PrimalItem_ElementalSiphon_C",
+			"icon": "/Game/Mods/ElementalDinos/Materials/MagicGem_ElementalTextures/MagicGemIcon.MagicGemIcon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Manipulation" ],
+			"weight": 0.5,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 11.35,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalAirEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalFireEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalIceEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalLightningEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalNatureEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalStoneEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalWaterEssenceLumin_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 11.35,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapSiphon.WeapSiphon_C"
+		},
+		{
 			"name": "Essence extractor",
 			"description": "Use this to extract essence from a friendly creature.  \n\nNOTE: The affected creature will be severely weakened for a while.",
 			"blueprintPath": "/Game/Mods/ElementalDinos/Weapons/PrimalItem_EssenceExtractor.PrimalItem_EssenceExtractor_C",
@@ -29295,6 +29414,66 @@
 				]
 			},
 			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/Weap_ElementalAirSaber.Weap_ElementalAirSaber_C"
+		},
+		{
+			"name": "Elemental siphon",
+			"description": "Drain element from small creatures.  Then use one of the elemental weapons to use it for your own benefit.  ",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Weapons/PrimalItem_WeaponSiphon.PrimalItem_WeaponSiphon_C",
+			"icon": "/Game/Mods/ElementalDinos/Materials/RayGun_ElementalTextures/RayGunIcon.RayGunIcon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Manipulation" ],
+			"weight": 2.5,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 35,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_ElementalAirPlate_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_ElementalFirePlate_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_ElementalIcePlate_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_ElementalLightningPlate_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_ElementalNaturePlate_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_ElementalStonePlate_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_ElementalWaterPlate_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 35,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapElemental_Siphon.WeapElemental_Siphon_C"
 		},
 		{
 			"name": "Poisonous Spear",
