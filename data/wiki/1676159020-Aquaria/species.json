@@ -1,5 +1,5 @@
 {
-	"version": "306.83.1577476863",
+	"version": "307.4.1584246685",
 	"format": "1",
 	"mod": {
 		"id": "1676159020",
@@ -197,6 +197,77 @@
 			}
 		},
 		{
+			"name": "Hydrarchos",
+			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Hydrarchos/Hydrarchos_Character_BP.Hydrarchos_Character_BP_C",
+			"dinoNameTag": "Basilosaurus",
+			"customTag": "Hydrarchos",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 300,
+			"dragWeight": 500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"swim": { "base": 600 }
+			},
+			"attack": {
+				"defaultDmg": 90,
+				"defaultSwingRadius": 190,
+				"attacks": [
+					{ "name": "None", "interval": 0.4, "dmg": 55, "radius": 500, "stamina": 0 },
+					{ "name": "None", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Hydrotherosaurus",
+			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Hydrothero/Hydrothero_Character_BP.Hydrothero_Character_BP_C",
+			"dinoNameTag": "Plesiosaur",
+			"customTag": "Hydrothero",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 300,
+			"dragWeight": 500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"swim": { "base": 700 }
+			},
+			"movementD": {
+				"swim": { "base": 700 }
+			},
+			"attack": {
+				"defaultDmg": 90,
+				"defaultSwingRadius": 190,
+				"attacks": [
+					{ "name": "Craning Bite (Sides)", "interval": 0.4, "dmg": 30, "radius": 500, "stamina": 0 },
+					{ "name": "Craning Bite (Straight)", "interval": 0.4, "dmg": 30, "radius": 500, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Kronosaurus",
 			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Krona/Kronosaurus_Character_bp.Kronosaurus_Character_bp_C",
 			"dinoNameTag": "Liopleurodon",
@@ -281,7 +352,7 @@
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 300,
-			"dragWeight": 100,
+			"dragWeight": 150,
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -295,10 +366,10 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 500 }
+				"swim": { "base": 700 }
 			},
 			"movementD": {
-				"swim": { "base": 1125 }
+				"swim": { "base": 700 }
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -483,10 +554,10 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 1200 }
+				"swim": { "base": 2400 }
 			},
 			"movementD": {
-				"swim": { "base": 2700 }
+				"swim": { "base": 2400 }
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -617,10 +688,10 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"swim": { "base": 800 }
 			},
 			"movementD": {
-				"swim": { "base": 1350 }
+				"swim": { "base": 800 }
 			},
 			"attack": {
 				"defaultDmg": 90,
@@ -630,73 +701,6 @@
 					{ "name": "None", "interval": 0.4, "dmg": 5, "radius": 800, "stamina": 0 },
 					{ "name": "None", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
-			}
-		},
-		{
-			"name": "Skeletal Rex",
-			"blueprintPath": "/Game/Mods/Aquaria/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
-			"dinoNameTag": "Bone Rex",
-			"customTag": "Rex",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 377.5, "sprint": 1079.6 }
-			},
-			"movementD": {
-				"walk": { "base": 566.2, "sprint": 1619.5 }
-			},
-			"attack": {
-				"defaultDmg": 170,
-				"defaultSwingRadius": 450,
-				"attacks": [
-					{ "name": "None", "interval": 0.3, "dmg": 170, "radius": 450, "stamina": 0 },
-					{ "name": "None", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Skeletal Bronto",
-			"blueprintPath": "/Game/Mods/Aquaria/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
-			"dinoNameTag": "Bronto",
-			"customTag": "Bronto",
-			"targetingTeamName": "Herbivores_Large",
-			"mass": 500,
-			"dragWeight": 1000,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 225, "sprint": 607.5 }
-			},
-			"movementD": {
-				"walk": { "base": 150, "sprint": 405 }
-			},
-			"attack": {
-				"defaultDmg": 90,
-				"defaultSwingRadius": 1000,
-				"attacks": [ { "name": "melee", "interval": 1.2, "dmg": 90, "radius": 1000, "stamina": 0 } ]
 			}
 		}
 	]

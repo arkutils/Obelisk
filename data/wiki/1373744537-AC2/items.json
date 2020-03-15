@@ -1,6 +1,6 @@
 {
-	"version": "305.13.1581370437.2",
-	"format": "1",
+	"version": "307.4.1584299768",
+	"format": "2",
 	"mod": {
 		"id": "1373744537",
 		"tag": "AC2",
@@ -371,6 +371,32 @@
 			},
 			"repair": {
 				"xp": 62.8,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Carchar",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"blueprintPath": "/Game/Mods/AC2/Chibi/PrimalItemSkin_ChibiDino_Carchar.PrimalItemSkin_ChibiDino_Carchar_C",
+			"icon": "/Game/PrimalEarth/UI/Empty_GiganotosaurusHead_Icon.Empty_GiganotosaurusHead_Icon",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
 				"time": 5,
 				"resourceMult": 0.5
 			}
@@ -875,6 +901,113 @@
 				"resourceMult": 0.5
 			},
 			"weaponTemplate": "/Game/Mods/AC2/Items/Weapons/FartNade/WeapMothGrenade.WeapMothGrenade_C"
+		},
+		{
+			"name": "Hyper Ballista Turret",
+			"description": "The Commander would be proud.",
+			"blueprintPath": "/Game/Mods/AC2/Items/Weapons/HyperBallista/PrimalItemStructure_TurretMinigunBallista.PrimalItemStructure_TurretMinigunBallista_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/MountedSMGTurret_Icon.MountedSMGTurret_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Metal" ],
+			"weight": 4,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 320,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 150,
+						"type": "PrimalItemResource_Polymer_C"
+					},
+					{
+						"exact": false,
+						"qty": 500,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 125,
+						"type": "PrimalItemResource_ChitinPaste_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_Hide_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 320,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/AC2/Items/Weapons/HyperBallista/StructureTurretMinigunBallista.StructureTurretMinigunBallista_C"
+		},
+		{
+			"name": "Incindiary RPG Round",
+			"description": "This ammo type deals reduced damage compared to a normal rocket round (but more to herbivores because it is not an explosive damage type), but sets the target ablaze. The reduced volitile firepower greatly reduces wear and tear on the launcher.\n\nSometimes if you can't blow something up, it's better to just watch it burn.",
+			"blueprintPath": "/Game/Mods/AC2/Items/Weapons/Incind/PrimalItemAmmo_RocketIncindiary.PrimalItemAmmo_RocketIncindiary_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/RocketLauncherAmmo_Icon.RocketLauncherAmmo_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.1,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 3.6,
+				"bpCraftTime": 1,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 40,
+						"type": "PrimalItemResource_Gunpowder_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_ChitinPaste_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Propellant_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Polymer_C"
+					},
+					{
+						"exact": false,
+						"qty": 12,
+						"type": "PrimalItemResource_MetalIngot_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 3.6,
+				"time": 5,
+				"resourceMult": 0.5
+			}
 		},
 		{
 			"name": "Muhreetle",
@@ -1620,6 +1753,84 @@
 				"stamina": 0.8,
 				"food": 0.8,
 				"weight": 0.3
+			}
+		},
+		{
+			"name": "Apex Egg Kibble",
+			"description": "A blended kibble made using various apex creatures eggs and kibbles. Ac2 Apexes will only eat THIS for taming.",
+			"blueprintPath": "/Game/Mods/AC2/PrimalItemConsumable_Kibble_Base_Apex.PrimalItemConsumable_Kibble_Base_Apex_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon_Special.Kibble_Icon_Special",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.1,
+			"maxQuantity": 100,
+			"spoilage": { "time": 259200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 2,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_Egg_Spino_Fertilized_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_Egg_Rex_Fertilized_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_Egg_Megalosaurus_Fertilized_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_Egg_Allo_Fertilized_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_Egg_Gigant_Fertilized_C"
+					},
+					{
+						"exact": false,
+						"qty": 15,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemConsumable_Berry_Mejoberry_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 1,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 0.2
+				}
+			},
+			"cookingStats": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05
 			}
 		},
 		{
@@ -5156,7 +5367,7 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 1,
+						"qty": 5,
 						"type": "PrimalItemConsumable_Berry_Narcoberry_C"
 					}
 				]
@@ -5943,84 +6154,6 @@
 				"stamina": 0.8,
 				"food": 0.8,
 				"weight": 0.3
-			}
-		},
-		{
-			"name": "Apex Egg Kibble",
-			"description": "A blended kibble made using various apex creatures eggs and kibbles. Smok will only eat THIS for taming.",
-			"blueprintPath": "/Game/Mods/AC2/smok/PrimalItemConsumable_Kibble_Apex.PrimalItemConsumable_Kibble_Apex_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon.Kibble_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Crafted Foods" ],
-			"weight": 0.1,
-			"maxQuantity": 100,
-			"spoilage": { "time": 259200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 2,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemConsumable_Egg_Spino_Fertilized_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemConsumable_Egg_Rex_Fertilized_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemConsumable_Egg_Megalosaurus_Fertilized_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemConsumable_Egg_Allo_Fertilized_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemConsumable_Egg_Gigant_Fertilized_C"
-					},
-					{
-						"exact": false,
-						"qty": 15,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemConsumable_Berry_Mejoberry_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 1,
-					"useItemQuality": true,
-					"descriptionIndex": 2,
-					"duration": 0.2
-				}
-			},
-			"cookingStats": {
-				"health": 0.01,
-				"stamina": 3,
-				"food": 2.25,
-				"weight": 0.05
 			}
 		},
 		{
