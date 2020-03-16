@@ -1,5 +1,5 @@
 {
-	"version": "306.83.1574286450",
+	"version": "307.4.1584352833",
 	"format": "1",
 	"mod": {
 		"id": "1565015734",
@@ -649,8 +649,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"doStepDamage",
-				"isCarnivore",
-				"preventNeuter"
+				"isCarnivore"
 			],
 			"falling": {
 				"dmgMult": 10,
@@ -774,8 +773,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"falling": {
 				"dmgMult": 80,
@@ -820,8 +818,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"falling": {
 				"dmgMult": 80,
@@ -866,8 +863,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"falling": {
 				"dmgMult": 80,
@@ -915,8 +911,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"falling": {
 				"dmgMult": 80,
@@ -1776,7 +1771,7 @@
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 50,
 			"dragWeight": 30,
-			"flags": [ "isWaterDino" ],
+			"flags": [ "isCarnivore", "isWaterDino" ],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1801,57 +1796,7 @@
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 50,
 			"dragWeight": 30,
-			"flags": [ "isWaterDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 200 }
-			},
-			"movementD": {
-				"swim": { "base": 200 }
-			},
-			"attack": {
-				"defaultDmg": 8,
-				"defaultSwingRadius": 175,
-				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 7, "radius": 175, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Eurypterid",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Euryp/Euryp_Character.Euryp_Character_C",
-			"dinoNameTag": "Euryp",
-			"customTag": "Euryp",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 50,
-			"dragWeight": 30,
-			"flags": [ "isWaterDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 200 }
-			},
-			"movementD": {
-				"swim": { "base": 200 }
-			},
-			"attack": {
-				"defaultDmg": 8,
-				"defaultSwingRadius": 175,
-				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 7, "radius": 175, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Eurypterid",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Euryp/Euryp_Character_Aberrant.Euryp_Character_Aberrant_C",
-			"dinoNameTag": "Euryp",
-			"customTag": "Euryp",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 50,
-			"dragWeight": 30,
-			"flags": [ "isWaterDino" ],
+			"flags": [ "isCarnivore", "isWaterDino" ],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2104,166 +2049,6 @@
 			}
 		},
 		{
-			"name": "Meganeura",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Fish/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-			"dinoNameTag": "Dragonfly",
-			"customTag": "None",
-			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
-			"mass": 50,
-			"dragWeight": 30,
-			"flags": [ "canBeDragged", "canMountOnHumans", "isFlyerDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 175, "sprint": 525 },
-				"fly": { "base": 185 }
-			},
-			"movementD": {
-				"walk": { "base": 175, "sprint": 525 },
-				"fly": { "base": 185 }
-			},
-			"attack": {
-				"defaultDmg": 10,
-				"defaultSwingRadius": 145,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.3, "dmg": 10, "radius": 145, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.3, "dmg": 10, "radius": 200, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Meganeura",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Fish/Dragonfly_Character_BP_Aberrant.Dragonfly_Character_BP_Aberrant_C",
-			"dinoNameTag": "Dragonfly",
-			"customTag": "None",
-			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
-			"mass": 50,
-			"dragWeight": 30,
-			"flags": [ "canBeDragged", "canMountOnHumans", "isFlyerDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 175, "sprint": 525 },
-				"fly": { "base": 185 }
-			},
-			"movementD": {
-				"walk": { "base": 175, "sprint": 525 },
-				"fly": { "base": 185 }
-			},
-			"attack": {
-				"defaultDmg": 10,
-				"defaultSwingRadius": 145,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.3, "dmg": 10, "radius": 145, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.3, "dmg": 10, "radius": 200, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Piranha",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Fish/Piranha_Character_BP.Piranha_Character_BP_C",
-			"dinoNameTag": "Piranha",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 21,
-			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 250 }
-			},
-			"movementD": {
-				"swim": { "base": 250 }
-			},
-			"attack": {
-				"defaultDmg": 22,
-				"defaultSwingRadius": 80,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 22, "radius": 80, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Piranha",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Fish/Piranha_Character_BP_Aberrant.Piranha_Character_BP_Aberrant_C",
-			"dinoNameTag": "Piranha",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 21,
-			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 250 }
-			},
-			"movementD": {
-				"swim": { "base": 250 }
-			},
-			"attack": {
-				"defaultDmg": 22,
-				"defaultSwingRadius": 80,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 22, "radius": 80, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Sabertooth Salmon",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Fish/Salmon_Character_Aberrant.Salmon_Character_Aberrant_C",
-			"dinoNameTag": "Salmon",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 32.5,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 190 }
-			},
-			"movementD": {
-				"swim": { "base": 190 }
-			},
-			"attack": {
-				"defaultDmg": 4,
-				"defaultSwingRadius": 78,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 4, "radius": 78, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Sabertooth Salmon",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Fish/Salmon_Character_BP.Salmon_Character_BP_C",
-			"dinoNameTag": "Salmon",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 32.5,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 190 }
-			},
-			"movementD": {
-				"swim": { "base": 190 }
-			},
-			"attack": {
-				"defaultDmg": 4,
-				"defaultSwingRadius": 78,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 4, "radius": 78, "stamina": 0 } ]
-			}
-		},
-		{
 			"name": "Griffin",
 			"blueprintPath": "/Game/Mods/BetterDinosTest/Griffin/Griffin_Character_BP.Griffin_Character_BP_C",
 			"dinoNameTag": "Griffin",
@@ -2346,6 +2131,51 @@
 			}
 		},
 		{
+			"name": "Ice Wyvern",
+			"blueprintPath": "/Game/Mods/BetterDinosTest/IceWyvern/Ragnarok_Wyvern_Override_Ice.Ragnarok_Wyvern_Override_Ice_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Ice Breath", "interval": 5, "dmg": 0, "radius": 0, "stamina": 160 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			}
+		},
+		{
 			"name": "Ichthyornis",
 			"blueprintPath": "/Game/Mods/BetterDinosTest/Ichthyornis/Ichthyornis_Character_BP_BDWild.Ichthyornis_Character_BP_BDWild_C",
 			"dinoNameTag": "Ichthyornis",
@@ -2417,56 +2247,6 @@
 		{
 			"name": "Aberrant Cnidaria",
 			"blueprintPath": "/Game/Mods/BetterDinosTest/Jellyfish/BDCnidaria_Character_BP_Aberrant.BDCnidaria_Character_BP_Aberrant_C",
-			"dinoNameTag": "JellyfishBD",
-			"customTag": "JellyfishBD",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 21,
-			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 40 }
-			},
-			"movementD": {
-				"swim": { "base": 40 }
-			},
-			"attack": {
-				"defaultDmg": 30,
-				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Cnidaria",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Jellyfish/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
-			"dinoNameTag": "JellyfishBD",
-			"customTag": "JellyfishBD",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 21,
-			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"swim": { "base": 40 }
-			},
-			"movementD": {
-				"swim": { "base": 40 }
-			},
-			"attack": {
-				"defaultDmg": 30,
-				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Cnidaria",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Jellyfish/Cnidaria_Character_BP_Aberrant.Cnidaria_Character_BP_Aberrant_C",
 			"dinoNameTag": "JellyfishBD",
 			"customTag": "JellyfishBD",
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
