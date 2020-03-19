@@ -1,5 +1,5 @@
 {
-	"version": "306.83.4740398",
+	"version": "307.43.4776339",
 	"format": "1",
 	"species": [
 		{
@@ -301,6 +301,36 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 180,
+			"flags": [ "canBeDragged", "canBeTorpid", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 296.8, "sprint": 667.8 }
+			},
+			"movementD": {
+				"walk": { "base": 424, "sprint": 954 }
+			},
+			"attack": {
+				"defaultDmg": 36,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 },
+					{ "name": "Spawn Minion", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Nameless",
+			"blueprintPath": "/Game/Aberration/Dinos/ChupaCabra/ChupaCabra_Character_BP_InitialBuryOnly.ChupaCabra_Character_BP_InitialBuryOnly_C",
+			"dinoNameTag": "Chupacabra",
+			"customTag": "Chupacabra",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 225,
+			"dragWeight": 180,
+			"variants": [ "InitialBuryOnly" ],
 			"flags": [ "canBeDragged", "canBeTorpid", "isCarnivore" ],
 			"falling": {
 				"dmgMult": 80,
@@ -802,6 +832,46 @@
 			}
 		},
 		{
+			"name": "Reaper Queen",
+			"blueprintPath": "/Game/Aberration/Dinos/Nameless/Xenomorph_Character_BP_Female_InitialBuryOnly.Xenomorph_Character_BP_Female_InitialBuryOnly_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Female", "InitialBuryOnly" ],
+			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1012.5, "sprint": 3240 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2880 }
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 105, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 65, "radius": 1400, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 10, "dmg": 10, "radius": 800, "stamina": 0 },
+					{ "name": "Roar", "interval": 60, "dmg": 5, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 100, "stamina": 5 }
+				]
+			}
+		},
+		{
 			"name": "Reaper King",
 			"blueprintPath": "/Game/Aberration/Dinos/Nameless/Xenomorph_Character_BP_Male.Xenomorph_Character_BP_Male_C",
 			"dinoNameTag": "Xenomorph",
@@ -878,6 +948,98 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "BiteAttack", "interval": 0.7, "dmg": 85, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 52, "radius": 1000, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
+				]
+			}
+		},
+		{
+			"name": "Reaper King",
+			"blueprintPath": "/Game/Aberration/Dinos/Nameless/Xenomorph_Character_BP_Male_InitialBuryOnly.Xenomorph_Character_BP_Male_InitialBuryOnly_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "InitialBuryOnly", "Male" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 524.2, "sprint": 1467.9 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 40, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 52, "radius": 1000, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
+				]
+			}
+		},
+		{
+			"name": "Reaper Prince",
+			"blueprintPath": "/Game/Aberration/Dinos/Nameless/Xenomorph_Character_BP_Male_InitialBuryOnly_Adolescent.Xenomorph_Character_BP_Male_InitialBuryOnly_Adolescent_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "InitialBuryOnly", "Male" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 524.2, "sprint": 1467.9 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 40, "radius": 300, "stamina": 5 },
 					{
 						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
 						"isProjectile": true
@@ -5391,6 +5553,36 @@
 			}
 		},
 		{
+			"name": "Nameless",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Escort/Lunar/ChupaCabra_Character_BP_InitialBuryOnly_Escort.ChupaCabra_Character_BP_InitialBuryOnly_Escort_C",
+			"dinoNameTag": "Chupacabra",
+			"customTag": "Chupacabra",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 225,
+			"dragWeight": 180,
+			"variants": [ "Escort", "InitialBuryOnly", "Lunar" ],
+			"flags": [ "canBeDragged", "canBeTorpid", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 296.8, "sprint": 667.8 }
+			},
+			"movementD": {
+				"walk": { "base": 424, "sprint": 954 }
+			},
+			"attack": {
+				"defaultDmg": 36,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 },
+					{ "name": "Spawn Minion", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Shinehorn",
 			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Escort/Lunar/LanternGoat_Character_BP_Escort.LanternGoat_Character_BP_Escort_C",
 			"dinoNameTag": "Lantern Goat",
@@ -5484,6 +5676,98 @@
 					{ "name": "Claw", "interval": 1, "dmg": 10, "radius": 185, "stamina": 0 },
 					{ "name": "Charge Breath", "interval": 5, "dmg": 10, "radius": 200, "stamina": 0 },
 					{ "name": "Claw Carry", "interval": 3, "dmg": 1, "radius": 185, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Reaper Prince",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Escort/Lunar/Xenomorph_Character_BP_Male_InitialBuryOnly_Adolescent_Escort.Xenomorph_Character_BP_Male_InitialBuryOnly_Adolescent_Escort_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Escort", "InitialBuryOnly", "Lunar", "Male" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 524.2, "sprint": 1467.9 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 40, "radius": 300, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 52, "radius": 1000, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
+				]
+			}
+		},
+		{
+			"name": "Reaper King",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Escort/Lunar/Xenomorph_Character_BP_Male_InitialBuryOnly_Escort.Xenomorph_Character_BP_Male_InitialBuryOnly_Escort_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Escort", "InitialBuryOnly", "Lunar", "Male" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 524.2, "sprint": 1467.9 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 40, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 52, "radius": 1000, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
 				]
 			}
 		},
@@ -7900,6 +8184,66 @@
 			}
 		},
 		{
+			"name": "Nameless",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Gauntlet/Lunar/ChupaCabra_Character_BP_InitialBuryOnly_Alpha_Gauntlet.ChupaCabra_Character_BP_InitialBuryOnly_Alpha_Gauntlet_C",
+			"dinoNameTag": "Chupacabra",
+			"customTag": "Chupacabra",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 225,
+			"dragWeight": 180,
+			"variants": [ "Alpha", "Gauntlet", "InitialBuryOnly", "Lunar" ],
+			"flags": [ "canBeDragged", "doStepDamage", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 356.2, "sprint": 801.4 }
+			},
+			"movementD": {
+				"walk": { "base": 508.8, "sprint": 1144.8 }
+			},
+			"attack": {
+				"defaultDmg": 36,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 },
+					{ "name": "Spawn Minion", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Nameless",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Gauntlet/Lunar/ChupaCabra_Character_BP_InitialBuryOnly_Gauntlet.ChupaCabra_Character_BP_InitialBuryOnly_Gauntlet_C",
+			"dinoNameTag": "Chupacabra",
+			"customTag": "Chupacabra",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 225,
+			"dragWeight": 180,
+			"variants": [ "Gauntlet", "InitialBuryOnly", "Lunar" ],
+			"flags": [ "canBeDragged", "doStepDamage", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 296.8, "sprint": 667.8 }
+			},
+			"movementD": {
+				"walk": { "base": 424, "sprint": 954 }
+			},
+			"attack": {
+				"defaultDmg": 36,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 },
+					{ "name": "Spawn Minion", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Deathworm",
 			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Gauntlet/Lunar/Deathworm_Character_BP_Gauntlet.Deathworm_Character_BP_Gauntlet_C",
 			"dinoNameTag": "Deathworm",
@@ -8168,6 +8512,126 @@
 					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
 					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
 					{ "name": "Bite (AI)", "interval": 5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Reaper Queen",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Gauntlet/Lunar/Xenomorph_Character_BP_Female_InitialBuryOnly_Gauntlet.Xenomorph_Character_BP_Female_InitialBuryOnly_Gauntlet_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Female", "Gauntlet", "InitialBuryOnly", "Lunar" ],
+			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 600 }
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 1.25, "dmg": 105, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 18, "dmg": 65, "radius": 1400, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 15, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 10, "dmg": 10, "radius": 800, "stamina": 0 },
+					{ "name": "Roar", "interval": 600, "dmg": 5, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 100, "stamina": 5 }
+				]
+			}
+		},
+		{
+			"name": "Reaper Prince",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Gauntlet/Lunar/Xenomorph_Character_BP_Male_InitialBuryOnly_Adolescent_Gauntlet.Xenomorph_Character_BP_Male_InitialBuryOnly_Adolescent_Gauntlet_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Gauntlet", "InitialBuryOnly", "Lunar", "Male" ],
+			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 384.5, "sprint": 1076.5 }
+			},
+			"movementD": {
+				"walk": { "base": 512.6, "sprint": 1435.3 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 40, "radius": 300, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 52, "radius": 1000, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
+				]
+			}
+		},
+		{
+			"name": "Reaper King",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Gauntlet/Lunar/Xenomorph_Character_BP_Male_InitialBuryOnly_Gauntlet.Xenomorph_Character_BP_Male_InitialBuryOnly_Gauntlet_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Gauntlet", "InitialBuryOnly", "Lunar", "Male" ],
+			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 384.5, "sprint": 1076.5 }
+			},
+			"movementD": {
+				"walk": { "base": 512.6, "sprint": 1435.3 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 40, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 14, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 14, "dmg": 52, "radius": 1000, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
 				]
 			}
 		},
@@ -9741,6 +10205,36 @@
 			}
 		},
 		{
+			"name": "Nameless",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Hunt/Lunar/ChupaCabra_Character_BP_InitialBuryOnly_Hunt.ChupaCabra_Character_BP_InitialBuryOnly_Hunt_C",
+			"dinoNameTag": "Chupacabra",
+			"customTag": "Chupacabra",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 225,
+			"dragWeight": 180,
+			"variants": [ "Hunt", "InitialBuryOnly", "Lunar" ],
+			"flags": [ "canBeDragged", "canBeTorpid", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 296.8, "sprint": 667.8 }
+			},
+			"movementD": {
+				"walk": { "base": 424, "sprint": 954 }
+			},
+			"attack": {
+				"defaultDmg": 142,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 123, "radius": 160, "stamina": 0 },
+					{ "name": "Spawn Minion", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 123, "radius": 160, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Brute Seeker ",
 			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Hunt/Lunar/Pteroteuthis_Char_BP_HuntFollower.Pteroteuthis_Char_BP_HuntFollower_C",
 			"dinoNameTag": "Bat",
@@ -9810,6 +10304,46 @@
 					{ "name": "Bite", "interval": 1, "dmg": 88, "radius": 750, "stamina": 0 },
 					{ "name": "None", "interval": 0, "dmg": 152, "radius": 1000, "stamina": 150 },
 					{ "name": "Hyperdrive", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Brute Reaper King",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Hunt/Lunar/Xenomorph_Character_BP_Male_InitialBuryOnly_Hunt.Xenomorph_Character_BP_Male_InitialBuryOnly_Hunt_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 788,
+			"dragWeight": 788,
+			"variants": [ "Hunt", "InitialBuryOnly", "Lunar", "Male" ],
+			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 838.8, "sprint": 2348.6 }
+			},
+			"movementD": {
+				"walk": { "base": 838.8, "sprint": 2348.6 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 80, "radius": 900, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 20, "radius": 900, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 104, "radius": 1500, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 20, "radius": 900, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 20, "radius": 900, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 104, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 10, "radius": 300, "stamina": 5 }
 				]
 			}
 		},
@@ -11532,6 +12066,36 @@
 			}
 		},
 		{
+			"name": "Nameless",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Retrieve/Lunar/ChupaCabra_Character_BP_InitialBuryOnly_Retrieve.ChupaCabra_Character_BP_InitialBuryOnly_Retrieve_C",
+			"dinoNameTag": "Chupacabra",
+			"customTag": "Chupacabra",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 225,
+			"dragWeight": 180,
+			"variants": [ "InitialBuryOnly", "Lunar", "Retrieve" ],
+			"flags": [ "canBeDragged", "canBeTorpid", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 296.8, "sprint": 667.8 }
+			},
+			"movementD": {
+				"walk": { "base": 424, "sprint": 954 }
+			},
+			"attack": {
+				"defaultDmg": 36,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 },
+					{ "name": "Spawn Minion", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Seeker",
 			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Retrieve/Lunar/Pteroteuthis_Char_BP_Retrieve.Pteroteuthis_Char_BP_Retrieve_C",
 			"dinoNameTag": "Bat",
@@ -11569,6 +12133,144 @@
 					{ "name": "Bite", "interval": 0.4, "dmg": 10, "radius": 185, "stamina": 0 },
 					{ "name": "Claw", "interval": 1, "dmg": 10, "radius": 185, "stamina": 0 },
 					{ "name": "Charge Breath", "interval": 5, "dmg": 10, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Reaper Prince",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Retrieve/Lunar/Xenomorph_Character_BP_Male_InitialBuryOnly_Adolescent_Retrieve.Xenomorph_Character_BP_Male_InitialBuryOnly_Adolescent_Retrieve_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "InitialBuryOnly", "Lunar", "Male", "Retrieve" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 524.2, "sprint": 1467.9 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 40, "radius": 300, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 52, "radius": 1000, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
+				]
+			}
+		},
+		{
+			"name": "Injured Brute Reaper King",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Retrieve/Lunar/Xenomorph_Character_BP_Male_InitialBuryOnly_Brute_Retrieve.Xenomorph_Character_BP_Male_InitialBuryOnly_Brute_Retrieve_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 788,
+			"dragWeight": 788,
+			"variants": [ "InitialBuryOnly", "Lunar", "Male", "Retrieve" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 838.8 }
+			},
+			"movementD": {
+				"walk": { "base": 838.8 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 60, "radius": 900, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 15, "radius": 900, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 78, "radius": 1500, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 15, "radius": 900, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 15, "radius": 900, "stamina": 0 },
+					{ "name": "Roar", "interval": 600, "dmg": 78, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 8, "radius": 300, "stamina": 5 }
+				]
+			}
+		},
+		{
+			"name": "Reaper King",
+			"blueprintPath": "/Game/Genesis/Dinos/MissionVariants/Retrieve/Lunar/Xenomorph_Character_BP_Male_InitialBuryOnly_Retrieve.Xenomorph_Character_BP_Male_InitialBuryOnly_Retrieve_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "InitialBuryOnly", "Lunar", "Male", "Retrieve" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 349.5, "sprint": 978.6 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 }
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 40, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 14, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 52, "radius": 1000, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
 				]
 			}
 		},
