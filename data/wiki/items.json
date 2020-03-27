@@ -1,5 +1,5 @@
 {
-	"version": "307.02.4805903",
+	"version": "309.4.4824580",
 	"format": "2",
 	"items": [
 		{
@@ -1461,6 +1461,44 @@
 			}
 		},
 		{
+			"name": "Zip-Line Motor Attachment",
+			"description": "",
+			"blueprintPath": "/Game/Aberration/CoreBlueprints/Items/WeaponAttachments/PrimalItemWeaponAttachment_ZipLineMotor.PrimalItemWeaponAttachment_ZipLineMotor_C",
+			"icon": "/Game/Aberration/Icons/Weapons/ZipLineMotor_Icon.ZipLineMotor_Icon",
+			"type": "WeaponAttachment",
+			"folders": [ "Weapons", "Attachments" ],
+			"weight": 0.1,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 76,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 40,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 40,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Electronics_C"
+					}
+				]
+			}
+		},
+		{
 			"name": "Nameless Venom",
 			"description": "A volatile substance that can be used to raise Rock Drakes!",
 			"blueprintPath": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemConsumable_NamelessVenom.PrimalItemConsumable_NamelessVenom_C",
@@ -1826,6 +1864,59 @@
 					"descriptionIndex": 2,
 					"duration": 3
 				}
+			}
+		},
+		{
+			"name": "Zip-Line Anchor",
+			"description": "Apply on the Crossbow to fire Zip-line anchor points",
+			"blueprintPath": "/Game/Aberration/CoreBlueprints/Weapons/PrimalItemAmmo_ZipAnchor.PrimalItemAmmo_ZipAnchor_C",
+			"icon": "/Game/Aberration/Icons/Weapons/ZipLineAnchorPoint_Icon.ZipLineAnchorPoint_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 1,
+			"maxQuantity": 10,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.05,
+				"bpCraftTime": 1,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemAmmo_ArrowStone_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_ChitinPaste_C"
+					},
+					{
+						"exact": false,
+						"qty": 9,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemResource_Thatch_C"
+					},
+					{
+						"exact": false,
+						"qty": 35,
+						"type": "PrimalItemResource_Fibers_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
 			}
 		},
 		{
@@ -2338,6 +2429,68 @@
 				"food": 0.8,
 				"weight": 0.3
 			}
+		},
+		{
+			"name": "Carnivorous Plant Seed",
+			"description": "Plant this in a viable large crop plot to grow a carnivorous plant.",
+			"blueprintPath": "/Game/Aberration/Structures/CarnivorousPlant/PrimalItemConsumable_Seed_Carnivorous_Plant.PrimalItemConsumable_Seed_Carnivorous_Plant_C",
+			"icon": "/Game/Aberration/Icons/Plants/Carnivorous_Plant_Seed_Icon.Carnivorous_Plant_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [],
+			"weight": 0.01,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 1,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 5
+				}
+			}
+		},
+		{
+			"name": "Carnivorous Plant Trap",
+			"description": "Immobilizes humans and small creatures.",
+			"blueprintPath": "/Game/Aberration/Structures/CarnivorousPlant/PrimalItemStructure_Carnivorous_Plant_Trap.PrimalItemStructure_Carnivorous_Plant_Trap_C",
+			"icon": "/Game/Aberration/Icons/Plants/Carnivorous_Plant_Icon.Carnivorous_Plant_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Defenses" ],
+			"weight": 2,
+			"maxQuantity": 10,
+			"spoilage": { "time": 3600 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 8,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 8,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Aberration/Structures/CarnivorousPlant/Structure_Carnivorous_Plant_Trap.Structure_Carnivorous_Plant_Trap_C"
 		},
 		{
 			"name": "Metal Cliff Platform",
@@ -16309,6 +16462,45 @@
 			}
 		},
 		{
+			"name": "Liopleurodon Saddle",
+			"description": "Equip a Megalodon with this to ride it.",
+			"blueprintPath": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_LiopleurodonSaddle.PrimalItemArmor_LiopleurodonSaddle_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/Icons/MegalodonSaddle_Icon.MegalodonSaddle_Icon",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 51.2,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 290,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 155,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 30,
+						"type": "PrimalItemResource_ChitinPaste_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 51.2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
 			"name": "Mammoth Saddle",
 			"description": "Equip a Mammoth with this to ride it.",
 			"blueprintPath": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MammothSaddle.PrimalItemArmor_MammothSaddle_C",
@@ -18915,6 +19107,54 @@
 						"type": "PrimalItemResource_BlackPearl_C"
 					}
 				]
+			}
+		},
+		{
+			"name": "Tek Shield",
+			"description": "Highly advanced shield made of pure energy",
+			"blueprintPath": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Shields/PrimalItemArmor_TekShield.PrimalItemArmor_TekShield_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/TransparentRiotShield_Icon.TransparentRiotShield_Icon",
+			"type": "Equipment/Shield",
+			"folders": [ "Armor", "Shields" ],
+			"weight": 30,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 78,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 120,
+						"type": "PrimalItemResource_Polymer_C"
+					},
+					{
+						"exact": false,
+						"qty": 200,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 120,
+						"type": "PrimalItemResource_Silicon_C"
+					},
+					{
+						"exact": false,
+						"qty": 40,
+						"type": "PrimalItemResource_MetalIngot_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 78,
+				"time": 5,
+				"resourceMult": 0.5
 			}
 		},
 		{
@@ -23256,7 +23496,7 @@
 			"repair": {
 				"xp": 3.58,
 				"time": 5,
-				"resourceMult": 0.6,
+				"resourceMult": 0.5,
 				"recipe": [
 					{
 						"exact": false,
@@ -23331,7 +23571,7 @@
 			"repair": {
 				"xp": 2.69,
 				"time": 5,
-				"resourceMult": 0.6,
+				"resourceMult": 0.5,
 				"recipe": [
 					{
 						"exact": false,
@@ -23406,7 +23646,7 @@
 			"repair": {
 				"xp": 0.8,
 				"time": 5,
-				"resourceMult": 0.6,
+				"resourceMult": 0.5,
 				"recipe": [
 					{
 						"exact": false,
@@ -23481,7 +23721,7 @@
 			"repair": {
 				"xp": 7.1,
 				"time": 5,
-				"resourceMult": 0.6,
+				"resourceMult": 0.5,
 				"recipe": [
 					{
 						"exact": false,
@@ -23556,7 +23796,7 @@
 			"repair": {
 				"xp": 5.78,
 				"time": 5,
-				"resourceMult": 0.6,
+				"resourceMult": 0.5,
 				"recipe": [
 					{
 						"exact": false,
@@ -67322,6 +67562,51 @@
 				"resourceMult": 0.5
 			},
 			"weaponTemplate": "/Game/ScorchedEarth/WeaponClusterGrenade/WeapClusterGrenade.WeapClusterGrenade_C"
+		},
+		{
+			"name": "Electronic Binoculars",
+			"description": "The ultimate long-range reconnaissance tool.",
+			"blueprintPath": "/Game/ScorchedEarth/WeaponElectronicBinoculars/PrimalItem_WeaponElectronicBinoculars.PrimalItem_WeaponElectronicBinoculars_C",
+			"icon": "/Game/ScorchedEarth/Icons/Weapons/Binoculars_Icon.Binoculars_Icon",
+			"type": "Weapon",
+			"folders": [ "Misc" ],
+			"weight": 0.5,
+			"maxQuantity": 100,
+			"crafting": {
+				"xp": 50,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Electronics_C"
+					},
+					{
+						"exact": false,
+						"qty": 25,
+						"type": "PrimalItemResource_Obsidian_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 50,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/ScorchedEarth/WeaponElectronicBinoculars/WeaponElectronicBinoculars.WeaponElectronicBinoculars_C"
 		},
 		{
 			"name": "Flamethrower Ammo",
