@@ -1,6 +1,6 @@
 {
-	"version": "304.453.1578731044",
-	"format": "1",
+	"version": "309.4.1585319797",
+	"format": "2",
 	"mod": {
 		"id": "893735676",
 		"tag": "AE",
@@ -8,26 +8,25 @@
 	},
 	"lootCrates": [
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Base_Horde_Easy_Child.SupplyCrate_Base_Horde_Easy_Child_C",
-			"requiredLevel": 1,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": false,
-			"itemQualityMult": [ 1, 1 ],
-			"healthLoss": {
-				"initialTime": 0,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Base_Horde_Easy_Child.SupplyCrate_Base_Horde_Easy_Child_C",
+			"levelReq": [ 1, 0 ],
+			"decayTime": {
+				"start": 0,
 				"interval": 120
 			},
-			"setCount": [ 1, 1, 1 ],
+			"randomSetsWithNoReplacement": false,
+			"qualityMult": [ 1, 1 ],
+			"setQty": [ 1, 1, 1 ],
 			"sets": [
 				{
 					"name": "Items with Quality",
-					"itemsQuantity": [ 1, 1, 1 ],
-					"setWeight": 0.8,
+					"weight": 0.8,
+					"qtyScale": [ 1, 1, 1 ],
 					"entries": [
 						{
 							"name": "Common",
 							"weight": 1,
-							"quantity": [ 1, 4, 1 ],
+							"qty": [ 1, 4, 1 ],
 							"quality": [ 1.6, 3, 1.2 ],
 							"forceBP": false,
 							"items": [
@@ -53,7 +52,7 @@
 						{
 							"name": "Uncommon",
 							"weight": 0.6,
-							"quantity": [ 1, 2, 1 ],
+							"qty": [ 1, 2, 1 ],
 							"quality": [ 1.5, 3, 1.2 ],
 							"forceBP": false,
 							"items": [
@@ -76,7 +75,7 @@
 						{
 							"name": "Rare",
 							"weight": 0.1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 1.4, 2.4, 1 ],
 							"forceBP": false,
 							"items": [
@@ -106,7 +105,7 @@
 						{
 							"name": "Saddles",
 							"weight": 0.25,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 1.2, 3, 1.2 ],
 							"forceBP": false,
 							"items": [
@@ -125,13 +124,13 @@
 				},
 				{
 					"name": "Items with Quantity",
-					"itemsQuantity": [ 4, 8, 1 ],
-					"setWeight": 1.2,
+					"weight": 1.2,
+					"qtyScale": [ 4, 8, 1 ],
 					"entries": [
 						{
 							"name": "Cryo",
 							"weight": 0.5,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponEmptyCryopod_C" ]
@@ -139,7 +138,7 @@
 						{
 							"name": "Dust",
 							"weight": 0.2,
-							"quantity": [ 20, 60, 1 ],
+							"qty": [ 20, 60, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_ElementDust_C" ]
@@ -147,7 +146,7 @@
 						{
 							"name": "Shard",
 							"weight": 0.06,
-							"quantity": [ 1, 5, 1 ],
+							"qty": [ 1, 5, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_ElementShard_C" ]
@@ -155,7 +154,7 @@
 						{
 							"name": "Chitin",
 							"weight": 1,
-							"quantity": [ 5, 20, 1 ],
+							"qty": [ 5, 20, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Chitin_C" ]
@@ -163,7 +162,7 @@
 						{
 							"name": "Jerky",
 							"weight": 0.4,
-							"quantity": [ 1, 6, 1 ],
+							"qty": [ 1, 6, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemConsumable_CookedMeat_Jerky_C" ]
@@ -171,7 +170,7 @@
 						{
 							"name": "LambChops",
 							"weight": 0.2,
-							"quantity": [ 1, 2, 1 ],
+							"qty": [ 1, 2, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": true,
 							"items": [ "PrimalItemConsumable_CookedLambChop_C" ]
@@ -179,7 +178,7 @@
 						{
 							"name": "Soup",
 							"weight": 0.3,
-							"quantity": [ 1, 4, 1 ],
+							"qty": [ 1, 4, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [
@@ -196,7 +195,7 @@
 						{
 							"name": "Stone",
 							"weight": 0.8,
-							"quantity": [ 30, 60, 1 ],
+							"qty": [ 30, 60, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Stone_C" ]
@@ -204,7 +203,7 @@
 						{
 							"name": "Sparkpowder",
 							"weight": 0.65,
-							"quantity": [ 10, 30, 1 ],
+							"qty": [ 10, 30, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Sparkpowder_C" ]
@@ -212,7 +211,7 @@
 						{
 							"name": "RareMushroom",
 							"weight": 0.3,
-							"quantity": [ 2, 6, 1 ],
+							"qty": [ 2, 6, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_RareMushroom_C" ]
@@ -220,7 +219,7 @@
 						{
 							"name": "RareFlower",
 							"weight": 0.3,
-							"quantity": [ 2, 6, 1 ],
+							"qty": [ 2, 6, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_RareFlower_C" ]
@@ -228,7 +227,7 @@
 						{
 							"name": "Crystal",
 							"weight": 0.6,
-							"quantity": [ 10, 30, 1 ],
+							"qty": [ 10, 30, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Polymer_C" ]
@@ -236,7 +235,7 @@
 						{
 							"name": "Structures Common",
 							"weight": 0.6,
-							"quantity": [ 10, 20, 1.5 ],
+							"qty": [ 10, 20, 1.5 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [
@@ -250,7 +249,7 @@
 						{
 							"name": "Structures Rare",
 							"weight": 0.25,
-							"quantity": [ 2, 5, 1 ],
+							"qty": [ 2, 5, 1 ],
 							"quality": [ 0, 1, 1 ],
 							"forceBP": false,
 							"items": [
@@ -265,26 +264,25 @@
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level03_AE.SupplyCrate_Level03_AE_C",
-			"requiredLevel": 3,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": true,
-			"itemQualityMult": [ 1, 1 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level03_AE.SupplyCrate_Level03_AE_C",
+			"levelReq": [ 3, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 1, 1, 1 ],
+			"randomSetsWithNoReplacement": true,
+			"qualityMult": [ 1, 1 ],
+			"setQty": [ 1, 1, 1 ],
 			"sets": [
 				{
 					"name": "Campsite",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Campfire",
 							"weight": 1,
-							"quantity": [ 1, 2, 1 ],
+							"qty": [ 1, 2, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_Campfire_C" ]
@@ -292,7 +290,7 @@
 						{
 							"name": "Sparkpowder",
 							"weight": 1,
-							"quantity": [ 2, 6, 1 ],
+							"qty": [ 2, 6, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Sparkpowder_C" ]
@@ -300,7 +298,7 @@
 						{
 							"name": "Waterskin",
 							"weight": 1,
-							"quantity": [ 1, 3, 2 ],
+							"qty": [ 1, 3, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemConsumable_WaterskinCraftable_C" ]
@@ -308,7 +306,7 @@
 						{
 							"name": "Sleeping Bags",
 							"weight": 1,
-							"quantity": [ 1, 3, 2 ],
+							"qty": [ 1, 3, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_SleepingBag_Hide_C" ]
@@ -316,7 +314,7 @@
 						{
 							"name": "Dinner",
 							"weight": 1,
-							"quantity": [ 10, 30, 1 ],
+							"qty": [ 10, 30, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [
@@ -330,13 +328,13 @@
 				},
 				{
 					"name": "Clothing",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Pants",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothPants_C" ]
@@ -344,7 +342,7 @@
 						{
 							"name": "Shirt",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothShirt_C" ]
@@ -352,7 +350,7 @@
 						{
 							"name": "Gloves",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothGloves_C" ]
@@ -360,7 +358,7 @@
 						{
 							"name": "Boots",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothBoots_C" ]
@@ -368,7 +366,7 @@
 						{
 							"name": "Hat",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothHelmet_C" ]
@@ -376,7 +374,7 @@
 						{
 							"name": "Blueprints: Clothing",
 							"weight": 1,
-							"quantity": [ 1, 1, 2 ],
+							"qty": [ 1, 1, 2 ],
 							"quality": [ 1.25, 1.25, 1 ],
 							"forceBP": true,
 							"items": [
@@ -391,13 +389,13 @@
 				},
 				{
 					"name": "Weapons",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Hatchet",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponStoneHatchet_C" ]
@@ -405,7 +403,7 @@
 						{
 							"name": "Slingshot",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponSlingshot_C" ]
@@ -413,7 +411,7 @@
 						{
 							"name": "Spear",
 							"weight": 1,
-							"quantity": [ 1, 3, 2 ],
+							"qty": [ 1, 3, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponSpear_C" ]
@@ -421,7 +419,7 @@
 						{
 							"name": "Torch",
 							"weight": 1,
-							"quantity": [ 1, 1, 2 ],
+							"qty": [ 1, 1, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponTorch_C" ]
@@ -429,7 +427,7 @@
 						{
 							"name": "Flare Gun",
 							"weight": 1,
-							"quantity": [ 0, 2, 2 ],
+							"qty": [ 0, 2, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponFlareGun_C" ]
@@ -438,13 +436,13 @@
 				},
 				{
 					"name": "Resources",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Stone",
 							"weight": 1,
-							"quantity": [ 7, 15, 1 ],
+							"qty": [ 7, 15, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Stone_C" ]
@@ -452,7 +450,7 @@
 						{
 							"name": "Flint",
 							"weight": 1,
-							"quantity": [ 7, 15, 1 ],
+							"qty": [ 7, 15, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Flint_C" ]
@@ -460,7 +458,7 @@
 						{
 							"name": "Thatch",
 							"weight": 1,
-							"quantity": [ 30, 90, 1 ],
+							"qty": [ 30, 90, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Thatch_C" ]
@@ -468,7 +466,7 @@
 						{
 							"name": "Wood",
 							"weight": 1,
-							"quantity": [ 15, 30, 1 ],
+							"qty": [ 15, 30, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Wood_C" ]
@@ -476,7 +474,7 @@
 						{
 							"name": "Fiber",
 							"weight": 1,
-							"quantity": [ 30, 80, 1 ],
+							"qty": [ 30, 80, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Fibers_C" ]
@@ -484,7 +482,7 @@
 						{
 							"name": "Hide",
 							"weight": 1,
-							"quantity": [ 25, 50, 1 ],
+							"qty": [ 25, 50, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Hide_C" ]
@@ -494,26 +492,25 @@
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level03_Double_AE.SupplyCrate_Level03_Double_AE_C",
-			"requiredLevel": 3,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": true,
-			"itemQualityMult": [ 2, 2 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level03_Double_AE.SupplyCrate_Level03_Double_AE_C",
+			"levelReq": [ 3, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 2, 2, 1 ],
+			"randomSetsWithNoReplacement": true,
+			"qualityMult": [ 2, 2 ],
+			"setQty": [ 2, 2, 1 ],
 			"sets": [
 				{
 					"name": "Campsite",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Campfire",
 							"weight": 1,
-							"quantity": [ 1, 2, 1 ],
+							"qty": [ 1, 2, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_Campfire_C" ]
@@ -521,7 +518,7 @@
 						{
 							"name": "Sparkpowder",
 							"weight": 1,
-							"quantity": [ 2, 6, 1 ],
+							"qty": [ 2, 6, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Sparkpowder_C" ]
@@ -529,7 +526,7 @@
 						{
 							"name": "Waterskin",
 							"weight": 1,
-							"quantity": [ 1, 3, 2 ],
+							"qty": [ 1, 3, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemConsumable_WaterskinCraftable_C" ]
@@ -537,7 +534,7 @@
 						{
 							"name": "Sleeping Bags",
 							"weight": 1,
-							"quantity": [ 1, 3, 2 ],
+							"qty": [ 1, 3, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_SleepingBag_Hide_C" ]
@@ -545,7 +542,7 @@
 						{
 							"name": "Dinner",
 							"weight": 1,
-							"quantity": [ 10, 30, 1 ],
+							"qty": [ 10, 30, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [
@@ -554,18 +551,32 @@
 								"PrimalItemConsumable_Berry_Azulberry_C",
 								"PrimalItemConsumable_Berry_Tintoberry_C"
 							]
+						},
+						{
+							"name": "Blueprints: Campsite",
+							"weight": 1,
+							"qty": [ 1, 1, 2 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemStructure_Campfire_C",
+								"PrimalItemResource_Sparkpowder_C",
+								"PrimalItemStructure_SleepingBag_Hide_C",
+								"PrimalItemConsumable_WaterskinCraftable_C",
+								"PrimalItem_Note_C"
+							]
 						}
 					]
 				},
 				{
 					"name": "Clothing",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Pants",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothPants_C" ]
@@ -573,7 +584,7 @@
 						{
 							"name": "Shirt",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothShirt_C" ]
@@ -581,7 +592,7 @@
 						{
 							"name": "Gloves",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothGloves_C" ]
@@ -589,7 +600,7 @@
 						{
 							"name": "Boots",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothBoots_C" ]
@@ -597,7 +608,7 @@
 						{
 							"name": "Hat",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_ClothHelmet_C" ]
@@ -605,7 +616,7 @@
 						{
 							"name": "Blueprints: Clothing",
 							"weight": 1,
-							"quantity": [ 1, 1, 2 ],
+							"qty": [ 1, 1, 2 ],
 							"quality": [ 1.25, 1.25, 1 ],
 							"forceBP": true,
 							"items": [
@@ -620,13 +631,13 @@
 				},
 				{
 					"name": "Weapons",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Hatchet",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponStoneHatchet_C" ]
@@ -634,7 +645,7 @@
 						{
 							"name": "Slingshot",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponSlingshot_C" ]
@@ -642,7 +653,7 @@
 						{
 							"name": "Spear",
 							"weight": 1,
-							"quantity": [ 1, 3, 2 ],
+							"qty": [ 1, 3, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponSpear_C" ]
@@ -650,7 +661,7 @@
 						{
 							"name": "Torch",
 							"weight": 1,
-							"quantity": [ 1, 1, 2 ],
+							"qty": [ 1, 1, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponTorch_C" ]
@@ -658,22 +669,36 @@
 						{
 							"name": "Flare Gun",
 							"weight": 1,
-							"quantity": [ 0, 2, 2 ],
+							"qty": [ 0, 2, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponFlareGun_C" ]
+						},
+						{
+							"name": "Blueprints: Weapons",
+							"weight": 1,
+							"qty": [ 1, 1, 2 ],
+							"quality": [ 1.25, 1.25, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponStoneHatchet_C",
+								"PrimalItem_WeaponSlingshot_C",
+								"PrimalItem_WeaponSpear_C",
+								"PrimalItem_WeaponFlareGun_C",
+								"PrimalItem_WeaponTorch_C"
+							]
 						}
 					]
 				},
 				{
 					"name": "Resources",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Stone",
 							"weight": 1,
-							"quantity": [ 7, 15, 1 ],
+							"qty": [ 7, 15, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Stone_C" ]
@@ -681,7 +706,7 @@
 						{
 							"name": "Flint",
 							"weight": 1,
-							"quantity": [ 7, 15, 1 ],
+							"qty": [ 7, 15, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Flint_C" ]
@@ -689,7 +714,7 @@
 						{
 							"name": "Thatch",
 							"weight": 1,
-							"quantity": [ 30, 90, 1 ],
+							"qty": [ 30, 90, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Thatch_C" ]
@@ -697,7 +722,7 @@
 						{
 							"name": "Wood",
 							"weight": 1,
-							"quantity": [ 15, 30, 1 ],
+							"qty": [ 15, 30, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Wood_C" ]
@@ -705,7 +730,7 @@
 						{
 							"name": "Fiber",
 							"weight": 1,
-							"quantity": [ 30, 80, 1 ],
+							"qty": [ 30, 80, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Fibers_C" ]
@@ -713,36 +738,180 @@
 						{
 							"name": "Hide",
 							"weight": 1,
-							"quantity": [ 25, 50, 1 ],
+							"qty": [ 25, 50, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Hide_C" ]
+						}
+					]
+				},
+				{
+					"name": "Small Shanty Shack",
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
+					"entries": [
+						{
+							"name": "Floor",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_ThatchFloor_C" ]
+						},
+						{
+							"name": "Doorframe",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_ThatchWallWithDoor_C" ]
+						},
+						{
+							"name": "Door",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_ThatchDoor_C" ]
+						},
+						{
+							"name": "Walls",
+							"weight": 1,
+							"qty": [ 3, 3, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_ThatchWall_C" ]
+						},
+						{
+							"name": "Roof",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_ThatchCeiling_C" ]
+						},
+						{
+							"name": "Blueprints: Small Shanty Shack",
+							"weight": 1,
+							"qty": [ 1, 1, 2 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemStructure_ThatchFloor_C",
+								"PrimalItemStructure_ThatchWall_C",
+								"PrimalItemStructure_ThatchWallWithDoor_C",
+								"PrimalItemStructure_ThatchDoor_C",
+								"PrimalItemStructure_ThatchCeiling_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Furniture",
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
+					"entries": [
+						{
+							"name": "Wood Sign (small)",
+							"weight": 1,
+							"qty": [ 0, 2, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodSign_C" ]
+						},
+						{
+							"name": "Storage Box",
+							"weight": 1,
+							"qty": [ 0, 3, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_StorageBox_Small_C" ]
+						},
+						{
+							"name": "Simple Bed",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_Bed_Simple_C" ]
+						},
+						{
+							"name": "Standing Torch",
+							"weight": 1,
+							"qty": [ 1, 4, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_StandingTorch_C" ]
+						},
+						{
+							"name": "Sparkpowder",
+							"weight": 1,
+							"qty": [ 10, 20, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemResource_Sparkpowder_C" ]
+						},
+						{
+							"name": "Blueprints: Furniture",
+							"weight": 1,
+							"qty": [ 1, 1, 2 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemStructure_WoodSign_C",
+								"PrimalItemStructure_StorageBox_Small_C",
+								"PrimalItemStructure_Bed_Simple_C",
+								"PrimalItemStructure_StandingTorch_C",
+								"PrimalItemResource_Sparkpowder_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Saddles",
+					"weight": 1,
+					"qtyScale": [ 2, 2, 1 ],
+					"entries": [
+						{
+							"name": "Phiomia Saddle",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemArmor_PhiomiaSaddle_C" ]
+						},
+						{
+							"name": "Phiomia Saddle",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 1.25, 1.25, 1 ],
+							"forceBP": true,
+							"items": [ "PrimalItemArmor_PhiomiaSaddle_C" ]
 						}
 					]
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level15_AE.SupplyCrate_Level15_AE_C",
-			"requiredLevel": 15,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": true,
-			"itemQualityMult": [ 1, 1 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level15_AE.SupplyCrate_Level15_AE_C",
+			"levelReq": [ 15, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 1, 1, 1 ],
+			"randomSetsWithNoReplacement": true,
+			"qualityMult": [ 1, 1 ],
+			"setQty": [ 1, 1, 1 ],
 			"sets": [
 				{
 					"name": "Cold-weather gear",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Pants",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HidePants_C" ]
@@ -750,7 +919,7 @@
 						{
 							"name": "Shirt",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HideShirt_C" ]
@@ -758,7 +927,7 @@
 						{
 							"name": "Gloves",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HideGloves_C" ]
@@ -766,7 +935,7 @@
 						{
 							"name": "Boots",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HideBoots_C" ]
@@ -774,7 +943,7 @@
 						{
 							"name": "Hat",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HideHelmet_C" ]
@@ -782,7 +951,7 @@
 						{
 							"name": "Blueprints: Cold-weather gear",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 1.25, 1.25, 1 ],
 							"forceBP": true,
 							"items": [
@@ -797,13 +966,13 @@
 				},
 				{
 					"name": "Raider",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Bow",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponBow_C" ]
@@ -811,7 +980,7 @@
 						{
 							"name": "Arrows",
 							"weight": 1,
-							"quantity": [ 20, 50, 1 ],
+							"qty": [ 20, 50, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemAmmo_ArrowStone_C" ]
@@ -819,7 +988,7 @@
 						{
 							"name": "Tranqs",
 							"weight": 1,
-							"quantity": [ 10, 20, 1 ],
+							"qty": [ 10, 20, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ null ]
@@ -827,7 +996,7 @@
 						{
 							"name": "Parachute",
 							"weight": 1,
-							"quantity": [ 0, 3, 1 ],
+							"qty": [ 0, 3, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemConsumableBuff_Parachute_C" ]
@@ -835,7 +1004,7 @@
 						{
 							"name": "Blood Kit",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_BloodExtractor_C" ]
@@ -843,7 +1012,7 @@
 						{
 							"name": "Spyglass",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponSpyglass_C" ]
@@ -852,13 +1021,13 @@
 				},
 				{
 					"name": "Resources",
-					"itemsQuantity": [ 7, 7, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 7, 7, 1 ],
 					"entries": [
 						{
 							"name": "Stone",
 							"weight": 1,
-							"quantity": [ 20, 40, 1 ],
+							"qty": [ 20, 40, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Stone_C" ]
@@ -866,7 +1035,7 @@
 						{
 							"name": "Flint",
 							"weight": 1,
-							"quantity": [ 20, 40, 1 ],
+							"qty": [ 20, 40, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Flint_C" ]
@@ -874,7 +1043,7 @@
 						{
 							"name": "Thatch",
 							"weight": 1,
-							"quantity": [ 30, 90, 1 ],
+							"qty": [ 30, 90, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Thatch_C" ]
@@ -882,7 +1051,7 @@
 						{
 							"name": "Wood",
 							"weight": 1,
-							"quantity": [ 40, 100, 1 ],
+							"qty": [ 40, 100, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Wood_C" ]
@@ -890,7 +1059,7 @@
 						{
 							"name": "Fiber",
 							"weight": 1,
-							"quantity": [ 50, 100, 1 ],
+							"qty": [ 50, 100, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Fibers_C" ]
@@ -898,7 +1067,7 @@
 						{
 							"name": "Hide",
 							"weight": 1,
-							"quantity": [ 40, 80, 1 ],
+							"qty": [ 40, 80, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Hide_C" ]
@@ -906,7 +1075,7 @@
 						{
 							"name": "Narcotic",
 							"weight": 1,
-							"quantity": [ 5, 25, 1 ],
+							"qty": [ 5, 25, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemConsumable_Narcotic_C" ]
@@ -914,7 +1083,7 @@
 						{
 							"name": "Cooked Meat",
 							"weight": 1,
-							"quantity": [ 5, 20, 1 ],
+							"qty": [ 5, 20, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemConsumable_CookedMeat_C" ]
@@ -923,13 +1092,13 @@
 				},
 				{
 					"name": "Furniture",
-					"itemsQuantity": [ 5, 5, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 5, 5, 1 ],
 					"entries": [
 						{
 							"name": "M&P",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_MortarAndPestle_C" ]
@@ -937,7 +1106,7 @@
 						{
 							"name": "Cooking Pot",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_CookingPot_C" ]
@@ -945,7 +1114,7 @@
 						{
 							"name": "Paintbrush",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponPaintbrush_C" ]
@@ -953,7 +1122,7 @@
 						{
 							"name": "Storage Box - Large",
 							"weight": 1,
-							"quantity": [ 1, 2, 1 ],
+							"qty": [ 1, 2, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_StorageBox_Large_C" ]
@@ -962,13 +1131,13 @@
 				},
 				{
 					"name": "Saddles",
-					"itemsQuantity": [ 2, 2, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 2, 2, 1 ],
 					"entries": [
 						{
 							"name": "Para OR Raptor Saddle",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 1.25, 1.25, 1 ],
 							"forceBP": true,
 							"items": [ "PrimalItemArmor_ParaSaddle_C", "PrimalItemArmor_RaptorSaddle_C", "PrimalItemArmor_TrikeSaddle_C" ]
@@ -978,26 +1147,86 @@
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level15_Double_AE.SupplyCrate_Level15_Double_AE_C",
-			"requiredLevel": 15,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": true,
-			"itemQualityMult": [ 1, 1 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level15_Double_AE.SupplyCrate_Level15_Double_AE_C",
+			"levelReq": [ 15, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 2, 2, 1 ],
+			"randomSetsWithNoReplacement": true,
+			"qualityMult": [ 1, 1 ],
+			"setQty": [ 2, 2, 1 ],
 			"sets": [
 				{
+					"name": "Wood Shack",
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
+					"entries": [
+						{
+							"name": "Floor",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodFloor_C" ]
+						},
+						{
+							"name": "Doorframe",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodWallWithDoor_C" ]
+						},
+						{
+							"name": "Door",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodDoor_C" ]
+						},
+						{
+							"name": "Walls",
+							"weight": 1,
+							"qty": [ 3, 3, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodWall_C" ]
+						},
+						{
+							"name": "Roof",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodCeiling_C" ]
+						},
+						{
+							"name": "Blueprints: Small Shack",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemStructure_WoodFloor_C",
+								"PrimalItemStructure_WoodWall_C",
+								"PrimalItemStructure_WoodWallWithDoor_C",
+								"PrimalItemStructure_WoodDoor_C",
+								"PrimalItemStructure_WoodCeiling_C"
+							]
+						}
+					]
+				},
+				{
 					"name": "Cold-weather gear",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Pants",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HidePants_C" ]
@@ -1005,7 +1234,7 @@
 						{
 							"name": "Shirt",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HideShirt_C" ]
@@ -1013,7 +1242,7 @@
 						{
 							"name": "Gloves",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HideGloves_C" ]
@@ -1021,7 +1250,7 @@
 						{
 							"name": "Boots",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HideBoots_C" ]
@@ -1029,7 +1258,7 @@
 						{
 							"name": "Hat",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemArmor_HideHelmet_C" ]
@@ -1037,7 +1266,7 @@
 						{
 							"name": "Blueprints: Cold-weather gear",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 1.25, 1.25, 1 ],
 							"forceBP": true,
 							"items": [
@@ -1052,13 +1281,13 @@
 				},
 				{
 					"name": "Raider",
-					"itemsQuantity": [ 6, 6, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 6, 6, 1 ],
 					"entries": [
 						{
 							"name": "Bow",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponBow_C" ]
@@ -1066,7 +1295,7 @@
 						{
 							"name": "Arrows",
 							"weight": 1,
-							"quantity": [ 20, 50, 1 ],
+							"qty": [ 20, 50, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemAmmo_ArrowStone_C" ]
@@ -1074,15 +1303,15 @@
 						{
 							"name": "Tranqs",
 							"weight": 1,
-							"quantity": [ 10, 20, 1 ],
+							"qty": [ 10, 20, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
-							"items": [ null ]
+							"items": [ "PrimalItemAmmo_ArrowTranq_C" ]
 						},
 						{
 							"name": "Parachute",
 							"weight": 1,
-							"quantity": [ 0, 3, 1 ],
+							"qty": [ 0, 3, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemConsumableBuff_Parachute_C" ]
@@ -1090,7 +1319,7 @@
 						{
 							"name": "Blood Kit",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_BloodExtractor_C" ]
@@ -1098,22 +1327,38 @@
 						{
 							"name": "Spyglass",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponSpyglass_C" ]
+						},
+						{
+							"name": "Blueprints: Weapons",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 1.25, 1.25, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponBow_C",
+								"PrimalItemAmmo_ArrowStone_C",
+								"PrimalItemAmmo_ArrowTranq_C",
+								"PrimalItemConsumableBuff_Parachute_C",
+								"PrimalItem_BloodExtractor_C",
+								"PrimalItem_WeaponSpyglass_C",
+								"PrimalItemArmor_WoodShield_C"
+							]
 						}
 					]
 				},
 				{
 					"name": "Resources",
-					"itemsQuantity": [ 7, 7, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 7, 7, 1 ],
 					"entries": [
 						{
 							"name": "Stone",
 							"weight": 1,
-							"quantity": [ 20, 40, 1 ],
+							"qty": [ 20, 40, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Stone_C" ]
@@ -1121,7 +1366,7 @@
 						{
 							"name": "Flint",
 							"weight": 1,
-							"quantity": [ 20, 40, 1 ],
+							"qty": [ 20, 40, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Flint_C" ]
@@ -1129,7 +1374,7 @@
 						{
 							"name": "Thatch",
 							"weight": 1,
-							"quantity": [ 30, 90, 1 ],
+							"qty": [ 30, 90, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Thatch_C" ]
@@ -1137,7 +1382,7 @@
 						{
 							"name": "Wood",
 							"weight": 1,
-							"quantity": [ 40, 100, 1 ],
+							"qty": [ 40, 100, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Wood_C" ]
@@ -1145,7 +1390,7 @@
 						{
 							"name": "Fiber",
 							"weight": 1,
-							"quantity": [ 50, 100, 1 ],
+							"qty": [ 50, 100, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Fibers_C" ]
@@ -1153,7 +1398,7 @@
 						{
 							"name": "Hide",
 							"weight": 1,
-							"quantity": [ 40, 80, 1 ],
+							"qty": [ 40, 80, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Hide_C" ]
@@ -1161,30 +1406,98 @@
 						{
 							"name": "Narcotic",
 							"weight": 1,
-							"quantity": [ 5, 20, 1 ],
+							"qty": [ 5, 10, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemConsumable_Narcotic_C" ]
-						},
+						}
+					]
+				},
+				{
+					"name": "Farming",
+					"weight": 1,
+					"qtyScale": [ 7, 7, 1 ],
+					"entries": [
 						{
-							"name": "Cooked Meat",
+							"name": "Crop Plot - Small",
 							"weight": 1,
-							"quantity": [ 5, 20, 1 ],
+							"qty": [ 1, 3, 2 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
-							"items": [ "PrimalItemConsumable_CookedMeat_C" ]
+							"items": [ "PrimalItemStructure_CropPlot_Small_C" ]
+						},
+						{
+							"name": "Compost Bin",
+							"weight": 1,
+							"qty": [ 0, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_CompostBin_C" ]
+						},
+						{
+							"name": "Pipe - Intake",
+							"weight": 1,
+							"qty": [ 0, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_StonePipeIntake_C" ]
+						},
+						{
+							"name": "Pipe - Tap",
+							"weight": 1,
+							"qty": [ 0, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_StonePipeTap_C" ]
+						},
+						{
+							"name": "Pipe - Straight",
+							"weight": 1,
+							"qty": [ 1, 4, 2 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_StonePipeStraight_C" ]
+						},
+						{
+							"name": "Pipe - Non-Straight",
+							"weight": 1,
+							"qty": [ 0, 6, 2 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemStructure_StonePipeIncline_C",
+								"PrimalItemStructure_StonePipeIntersection_C",
+								"PrimalItemStructure_StonePipeVertical_C"
+							]
+						},
+						{
+							"name": "Blueprints: Farming",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemStructure_CropPlot_Small_C",
+								"PrimalItemStructure_CompostBin_C",
+								"PrimalItemStructure_StonePipeIntake_C",
+								"PrimalItemStructure_StonePipeTap_C",
+								"PrimalItemStructure_StonePipeStraight_C",
+								"PrimalItemStructure_StonePipeIncline_C",
+								"PrimalItemStructure_StonePipeIntersection_C",
+								"PrimalItemStructure_StonePipeVertical_C"
+							]
 						}
 					]
 				},
 				{
 					"name": "Furniture",
-					"itemsQuantity": [ 5, 5, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 5, 5, 1 ],
 					"entries": [
 						{
 							"name": "M&P",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_MortarAndPestle_C" ]
@@ -1192,7 +1505,7 @@
 						{
 							"name": "Cooking Pot",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_CookingPot_C" ]
@@ -1200,7 +1513,7 @@
 						{
 							"name": "Paintbrush",
 							"weight": 1,
-							"quantity": [ 0, 1, 1 ],
+							"qty": [ 0, 1, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponPaintbrush_C" ]
@@ -1208,133 +1521,1438 @@
 						{
 							"name": "Storage Box - Large",
 							"weight": 1,
-							"quantity": [ 1, 2, 1 ],
+							"qty": [ 1, 2, 1 ],
 							"quality": [ 0, 0, 1 ],
 							"forceBP": false,
 							"items": [ "PrimalItemStructure_StorageBox_Large_C" ]
+						},
+						{
+							"name": "Blueprints: Furniture",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemStructure_MortarAndPestle_C",
+								"PrimalItemStructure_CookingPot_C",
+								"PrimalItemStructure_StorageBox_Large_C",
+								"PrimalItemStructure_Forge_C",
+								"PrimalItemConsumable_Narcotic_C",
+								"PrimalItemConsumable_Stimulant_C",
+								"PrimalItem_WeaponPaintbrush_C"
+							]
 						}
 					]
 				},
 				{
 					"name": "Saddles",
-					"itemsQuantity": [ 2, 2, 1 ],
-					"setWeight": 1,
+					"weight": 1,
+					"qtyScale": [ 2, 2, 1 ],
 					"entries": [
 						{
-							"name": "Para OR Raptor Saddle",
+							"name": "Saddles",
 							"weight": 1,
-							"quantity": [ 1, 1, 1 ],
+							"qty": [ 1, 1, 1 ],
 							"quality": [ 1.25, 1.25, 1 ],
 							"forceBP": true,
-							"items": [ "PrimalItemArmor_ParaSaddle_C", "PrimalItemArmor_RaptorSaddle_C", "PrimalItemArmor_TrikeSaddle_C" ]
+							"items": [
+								"PrimalItemArmor_ParaSaddle_C",
+								"PrimalItemArmor_RaptorSaddle_C",
+								"PrimalItemArmor_TrikeSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItemArmor_PachySaddle_C",
+								"PrimalItemArmor_HyaenodonSaddle_C",
+								"PrimalItemArmor_EquusSaddle_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_ProcoptodonSaddle_C",
+								"PrimalItemArmor_PhiomiaSaddle_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Advanced Wood Housing: Flooring",
+					"weight": 0.333,
+					"qtyScale": [ 5, 5, 1 ],
+					"entries": [
+						{
+							"name": "Ramp",
+							"weight": 1,
+							"qty": [ 0, 2, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodRamp_C" ]
+						},
+						{
+							"name": "Fence Foundation",
+							"weight": 1,
+							"qty": [ 2, 7, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodFenceFoundation_C" ]
+						},
+						{
+							"name": "Pillar",
+							"weight": 1,
+							"qty": [ 0, 2, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodPillar_C" ]
+						},
+						{
+							"name": "Large Sign",
+							"weight": 1,
+							"qty": [ 0, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodSign_Large_C" ]
+						},
+						{
+							"name": "Blueprints: Adv Wood Housing",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemStructure_WoodRamp_C",
+								"PrimalItemStructure_WoodFenceFoundation_C",
+								"PrimalItemStructure_WoodPillar_C",
+								"PrimalItemStructure_WoodCeilingWithTrapdoor_C",
+								"PrimalItemStructure_WoodTrapdoor_C",
+								"PrimalItemStructure_WoodLadder_C",
+								"PrimalItemStructure_WoodWallWithWindow_C",
+								"PrimalItemStructure_WoodWindow_C",
+								"PrimalItemStructure_WoodCatwalk_C",
+								"PrimalItemStructure_WoodSign_Large_C",
+								"PrimalItemStructure_WoodSign_Wall_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Advanced Wood Housing: Second Story",
+					"weight": 0.333,
+					"qtyScale": [ 4, 4, 1 ],
+					"entries": [
+						{
+							"name": "Hatchframe",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodCeilingWithTrapdoor_C" ]
+						},
+						{
+							"name": "Trapdoor",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodTrapdoor_C" ]
+						},
+						{
+							"name": "Ladder",
+							"weight": 1,
+							"qty": [ 1, 2, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodLadder_C" ]
+						},
+						{
+							"name": "Blueprints: Adv Wood Housing",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemStructure_WoodRamp_C",
+								"PrimalItemStructure_WoodFenceFoundation_C",
+								"PrimalItemStructure_WoodPillar_C",
+								"PrimalItemStructure_WoodCeilingWithTrapdoor_C",
+								"PrimalItemStructure_WoodTrapdoor_C",
+								"PrimalItemStructure_WoodLadder_C",
+								"PrimalItemStructure_WoodWallWithWindow_C",
+								"PrimalItemStructure_WoodWindow_C",
+								"PrimalItemStructure_WoodCatwalk_C",
+								"PrimalItemStructure_WoodSign_Large_C",
+								"PrimalItemStructure_WoodSign_Wall_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Advanced Wood Housing: Other",
+					"weight": 0.333,
+					"qtyScale": [ 5, 5, 1 ],
+					"entries": [
+						{
+							"name": "Windowframe",
+							"weight": 1,
+							"qty": [ 2, 2, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodWallWithWindow_C" ]
+						},
+						{
+							"name": "Window",
+							"weight": 1,
+							"qty": [ 2, 2, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodWindow_C" ]
+						},
+						{
+							"name": "Catwalk",
+							"weight": 1,
+							"qty": [ 0, 3, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodCatwalk_C" ]
+						},
+						{
+							"name": "Wall Sign",
+							"weight": 1,
+							"qty": [ 0, 2, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": false,
+							"items": [ "PrimalItemStructure_WoodSign_Wall_C" ]
+						},
+						{
+							"name": "Blueprints: Adv Wood Housing",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 0, 0, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemStructure_WoodRamp_C",
+								"PrimalItemStructure_WoodFenceFoundation_C",
+								"PrimalItemStructure_WoodPillar_C",
+								"PrimalItemStructure_WoodCeilingWithTrapdoor_C",
+								"PrimalItemStructure_WoodTrapdoor_C",
+								"PrimalItemStructure_WoodLadder_C",
+								"PrimalItemStructure_WoodWallWithWindow_C",
+								"PrimalItemStructure_WoodWindow_C",
+								"PrimalItemStructure_WoodCatwalk_C",
+								"PrimalItemStructure_WoodSign_Large_C",
+								"PrimalItemStructure_WoodSign_Wall_C"
+							]
 						}
 					]
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level25_AE.SupplyCrate_Level25_AE_C",
-			"requiredLevel": 25,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": false,
-			"itemQualityMult": [ 1, 1 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level25_AE.SupplyCrate_Level25_AE_C",
+			"levelReq": [ 25, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 1, 2, 1 ],
-			"sets": []
+			"randomSetsWithNoReplacement": false,
+			"qualityMult": [ 1, 1 ],
+			"setQty": [ 1, 2, 1 ],
+			"sets": [
+				{
+					"name": "Lvl 25 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 25 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItemWeapon_EternalSpyglass_C",
+								"PrimalItem_WeaponSickle_AEStone_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponSpear_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 25 drops - always BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponSickle_AEStone_C"
+							]
+						}
+					]
+				}
+			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level25_Double_AE.SupplyCrate_Level25_Double_AE_C",
-			"requiredLevel": 25,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": false,
-			"itemQualityMult": [ 2, 2 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level25_Double_AE.SupplyCrate_Level25_Double_AE_C",
+			"levelReq": [ 25, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 1, 2, 1 ],
-			"sets": []
+			"randomSetsWithNoReplacement": false,
+			"qualityMult": [ 2, 2 ],
+			"setQty": [ 1, 2, 1 ],
+			"sets": [
+				{
+					"name": "Lvl 25 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 25 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItemWeapon_EternalSpyglass_C",
+								"PrimalItem_WeaponSickle_AEStone_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponSpear_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 25 drops - always BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponSickle_AEStone_C"
+							]
+						}
+					]
+				}
+			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level35_AE.SupplyCrate_Level35_AE_C",
-			"requiredLevel": 35,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": false,
-			"itemQualityMult": [ 1, 1 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level35_AE.SupplyCrate_Level35_AE_C",
+			"levelReq": [ 35, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 1, 2, 1 ],
-			"sets": []
+			"randomSetsWithNoReplacement": false,
+			"qualityMult": [ 1, 1 ],
+			"setQty": [ 1, 2, 1 ],
+			"sets": [
+				{
+					"name": "Lvl 25 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 25 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItemWeapon_EternalSpyglass_C",
+								"PrimalItem_WeaponSickle_AEStone_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponSpear_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 25 drops - always BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponSickle_AEStone_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 35 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 35 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C",
+								"PrimalItemArmor_AEGriffinArmor_C"
+							]
+						},
+						{
+							"name": "Lvl 35 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C"
+							]
+						}
+					]
+				}
+			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level35_Double_AE.SupplyCrate_Level35_Double_AE_C",
-			"requiredLevel": 35,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": false,
-			"itemQualityMult": [ 1, 1 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level35_Double_AE.SupplyCrate_Level35_Double_AE_C",
+			"levelReq": [ 35, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 2, 2, 1 ],
-			"sets": []
+			"randomSetsWithNoReplacement": false,
+			"qualityMult": [ 1, 1 ],
+			"setQty": [ 2, 2, 1 ],
+			"sets": [
+				{
+					"name": "Lvl 25 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 25 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItemWeapon_EternalSpyglass_C",
+								"PrimalItem_WeaponSickle_AEStone_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponSpear_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 25 drops - always BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponSickle_AEStone_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 35 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 35 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C",
+								"PrimalItemArmor_AEGriffinArmor_C"
+							]
+						},
+						{
+							"name": "Lvl 35 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C"
+							]
+						}
+					]
+				}
+			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level45_AE.SupplyCrate_Level45_AE_C",
-			"requiredLevel": 45,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": false,
-			"itemQualityMult": [ 1, 1 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level45_AE.SupplyCrate_Level45_AE_C",
+			"levelReq": [ 45, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 1, 2, 1 ],
-			"sets": []
+			"randomSetsWithNoReplacement": false,
+			"qualityMult": [ 1, 1 ],
+			"setQty": [ 1, 2, 1 ],
+			"sets": [
+				{
+					"name": "Lvl 25 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 25 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItemWeapon_EternalSpyglass_C",
+								"PrimalItem_WeaponSickle_AEStone_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponSpear_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 25 drops - always BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponSickle_AEStone_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 35 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 35 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C",
+								"PrimalItemArmor_AEGriffinArmor_C"
+							]
+						},
+						{
+							"name": "Lvl 35 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 45 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 45 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_MetalBoots_C",
+								"PrimalItemArmor_MetalGloves_C",
+								"PrimalItemArmor_MetalHelmet_C",
+								"PrimalItemArmor_MetalPants_C",
+								"PrimalItemArmor_MetalShirt_C",
+								"PrimalItem_WeaponMachinedPistol_C",
+								"PrimalItemArmor_MegalodonSaddle_C",
+								"PrimalItemArmor_SaberSaddle_C",
+								"PrimalItemArmor_CarnoSaddle_C",
+								"PrimalItem_WeaponFishingRod_C"
+							]
+						},
+						{
+							"name": "Lvl 45 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_MetalBoots_C",
+								"PrimalItemArmor_MetalGloves_C",
+								"PrimalItemArmor_MetalHelmet_C",
+								"PrimalItemArmor_MetalPants_C",
+								"PrimalItemArmor_MetalShirt_C",
+								"PrimalItem_WeaponMachinedPistol_C",
+								"PrimalItemArmor_MegalodonSaddle_C",
+								"PrimalItemArmor_SaberSaddle_C",
+								"PrimalItemArmor_CarnoSaddle_C",
+								"PrimalItem_WeaponFishingRod_C"
+							]
+						}
+					]
+				}
+			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level45_Double_AE.SupplyCrate_Level45_Double_AE_C",
-			"requiredLevel": 45,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": false,
-			"itemQualityMult": [ 2, 2 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level45_Double_AE.SupplyCrate_Level45_Double_AE_C",
+			"levelReq": [ 45, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 1, 2, 1 ],
-			"sets": []
+			"randomSetsWithNoReplacement": false,
+			"qualityMult": [ 2, 2 ],
+			"setQty": [ 1, 2, 1 ],
+			"sets": [
+				{
+					"name": "Lvl 25 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 25 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItemWeapon_EternalSpyglass_C",
+								"PrimalItem_WeaponSickle_AEStone_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponSpear_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 25 drops - always BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponSickle_AEStone_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 35 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 35 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C",
+								"PrimalItemArmor_AEGriffinArmor_C"
+							]
+						},
+						{
+							"name": "Lvl 35 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 45 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 45 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_MetalBoots_C",
+								"PrimalItemArmor_MetalGloves_C",
+								"PrimalItemArmor_MetalHelmet_C",
+								"PrimalItemArmor_MetalPants_C",
+								"PrimalItemArmor_MetalShirt_C",
+								"PrimalItem_WeaponMachinedPistol_C",
+								"PrimalItemArmor_MegalodonSaddle_C",
+								"PrimalItemArmor_SaberSaddle_C",
+								"PrimalItemArmor_CarnoSaddle_C",
+								"PrimalItem_WeaponFishingRod_C"
+							]
+						},
+						{
+							"name": "Lvl 45 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_MetalBoots_C",
+								"PrimalItemArmor_MetalGloves_C",
+								"PrimalItemArmor_MetalHelmet_C",
+								"PrimalItemArmor_MetalPants_C",
+								"PrimalItemArmor_MetalShirt_C",
+								"PrimalItem_WeaponMachinedPistol_C",
+								"PrimalItemArmor_MegalodonSaddle_C",
+								"PrimalItemArmor_SaberSaddle_C",
+								"PrimalItemArmor_CarnoSaddle_C",
+								"PrimalItem_WeaponFishingRod_C"
+							]
+						}
+					]
+				}
+			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level60_AE.SupplyCrate_Level60_AE_C",
-			"requiredLevel": 60,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": false,
-			"itemQualityMult": [ 1, 1 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level60_AE.SupplyCrate_Level60_AE_C",
+			"levelReq": [ 60, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 1, 3, 1 ],
-			"sets": []
+			"randomSetsWithNoReplacement": false,
+			"qualityMult": [ 1, 1 ],
+			"setQty": [ 1, 3, 1 ],
+			"sets": [
+				{
+					"name": "Lvl 25 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 25 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItemWeapon_EternalSpyglass_C",
+								"PrimalItem_WeaponSickle_AEStone_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponSpear_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 25 drops - always BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponSickle_AEStone_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 35 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 35 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C",
+								"PrimalItemArmor_AEGriffinArmor_C"
+							]
+						},
+						{
+							"name": "Lvl 35 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 45 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 45 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_MetalBoots_C",
+								"PrimalItemArmor_MetalGloves_C",
+								"PrimalItemArmor_MetalHelmet_C",
+								"PrimalItemArmor_MetalPants_C",
+								"PrimalItemArmor_MetalShirt_C",
+								"PrimalItem_WeaponMachinedPistol_C",
+								"PrimalItemArmor_MegalodonSaddle_C",
+								"PrimalItemArmor_SaberSaddle_C",
+								"PrimalItemArmor_CarnoSaddle_C",
+								"PrimalItem_WeaponFishingRod_C"
+							]
+						},
+						{
+							"name": "Lvl 45 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_MetalBoots_C",
+								"PrimalItemArmor_MetalGloves_C",
+								"PrimalItemArmor_MetalHelmet_C",
+								"PrimalItemArmor_MetalPants_C",
+								"PrimalItemArmor_MetalShirt_C",
+								"PrimalItem_WeaponMachinedPistol_C",
+								"PrimalItemArmor_MegalodonSaddle_C",
+								"PrimalItemArmor_SaberSaddle_C",
+								"PrimalItemArmor_CarnoSaddle_C",
+								"PrimalItem_WeaponFishingRod_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 60 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 60 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 4, 4, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItem_WeaponRifle_C",
+								"PrimalItem_WeaponRocketLauncher_C",
+								"PrimalItemArmor_ArgentavisSaddle_C",
+								"PrimalItemArmor_SauroSaddle_C",
+								"PrimalItemArmor_RexSaddle_C",
+								"PrimalItemArmor_SpinoSaddle_C",
+								"PrimalItemArmor_MinersHelmet_C",
+								"PrimalItemArmor_PlesiaSaddle_C",
+								"PrimalItem_WeaponFishingRod_C",
+								"PrimalItemArmor_AEDragonArmor_C",
+								"PrimalItemArmor_AEGriffinArmor_C",
+								"PrimalItemArmor_AESnakeArmor_C",
+								"PrimalItemArmor_DaeodonSaddle_C",
+								"PrimalItem_WeaponEternalPick_C",
+								"PrimalItem_WeaponEternalSword_C",
+								"PrimalItem_WeaponEternalPike_C",
+								"PrimalItem_WeaponEternalHatchet_C",
+								"PrimalItem_WeaponEternalSickle_C",
+								"PrimalItemArmor_EternalGhillieBoots_C",
+								"PrimalItemArmor_EternalGhillieGloves_C",
+								"PrimalItemArmor_EternalGhillieHelmet_C",
+								"PrimalItemArmor_EternalGhilliePants_C",
+								"PrimalItemArmor_GhillieShirt_C",
+								"PrimalItemArmor_Alpha_KentroSaddle_C",
+								"PrimalItem_WeaponPoisonPike_C",
+								"PrimalItem_WeaponPoisonPikeAlpha_C",
+								"PrimalItem_WeaponPoisonPikePrime_C",
+								"DmgType_Melee_PoisonPikeAlpha_C"
+							]
+						},
+						{
+							"name": "Lvl 60 drops -Apex Items",
+							"weight": 1,
+							"qty": [ 1, 5, 1 ],
+							"quality": [ 4, 4, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemResource_ApexDrop_Allo_C",
+								"PrimalItemResource_ApexDrop_AlphaTuso_C",
+								"PrimalItemResource_ApexDrop_Argentavis_C",
+								"PrimalItemResource_ApexDrop_Basilo_C",
+								"PrimalItemResource_ApexDrop_Boa_C",
+								"PrimalItemResource_ApexDrop_FireWyvern_C",
+								"PrimalItemResource_ApexDrop_Giga_C",
+								"PrimalItemResource_ApexDrop_LightningWyvern_C",
+								"PrimalItemResource_ApexDrop_Megalania_C",
+								"PrimalItemResource_ApexDrop_Megalodon_C",
+								"PrimalItemResource_ApexDrop_PoisonWyvern_C",
+								"PrimalItemResource_ApexDrop_Rex_C",
+								"PrimalItemResource_ApexDrop_Sarco_C",
+								"PrimalItemResource_ApexDrop_Sauro_C",
+								"PrimalItemResource_ApexDrop_Spino_C",
+								"PrimalItemResource_ApexDrop_Theriz_C",
+								"PrimalItemResource_ApexDrop_Thylaco_C",
+								"PrimalItemResource_ApexDrop_Tuso_C",
+								"PrimalItemResource_ApexDrop_Yuty_C",
+								"PrimalItemResource_ApexDrop_Basilisk_Alpha_C",
+								"PrimalItemResource_ApexDrop_Basilisk_C",
+								"PrimalItemResource_ApexDrop_CrabClaw_C",
+								"PrimalItemResource_ApexDrop_ReaperBarb_C",
+								"PrimalItemResource_ApexDrop_RockDrake_C",
+								"PrimalItemConsumable_NamelessVenom_C",
+								"PrimalItem_ZomWyvernBrain_C",
+								"PrimalItemConsumable_Eternal_Unlock_Aberration_C",
+								"PrimalItemConsumable_Eternal_Unlock_Scorched_C",
+								"PrimalItemConsumable_Eternal_Unlock_Vanilla_C",
+								"PrimalItem_Token_C",
+								"PrimalItem_Generic_Essence_C",
+								"PrimalItem_MysteriousElement_C",
+								"PrimalItemResource_LavaRock_C",
+								"PrimalItem_GraboidParasite_C",
+								"PrimalItemConsumable_FuturisticOrb_C",
+								"PrimalItem_GoldenCarrot_C",
+								"PrimalItem_SilverCarrot_C",
+								"PrimalItemConsumable_AncientOrb_C",
+								"PrimalItemConsumable_MindFlashPotion_C",
+								"PrimalItemConsumable_InfernalPotion_C",
+								"PrimalItemConsumable_Eternal_RoidsPotion_C",
+								"PrimalItemConsumable_RepellingPotion_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 60 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 4, 4, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponRifle_C",
+								"PrimalItem_WeaponRocketLauncher_C",
+								"PrimalItemArmor_ArgentavisSaddle_C",
+								"PrimalItemArmor_SauroSaddle_C",
+								"PrimalItemArmor_RexSaddle_C",
+								"PrimalItemArmor_SpinoSaddle_C",
+								"PrimalItemArmor_MinersHelmet_C",
+								"PrimalItemArmor_PlesiaSaddle_C",
+								"PrimalItem_WeaponFishingRod_C",
+								"DmgType_Melee_PoisonPikeAlpha_C",
+								"PrimalItem_WeaponPoisonPikeAlpha_C",
+								"PrimalItem_WeaponPoisonPikePrime_C"
+							]
+						}
+					]
+				}
+			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level60_Double_AE.SupplyCrate_Level60_Double_AE_C",
-			"requiredLevel": 60,
-			"maxLevel": 0,
-			"randomSetsWithNoReplacement": false,
-			"itemQualityMult": [ 2, 2 ],
-			"healthLoss": {
-				"initialTime": 200,
+			"bp": "/Game/Mods/AE/Core/SupplyDrops/SupplyCrate_Level60_Double_AE.SupplyCrate_Level60_Double_AE_C",
+			"levelReq": [ 60, 0 ],
+			"decayTime": {
+				"start": 200,
 				"interval": 45
 			},
-			"setCount": [ 1, 3, 1 ],
-			"sets": []
+			"randomSetsWithNoReplacement": false,
+			"qualityMult": [ 2, 2 ],
+			"setQty": [ 1, 3, 1 ],
+			"sets": [
+				{
+					"name": "Lvl 25 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 25 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItemWeapon_EternalSpyglass_C",
+								"PrimalItem_WeaponSickle_AEStone_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponSpear_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 25 drops - always BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 2, 2, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_ChitinBoots_C",
+								"PrimalItemArmor_ChitinGloves_C",
+								"PrimalItemArmor_ChitinHelmet_C",
+								"PrimalItemArmor_ChitinPants_C",
+								"PrimalItemArmor_ChitinShirt_C",
+								"PrimalItem_WeaponMetalPick_C",
+								"PrimalItem_WeaponMetalHatchet_C",
+								"PrimalItem_WeaponPike_C",
+								"PrimalItemArmor_ScorpionSaddle_C",
+								"PrimalItemArmor_TurtleSaddle_C",
+								"PrimalItemArmor_StegoSaddle_C",
+								"PrimalItemArmor_DolphinSaddle_C",
+								"PrimalItem_WeaponStoneHatchet_AE_C",
+								"PrimalItem_WeaponStonePick_AE_C",
+								"PrimalItem_WeaponSickle_AEStone_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 35 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 35 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C",
+								"PrimalItemArmor_AEGriffinArmor_C"
+							]
+						},
+						{
+							"name": "Lvl 35 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponGun_C",
+								"PrimalItem_WeaponOneShotRifle_C",
+								"PrimalItem_WeaponShotgun_C",
+								"PrimalItemArmor_PteroSaddle_C",
+								"PrimalItemArmor_SarcoSaddle_C",
+								"PrimalItemArmor_AnkyloSaddle_C",
+								"PrimalItemArmor_MammothSaddle_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 45 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 45 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemArmor_MetalBoots_C",
+								"PrimalItemArmor_MetalGloves_C",
+								"PrimalItemArmor_MetalHelmet_C",
+								"PrimalItemArmor_MetalPants_C",
+								"PrimalItemArmor_MetalShirt_C",
+								"PrimalItem_WeaponMachinedPistol_C",
+								"PrimalItemArmor_MegalodonSaddle_C",
+								"PrimalItemArmor_SaberSaddle_C",
+								"PrimalItemArmor_CarnoSaddle_C",
+								"PrimalItem_WeaponFishingRod_C"
+							]
+						},
+						{
+							"name": "Lvl 45 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 3, 3, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItemArmor_MetalBoots_C",
+								"PrimalItemArmor_MetalGloves_C",
+								"PrimalItemArmor_MetalHelmet_C",
+								"PrimalItemArmor_MetalPants_C",
+								"PrimalItemArmor_MetalShirt_C",
+								"PrimalItem_WeaponMachinedPistol_C",
+								"PrimalItemArmor_MegalodonSaddle_C",
+								"PrimalItemArmor_SaberSaddle_C",
+								"PrimalItemArmor_CarnoSaddle_C",
+								"PrimalItem_WeaponFishingRod_C"
+							]
+						}
+					]
+				},
+				{
+					"name": "Lvl 60 drops",
+					"weight": 1,
+					"qtyScale": [ 1, 1, 1 ],
+					"entries": [
+						{
+							"name": "Lvl 60 drops - with quality",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 4, 4, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItem_WeaponRifle_C",
+								"PrimalItem_WeaponRocketLauncher_C",
+								"PrimalItemArmor_ArgentavisSaddle_C",
+								"PrimalItemArmor_SauroSaddle_C",
+								"PrimalItemArmor_RexSaddle_C",
+								"PrimalItemArmor_SpinoSaddle_C",
+								"PrimalItemArmor_MinersHelmet_C",
+								"PrimalItemArmor_PlesiaSaddle_C",
+								"PrimalItem_WeaponFishingRod_C",
+								"PrimalItemArmor_AEDragonArmor_C",
+								"PrimalItemArmor_AEGriffinArmor_C",
+								"PrimalItemArmor_AESnakeArmor_C",
+								"PrimalItemArmor_DaeodonSaddle_C",
+								"PrimalItem_WeaponEternalPick_C",
+								"PrimalItem_WeaponEternalSword_C",
+								"PrimalItem_WeaponEternalPike_C",
+								"PrimalItem_WeaponEternalHatchet_C",
+								"PrimalItem_WeaponEternalSickle_C",
+								"PrimalItemArmor_EternalGhillieBoots_C",
+								"PrimalItemArmor_EternalGhillieGloves_C",
+								"PrimalItemArmor_EternalGhillieHelmet_C",
+								"PrimalItemArmor_EternalGhilliePants_C",
+								"PrimalItemArmor_GhillieShirt_C",
+								"PrimalItemArmor_Alpha_KentroSaddle_C",
+								"PrimalItem_WeaponPoisonPike_C",
+								"PrimalItem_WeaponPoisonPikeAlpha_C",
+								"PrimalItem_WeaponPoisonPikePrime_C",
+								"DmgType_Melee_PoisonPikeAlpha_C"
+							]
+						},
+						{
+							"name": "Lvl 60 drops -Apex Items",
+							"weight": 1,
+							"qty": [ 1, 5, 1 ],
+							"quality": [ 4, 4, 1 ],
+							"forceBP": false,
+							"items": [
+								"PrimalItemResource_ApexDrop_Allo_C",
+								"PrimalItemResource_ApexDrop_AlphaTuso_C",
+								"PrimalItemResource_ApexDrop_Argentavis_C",
+								"PrimalItemResource_ApexDrop_Basilo_C",
+								"PrimalItemResource_ApexDrop_Boa_C",
+								"PrimalItemResource_ApexDrop_FireWyvern_C",
+								"PrimalItemResource_ApexDrop_Giga_C",
+								"PrimalItemResource_ApexDrop_LightningWyvern_C",
+								"PrimalItemResource_ApexDrop_Megalania_C",
+								"PrimalItemResource_ApexDrop_Megalodon_C",
+								"PrimalItemResource_ApexDrop_PoisonWyvern_C",
+								"PrimalItemResource_ApexDrop_Rex_C",
+								"PrimalItemResource_ApexDrop_Sarco_C",
+								"PrimalItemResource_ApexDrop_Sauro_C",
+								"PrimalItemResource_ApexDrop_Spino_C",
+								"PrimalItemResource_ApexDrop_Theriz_C",
+								"PrimalItemResource_ApexDrop_Thylaco_C",
+								"PrimalItemResource_ApexDrop_Tuso_C",
+								"PrimalItemResource_ApexDrop_Yuty_C",
+								"PrimalItemResource_ApexDrop_Basilisk_Alpha_C",
+								"PrimalItemResource_ApexDrop_Basilisk_C",
+								"PrimalItemResource_ApexDrop_CrabClaw_C",
+								"PrimalItemResource_ApexDrop_ReaperBarb_C",
+								"PrimalItemResource_ApexDrop_RockDrake_C",
+								"PrimalItemConsumable_NamelessVenom_C",
+								"PrimalItem_ZomWyvernBrain_C",
+								"PrimalItemConsumable_Eternal_Unlock_Aberration_C",
+								"PrimalItemConsumable_Eternal_Unlock_Scorched_C",
+								"PrimalItemConsumable_Eternal_Unlock_Vanilla_C",
+								"PrimalItem_Token_C",
+								"PrimalItem_Generic_Essence_C",
+								"PrimalItem_MysteriousElement_C",
+								"PrimalItemResource_LavaRock_C",
+								"PrimalItem_GraboidParasite_C",
+								"PrimalItemConsumable_FuturisticOrb_C",
+								"PrimalItem_GoldenCarrot_C",
+								"PrimalItem_SilverCarrot_C",
+								"PrimalItemConsumable_AncientOrb_C",
+								"PrimalItemConsumable_MindFlashPotion_C",
+								"PrimalItemConsumable_InfernalPotion_C",
+								"PrimalItemConsumable_Eternal_RoidsPotion_C",
+								"PrimalItemConsumable_RepellingPotion_AE_C"
+							]
+						},
+						{
+							"name": "Lvl 60 drops - with quality BP",
+							"weight": 1,
+							"qty": [ 1, 1, 1 ],
+							"quality": [ 4, 4, 1 ],
+							"forceBP": true,
+							"items": [
+								"PrimalItem_WeaponRifle_C",
+								"PrimalItem_WeaponRocketLauncher_C",
+								"PrimalItemArmor_ArgentavisSaddle_C",
+								"PrimalItemArmor_SauroSaddle_C",
+								"PrimalItemArmor_RexSaddle_C",
+								"PrimalItemArmor_SpinoSaddle_C",
+								"PrimalItemArmor_MinersHelmet_C",
+								"PrimalItemArmor_PlesiaSaddle_C",
+								"PrimalItem_WeaponFishingRod_C",
+								"DmgType_Melee_PoisonPikeAlpha_C",
+								"PrimalItem_WeaponPoisonPikeAlpha_C",
+								"PrimalItem_WeaponPoisonPikePrime_C"
+							]
+						}
+					]
+				}
+			]
 		}
 	]
 }
