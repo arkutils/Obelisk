@@ -1,5 +1,5 @@
 {
-	"version": "306.84.1583723897",
+	"version": "309.44.1585543521",
 	"format": "2",
 	"mod": {
 		"id": "1576299694",
@@ -3091,6 +3091,74 @@
 				"stamina": 3,
 				"food": 2.25,
 				"weight": 0.05
+			}
+		},
+		{
+			"name": "Essence emitter",
+			"description": "Spray this on yourself to act as a catalyst to nearby wild creatures' inner elemental influence.  ",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_EssenceFountain.PrimalItemConsumable_EssenceFountain_C",
+			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/StatusIcons/Condition_Burning_Icon.Condition_Burning_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [],
+			"weight": 0.1,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalAirEssence_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalFireEssence_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalIceEssence_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalLightningEssence_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalNatureEssence_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalStoneEssence_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalWaterEssence_C"
+					},
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_MetalIngot_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
 			}
 		},
 		{
@@ -8067,38 +8135,18 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalAirEssence_C"
+						"qty": 100,
+						"type": "PrimalItemResource_MetalIngot_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalStoneEssence_C"
+						"qty": 100,
+						"type": "PrimalItemResource_Wood_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalNatureEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalWaterEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalFireEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalIceEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalLightningEssence_C"
+						"qty": 25,
+						"type": "PrimalItemResource_Crystal_C"
 					}
 				]
 			},
@@ -24211,6 +24259,73 @@
 			}
 		},
 		{
+			"name": "Fertilized Air Angler Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_UnderwaterEgg_Angler_ElementalAir.PrimalItemConsumable_UnderwaterEgg_Angler_ElementalAir_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/FishEgg_Icon.FishEgg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/ElementalDinos/Dinos/Angler_Character_Elemental_Air_BP.Angler_Character_Elemental_Air_BP_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.885, 0.310148, 0.252225, 1 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 3, 3, 3, 20 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
 			"name": "Fertilized Lightning Angler Egg",
 			"description": "Eat it to gain tremendous nourishment",
 			"blueprintPath": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_UnderwaterEgg_Angler_ElementalLightning.PrimalItemConsumable_UnderwaterEgg_Angler_ElementalLightning_C",
@@ -25061,6 +25176,75 @@
 				"resourceMult": 0.5
 			},
 			"structureTemplate": "/Game/Mods/ElementalDinos/Structures/StorageBox_GalliGenerator.StorageBox_GalliGenerator_C"
+		},
+		{
+			"name": "Infusion Chamber",
+			"description": "Infuse your dinos with elemental essence.",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Structures/PrimalItemStructure_InfusionChamber.PrimalItemStructure_InfusionChamber_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKCloningChamber_Icon.TEKCloningChamber_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 4,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 2500,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_ElementalAirCrystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_ElementalLightningCrystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_ElementalFireCrystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_ElementalIceCrystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_ElementalNatureCrystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_ElementalStoneCrystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_ElementalWaterCrystal_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/ElementalDinos/Structures/InfusionChamber.InfusionChamber_C"
 		},
 		{
 			"name": "Trophy Wall-Mount",
@@ -28612,6 +28796,94 @@
 			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapMachinedSniper_Scope_Elemental.WeapMachinedSniper_Scope_Elemental_C"
 		},
 		{
+			"name": "Elemental Hatchet",
+			"description": "A sharp metal hatchet for harvesting essence from trees, stone, and bodies.",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Weapons/PrimalItem_WeaponMetalHatchet_Elemental.PrimalItem_WeaponMetalHatchet_Elemental_C",
+			"icon": "/Game/Mods/ElementalDinos/Weapons/ElementalHatchet_Icon.ElementalHatchet_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Melee" ],
+			"weight": 2,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 8,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 24,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 15,
+						"type": "PrimalItemResource_Wood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapMetalHatchet_Elemental.WeapMetalHatchet_Elemental_C"
+		},
+		{
+			"name": "Elemental Pick",
+			"description": "A large metal pick for harvesting essence from rocks, trees, and bodies.",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Weapons/PrimalItem_WeaponMetalPick_Elemental.PrimalItem_WeaponMetalPick_Elemental_C",
+			"icon": "/Game/Mods/ElementalDinos/Weapons/MetalPick_Elemental_Icon.MetalPick_Elemental_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Melee" ],
+			"weight": 2,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 8,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 24,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Wood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapMetalPick_Elemental.WeapMetalPick_Elemental_C"
+		},
+		{
 			"name": "Tripwire Nature Trap",
 			"description": "Place two of these nearby each other to create a poisonous trap. This noxious poison can be used to knock out creatures and allow taming.\n\nNOTE: These are extremely potent and will likely knock players out immediately.  Perhaps you should have some coffee before hunting with these - just in case.",
 			"blueprintPath": "/Game/Mods/ElementalDinos/Weapons/PrimalItem_WeaponPoisonTrap_Elemental.PrimalItem_WeaponPoisonTrap_Elemental_C",
@@ -29414,6 +29686,50 @@
 				]
 			},
 			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/Weap_ElementalAirSaber.Weap_ElementalAirSaber_C"
+		},
+		{
+			"name": "Elemental Sickle",
+			"description": "A curved tool ideal for harvesting elemental essence from seed plants. Also useful for delicately shearing off slices of Prime Fish!",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Weapons/PrimalItem_WeaponSickle_Elemental.PrimalItem_WeaponSickle_Elemental_C",
+			"icon": "/Game/Mods/ElementalDinos/Weapons/ElementalSickle_Icon.ElementalSickle_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Melee" ],
+			"weight": 2,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 18,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 6,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 24,
+						"type": "PrimalItemResource_Crystal_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapSickle_Elemental.WeapSickle_Elemental_C"
 		},
 		{
 			"name": "Elemental siphon",
