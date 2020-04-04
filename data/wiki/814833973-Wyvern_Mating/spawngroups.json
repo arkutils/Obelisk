@@ -1,0 +1,71 @@
+{
+	"version": "309.53.1482240799",
+	"format": "3",
+	"mod": {
+		"id": "814833973",
+		"tag": "Wyvern_Mating",
+		"title": "Wyvern Mating"
+	},
+	"spawngroups": [
+		{
+			"blueprintPath": "/Game/Mods/Wyvern_Mating/SE_DinoSpawnEntriesWyvernMate.SE_DinoSpawnEntriesWyvernMate_C",
+			"maxNPCNumberMultiplier": 1,
+			"entries": [
+				{
+					"name": "Fire Wyverns (1) -- Small Chance to be Mega",
+					"weight": 0.33,
+					"classes": [ "/Game/Mods/Wyvern_Mating/Wyvern_Character_BP_Fire.Wyvern_Character_BP_Fire_C" ],
+					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
+					"classWeights": [ 1 ],
+					"classSwaps": [
+						{
+							"from": "/Game/Mods/Wyvern_Mating/Wyvern_Character_BP_Fire.Wyvern_Character_BP_Fire_C",
+							"exact": null,
+							"to": [
+								"/Game/Mods/Wyvern_Mating/Wyvern_Character_BP_Fire.Wyvern_Character_BP_Fire_C",
+								"/Game/Mods/Wyvern_Mating/MegaWyvern_Character_BP_Fire.MegaWyvern_Character_BP_Fire_C"
+							],
+							"weights": [ 1, 0.05 ]
+						}
+					]
+				},
+				{
+					"name": "Wyverns (1)",
+					"weight": 0.33,
+					"classes": [ "/Game/Mods/Wyvern_Mating/Wyvern_Character_BP_Lightning.Wyvern_Character_BP_Lightning_C" ],
+					"spawnOffsets": [
+						{ "x": 0, "y": 0, "z": 0 },
+						{ "x": 0, "y": 680, "z": 0 },
+						{ "x": 0, "y": -680, "z": 0 }
+					],
+					"classWeights": [ 1 ]
+				},
+				{
+					"name": "Wyverns (1)",
+					"weight": 0.33,
+					"classes": [ "/Game/Mods/Wyvern_Mating/Wyvern_Character_BP_Poison.Wyvern_Character_BP_Poison_C" ],
+					"spawnOffsets": [
+						{ "x": 0, "y": 0, "z": 0 },
+						{ "x": 0, "y": 680, "z": 0 },
+						{ "x": 0, "y": -680, "z": 0 }
+					],
+					"classWeights": [ 1 ]
+				}
+			],
+			"limits": [
+				{
+					"class": "/Game/Mods/Wyvern_Mating/Wyvern_Character_BP_Fire.Wyvern_Character_BP_Fire_C",
+					"desiredNumberMult": 0.33
+				},
+				{
+					"class": "/Game/Mods/Wyvern_Mating/Wyvern_Character_BP_Lightning.Wyvern_Character_BP_Lightning_C",
+					"desiredNumberMult": 0.33
+				},
+				{
+					"class": "/Game/Mods/Wyvern_Mating/Wyvern_Character_BP_Poison.Wyvern_Character_BP_Poison_C",
+					"desiredNumberMult": 0.33
+				}
+			]
+		}
+	]
+}
