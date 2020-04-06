@@ -1,0 +1,620 @@
+{
+	"version": "309.53.1584234429",
+	"format": "1",
+	"mod": {
+		"id": "1768499278",
+		"tag": "BalancedJPE",
+		"title": "AC2: Balanced JPE"
+	},
+	"species": [
+		{
+			"name": "Apatosaurus",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Apatosaurus/ShadApato_Character_BP.ShadApato_Character_BP_C",
+			"dinoNameTag": "Titan",
+			"customTag": "Apatosaur",
+			"targetingTeamName": "Herbivores_large",
+			"mass": 400,
+			"dragWeight": 500,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"falling": {
+				"dmgMult": 130,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 240, "sprint": 720 }
+			},
+			"movementD": {
+				"walk": { "base": 240, "sprint": 720 }
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 1000,
+				"attacks": [
+					{ "name": "Tail", "interval": 0.4, "dmg": 60, "radius": 600, "stamina": 0 },
+					{ "name": "Stomp", "interval": 5, "dmg": 90, "radius": 300, "stamina": 20 },
+					{ "name": "Bite", "interval": 7, "dmg": 40, "radius": 300, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Charonosaurus",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Charonosaurus/Charono_Character_bp.Charono_Character_bp_C",
+			"dinoNameTag": "Para",
+			"customTag": "Charono",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 400,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1650 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1650 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 25, "radius": 340, "stamina": 0 },
+					{ "name": "Honk", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "AttackRes Doot", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "StamHealth Doot", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Sour Note", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Giant Dart Frog",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/DartFrog/ToxicToad_Character_BP.ToxicToad_Character_BP_C",
+			"dinoNameTag": "Toad",
+			"customTag": "Toad",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 120,
+			"dragWeight": 110,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious"
+			],
+			"falling": {
+				"dmgMult": 66,
+				"maxSpeed": 1770
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 800 },
+				"swim": { "base": 700 }
+			},
+			"movementD": {
+				"walk": { "base": 340, "sprint": 680 },
+				"swim": { "base": 595 }
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 144,
+				"attacks": [
+					{ "name": "None", "interval": 0.1, "dmg": 12, "radius": 144, "stamina": 0 },
+					{ "name": "None", "interval": 0.1, "dmg": 20, "radius": 144, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Dracorex",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Dracorex/SDracorex_Character_bp.SDracorex_Character_bp_C",
+			"dinoNameTag": "Pachy",
+			"customTag": "Dracorex",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1200 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1200 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 300, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 2, "dmg": 48, "radius": 300, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 8, "dmg": 0, "radius": 0, "stamina": 400 },
+					{ "name": "BiteNomFury", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Epanterias",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Epanterias/Epanterias_Character_BP.Epanterias_Character_BP_C",
+			"dinoNameTag": "Allo",
+			"customTag": "Epanterias",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 525, "sprint": 2100 }
+			},
+			"movementD": {
+				"walk": { "base": 525, "sprint": 2100 }
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "None", "interval": 0.4, "dmg": 45, "radius": 540, "stamina": 0 },
+					{ "name": "roar", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Euplocephalus",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Euplo/Euplo_Character_bp.Euplo_Character_bp_C",
+			"dinoNameTag": "Anky",
+			"customTag": "Anky",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 400,
+			"dragWeight": 500,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1020 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1020 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 35, "radius": 340, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 52, "radius": 340, "stamina": 0 },
+					{ "name": "Bite", "interval": 20, "dmg": 65, "radius": 340, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Gasosaurus",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Gaso/Gasosaur_Character_bp.Gasosaur_Character_bp_C",
+			"dinoNameTag": "Megalosaurus",
+			"customTag": "Gasosaur",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1200 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1200 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 35, "radius": 200, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Monolophosaurus",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Monoloph/Monolophosaurus_Character_bp.Monolophosaurus_Character_bp_C",
+			"dinoNameTag": "Dilo",
+			"customTag": "Monoloph",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 2400 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 2400 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Ornitholestes",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Ornitholestes/Ornitholestes_Character_BP.Ornitholestes_Character_BP_C",
+			"dinoNameTag": "Troodon",
+			"customTag": "Ornitholestes",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 160,
+			"dragWeight": 80,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 528, "sprint": 2112 },
+				"swim": { "base": 325.6 }
+			},
+			"movementD": {
+				"walk": { "base": 528, "sprint": 2112 },
+				"swim": { "base": 325.6 }
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Attack With Debuff", "interval": 0.33, "dmg": 40, "radius": 300, "stamina": 0 },
+					{ "name": "Jump", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Jump", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Sinosaurus",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Sinosaurus/Sinosaur_Character_bp.Sinosaur_Character_bp_C",
+			"dinoNameTag": "Dilo",
+			"customTag": "Sinosaur",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 150,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 3, "dmg": 35, "radius": 250, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Suchomimus",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Suchomimus/Suchomimus_Character_bp.Suchomimus_Character_bp_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Suchomimus",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 400,
+			"dragWeight": 400,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"swim": { "base": 700 }
+			},
+			"movementD": {
+				"swim": { "base": 700 }
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.05, "dmg": 35, "radius": 450, "stamina": 0 },
+					{ "name": "Bite", "interval": 7, "dmg": 45, "radius": 450, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite", "interval": 3, "dmg": 50, "radius": 450, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Torvosaurus",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Torvo/Torvo_Character_BP.Torvo_Character_bp_C",
+			"dinoNameTag": "Megalosaurus",
+			"customTag": "Torvo",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 480,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 340, "sprint": 1700 }
+			},
+			"movementD": {
+				"walk": { "base": 340, "sprint": 1700 }
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 52, "radius": 340, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "BoostBrothers", "interval": 25, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "LesserRoar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "UberSpinosaurus",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/UberSpino/UberSpino_Character_BP.UberSpino_Character_BP_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 525, "sprint": 1995 }
+			},
+			"movementD": {
+				"walk": { "base": 525, "sprint": 1995 }
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 62, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 90, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 90, "radius": 420, "stamina": 12 }
+				]
+			}
+		},
+		{
+			"name": "Corrupted Deathworm",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Extinction/Dinos/Corrupt/Deathworm/Deathworm_Character_BP_Corrupt.Deathworm_Character_BP_Corrupt_C",
+			"dinoNameTag": "Deathworm Corrupt",
+			"customTag": "Deathworm",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 1000,
+			"variants": [ "Corrupted" ],
+			"flags": [ "isBigDino", "isCarnivore", "isCorrupted" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 0 }
+			},
+			"movementD": {
+				"walk": { "base": 0 }
+			},
+			"attack": {
+				"defaultDmg": 210,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.75, "dmg": 225, "radius": 1200, "stamina": 0 },
+					{ "name": "Claw", "interval": 0.75, "dmg": 225, "radius": 1200, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Corrupted Raptor",
+			"blueprintPath": "/Game/Mods/BalancedJPE/Extinction/Dinos/Corrupt/Raptor/BabyRaptor_Character_BP_Corrupt.BabyRaptor_Character_BP_Corrupt_C",
+			"dinoNameTag": "Raptor",
+			"customTag": "Raptor",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 165,
+			"dragWeight": 85,
+			"variants": [ "Corrupted" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isCorrupted"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 432, "sprint": 993.6 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1104 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 0 },
+					{ "name": "Pounce", "interval": 320, "dmg": 10, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 20, "radius": 180, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Dodo Wyvern",
+			"blueprintPath": "/Game/Mods/BalancedJPE/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 1000,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventCharacterBasing",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 650, "sprint": 1300 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 650, "sprint": 1300 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite (AI)", "interval": 1, "dmg": 600, "radius": 1000, "stamina": 10 },
+					{
+						"name": "Breathe_Lightning", "interval": 6.5, "dmg": 0, "radius": 0, "stamina": 125,
+						"isProjectile": true
+					},
+					{ "name": "Breathe_Fire", "interval": 5, "dmg": 0, "radius": 0, "stamina": 125 },
+					{
+						"name": "Breathe_Poison", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					}
+				]
+			}
+		}
+	]
+}
