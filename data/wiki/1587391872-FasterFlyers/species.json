@@ -1,5 +1,5 @@
 {
-	"version": "309.53.1569378316",
+	"version": "310.19.1586466075",
 	"format": "1",
 	"mod": {
 		"id": "1587391872",
@@ -10,6 +10,47 @@
 		{
 			"name": "Argentavis",
 			"blueprintPath": "/Game/Mods/FasterFlyers/Argy/Argent_Character_BP.Argent_Character_BP_C",
+			"dinoNameTag": "FFArgent",
+			"customTag": "Argent",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 190,
+			"dragWeight": 150,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140.1, "sprint": 315.3 },
+				"fly": { "base": 323.3 },
+				"swim": { "base": 161.7 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 585 },
+				"fly": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 25,
+				"defaultSwingRadius": 210,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 25, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 4, "dmg": 12, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 4, "dmg": 12, "radius": 300, "stamina": 120 }
+				]
+			}
+		},
+		{
+			"name": "X-Argentavis",
+			"blueprintPath": "/Game/Mods/FasterFlyers/Argy/Snow_Argent_Character_BP.Snow_Argent_Character_BP_C",
 			"dinoNameTag": "FFArgent",
 			"customTag": "Argent",
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
@@ -324,6 +365,47 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.6, "dmg": 32, "radius": 720, "stamina": 16 },
 					{ "name": "None", "interval": 1, "dmg": 32, "radius": 370, "stamina": 80 }
+				]
+			}
+		},
+		{
+			"name": "X-Tapejara",
+			"blueprintPath": "/Game/Mods/FasterFlyers/Tapejara/Bog_Tapejara_Character_BP.Bog_Tapejara_Character_BP_C",
+			"dinoNameTag": "FFTapejara",
+			"customTag": "Tapejara",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 539, "sprint": 862.4 },
+				"fly": { "base": 1540 },
+				"swim": { "base": 660 }
+			},
+			"movementD": {
+				"walk": { "base": 245, "sprint": 392 },
+				"fly": { "base": 700 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
 				]
 			}
 		},
