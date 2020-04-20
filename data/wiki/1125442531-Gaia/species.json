@@ -1,5 +1,5 @@
 {
-	"version": "307.4.1584288811",
+	"version": "310.36.1587342854",
 	"format": "1",
 	"mod": {
 		"id": "1125442531",
@@ -3269,6 +3269,40 @@
 				"defaultDmg": 56,
 				"defaultSwingRadius": 300,
 				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 56, "radius": 300, "stamina": -10 } ]
+			}
+		},
+		{
+			"name": "Divine Megachelon",
+			"blueprintPath": "/Game/Mods/Gaia/Dinos/Divine/MegaChelon/DivineGiantTurtle_Character_BP.DivineGiantTurtle_Character_BP_C",
+			"dinoNameTag": "Divine_GiantTurtle",
+			"customTag": "Divine_GiantTurtle",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 800,
+			"dragWeight": 3000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino"
+			],
+			"falling": {
+				"dmgMult": 40,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 282, "sprint": 423 },
+				"swim": { "base": 780 }
+			},
+			"movementD": {
+				"walk": { "base": 282, "sprint": 423 },
+				"swim": { "base": 780 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Bite", "interval": 0.25, "dmg": 250, "radius": 750, "stamina": 0 } ]
 			}
 		},
 		{
@@ -11527,6 +11561,45 @@
 		},
 		{
 			"name": "Friendly Raptor",
+			"blueprintPath": "/Game/Mods/Gaia/Dinos/Other/Raptor/FriendlyRaptor_Character_BP.FriendlyRaptor_Character_BP_C",
+			"dinoNameTag": "Raptor",
+			"customTag": "Raptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 432, "sprint": 993.6 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1104 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 20, "radius": 180, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Friendly Raptor",
 			"blueprintPath": "/Game/Mods/Gaia/Dinos/Other/Raptor/FriendlyRaptor_New_Character_BP.FriendlyRaptor_New_Character_BP_C",
 			"dinoNameTag": "Raptor",
 			"customTag": "Raptor",
@@ -12081,6 +12154,54 @@
 			}
 		},
 		{
+			"name": "Transcendent Dragon",
+			"blueprintPath": "/Game/Mods/Gaia/Dinos/Other/TransDragon/GTransDragon_Character_BP.GTransDragon_Character_BP_C",
+			"dinoNameTag": "Transcendent_Dragon",
+			"customTag": "Transcendent_Dragon",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 200,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"allowRidingInWater",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 40,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1000 },
+				"fly": { "base": 1500, "sprint": 1200 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1000 },
+				"fly": { "base": 1500, "sprint": 1200 },
+				"swim": { "base": 400 }
+			},
+			"attack": {
+				"defaultDmg": 320,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 1, "dmg": 80, "radius": 210, "stamina": 30 },
+					{ "name": "Flame", "interval": 0, "dmg": 0, "radius": 1200, "stamina": 100 },
+					{
+						"name": "Spit", "interval": 0, "dmg": 0, "radius": 0, "stamina": 25,
+						"isProjectile": true
+					},
+					{ "name": "DiveBomb", "interval": 2, "dmg": 180, "radius": 2000, "stamina": 30 }
+				]
+			}
+		},
+		{
 			"name": "Milos",
 			"blueprintPath": "/Game/Mods/Gaia/Dinos/Other/YotaWolf/Minion/YotaWolfMinion_Character_BP.YotaWolfMinion_Character_BP_C",
 			"dinoNameTag": "Milos",
@@ -12154,6 +12275,51 @@
 					{ "name": "Howl(AI)", "interval": 180, "dmg": 0, "radius": 0, "stamina": 35 },
 					{ "name": "Minion Howl", "interval": 60, "dmg": 300, "radius": 120, "stamina": 50 },
 					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 }
+				]
+			}
+		},
+		{
+			"name": "Zanzas Ziz",
+			"blueprintPath": "/Game/Mods/Gaia/Dinos/Other/Ziz/ZanzasZiz_Character_BP.ZanzasZiz_Character_BP_C",
+			"dinoNameTag": "Zanzas_Ziz",
+			"customTag": "Zanzas_Ziz",
+			"targetingTeamName": "Carnivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 40,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 420, "sprint": 1050 },
+				"fly": { "base": 1050, "sprint": 840 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 420, "sprint": 1050 },
+				"fly": { "base": 1050, "sprint": 840 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 36,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Claw", "interval": 1, "dmg": 54, "radius": 750, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 48, "radius": 500, "stamina": 60 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 750, "radius": 1500, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 300, "radius": 2000, "stamina": 30 },
+					{ "name": "Harvest (C)", "interval": 1, "dmg": 54, "radius": 2000, "stamina": 0 }
 				]
 			}
 		},
@@ -13320,6 +13486,149 @@
 				"defaultDmg": 168,
 				"defaultSwingRadius": 450,
 				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 168, "radius": 500, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Skeletal Carnotaurus",
+			"blueprintPath": "/Game/Mods/Gaia/PrimalEarth/Dinos/Carno/Bone_MegaCarno_Character_BP.Bone_MegaCarno_Character_BP_C",
+			"dinoNameTag": "Elite Carno",
+			"customTag": "Carno",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 467.5, "sprint": 1309 }
+			},
+			"movementD": {
+				"walk": { "base": 550, "sprint": 1540 }
+			},
+			"attack": {
+				"defaultDmg": 80,
+				"defaultSwingRadius": 180,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 80, "radius": 180, "stamina": 0 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 80, "radius": 190, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Skeletal Raptor",
+			"blueprintPath": "/Game/Mods/Gaia/PrimalEarth/Dinos/Raptor/Bone_MegaRaptor_Character_BP.Bone_MegaRaptor_Character_BP_C",
+			"dinoNameTag": "Bone Raptor",
+			"customTag": "Raptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 185,
+			"dragWeight": 400,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 481.5, "sprint": 1107.4 },
+				"swim": { "base": 315 }
+			},
+			"movementD": {
+				"walk": { "base": 535, "sprint": 1230.5 },
+				"swim": { "base": 350 }
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 65,
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 65, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Skeletal Rex",
+			"blueprintPath": "/Game/Mods/Gaia/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
+			"dinoNameTag": "Bone Rex",
+			"customTag": "Rex",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 377.5, "sprint": 1079.6 }
+			},
+			"movementD": {
+				"walk": { "base": 566.2, "sprint": 1619.5 }
+			},
+			"attack": {
+				"defaultDmg": 170,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "None", "interval": 0.3, "dmg": 170, "radius": 450, "stamina": 0 },
+					{ "name": "None", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Bone Fire Wyvern",
+			"blueprintPath": "/Game/Mods/Gaia/ScorchedEarth/Dinos/Wyvern/Bone_MegaWyvern_Character_BP_Fire.Bone_MegaWyvern_Character_BP_Fire_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 210,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 140, "radius": 495, "stamina": 10 },
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 90, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 120, "radius": 614, "stamina": 10 }
+				]
 			}
 		},
 		{

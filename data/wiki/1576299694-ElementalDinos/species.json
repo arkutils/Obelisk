@@ -1,5 +1,5 @@
 {
-	"version": "309.44.1585543521",
+	"version": "310.36.1587345996",
 	"format": "1",
 	"mod": {
 		"id": "1576299694",
@@ -7,6 +7,33 @@
 		"title": "Elemental Ark"
 	},
 	"species": [
+		{
+			"name": "Anomaly",
+			"blueprintPath": "/Game/Mods/ElementalDinos/BossDinos/Cnidaria_Character_ElementalHunter_BP.Cnidaria_Character_ElementalHunter_BP_C",
+			"dinoNameTag": "Elemental_Anomaly",
+			"customTag": "",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 100,
+			"dragWeight": 21,
+			"flags": [ "canBeDragged", "canDrag", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 300 },
+				"swim": { "base": 600 }
+			},
+			"attack": {
+				"defaultDmg": 120,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 200, "radius": 400, "stamina": 0 } ]
+			}
+		},
 		{
 			"name": "Air Avenger",
 			"blueprintPath": "/Game/Mods/ElementalDinos/BossDinos/Dragon_Character_Elemental_Air_BP.Dragon_Character_Elemental_Air_BP_C",
@@ -1340,6 +1367,36 @@
 			}
 		},
 		{
+			"name": "Fen Hunter",
+			"blueprintPath": "/Game/Mods/ElementalDinos/BossDinos/MegaTroodon_Character_Elemental_Fen_BP.MegaTroodon_Character_Elemental_Fen_BP_C",
+			"dinoNameTag": "Elite Troodon",
+			"customTag": "Troodon",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 408, "sprint": 816 },
+				"swim": { "base": 255 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 7,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Attack With Debuff", "interval": 0.25, "dmg": 20, "radius": 110, "stamina": 0 },
+					{ "name": "Jump", "interval": 5, "dmg": 7, "radius": 110, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Alpha Tusoteuthis",
 			"blueprintPath": "/Game/Mods/ElementalDinos/BossDinos/Mega_Tusoteuthis_Character_Elemental_Hunter_Fen_BP.Mega_Tusoteuthis_Character_Elemental_Hunter_Fen_BP_C",
 			"dinoNameTag": "Tusoteuthis",
@@ -1851,7 +1908,7 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
 				"attacks": [
-					{ "name": "Melee", "interval": 1, "dmg": 600, "radius": 670, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 300, "radius": 670, "stamina": 0 },
 					{ "name": "Web Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
 					{
 						"name": "Acid Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
@@ -1892,7 +1949,7 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
 				"attacks": [
-					{ "name": "Melee", "interval": 1, "dmg": 600, "radius": 670, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 300, "radius": 670, "stamina": 0 },
 					{ "name": "Web Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
 					{
 						"name": "Acid Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
@@ -1933,7 +1990,7 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
 				"attacks": [
-					{ "name": "Melee", "interval": 1, "dmg": 600, "radius": 670, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 300, "radius": 670, "stamina": 0 },
 					{ "name": "Web Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
 					{
 						"name": "Acid Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
@@ -1974,7 +2031,7 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
 				"attacks": [
-					{ "name": "Melee", "interval": 1, "dmg": 600, "radius": 670, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 300, "radius": 670, "stamina": 0 },
 					{ "name": "Web Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
 					{
 						"name": "Acid Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
@@ -2015,7 +2072,7 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
 				"attacks": [
-					{ "name": "Melee", "interval": 1, "dmg": 600, "radius": 670, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 300, "radius": 670, "stamina": 0 },
 					{ "name": "Web Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
 					{
 						"name": "Acid Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
@@ -3346,6 +3403,53 @@
 			}
 		},
 		{
+			"name": "Fen Ravager",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Dinos/CaveWolf_Character_Elemental_Fen_BP.CaveWolf_Character_Elemental_Fen_BP_C",
+			"dinoNameTag": "CaveWolf_Storm",
+			"customTag": "CaveWolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1950
+			},
+			"movementW": {
+				"walk": { "base": 240, "sprint": 924 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 240, "sprint": 924 },
+				"swim": { "base": 240 }
+			},
+			"attack": {
+				"defaultDmg": 99,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.08, "dmg": 100, "radius": 200, "stamina": 5 },
+					{ "name": "Claw", "interval": 0.22, "dmg": 100, "radius": 200, "stamina": 0 },
+					{
+						"name": "Howl", "interval": 10, "dmg": 0, "radius": 0, "stamina": 15,
+						"isProjectile": true
+					},
+					{ "name": "BiteBelow", "interval": 0.08, "dmg": 100, "radius": 200, "stamina": 5 },
+					{ "name": "Bite Above", "interval": 0.08, "dmg": 100, "radius": 200, "stamina": 5 },
+					{ "name": "ClawBelow", "interval": 0.22, "dmg": 120, "radius": 200, "stamina": 0 },
+					{ "name": "ClawAbove", "interval": 0.22, "dmg": 120, "radius": 200, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.08, "dmg": 100, "radius": 200, "stamina": 5 },
+					{ "name": "Bite Jump", "interval": 3, "dmg": 75, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Storm Ravager",
 			"blueprintPath": "/Game/Mods/ElementalDinos/Dinos/CaveWolf_Character_Elemental_Storm_BP.CaveWolf_Character_Elemental_Storm_BP_C",
 			"dinoNameTag": "CaveWolf_Storm",
@@ -3380,7 +3484,7 @@
 					{ "name": "Bite", "interval": 0.08, "dmg": 100, "radius": 200, "stamina": 5 },
 					{ "name": "Claw", "interval": 0.22, "dmg": 100, "radius": 200, "stamina": 0 },
 					{
-						"name": "Howl", "interval": 0.08, "dmg": 0, "radius": 0, "stamina": 15,
+						"name": "Howl", "interval": 10, "dmg": 0, "radius": 0, "stamina": 15,
 						"isProjectile": true
 					},
 					{ "name": "BiteBelow", "interval": 0.08, "dmg": 100, "radius": 200, "stamina": 5 },
@@ -7860,7 +7964,7 @@
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 190,
-				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 190, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 400, "stamina": 0 } ]
 			}
 		},
 		{
@@ -7892,7 +7996,7 @@
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 190,
-				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 190, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 400, "stamina": 0 } ]
 			}
 		},
 		{
@@ -7924,7 +8028,7 @@
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 190,
-				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 190, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 400, "stamina": 0 } ]
 			}
 		},
 		{
@@ -7956,7 +8060,7 @@
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 190,
-				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 190, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 400, "stamina": 0 } ]
 			}
 		},
 		{
@@ -11135,8 +11239,8 @@
 				"defaultSwingRadius": 1000,
 				"attacks": [
 					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 700, "stamina": 0 },
-					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 900, "stamina": 0 },
-					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 1000, "stamina": 0 }
+					{ "name": "Stomp", "interval": 1.2, "dmg": 240, "radius": 1800, "stamina": 0 },
+					{ "name": "Backfoot", "interval": 1.2, "dmg": 120, "radius": 1000, "stamina": 0 }
 				]
 			}
 		},
@@ -11171,8 +11275,8 @@
 				"defaultSwingRadius": 1000,
 				"attacks": [
 					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 700, "stamina": 0 },
-					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 900, "stamina": 0 },
-					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 1000, "stamina": 0 }
+					{ "name": "Stomp", "interval": 5, "dmg": 240, "radius": 1800, "stamina": 0 },
+					{ "name": "Backfoot", "interval": 1.2, "dmg": 120, "radius": 1000, "stamina": 0 }
 				]
 			}
 		},
@@ -11207,8 +11311,8 @@
 				"defaultSwingRadius": 1000,
 				"attacks": [
 					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 700, "stamina": 0 },
-					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 900, "stamina": 0 },
-					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 1000, "stamina": 0 }
+					{ "name": "Stomp", "interval": 5, "dmg": 240, "radius": 1800, "stamina": 0 },
+					{ "name": "Backfoot", "interval": 1.2, "dmg": 120, "radius": 1000, "stamina": 0 }
 				]
 			}
 		},
@@ -11285,7 +11389,7 @@
 			"name": "Omni Araneo",
 			"blueprintPath": "/Game/Mods/ElementalDinos/Dinos/SpiderS_Character_Elemental_BP.SpiderS_Character_Elemental_BP_C",
 			"dinoNameTag": "Spider_Omni",
-			"customTag": "Spider_Omni",
+			"customTag": "Spider",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 90,
 			"dragWeight": 90,
@@ -13987,6 +14091,35 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 280, "stamina": 0 },
 					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 280, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "GachaClaus",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Extinction/Dinos/Gacha/Gacha_Claus_Character_BP.Gacha_Claus_Character_BP_C",
+			"dinoNameTag": "Gacha",
+			"customTag": "Gacha",
+			"targetingTeamName": "Herbivores",
+			"mass": 400,
+			"dragWeight": 350,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 750 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 750 }
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 150,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.67, "dmg": 32, "radius": 200, "stamina": 0 },
+					{ "name": "MeleeSmash", "interval": 0.7, "dmg": 30, "radius": 150, "stamina": 0 },
+					{ "name": "Gather", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		}
