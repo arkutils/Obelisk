@@ -1,5 +1,5 @@
 {
-	"version": "306.83.1573588823",
+	"version": "310.41.1587683797",
 	"format": "1",
 	"mod": {
 		"id": "1654255131",
@@ -563,35 +563,6 @@
 			}
 		},
 		{
-			"name": "Macaw",
-			"blueprintPath": "/Game/Mods/AtlasImports/Parrot/Macaw_Character_BP_Blue.Macaw_Character_BP_Blue_C",
-			"dinoNameTag": "Macaw",
-			"customTag": "Macaw",
-			"targetingTeamName": "Herbivores",
-			"mass": 70,
-			"dragWeight": 70,
-			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isFlyerDino" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
-			},
-			"movementD": {
-				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
-			},
-			"attack": {
-				"defaultDmg": 12,
-				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 12, "radius": 200, "stamina": 0 } ]
-			}
-		},
-		{
 			"name": "Palaeeudyptes",
 			"blueprintPath": "/Game/Mods/AtlasImports/Penguin/AoAPenguin_Character_BP.AoAPenguin_Character_BP_C",
 			"dinoNameTag": "Palaeeudyptes",
@@ -698,6 +669,43 @@
 				"attacks": [
 					{ "name": "melee", "interval": 0.375, "dmg": 41, "radius": 400, "stamina": 10 },
 					{ "name": "melee", "interval": 0.375, "dmg": 41, "radius": 400, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Lycoteuthis",
+			"blueprintPath": "/Game/Mods/AtlasImports/Squid/AoASquid_Character_BP.AoASquid_Character_BP_C",
+			"dinoNameTag": "Lycoteuthis",
+			"customTag": "Lycoteuthis",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 340,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"swim": { "base": 250 }
+			},
+			"movementD": {
+				"swim": { "base": 250 }
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Tentaslap", "interval": 0, "dmg": 20, "radius": 300, "stamina": 5 },
+					{ "name": "Grab Prey", "interval": 1.5, "dmg": 2, "radius": 300, "stamina": 25 },
+					{ "name": "Ink", "interval": 60, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Crush Prey", "interval": 0, "dmg": 25, "radius": 0, "stamina": 10 }
 				]
 			}
 		},
