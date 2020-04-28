@@ -1,6 +1,6 @@
 {
-	"version": "310.36.1587027746",
-	"format": "2",
+	"version": "310.47.1587027746",
+	"format": "3",
 	"mod": {
 		"id": "1675895024",
 		"tag": "NoUntameables",
@@ -13,13 +13,13 @@
 				{
 					"name": "SurvivorLootSet",
 					"weight": 1,
-					"qtyScale": [ 1, 2, 1 ],
+					"qtyScale": { "min": 1, "max": 2, "pow": 1 },
 					"entries": [
 						{
 							"name": "Tool",
 							"weight": 0.5,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 0, 1.3, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1.3, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponClimbPick_C",
@@ -30,24 +30,24 @@
 						{
 							"name": "Weapon",
 							"weight": 0.5,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 0, 1.3, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1.3, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItem_WeaponSword_C", "PrimalItem_WeaponPike_C", "PrimalItem_WeaponCrossbow_C", "PrimalItem_WeaponBow_C" ]
 						},
 						{
 							"name": "Arrows",
 							"weight": 1,
-							"qty": [ 5, 15, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 5, "max": 15, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemAmmo_ArrowStone_C", "PrimalItemAmmo_ArrowTranq_C", "PrimalItemAmmo_Zipline_C" ]
 						},
 						{
 							"name": "Berries and Mushrooms",
 							"weight": 1.3,
-							"qty": [ 15, 30, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 15, "max": 30, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItemConsumable_Berry_Amarberry_C",
@@ -65,8 +65,8 @@
 						{
 							"name": "Armor",
 							"weight": 0.25,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 0, 1.3, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1.3, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItemArmor_ChitinBoots_C",
@@ -86,13 +86,13 @@
 				{
 					"name": "Venom",
 					"weight": 100,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Venom",
 							"weight": 1,
-							"qty": [ 2, 4, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 2, "max": 4, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": true,
 							"items": [ "PrimalItemConsumable_NamelessVenom_C" ]
 						}
@@ -101,13 +101,13 @@
 				{
 					"name": "Event",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Chibi",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_ChibiDino_Chupacabra_C" ]
 						}
@@ -121,13 +121,13 @@
 				{
 					"name": "Event",
 					"weight": 1000000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Chibi",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_ChibiDino_Cnidaria_C" ]
 						}
@@ -141,53 +141,53 @@
 				{
 					"name": "Resources",
 					"weight": 2,
-					"qtyScale": [ 2, 4, 1 ],
+					"qtyScale": { "min": 2, "max": 4, "pow": 1 },
 					"entries": [
 						{
 							"name": "Pearls",
 							"weight": 1,
-							"qty": [ 10, 30, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 10, "max": 30, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_BlackPearl_C" ]
 						},
 						{
 							"name": "Polymer",
 							"weight": 1,
-							"qty": [ 16, 32, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 16, "max": 32, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Polymer_Organic_C" ]
 						},
 						{
 							"name": "Blood",
 							"weight": 1,
-							"qty": [ 16, 32, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 16, "max": 32, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_LeechBlood_C" ]
 						},
 						{
 							"name": "Angler Gel",
 							"weight": 1,
-							"qty": [ 10, 30, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 10, "max": 30, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_AnglerGel_C" ]
 						},
 						{
 							"name": "Bile",
 							"weight": 1,
-							"qty": [ 16, 32, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 16, "max": 32, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_AmmoniteBlood_C" ]
 						},
 						{
 							"name": "Toxin",
 							"weight": 1,
-							"qty": [ 10, 30, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 10, "max": 30, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemConsumable_JellyVenom_C" ]
 						}
@@ -196,13 +196,13 @@
 				{
 					"name": "Survivor",
 					"weight": 1,
-					"qtyScale": [ 1, 4, 1 ],
+					"qtyScale": { "min": 1, "max": 4, "pow": 1 },
 					"entries": [
 						{
 							"name": "Tool",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 2, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 2, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponMetalHatchet_C",
@@ -214,8 +214,8 @@
 						{
 							"name": "Weapon",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 3, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 3, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponCrossbow_C",
@@ -228,16 +228,16 @@
 						{
 							"name": "Arrows",
 							"weight": 1,
-							"qty": [ 10, 20, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 10, "max": 20, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemAmmo_ArrowStone_C", "PrimalItemAmmo_ArrowTranq_C", "PrimalItemAmmo_ArrowFlame_C", "PrimalItemAmmo_Flamethrower_C" ]
 						},
 						{
 							"name": "Armor",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 2, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 2, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItemArmor_DesertClothBoots_C",
@@ -257,13 +257,13 @@
 				{
 					"name": "Survivor",
 					"weight": 1,
-					"qtyScale": [ 1, 4, 1 ],
+					"qtyScale": { "min": 1, "max": 4, "pow": 1 },
 					"entries": [
 						{
 							"name": "Tool",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 2, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 2, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponMetalHatchet_C",
@@ -275,8 +275,8 @@
 						{
 							"name": "Weapon",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 3, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 3, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponCrossbow_C",
@@ -289,16 +289,16 @@
 						{
 							"name": "Arrows",
 							"weight": 1,
-							"qty": [ 10, 20, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 10, "max": 20, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemAmmo_ArrowStone_C", "PrimalItemAmmo_ArrowTranq_C", "PrimalItemAmmo_ArrowFlame_C", "PrimalItemAmmo_Flamethrower_C" ]
 						},
 						{
 							"name": "Armor",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 2, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 2, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItemArmor_DesertClothBoots_C",
@@ -318,13 +318,13 @@
 				{
 					"name": "Survivor",
 					"weight": 1,
-					"qtyScale": [ 1, 4, 1 ],
+					"qtyScale": { "min": 1, "max": 4, "pow": 1 },
 					"entries": [
 						{
 							"name": "Tool",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 2, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 2, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponMetalHatchet_C",
@@ -336,8 +336,8 @@
 						{
 							"name": "Weapon",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 3, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 3, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponCrossbow_C",
@@ -350,16 +350,16 @@
 						{
 							"name": "Arrows",
 							"weight": 1,
-							"qty": [ 10, 20, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 10, "max": 20, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemAmmo_ArrowStone_C", "PrimalItemAmmo_ArrowTranq_C", "PrimalItemAmmo_ArrowFlame_C", "PrimalItemAmmo_Flamethrower_C" ]
 						},
 						{
 							"name": "Armor",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 2, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 2, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItemArmor_DesertClothBoots_C",
@@ -379,13 +379,13 @@
 				{
 					"name": "Guaranteed",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "KeratinSpike",
 							"weight": 1,
-							"qty": [ 20, 20, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 20, "max": 20, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_KeratinSpike_C" ]
 						}
@@ -394,13 +394,13 @@
 				{
 					"name": "Worm Trophy",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Alpha Deathworm Trophy",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemTrophy_AlphaWorm_C" ]
 						}
@@ -409,21 +409,21 @@
 				{
 					"name": "Alpha Deathworm T",
 					"weight": 1,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Saddle",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 1.2, 3, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 1.2, "max": 3, "pow": 1 },
 							"forceBP": true,
 							"items": [ "PrimalItemArmor_DeathwormSaddle_C" ]
 						},
 						{
 							"name": "Costume",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemCostume_Corrupted_Deathworm_C" ]
 						}
@@ -437,29 +437,29 @@
 				{
 					"name": "Resources",
 					"weight": 1,
-					"qtyScale": [ 1, 3, 1 ],
+					"qtyScale": { "min": 1, "max": 3, "pow": 1 },
 					"entries": [
 						{
 							"name": "Pearls",
 							"weight": 1,
-							"qty": [ 1, 3, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 1, "max": 3, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_BlackPearl_C" ]
 						},
 						{
 							"name": "Polymer",
 							"weight": 1,
-							"qty": [ 4, 8, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 4, "max": 8, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Polymer_Organic_C" ]
 						},
 						{
 							"name": null,
 							"weight": 1,
-							"qty": [ 4, 8, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 4, "max": 8, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_LeechBlood_C" ]
 						}
@@ -468,13 +468,13 @@
 				{
 					"name": "Guaranteed",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "KeratinSpike",
 							"weight": 1,
-							"qty": [ 20, 20, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 20, "max": 20, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_KeratinSpike_C" ]
 						}
@@ -483,21 +483,21 @@
 				{
 					"name": "Alpha Deathworm T",
 					"weight": 1,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Saddle",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 1.2, 3, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 1.2, "max": 3, "pow": 1 },
 							"forceBP": true,
 							"items": [ "PrimalItemArmor_DeathwormSaddle_C" ]
 						},
 						{
 							"name": "Costume",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemCostume_Corrupted_Deathworm_C" ]
 						}
@@ -511,29 +511,29 @@
 				{
 					"name": "Resources",
 					"weight": 1,
-					"qtyScale": [ 1, 3, 1 ],
+					"qtyScale": { "min": 1, "max": 3, "pow": 1 },
 					"entries": [
 						{
 							"name": "Pearls",
 							"weight": 1,
-							"qty": [ 1, 3, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 1, "max": 3, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_BlackPearl_C" ]
 						},
 						{
 							"name": "Polymer",
 							"weight": 1,
-							"qty": [ 4, 8, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 4, "max": 8, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Polymer_Organic_C" ]
 						},
 						{
 							"name": null,
 							"weight": 1,
-							"qty": [ 4, 8, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 4, "max": 8, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_LeechBlood_C" ]
 						}
@@ -542,13 +542,13 @@
 				{
 					"name": "Guaranteed",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "KeratinSpike",
 							"weight": 1,
-							"qty": [ 20, 20, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 20, "max": 20, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_KeratinSpike_C" ]
 						}
@@ -557,21 +557,21 @@
 				{
 					"name": "Alpha Deathworm T",
 					"weight": 1,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Saddle",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 1.2, 3, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 1.2, "max": 3, "pow": 1 },
 							"forceBP": true,
 							"items": [ "PrimalItemArmor_DeathwormSaddle_C" ]
 						},
 						{
 							"name": "Costume",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemCostume_Corrupted_Deathworm_C" ]
 						}
@@ -580,13 +580,13 @@
 				{
 					"name": "Event",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Chibi Deathworm",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_ChibiDino_Deathworm_C" ]
 						}
@@ -600,37 +600,37 @@
 				{
 					"name": "Resources",
 					"weight": 2,
-					"qtyScale": [ 3, 5, 1 ],
+					"qtyScale": { "min": 3, "max": 5, "pow": 1 },
 					"entries": [
 						{
 							"name": "AnglerGel",
 							"weight": 1,
-							"qty": [ 25, 45, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 25, "max": 45, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_AnglerGel_C" ]
 						},
 						{
 							"name": "Pearls",
 							"weight": 1,
-							"qty": [ 4, 8, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 4, "max": 8, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_BlackPearl_C" ]
 						},
 						{
 							"name": "Polymer/Jelly",
 							"weight": 1,
-							"qty": [ 20, 40, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 20, "max": 40, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Polymer_Organic_C", "PrimalItemConsumable_JellyVenom_C" ]
 						},
 						{
 							"name": "Blood/Bile",
 							"weight": 1,
-							"qty": [ 15, 30, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 15, "max": 30, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_LeechBlood_C", "PrimalItemResource_AmmoniteBlood_C" ]
 						}
@@ -639,13 +639,13 @@
 				{
 					"name": "Survivor",
 					"weight": 1,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Tool",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 2, 4, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 2, "max": 4, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponMetalHatchet_C",
@@ -657,8 +657,8 @@
 						{
 							"name": "Weapon",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 3, 5, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 3, "max": 5, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponCrossbow_C",
@@ -671,16 +671,16 @@
 						{
 							"name": "Arrows",
 							"weight": 1,
-							"qty": [ 5, 15, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 5, "max": 15, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemAmmo_ArrowStone_C", "PrimalItemAmmo_ArrowTranq_C", "PrimalItemAmmo_ArrowFlame_C", "PrimalItemAmmo_Flamethrower_C" ]
 						},
 						{
 							"name": "Armor",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 2, 4, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 2, "max": 4, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItemArmor_DesertClothBoots_C",
@@ -700,13 +700,13 @@
 				{
 					"name": "Guaranteed",
 					"weight": 10000,
-					"qtyScale": [ 1, 2, 1 ],
+					"qtyScale": { "min": 1, "max": 2, "pow": 1 },
 					"entries": [
 						{
 							"name": "KeratinSpike",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_KeratinSpike_C" ]
 						}
@@ -715,13 +715,13 @@
 				{
 					"name": "Flares",
 					"weight": 1,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Flare Skin",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_FlaregunFireworks_C" ]
 						}
@@ -735,37 +735,37 @@
 				{
 					"name": "Resources",
 					"weight": 1,
-					"qtyScale": [ 1, 3, 1 ],
+					"qtyScale": { "min": 1, "max": 3, "pow": 1 },
 					"entries": [
 						{
 							"name": "AnglerGel",
 							"weight": 1,
-							"qty": [ 25, 45, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 25, "max": 45, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_AnglerGel_C" ]
 						},
 						{
 							"name": "Pearls",
 							"weight": 1,
-							"qty": [ 4, 8, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 4, "max": 8, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_BlackPearl_C" ]
 						},
 						{
 							"name": "Polymer",
 							"weight": 1,
-							"qty": [ 20, 40, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 20, "max": 40, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Polymer_Organic_C" ]
 						},
 						{
 							"name": null,
 							"weight": 1,
-							"qty": [ 15, 30, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 15, "max": 30, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_LeechBlood_C" ]
 						}
@@ -774,13 +774,13 @@
 				{
 					"name": "Guaranteed",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "KeratinSpike",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_KeratinSpike_C" ]
 						}
@@ -789,13 +789,13 @@
 				{
 					"name": "Event",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Chibi Deathworm",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_ChibiDino_Deathworm_C" ]
 						}
@@ -809,37 +809,37 @@
 				{
 					"name": "Resources",
 					"weight": 1,
-					"qtyScale": [ 1, 3, 1 ],
+					"qtyScale": { "min": 1, "max": 3, "pow": 1 },
 					"entries": [
 						{
 							"name": "AnglerGel",
 							"weight": 1,
-							"qty": [ 25, 45, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 25, "max": 45, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_AnglerGel_C" ]
 						},
 						{
 							"name": "Pearls",
 							"weight": 1,
-							"qty": [ 4, 8, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 4, "max": 8, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_BlackPearl_C" ]
 						},
 						{
 							"name": "Polymer",
 							"weight": 1,
-							"qty": [ 20, 40, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 20, "max": 40, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Polymer_Organic_C" ]
 						},
 						{
 							"name": null,
 							"weight": 1,
-							"qty": [ 15, 30, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 15, "max": 30, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_LeechBlood_C" ]
 						}
@@ -848,13 +848,13 @@
 				{
 					"name": "Guaranteed",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "KeratinSpike",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_KeratinSpike_C" ]
 						}
@@ -863,13 +863,13 @@
 				{
 					"name": "Iceworm Additions",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Costume",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemCostume_Iceworm_C" ]
 						}
@@ -883,13 +883,13 @@
 				{
 					"name": "Event",
 					"weight": 1000000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Chibi",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_ChibiDino_JugBug_C", "PrimalItemSkin_ChibiDino_JugBug_Oil_C" ]
 						}
@@ -903,13 +903,13 @@
 				{
 					"name": "Event",
 					"weight": 1000000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Chibi",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_ChibiDino_JugBug_Element_C" ]
 						}
@@ -923,13 +923,13 @@
 				{
 					"name": "Event",
 					"weight": 1000000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Chibi",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_ChibiDino_JugBug_C", "PrimalItemSkin_ChibiDino_JugBug_Oil_C" ]
 						}
@@ -943,13 +943,13 @@
 				{
 					"name": "Event",
 					"weight": 1000000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Chibi",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_ChibiDino_Lightbug_C" ]
 						}
@@ -963,13 +963,13 @@
 				{
 					"name": "Survivor",
 					"weight": 1,
-					"qtyScale": [ 1, 4, 1 ],
+					"qtyScale": { "min": 1, "max": 4, "pow": 1 },
 					"entries": [
 						{
 							"name": "Tool",
 							"weight": 1,
-							"qty": [ 1, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 1, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItem_WeaponClimbPick_C",
@@ -980,16 +980,16 @@
 						{
 							"name": "Arrows",
 							"weight": 1,
-							"qty": [ 5, 15, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 5, "max": 15, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemAmmo_ArrowStone_C", "PrimalItemAmmo_ArrowTranq_C", "PrimalItemAmmo_Zipline_C" ]
 						},
 						{
 							"name": "Berries",
 							"weight": 1,
-							"qty": [ 15, 30, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 15, "max": 30, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [
 								"PrimalItemConsumable_Berry_Amarberry_C",
@@ -1007,8 +1007,8 @@
 						{
 							"name": "Oil",
 							"weight": 1000,
-							"qty": [ 5, 15, 1 ],
-							"quality": [ 0, 0, 1 ],
+							"qty": { "min": 5, "max": 15, "pow": 1 },
+							"quality": { "min": 0, "max": 0, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemResource_Oil_C" ]
 						}
@@ -1017,13 +1017,13 @@
 				{
 					"name": "Event",
 					"weight": 10000,
-					"qtyScale": [ 1, 1, 1 ],
+					"qtyScale": { "min": 1, "max": 1, "pow": 1 },
 					"entries": [
 						{
 							"name": "Chibi",
 							"weight": 1,
-							"qty": [ 0, 1, 1 ],
-							"quality": [ 0, 1, 1 ],
+							"qty": { "min": 0, "max": 1, "pow": 1 },
+							"quality": { "min": 0, "max": 1, "pow": 1 },
 							"forceBP": false,
 							"items": [ "PrimalItemSkin_ChibiDino_Pteroteuthis_C" ]
 						}
