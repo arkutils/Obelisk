@@ -1,5 +1,5 @@
 {
-	"version": "310.34.4907750",
+	"version": "310.50.4962636",
 	"format": "2",
 	"items": [
 		{
@@ -10169,6 +10169,65 @@
 			"structureTemplate": "/Game/Genesis/Structures/TekJumpPad/TekJumpPad.TekJumpPad_C"
 		},
 		{
+			"name": "Cruise Missile",
+			"description": "A powerful Tek missile that can be controlled remotely or fired and forgotten. Equipping this requires learning its Tekgram.",
+			"blueprintPath": "/Game/Genesis/Weapons/CruiseMissile/PrimalItem_WeaponTekCruiseMissile.PrimalItem_WeaponTekCruiseMissile_C",
+			"icon": "/Game/Genesis/UI/Icons/HUD_TEKCruiseMissile_Icon.HUD_TEKCruiseMissile_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 243,
+				"bpCraftTime": 15,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 212,
+						"type": "PrimalItemResource_Polymer_C"
+					},
+					{
+						"exact": false,
+						"qty": 256,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 160,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 14,
+						"type": "PrimalItemResource_Element_C"
+					},
+					{
+						"exact": false,
+						"qty": 26,
+						"type": "PrimalItemResource_BlackPearl_C"
+					},
+					{
+						"exact": false,
+						"qty": 128,
+						"type": "PrimalItemResource_Electronics_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 243,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Genesis/Weapons/CruiseMissile/WeapTekCruiseMissile.WeapTekCruiseMissile_C"
+		},
+		{
 			"name": "Fish Net",
 			"description": "Wind up and throw it to catch nearby fish.",
 			"blueprintPath": "/Game/Genesis/Weapons/FishingNet/PrimalItem_WeaponFishingNet.PrimalItem_WeaponFishingNet_C",
@@ -11112,63 +11171,6 @@
 				"xp": 2,
 				"time": 5,
 				"resourceMult": 0.5
-			}
-		},
-		{
-			"name": "Fertilized Wyvern Egg",
-			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/Valguero/Assets/Dinos/IceWyvern/Extra/Egg/RAG_Item_Egg_Wyvern_Fertilized_Ice.RAG_Item_Egg_Wyvern_Fertilized_Ice_C",
-			"icon": "/Game/Mods/Valguero/Assets/Dinos/IceWyvern/Extra/Egg/Rag_IceWyvern_Egg.Rag_IceWyvern_Egg",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/Valguero/Assets/Dinos/IceWyvern/Ragnarok_Wyvern_Override_Ice.Ragnarok_Wyvern_Override_Ice_C",
-				"temperature": [ 80, 90 ]
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
 			}
 		},
 		{

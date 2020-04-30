@@ -1,5 +1,5 @@
 {
-	"version": "310.41.1587683797",
+	"version": "310.50.1588055957",
 	"format": "1",
 	"mod": {
 		"id": "1654255131",
@@ -466,6 +466,48 @@
 			}
 		},
 		{
+			"name": "Ludodactylus",
+			"blueprintPath": "/Game/Mods/AtlasImports/Ludodactylus/Ludodactylus_Character_BP.Ludodactylus_Character_BP_C",
+			"dinoNameTag": "Ludodactylus",
+			"customTag": "Ludodactylus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 120,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 172.2, "sprint": 344.3 },
+				"fly": { "base": 782.6 },
+				"swim": { "base": 326.1 }
+			},
+			"movementD": {
+				"walk": { "base": 158.4, "sprint": 316.8 },
+				"fly": { "base": 720 },
+				"swim": { "base": 300 }
+			},
+			"attack": {
+				"defaultDmg": 16,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 20, "radius": 320, "stamina": 0 },
+					{ "name": "Carry", "interval": 1, "dmg": 14, "radius": 320, "stamina": 40 },
+					{ "name": "Barrel Roll", "interval": 10, "dmg": 60, "radius": 350, "stamina": 60 },
+					{ "name": "Swimming", "interval": 0.6, "dmg": 20, "radius": 320, "stamina": 0 },
+					{ "name": "Dash", "interval": 30, "dmg": 90, "radius": 350, "stamina": 120 }
+				]
+			}
+		},
+		{
 			"name": "Maiabalaena",
 			"blueprintPath": "/Game/Mods/AtlasImports/Maiabalaena/Maiabalaena_Character_BP.Maiabalaena_Character_BP_C",
 			"dinoNameTag": "Maiabelaena",
@@ -635,7 +677,10 @@
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "Bite", "interval": 0.4, "dmg": 20, "radius": 140, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 20, "radius": 140, "stamina": 5 },
+					{ "name": "Pumba", "interval": 0, "dmg": 10, "radius": 140, "stamina": 0 }
+				]
 			}
 		},
 		{

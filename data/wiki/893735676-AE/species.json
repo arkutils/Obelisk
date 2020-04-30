@@ -1,5 +1,5 @@
 {
-	"version": "310.36.1587436399",
+	"version": "310.50.1588200603",
 	"format": "1",
 	"mod": {
 		"id": "893735676",
@@ -2905,8 +2905,9 @@
 					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 2400, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_AOE", "interval": 0, "dmg": 1500, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 2500, "radius": 900, "stamina": 20 }
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 15000, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 2500, "radius": 900, "stamina": 20 },
+					{ "name": "Beam", "interval": 32, "dmg": 2400, "radius": 600, "stamina": 20 }
 				]
 			}
 		},
@@ -3203,6 +3204,48 @@
 				"defaultDmg": 1500,
 				"defaultSwingRadius": 630,
 				"attacks": [ { "name": "Spino Bite", "interval": 0.75, "dmg": 1500, "radius": 630, "stamina": 10 } ]
+			}
+		},
+		{
+			"name": "Eternal Alpha Spino",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Alpha/Spino/Alpha_Spino_Character_BP_TLC.Alpha_Spino_Character_BP_TLC_C",
+			"dinoNameTag": "Alpha_Spino_TLC",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 2280 },
+				"swim": { "base": 1200, "sprint": 1440 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 3420 },
+				"swim": { "base": 1800, "sprint": 2160 }
+			},
+			"attack": {
+				"defaultDmg": 1500,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 1500, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 1600, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 1600, "radius": 420, "stamina": 12 }
+				]
 			}
 		},
 		{
@@ -4398,6 +4441,55 @@
 			}
 		},
 		{
+			"name": "Dark Hierophant",
+			"blueprintPath": "/Game/Mods/AE/Dinos/DodoReaper/DarkHierophant_Character_BP.DarkHierophant_Character_BP_C",
+			"dinoNameTag": "DarkHierophant",
+			"customTag": "DarkHierophant",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 525,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isBossDino",
+				"isCarnivore",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 2097, "sprint": 4613.4 }
+			},
+			"movementD": {
+				"walk": { "base": 1864, "sprint": 4100.8 }
+			},
+			"attack": {
+				"defaultDmg": 65,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 450000, "radius": 2400, "stamina": 0 },
+					{
+						"name": "Web Attack", "interval": 25, "dmg": 32000, "radius": 2400, "stamina": 7500,
+						"isProjectile": true
+					},
+					{ "name": "Tail Explosion", "interval": 30, "dmg": 1900000, "radius": 10000, "stamina": 15000 },
+					{
+						"name": "Tail spike", "interval": 10, "dmg": 32000, "radius": 2400, "stamina": 4500,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 2400, "stamina": 0 },
+					{ "name": "Fireballs", "interval": 10, "dmg": 0, "radius": 0, "stamina": 15000 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 16000, "radius": 800, "stamina": 5 },
+					{ "name": "Tail swipe", "interval": 4, "dmg": 900000, "radius": 4000, "stamina": 30 },
+					{ "name": "Summon Minions", "interval": 20, "dmg": 11700, "radius": 1500, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Nova, the Destroyer",
 			"blueprintPath": "/Game/Mods/AE/Dinos/DodoReaper/Destroyer_Character_BP_Male.Destroyer_Character_BP_Male_C",
 			"dinoNameTag": "Destroyer",
@@ -4419,10 +4511,10 @@
 				"maxSpeed": 2800
 			},
 			"movementW": {
-				"walk": { "base": 2097, "sprint": 7129.8 }
+				"walk": { "base": 2097, "sprint": 4613.4 }
 			},
 			"movementD": {
-				"walk": { "base": 1864, "sprint": 6337.6 }
+				"walk": { "base": 1864, "sprint": 4100.8 }
 			},
 			"attack": {
 				"defaultDmg": 65,
@@ -4508,10 +4600,10 @@
 				"maxSpeed": 2800
 			},
 			"movementW": {
-				"walk": { "base": 2097, "sprint": 7129.8 }
+				"walk": { "base": 2097, "sprint": 4613.4 }
 			},
 			"movementD": {
-				"walk": { "base": 1864, "sprint": 6337.6 }
+				"walk": { "base": 1864, "sprint": 4100.8 }
 			},
 			"attack": {
 				"defaultDmg": 65,
@@ -12462,6 +12554,90 @@
 			}
 		},
 		{
+			"name": "Eternal Spino",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Eternal/Fire/Spino/Eternal_Spino_Character_BP_TLC.Eternal_Spino_Character_BP_TLC_C",
+			"dinoNameTag": "Eternal_Spino_TLC",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 2280 },
+				"swim": { "base": 1200, "sprint": 1440 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 3420 },
+				"swim": { "base": 1800, "sprint": 2160 }
+			},
+			"attack": {
+				"defaultDmg": 520,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 520, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 600, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 600, "radius": 420, "stamina": 12 }
+				]
+			}
+		},
+		{
+			"name": "Spino",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Eternal/Fire/Spino/Spino_Character_BP_TLC_BASE.Spino_Character_BP_TLC_BASE_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 2280 },
+				"swim": { "base": 1200, "sprint": 1440 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 3420 },
+				"swim": { "base": 1800, "sprint": 2160 }
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 40, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 }
+				]
+			}
+		},
+		{
 			"name": "Eternal Allosaurus",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Eternal/Poison/Allo/Eternal_Allo_Character_BP.Eternal_Allo_Character_BP_C",
 			"dinoNameTag": "Eternal_Allo",
@@ -14140,6 +14316,51 @@
 			}
 		},
 		{
+			"name": "Eternal InDominus DodoReaper",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Indominus/DodoReaper/AE_InDominusDodoReaper_Character_BP.AE_InDominusDodoReaper_Character_BP_C",
+			"dinoNameTag": "IndominusDodoReaper",
+			"customTag": "IndominusDodoReaper",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 524.2, "sprint": 2621.2 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 2330 }
+			},
+			"attack": {
+				"defaultDmg": 4100,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 4500, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 3500, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 4100, "radius": 1000, "stamina": 30 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 3500, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 3500, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 4500, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 3200, "radius": 200, "stamina": 5 }
+				]
+			}
+		},
+		{
 			"name": "Eternal InDominus DodoRex",
 			"blueprintPath": "/Game/Mods/AE/Dinos/Indominus/DodoRex/InDominus_DodoRex_Character_BP.InDominus_DodoRex_Character_BP_C",
 			"dinoNameTag": "InDominus_DodoRex",
@@ -15000,9 +15221,10 @@
 					{ "name": "Bite", "interval": 0.5, "dmg": 4800, "radius": 600, "stamina": 20 },
 					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 4800, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_AOE", "interval": 0, "dmg": 4800, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 4800, "radius": 900, "stamina": 20 }
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 22000, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 22000, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 4800, "radius": 900, "stamina": 20 },
+					{ "name": "Beam", "interval": 32, "dmg": 4800, "radius": 600, "stamina": 20 }
 				]
 			}
 		},
@@ -15074,6 +15296,48 @@
 				"attacks": [
 					{ "name": "Spino Bite", "interval": 0.75, "dmg": 4250, "radius": 630, "stamina": 10 },
 					{ "name": "Roar", "interval": 0, "dmg": 1500, "radius": 1, "stamina": 100 }
+				]
+			}
+		},
+		{
+			"name": "Infernal Spino",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Infernal/Spino/InfernalSpino_Character_BP_TLC.InfernalSpino_Character_BP_TLC_C",
+			"dinoNameTag": "Infernal_Spino_TLC",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 2280 },
+				"swim": { "base": 1200, "sprint": 1440 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 3420 },
+				"swim": { "base": 1800, "sprint": 2160 }
+			},
+			"attack": {
+				"defaultDmg": 4000,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 4250, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 5000, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 5000, "radius": 420, "stamina": 12 }
 				]
 			}
 		},
@@ -17690,9 +17954,10 @@
 					{ "name": "Bite", "interval": 0.5, "dmg": 4400, "radius": 600, "stamina": 20 },
 					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 4400, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_AOE", "interval": 0, "dmg": 4400, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 4400, "radius": 900, "stamina": 20 }
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 20000, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 20000, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 4400, "radius": 900, "stamina": 20 },
+					{ "name": "Beam", "interval": 32, "dmg": 4400, "radius": 600, "stamina": 20 }
 				]
 			}
 		},
@@ -17951,6 +18216,48 @@
 				"attacks": [
 					{ "name": "Spino Bite", "interval": 0.75, "dmg": 3720, "radius": 630, "stamina": 10 },
 					{ "name": "Roar", "interval": 0, "dmg": 1500, "radius": 1, "stamina": 100 }
+				]
+			}
+		},
+		{
+			"name": "Prime Spino",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Prime/Spino/PrimeSpino_Character_BP_TLC.PrimeSpino_Character_BP_TLC_C",
+			"dinoNameTag": "Prime_Spino_TLC",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 2280 },
+				"swim": { "base": 1200, "sprint": 1440 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 3420 },
+				"swim": { "base": 1800, "sprint": 2160 }
+			},
+			"attack": {
+				"defaultDmg": 3500,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 3720, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 4000, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 4000, "radius": 420, "stamina": 12 }
 				]
 			}
 		},
@@ -19329,6 +19636,41 @@
 				"defaultDmg": 3200,
 				"defaultSwingRadius": 430,
 				"attacks": [ { "name": "None", "interval": 0.63, "dmg": 3200, "radius": 430, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Robot Ankylosaurus",
+			"blueprintPath": "/Game/Mods/AE/Dinos/Robot/Robot_Anky/RobotAnkylo_Character_BP_AE.RobotAnkylo_Character_BP_AE_C",
+			"dinoNameTag": "AE_Robot_Anky",
+			"customTag": "Anky",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 160,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 264 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 264 }
+			},
+			"attack": {
+				"defaultDmg": 4000,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 4000, "radius": 370, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 3000, "radius": 250, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 4000, "radius": 370, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -22280,9 +22622,10 @@
 					{ "name": "Bite", "interval": 0.5, "dmg": 4620, "radius": 600, "stamina": 20 },
 					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 4620, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_AOE", "interval": 0, "dmg": 4620, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 4620, "radius": 900, "stamina": 20 }
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 22000, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 22000, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 4620, "radius": 900, "stamina": 20 },
+					{ "name": "Beam", "interval": 32, "dmg": 4800, "radius": 600, "stamina": 20 }
 				]
 			}
 		},
