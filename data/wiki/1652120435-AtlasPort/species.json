@@ -1,5 +1,5 @@
 {
-	"version": "306.83.1569282532",
+	"version": "310.62.1588730683",
 	"format": "1",
 	"mod": {
 		"id": "1652120435",
@@ -469,7 +469,7 @@
 			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Elephant/AElephant_Character_BP.AElephant_Character_BP_C",
 			"dinoNameTag": "Mammoth",
 			"customTag": "Mammoth",
-			"targetingTeamName": "Herbivores",
+			"targetingTeamName": "Herbivores_Large",
 			"mass": 340,
 			"dragWeight": 400,
 			"flags": [
@@ -485,18 +485,18 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 800 }
+				"walk": { "base": 150, "sprint": 1200 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 800 }
+				"walk": { "base": 150, "sprint": 1200 }
 			},
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 500,
 				"attacks": [
-					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 35, "radius": 500, "stamina": 20 },
-					{ "name": "Tusk Attacks", "interval": 3, "dmg": 46, "radius": 500, "stamina": 20 },
-					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 0, "radius": 500, "stamina": 20 }
+					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 50, "radius": 500, "stamina": 20 },
+					{ "name": "Stomp", "interval": 3, "dmg": 64, "radius": 800, "stamina": 20 },
+					{ "name": "Taunt", "interval": 0.5, "dmg": 0, "radius": 500, "stamina": 20 }
 				]
 			}
 		},
@@ -1444,6 +1444,78 @@
 			}
 		},
 		{
+			"name": "Hippocampus",
+			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Seahorse/Hippocampus_Character_bp.Hippocampus_Character_bp_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Hippocampus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isWaterDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"swim": { "base": 800 }
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 32, "radius": 320, "stamina": 0 },
+					{ "name": "Proj", "interval": 15, "dmg": 0, "radius": 320, "stamina": 120 }
+				]
+			}
+		},
+		{
+			"name": "Hippocampus",
+			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Seahorse/Hippocampus_Character_bp_Herbivore.Hippocampus_Character_bp_Herbivore_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Hippocampus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isWaterDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"swim": { "base": 800 }
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 32, "radius": 320, "stamina": 0 },
+					{ "name": "Proj", "interval": 15, "dmg": 0, "radius": 320, "stamina": 120 }
+				]
+			}
+		},
+		{
 			"name": "Shieldhorn",
 			"blueprintPath": "/Game/Mods/AtlasPort/Critter/ShieldHorn/Shieldhorn_Character_BP.Shieldhorn_Character_bp_C",
 			"dinoNameTag": "Trike",
@@ -1623,73 +1695,71 @@
 			}
 		},
 		{
-			"name": "Corrupted Deathworm",
-			"blueprintPath": "/Game/Mods/AtlasPort/Extinction/Dinos/Corrupt/Deathworm/Deathworm_Character_BP_Corrupt.Deathworm_Character_BP_Corrupt_C",
-			"dinoNameTag": "Deathworm Corrupt",
-			"customTag": "Deathworm",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 1200,
-			"dragWeight": 1000,
-			"variants": [ "Corrupted" ],
-			"flags": [ "isBigDino", "isCarnivore", "isCorrupted" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 0 }
-			},
-			"movementD": {
-				"walk": { "base": 0 }
-			},
-			"attack": {
-				"defaultDmg": 210,
-				"defaultSwingRadius": 1200,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.75, "dmg": 225, "radius": 1200, "stamina": 0 },
-					{ "name": "Claw", "interval": 0.75, "dmg": 225, "radius": 1200, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Corrupted Raptor",
-			"blueprintPath": "/Game/Mods/AtlasPort/Extinction/Dinos/Corrupt/Raptor/BabyRaptor_Character_BP_Corrupt.BabyRaptor_Character_BP_Corrupt_C",
-			"dinoNameTag": "Raptor",
-			"customTag": "Raptor",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 165,
-			"dragWeight": 85,
-			"variants": [ "Corrupted" ],
+			"name": "Yakalo",
+			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Yak/AYak_Character_BP.AYak_Character_BP_C",
+			"dinoNameTag": "Phiomia",
+			"customTag": "CowYak",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 340,
+			"dragWeight": 200,
 			"flags": [
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"isCarnivore",
-				"isCorrupted"
+				"doStepDamage",
+				"isBigDino"
 			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 432, "sprint": 993.6 },
-				"swim": { "base": 270 }
+				"walk": { "base": 350, "sprint": 2100 },
+				"swim": { "base": 480 }
 			},
 			"movementD": {
-				"walk": { "base": 480, "sprint": 1104 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 2100 },
+				"swim": { "base": 480 }
 			},
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 0 },
-					{ "name": "Pounce", "interval": 320, "dmg": 10, "radius": 300, "stamina": 5 },
-					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 20, "radius": 180, "stamina": 0 }
-				]
+				"defaultDmg": 42,
+				"defaultSwingRadius": 500,
+				"attacks": [ { "name": "Horn Attacks", "interval": 0.3, "dmg": 30, "radius": 240, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Polar Yakalo",
+			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Yak/AYak_Character_BP_Polar.AYak_Character_BP_Polar_C",
+			"dinoNameTag": "Phiomia",
+			"customTag": "CowYak",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 340,
+			"dragWeight": 200,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 2100 },
+				"swim": { "base": 480 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 2100 },
+				"swim": { "base": 480 }
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 500,
+				"attacks": [ { "name": "Horn Attacks", "interval": 0.3, "dmg": 30, "radius": 240, "stamina": 0 } ]
 			}
 		},
 		{
@@ -1835,6 +1905,179 @@
 						"name": "Breathe_Poison", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
 						"isProjectile": true
 					}
+				]
+			}
+		},
+		{
+			"name": "Zombie Fire Wyvern",
+			"blueprintPath": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieFire.Wyvern_Character_BP_ZombieFire_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Zombie Lightning Wyvern",
+			"blueprintPath": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieLightning.Wyvern_Character_BP_ZombieLightning_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Zombie Poison Wyvern",
+			"blueprintPath": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombiePoison.Wyvern_Character_BP_ZombiePoison_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Submarine",
+			"blueprintPath": "/Game/Mods/AtlasPort/Submarine/AtlasSubmarine_BP.AtlasSubmarine_BP_C",
+			"dinoNameTag": "Mek",
+			"customTag": "Submarine",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 550,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isRobot",
+				"isWaterDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"swim": { "base": 800 }
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "None", "interval": 0.2, "dmg": 48, "radius": 460, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 48, "radius": 460, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 100 }
 				]
 			}
 		}
