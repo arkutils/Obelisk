@@ -1,5 +1,5 @@
 {
-	"version": "310.50.1588224416",
+	"version": "310.62.1588873988",
 	"format": "2",
 	"mod": {
 		"id": "1565015734",
@@ -2515,8 +2515,8 @@
 			}
 		},
 		{
-			"name": "Cured Bacon",
-			"description": "Mmmmmm, bacon.  Lasts longer than cooked meat.\nWild carnivores will eat it, but prefer raw meat.",
+			"name": "Cured Faux Bacon",
+			"description": "Mmmmmm, bacon, sort of. Lasts far longer than cooked meat. Can be used the same as regular Cooked Meat Jerky.",
 			"blueprintPath": "/Game/Mods/BetterDinosTest/Phiomia/PrimalItemConsumable_CuredBacon.PrimalItemConsumable_CuredBacon_C",
 			"icon": "/Game/Mods/BetterDinosTest/Phiomia/Bacon.Bacon",
 			"type": "MiscConsumable/Food",
@@ -2582,8 +2582,8 @@
 			}
 		},
 		{
-			"name": "Cooked Pork Chop",
-			"description": "Sates your hunger, and provides health while being digested.  Wild carnivores will eat it, but prefer raw meat.",
+			"name": "Cooked High Protein Meat",
+			"description": "Cooking this meat removes its rapid healing properties, but does allow it to then be rapidy turned into dried meat with the use of salt.",
 			"blueprintPath": "/Game/Mods/BetterDinosTest/Phiomia/PrimalItemConsumable_PorkChop.PrimalItemConsumable_PorkChop_C",
 			"icon": "/Game/Mods/BetterDinosTest/Phiomia/PorkChop.PorkChop",
 			"type": "MiscConsumable/Food",
@@ -2644,8 +2644,8 @@
 			}
 		},
 		{
-			"name": "Swine Flesh",
-			"description": "Extra nutritious meat. Carnivores can wolf this down quickly, and will feel the benefits.",
+			"name": "Raw High Protein Meat",
+			"description": "Extra nutritious meat. Carnivores can wolf this down quickly, and will feel the benefits. Restore Health at a much faster rate than force feeding with regular Raw Meat. Not at all recommended for use in taming though.",
 			"blueprintPath": "/Game/Mods/BetterDinosTest/Phiomia/PrimalItemConsumable_SwineFlesh.PrimalItemConsumable_SwineFlesh_C",
 			"icon": "/Game/Mods/BetterDinosTest/Phiomia/Pork.Pork",
 			"type": "MiscConsumable/Food",
@@ -2728,6 +2728,45 @@
 						"exact": false,
 						"qty": 30,
 						"type": "PrimalItemResource_PeltOrHair_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 22.2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Styracosaurus Saddle",
+			"description": "Equip a Styracosaurus with this to ride it.",
+			"blueprintPath": "/Game/Mods/BetterDinosTest/Reins/PrimalItemArmor_VoidedItem_BD.PrimalItemArmor_VoidedItem_BD_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/TrikeSaddle_Icon.TrikeSaddle_Icon",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 22.2,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 140,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 80,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 25,
+						"type": "PrimalItemResource_Wood_C"
 					}
 				]
 			},
@@ -3033,39 +3072,6 @@
 					"descriptionIndex": 1,
 					"duration": 0.5
 				}
-			}
-		},
-		{
-			"name": "Original Scorpion Costume",
-			"description": "This costume can be used to make your Scorpion revert to its original look.",
-			"blueprintPath": "/Game/Mods/BetterDinosTest/Scorp/PrimalItemCostume_OGScorp.PrimalItemCostume_OGScorp_C",
-			"icon": "/Game/Mods/BetterDinosTest/Scorp/ScorpionHead_Icon.ScorpionHead_Icon",
-			"type": "Equipment/Costume",
-			"folders": [ "Costumes" ],
-			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 0,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_Chitin_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
@@ -4809,7 +4815,7 @@
 			"name": "Better Dinos Workbench",
 			"description": "For the creation of items added by the Better Dinos mod",
 			"blueprintPath": "/Game/Mods/BetterDinosTest/WorkBench/PrimalItemStructure_BDWorkBench.PrimalItemStructure_BDWorkBench_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Smithy_Icon.Smithy_Icon",
+			"icon": "/Game/Mods/BetterDinosTest/WorkBench/Work.Work",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
