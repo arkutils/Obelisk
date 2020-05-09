@@ -1,5 +1,5 @@
 {
-	"version": "310.36.1587342854",
+	"version": "310.77.1589030706",
 	"format": "2",
 	"mod": {
 		"id": "1125442531",
@@ -25285,6 +25285,50 @@
 			}
 		},
 		{
+			"name": "Zanzaz Ziz Saddle",
+			"description": "Equip a Zanzas Ziz with this to ride it. ",
+			"blueprintPath": "/Game/Mods/Gaia/Items/Saddles/Other/PrimalItemArmor_ZanzasZizSaddle.PrimalItemArmor_ZanzasZizSaddle_C",
+			"icon": "/Game/Mods/Gaia/Corefiles/Icons/GaiaGenericSaddle_Icon.GaiaGenericSaddle_Icon",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 72.4,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 220,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 250,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 75,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 30,
+						"type": "PrimalItemResource_Silicon_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 72.4,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
 			"name": "Shrinker",
 			"description": "Used on any creature to shrink it.",
 			"blueprintPath": "/Game/Mods/Gaia/Items/Skins/Dinos/PrimalItemCostume_GaiaShrinker.PrimalItemCostume_GaiaShrinker_C",
@@ -30360,6 +30404,55 @@
 				"resourceMult": 0.5
 			},
 			"structureTemplate": "/Game/Mods/Gaia/Structures/DivineBeaverDam/DivineBeaverDamStructure.DivineBeaverDamStructure_C"
+		},
+		{
+			"name": "Gaia Farm",
+			"description": "Will slowly produce raw meat and hide and produce pigs and dodos over time.\nEnable it in MU/radial menu.",
+			"blueprintPath": "/Game/Mods/Gaia/Structures/Farm/PrimalItemStructure_GaiaFarm.PrimalItemStructure_GaiaFarm_C",
+			"icon": "/Game/Mods/Gaia/Corefiles/Icons/GaiaFarmIcon.GaiaFarmIcon",
+			"type": "Structure",
+			"folders": [ "Structures" ],
+			"weight": 50,
+			"maxQuantity": 10,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_Thatch_C"
+					},
+					{
+						"exact": false,
+						"qty": 450,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_Stone_C"
+					},
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_Fibers_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/Gaia/Structures/Farm/GaiaFarm.GaiaFarm_C"
 		},
 		{
 			"name": "Gaia Feeder",
@@ -37051,6 +37144,78 @@
 			"structureTemplate": "/Game/Mods/Gaia/Structures/GaiaBookshelf/GaiaBookshelf.GaiaBookshelf_C"
 		},
 		{
+			"name": "Gaia Crop Nitro",
+			"description": "Used to fertilize crops. Yields 100 times the manure as vanilla fertilizer.\nYou are really not supposed to have this in your inventory.",
+			"blueprintPath": "/Game/Mods/Gaia/Structures/GaiaCropPlot/PrimalItemConsumable_PlotNitro.PrimalItemConsumable_PlotNitro_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Fertilizer_Icon.Fertilizer_Icon",
+			"type": "MiscConsumable/Other",
+			"preventCheatGive": true,
+			"folders": [ "Consumables", "Feces" ],
+			"weight": 0.01,
+			"maxQuantity": 1000,
+			"spoilage": { "time": 3600 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0,
+				"bpCraftTime": 1,
+				"minLevelReq": 0,
+				"productCount": 1000,
+				"skillQualityMult": [ 0, 0.05 ]
+			}
+		},
+		{
+			"name": "Gaia Stone Crop Plot",
+			"description": "Large stone crop plot made out of stone, doubles the greenhouse potential effect and never requires water or fertilizer.",
+			"blueprintPath": "/Game/Mods/Gaia/Structures/GaiaCropPlot/PrimalItemStructure_CropPlotGaia.PrimalItemStructure_CropPlotGaia_C",
+			"icon": "/Game/Mods/Gaia/Corefiles/Icons/GaiaStonePlotIcon.GaiaStonePlotIcon",
+			"type": "Structure",
+			"folders": [ "Structures", "Farming" ],
+			"weight": 4,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 21.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Thatch_C"
+					},
+					{
+						"exact": false,
+						"qty": 60,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 250,
+						"type": "PrimalItemResource_Stone_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 21.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/Gaia/Structures/GaiaCropPlot/CropPlotGaia.CropPlotGaia_C"
+		},
+		{
 			"name": "Gaia Refining Forge",
 			"description": "Requires Wood, Thatch, or Sparkpowder to activate.  Put unrefined resources in this to refine them.",
 			"blueprintPath": "/Game/Mods/Gaia/Structures/GaiaForge/PrimalItemStructure_GaiaForge.PrimalItemStructure_GaiaForge_C",
@@ -37233,7 +37398,7 @@
 		},
 		{
 			"name": "Gaia Scarecrow",
-			"description": "Guaranteed to scare the crows away and keep your crops growing without need of a greenhouse!",
+			"description": "Guaranteed to scare the crows away and keep your crops growing without need of a greenhouse!\n\nStandard setting is 1 per tribe, can be changed in GUS. Placing several of these close to eachother can cause desync and client lag.",
 			"blueprintPath": "/Game/Mods/Gaia/Structures/GaiaScarecrow/PrimalItemStructure_GaiaScarecrow.PrimalItemStructure_GaiaScarecrow_C",
 			"icon": "/Game/Mods/Gaia/Corefiles/Icons/GaiaScarecrow_Icon.GaiaScarecrow_Icon",
 			"type": "Structure",

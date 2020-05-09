@@ -1,5 +1,5 @@
 {
-	"version": "310.36.1587342854",
+	"version": "310.77.1589030706",
 	"format": "1",
 	"mod": {
 		"id": "1125442531",
@@ -12197,7 +12197,8 @@
 						"name": "Spit", "interval": 0, "dmg": 0, "radius": 0, "stamina": 25,
 						"isProjectile": true
 					},
-					{ "name": "DiveBomb", "interval": 2, "dmg": 180, "radius": 2000, "stamina": 30 }
+					{ "name": "DiveBomb", "interval": 2, "dmg": 180, "radius": 2000, "stamina": 30 },
+					{ "name": "Heal Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
@@ -13629,6 +13630,64 @@
 					{ "name": "Taunt", "interval": 0, "dmg": 90, "radius": 2000, "stamina": 2 },
 					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 120, "radius": 614, "stamina": 10 }
 				]
+			}
+		},
+		{
+			"name": "Dodo",
+			"blueprintPath": "/Game/Mods/Gaia/Structures/Farm/Animal/Gaia_Dodo_Character_BP_Farm.Gaia_Dodo_Character_BP_Farm_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "Dodo",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65, "sprint": 136.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5, "sprint": 95.5 },
+				"swim": { "base": 210 }
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Phiomia",
+			"blueprintPath": "/Game/Mods/Gaia/Structures/Farm/Animal/Gaia_Phiomia_Character_BP_Farm.Gaia_Phiomia_Character_BP_Farm_C",
+			"dinoNameTag": "Phiomia",
+			"customTag": "Phiomia",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 247.5, "sprint": 915.7 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 555 }
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 10, "radius": 160, "stamina": 0 } ]
 			}
 		},
 		{
