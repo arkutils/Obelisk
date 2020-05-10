@@ -1,5 +1,5 @@
 {
-	"version": "310.62.1585790544",
+	"version": "310.77.1589127051",
 	"format": "1",
 	"mod": {
 		"id": "1984936918",
@@ -9,7 +9,7 @@
 	"species": [
 		{
 			"name": "Wolf",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/CanisLupus/CLwolf_Character_BP.CLwolf_Character_BP_C",
+			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/CanisLupus/Wolf_MM_Character_BP.Wolf_MM_Character_BP_C",
 			"dinoNameTag": "canislupus",
 			"customTag": "canislupus",
 			"targetingTeamName": "Carnivores_Medium",
@@ -167,7 +167,7 @@
 					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 50, "radius": 500, "stamina": 20 },
 					{ "name": "Stomp", "interval": 1.5, "dmg": 69, "radius": 800, "stamina": 40 },
 					{ "name": "Swimming Attack", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 },
-					{ "name": "BiteHarvest", "interval": 4, "dmg": 20, "radius": 225, "stamina": 0 }
+					{ "name": "BiteHarvest", "interval": 4, "dmg": 1, "radius": 225, "stamina": 0 }
 				]
 			}
 		},
@@ -243,14 +243,14 @@
 			"targetingTeamName": "Herbivores",
 			"mass": 90,
 			"dragWeight": 40,
-			"flags": [ "canBeDragged", "canDrag", "isCarnivore" ],
+			"flags": [ "canBeDragged", "canDrag", "canMountOnHumans", "isCarnivore" ],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 165, "sprint": 465.3 },
-				"swim": { "base": 300 }
+				"walk": { "base": 313.5, "sprint": 884.1 },
+				"swim": { "base": 570 }
 			},
 			"movementD": {
 				"walk": { "base": 123.3, "sprint": 347.8 },
@@ -280,14 +280,14 @@
 			],
 			"falling": {
 				"dmgMult": 80,
-				"maxSpeed": 1550
+				"maxSpeed": 1650
 			},
 			"movementW": {
-				"walk": { "base": 184, "sprint": 839 },
-				"swim": { "base": 240 }
+				"walk": { "base": 165.6, "sprint": 828 },
+				"swim": { "base": 216 }
 			},
 			"movementD": {
-				"walk": { "base": 184, "sprint": 839 },
+				"walk": { "base": 184, "sprint": 920 },
 				"swim": { "base": 240 }
 			},
 			"attack": {
@@ -296,7 +296,8 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.08, "dmg": 35, "radius": 160, "stamina": 5 },
 					{ "name": "BuffRoar", "interval": 180, "dmg": 0, "radius": 0, "stamina": 35 },
-					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 }
+					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 }
 				]
 			}
 		},
@@ -374,6 +375,36 @@
 				"defaultDmg": 3,
 				"defaultSwingRadius": 350,
 				"attacks": [ { "name": "BiteAttack", "interval": 0.4, "dmg": 3, "radius": 100, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Rat",
+			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Rats/Rats_MM_Character_BP.Rats_MM_Character_BP_C",
+			"dinoNameTag": "Rat",
+			"customTag": "Rat",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 50,
+			"dragWeight": 20,
+			"flags": [ "canBeDragged", "canMountOnHumans", "isCarnivore" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 336 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 336 },
+				"swim": { "base": 200 }
+			},
+			"attack": {
+				"defaultDmg": 4,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "MeleeBite", "interval": 0.1, "dmg": 4, "radius": 90, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.1, "dmg": 4, "radius": 90, "stamina": 0 }
+				]
 			}
 		},
 		{
