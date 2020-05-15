@@ -1,0 +1,264 @@
+{
+	"title": "Species data for the Wiki",
+	"type": "object",
+	"properties": {
+		"version": {
+			"title": "Version",
+			"description": "Data version of the format <gamemajor>.<gamemajor>.<specificversion>, e.g. '306.83.4740398'",
+			"type": "string"
+		},
+		"format": {
+			"title": "Format",
+			"description": "Free-form format identifier, changed only when incompatibilities are introduced",
+			"type": "string"
+		},
+		"mod": {
+			"title": "Mod info",
+			"description": "Source module information",
+			"allOf": [
+				{
+					"$ref": "#/definitions/ModInfo"
+				}
+			]
+		},
+		"species": {
+			"title": "Species",
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Species"
+			}
+		}
+	},
+	"required": [
+		"version",
+		"format",
+		"species"
+	],
+	"additionalProperties": false,
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"ModInfo": {
+			"title": "ModInfo",
+			"type": "object",
+			"properties": {
+				"id": {
+					"title": "Mod ID",
+					"type": "string"
+				},
+				"tag": {
+					"title": "Blueprint tag",
+					"description": "Used in place of the mod ID in blueprint paths",
+					"type": "string"
+				},
+				"title": {
+					"title": "Mod name",
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"tag",
+				"title"
+			]
+		},
+		"FallingData": {
+			"title": "FallingData",
+			"type": "object",
+			"properties": {
+				"dmgMult": {
+					"title": "Damage multiplier",
+					"type": "number"
+				},
+				"maxSpeed": {
+					"title": "Max speed",
+					"type": "number"
+				}
+			},
+			"required": [
+				"dmgMult",
+				"maxSpeed"
+			],
+			"additionalProperties": false
+		},
+		"SpeedData": {
+			"title": "SpeedData",
+			"type": "object",
+			"properties": {
+				"base": {
+					"title": "Base",
+					"type": "number"
+				},
+				"crouch": {
+					"title": "Crouch",
+					"type": "number"
+				},
+				"sprint": {
+					"title": "Sprint",
+					"type": "number"
+				}
+			},
+			"required": [
+				"base"
+			]
+		},
+		"MovementModes": {
+			"title": "MovementModes",
+			"type": "object",
+			"properties": {
+				"walk": {
+					"$ref": "#/definitions/SpeedData"
+				},
+				"fly": {
+					"$ref": "#/definitions/SpeedData"
+				},
+				"swim": {
+					"$ref": "#/definitions/SpeedData"
+				}
+			}
+		},
+		"AttackInfo": {
+			"title": "AttackInfo",
+			"type": "object",
+			"properties": {
+				"name": {
+					"title": "Name",
+					"type": "string"
+				},
+				"interval": {
+					"title": "Interval",
+					"type": "number"
+				},
+				"dmg": {
+					"title": "Dmg",
+					"type": "integer"
+				},
+				"radius": {
+					"title": "Radius",
+					"type": "number"
+				},
+				"stamina": {
+					"title": "Stamina",
+					"type": "number"
+				},
+				"isProjectile": {
+					"title": "Isprojectile",
+					"default": false,
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"name",
+				"interval",
+				"dmg",
+				"radius",
+				"stamina"
+			],
+			"additionalProperties": false
+		},
+		"AttackData": {
+			"title": "AttackData",
+			"type": "object",
+			"properties": {
+				"defaultDmg": {
+					"title": "Defaultdmg",
+					"type": "integer"
+				},
+				"defaultSwingRadius": {
+					"title": "Defaultswingradius",
+					"type": "number"
+				},
+				"attacks": {
+					"title": "Attacks",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/AttackInfo"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"Species": {
+			"title": "Species",
+			"type": "object",
+			"properties": {
+				"name": {
+					"title": "Name",
+					"description": "Descriptive name",
+					"type": "string"
+				},
+				"blueprintPath": {
+					"title": "Full blueprint path",
+					"type": "string"
+				},
+				"dinoNameTag": {
+					"title": "Dino name tag",
+					"description": "Only known use is saddle compatibility",
+					"type": "string"
+				},
+				"customTag": {
+					"title": "Custom tag",
+					"type": "string"
+				},
+				"targetingTeamName": {
+					"title": "Targeting team name",
+					"description": "Prevent friendly fire with creatures in the same team",
+					"type": "string"
+				},
+				"mass": {
+					"title": "Mass",
+					"description": "Physics mass, used as a limit in some immobilisation systems",
+					"type": "number"
+				},
+				"dragWeight": {
+					"title": "Drag weight",
+					"description": "Apparent weight for many game systems including carrying and boss arena entry limits",
+					"type": "number"
+				},
+				"variants": {
+					"title": "Variants",
+					"description": "List of relevant variant names",
+					"default": [],
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"flags": {
+					"title": "Flags",
+					"description": "Relevant boolean flags that are True for this species",
+					"default": [],
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"falling": {
+					"$ref": "#/definitions/FallingData"
+				},
+				"movementW": {
+					"title": "Movement (wild)",
+					"allOf": [
+						{
+							"$ref": "#/definitions/MovementModes"
+						}
+					]
+				},
+				"movementD": {
+					"title": "Movement (domesticated)",
+					"allOf": [
+						{
+							"$ref": "#/definitions/MovementModes"
+						}
+					]
+				},
+				"attack": {
+					"$ref": "#/definitions/AttackData"
+				}
+			},
+			"required": [
+				"blueprintPath"
+			],
+			"additionalProperties": false
+		}
+	}
+}
