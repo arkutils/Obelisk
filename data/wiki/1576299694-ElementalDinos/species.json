@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1587345996",
+	"version": "310.90.1589806369",
 	"format": "1",
 	"mod": {
 		"id": "1576299694",
@@ -332,6 +332,83 @@
 					{ "name": "Spino Bite", "interval": 0.75, "dmg": 300, "radius": 1200, "stamina": 30 },
 					{ "name": "Flame", "interval": 15, "dmg": 0, "radius": 1200, "stamina": 100 },
 					{ "name": "Flame", "interval": 15, "dmg": 0, "radius": 1200, "stamina": 100 }
+				]
+			}
+		},
+		{
+			"name": "Leaf golem",
+			"blueprintPath": "/Game/Mods/ElementalDinos/BossDinos/FlyGolem_Character_BP.FlyGolem_Character_BP_C",
+			"dinoNameTag": "Jerboa",
+			"customTag": "Jerboa",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canDrag" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 156, "sprint": 366.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 234, "sprint": 549.9 },
+				"swim": { "base": 450 }
+			},
+			"attack": {
+				"defaultDmg": 3,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee1", "interval": 0.15, "dmg": 300, "radius": 500, "stamina": 0 },
+					{ "name": "Melee2", "interval": 1, "dmg": 300, "radius": 500, "stamina": 0 },
+					{ "name": "Melee3", "interval": 1, "dmg": 150, "radius": 500, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Furion",
+			"blueprintPath": "/Game/Mods/ElementalDinos/BossDinos/Fury_Character_Minion_BP.Fury_Character_Minion_BP_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 50,
+			"dragWeight": 555,
+			"variants": [ "Minion" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"movementD": {
+				"walk": { "base": 345, "sprint": 796.9 },
+				"fly": { "base": 1500, "sprint": 1000 },
+				"swim": { "base": 550 }
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{
+						"name": "Fireball", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40,
+						"isProjectile": true
+					},
+					{ "name": "Melee", "interval": 0.6, "dmg": 300, "radius": 500, "stamina": 0 }
 				]
 			}
 		},
@@ -5638,7 +5715,7 @@
 			"dinoNameTag": "Elemental_DarkFury",
 			"customTag": "Fury",
 			"targetingTeamName": "",
-			"mass": 250,
+			"mass": 800,
 			"dragWeight": 250,
 			"flags": [
 				"allowFlyerLandedRider",
@@ -5684,7 +5761,7 @@
 			"dinoNameTag": "Elemental_LightFury",
 			"customTag": "Fury",
 			"targetingTeamName": "",
-			"mass": 250,
+			"mass": 800,
 			"dragWeight": 250,
 			"flags": [
 				"allowFlyerLandedRider",
@@ -11241,7 +11318,7 @@
 				"attacks": [
 					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 700, "stamina": 0 },
 					{ "name": "Stomp", "interval": 1.2, "dmg": 240, "radius": 1800, "stamina": 0 },
-					{ "name": "Backfoot", "interval": 1.2, "dmg": 120, "radius": 1000, "stamina": 0 }
+					{ "name": "Backfoot", "interval": 1.2, "dmg": 120, "radius": 800, "stamina": 0 }
 				]
 			}
 		},
@@ -11277,7 +11354,7 @@
 				"attacks": [
 					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 700, "stamina": 0 },
 					{ "name": "Stomp", "interval": 5, "dmg": 240, "radius": 1800, "stamina": 0 },
-					{ "name": "Backfoot", "interval": 1.2, "dmg": 120, "radius": 1000, "stamina": 0 }
+					{ "name": "Backfoot", "interval": 1.2, "dmg": 120, "radius": 800, "stamina": 0 }
 				]
 			}
 		},
@@ -11313,7 +11390,7 @@
 				"attacks": [
 					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 700, "stamina": 0 },
 					{ "name": "Stomp", "interval": 5, "dmg": 240, "radius": 1800, "stamina": 0 },
-					{ "name": "Backfoot", "interval": 1.2, "dmg": 120, "radius": 1000, "stamina": 0 }
+					{ "name": "Backfoot", "interval": 1.2, "dmg": 120, "radius": 800, "stamina": 0 }
 				]
 			}
 		},
