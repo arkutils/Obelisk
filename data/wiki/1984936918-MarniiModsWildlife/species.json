@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.90.1589738122",
+	"version": "310.94.1590350740",
 	"format": "1",
 	"mod": {
 		"id": "1984936918",
@@ -8,6 +8,46 @@
 		"title": "MarniiMods:Wildlife"
 	},
 	"species": [
+		{
+			"name": "Camel",
+			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Camel/Camel_MM_Character_BP.Camel_MM_Character_BP_C",
+			"dinoNameTag": "Camel",
+			"customTag": "Camel",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 380,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 331.2 }
+			},
+			"movementD": {
+				"walk": { "base": 136.1, "sprint": 544.3 },
+				"swim": { "base": 150.3 }
+			},
+			"attack": {
+				"defaultDmg": 14,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Footstomp", "interval": 0.5, "dmg": 32, "radius": 240, "stamina": 5 },
+					{
+						"name": "Spit", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
 		{
 			"name": "Wolf",
 			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/CanisLupus/Wolf_MM_Character_BP.Wolf_MM_Character_BP_C",
@@ -206,6 +246,44 @@
 				"defaultDmg": 3,
 				"defaultSwingRadius": 350,
 				"attacks": [ { "name": "BiteAttack", "interval": 0.4, "dmg": 3, "radius": 100, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Frog",
+			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Frog/Frog_MM_Character_BP.Frog_MM_Character_BP_C",
+			"dinoNameTag": "Frog",
+			"customTag": "Frog",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 120,
+			"dragWeight": 110,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isAmphibious"
+			],
+			"falling": {
+				"dmgMult": 66,
+				"maxSpeed": 1770
+			},
+			"movementW": {
+				"walk": { "base": 100, "sprint": 200 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 85, "sprint": 170 },
+				"swim": { "base": 170 }
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 144,
+				"attacks": [
+					{ "name": "None", "interval": 0.4, "dmg": 2, "radius": 144, "stamina": 0 },
+					{ "name": "None", "interval": 0.3, "dmg": 5, "radius": 144, "stamina": 0 }
+				]
 			}
 		},
 		{

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.90.1589806369",
+	"version": "310.94.1590386310",
 	"format": "1",
 	"mod": {
 		"id": "1576299694",
@@ -8725,6 +8725,50 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.67, "dmg": 18, "radius": 200, "stamina": 5 },
 					{ "name": "DropSpores", "interval": 17, "dmg": 18, "radius": 200, "stamina": 25 }
+				]
+			}
+		},
+		{
+			"name": "Storm moth",
+			"blueprintPath": "/Game/Mods/ElementalDinos/Dinos/Moth_Character_Elemental_Storm_BP.Moth_Character_Elemental_Storm_BP_C",
+			"dinoNameTag": "Moth",
+			"customTag": "Moth",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 110, "sprint": 220 },
+				"fly": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 121, "sprint": 242 },
+				"fly": { "base": 660 },
+				"swim": { "base": 330 }
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.67, "dmg": 18, "radius": 200, "stamina": 5 },
+					{
+						"name": "Lightning", "interval": 10, "dmg": 18, "radius": 200, "stamina": 25,
+						"isProjectile": true
+					},
+					{ "name": "DropSpores", "interval": 10, "dmg": 18, "radius": 200, "stamina": 25 }
 				]
 			}
 		},
