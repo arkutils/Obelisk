@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1588055957",
+	"version": "310.113.1590776765",
 	"format": "1",
 	"mod": {
 		"id": "1654255131",
@@ -125,30 +125,36 @@
 			}
 		},
 		{
-			"name": "Chicken",
+			"name": "Mihirung",
 			"blueprintPath": "/Game/Mods/AtlasImports/Chicken/AoAChicken_Character_BP.AoAChicken_Character_BP_C",
 			"dinoNameTag": "Chicken",
 			"customTag": "Chicken",
 			"targetingTeamName": "Herbivores",
-			"mass": 50,
-			"dragWeight": 20,
-			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"mass": 200,
+			"dragWeight": 100,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 65, "sprint": 136.5 },
-				"swim": { "base": 300 }
+				"walk": { "base": 154, "sprint": 616 },
+				"swim": { "base": 330 }
 			},
 			"movementD": {
-				"walk": { "base": 45.5, "sprint": 95.5 },
+				"walk": { "base": 98, "sprint": 392 },
 				"swim": { "base": 210 }
 			},
 			"attack": {
 				"defaultDmg": 5,
-				"defaultSwingRadius": 90,
-				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+				"defaultSwingRadius": 170,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 15, "radius": 170, "stamina": 0 } ]
 			}
 		},
 		{
@@ -232,7 +238,13 @@
 			"targetingTeamName": "TargetOnlyPlayers",
 			"mass": 70,
 			"dragWeight": 70,
-			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isFlyerDino" ],
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canMountOnHumans",
+				"isCarnivore",
+				"isFlyerDino"
+			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -261,7 +273,13 @@
 			"targetingTeamName": "TargetOnlyPlayers",
 			"mass": 70,
 			"dragWeight": 70,
-			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isFlyerDino" ],
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canMountOnHumans",
+				"isCarnivore",
+				"isFlyerDino"
+			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -340,16 +358,16 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 450 }
+				"swim": { "base": 552 }
 			},
 			"movementD": {
-				"swim": { "base": 792 }
+				"swim": { "base": 840 }
 			},
 			"attack": {
-				"defaultDmg": 35,
+				"defaultDmg": 30,
 				"defaultSwingRadius": 140,
 				"attacks": [
-					{ "name": "None", "interval": 0.55, "dmg": 35, "radius": 300, "stamina": 0 },
+					{ "name": "None", "interval": 0.55, "dmg": 30, "radius": 300, "stamina": 0 },
 					{ "name": "None", "interval": 60, "dmg": 0, "radius": 200, "stamina": 0 }
 				]
 			}
@@ -376,11 +394,11 @@
 				"maxSpeed": 1900
 			},
 			"movementW": {
-				"walk": { "base": 229.5, "sprint": 1147.5 },
+				"walk": { "base": 229.5, "sprint": 1032.7 },
 				"swim": { "base": 540 }
 			},
 			"movementD": {
-				"walk": { "base": 280.5, "sprint": 1402.5 },
+				"walk": { "base": 280.5, "sprint": 1262.3 },
 				"swim": { "base": 660 }
 			},
 			"attack": {
@@ -390,16 +408,57 @@
 					{ "name": "Bite", "interval": 0.2, "dmg": 22, "radius": 250, "stamina": 0 },
 					{ "name": "Claw", "interval": 1, "dmg": 30, "radius": 200, "stamina": 0 },
 					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 160, "stamina": 0 },
-					{ "name": "Pounce", "interval": 0, "dmg": 30, "radius": 0, "stamina": 0 },
-					{ "name": "Maul", "interval": 0, "dmg": 30, "radius": 0, "stamina": 0 }
+					{ "name": "Pounce", "interval": 0, "dmg": 20, "radius": 0, "stamina": 0 },
+					{ "name": "Maul", "interval": 0, "dmg": 20, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Aberrant Homotherium",
+			"blueprintPath": "/Game/Mods/AtlasImports/Homotherium/Homotherium_Character_BP_Aberrant.Homotherium_Character_BP_Aberrant_C",
+			"dinoNameTag": "Homotherium",
+			"customTag": "Homotherium",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 175,
+			"dragWeight": 150,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 229.5, "sprint": 1032.7 },
+				"swim": { "base": 540 }
+			},
+			"movementD": {
+				"walk": { "base": 280.5, "sprint": 1262.3 },
+				"swim": { "base": 660 }
+			},
+			"attack": {
+				"defaultDmg": 22,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 22, "radius": 250, "stamina": 0 },
+					{ "name": "Claw", "interval": 1, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 20, "radius": 0, "stamina": 0 },
+					{ "name": "Maul", "interval": 0, "dmg": 20, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
 		{
 			"name": "Kolponomos",
 			"blueprintPath": "/Game/Mods/AtlasImports/Kolponomos/Kolponomos_Character_BP.Kolponomos_Character_BP_C",
-			"dinoNameTag": "Direbear",
-			"customTag": "Direbear",
+			"dinoNameTag": "Kolponomos",
+			"customTag": "Kolponomos",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 300,
 			"dragWeight": 275,
@@ -417,12 +476,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 213.8, "sprint": 427.5 },
-				"swim": { "base": 225 }
+				"walk": { "base": 255, "sprint": 892.5 },
+				"swim": { "base": 340 }
 			},
 			"movementD": {
-				"walk": { "base": 209, "sprint": 418 },
-				"swim": { "base": 220 }
+				"walk": { "base": 247.5, "sprint": 866.2 },
+				"swim": { "base": 330 }
 			},
 			"attack": {
 				"defaultDmg": 55,
@@ -480,6 +539,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"isCarnivore",
 				"isFlyerDino"
 			],
 			"falling": {
@@ -487,12 +547,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 172.2, "sprint": 344.3 },
+				"walk": { "base": 234.8, "sprint": 469.6 },
 				"fly": { "base": 782.6 },
 				"swim": { "base": 326.1 }
 			},
 			"movementD": {
-				"walk": { "base": 158.4, "sprint": 316.8 },
+				"walk": { "base": 216, "sprint": 432 },
 				"fly": { "base": 720 },
 				"swim": { "base": 300 }
 			},
@@ -501,7 +561,7 @@
 				"defaultSwingRadius": 170,
 				"attacks": [
 					{ "name": "None", "interval": 0.6, "dmg": 20, "radius": 320, "stamina": 0 },
-					{ "name": "Carry", "interval": 1, "dmg": 14, "radius": 320, "stamina": 40 },
+					{ "name": "Carry", "interval": 1, "dmg": 0, "radius": 320, "stamina": 40 },
 					{ "name": "Barrel Roll", "interval": 10, "dmg": 60, "radius": 350, "stamina": 60 },
 					{ "name": "Swimming", "interval": 0.6, "dmg": 20, "radius": 320, "stamina": 0 },
 					{ "name": "Dash", "interval": 30, "dmg": 90, "radius": 350, "stamina": 120 }
@@ -521,6 +581,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"isBigDino",
 				"isCarnivore",
 				"isWaterDino"
 			],
@@ -680,7 +741,7 @@
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 20, "radius": 140, "stamina": 5 },
-					{ "name": "Pumba", "interval": 0, "dmg": 10, "radius": 140, "stamina": 0 }
+					{ "name": "Pumba", "interval": 0.5, "dmg": 0, "radius": 140, "stamina": 0 }
 				]
 			}
 		},
@@ -714,7 +775,7 @@
 				"defaultSwingRadius": 550,
 				"attacks": [
 					{ "name": "melee", "interval": 0.375, "dmg": 41, "radius": 400, "stamina": 10 },
-					{ "name": "melee", "interval": 0.375, "dmg": 41, "radius": 400, "stamina": 0 }
+					{ "name": "melee", "interval": 0.375, "dmg": 41, "radius": 400, "stamina": 10 }
 				]
 			}
 		},

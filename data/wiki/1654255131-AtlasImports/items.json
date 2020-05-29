@@ -1,5 +1,5 @@
 {
-	"version": "310.50.1588055957",
+	"version": "310.113.1590776765",
 	"format": "2",
 	"mod": {
 		"id": "1654255131",
@@ -11,7 +11,7 @@
 			"name": "Cave Lion Saddle",
 			"description": "Equip a Cave Lion with this to ride it.",
 			"blueprintPath": "/Game/Mods/AtlasImports/CaveLion/Saddle/PrimalItemArmor_CaveLionSaddleAoA.PrimalItemArmor_CaveLionSaddleAoA_C",
-			"icon": "/Game/Mods/AtlasImports/CaveLion/Saddle/Item_LionSaddle_Icon.Item_LionSaddle_Icon",
+			"icon": "/Game/Mods/AtlasImports/Homotherium/Saddle/Item_TigerSaddle_Icon_Colorization_BC.Item_TigerSaddle_Icon_Colorization_BC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
@@ -52,7 +52,54 @@
 			}
 		},
 		{
-			"name": "Chicken Egg",
+			"name": "Mihirung Drumstick",
+			"description": "Too tough and gamey for human consumption, but useful for luring carnivores to a trap.",
+			"blueprintPath": "/Game/Mods/AtlasImports/Chicken/Drumsticks/PrimalItemConsumable_ChickenDrumstick.PrimalItemConsumable_ChickenDrumstick_C",
+			"icon": "/Game/Mods/AtlasImports/Chicken/Drumsticks/Item_RosemaryChicken_Icon.Item_RosemaryChicken_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables" ],
+			"weight": 0.1,
+			"maxQuantity": 1,
+			"spoilage": { "time": 1500 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 5,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 0.8333333
+				},
+				"health": {
+					"value": -20,
+					"useItemQuality": true,
+					"descriptionIndex": 1,
+					"duration": 5
+				}
+			},
+			"cookingStats": {
+				"health": 0.11,
+				"stamina": 0.01,
+				"food": 0.2,
+				"weight": 0.02
+			}
+		},
+		{
+			"name": "Mihirung Egg",
 			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
 			"blueprintPath": "/Game/Mods/AtlasImports/Chicken/PrimalItemConsumable_Egg_Chicken.PrimalItemConsumable_Egg_Chicken_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
@@ -117,7 +164,7 @@
 			}
 		},
 		{
-			"name": "Fertilized Chicken Egg",
+			"name": "Fertilized Mihirung Egg",
 			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
 			"blueprintPath": "/Game/Mods/AtlasImports/Chicken/PrimalItemConsumable_Egg_Chicken_Fertilized.PrimalItemConsumable_Egg_Chicken_Fertilized_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
@@ -202,7 +249,7 @@
 			},
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 60,
+				"bpCraftTime": 20,
 				"minLevelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": [ 0, 0.05 ],
@@ -288,129 +335,6 @@
 				"stamina": 0.05,
 				"food": 0.2,
 				"weight": 0.02
-			}
-		},
-		{
-			"name": "Roasted Beef Blueprint - Campfire",
-			"description": "Add this Blueprint to a Campfire to be able to cook delicious Roast Beef.",
-			"blueprintPath": "/Game/Mods/AtlasImports/Cow/Beef/PrimalItemResource_BeefBP_Fire.PrimalItemResource_BeefBP_Fire_C",
-			"icon": "/Game/Mods/AtlasImports/Cow/Beef/Item_CookedBeef_Icon.Item_CookedBeef_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 8,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 45,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 1,
-						"type": "PrimalItemConsumable_RawBeef_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 1,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 2
-				}
-			}
-		},
-		{
-			"name": "Roasted Beef Blueprint - Industrial Grill",
-			"description": "Add this Blueprint to an Industrial Grill to be able to cook delicious Roast Beef.",
-			"blueprintPath": "/Game/Mods/AtlasImports/Cow/Beef/PrimalItemResource_BeefBP_Grill.PrimalItemResource_BeefBP_Grill_C",
-			"icon": "/Game/Mods/AtlasImports/Cow/Beef/Item_CookedBeef_Icon.Item_CookedBeef_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 8,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 45,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 12,
-						"type": "PrimalItemConsumable_RawBeef_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 1,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 2
-				}
-			}
-		},
-		{
-			"name": "Roasted Beef Blueprints",
-			"description": "For crafting Blueprints to allow Roast Beef to be cooked in Campfires and Industrial Grills",
-			"blueprintPath": "/Game/Mods/AtlasImports/Cow/Beef/PrimalItemResource_BeefBPs.PrimalItemResource_BeefBPs_C",
-			"icon": "/Game/Mods/AtlasImports/Cow/Beef/Item_CookedBeef_Icon.Item_CookedBeef_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 8,
-			"maxQuantity": 20,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 0,
-				"bpCraftTime": 1,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Fibers_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 0,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 1,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 2
-				}
 			}
 		},
 		{
@@ -586,6 +510,104 @@
 				"time": 5,
 				"resourceMult": 0.5
 			}
+		},
+		{
+			"name": "AoA Campfire",
+			"description": "Perfect for cooking meat, staying warm, and providing light. Can cook the unique meats and recipes from Animals of Atlas",
+			"blueprintPath": "/Game/Mods/AtlasImports/CraftingStation/PrimalItemStructure_AoACampfire.PrimalItemStructure_AoACampfire_C",
+			"icon": "/Game/Mods/AtlasImports/CraftingStation/Item_Campfire_Icon.Item_Campfire_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Cooking" ],
+			"weight": 4,
+			"maxQuantity": 3,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 2.5,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 12,
+						"type": "PrimalItemResource_Thatch_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Flint_C"
+					},
+					{
+						"exact": false,
+						"qty": 16,
+						"type": "PrimalItemResource_Stone_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemResource_Wood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2.5,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/AtlasImports/CraftingStation/AoA_Campfire.AoA_Campfire_C"
+		},
+		{
+			"name": "AoA Smithy",
+			"description": "Use this to create unique items from Animals of Atlas",
+			"blueprintPath": "/Game/Mods/AtlasImports/CraftingStation/PrimalItemStructure_AoACraftingBench.PrimalItemStructure_AoACraftingBench_C",
+			"icon": "/Game/Mods/AtlasImports/CraftingStation/Item_Smithy_Icon.Item_Smithy_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 4,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.25,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_Metal_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_Stone_C"
+					},
+					{
+						"exact": false,
+						"qty": 30,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 6.25,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/AtlasImports/CraftingStation/StorageBox_AoACraftingStation.StorageBox_AoACraftingStation_C"
 		},
 		{
 			"name": "Corvus Egg",
@@ -1007,7 +1029,7 @@
 			"name": "Homotherium Saddle",
 			"description": "Equip a Homotherium with this to ride it.",
 			"blueprintPath": "/Game/Mods/AtlasImports/Homotherium/Saddle/PrimalItemArmor_HomotheriumSaddle.PrimalItemArmor_HomotheriumSaddle_C",
-			"icon": "/Game/Mods/AtlasImports/Homotherium/Saddle/HUD_SaddleTier2_Colorized_D.HUD_SaddleTier2_Colorized_D",
+			"icon": "/Game/Mods/AtlasImports/Homotherium/Saddle/Item_TigerSaddle_Icon_Colorization_BC.Item_TigerSaddle_Icon_Colorization_BC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
@@ -1131,45 +1153,6 @@
 			},
 			"repair": {
 				"xp": 116,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
-			"name": "Ludodactylus Saddle",
-			"description": "Equip a Ludodactylus with this to ride it.",
-			"blueprintPath": "/Game/Mods/AtlasImports/Ludodactylus/PrimalItemArmor_LudoSaddle.PrimalItemArmor_LudoSaddle_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PteraSaddle_Icon.PteraSaddle_Icon",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"maxQuantity": 1,
-			"crafting": {
-				"xp": 43,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 280,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 120,
-						"type": "PrimalItemResource_ChitinOrKeratin_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 43,
 				"time": 5,
 				"resourceMult": 0.5
 			}
@@ -1304,6 +1287,45 @@
 				"stamina": 0.8,
 				"food": 0.8,
 				"weight": 0.3
+			}
+		},
+		{
+			"name": "Ludodactylus Saddle",
+			"description": "Equip a Ludodactylus with this to ride it.",
+			"blueprintPath": "/Game/Mods/AtlasImports/Ludodactylus/Saddle/PrimalItemArmor_LudoSaddle.PrimalItemArmor_LudoSaddle_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PteraSaddle_Icon.PteraSaddle_Icon",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 43,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 280,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 200,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 120,
+						"type": "PrimalItemResource_ChitinOrKeratin_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 43,
+				"time": 5,
+				"resourceMult": 0.5
 			}
 		},
 		{
@@ -1514,6 +1536,138 @@
 				"xp": 17.6,
 				"time": 5,
 				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Macaw Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"blueprintPath": "/Game/Mods/AtlasImports/Parrot/PrimalItemConsumable_Egg_Macaw.PrimalItemConsumable_Egg_Macaw_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"maxQuantity": 100,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"health": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"stamina": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				}
+			},
+			"egg": {
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 1, 0.811765, 0.368627, 1 ]
+					},
+					"cyan": {
+						"intensity": 0.6,
+						"color": [ 0.137255, 0.545098, 0, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Macaw Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"blueprintPath": "/Game/Mods/AtlasImports/Parrot/PrimalItemConsumable_Egg_Macaw_Fertilized.PrimalItemConsumable_Egg_Macaw_Fertilized_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"health": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"stamina": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AtlasImports/Parrot/Macaw_Character_BP.Macaw_Character_BP_C",
+				"temperature": [ 35, 38 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 1, 0.811765, 0.368627, 1 ]
+					},
+					"cyan": {
+						"intensity": 0.6,
+						"color": [ 0.137255, 0.545098, 0, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
 			}
 		},
 		{
@@ -1871,11 +2025,11 @@
 			"name": "Cooked Pork Chop",
 			"description": "Sates your hunger, and provides health while being digested.  Wild carnivores will eat it, but prefer raw meat.",
 			"blueprintPath": "/Game/Mods/AtlasImports/Pig/Pork/PrimalItemConsumable_CookedPork.PrimalItemConsumable_CookedPork_C",
-			"icon": "/Game/Mods/AtlasImports/Atlas/UI/Icons/Item_CookedMeat_Icon.Item_CookedMeat_Icon",
+			"icon": "/Game/Mods/AtlasImports/Pig/Pork/Item_CookedPork_Icon.Item_CookedPork_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Meat" ],
 			"weight": 0.1,
-			"maxQuantity": 40,
+			"maxQuantity": 100,
 			"spoilage": {
 				"time": 1000,
 				"productBP": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C"
@@ -1886,7 +2040,7 @@
 			},
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 15,
+				"bpCraftTime": 10,
 				"minLevelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": [ 0, 0.05 ],
@@ -1895,11 +2049,6 @@
 						"exact": true,
 						"qty": 1,
 						"type": "PrimalItemConsumable_RawPork_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Charcoal_C"
 					}
 				]
 			},
@@ -1937,7 +2086,7 @@
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Meat" ],
 			"weight": 0.1,
-			"maxQuantity": 1,
+			"maxQuantity": 10,
 			"spoilage": {
 				"time": 172800,
 				"productBP": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C"
@@ -2052,185 +2201,6 @@
 			}
 		},
 		{
-			"name": "Full English Breakfast",
-			"description": "Add this Blueprint to a Cooking Pot to be able to cook a delicious Full English Breakfast",
-			"blueprintPath": "/Game/Mods/AtlasImports/Pig/Pork/PrimalItemResource_BreakfastBP.PrimalItemResource_BreakfastBP_C",
-			"icon": "/Game/Mods/AtlasImports/Pig/Pork/FullEng.FullEng",
-			"type": "Resource",
-			"folders": [],
-			"weight": 8,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 60,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 2,
-						"type": "PrimalItemConsumable_RawPork_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemConsumable_Egg_Chicken_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemResource_RareMushroom_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemConsumable_Veggie_Savoroot_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 1,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 2
-				}
-			}
-		},
-		{
-			"name": "Cooked Pork Chops Blueprint - Campfire",
-			"description": "Add this Blueprint to a Campfire to be able to cook delicious Cooked Pork Chops",
-			"blueprintPath": "/Game/Mods/AtlasImports/Pig/Pork/PrimalItemResource_PorkBP_Fire.PrimalItemResource_PorkBP_Fire_C",
-			"icon": "/Game/Mods/AtlasImports/Pig/Pork/Item_CookedPork_Icon.Item_CookedPork_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 8,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 45,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 1,
-						"type": "PrimalItemConsumable_RawPork_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 1,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 2
-				}
-			}
-		},
-		{
-			"name": "Cooked Pork Chops Blueprint - Industrial Grill",
-			"description": "Add this Blueprint to an Industrial Grill to be able to cook delicious Cooked Pork Chops.",
-			"blueprintPath": "/Game/Mods/AtlasImports/Pig/Pork/PrimalItemResource_PorkBP_Grill.PrimalItemResource_PorkBP_Grill_C",
-			"icon": "/Game/Mods/AtlasImports/Pig/Pork/Item_CookedPork_Icon.Item_CookedPork_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 8,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 45,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 12,
-						"type": "PrimalItemConsumable_RawPork_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 1,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 2
-				}
-			}
-		},
-		{
-			"name": "Cooked Pork Blueprints",
-			"description": "For crafting Blueprints to allow Pork to be cooked in Campfires and Industrial Grills and for making Full English Breakfasts",
-			"blueprintPath": "/Game/Mods/AtlasImports/Pig/Pork/PrimalItemResource_PorkBPs.PrimalItemResource_PorkBPs_C",
-			"icon": "/Game/Mods/AtlasImports/Pig/Pork/Item_CookedPork_Icon.Item_CookedPork_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 8,
-			"maxQuantity": 20,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 0,
-				"bpCraftTime": 1,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Fibers_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 0,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 1,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 2
-				}
-			}
-		},
-		{
 			"name": "Metridiochoerus Saddle",
 			"description": "Equip a Metridiochoerus with this to ride it.",
 			"blueprintPath": "/Game/Mods/AtlasImports/Pig/Saddle/PrimalItemArmor_MetridiochoerusSaddle.PrimalItemArmor_MetridiochoerusSaddle_C",
@@ -2265,6 +2235,39 @@
 			},
 			"repair": {
 				"xp": 10,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Atlas Scorpion Costume",
+			"description": "This costume can be equipped to a vanilla or Better Dinos Scorpion to change its mesh to that of the Atlas scorpion. Not recommended for use on other modded scorpions as this involes a full mesh swap that may cause animation issues.",
+			"blueprintPath": "/Game/Mods/AtlasImports/Scorpion/PrimalItemCostume_AtlasScorp.PrimalItemCostume_AtlasScorp_C",
+			"icon": "/Game/Mods/AtlasImports/Scorpion/ScorpionHead_Icon.ScorpionHead_Icon",
+			"type": "Equipment/Costume",
+			"folders": [ "Costumes" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Chitin_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
 				"time": 5,
 				"resourceMult": 0.5
 			}
