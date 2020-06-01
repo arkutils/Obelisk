@@ -1,5 +1,5 @@
 {
-	"version": "310.113.1590776765",
+	"version": "310.115.1590916948",
 	"format": "2",
 	"mod": {
 		"id": "1654255131",
@@ -509,6 +509,88 @@
 				"xp": 17.6,
 				"time": 5,
 				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Fish Pie",
+			"description": "Krakens famous home made fish pie! A hearty sea food feast full of Omega 3 and all that good stuff. Not only nutritious, but will help relieve your muscles (mussels?) when swimming helping your stroke last longer.",
+			"blueprintPath": "/Game/Mods/AtlasImports/CraftingStation/PrimalItemConsumable_FishPie.PrimalItemConsumable_FishPie_C",
+			"icon": "/Game/Mods/AtlasImports/CraftingStation/Fish_Pie.Fish_Pie",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Meat" ],
+			"weight": 0.1,
+			"maxQuantity": 10,
+			"spoilage": {
+				"time": 172800,
+				"productBP": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 60,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": true,
+						"qty": 1,
+						"type": "PrimalItemConsumable_Veggie_Longrass_C"
+					},
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemConsumable_RawMolluscMeat_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_RawPrimeMeat_Fish_C"
+					},
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemConsumable_Veggie_Savoroot_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Sparkpowder_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_CattleMilk_AoA_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 50,
+					"useItemQuality": false,
+					"descriptionIndex": 2,
+					"duration": 120
+				},
+				"health": {
+					"value": 20,
+					"useItemQuality": false,
+					"descriptionIndex": 1,
+					"duration": 120
+				}
+			},
+			"cookingStats": {
+				"health": 0.11,
+				"stamina": 0.01,
+				"food": 0.2,
+				"weight": 0.02
 			}
 		},
 		{
@@ -2110,7 +2192,7 @@
 					{
 						"exact": false,
 						"qty": 2,
-						"type": "PrimalItemConsumable_Egg_Chicken_C"
+						"type": "PrimalItemConsumable_Egg_XSmall_C"
 					},
 					{
 						"exact": false,
@@ -2121,6 +2203,11 @@
 						"exact": false,
 						"qty": 2,
 						"type": "PrimalItemConsumable_Veggie_Savoroot_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Sparkpowder_C"
 					}
 				]
 			},
