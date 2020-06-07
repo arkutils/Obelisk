@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.94.1590350740",
-	"format": "1",
+	"version": "310.117.1591317349",
+	"format": "2",
 	"mod": {
 		"id": "1984936918",
 		"tag": "MarniiModsWildlife",
@@ -10,7 +10,7 @@
 	"species": [
 		{
 			"name": "Camel",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Camel/Camel_MM_Character_BP.Camel_MM_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Camel/Camel_MM_Character_BP.Camel_MM_Character_BP_C",
 			"dinoNameTag": "Camel",
 			"customTag": "Camel",
 			"targetingTeamName": "Herbivores_Medium",
@@ -23,17 +23,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1200 },
-				"swim": { "base": 331.2 }
+				"walk": { "base": 240, "sprint": 1200 },
+				"swim": { "base": 265 }
 			},
 			"movementD": {
-				"walk": { "base": 136.1, "sprint": 544.3 },
-				"swim": { "base": 150.3 }
+				"walk": { "base": 151.2, "sprint": 544.3 },
+				"swim": { "base": 166.9 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 14,
@@ -50,7 +64,7 @@
 		},
 		{
 			"name": "Wolf",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/CanisLupus/Wolf_MM_Character_BP.Wolf_MM_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/CanisLupus/Wolf_MM_Character_BP.Wolf_MM_Character_BP_C",
 			"dinoNameTag": "canislupus",
 			"customTag": "canislupus",
 			"targetingTeamName": "Carnivores_Medium",
@@ -64,6 +78,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -75,6 +99,10 @@
 			"movementD": {
 				"walk": { "base": 223.2, "sprint": 1017.8 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -88,13 +116,23 @@
 		},
 		{
 			"name": "Cat",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Cat/Cat_Character_BP.Cat_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Cat/Cat_Character_BP.Cat_Character_BP_C",
 			"dinoNameTag": "Cat",
 			"customTag": "Cat",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 50,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1275,
+				"costLevel": 55,
+				"timeBase": 8925,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -104,8 +142,12 @@
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 165, "sprint": 387.7 },
-				"swim": { "base": 450 }
+				"walk": { "base": 110, "sprint": 387.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 3,
@@ -120,13 +162,23 @@
 		},
 		{
 			"name": "Cattle",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Cattle/Cattle_Character_BP.Cattle_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Cattle/Cattle_Character_BP.Cattle_Character_BP_C",
 			"dinoNameTag": "Cattle",
 			"customTag": "Cattle",
 			"targetingTeamName": "Herbivores_Medium",
 			"mass": 195,
 			"dragWeight": 120,
 			"flags": [ "allowMountedWeaponry", "allowRiding", "canBeDragged", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 900,
+				"costLevel": 55,
+				"timeBase": 6300,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -139,6 +191,10 @@
 				"walk": { "base": 170, "sprint": 765 },
 				"swim": { "base": 255 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 30,
 				"defaultSwingRadius": 250,
@@ -150,13 +206,23 @@
 		},
 		{
 			"name": "Chicken",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Chicken/Chicken_character_bp.Chicken_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Chicken/Chicken_character_bp.Chicken_Character_BP_C",
 			"dinoNameTag": "Chicken",
 			"customTag": "Chicken",
 			"targetingTeamName": "Herbivores",
 			"mass": 50,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -169,6 +235,10 @@
 				"walk": { "base": 45.5, "sprint": 95.5 },
 				"swim": { "base": 210 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 5,
 				"defaultSwingRadius": 90,
@@ -177,7 +247,7 @@
 		},
 		{
 			"name": "Elephant",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Elephant/Elephant_MM_Character_BP.Elephant_MM_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Elephant/Elephant_MM_Character_BP.Elephant_MM_Character_BP_C",
 			"dinoNameTag": "\u00cblephant",
 			"customTag": "\u00cblephant",
 			"targetingTeamName": "Herbivores",
@@ -191,15 +261,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 360 }
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 360 }
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -214,7 +300,7 @@
 		},
 		{
 			"name": "Exotic Bird",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/ExoticBird/ExoticBird_Character_BP.ExoticBird_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/ExoticBird/ExoticBird_Character_BP.ExoticBird_Character_BP_C",
 			"dinoNameTag": "ExoticBird",
 			"customTag": "ExoticBird",
 			"targetingTeamName": "Herbivores",
@@ -228,19 +314,33 @@
 				"canMountOnHumans",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 60, "sprint": 165 },
-				"fly": { "base": 300 },
-				"swim": { "base": 100 }
+				"fly": { "base": 300, "sprint": 825 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 165 },
-				"fly": { "base": 300 },
-				"swim": { "base": 100 }
+				"fly": { "base": 300, "sprint": 825 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 3,
@@ -250,7 +350,7 @@
 		},
 		{
 			"name": "Frog",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Frog/Frog_MM_Character_BP.Frog_MM_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Frog/Frog_MM_Character_BP.Frog_MM_Character_BP_C",
 			"dinoNameTag": "Frog",
 			"customTag": "Frog",
 			"targetingTeamName": "Carnivores_Medium",
@@ -265,6 +365,16 @@
 				"canMountOnHumans",
 				"isAmphibious"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1425,
+				"costLevel": 55,
+				"timeBase": 9975,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 66,
 				"maxSpeed": 1770
@@ -277,6 +387,10 @@
 				"walk": { "base": 85, "sprint": 170 },
 				"swim": { "base": 170 }
 			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 144,
@@ -288,22 +402,38 @@
 		},
 		{
 			"name": "Gecko",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Gecko/Gecko_Character_BP.Gecko_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Gecko/Gecko_Character_BP.Gecko_Character_BP_C",
 			"dinoNameTag": "Gecko",
 			"customTag": "LanternLizard",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 126, "sprint": 504 }
+				"walk": { "base": 96, "sprint": 504 },
+				"swim": { "base": 480 }
 			},
 			"movementD": {
-				"walk": { "base": 60, "sprint": 240 }
+				"walk": { "base": 60, "sprint": 240 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -316,24 +446,38 @@
 		},
 		{
 			"name": "Hare",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Hare/Hare_Character_BP.Hare_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Hare/Hare_Character_BP.Hare_Character_BP_C",
 			"dinoNameTag": "Hare",
 			"customTag": "Hare",
 			"targetingTeamName": "Herbivores",
 			"mass": 90,
 			"dragWeight": 40,
 			"flags": [ "canBeDragged", "canDrag", "canMountOnHumans", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1500,
+				"costLevel": 55,
+				"timeBase": 10500,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 313.5, "sprint": 884.1 },
-				"swim": { "base": 570 }
+				"walk": { "base": 165, "sprint": 884.1 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 123.3, "sprint": 347.8 },
-				"swim": { "base": 224.2 }
+				"walk": { "base": 107.2, "sprint": 347.8 },
+				"swim": { "base": 195 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 12,
@@ -343,7 +487,7 @@
 		},
 		{
 			"name": "Lion",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Lions/Lions_Character_BP.Lions_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Lions/Lions_Character_BP.Lions_Character_BP_C",
 			"dinoNameTag": "Lions",
 			"customTag": "Lions",
 			"targetingTeamName": "Carnivores_Medium",
@@ -357,17 +501,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1650
 			},
 			"movementW": {
-				"walk": { "base": 165.6, "sprint": 828 },
-				"swim": { "base": 216 }
+				"walk": { "base": 184, "sprint": 828 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
 				"walk": { "base": 184, "sprint": 920 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 29,
@@ -382,7 +540,7 @@
 		},
 		{
 			"name": "Snowy Owl",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/MMOwls/A_Owl_Character_BP.A_Owl_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/MMOwls/A_Owl_Character_BP.A_Owl_Character_BP_C",
 			"dinoNameTag": "bigowl",
 			"customTag": "bigowl",
 			"targetingTeamName": "",
@@ -396,33 +554,43 @@
 				"isFlyerDino",
 				"preventCharacterBasing"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1125,
+				"costLevel": 55,
+				"timeBase": 7875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 260, "sprint": 728 },
-				"fly": { "base": 600 },
+				"fly": { "base": 600, "sprint": 1680 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 260, "sprint": 728 },
-				"fly": { "base": 600 },
+				"fly": { "base": 600, "sprint": 1680 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -0.325
 			},
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.6, "dmg": 25, "radius": 240, "stamina": 0 },
-					{ "name": "Encapsulate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "PredatorVision", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
+				"attacks": [ { "name": "Melee", "interval": 0.6, "dmg": 25, "radius": 240, "stamina": 0 } ]
 			}
 		},
 		{
 			"name": "Owl",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/MMOwls/Avesowl_Character_BP.Avesowl_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/MMOwls/Avesowl_Character_BP.Avesowl_Character_BP_C",
 			"dinoNameTag": "aowl",
 			"customTag": "aowl",
 			"targetingTeamName": "Herbivores",
@@ -436,19 +604,33 @@
 				"canMountOnHumans",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 60, "sprint": 165 },
-				"fly": { "base": 300 },
-				"swim": { "base": 100 }
+				"fly": { "base": 300, "sprint": 825 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 165 },
-				"fly": { "base": 300 },
-				"swim": { "base": 100 }
+				"fly": { "base": 300, "sprint": 825 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 3,
@@ -458,13 +640,23 @@
 		},
 		{
 			"name": "Rat",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Rats/Rats_MM_Character_BP.Rats_MM_Character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Rats/Rats_MM_Character_BP.Rats_MM_Character_BP_C",
 			"dinoNameTag": "Rat",
 			"customTag": "Rat",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 50,
 			"dragWeight": 20,
 			"flags": [ "canBeDragged", "canMountOnHumans", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 175,
+				"costLevel": 55,
+				"timeBase": 1225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -476,6 +668,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 336 },
 				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": 5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 4,
@@ -488,7 +684,7 @@
 		},
 		{
 			"name": "Shadowcat",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/Shadowcat/Shadowcat_character_BP.Shadowcat_character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Shadowcat/Shadowcat_character_BP.Shadowcat_character_BP_C",
 			"dinoNameTag": "Shadowcat",
 			"customTag": "Shadowcat",
 			"targetingTeamName": "Carnivores_Medium",
@@ -503,17 +699,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 1900
 			},
 			"movementW": {
-				"walk": { "base": 230, "sprint": 1150 },
-				"swim": { "base": 550 }
+				"walk": { "base": 184, "sprint": 1150 },
+				"swim": { "base": 440 }
 			},
 			"movementD": {
 				"walk": { "base": 230, "sprint": 1150 },
 				"swim": { "base": 550 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -529,7 +739,7 @@
 		},
 		{
 			"name": "Snow Leopard",
-			"blueprintPath": "/Game/Mods/MarniiModsWildlife/Wildlife/SnowLeopard/Snowleopard_character_BP.Snowleopard_character_BP_C",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/SnowLeopard/Snowleopard_character_BP.Snowleopard_character_BP_C",
 			"dinoNameTag": "Snowleopard",
 			"customTag": "Snowleopard",
 			"targetingTeamName": "Carnivores_Medium",
@@ -544,17 +754,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 1900
 			},
 			"movementW": {
-				"walk": { "base": 230, "sprint": 1150 },
-				"swim": { "base": 400 }
+				"walk": { "base": 184, "sprint": 1150 },
+				"swim": { "base": 320 }
 			},
 			"movementD": {
 				"walk": { "base": 230, "sprint": 1150 },
 				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,

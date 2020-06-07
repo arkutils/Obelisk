@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1587684284",
-	"format": "1",
+	"version": "310.117.1587684284",
+	"format": "2",
 	"mod": {
 		"id": "1270181453",
 		"tag": "AdditionalAberrantDinos",
@@ -10,7 +10,7 @@
 	"species": [
 		{
 			"name": "Aberrant Allosaurus",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Allo/Allo_Character_BP_Aberrant.Allo_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Allo/Allo_Character_BP_Aberrant.Allo_Character_BP_Aberrant_C",
 			"dinoNameTag": "Allo",
 			"customTag": "Allo",
 			"targetingTeamName": "Carnivores_High",
@@ -23,16 +23,27 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1325,
+				"costLevel": 55,
+				"timeBase": 9275,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 520, "sprint": 1404 }
+				"walk": { "base": 650, "sprint": 1404 }
 			},
 			"movementD": {
-				"walk": { "base": 585, "sprint": 1579.5 }
+				"walk": { "base": 650, "sprint": 1579.5 }
 			},
+			"staminaRates": { "sprint": -22 },
 			"attack": {
 				"defaultDmg": 35,
 				"defaultSwingRadius": 275,
@@ -46,23 +57,28 @@
 		},
 		{
 			"name": "Aberrant Ammonite",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Ammonite/Ammonite_Character_AADAberrant.Ammonite_Character_AADAberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Ammonite/Ammonite_Character_AADAberrant.Ammonite_Character_AADAberrant_C",
 			"dinoNameTag": "Ammonite",
 			"customTag": "Ammonite",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 50,
 			"dragWeight": 30,
 			"flags": [ "allowRiding", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 25.2 }
+				"walk": { "base": 120, "sprint": 340.2 }
 			},
 			"movementD": {
-				"swim": { "base": 40 }
+				"walk": { "base": 120, "sprint": 540 }
 			},
+			"staminaRates": { "sprint": -5 },
 			"attack": {
 				"defaultDmg": 8,
 				"defaultSwingRadius": 175,
@@ -71,13 +87,23 @@
 		},
 		{
 			"name": "Aberrant Archaeopteryx",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Archa/Archa_Character_BP_Aberrant.Archa_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Archa/Archa_Character_BP_Aberrant.Archa_Character_BP_Aberrant_C",
 			"dinoNameTag": "Archa",
 			"customTag": "Archa",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 50,
 			"dragWeight": 50,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 325,
+				"costLevel": 38.5,
+				"timeBase": 2275,
+				"timeLevel": 269.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -90,6 +116,10 @@
 				"walk": { "base": 105, "sprint": 411.6 },
 				"swim": { "base": 210 }
 			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 5,
 				"defaultSwingRadius": 90,
@@ -98,7 +128,7 @@
 		},
 		{
 			"name": "Aberrant Castoroides",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Beaver/Beaver_Character_BP_Aberrant.Beaver_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Beaver/Beaver_Character_BP_Aberrant.Beaver_Character_BP_Aberrant_C",
 			"dinoNameTag": "Beaver",
 			"customTag": "Beaver",
 			"targetingTeamName": "Herbivores_Medium",
@@ -112,15 +142,31 @@
 				"canDrag",
 				"isAmphibious"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 208, "sprint": 561.6 }
+				"walk": { "base": 160, "sprint": 561.6 },
+				"swim": { "base": 700 }
 			},
 			"movementD": {
-				"walk": { "base": 160, "sprint": 432 }
+				"walk": { "base": 160, "sprint": 432 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 28,
@@ -130,13 +176,17 @@
 		},
 		{
 			"name": "Aberrant Deathworm",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Deathworm/Deathworm_Character_BP_AADAberrant.Deathworm_Character_BP_AADAberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Deathworm/Deathworm_Character_BP_AADAberrant.Deathworm_Character_BP_AADAberrant_C",
 			"dinoNameTag": "Deathworm",
 			"customTag": "Deathworm",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1200,
 			"dragWeight": 1000,
 			"flags": [ "isBigDino", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -147,6 +197,7 @@
 			"movementD": {
 				"walk": { "base": 0 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 210,
 				"defaultSwingRadius": 1200,
@@ -158,7 +209,7 @@
 		},
 		{
 			"name": "Aberrant Megaloceros",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Deer/Stag_Character_BP_Aberrant.Stag_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Deer/Stag_Character_BP_Aberrant.Stag_Character_BP_Aberrant_C",
 			"dinoNameTag": "Stag",
 			"customTag": "Stag",
 			"targetingTeamName": "Herbivores_Medium",
@@ -171,6 +222,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 900,
+				"costLevel": 55,
+				"timeBase": 6300,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -183,6 +244,10 @@
 				"walk": { "base": 170, "sprint": 1020 },
 				"swim": { "base": 255 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 30,
 				"defaultSwingRadius": 250,
@@ -191,7 +256,7 @@
 		},
 		{
 			"name": "Aberrant Deinonychus",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Deinon/Deinonychus_Character_BP_AADAberrant.Deinonychus_Character_BP_AADAberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Deinon/Deinonychus_Character_BP_AADAberrant.Deinonychus_Character_BP_AADAberrant_C",
 			"dinoNameTag": "Deinonychus",
 			"customTag": "Deinonychus",
 			"targetingTeamName": "Carnivores_Medium",
@@ -205,17 +270,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 432, "sprint": 1296 },
-				"swim": { "base": 270 }
+				"walk": { "base": 480, "sprint": 1296 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 480, "sprint": 1440 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -230,13 +309,23 @@
 		},
 		{
 			"name": "Aberrant Dilophosaur",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Dilo/Dilo_Character_BP_Aberrant.Dilo_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Dilo/Dilo_Character_BP_Aberrant.Dilo_Character_BP_Aberrant_C",
 			"dinoNameTag": "Dilo",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 70,
 			"dragWeight": 35,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 300,
+				"costLevel": 27.5,
+				"timeBase": 2100,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -248,6 +337,10 @@
 			"movementD": {
 				"walk": { "base": 66, "sprint": 198 },
 				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -263,26 +356,40 @@
 		},
 		{
 			"name": "Aberrant Dimorphodon",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Dimorph/Dimorph_Character_BP_Aberrant.Dimorph_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Dimorph/Dimorph_Character_BP_Aberrant.Dimorph_Character_BP_Aberrant_C",
 			"dinoNameTag": "Dimorph",
 			"customTag": "Dimorph",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 70,
 			"dragWeight": 70,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isFlyerDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 23,
@@ -292,23 +399,28 @@
 		},
 		{
 			"name": "Aberrant Eurypterid",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Euryp/Euryp_Character_Aberrant.Euryp_Character_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Euryp/Euryp_Character_Aberrant.Euryp_Character_Aberrant_C",
 			"dinoNameTag": "Euryp",
 			"customTag": "Euryp",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 50,
 			"dragWeight": 30,
 			"flags": [ "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 200 }
+				"walk": { "base": 90, "sprint": 405 }
 			},
 			"movementD": {
-				"swim": { "base": 200 }
+				"walk": { "base": 90, "sprint": 405 }
 			},
+			"staminaRates": { "sprint": -5 },
 			"attack": {
 				"defaultDmg": 8,
 				"defaultSwingRadius": 175,
@@ -317,22 +429,38 @@
 		},
 		{
 			"name": "GachaClaus",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Extinction/Dinos/Gacha/Gacha_Claus_Character_BP.Gacha_Claus_Character_BP_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Extinction/Dinos/Gacha/Gacha_Claus_Character_BP.Gacha_Claus_Character_BP_C",
 			"dinoNameTag": "Gacha",
 			"customTag": "Gacha",
 			"targetingTeamName": "Herbivores",
 			"mass": 400,
 			"dragWeight": 350,
 			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 750 }
+				"walk": { "base": 300, "sprint": 750 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 750 }
+				"walk": { "base": 300, "sprint": 750 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -346,7 +474,7 @@
 		},
 		{
 			"name": "Aberrant Gallimimus",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Galli/Galli_Character_BP_Aberrant.Galli_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Galli/Galli_Character_BP_Aberrant.Galli_Character_BP_Aberrant_C",
 			"dinoNameTag": "Galli",
 			"customTag": "Galli",
 			"targetingTeamName": "Herbivores",
@@ -359,6 +487,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -368,8 +506,12 @@
 				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 783.7, "sprint": 2189.8 },
-				"swim": { "base": 427.5 }
+				"walk": { "base": 825, "sprint": 2189.8 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 8,
@@ -379,7 +521,7 @@
 		},
 		{
 			"name": "Aberrant Rock Elemental",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Golem/RockGolem_Character_BP_Aberrant.RockGolem_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Golem/RockGolem_Character_BP_Aberrant.RockGolem_Character_BP_Aberrant_C",
 			"dinoNameTag": "RockElemental",
 			"customTag": "RockElemental",
 			"targetingTeamName": "Carnivores_High",
@@ -392,6 +534,16 @@
 				"doStepDamage",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2200,
+				"costLevel": 55,
+				"timeBase": 15400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -402,6 +554,7 @@
 			"movementD": {
 				"walk": { "base": 400, "sprint": 960 }
 			},
+			"staminaRates": { "sprint": -25 },
 			"attack": {
 				"defaultDmg": 160,
 				"defaultSwingRadius": 1200,
@@ -417,13 +570,23 @@
 		},
 		{
 			"name": "Aberrant Jerboa",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Jerboa/Jerboa_Character_BP_Aberrant.Jerboa_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Jerboa/Jerboa_Character_BP_Aberrant.Jerboa_Character_BP_Aberrant_C",
 			"dinoNameTag": "Jerboa",
 			"customTag": "Jerboa",
 			"targetingTeamName": "Herbivores",
 			"mass": 50,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1275,
+				"costLevel": 55,
+				"timeBase": 8925,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -433,8 +596,12 @@
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 234, "sprint": 549.9 },
-				"swim": { "base": 450 }
+				"walk": { "base": 156, "sprint": 549.9 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 3,
@@ -444,24 +611,34 @@
 		},
 		{
 			"name": "Element Jug Bug",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/JugBug/Jugbug_Character_BP_AADAberrant.Jugbug_Character_BP_AADAberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/JugBug/Jugbug_Character_BP_AADAberrant.Jugbug_Character_BP_AADAberrant_C",
 			"dinoNameTag": "Jugbug",
 			"customTag": "Jugbug",
 			"targetingTeamName": "Herbivores",
 			"mass": 100,
 			"dragWeight": 30,
 			"flags": [ "canBeDragged", "isFlyerDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 60, "sprint": 150 },
-				"fly": { "base": 120 }
+				"fly": { "base": 120, "sprint": 300 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 150 },
-				"fly": { "base": 120 }
+				"fly": { "base": 120, "sprint": 300 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -474,7 +651,7 @@
 		},
 		{
 			"name": "Aberrant Kaprosuchus",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Kapro/Kaprosuchus_Character_BP_Aberrant.Kaprosuchus_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Kapro/Kaprosuchus_Character_BP_Aberrant.Kaprosuchus_Character_BP_Aberrant_C",
 			"dinoNameTag": "Kaprosuchus",
 			"customTag": "Kaprosuchus",
 			"targetingTeamName": "Carnivores_Medium",
@@ -489,15 +666,31 @@
 				"isAmphibious",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1000,
+				"costLevel": 55,
+				"timeBase": 7000,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 180, "sprint": 675 }
+				"walk": { "base": 180, "sprint": 675 },
+				"swim": { "base": 220, "sprint": 552.8 }
 			},
 			"movementD": {
-				"walk": { "base": 180, "sprint": 675 }
+				"walk": { "base": 180, "sprint": 675 },
+				"swim": { "base": 220, "sprint": 552.8 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -511,22 +704,38 @@
 		},
 		{
 			"name": "Aberrant Kentrosaurus",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Kentro/Kentro_Character_BP_Aberrant.Kentro_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Kentro/Kentro_Character_BP_Aberrant.Kentro_Character_BP_Aberrant_C",
 			"dinoNameTag": "Kentro",
 			"customTag": "Kentro",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 200,
 			"dragWeight": 250,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canBeTorpid" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 600 }
+				"walk": { "base": 150, "sprint": 600 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 600 }
+				"walk": { "base": 150, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -540,7 +749,7 @@
 		},
 		{
 			"name": "Aberrant Mantis",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Mantis/Mantis_Character_BP_Aberrant.Mantis_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Mantis/Mantis_Character_BP_Aberrant.Mantis_Character_BP_Aberrant_C",
 			"dinoNameTag": "Mantis",
 			"customTag": "Mantis",
 			"targetingTeamName": "Carnivores_Medium",
@@ -554,15 +763,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 2000
 			},
 			"movementW": {
-				"walk": { "base": 260, "sprint": 650 }
+				"walk": { "base": 200, "sprint": 650 },
+				"swim": { "base": 175 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 500 }
+				"walk": { "base": 200, "sprint": 500 },
+				"swim": { "base": 175 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -575,7 +800,7 @@
 		},
 		{
 			"name": "Aberrant Megatherium",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Megatherium/Megatherium_Character_BP_AADAberrant.Megatherium_Character_BP_AADAberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Megatherium/Megatherium_Character_BP_AADAberrant.Megatherium_Character_BP_AADAberrant_C",
 			"dinoNameTag": "Megatherium",
 			"customTag": "Megatherium",
 			"targetingTeamName": "Carnivores_High",
@@ -589,15 +814,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 640, "sprint": 1280 }
+				"walk": { "base": 224, "sprint": 1280 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
-				"walk": { "base": 480, "sprint": 960 }
+				"walk": { "base": 320, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -613,7 +854,7 @@
 		},
 		{
 			"name": "Aberrant Megatherium",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Megatherium/Megatherium_Character_BP_Child.Megatherium_Character_BP_Child_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Megatherium/Megatherium_Character_BP_Child.Megatherium_Character_BP_Child_C",
 			"dinoNameTag": "Megatherium",
 			"customTag": "Megatherium",
 			"targetingTeamName": "Carnivores_High",
@@ -627,15 +868,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 640, "sprint": 1280 }
+				"walk": { "base": 224, "sprint": 1280 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
-				"walk": { "base": 480, "sprint": 960 }
+				"walk": { "base": 320, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -651,7 +908,7 @@
 		},
 		{
 			"name": "Aberrant Lymantria",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Moth/Moth_Character_BP_Aberrant.Moth_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Moth/Moth_Character_BP_Aberrant.Moth_Character_BP_Aberrant_C",
 			"dinoNameTag": "Moth",
 			"customTag": "Moth",
 			"targetingTeamName": "Herbivores",
@@ -665,19 +922,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375,
+				"costLevel": 55,
+				"timeBase": 2625,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 110, "sprint": 220 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
+				"fly": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"walk": { "base": 96.8, "sprint": 193.6 },
-				"fly": { "base": 528 },
-				"swim": { "base": 264 }
+				"walk": { "base": 110, "sprint": 193.6 },
+				"fly": { "base": 600, "sprint": 1056 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.225
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -687,7 +958,7 @@
 		},
 		{
 			"name": "Night Wyvern",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/NightWyvern/NightWyvern_Character_BP.NightWyvern_Character_BP_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/NightWyvern/NightWyvern_Character_BP.NightWyvern_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -704,19 +975,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 241.5, "sprint": 557.9 },
-				"fly": { "base": 1225, "sprint": 980 },
-				"swim": { "base": 770 }
+				"walk": { "base": 345, "sprint": 557.9 },
+				"fly": { "base": 1750, "sprint": 2263.8 },
+				"swim": { "base": 1100 }
 			},
 			"movementD": {
 				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1750, "sprint": 1400 },
+				"fly": { "base": 1750, "sprint": 3234 },
 				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -740,13 +1019,23 @@
 		},
 		{
 			"name": "Aberrant Oviraptor",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Oviraptor/Oviraptor_Character_BP_Aberrant.Oviraptor_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Oviraptor/Oviraptor_Character_BP_Aberrant.Oviraptor_Character_BP_Aberrant_C",
 			"dinoNameTag": "Ovi",
 			"customTag": "Ovi",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 90,
 			"dragWeight": 40,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1500,
+				"costLevel": 55,
+				"timeBase": 10500,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -756,8 +1045,12 @@
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 239.2, "sprint": 674.5 },
-				"swim": { "base": 224.2 }
+				"walk": { "base": 208, "sprint": 674.5 },
+				"swim": { "base": 195 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 12,
@@ -767,7 +1060,7 @@
 		},
 		{
 			"name": "Aberrant Pachyrhinosaurus",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Pachyrhino/Pachyrhino_Character_BP_Aberrant.Pachyrhino_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Pachyrhino/Pachyrhino_Character_BP_Aberrant.Pachyrhino_Character_BP_Aberrant_C",
 			"dinoNameTag": "Pachyrhinosaurus",
 			"customTag": "Pachyrhino",
 			"targetingTeamName": "Herbivores_Medium",
@@ -781,15 +1074,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 500,
+				"costLevel": 55,
+				"timeBase": 3500,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225.4, "sprint": 563.5 }
+				"walk": { "base": 161, "sprint": 563.5 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
-				"walk": { "base": 253, "sprint": 632.5 }
+				"walk": { "base": 230, "sprint": 632.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -803,7 +1112,7 @@
 		},
 		{
 			"name": "Aberrant Phiomia",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Phiomia/Phiomia_Character_BP_Aberrant.Phiomia_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Phiomia/Phiomia_Character_BP_Aberrant.Phiomia_Character_BP_Aberrant_C",
 			"dinoNameTag": "Phiomia",
 			"customTag": "Phiomia",
 			"targetingTeamName": "Herbivores_Medium",
@@ -816,16 +1125,27 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 247.5, "sprint": 915.7 }
+				"walk": { "base": 150, "sprint": 915.7 }
 			},
 			"movementD": {
 				"walk": { "base": 150, "sprint": 555 }
 			},
+			"staminaRates": { "sprint": -20 },
 			"attack": {
 				"defaultDmg": 10,
 				"defaultSwingRadius": 160,
@@ -834,7 +1154,7 @@
 		},
 		{
 			"name": "Aberrant Procoptodon",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Procop/Procoptodon_Character_BP_Aberrant.Procoptodon_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Procop/Procoptodon_Character_BP_Aberrant.Procoptodon_Character_BP_Aberrant_C",
 			"dinoNameTag": "Kangaroo",
 			"customTag": "Kangaroo",
 			"targetingTeamName": "Herbivores_Medium",
@@ -848,15 +1168,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 775,
+				"costLevel": 55,
+				"timeBase": 5425,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 2600
 			},
 			"movementW": {
-				"walk": { "base": 850, "sprint": 1785 }
+				"walk": { "base": 850, "sprint": 1785 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 850, "sprint": 1785 }
+				"walk": { "base": 850, "sprint": 1785 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -870,7 +1206,7 @@
 		},
 		{
 			"name": "Aberrant Pteranodon",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Ptero/Ptero_Character_BP_Aberrant.Ptero_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Ptero/Ptero_Character_BP_Aberrant.Ptero_Character_BP_Aberrant_C",
 			"dinoNameTag": "Ptera",
 			"customTag": "Ptera",
 			"targetingTeamName": "Herbivores",
@@ -884,19 +1220,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 226.1, "sprint": 715 },
-				"fly": { "base": 521.7 },
-				"swim": { "base": 260.9 }
+				"walk": { "base": 260, "sprint": 715 },
+				"fly": { "base": 600, "sprint": 1650 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
 				"walk": { "base": 260, "sprint": 822.2 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
+				"fly": { "base": 600, "sprint": 1897.5 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -910,7 +1260,7 @@
 		},
 		{
 			"name": "Aberrant Quetzal",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Quetzal/Quetz_Character_BP_AADAberrant.Quetz_Character_BP_AADAberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Quetzal/Quetz_Character_BP_AADAberrant.Quetz_Character_BP_AADAberrant_C",
 			"dinoNameTag": "Quetz",
 			"customTag": "Quetz",
 			"targetingTeamName": "Herbivores_Large",
@@ -925,19 +1275,33 @@
 				"isBigDino",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 574.6, "sprint": 1149.1 },
-				"fly": { "base": 798 },
-				"swim": { "base": 478.8 }
+				"walk": { "base": 478.8, "sprint": 1149.1 },
+				"fly": { "base": 665, "sprint": 1596 },
+				"swim": { "base": 665 }
 			},
 			"movementD": {
-				"walk": { "base": 342, "sprint": 684 },
-				"fly": { "base": 475 },
-				"swim": { "base": 285 }
+				"walk": { "base": 360, "sprint": 684 },
+				"fly": { "base": 500, "sprint": 950 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.185
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -950,7 +1314,7 @@
 		},
 		{
 			"name": "Aberrant Rex",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Rex/Rex_Character_BP_Aberrant.Rex_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Rex/Rex_Character_BP_Aberrant.Rex_Character_BP_Aberrant_C",
 			"dinoNameTag": "Rex",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -965,15 +1329,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 257.5, "sprint": 736.4 }
+				"walk": { "base": 515, "sprint": 736.4 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 386.2, "sprint": 1104.7 }
+				"walk": { "base": 515, "sprint": 1104.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -987,7 +1367,7 @@
 		},
 		{
 			"name": "Rex",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Rex/ValgRex_Character_BP.ValgRex_Character_BP_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Rex/ValgRex_Character_BP.ValgRex_Character_BP_C",
 			"dinoNameTag": "Rex",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -1002,15 +1382,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 257.5, "sprint": 736.4 }
+				"walk": { "base": 515, "sprint": 736.4 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 386.2, "sprint": 1104.7 }
+				"walk": { "base": 515, "sprint": 1104.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -1024,7 +1420,7 @@
 		},
 		{
 			"name": "Aberrant Sabertooth",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Saber/Saber_Character_BP_Aberrant.Saber_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Saber/Saber_Character_BP_Aberrant.Saber_Character_BP_Aberrant_C",
 			"dinoNameTag": "Sabertooth",
 			"customTag": "Sabertooth",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1038,17 +1434,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 25,
 				"maxSpeed": 1850
 			},
 			"movementW": {
-				"walk": { "base": 184, "sprint": 920 },
-				"swim": { "base": 240 }
+				"walk": { "base": 230, "sprint": 920 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 230, "sprint": 1150 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 29,
@@ -1058,7 +1468,7 @@
 		},
 		{
 			"name": "Aberrant Tapejara",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Tapejara/Tapejara_Character_BP_Aberrant.Tapejara_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Tapejara/Tapejara_Character_BP_Aberrant.Tapejara_Character_BP_Aberrant_C",
 			"dinoNameTag": "Tapejara",
 			"customTag": "Tapejara",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -1072,19 +1482,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 539, "sprint": 862.4 },
-				"fly": { "base": 1540 },
-				"swim": { "base": 660 }
+				"walk": { "base": 245, "sprint": 862.4 },
+				"fly": { "base": 700, "sprint": 2464 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 245, "sprint": 392 },
-				"fly": { "base": 700 },
+				"fly": { "base": 700, "sprint": 1120 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1098,7 +1522,7 @@
 		},
 		{
 			"name": "Aberrant Terror Bird",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Terrorbird/TerrorBird_Character_BP_Aberrant.TerrorBird_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Terrorbird/TerrorBird_Character_BP_Aberrant.TerrorBird_Character_BP_Aberrant_C",
 			"dinoNameTag": "TerrorBird",
 			"customTag": "TerrorBird",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1112,6 +1536,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 900,
+				"costLevel": 55,
+				"timeBase": 6300,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1124,6 +1558,10 @@
 				"walk": { "base": 255.4, "sprint": 1200.2 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 18,
 				"defaultSwingRadius": 110,
@@ -1132,22 +1570,38 @@
 		},
 		{
 			"name": "Aberrant Therizinosaur",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Theri/Therizino_Character_BP_Aberrant.Therizino_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Theri/Therizino_Character_BP_Aberrant.Therizino_Character_BP_Aberrant_C",
 			"dinoNameTag": "Therizinosaurus",
 			"customTag": "Therizinosaurus",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
 			"mass": 222,
 			"dragWeight": 250,
 			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 349.5, "sprint": 978.6 }
+				"walk": { "base": 466, "sprint": 978.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 466, "sprint": 1304.8 }
+				"walk": { "base": 466, "sprint": 1304.8 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 52,
@@ -1161,7 +1615,7 @@
 		},
 		{
 			"name": "Aberrant Thylacoleo",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Thyla/Thylacoleo_Character_BP_Aberrant.Thylacoleo_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Thyla/Thylacoleo_Character_BP_Aberrant.Thylacoleo_Character_BP_Aberrant_C",
 			"dinoNameTag": "Thylacoleo",
 			"customTag": "Thylacoleo",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1176,17 +1630,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1325,
+				"costLevel": 55,
+				"timeBase": 9275,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 1900
 			},
 			"movementW": {
-				"walk": { "base": 230, "sprint": 1150 },
-				"swim": { "base": 600 }
+				"walk": { "base": 184, "sprint": 1150 },
+				"swim": { "base": 480 }
 			},
 			"movementD": {
 				"walk": { "base": 230, "sprint": 1150 },
 				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -1202,24 +1670,38 @@
 		},
 		{
 			"name": "Aberrant Troodon",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Troodon/Troodon_Character_BP_Aberrant.Troodon_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Troodon/Troodon_Character_BP_Aberrant.Troodon_Character_BP_Aberrant_C",
 			"dinoNameTag": "Troodon",
 			"customTag": "Troodon",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 100,
 			"dragWeight": 35,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 408, "sprint": 816 },
-				"swim": { "base": 255 }
+				"walk": { "base": 480, "sprint": 816 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 480, "sprint": 960 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 7,
@@ -1232,7 +1714,7 @@
 		},
 		{
 			"name": "Aberrant Unicorn",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Unicorn/Unicorn_Character_BP_AADAberrant.Unicorn_Character_BP_AADAberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Unicorn/Unicorn_Character_BP_AADAberrant.Unicorn_Character_BP_AADAberrant_C",
 			"dinoNameTag": "Equus",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -1245,17 +1727,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 351, "sprint": 1158.3 },
-				"swim": { "base": 468 }
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"swim": { "base": 390 }
 			},
 			"movementD": {
 				"walk": { "base": 292.5, "sprint": 965.2 },
 				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 8,
@@ -1270,7 +1766,7 @@
 		},
 		{
 			"name": "Carnotaurus",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/ValgueroCarno/ValgCarno_Character_BP.ValgCarno_Character_BP_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/ValgueroCarno/ValgCarno_Character_BP.ValgCarno_Character_BP_C",
 			"dinoNameTag": "Carno",
 			"customTag": "Carno",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1283,15 +1779,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 318.8, "sprint": 892.5 }
+				"walk": { "base": 425, "sprint": 892.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 425, "sprint": 1190 }
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -1304,7 +1816,7 @@
 		},
 		{
 			"name": "Aberrant Direwolf",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Wolf/Direwolf_Character_BP_AADAberrant.Direwolf_Character_BP_AADAberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Wolf/Direwolf_Character_BP_AADAberrant.Direwolf_Character_BP_AADAberrant_C",
 			"dinoNameTag": "Direwolf",
 			"customTag": "Direwolf",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1318,6 +1830,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1329,6 +1851,10 @@
 			"movementD": {
 				"walk": { "base": 223.2, "sprint": 1017.8 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -1342,7 +1868,7 @@
 		},
 		{
 			"name": "Aberrant Yutyrannus",
-			"blueprintPath": "/Game/Mods/AdditionalAberrantDinos/Yuty/Yutyrannus_Character_BP_Aberrant.Yutyrannus_Character_BP_Aberrant_C",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/Yuty/Yutyrannus_Character_BP_Aberrant.Yutyrannus_Character_BP_Aberrant_C",
 			"dinoNameTag": "Yutyrannus",
 			"customTag": "Yutyrannus",
 			"targetingTeamName": "Carnivores_High",
@@ -1357,6 +1883,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1367,6 +1903,7 @@
 			"movementD": {
 				"walk": { "base": 700, "sprint": 1610 }
 			},
+			"staminaRates": { "sprint": -40 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,

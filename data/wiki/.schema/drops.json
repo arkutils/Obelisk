@@ -141,9 +141,25 @@
 				},
 				"items": {
 					"title": "Items",
+					"description": "Pairs of (weighted chance, item class name)",
 					"type": "array",
 					"items": {
-						"type": "string"
+						"type": "array",
+						"items": [
+							{
+								"anyOf": [
+									{
+										"type": "number"
+									},
+									{
+										"type": "number"
+									}
+								]
+							},
+							{
+								"type": "string"
+							}
+						]
 					}
 				}
 			},
@@ -178,6 +194,9 @@
 				"qtyScale": {
 					"$ref": "#/definitions/MinMaxPowerRange"
 				},
+				"qualityScale": {
+					"$ref": "#/definitions/MinMaxPowerRange"
+				},
 				"entries": {
 					"title": "Entries",
 					"type": "array",
@@ -189,6 +208,7 @@
 			"required": [
 				"weight",
 				"qtyScale",
+				"qualityScale",
 				"entries"
 			],
 			"additionalProperties": false

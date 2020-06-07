@@ -1,0 +1,237 @@
+{
+	"title": "NPCSpawns",
+	"type": "object",
+	"properties": {
+		"version": {
+			"title": "Version",
+			"description": "Data version of the format <gamemajor>.<gamemajor>.<specificversion>, e.g. '306.83.4740398'",
+			"type": "string"
+		},
+		"format": {
+			"title": "Format",
+			"description": "Free-form format identifier, changed only when incompatibilities are introduced",
+			"type": "string"
+		},
+		"mod": {
+			"title": "Mod info",
+			"description": "Source module information",
+			"allOf": [
+				{
+					"$ref": "#/definitions/ModInfo"
+				}
+			]
+		},
+		"persistentLevel": {
+			"title": "Persistentlevel",
+			"type": "string"
+		},
+		"spawns": {
+			"title": "Spawns",
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/NPCManager"
+			}
+		}
+	},
+	"required": [
+		"version",
+		"format",
+		"persistentLevel",
+		"spawns"
+	],
+	"additionalProperties": false,
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"ModInfo": {
+			"title": "ModInfo",
+			"type": "object",
+			"properties": {
+				"id": {
+					"title": "Mod ID",
+					"type": "string"
+				},
+				"tag": {
+					"title": "Blueprint tag",
+					"description": "Used in place of the mod ID in blueprint paths",
+					"type": "string"
+				},
+				"title": {
+					"title": "Mod name",
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"tag",
+				"title"
+			]
+		},
+		"Location": {
+			"title": "Location",
+			"type": "object",
+			"properties": {
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"Box": {
+			"title": "Box",
+			"type": "object",
+			"properties": {
+				"start": {
+					"$ref": "#/definitions/Location"
+				},
+				"center": {
+					"$ref": "#/definitions/Location"
+				},
+				"end": {
+					"$ref": "#/definitions/Location"
+				}
+			},
+			"required": [
+				"start",
+				"center",
+				"end"
+			],
+			"additionalProperties": false
+		},
+		"WeighedBox": {
+			"title": "WeighedBox",
+			"type": "object",
+			"properties": {
+				"weight": {
+					"title": "Weight",
+					"type": "number"
+				},
+				"start": {
+					"$ref": "#/definitions/Location"
+				},
+				"center": {
+					"$ref": "#/definitions/Location"
+				},
+				"end": {
+					"$ref": "#/definitions/Location"
+				}
+			},
+			"required": [
+				"weight",
+				"start",
+				"center",
+				"end"
+			],
+			"additionalProperties": false
+		},
+		"NPCManager": {
+			"title": "NPCManager",
+			"type": "object",
+			"properties": {
+				"disabled": {
+					"title": "Disabled",
+					"default": false,
+					"type": "boolean"
+				},
+				"spawnGroup": {
+					"title": "Spawngroup",
+					"description": "Path to a container of spawning groups.",
+					"type": "string"
+				},
+				"minDesiredNumberOfNPC": {
+					"title": "Mindesirednumberofnpc",
+					"type": "integer"
+				},
+				"neverSpawnInWater": {
+					"title": "Neverspawninwater",
+					"type": "boolean"
+				},
+				"forceUntameable": {
+					"title": "Forceuntameable",
+					"type": "boolean"
+				},
+				"locations": {
+					"title": "Locations",
+					"default": [],
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/Box"
+					}
+				},
+				"spawnLocations": {
+					"title": "Spawnlocations",
+					"default": [],
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/WeighedBox"
+					}
+				},
+				"spawnPoints": {
+					"title": "Spawnpoints",
+					"default": [],
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/Location"
+					}
+				}
+			},
+			"required": [
+				"minDesiredNumberOfNPC",
+				"neverSpawnInWater",
+				"forceUntameable"
+			],
+			"additionalProperties": false
+		}
+	}
+}

@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1584234429",
-	"format": "1",
+	"version": "310.117.1584234429",
+	"format": "2",
 	"mod": {
 		"id": "1768499278",
 		"tag": "BalancedJPE",
@@ -10,7 +10,7 @@
 	"species": [
 		{
 			"name": "Apatosaurus",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Apatosaurus/ShadApato_Character_BP.ShadApato_Character_BP_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Apatosaurus/ShadApato_Character_BP.ShadApato_Character_BP_C",
 			"dinoNameTag": "Titan",
 			"customTag": "Apatosaur",
 			"targetingTeamName": "Herbivores_large",
@@ -25,15 +25,25 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 130,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 240, "sprint": 720 }
+				"walk": { "base": 220.8, "sprint": 720 },
+				"swim": { "base": 368 }
 			},
 			"movementD": {
-				"walk": { "base": 240, "sprint": 720 }
+				"walk": { "base": 240, "sprint": 720 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -47,7 +57,7 @@
 		},
 		{
 			"name": "Charonosaurus",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Charonosaurus/Charono_Character_bp.Charono_Character_bp_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Charonosaurus/Charono_Character_bp.Charono_Character_bp_C",
 			"dinoNameTag": "Para",
 			"customTag": "Charono",
 			"targetingTeamName": "Herbivores_Medium",
@@ -61,15 +71,25 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1650 }
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1650 }
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -85,7 +105,7 @@
 		},
 		{
 			"name": "Giant Dart Frog",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/DartFrog/ToxicToad_Character_BP.ToxicToad_Character_BP_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/DartFrog/ToxicToad_Character_BP.ToxicToad_Character_BP_C",
 			"dinoNameTag": "Toad",
 			"customTag": "Toad",
 			"targetingTeamName": "Carnivores_Medium",
@@ -99,6 +119,16 @@
 				"canDrag",
 				"isAmphibious"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1425,
+				"costLevel": 55,
+				"timeBase": 9975,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 66,
 				"maxSpeed": 1770
@@ -111,6 +141,10 @@
 				"walk": { "base": 340, "sprint": 680 },
 				"swim": { "base": 595 }
 			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 144,
@@ -122,7 +156,7 @@
 		},
 		{
 			"name": "Dracorex",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Dracorex/SDracorex_Character_bp.SDracorex_Character_bp_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Dracorex/SDracorex_Character_bp.SDracorex_Character_bp_C",
 			"dinoNameTag": "Pachy",
 			"customTag": "Dracorex",
 			"targetingTeamName": "Carnivores_Medium",
@@ -136,15 +170,25 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1200 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1200 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -160,7 +204,7 @@
 		},
 		{
 			"name": "Epanterias",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Epanterias/Epanterias_Character_BP.Epanterias_Character_BP_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Epanterias/Epanterias_Character_BP.Epanterias_Character_BP_C",
 			"dinoNameTag": "Allo",
 			"customTag": "Epanterias",
 			"targetingTeamName": "Carnivores_High",
@@ -175,15 +219,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 525, "sprint": 2100 }
+				"walk": { "base": 525, "sprint": 2100 },
+				"swim": { "base": 420 }
 			},
 			"movementD": {
-				"walk": { "base": 525, "sprint": 2100 }
+				"walk": { "base": 525, "sprint": 2100 },
+				"swim": { "base": 420 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -196,7 +256,7 @@
 		},
 		{
 			"name": "Euplocephalus",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Euplo/Euplo_Character_bp.Euplo_Character_bp_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Euplo/Euplo_Character_bp.Euplo_Character_bp_C",
 			"dinoNameTag": "Anky",
 			"customTag": "Anky",
 			"targetingTeamName": "Herbivores_Large",
@@ -210,15 +270,25 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1020 }
+				"walk": { "base": 300, "sprint": 1020 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1020 }
+				"walk": { "base": 300, "sprint": 1020 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -233,7 +303,7 @@
 		},
 		{
 			"name": "Gasosaurus",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Gaso/Gasosaur_Character_bp.Gasosaur_Character_bp_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Gaso/Gasosaur_Character_bp.Gasosaur_Character_bp_C",
 			"dinoNameTag": "Megalosaurus",
 			"customTag": "Gasosaur",
 			"targetingTeamName": "Carnivores_Medium",
@@ -247,15 +317,25 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1200 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1200 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -268,7 +348,7 @@
 		},
 		{
 			"name": "Monolophosaurus",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Monoloph/Monolophosaurus_Character_bp.Monolophosaurus_Character_bp_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Monoloph/Monolophosaurus_Character_bp.Monolophosaurus_Character_bp_C",
 			"dinoNameTag": "Dilo",
 			"customTag": "Monoloph",
 			"targetingTeamName": "Carnivores_Medium",
@@ -282,15 +362,25 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 2400 }
+				"walk": { "base": 300, "sprint": 2400 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 2400 }
+				"walk": { "base": 300, "sprint": 2400 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -304,7 +394,7 @@
 		},
 		{
 			"name": "Ornitholestes",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Ornitholestes/Ornitholestes_Character_BP.Ornitholestes_Character_BP_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Ornitholestes/Ornitholestes_Character_BP.Ornitholestes_Character_BP_C",
 			"dinoNameTag": "Troodon",
 			"customTag": "Ornitholestes",
 			"targetingTeamName": "Carnivores_Medium",
@@ -318,6 +408,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -329,6 +429,10 @@
 			"movementD": {
 				"walk": { "base": 528, "sprint": 2112 },
 				"swim": { "base": 325.6 }
+			},
+			"staminaRates": {
+				"sprint": -9,
+				"swimOrFly": -7
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -342,7 +446,7 @@
 		},
 		{
 			"name": "Sinosaurus",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Sinosaurus/Sinosaur_Character_bp.Sinosaur_Character_bp_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Sinosaurus/Sinosaur_Character_bp.Sinosaur_Character_bp_C",
 			"dinoNameTag": "Dilo",
 			"customTag": "Sinosaur",
 			"targetingTeamName": "Carnivores_Medium",
@@ -356,6 +460,10 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -367,6 +475,10 @@
 			"movementD": {
 				"walk": { "base": 300, "sprint": 1800 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -380,7 +492,7 @@
 		},
 		{
 			"name": "Suchomimus",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Suchomimus/Suchomimus_Character_bp.Suchomimus_Character_bp_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Suchomimus/Suchomimus_Character_bp.Suchomimus_Character_bp_C",
 			"dinoNameTag": "Spino",
 			"customTag": "Suchomimus",
 			"targetingTeamName": "Carnivores_Low",
@@ -397,15 +509,25 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 700 }
+				"walk": { "base": 370, "sprint": 2220 },
+				"swim": { "base": 700, "sprint": 2100 }
 			},
 			"movementD": {
-				"swim": { "base": 700 }
+				"walk": { "base": 370, "sprint": 2220 },
+				"swim": { "base": 700, "sprint": 2100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -420,7 +542,7 @@
 		},
 		{
 			"name": "Torvosaurus",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/Torvo/Torvo_Character_BP.Torvo_Character_bp_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/Torvo/Torvo_Character_BP.Torvo_Character_bp_C",
 			"dinoNameTag": "Megalosaurus",
 			"customTag": "Torvo",
 			"targetingTeamName": "Carnivores_High",
@@ -435,15 +557,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 340, "sprint": 1700 }
+				"walk": { "base": 340, "sprint": 1700 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 340, "sprint": 1700 }
+				"walk": { "base": 340, "sprint": 1700 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -458,7 +590,7 @@
 		},
 		{
 			"name": "UberSpinosaurus",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Creature/UberSpino/UberSpino_Character_BP.UberSpino_Character_BP_C",
+			"bp": "/Game/Mods/BalancedJPE/Creature/UberSpino/UberSpino_Character_BP.UberSpino_Character_BP_C",
 			"dinoNameTag": "Spino",
 			"customTag": "Spino",
 			"targetingTeamName": "Carnivores_High",
@@ -474,15 +606,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 525, "sprint": 1995 }
+				"walk": { "base": 525, "sprint": 1995 },
+				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 525, "sprint": 1995 }
+				"walk": { "base": 525, "sprint": 1995 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -498,7 +646,7 @@
 		},
 		{
 			"name": "Corrupted Deathworm",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Extinction/Dinos/Corrupt/Deathworm/Deathworm_Character_BP_Corrupt.Deathworm_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/BalancedJPE/Extinction/Dinos/Corrupt/Deathworm/Deathworm_Character_BP_Corrupt.Deathworm_Character_BP_Corrupt_C",
 			"dinoNameTag": "Deathworm Corrupt",
 			"customTag": "Deathworm",
 			"targetingTeamName": "Carnivores_High",
@@ -506,6 +654,10 @@
 			"dragWeight": 1000,
 			"variants": [ "Corrupted" ],
 			"flags": [ "isBigDino", "isCarnivore", "isCorrupted" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -516,6 +668,7 @@
 			"movementD": {
 				"walk": { "base": 0 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 210,
 				"defaultSwingRadius": 1200,
@@ -527,7 +680,7 @@
 		},
 		{
 			"name": "Corrupted Raptor",
-			"blueprintPath": "/Game/Mods/BalancedJPE/Extinction/Dinos/Corrupt/Raptor/BabyRaptor_Character_BP_Corrupt.BabyRaptor_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/BalancedJPE/Extinction/Dinos/Corrupt/Raptor/BabyRaptor_Character_BP_Corrupt.BabyRaptor_Character_BP_Corrupt_C",
 			"dinoNameTag": "Raptor",
 			"customTag": "Raptor",
 			"targetingTeamName": "Carnivores_High",
@@ -543,17 +696,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 432, "sprint": 993.6 },
-				"swim": { "base": 270 }
+				"walk": { "base": 480, "sprint": 993.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 480, "sprint": 1104 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -568,7 +735,7 @@
 		},
 		{
 			"name": "Dodo Wyvern",
-			"blueprintPath": "/Game/Mods/BalancedJPE/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
+			"bp": "/Game/Mods/BalancedJPE/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -586,20 +753,31 @@
 				"preventCharacterBasing",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 650, "sprint": 1300 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 1300 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 650, "sprint": 1300 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 1300 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 3000 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 160,
 				"defaultSwingRadius": 1200,

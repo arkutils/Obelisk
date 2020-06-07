@@ -61,6 +61,56 @@
 				"title"
 			]
 		},
+		"LevelData": {
+			"title": "LevelData",
+			"type": "object",
+			"properties": {
+				"ramp": {
+					"title": "Ramp",
+					"description": "Name of ramp that describes amount of experience needed to progress.",
+					"default": "DinoEasy",
+					"type": "string"
+				},
+				"maxExperience": {
+					"title": "Maxexperience",
+					"type": "number"
+				},
+				"maxLevels": {
+					"title": "Max Level Ups",
+					"description": "Max amount of level ups this species can have at default server settings.",
+					"type": "integer"
+				},
+				"capOffset": {
+					"title": "Tame Level Cap Offset",
+					"description": "Number of extra levels (above normal cap) this species can gain when tamed without getting destroyed by validation",
+					"type": "integer"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CloningData": {
+			"title": "CloningData",
+			"type": "object",
+			"properties": {
+				"costBase": {
+					"title": "Base Cost to Clone",
+					"type": "number"
+				},
+				"costLevel": {
+					"title": "Cost per Level",
+					"type": "number"
+				},
+				"timeBase": {
+					"title": "Base Time to Clone",
+					"type": "number"
+				},
+				"timeLevel": {
+					"title": "Time per Level",
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
 		"FallingData": {
 			"title": "FallingData",
 			"type": "object",
@@ -99,7 +149,8 @@
 			},
 			"required": [
 				"base"
-			]
+			],
+			"additionalProperties": false
 		},
 		"MovementModes": {
 			"title": "MovementModes",
@@ -114,7 +165,23 @@
 				"swim": {
 					"$ref": "#/definitions/SpeedData"
 				}
-			}
+			},
+			"additionalProperties": false
+		},
+		"StaminaRates": {
+			"title": "StaminaRates",
+			"type": "object",
+			"properties": {
+				"sprint": {
+					"title": "Sprint",
+					"type": "number"
+				},
+				"swimOrFly": {
+					"title": "Swimorfly",
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
 		},
 		"AttackInfo": {
 			"title": "AttackInfo",
@@ -186,13 +253,13 @@
 					"description": "Descriptive name",
 					"type": "string"
 				},
-				"blueprintPath": {
+				"bp": {
 					"title": "Full blueprint path",
 					"type": "string"
 				},
 				"dinoNameTag": {
 					"title": "Dino name tag",
-					"description": "Only known use is saddle compatibility",
+					"description": "Only known use is saddle compatibility and server configuration",
 					"type": "string"
 				},
 				"customTag": {
@@ -232,6 +299,18 @@
 						"type": "string"
 					}
 				},
+				"levelCaps": {
+					"$ref": "#/definitions/LevelData"
+				},
+				"cloning": {
+					"title": "Cloning",
+					"description": "Full cost is determined by Ceil(costBase + costLevel x CharacterLevel). Cloning time is determined by (timeBase + timeLevel x CharacterLevel) / BabyMatureSpeedMulti.",
+					"allOf": [
+						{
+							"$ref": "#/definitions/CloningData"
+						}
+					]
+				},
 				"falling": {
 					"$ref": "#/definitions/FallingData"
 				},
@@ -251,12 +330,15 @@
 						}
 					]
 				},
+				"staminaRates": {
+					"$ref": "#/definitions/StaminaRates"
+				},
 				"attack": {
 					"$ref": "#/definitions/AttackData"
 				}
 			},
 			"required": [
-				"blueprintPath"
+				"bp"
 			],
 			"additionalProperties": false
 		}

@@ -1,0 +1,1143 @@
+{
+	"title": "Actors",
+	"type": "object",
+	"properties": {
+		"version": {
+			"title": "Version",
+			"description": "Data version of the format <gamemajor>.<gamemajor>.<specificversion>, e.g. '306.83.4740398'",
+			"type": "string"
+		},
+		"format": {
+			"title": "Format",
+			"description": "Free-form format identifier, changed only when incompatibilities are introduced",
+			"type": "string"
+		},
+		"mod": {
+			"title": "Mod info",
+			"description": "Source module information",
+			"allOf": [
+				{
+					"$ref": "#/definitions/ModInfo"
+				}
+			]
+		},
+		"persistentLevel": {
+			"title": "Persistentlevel",
+			"type": "string"
+		},
+		"notes": {
+			"title": "Notes",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/ExplorerNote"
+			}
+		},
+		"oilVeins": {
+			"title": "Oilveins",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/OilVein"
+			}
+		},
+		"waterVeins": {
+			"title": "Waterveins",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/WaterVein"
+			}
+		},
+		"wyvernNests": {
+			"title": "Wyvernnests",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/WyvernNest"
+			}
+		},
+		"iceWyvernNests": {
+			"title": "Icewyvernnests",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/IceWyvernNest"
+			}
+		},
+		"oilVents": {
+			"title": "Oilvents",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/OilVent"
+			}
+		},
+		"lunarOxygenVents": {
+			"title": "Lunaroxygenvents",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/LunarOxygenVent"
+			}
+		},
+		"gasVeins": {
+			"title": "Gasveins",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/GasVein"
+			}
+		},
+		"chargeNodes": {
+			"title": "Chargenodes",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/ChargeNode"
+			}
+		},
+		"plantZNodes": {
+			"title": "Plantznodes",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/PlantSpeciesZWild"
+			}
+		},
+		"drakeNests": {
+			"title": "Drakenests",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/DrakeNest"
+			}
+		},
+		"deinonychusNests": {
+			"title": "Deinonychusnests",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/DeinonychusNest"
+			}
+		},
+		"glitches": {
+			"title": "Glitches",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Glitch"
+			}
+		},
+		"magmasaurNests": {
+			"title": "Magmasaurnests",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/MagmasaurNest"
+			}
+		},
+		"poisonTrees": {
+			"title": "Poisontrees",
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/PoisonTree"
+			}
+		}
+	},
+	"required": [
+		"version",
+		"format",
+		"persistentLevel",
+		"poisonTrees"
+	],
+	"additionalProperties": false,
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"ModInfo": {
+			"title": "ModInfo",
+			"type": "object",
+			"properties": {
+				"id": {
+					"title": "Mod ID",
+					"type": "string"
+				},
+				"tag": {
+					"title": "Blueprint tag",
+					"description": "Used in place of the mod ID in blueprint paths",
+					"type": "string"
+				},
+				"title": {
+					"title": "Mod name",
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"tag",
+				"title"
+			]
+		},
+		"ExplorerNote": {
+			"title": "ExplorerNote",
+			"type": "object",
+			"properties": {
+				"noteIndex": {
+					"title": "Noteindex",
+					"description": "Index of an explorer note entry from Primal Game Data.",
+					"type": "integer"
+				},
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"type": "number"
+				},
+				"y": {
+					"title": "Y",
+					"type": "number"
+				},
+				"z": {
+					"title": "Z",
+					"type": "number"
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"noteIndex",
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"OilVein": {
+			"title": "OilVein",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"WaterVein": {
+			"title": "WaterVein",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"WyvernNest": {
+			"title": "WyvernNest",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"IceWyvernNest": {
+			"title": "IceWyvernNest",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"OilVent": {
+			"title": "OilVent",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"LunarOxygenVent": {
+			"title": "LunarOxygenVent",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"GasVein": {
+			"title": "GasVein",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"ChargeNode": {
+			"title": "ChargeNode",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"PlantSpeciesZWild": {
+			"title": "PlantSpeciesZWild",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"DrakeNest": {
+			"title": "DrakeNest",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"DeinonychusNest": {
+			"title": "DeinonychusNest",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"Glitch": {
+			"title": "Glitch",
+			"type": "object",
+			"properties": {
+				"noteId": {
+					"title": "Noteid",
+					"description": "Index of an explorer note entry from Primal Game Data.",
+					"type": "integer"
+				},
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"hexagons": {
+					"title": "Hexagons",
+					"type": "integer"
+				},
+				"x": {
+					"title": "X",
+					"type": "number"
+				},
+				"y": {
+					"title": "Y",
+					"type": "number"
+				},
+				"z": {
+					"title": "Z",
+					"type": "number"
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"hexagons",
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"MagmasaurNest": {
+			"title": "MagmasaurNest",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"PoisonTree": {
+			"title": "PoisonTree",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		}
+	}
+}

@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1555557079",
-	"format": "1",
+	"version": "310.117.1555557079",
+	"format": "2",
 	"mod": {
 		"id": "1300713111",
 		"tag": "RareSightings",
@@ -10,7 +10,7 @@
 	"species": [
 		{
 			"name": "Basilisk",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Basilisk_Character_BP_Rare.Basilisk_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Basilisk_Character_BP_Rare.Basilisk_Character_BP_Rare_C",
 			"dinoNameTag": "Basilisk",
 			"customTag": "Basilisk",
 			"targetingTeamName": "Carnivores_Medium",
@@ -23,17 +23,31 @@
 				"doStepDamage",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1950,
+				"costLevel": 55,
+				"timeBase": 13650,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 360, "sprint": 1008 },
-				"swim": { "base": 240 }
+				"walk": { "base": 600, "sprint": 1008 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
 				"walk": { "base": 600, "sprint": 1680 },
 				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -51,7 +65,7 @@
 		},
 		{
 			"name": "Ravager",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/CaveWolf_Character_BP_Rare.CaveWolf_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/CaveWolf_Character_BP_Rare.CaveWolf_Character_BP_Rare_C",
 			"dinoNameTag": "CaveWolf",
 			"customTag": "CaveWolf",
 			"targetingTeamName": "Carnivores_Medium",
@@ -65,6 +79,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 625,
+				"costLevel": 55,
+				"timeBase": 4375,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 1950
@@ -76,6 +100,10 @@
 			"movementD": {
 				"walk": { "base": 240, "sprint": 924 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -95,7 +123,7 @@
 		},
 		{
 			"name": "Karkinos",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Crab_Character_BP_Rare.Crab_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Crab_Character_BP_Rare.Crab_Character_BP_Rare_C",
 			"dinoNameTag": "CaveCrab",
 			"customTag": "CaveCrab",
 			"targetingTeamName": "Carnivores_High",
@@ -111,6 +139,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 2800
@@ -121,6 +159,7 @@
 			"movementD": {
 				"walk": { "base": 420, "sprint": 735 }
 			},
+			"staminaRates": { "sprint": -4 },
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 110,
@@ -138,7 +177,7 @@
 		},
 		{
 			"name": "Featherlight",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/LanternBird_Character_BP_Rare.LanternBird_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/LanternBird_Character_BP_Rare.LanternBird_Character_BP_Rare_C",
 			"dinoNameTag": "Lantern Bird",
 			"customTag": "Lantern Bird",
 			"targetingTeamName": "Herbivores",
@@ -152,19 +191,33 @@
 				"canMountOnHumans",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 60, "sprint": 165 },
-				"fly": { "base": 300 },
-				"swim": { "base": 100 }
+				"fly": { "base": 300, "sprint": 825 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 165 },
-				"fly": { "base": 300 },
-				"swim": { "base": 100 }
+				"fly": { "base": 300, "sprint": 825 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 3,
@@ -174,24 +227,38 @@
 		},
 		{
 			"name": "Shinehorn",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/LanternGoat_Character_BP_Rare.LanternGoat_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/LanternGoat_Character_BP_Rare.LanternGoat_Character_BP_Rare_C",
 			"dinoNameTag": "Lantern Goat",
 			"customTag": "LanternGoat",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 279.3, "sprint": 418.9 },
-				"swim": { "base": 630 }
+				"walk": { "base": 143.6, "sprint": 418.9 },
+				"swim": { "base": 324 }
 			},
 			"movementD": {
-				"walk": { "base": 133, "sprint": 199.5 },
-				"swim": { "base": 300 }
+				"walk": { "base": 126.3, "sprint": 199.5 },
+				"swim": { "base": 285 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -201,22 +268,38 @@
 		},
 		{
 			"name": "Glowtail",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/LanternLizard_Character_BP_Rare.LanternLizard_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/LanternLizard_Character_BP_Rare.LanternLizard_Character_BP_Rare_C",
 			"dinoNameTag": "Lantern Lizard",
 			"customTag": "LanternLizard",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 126, "sprint": 504 }
+				"walk": { "base": 96, "sprint": 504 },
+				"swim": { "base": 480 }
 			},
 			"movementD": {
-				"walk": { "base": 60, "sprint": 240 }
+				"walk": { "base": 60, "sprint": 240 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -229,22 +312,38 @@
 		},
 		{
 			"name": "Bulbdog",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/LanternPug_Character_BP_Rare.LanternPug_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/LanternPug_Character_BP_Rare.LanternPug_Character_BP_Rare_C",
 			"dinoNameTag": "Pug",
 			"customTag": "LanternPug",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 95,
 			"dragWeight": 30,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 100, "sprint": 400 }
+				"walk": { "base": 85, "sprint": 400 },
+				"swim": { "base": 510 }
 			},
 			"movementD": {
-				"walk": { "base": 50, "sprint": 200 }
+				"walk": { "base": 50, "sprint": 200 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -254,7 +353,7 @@
 		},
 		{
 			"name": "Roll Rat",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/MoleRat_Character_BP_Rare.MoleRat_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/MoleRat_Character_BP_Rare.MoleRat_Character_BP_Rare_C",
 			"dinoNameTag": "MoleRat",
 			"customTag": "MoleRat",
 			"targetingTeamName": "Herbivores",
@@ -267,6 +366,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1125,
+				"costLevel": 55,
+				"timeBase": 7875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -278,6 +387,10 @@
 			"movementD": {
 				"walk": { "base": 250, "sprint": 750 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -291,7 +404,7 @@
 		},
 		{
 			"name": "Rock Drake",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/RockDrake_Character_BP_Rare.RockDrake_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/RockDrake_Character_BP_Rare.RockDrake_Character_BP_Rare_C",
 			"dinoNameTag": "RockDrake",
 			"customTag": "RockDrake",
 			"targetingTeamName": "Carnivores_High",
@@ -306,17 +419,31 @@
 				"isCarnivore",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 520, "sprint": 1820 },
-				"swim": { "base": 480 }
+				"walk": { "base": 650, "sprint": 1820 },
+				"swim": { "base": 600, "sprint": 840 }
 			},
 			"movementD": {
-				"walk": { "base": 585, "sprint": 2047.5 },
-				"swim": { "base": 540 }
+				"walk": { "base": 650, "sprint": 2047.5 },
+				"swim": { "base": 600, "sprint": 945 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -333,13 +460,23 @@
 		},
 		{
 			"name": "Aberrant Achatina",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Achatina_Character_BP_Aberrant_Rare.Achatina_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Achatina_Character_BP_Aberrant_Rare.Achatina_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Achatina",
 			"customTag": "Achatina",
 			"targetingTeamName": "Herbivore_Small",
 			"mass": 50,
 			"dragWeight": 50,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1725,
+				"costLevel": 55,
+				"timeBase": 12075,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -350,6 +487,7 @@
 			"movementD": {
 				"walk": { "base": 50 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
@@ -358,7 +496,7 @@
 		},
 		{
 			"name": "Aberrant Anglerfish",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Angler_Character_BP_Aberrant_Rare.Angler_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Angler_Character_BP_Aberrant_Rare.Angler_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Angler",
 			"customTag": "Angler",
 			"targetingTeamName": "Carnivore_Water",
@@ -372,15 +510,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 425,
+				"costLevel": 55,
+				"timeBase": 2975,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 204.6 }
+				"walk": { "base": 400, "sprint": 570.4 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 660 }
+				"walk": { "base": 800, "sprint": 1840 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -8,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 30,
@@ -390,7 +544,7 @@
 		},
 		{
 			"name": "Aberrant Ankylosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Ankylo_Character_BP_Aberrant_Rare.Ankylo_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Ankylo_Character_BP_Aberrant_Rare.Ankylo_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Anky",
 			"customTag": "Anky",
 			"targetingTeamName": "Herbivores",
@@ -403,15 +557,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 264 }
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 120, "sprint": 264 }
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -425,7 +595,7 @@
 		},
 		{
 			"name": "Aberrant Arthropluera",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Arthro_Character_BP_Aberrant_Rare.Arthro_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Arthro_Character_BP_Aberrant_Rare.Arthro_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Arthro",
 			"customTag": "Arthro",
 			"targetingTeamName": "Carnivores_Medium",
@@ -438,17 +608,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 500,
+				"costLevel": 55,
+				"timeBase": 3500,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 180, "sprint": 486 },
-				"swim": { "base": 320 }
+				"walk": { "base": 225, "sprint": 486 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 146.2, "sprint": 394.9 },
-				"swim": { "base": 260 }
+				"walk": { "base": 225, "sprint": 394.9 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 18,
@@ -464,7 +648,7 @@
 		},
 		{
 			"name": "Aberrant Baryonyx",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Baryonyx_Character_BP_Aberrant_Rare.Baryonyx_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Baryonyx_Character_BP_Aberrant_Rare.Baryonyx_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Baryonyx",
 			"customTag": "Baryonyx",
 			"targetingTeamName": "Carnivores_Medium",
@@ -479,18 +663,27 @@
 				"isAmphibious",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 1470 },
-				"swim": { "base": 450 }
+				"walk": { "base": 400, "sprint": 1470 }
 			},
 			"movementD": {
-				"walk": { "base": 360, "sprint": 1323 },
-				"swim": { "base": 405 }
+				"walk": { "base": 400, "sprint": 1323 }
 			},
+			"staminaRates": { "sprint": -6 },
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 200,
@@ -503,7 +696,7 @@
 		},
 		{
 			"name": "Aberrant Gigantopithecus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Bigfoot_Character_BP_Aberrant_Rare.Bigfoot_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Bigfoot_Character_BP_Aberrant_Rare.Bigfoot_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Bigfoot",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -517,6 +710,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -528,6 +731,10 @@
 			"movementD": {
 				"walk": { "base": 292.5, "sprint": 1023.8 },
 				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -544,24 +751,32 @@
 		},
 		{
 			"name": "Aberrant Titanoboa",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/BoaFrill_Character_BP_Aberrant_Rare.BoaFrill_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/BoaFrill_Character_BP_Aberrant_Rare.BoaFrill_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Titanboa",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 100,
 			"dragWeight": 110,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 135, "sprint": 378 },
-				"swim": { "base": 240 }
+				"walk": { "base": 225, "sprint": 378 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
 				"walk": { "base": 225, "sprint": 630 },
 				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 30,
@@ -571,7 +786,7 @@
 		},
 		{
 			"name": "Aberrant Carnotaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Carno_Character_BP_Aberrant_Rare.Carno_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Carno_Character_BP_Aberrant_Rare.Carno_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Carno",
 			"customTag": "Carno",
 			"targetingTeamName": "Carnivores_Medium",
@@ -584,15 +799,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 318.8, "sprint": 892.5 }
+				"walk": { "base": 425, "sprint": 892.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 425, "sprint": 1190 }
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -605,7 +836,7 @@
 		},
 		{
 			"name": "Aberrant Dimetrodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Dimetro_Character_BP_Aberrant_Rare.Dimetro_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Dimetro_Character_BP_Aberrant_Rare.Dimetro_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Dimetro",
 			"customTag": "Dimetro",
 			"targetingTeamName": "Carnivores_Medium",
@@ -619,15 +850,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 200,
+				"costLevel": 27.5,
+				"timeBase": 1400,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 110, "sprint": 253 }
+				"walk": { "base": 110, "sprint": 253 },
+				"swim": { "base": 250 }
 			},
 			"movementD": {
-				"walk": { "base": 110, "sprint": 253 }
+				"walk": { "base": 110, "sprint": 253 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -637,26 +884,40 @@
 		},
 		{
 			"name": "Aberrant Dimorphodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Dimorph_Character_BP_Aberrant_Rare.Dimorph_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Dimorph_Character_BP_Aberrant_Rare.Dimorph_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Dimorph",
 			"customTag": "Dimorph",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 70,
 			"dragWeight": 70,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isFlyerDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 23,
@@ -666,7 +927,7 @@
 		},
 		{
 			"name": "Aberrant Diplocaulus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Diplocaulus_Character_BP_Aberrant_Rare.Diplocaulus_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Diplocaulus_Character_BP_Aberrant_Rare.Diplocaulus_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Diplocaulus",
 			"customTag": "Diplocaulus",
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
@@ -679,15 +940,31 @@
 				"isAmphibious",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1000,
+				"costLevel": 55,
+				"timeBase": 7000,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 140, "sprint": 357 }
+				"walk": { "base": 70, "sprint": 357 },
+				"swim": { "base": 267, "sprint": 980.4 }
 			},
 			"movementD": {
-				"walk": { "base": 140, "sprint": 357 }
+				"walk": { "base": 122.5, "sprint": 357 },
+				"swim": { "base": 467.2, "sprint": 980.4 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -697,7 +974,7 @@
 		},
 		{
 			"name": "Aberrant Diplodocus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Diplodocus_Character_BP_Aberrant_Rare.Diplodocus_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Diplodocus_Character_BP_Aberrant_Rare.Diplodocus_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Diplo",
 			"customTag": "Diplo",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -711,15 +988,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1350 }
+				"walk": { "base": 300, "sprint": 1350 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1350 }
+				"walk": { "base": 300, "sprint": 1350 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -729,7 +1022,7 @@
 		},
 		{
 			"name": "Aberrant Dire Bear",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Direbear_Character_BP_Aberrant_Rare.Direbear_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Direbear_Character_BP_Aberrant_Rare.Direbear_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Direbear",
 			"customTag": "Direbear",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -743,15 +1036,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 192.4, "sprint": 961.9 }
+				"walk": { "base": 142.5, "sprint": 961.9 },
+				"swim": { "base": 270 }
 			},
 			"movementD": {
-				"walk": { "base": 229.9, "sprint": 1149.5 }
+				"walk": { "base": 104.5, "sprint": 1149.5 },
+				"swim": { "base": 198 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 55,
@@ -765,13 +1074,23 @@
 		},
 		{
 			"name": "Aberrant Dodo",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Dodo_Character_BP_Aberrant_Rare.Dodo_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Dodo_Character_BP_Aberrant_Rare.Dodo_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Dodo",
 			"customTag": "Dodo",
 			"targetingTeamName": "Herbivores",
 			"mass": 50,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -784,6 +1103,10 @@
 				"walk": { "base": 45.5, "sprint": 95.5 },
 				"swim": { "base": 210 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 5,
 				"defaultSwingRadius": 90,
@@ -792,7 +1115,7 @@
 		},
 		{
 			"name": "Aberrant Doedicurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Doed_Character_BP_Aberrant_Rare.Doed_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Doed_Character_BP_Aberrant_Rare.Doed_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Doed",
 			"customTag": "Doed",
 			"targetingTeamName": "Herbivores",
@@ -805,15 +1128,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2075,
+				"costLevel": 55,
+				"timeBase": 14525,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 86, "sprint": 258 }
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 86, "sprint": 258 }
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -827,7 +1166,7 @@
 		},
 		{
 			"name": "Aberrant Dung Beetle",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/DungBeetle_Character_BP_Aberrant_Rare.DungBeetle_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/DungBeetle_Character_BP_Aberrant_Rare.DungBeetle_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Beetle",
 			"customTag": "Beetle",
 			"targetingTeamName": "Carnivores_Medium",
@@ -840,15 +1179,31 @@
 				"canMountOnHumans",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2250,
+				"costLevel": 27.5,
+				"timeBase": 15750,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 52, "sprint": 260 }
+				"walk": { "base": 52, "sprint": 260 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 52, "sprint": 260 }
+				"walk": { "base": 52, "sprint": 260 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -858,22 +1213,38 @@
 		},
 		{
 			"name": "Aberrant Electrophorus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Eel_Character_BP_Aberrant_Rare.Eel_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Eel_Character_BP_Aberrant_Rare.Eel_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Eel",
 			"customTag": "Eel",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 300,
 			"dragWeight": 250,
 			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 325,
+				"costLevel": 55,
+				"timeBase": 2275,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 330 }
+				"walk": { "base": 400, "sprint": 920 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 660 }
+				"walk": { "base": 800, "sprint": 1840 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 35,
@@ -888,7 +1259,7 @@
 		},
 		{
 			"name": "Aberrant Equus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Equus_Character_BP_Aberrant_Rare.Equus_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Equus_Character_BP_Aberrant_Rare.Equus_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Equus",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -901,17 +1272,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 351, "sprint": 1158.3 },
-				"swim": { "base": 468 }
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"swim": { "base": 390 }
 			},
 			"movementD": {
 				"walk": { "base": 292.5, "sprint": 965.2 },
 				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 8,
@@ -926,7 +1311,7 @@
 		},
 		{
 			"name": "Aberrant Iguanodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Iguanodon_Character_BP_Aberrant_Rare.Iguanodon_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Iguanodon_Character_BP_Aberrant_Rare.Iguanodon_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Iguanodon",
 			"customTag": "Iguanodon",
 			"targetingTeamName": "Herbivores",
@@ -939,6 +1324,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -950,6 +1345,10 @@
 			"movementD": {
 				"walk": { "base": 287.5, "sprint": 1437.5 },
 				"swim": { "base": 517.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 12,
@@ -964,13 +1363,23 @@
 		},
 		{
 			"name": "Aberrant Lystrosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Lystro_Character_BP_Aberrant_Rare.Lystro_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Lystro_Character_BP_Aberrant_Rare.Lystro_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Lystro",
 			"customTag": "Lystro",
 			"targetingTeamName": "Herbivores",
 			"mass": 50,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 825,
+				"costLevel": 27.5,
+				"timeBase": 5775,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -983,6 +1392,10 @@
 				"walk": { "base": 42, "sprint": 88.2 },
 				"swim": { "base": 84 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 6,
 				"defaultSwingRadius": 105,
@@ -991,7 +1404,7 @@
 		},
 		{
 			"name": "Aberrant Manta",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Manta_Character_BP_Aberrant_Rare.Manta_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Manta_Character_BP_Aberrant_Rare.Manta_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Manta",
 			"customTag": "Manta",
 			"targetingTeamName": "Carnivore_Water",
@@ -1004,15 +1417,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 525,
+				"costLevel": 55,
+				"timeBase": 3675,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 390 }
+				"walk": { "base": 600, "sprint": 780 },
+				"swim": { "base": 600, "sprint": 780 }
 			},
 			"movementD": {
-				"swim": { "base": 1350 }
+				"walk": { "base": 1350, "sprint": 2700 },
+				"swim": { "base": 1350, "sprint": 2700 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 28,
@@ -1022,7 +1451,7 @@
 		},
 		{
 			"name": "Aberrant Megalania",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Megalania_Character_BP_Aberrant_Rare.Megalania_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Megalania_Character_BP_Aberrant_Rare.Megalania_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Megalania",
 			"customTag": "Megalania",
 			"targetingTeamName": "",
@@ -1035,15 +1464,31 @@
 				"canBeTorpid",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2125,
+				"costLevel": 55,
+				"timeBase": 14875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 312.5, "sprint": 625 }
+				"walk": { "base": 250, "sprint": 625 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 250, "sprint": 500 }
+				"walk": { "base": 312.5, "sprint": 500 },
+				"swim": { "base": 375 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -1059,7 +1504,7 @@
 		},
 		{
 			"name": "Aberrant Megalosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Megalosaurus_Character_BP_Aberrant_Rare.Megalosaurus_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Megalosaurus_Character_BP_Aberrant_Rare.Megalosaurus_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Megalosaurus",
 			"customTag": "Megalosaurus",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1072,15 +1517,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 850,
+				"costLevel": 55,
+				"timeBase": 5950,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 390, "sprint": 1092 }
+				"walk": { "base": 270, "sprint": 1092 },
+				"swim": { "base": 135 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 1260 }
+				"walk": { "base": 480, "sprint": 1260 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -1100,7 +1561,7 @@
 		},
 		{
 			"name": "Aberrant Moschops",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Moschops_Character_BP_Aberrant_Rare.Moschops_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Moschops_Character_BP_Aberrant_Rare.Moschops_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Moschops",
 			"customTag": "Moschops",
 			"targetingTeamName": "Herbivores",
@@ -1113,15 +1574,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 115, "sprint": 517.5 }
+				"walk": { "base": 115, "sprint": 517.5 },
+				"swim": { "base": 220 }
 			},
 			"movementD": {
-				"walk": { "base": 115, "sprint": 517.5 }
+				"walk": { "base": 115, "sprint": 517.5 },
+				"swim": { "base": 220 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 25,
@@ -1135,7 +1612,7 @@
 		},
 		{
 			"name": "Aberrant Otter",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Otter_Character_BP_Aberrant_Rare.Otter_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Otter_Character_BP_Aberrant_Rare.Otter_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Otter",
 			"customTag": "Otter",
 			"targetingTeamName": "Carnivores_Low",
@@ -1149,15 +1626,31 @@
 				"isAmphibious",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 229.5, "sprint": 344.3 }
+				"walk": { "base": 229.5, "sprint": 344.3 },
+				"swim": { "base": 337.5 }
 			},
 			"movementD": {
-				"walk": { "base": 170, "sprint": 255 }
+				"walk": { "base": 170, "sprint": 255 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 28,
@@ -1170,7 +1663,7 @@
 		},
 		{
 			"name": "Aberrant Parasaur",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Para_Character_BP_Aberrant_Rare.Para_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Para_Character_BP_Aberrant_Rare.Para_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Para",
 			"customTag": "Parasaur",
 			"targetingTeamName": "Herbivores",
@@ -1183,15 +1676,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 350,
+				"costLevel": 38.5,
+				"timeBase": 2450,
+				"timeLevel": 269.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 916.5 }
+				"walk": { "base": 200, "sprint": 916.5 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 458.3 }
+				"walk": { "base": 150, "sprint": 458.3 },
+				"swim": { "base": 337.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 12,
@@ -1205,7 +1714,7 @@
 		},
 		{
 			"name": "Aberrant Paraceratherium",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Paracer_Character_BP_Aberrant_Rare.Paracer_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Paracer_Character_BP_Aberrant_Rare.Paracer_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Paracer",
 			"customTag": "Paracer",
 			"targetingTeamName": "Herbivores_Large",
@@ -1219,15 +1728,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 260, "sprint": 715 }
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 260, "sprint": 715 }
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -12,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -1237,7 +1762,7 @@
 		},
 		{
 			"name": "Aberrant Purlovia",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Purlovia_Character_BP_Aberrant_Rare.Purlovia_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Purlovia_Character_BP_Aberrant_Rare.Purlovia_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Purlovia",
 			"customTag": "Purlovia",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1250,6 +1775,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1261,6 +1796,10 @@
 			"movementD": {
 				"walk": { "base": 230, "sprint": 1035 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 36,
@@ -1275,7 +1814,7 @@
 		},
 		{
 			"name": "Aberrant Raptor",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Raptor_Character_BP_Aberrant_Rare.Raptor_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Raptor_Character_BP_Aberrant_Rare.Raptor_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Raptor",
 			"customTag": "Raptor",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1289,17 +1828,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 432, "sprint": 993.6 },
-				"swim": { "base": 270 }
+				"walk": { "base": 480, "sprint": 993.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 480, "sprint": 1104 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1314,7 +1867,7 @@
 		},
 		{
 			"name": "Aberrant Sarco",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Sarco_Character_BP_Aberrant_Rare.Sarco_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Sarco_Character_BP_Aberrant_Rare.Sarco_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Sarco",
 			"customTag": "Sarco",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1330,15 +1883,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 550,
+				"costLevel": 55,
+				"timeBase": 3850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 437.4 }
+				"walk": { "base": 150, "sprint": 437.4 },
+				"swim": { "base": 750, "sprint": 1093.5 }
 			},
 			"movementD": {
-				"walk": { "base": 165, "sprint": 601.4 }
+				"walk": { "base": 165, "sprint": 601.4 },
+				"swim": { "base": 825, "sprint": 1503.6 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 35,
@@ -1354,7 +1923,7 @@
 		},
 		{
 			"name": "Aberrant Pulmonoscorpius",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Scorpion_Character_BP_Aberrant_Rare.Scorpion_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Scorpion_Character_BP_Aberrant_Rare.Scorpion_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Scorpion",
 			"customTag": "Scorpion",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1368,15 +1937,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 420 }
+				"walk": { "base": 300, "sprint": 420 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 420 }
+				"walk": { "base": 300, "sprint": 420 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -1386,7 +1971,7 @@
 		},
 		{
 			"name": "Aberrant Ovis",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Sheep_Character_BP_Aberrant_Rare.Sheep_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Sheep_Character_BP_Aberrant_Rare.Sheep_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Sheep",
 			"customTag": "Sheep",
 			"targetingTeamName": "Herbivores",
@@ -1399,17 +1984,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 100, "sprint": 520 },
-				"swim": { "base": 300 }
+				"walk": { "base": 70, "sprint": 520 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
-				"walk": { "base": 90, "sprint": 468 },
-				"swim": { "base": 270 }
+				"walk": { "base": 120, "sprint": 468 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 12,
@@ -1419,7 +2018,7 @@
 		},
 		{
 			"name": "Aberrant Araneo",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/SpiderS_Character_BP_Aberrant_Rare.SpiderS_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/SpiderS_Character_BP_Aberrant_Rare.SpiderS_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Spider",
 			"customTag": "Spider",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1432,15 +2031,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 100,
+				"costLevel": 55,
+				"timeBase": 700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 160, "sprint": 320 }
+				"walk": { "base": 160, "sprint": 320 },
+				"swim": { "base": 160 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -1456,7 +2071,7 @@
 		},
 		{
 			"name": "Aberrant Spino",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Spino_Character_BP_Aberrant_Rare.Spino_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Spino_Character_BP_Aberrant_Rare.Spino_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Spino",
 			"customTag": "Spino",
 			"targetingTeamName": "Carnivores_High",
@@ -1472,15 +2087,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 452, "sprint": 1717.6 }
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 452, "sprint": 1717.6 }
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -1496,7 +2127,7 @@
 		},
 		{
 			"name": "Aberrant Stegosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Stego_Character_BP_Aberrant_Rare.Stego_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Stego_Character_BP_Aberrant_Rare.Stego_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Stego",
 			"customTag": "Stego",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1510,15 +2141,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 725,
+				"costLevel": 55,
+				"timeBase": 5075,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 221, "sprint": 607.7 }
+				"walk": { "base": 170, "sprint": 607.7 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 76.5, "sprint": 210.4 }
+				"walk": { "base": 76.5, "sprint": 210.4 },
+				"swim": { "base": 135 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -1528,7 +2175,7 @@
 		},
 		{
 			"name": "Aberrant Beelzebufo",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Toad_Character_BP_Aberrant_Rare.Toad_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Toad_Character_BP_Aberrant_Rare.Toad_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Toad",
 			"customTag": "Toad",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1542,6 +2189,16 @@
 				"canDrag",
 				"isAmphibious"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1425,
+				"costLevel": 55,
+				"timeBase": 9975,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 66,
 				"maxSpeed": 1770
@@ -1554,6 +2211,10 @@
 				"walk": { "base": 340, "sprint": 680 },
 				"swim": { "base": 595 }
 			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 144,
@@ -1565,7 +2226,7 @@
 		},
 		{
 			"name": "Aberrant Triceratops",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Trike_Character_BP_Aberrant_Rare.Trike_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Trike_Character_BP_Aberrant_Rare.Trike_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Trike",
 			"customTag": "Trike",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1579,15 +2240,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 202.5, "sprint": 607.5 }
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 94.5, "sprint": 283.5 }
+				"walk": { "base": 94.5, "sprint": 283.5 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -1600,7 +2277,7 @@
 		},
 		{
 			"name": "Aberrant Carbonemys",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Turtle_Character_BP_Aberrant_Rare.Turtle_Character_BP_Aberrant_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ab/Variants/Turtle_Character_BP_Aberrant_Rare.Turtle_Character_BP_Aberrant_Rare_C",
 			"dinoNameTag": "Turtle",
 			"customTag": "Turtle",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1614,15 +2291,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1600,
+				"costLevel": 55,
+				"timeBase": 11200,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 100, "sprint": 220 }
+				"walk": { "base": 100, "sprint": 220 },
+				"swim": { "base": 265 }
 			},
 			"movementD": {
-				"walk": { "base": 100, "sprint": 220 }
+				"walk": { "base": 100, "sprint": 220 },
+				"swim": { "base": 265 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 13,
@@ -1632,13 +2325,23 @@
 		},
 		{
 			"name": "Achatina",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Achatina_Character_BP_Rare.Achatina_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Achatina_Character_BP_Rare.Achatina_Character_BP_Rare_C",
 			"dinoNameTag": "Achatina",
 			"customTag": "Achatina",
 			"targetingTeamName": "Herbivore_Small",
 			"mass": 50,
 			"dragWeight": 50,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1725,
+				"costLevel": 55,
+				"timeBase": 12075,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1649,6 +2352,7 @@
 			"movementD": {
 				"walk": { "base": 50 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
@@ -1657,7 +2361,7 @@
 		},
 		{
 			"name": "Allosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Allo_Character_BP_Rare.Allo_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Allo_Character_BP_Rare.Allo_Character_BP_Rare_C",
 			"dinoNameTag": "Allo",
 			"customTag": "Allo",
 			"targetingTeamName": "Carnivores_High",
@@ -1670,16 +2374,27 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1325,
+				"costLevel": 55,
+				"timeBase": 9275,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 520, "sprint": 1404 }
+				"walk": { "base": 650, "sprint": 1404 }
 			},
 			"movementD": {
-				"walk": { "base": 585, "sprint": 1579.5 }
+				"walk": { "base": 650, "sprint": 1579.5 }
 			},
+			"staminaRates": { "sprint": -22 },
 			"attack": {
 				"defaultDmg": 35,
 				"defaultSwingRadius": 275,
@@ -1693,7 +2408,7 @@
 		},
 		{
 			"name": "Anglerfish",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Angler_Character_BP_Rare.Angler_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Angler_Character_BP_Rare.Angler_Character_BP_Rare_C",
 			"dinoNameTag": "Angler",
 			"customTag": "Angler",
 			"targetingTeamName": "Carnivore_Water",
@@ -1707,15 +2422,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 425,
+				"costLevel": 55,
+				"timeBase": 2975,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 204.6 }
+				"walk": { "base": 400, "sprint": 570.4 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 660 }
+				"walk": { "base": 800, "sprint": 1840 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -8,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 30,
@@ -1725,7 +2456,7 @@
 		},
 		{
 			"name": "Ankylosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ankylo_Character_BP_Rare.Ankylo_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ankylo_Character_BP_Rare.Ankylo_Character_BP_Rare_C",
 			"dinoNameTag": "Anky",
 			"customTag": "Anky",
 			"targetingTeamName": "Herbivores",
@@ -1738,15 +2469,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 264 }
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 120, "sprint": 264 }
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -1760,13 +2507,23 @@
 		},
 		{
 			"name": "Archaeopteryx",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Archa_Character_BP_Rare.Archa_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Archa_Character_BP_Rare.Archa_Character_BP_Rare_C",
 			"dinoNameTag": "Archa",
 			"customTag": "Archa",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 50,
 			"dragWeight": 50,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 325,
+				"costLevel": 38.5,
+				"timeBase": 2275,
+				"timeLevel": 269.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1779,6 +2536,10 @@
 				"walk": { "base": 105, "sprint": 411.6 },
 				"swim": { "base": 210 }
 			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 5,
 				"defaultSwingRadius": 90,
@@ -1787,7 +2548,7 @@
 		},
 		{
 			"name": "Argentavis",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Argent_Character_BP_Rare.Argent_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Argent_Character_BP_Rare.Argent_Character_BP_Rare_C",
 			"dinoNameTag": "Argent",
 			"customTag": "Argent",
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
@@ -1801,19 +2562,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 140.1, "sprint": 315.3 },
-				"fly": { "base": 323.3 },
-				"swim": { "base": 161.7 }
+				"walk": { "base": 260, "sprint": 315.3 },
+				"fly": { "base": 600, "sprint": 727.5 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
 				"walk": { "base": 260, "sprint": 585 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
+				"fly": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 25,
@@ -1827,7 +2602,7 @@
 		},
 		{
 			"name": "Arthropluera",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Arthro_Character_BP_Rare.Arthro_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Arthro_Character_BP_Rare.Arthro_Character_BP_Rare_C",
 			"dinoNameTag": "Arthro",
 			"customTag": "Arthro",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1840,17 +2615,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 500,
+				"costLevel": 55,
+				"timeBase": 3500,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 180, "sprint": 486 },
-				"swim": { "base": 320 }
+				"walk": { "base": 225, "sprint": 486 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 146.2, "sprint": 394.9 },
-				"swim": { "base": 260 }
+				"walk": { "base": 225, "sprint": 394.9 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 18,
@@ -1866,7 +2655,7 @@
 		},
 		{
 			"name": "Baryonyx",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Baryonyx_Character_BP_Rare.Baryonyx_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Baryonyx_Character_BP_Rare.Baryonyx_Character_BP_Rare_C",
 			"dinoNameTag": "Baryonyx",
 			"customTag": "Baryonyx",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1881,18 +2670,27 @@
 				"isAmphibious",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 1470 },
-				"swim": { "base": 450 }
+				"walk": { "base": 400, "sprint": 1470 }
 			},
 			"movementD": {
-				"walk": { "base": 360, "sprint": 1323 },
-				"swim": { "base": 405 }
+				"walk": { "base": 400, "sprint": 1323 }
 			},
+			"staminaRates": { "sprint": -6 },
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 200,
@@ -1905,7 +2703,7 @@
 		},
 		{
 			"name": "Basilosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Basilosaurus_Character_BP_Rare.Basilosaurus_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Basilosaurus_Character_BP_Rare.Basilosaurus_Character_BP_Rare_C",
 			"dinoNameTag": "Basilosaurus",
 			"customTag": "Basilosaurus",
 			"targetingTeamName": "Carnivore_Water",
@@ -1919,15 +2717,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1875,
+				"costLevel": 55,
+				"timeBase": 13125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 210 }
+				"walk": { "base": 300, "sprint": 420 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
+				"walk": { "base": 675, "sprint": 1350 },
 				"swim": { "base": 675 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 100,
@@ -1940,26 +2754,40 @@
 		},
 		{
 			"name": "Onyc",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Bat_Character_BP_Rare.Bat_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Bat_Character_BP_Rare.Bat_Character_BP_Rare_C",
 			"dinoNameTag": "Bat",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,
 			"dragWeight": 35,
 			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isFlyerDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 50,
+				"costLevel": 55,
+				"timeBase": 350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 350, "sprint": 577.5 },
-				"fly": { "base": 350 },
-				"swim": { "base": 240 }
+				"fly": { "base": 350, "sprint": 577.5 },
+				"swim": { "base": 350 }
 			},
 			"movementD": {
 				"walk": { "base": 350, "sprint": 577.5 },
-				"fly": { "base": 350 },
-				"swim": { "base": 240 }
+				"fly": { "base": 350, "sprint": 577.5 },
+				"swim": { "base": 350 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 35,
@@ -1969,7 +2797,7 @@
 		},
 		{
 			"name": "Castoroides",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Beaver_Character_BP_Rare.Beaver_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Beaver_Character_BP_Rare.Beaver_Character_BP_Rare_C",
 			"dinoNameTag": "Beaver",
 			"customTag": "Beaver",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1983,15 +2811,31 @@
 				"canDrag",
 				"isAmphibious"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 208, "sprint": 561.6 }
+				"walk": { "base": 160, "sprint": 561.6 },
+				"swim": { "base": 700 }
 			},
 			"movementD": {
-				"walk": { "base": 160, "sprint": 432 }
+				"walk": { "base": 160, "sprint": 432 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 28,
@@ -2001,7 +2845,7 @@
 		},
 		{
 			"name": "Gigantopithecus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Bigfoot_Character_BP_Rare.Bigfoot_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Bigfoot_Character_BP_Rare.Bigfoot_Character_BP_Rare_C",
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Bigfoot",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -2015,6 +2859,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2026,6 +2880,10 @@
 			"movementD": {
 				"walk": { "base": 292.5, "sprint": 1023.8 },
 				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -2042,24 +2900,32 @@
 		},
 		{
 			"name": "Titanoboa",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/BoaFrill_Character_BP_Rare.BoaFrill_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/BoaFrill_Character_BP_Rare.BoaFrill_Character_BP_Rare_C",
 			"dinoNameTag": "Titanboa",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 100,
 			"dragWeight": 110,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 135, "sprint": 378 },
-				"swim": { "base": 240 }
+				"walk": { "base": 225, "sprint": 378 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
 				"walk": { "base": 225, "sprint": 630 },
 				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 30,
@@ -2069,7 +2935,7 @@
 		},
 		{
 			"name": "Carnotaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Carno_Character_BP_Rare.Carno_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Carno_Character_BP_Rare.Carno_Character_BP_Rare_C",
 			"dinoNameTag": "Carno",
 			"customTag": "Carno",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2082,15 +2948,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 318.8, "sprint": 892.5 }
+				"walk": { "base": 425, "sprint": 892.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 425, "sprint": 1190 }
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -2103,7 +2985,7 @@
 		},
 		{
 			"name": "Chalicotherium",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Chalico_Character_BP_Rare.Chalico_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Chalico_Character_BP_Rare.Chalico_Character_BP_Rare_C",
 			"dinoNameTag": "Chalico",
 			"customTag": "Chalico",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -2117,15 +2999,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 675,
+				"costLevel": 55,
+				"timeBase": 4725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 210, "sprint": 850.5 }
+				"walk": { "base": 210, "sprint": 850.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 210, "sprint": 850.5 }
+				"walk": { "base": 210, "sprint": 850.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 36,
@@ -2158,13 +3056,23 @@
 		},
 		{
 			"name": "Compy",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Compy_Character_BP_Rare.Compy_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Compy_Character_BP_Rare.Compy_Character_BP_Rare_C",
 			"dinoNameTag": "Compy",
 			"customTag": "Compy",
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
 			"mass": 50,
 			"dragWeight": 20,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 175,
+				"costLevel": 55,
+				"timeBase": 1225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2177,6 +3085,10 @@
 				"walk": { "base": 120, "sprint": 336 },
 				"swim": { "base": 200 }
 			},
+			"staminaRates": {
+				"sprint": 5,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 4,
 				"defaultSwingRadius": 90,
@@ -2188,7 +3100,7 @@
 		},
 		{
 			"name": "Daeodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Daeodon_Character_BP_Rare.Daeodon_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Daeodon_Character_BP_Rare.Daeodon_Character_BP_Rare_C",
 			"dinoNameTag": "Daeodon",
 			"customTag": "Daeodon",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2202,6 +3114,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2213,6 +3135,10 @@
 			"movementD": {
 				"walk": { "base": 160, "sprint": 848 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 29,
@@ -2228,13 +3154,23 @@
 		},
 		{
 			"name": "Dilophosaur",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Dilo_Character_BP_Rare.Dilo_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Dilo_Character_BP_Rare.Dilo_Character_BP_Rare_C",
 			"dinoNameTag": "Dilo",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 70,
 			"dragWeight": 35,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 300,
+				"costLevel": 27.5,
+				"timeBase": 2100,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2246,6 +3182,10 @@
 			"movementD": {
 				"walk": { "base": 66, "sprint": 198 },
 				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -2261,7 +3201,7 @@
 		},
 		{
 			"name": "Dimetrodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Dimetro_Character_BP_Rare.Dimetro_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Dimetro_Character_BP_Rare.Dimetro_Character_BP_Rare_C",
 			"dinoNameTag": "Dimetro",
 			"customTag": "Dimetro",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2275,15 +3215,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 200,
+				"costLevel": 27.5,
+				"timeBase": 1400,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 110, "sprint": 253 }
+				"walk": { "base": 110, "sprint": 253 },
+				"swim": { "base": 250 }
 			},
 			"movementD": {
-				"walk": { "base": 110, "sprint": 253 }
+				"walk": { "base": 110, "sprint": 253 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -2293,26 +3249,40 @@
 		},
 		{
 			"name": "Dimorphodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Dimorph_Character_BP_Rare.Dimorph_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Dimorph_Character_BP_Rare.Dimorph_Character_BP_Rare_C",
 			"dinoNameTag": "Dimorph",
 			"customTag": "Dimorph",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 70,
 			"dragWeight": 70,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isFlyerDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 23,
@@ -2322,7 +3292,7 @@
 		},
 		{
 			"name": "Diplocaulus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Diplocaulus_Character_BP_Rare.Diplocaulus_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Diplocaulus_Character_BP_Rare.Diplocaulus_Character_BP_Rare_C",
 			"dinoNameTag": "Diplocaulus",
 			"customTag": "Diplocaulus",
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
@@ -2335,15 +3305,31 @@
 				"isAmphibious",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1000,
+				"costLevel": 55,
+				"timeBase": 7000,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 140, "sprint": 357 }
+				"walk": { "base": 70, "sprint": 357 },
+				"swim": { "base": 267, "sprint": 980.4 }
 			},
 			"movementD": {
-				"walk": { "base": 140, "sprint": 357 }
+				"walk": { "base": 122.5, "sprint": 357 },
+				"swim": { "base": 467.2, "sprint": 980.4 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -2353,7 +3339,7 @@
 		},
 		{
 			"name": "Diplodocus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Diplodocus_Character_BP_Rare.Diplodocus_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Diplodocus_Character_BP_Rare.Diplodocus_Character_BP_Rare_C",
 			"dinoNameTag": "Diplo",
 			"customTag": "Diplo",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -2367,15 +3353,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1350 }
+				"walk": { "base": 300, "sprint": 1350 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1350 }
+				"walk": { "base": 300, "sprint": 1350 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -2385,7 +3387,7 @@
 		},
 		{
 			"name": "Dire Bear",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Direbear_Character_BP_Rare.Direbear_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Direbear_Character_BP_Rare.Direbear_Character_BP_Rare_C",
 			"dinoNameTag": "Direbear",
 			"customTag": "Direbear",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -2399,15 +3401,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 192.4, "sprint": 961.9 }
+				"walk": { "base": 142.5, "sprint": 961.9 },
+				"swim": { "base": 270 }
 			},
 			"movementD": {
-				"walk": { "base": 229.9, "sprint": 1149.5 }
+				"walk": { "base": 104.5, "sprint": 1149.5 },
+				"swim": { "base": 198 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 55,
@@ -2421,7 +3439,7 @@
 		},
 		{
 			"name": "Direwolf",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Direwolf_Character_BP_Rare.Direwolf_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Direwolf_Character_BP_Rare.Direwolf_Character_BP_Rare_C",
 			"dinoNameTag": "Direwolf",
 			"customTag": "Direwolf",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2435,6 +3453,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2446,6 +3474,10 @@
 			"movementD": {
 				"walk": { "base": 223.2, "sprint": 1017.8 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -2459,13 +3491,23 @@
 		},
 		{
 			"name": "Dodo",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Dodo_Character_BP_Rare.Dodo_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Dodo_Character_BP_Rare.Dodo_Character_BP_Rare_C",
 			"dinoNameTag": "Dodo",
 			"customTag": "Dodo",
 			"targetingTeamName": "Herbivores",
 			"mass": 50,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2478,6 +3520,10 @@
 				"walk": { "base": 45.5, "sprint": 95.5 },
 				"swim": { "base": 210 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 5,
 				"defaultSwingRadius": 90,
@@ -2486,7 +3532,7 @@
 		},
 		{
 			"name": "Doedicurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Doed_Character_BP_Rare.Doed_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Doed_Character_BP_Rare.Doed_Character_BP_Rare_C",
 			"dinoNameTag": "Doed",
 			"customTag": "Doed",
 			"targetingTeamName": "Herbivores",
@@ -2499,15 +3545,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2075,
+				"costLevel": 55,
+				"timeBase": 14525,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 86, "sprint": 258 }
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 86, "sprint": 258 }
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -2521,7 +3583,7 @@
 		},
 		{
 			"name": "Ichthyosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Dolphin_Character_BP_Rare.Dolphin_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Dolphin_Character_BP_Rare.Dolphin_Character_BP_Rare_C",
 			"dinoNameTag": "Dolphin",
 			"customTag": "Dolphin",
 			"targetingTeamName": "Carnivore_Water",
@@ -2535,15 +3597,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 360 }
+				"walk": { "base": 600, "sprint": 720 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"swim": { "base": 1188 }
+				"walk": { "base": 1350, "sprint": 2376 },
+				"swim": { "base": 1350 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -2553,7 +3631,7 @@
 		},
 		{
 			"name": "Dung Beetle",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/DungBeetle_Character_BP_Rare.DungBeetle_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/DungBeetle_Character_BP_Rare.DungBeetle_Character_BP_Rare_C",
 			"dinoNameTag": "Beetle",
 			"customTag": "Beetle",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2566,15 +3644,31 @@
 				"canMountOnHumans",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2250,
+				"costLevel": 27.5,
+				"timeBase": 15750,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 52, "sprint": 260 }
+				"walk": { "base": 52, "sprint": 260 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 52, "sprint": 260 }
+				"walk": { "base": 52, "sprint": 260 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -2584,7 +3678,7 @@
 		},
 		{
 			"name": "Dunkleosteus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Dunkle_Character_BP_Rare.Dunkle_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Dunkle_Character_BP_Rare.Dunkle_Character_BP_Rare_C",
 			"dinoNameTag": "Dunkle",
 			"customTag": "Dunkle",
 			"targetingTeamName": "Carnivore_Water",
@@ -2598,15 +3692,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1075,
+				"costLevel": 55,
+				"timeBase": 7525,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 455, "sprint": 773.5 },
 				"swim": { "base": 455 }
 			},
 			"movementD": {
+				"walk": { "base": 594.8, "sprint": 1011.1 },
 				"swim": { "base": 594.8 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -2616,22 +3726,38 @@
 		},
 		{
 			"name": "Electrophorus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Eel_Character_BP_Rare.Eel_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Eel_Character_BP_Rare.Eel_Character_BP_Rare_C",
 			"dinoNameTag": "Eel",
 			"customTag": "Eel",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 300,
 			"dragWeight": 250,
 			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 325,
+				"costLevel": 55,
+				"timeBase": 2275,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 330 }
+				"walk": { "base": 400, "sprint": 920 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 660 }
+				"walk": { "base": 800, "sprint": 1840 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 35,
@@ -2646,7 +3772,7 @@
 		},
 		{
 			"name": "Equus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Equus_Character_BP_Rare.Equus_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Equus_Character_BP_Rare.Equus_Character_BP_Rare_C",
 			"dinoNameTag": "Equus",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -2659,17 +3785,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 351, "sprint": 1158.3 },
-				"swim": { "base": 468 }
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"swim": { "base": 390 }
 			},
 			"movementD": {
 				"walk": { "base": 292.5, "sprint": 965.2 },
 				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 8,
@@ -2684,7 +3824,7 @@
 		},
 		{
 			"name": "Unicorn",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Equus_Character_BP_Unicorn_Rare.Equus_Character_BP_Unicorn_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Equus_Character_BP_Unicorn_Rare.Equus_Character_BP_Unicorn_Rare_C",
 			"dinoNameTag": "Equus",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -2697,17 +3837,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 351, "sprint": 1158.3 },
-				"swim": { "base": 468 }
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"swim": { "base": 390 }
 			},
 			"movementD": {
 				"walk": { "base": 292.5, "sprint": 965.2 },
 				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 8,
@@ -2722,22 +3876,38 @@
 		},
 		{
 			"name": "Gacha",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/Gacha_Character_BP_Rare.Gacha_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/Gacha_Character_BP_Rare.Gacha_Character_BP_Rare_C",
 			"dinoNameTag": "Gacha",
 			"customTag": "Gacha",
 			"targetingTeamName": "Herbivores",
 			"mass": 400,
 			"dragWeight": 350,
 			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 750 }
+				"walk": { "base": 300, "sprint": 750 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 750 }
+				"walk": { "base": 300, "sprint": 750 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -2751,13 +3921,23 @@
 		},
 		{
 			"name": "Gasbags",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/GasBags_Character_BP_Rare.GasBags_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/GasBags_Character_BP_Rare.GasBags_Character_BP_Rare_C",
 			"dinoNameTag": "GasBags",
 			"customTag": "GasBags",
 			"targetingTeamName": "Herbivores_Medium",
 			"mass": 480,
 			"dragWeight": 300,
 			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1800,
+				"costLevel": 55,
+				"timeBase": 12600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 65,
 				"maxSpeed": 2000
@@ -2770,6 +3950,7 @@
 				"walk": { "base": 490 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 90,
@@ -2784,7 +3965,7 @@
 		},
 		{
 			"name": "Managarmr",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/IceJumper_Character_BP_Rare.IceJumper_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/IceJumper_Character_BP_Rare.IceJumper_Character_BP_Rare_C",
 			"dinoNameTag": "Managarmr",
 			"customTag": "Managarmr",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2797,17 +3978,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 40,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 1250, "sprint": 2500 },
-				"swim": { "base": 1050 }
+				"swim": { "base": 1050, "sprint": 2415 }
 			},
 			"movementD": {
 				"walk": { "base": 1250, "sprint": 2500 },
-				"swim": { "base": 1050 }
+				"swim": { "base": 1050, "sprint": 2415 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -2824,7 +4019,7 @@
 		},
 		{
 			"name": "Snow Owl",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/Owl_Character_BP_Rare.Owl_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/Owl_Character_BP_Rare.Owl_Character_BP_Rare_C",
 			"dinoNameTag": "Owl",
 			"customTag": "Owl",
 			"targetingTeamName": "",
@@ -2838,19 +4033,33 @@
 				"isFlyerDino",
 				"preventCharacterBasing"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1125,
+				"costLevel": 55,
+				"timeBase": 7875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 260, "sprint": 728 },
-				"fly": { "base": 600 },
+				"fly": { "base": 600, "sprint": 1680 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 260, "sprint": 728 },
-				"fly": { "base": 600 },
+				"fly": { "base": 600, "sprint": 1680 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -0.325
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -2864,7 +4073,7 @@
 		},
 		{
 			"name": "Velonasaur",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/Spindles_Character_BP_Rare.Spindles_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ex/Spindles_Character_BP_Rare.Spindles_Character_BP_Rare_C",
 			"dinoNameTag": "Velonasaur",
 			"customTag": "Velonasaur",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2877,17 +4086,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 378.8, "crouch": 225, "sprint": 909 },
-				"swim": { "base": 225 }
+				"walk": { "base": 505, "crouch": 300, "sprint": 909 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 333.3, "crouch": 198, "sprint": 799.9 },
-				"swim": { "base": 198 }
+				"walk": { "base": 277.8, "crouch": 165, "sprint": 799.9 },
+				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -2905,7 +4128,7 @@
 		},
 		{
 			"name": "Gallimimus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Galli_Character_BP_Rare.Galli_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Galli_Character_BP_Rare.Galli_Character_BP_Rare_C",
 			"dinoNameTag": "Galli",
 			"customTag": "Galli",
 			"targetingTeamName": "Herbivores",
@@ -2918,6 +4141,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2927,8 +4160,12 @@
 				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 783.7, "sprint": 2189.8 },
-				"swim": { "base": 427.5 }
+				"walk": { "base": 825, "sprint": 2189.8 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 8,
@@ -2938,7 +4175,7 @@
 		},
 		{
 			"name": "Giganotosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Gigant_Character_BP_Rare.Gigant_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Gigant_Character_BP_Rare.Gigant_Character_BP_Rare_C",
 			"dinoNameTag": "Gigant",
 			"customTag": "Gigant",
 			"targetingTeamName": "Carnivores_High",
@@ -2952,16 +4189,27 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 60,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 588, "sprint": 1681.7 }
+				"walk": { "base": 1050, "sprint": 1681.7 }
 			},
 			"movementD": {
-				"walk": { "base": 588, "sprint": 1681.7 }
+				"walk": { "base": 1050, "sprint": 1681.7 }
 			},
+			"staminaRates": { "sprint": -29 },
 			"attack": {
 				"defaultDmg": 300,
 				"defaultSwingRadius": 850,
@@ -2974,7 +4222,7 @@
 		},
 		{
 			"name": "Griffin",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Griffin_Character_BP_Rare.Griffin_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Griffin_Character_BP_Rare.Griffin_Character_BP_Rare_C",
 			"dinoNameTag": "Griffin",
 			"customTag": "Griffin",
 			"targetingTeamName": "Carnivores_Medium_Aggressive",
@@ -2991,19 +4239,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 750 },
-				"fly": { "base": 750, "sprint": 600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 240, "sprint": 750 },
+				"fly": { "base": 600, "sprint": 1500 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 750 },
-				"fly": { "base": 750, "sprint": 600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 240, "sprint": 750 },
+				"fly": { "base": 600, "sprint": 1500 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
 			},
 			"attack": {
 				"defaultDmg": 18,
@@ -3018,7 +4280,7 @@
 		},
 		{
 			"name": "Hesperornis",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Hesperornis_Character_BP_Rare.Hesperornis_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Hesperornis_Character_BP_Rare.Hesperornis_Character_BP_Rare_C",
 			"dinoNameTag": "Hesperornis",
 			"customTag": "Hesperornis",
 			"targetingTeamName": "Carnivores_Low",
@@ -3033,17 +4295,33 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 625,
+				"costLevel": 55,
+				"timeBase": 4375,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"fly": { "base": 450 },
-				"swim": { "base": 210 }
+				"walk": { "base": 125, "sprint": 187.5 },
+				"fly": { "base": 450, "sprint": 675 },
+				"swim": { "base": 210, "sprint": 420 }
 			},
 			"movementD": {
-				"fly": { "base": 450 },
-				"swim": { "base": 210 }
+				"walk": { "base": 125, "sprint": 187.5 },
+				"fly": { "base": 450, "sprint": 675 },
+				"swim": { "base": 210, "sprint": 420 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -3058,24 +4336,38 @@
 		},
 		{
 			"name": "Hyaenodon ",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Hyaenodon_Character_BP_Rare.Hyaenodon_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Hyaenodon_Character_BP_Rare.Hyaenodon_Character_BP_Rare_C",
 			"dinoNameTag": "Hyaenodon",
 			"customTag": "Hyaenodon",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 222,
 			"dragWeight": 40,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 87.5,
+				"costLevel": 55,
+				"timeBase": 612.5,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 168, "sprint": 924 },
-				"swim": { "base": 360 }
+				"walk": { "base": 140, "sprint": 924 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 168, "sprint": 924 },
-				"swim": { "base": 360 }
+				"walk": { "base": 140, "sprint": 924 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 13,
@@ -3090,7 +4382,7 @@
 		},
 		{
 			"name": "Ichthyornis",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ichthyornis_Character_BP_Rare.Ichthyornis_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ichthyornis_Character_BP_Rare.Ichthyornis_Character_BP_Rare_C",
 			"dinoNameTag": "Ichthyornis",
 			"customTag": "Ichthyornis",
 			"targetingTeamName": "Carnivores_Low",
@@ -3105,19 +4397,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 750,
+				"costLevel": 55,
+				"timeBase": 5250,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 75, "sprint": 97.5 },
-				"fly": { "base": 600 },
-				"swim": { "base": 330 }
+				"fly": { "base": 600, "sprint": 780 },
+				"swim": { "base": 330, "sprint": 429 }
 			},
 			"movementD": {
 				"walk": { "base": 75, "sprint": 97.5 },
-				"fly": { "base": 600 },
-				"swim": { "base": 330 }
+				"fly": { "base": 600, "sprint": 780 },
+				"swim": { "base": 330, "sprint": 429 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 16,
@@ -3134,7 +4440,7 @@
 		},
 		{
 			"name": "Iguanodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Iguanodon_Character_BP_Rare.Iguanodon_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Iguanodon_Character_BP_Rare.Iguanodon_Character_BP_Rare_C",
 			"dinoNameTag": "Iguanodon",
 			"customTag": "Iguanodon",
 			"targetingTeamName": "Herbivores",
@@ -3147,6 +4453,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3158,6 +4474,10 @@
 			"movementD": {
 				"walk": { "base": 287.5, "sprint": 1437.5 },
 				"swim": { "base": 517.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 12,
@@ -3172,13 +4492,23 @@
 		},
 		{
 			"name": "Kairuku",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Kairuku_Character_BP_Rare.Kairuku_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Kairuku_Character_BP_Rare.Kairuku_Character_BP_Rare_C",
 			"dinoNameTag": "Kairu",
 			"customTag": "Kairu",
 			"targetingTeamName": "Herbivores",
 			"mass": 50,
 			"dragWeight": 35,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1025,
+				"costLevel": 27.5,
+				"timeBase": 7175,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3191,6 +4521,10 @@
 				"walk": { "base": 38.5, "sprint": 80.8 },
 				"swim": { "base": 247.5 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 8,
 				"defaultSwingRadius": 105,
@@ -3199,7 +4533,7 @@
 		},
 		{
 			"name": "Kaprosuchus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Kaprosuchus_Character_BP_Rare.Kaprosuchus_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Kaprosuchus_Character_BP_Rare.Kaprosuchus_Character_BP_Rare_C",
 			"dinoNameTag": "Kaprosuchus",
 			"customTag": "Kaprosuchus",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3214,15 +4548,31 @@
 				"isAmphibious",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1000,
+				"costLevel": 55,
+				"timeBase": 7000,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 180, "sprint": 675 }
+				"walk": { "base": 180, "sprint": 675 },
+				"swim": { "base": 220, "sprint": 552.8 }
 			},
 			"movementD": {
-				"walk": { "base": 180, "sprint": 675 }
+				"walk": { "base": 180, "sprint": 675 },
+				"swim": { "base": 220, "sprint": 552.8 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -3236,22 +4586,38 @@
 		},
 		{
 			"name": "Kentrosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Kentro_Character_BP_Rare.Kentro_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Kentro_Character_BP_Rare.Kentro_Character_BP_Rare_C",
 			"dinoNameTag": "Kentro",
 			"customTag": "Kentro",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 200,
 			"dragWeight": 250,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canBeTorpid" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 600 }
+				"walk": { "base": 150, "sprint": 600 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 600 }
+				"walk": { "base": 150, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -3265,13 +4631,23 @@
 		},
 		{
 			"name": "Lystrosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Lystro_Character_BP_Rare.Lystro_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Lystro_Character_BP_Rare.Lystro_Character_BP_Rare_C",
 			"dinoNameTag": "Lystro",
 			"customTag": "Lystro",
 			"targetingTeamName": "Herbivores",
 			"mass": 50,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 825,
+				"costLevel": 27.5,
+				"timeBase": 5775,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3284,6 +4660,10 @@
 				"walk": { "base": 42, "sprint": 88.2 },
 				"swim": { "base": 84 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 6,
 				"defaultSwingRadius": 105,
@@ -3292,7 +4672,7 @@
 		},
 		{
 			"name": "Mammoth",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Mammoth_Character_BP_Rare.Mammoth_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Mammoth_Character_BP_Rare.Mammoth_Character_BP_Rare_C",
 			"dinoNameTag": "Mammoth",
 			"customTag": "Mammoth",
 			"targetingTeamName": "Herbivores",
@@ -3306,15 +4686,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 360 }
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 360 }
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -3328,7 +4724,7 @@
 		},
 		{
 			"name": "Manta",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Manta_Character_BP_Rare.Manta_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Manta_Character_BP_Rare.Manta_Character_BP_Rare_C",
 			"dinoNameTag": "Manta",
 			"customTag": "Manta",
 			"targetingTeamName": "Carnivore_Water",
@@ -3341,15 +4737,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 525,
+				"costLevel": 55,
+				"timeBase": 3675,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 390 }
+				"walk": { "base": 600, "sprint": 780 },
+				"swim": { "base": 600, "sprint": 780 }
 			},
 			"movementD": {
-				"swim": { "base": 1350 }
+				"walk": { "base": 1350, "sprint": 2700 },
+				"swim": { "base": 1350, "sprint": 2700 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 28,
@@ -3359,7 +4771,7 @@
 		},
 		{
 			"name": "Megalania",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Megalania_Character_BP_Rare.Megalania_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Megalania_Character_BP_Rare.Megalania_Character_BP_Rare_C",
 			"dinoNameTag": "Megalania",
 			"customTag": "Megalania",
 			"targetingTeamName": "",
@@ -3372,15 +4784,31 @@
 				"canBeTorpid",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2125,
+				"costLevel": 55,
+				"timeBase": 14875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 312.5, "sprint": 625 }
+				"walk": { "base": 250, "sprint": 625 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 250, "sprint": 500 }
+				"walk": { "base": 312.5, "sprint": 500 },
+				"swim": { "base": 375 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -3396,7 +4824,7 @@
 		},
 		{
 			"name": "Megalodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Megalodon_Character_BP_Rare.Megalodon_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Megalodon_Character_BP_Rare.Megalodon_Character_BP_Rare_C",
 			"dinoNameTag": "Mega",
 			"customTag": "Megalodon",
 			"targetingTeamName": "Carnivore_Water",
@@ -3410,15 +4838,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 248 }
+				"walk": { "base": 400, "sprint": 570.4 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
+				"walk": { "base": 900, "sprint": 2070 },
 				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -3428,7 +4872,7 @@
 		},
 		{
 			"name": "Megalosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Megalosaurus_Character_BP_Rare.Megalosaurus_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Megalosaurus_Character_BP_Rare.Megalosaurus_Character_BP_Rare_C",
 			"dinoNameTag": "Megalosaurus",
 			"customTag": "Megalosaurus",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3441,15 +4885,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 850,
+				"costLevel": 55,
+				"timeBase": 5950,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 390, "sprint": 1092 }
+				"walk": { "base": 270, "sprint": 1092 },
+				"swim": { "base": 135 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 1260 }
+				"walk": { "base": 480, "sprint": 1260 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -3469,7 +4929,7 @@
 		},
 		{
 			"name": "Megatherium",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Megatherium_Character_BP_Rare.Megatherium_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Megatherium_Character_BP_Rare.Megatherium_Character_BP_Rare_C",
 			"dinoNameTag": "Megatherium",
 			"customTag": "Megatherium",
 			"targetingTeamName": "Carnivores_High",
@@ -3483,15 +4943,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 640, "sprint": 1280 }
+				"walk": { "base": 224, "sprint": 1280 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
-				"walk": { "base": 480, "sprint": 960 }
+				"walk": { "base": 320, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3507,7 +4983,7 @@
 		},
 		{
 			"name": "Microraptor",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Microraptor_Character_BP_Rare.Microraptor_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Microraptor_Character_BP_Rare.Microraptor_Character_BP_Rare_C",
 			"dinoNameTag": "Microraptor",
 			"customTag": "Microraptor",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3521,19 +4997,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 850,
+				"costLevel": 55,
+				"timeBase": 5950,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 187.5, "sprint": 1125 },
-				"fly": { "base": 187.5, "sprint": 93.8 },
-				"swim": { "base": 375 }
+				"walk": { "base": 135, "sprint": 1125 },
+				"fly": { "base": 135, "sprint": 562.5 },
+				"swim": { "base": 270 }
 			},
 			"movementD": {
 				"walk": { "base": 150, "sprint": 900 },
-				"fly": { "base": 150, "sprint": 75 },
+				"fly": { "base": 150, "sprint": 450 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -3548,24 +5038,38 @@
 		},
 		{
 			"name": "Mesopithecus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Monkey_Character_BP_Rare.Monkey_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Monkey_Character_BP_Rare.Monkey_Character_BP_Rare_C",
 			"dinoNameTag": "Monkey",
 			"customTag": "Monkey",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 27.5,
+				"timeBase": 4025,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 126, "sprint": 504 },
-				"swim": { "base": 630 }
+				"walk": { "base": 60, "sprint": 504 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 240 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -3581,7 +5085,7 @@
 		},
 		{
 			"name": "Mosasaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Mosa_Character_BP_Rare.Mosa_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Mosa_Character_BP_Rare.Mosa_Character_BP_Rare_C",
 			"dinoNameTag": "Mosasaur",
 			"customTag": "Mosasaur",
 			"targetingTeamName": "Carnivore_Water",
@@ -3595,15 +5099,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2200,
+				"costLevel": 55,
+				"timeBase": 15400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 770 }
+				"walk": { "base": 1100, "sprint": 1540 },
+				"swim": { "base": 1100 }
 			},
 			"movementD": {
+				"walk": { "base": 1760, "sprint": 3520 },
 				"swim": { "base": 1760 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 100,
@@ -3613,7 +5133,7 @@
 		},
 		{
 			"name": "Moschops",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Moschops_Character_BP_Rare.Moschops_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Moschops_Character_BP_Rare.Moschops_Character_BP_Rare_C",
 			"dinoNameTag": "Moschops",
 			"customTag": "Moschops",
 			"targetingTeamName": "Herbivores",
@@ -3626,15 +5146,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 115, "sprint": 517.5 }
+				"walk": { "base": 115, "sprint": 517.5 },
+				"swim": { "base": 220 }
 			},
 			"movementD": {
-				"walk": { "base": 115, "sprint": 517.5 }
+				"walk": { "base": 115, "sprint": 517.5 },
+				"swim": { "base": 220 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 25,
@@ -3648,7 +5184,7 @@
 		},
 		{
 			"name": "Otter",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Otter_Character_BP_Rare.Otter_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Otter_Character_BP_Rare.Otter_Character_BP_Rare_C",
 			"dinoNameTag": "Otter",
 			"customTag": "Otter",
 			"targetingTeamName": "Carnivores_Low",
@@ -3662,15 +5198,31 @@
 				"isAmphibious",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 229.5, "sprint": 344.3 }
+				"walk": { "base": 229.5, "sprint": 344.3 },
+				"swim": { "base": 337.5 }
 			},
 			"movementD": {
-				"walk": { "base": 170, "sprint": 255 }
+				"walk": { "base": 170, "sprint": 255 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 28,
@@ -3683,13 +5235,23 @@
 		},
 		{
 			"name": "Oviraptor",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Oviraptor_Character_BP_Rare.Oviraptor_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Oviraptor_Character_BP_Rare.Oviraptor_Character_BP_Rare_C",
 			"dinoNameTag": "Ovi",
 			"customTag": "Ovi",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 90,
 			"dragWeight": 40,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1500,
+				"costLevel": 55,
+				"timeBase": 10500,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3699,8 +5261,12 @@
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 239.2, "sprint": 674.5 },
-				"swim": { "base": 224.2 }
+				"walk": { "base": 208, "sprint": 674.5 },
+				"swim": { "base": 195 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 12,
@@ -3710,7 +5276,7 @@
 		},
 		{
 			"name": "Pachy",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Pachy_Character_BP_Rare.Pachy_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Pachy_Character_BP_Rare.Pachy_Character_BP_Rare_C",
 			"dinoNameTag": "Pachy",
 			"customTag": "Pachy",
 			"targetingTeamName": "Herbivores",
@@ -3723,17 +5289,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 300,
+				"costLevel": 44,
+				"timeBase": 2100,
+				"timeLevel": 308
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 182, "sprint": 546 },
-				"swim": { "base": 273 }
+				"walk": { "base": 140, "sprint": 546 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
 				"walk": { "base": 173, "sprint": 519 },
 				"swim": { "base": 259.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -3743,7 +5323,7 @@
 		},
 		{
 			"name": "Pachyrhinosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Pachyrhino_Character_BP_Rare.Pachyrhino_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Pachyrhino_Character_BP_Rare.Pachyrhino_Character_BP_Rare_C",
 			"dinoNameTag": "Pachyrhinosaurus",
 			"customTag": "Pachyrhino",
 			"targetingTeamName": "Herbivores_Medium",
@@ -3757,15 +5337,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 500,
+				"costLevel": 55,
+				"timeBase": 3500,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225.4, "sprint": 563.5 }
+				"walk": { "base": 161, "sprint": 563.5 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
-				"walk": { "base": 253, "sprint": 632.5 }
+				"walk": { "base": 230, "sprint": 632.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -3779,7 +5375,7 @@
 		},
 		{
 			"name": "Parasaur",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Para_Character_BP_Rare.Para_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Para_Character_BP_Rare.Para_Character_BP_Rare_C",
 			"dinoNameTag": "Para",
 			"customTag": "Parasaur",
 			"targetingTeamName": "Herbivores",
@@ -3792,15 +5388,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 350,
+				"costLevel": 38.5,
+				"timeBase": 2450,
+				"timeLevel": 269.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 916.5 }
+				"walk": { "base": 200, "sprint": 916.5 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 458.3 }
+				"walk": { "base": 150, "sprint": 458.3 },
+				"swim": { "base": 337.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 12,
@@ -3814,7 +5426,7 @@
 		},
 		{
 			"name": "Paraceratherium",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Paracer_Character_BP_Rare.Paracer_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Paracer_Character_BP_Rare.Paracer_Character_BP_Rare_C",
 			"dinoNameTag": "Paracer",
 			"customTag": "Paracer",
 			"targetingTeamName": "Herbivores_Large",
@@ -3828,15 +5440,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 260, "sprint": 715 }
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 260, "sprint": 715 }
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -12,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3846,13 +5474,23 @@
 		},
 		{
 			"name": "Pegomastax",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Pegomastax_Character_BP_Rare.Pegomastax_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Pegomastax_Character_BP_Rare.Pegomastax_Character_BP_Rare_C",
 			"dinoNameTag": "Pegomastax",
 			"customTag": "Pegomastax",
 			"targetingTeamName": "TargetOnlyPlayers",
 			"mass": 50,
 			"dragWeight": 20,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3864,6 +5502,10 @@
 			"movementD": {
 				"walk": { "base": 110, "sprint": 473 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 3,
@@ -3878,7 +5520,7 @@
 		},
 		{
 			"name": "Pelagornis",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Pela_Character_BP_Rare.Pela_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Pela_Character_BP_Rare.Pela_Character_BP_Rare_C",
 			"dinoNameTag": "Pela",
 			"customTag": "Pela",
 			"targetingTeamName": "Herbivores",
@@ -3892,19 +5534,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1075,
+				"costLevel": 55,
+				"timeBase": 7525,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 114.8, "sprint": 229.6 },
-				"fly": { "base": 521.7 },
-				"swim": { "base": 287 }
+				"walk": { "base": 132, "sprint": 229.6 },
+				"fly": { "base": 600, "sprint": 1043.5 },
+				"swim": { "base": 330, "sprint": 573.9 }
 			},
 			"movementD": {
 				"walk": { "base": 132, "sprint": 264 },
-				"fly": { "base": 600 },
-				"swim": { "base": 330 }
+				"fly": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 330, "sprint": 660 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 16,
@@ -3914,7 +5570,7 @@
 		},
 		{
 			"name": "Phiomia",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Phiomia_Character_BP_Rare.Phiomia_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Phiomia_Character_BP_Rare.Phiomia_Character_BP_Rare_C",
 			"dinoNameTag": "Phiomia",
 			"customTag": "Phiomia",
 			"targetingTeamName": "Herbivores_Medium",
@@ -3927,16 +5583,27 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 247.5, "sprint": 915.7 }
+				"walk": { "base": 150, "sprint": 915.7 }
 			},
 			"movementD": {
 				"walk": { "base": 150, "sprint": 555 }
 			},
+			"staminaRates": { "sprint": -20 },
 			"attack": {
 				"defaultDmg": 10,
 				"defaultSwingRadius": 160,
@@ -3945,7 +5612,7 @@
 		},
 		{
 			"name": "Plesiosaur",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Plesiosaur_Character_BP_Rare.Plesiosaur_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Plesiosaur_Character_BP_Rare.Plesiosaur_Character_BP_Rare_C",
 			"dinoNameTag": "Plesiosaur",
 			"customTag": "Plesiosaur",
 			"targetingTeamName": "Carnivore_Water",
@@ -3959,15 +5626,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1050,
+				"costLevel": 55,
+				"timeBase": 7350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"walk": { "base": 800, "sprint": 1200 },
+				"swim": { "base": 800 }
 			},
 			"movementD": {
+				"walk": { "base": 1800, "sprint": 3600 },
 				"swim": { "base": 1800 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -3977,7 +5660,7 @@
 		},
 		{
 			"name": "Procoptodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Procoptodon_Character_BP_Rare.Procoptodon_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Procoptodon_Character_BP_Rare.Procoptodon_Character_BP_Rare_C",
 			"dinoNameTag": "Kangaroo",
 			"customTag": "Kangaroo",
 			"targetingTeamName": "Herbivores_Medium",
@@ -3991,15 +5674,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 775,
+				"costLevel": 55,
+				"timeBase": 5425,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 2600
 			},
 			"movementW": {
-				"walk": { "base": 850, "sprint": 1785 }
+				"walk": { "base": 850, "sprint": 1785 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 850, "sprint": 1785 }
+				"walk": { "base": 850, "sprint": 1785 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -4013,7 +5712,7 @@
 		},
 		{
 			"name": "Pteranodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Ptero_Character_BP_Rare.Ptero_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Ptero_Character_BP_Rare.Ptero_Character_BP_Rare_C",
 			"dinoNameTag": "Ptera",
 			"customTag": "Ptera",
 			"targetingTeamName": "Herbivores",
@@ -4027,19 +5726,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 226.1, "sprint": 715 },
-				"fly": { "base": 521.7 },
-				"swim": { "base": 260.9 }
+				"walk": { "base": 260, "sprint": 715 },
+				"fly": { "base": 600, "sprint": 1650 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
 				"walk": { "base": 260, "sprint": 822.2 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
+				"fly": { "base": 600, "sprint": 1897.5 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -4053,7 +5766,7 @@
 		},
 		{
 			"name": "Purlovia",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Purlovia_Character_BP_Rare.Purlovia_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Purlovia_Character_BP_Rare.Purlovia_Character_BP_Rare_C",
 			"dinoNameTag": "Purlovia",
 			"customTag": "Purlovia",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4066,6 +5779,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4077,6 +5800,10 @@
 			"movementD": {
 				"walk": { "base": 230, "sprint": 1035 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 36,
@@ -4091,7 +5818,7 @@
 		},
 		{
 			"name": "Quetzal",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Quetz_Character_BP_Rare.Quetz_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Quetz_Character_BP_Rare.Quetz_Character_BP_Rare_C",
 			"dinoNameTag": "Quetz",
 			"customTag": "Quetz",
 			"targetingTeamName": "Herbivores",
@@ -4106,19 +5833,33 @@
 				"isBigDino",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 574.6, "sprint": 1149.1 },
-				"fly": { "base": 798 },
-				"swim": { "base": 478.8 }
+				"walk": { "base": 478.8, "sprint": 1149.1 },
+				"fly": { "base": 665, "sprint": 1596 },
+				"swim": { "base": 665 }
 			},
 			"movementD": {
-				"walk": { "base": 342, "sprint": 684 },
-				"fly": { "base": 475 },
-				"swim": { "base": 285 }
+				"walk": { "base": 360, "sprint": 684 },
+				"fly": { "base": 500, "sprint": 950 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.185
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -4131,7 +5872,7 @@
 		},
 		{
 			"name": "Raptor",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Raptor_Character_BP_Rare.Raptor_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Raptor_Character_BP_Rare.Raptor_Character_BP_Rare_C",
 			"dinoNameTag": "Raptor",
 			"customTag": "Raptor",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4145,17 +5886,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 432, "sprint": 993.6 },
-				"swim": { "base": 270 }
+				"walk": { "base": 480, "sprint": 993.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 480, "sprint": 1104 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -4170,7 +5925,7 @@
 		},
 		{
 			"name": "Rex",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Rex_Character_BP_Rare.Rex_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Rex_Character_BP_Rare.Rex_Character_BP_Rare_C",
 			"dinoNameTag": "Rex",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -4185,15 +5940,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 257.5, "sprint": 736.4 }
+				"walk": { "base": 515, "sprint": 736.4 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 386.2, "sprint": 1104.7 }
+				"walk": { "base": 515, "sprint": 1104.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -4207,7 +5978,7 @@
 		},
 		{
 			"name": "Woolly Rhino",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Rhino_Character_BP_Rare.Rhino_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Rhino_Character_BP_Rare.Rhino_Character_BP_Rare_C",
 			"dinoNameTag": "Rhino",
 			"customTag": "Rhino",
 			"targetingTeamName": "Herbivores_Medium",
@@ -4222,15 +5993,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 975,
+				"costLevel": 55,
+				"timeBase": 6825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 187.3, "sprint": 936.6 }
+				"walk": { "base": 138.8, "sprint": 936.6 },
+				"swim": { "base": 225 }
 			},
 			"movementD": {
-				"walk": { "base": 223.9, "sprint": 1119.3 }
+				"walk": { "base": 101.8, "sprint": 1119.3 },
+				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -4240,7 +6027,7 @@
 		},
 		{
 			"name": "Morellatops",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Camelsaurus_Character_BP_Rare.Camelsaurus_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Camelsaurus_Character_BP_Rare.Camelsaurus_Character_BP_Rare_C",
 			"dinoNameTag": "Camelsaurus",
 			"customTag": "Camelsaurus",
 			"targetingTeamName": "Herbivores_Medium",
@@ -4253,15 +6040,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 312.5, "sprint": 1250 }
+				"walk": { "base": 250, "sprint": 1250 },
+				"swim": { "base": 265 }
 			},
 			"movementD": {
-				"walk": { "base": 141.7, "sprint": 567 }
+				"walk": { "base": 157.5, "sprint": 567 },
+				"swim": { "base": 166.9 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 13,
@@ -4274,13 +6077,23 @@
 		},
 		{
 			"name": "Jerboa",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Jerboa_Character_BP_Rare.Jerboa_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Jerboa_Character_BP_Rare.Jerboa_Character_BP_Rare_C",
 			"dinoNameTag": "Jerboa",
 			"customTag": "Jerboa",
 			"targetingTeamName": "Herbivores",
 			"mass": 50,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1275,
+				"costLevel": 55,
+				"timeBase": 8925,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4290,8 +6103,12 @@
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 234, "sprint": 549.9 },
-				"swim": { "base": 450 }
+				"walk": { "base": 156, "sprint": 549.9 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 3,
@@ -4301,7 +6118,7 @@
 		},
 		{
 			"name": "Mantis",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Mantis_Character_BP_Rare.Mantis_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Mantis_Character_BP_Rare.Mantis_Character_BP_Rare_C",
 			"dinoNameTag": "Mantis",
 			"customTag": "Mantis",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4315,15 +6132,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 2000
 			},
 			"movementW": {
-				"walk": { "base": 260, "sprint": 650 }
+				"walk": { "base": 200, "sprint": 650 },
+				"swim": { "base": 175 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 500 }
+				"walk": { "base": 200, "sprint": 500 },
+				"swim": { "base": 175 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -4336,7 +6169,7 @@
 		},
 		{
 			"name": "Lymantria",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Moth_Character_BP_Rare.Moth_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Moth_Character_BP_Rare.Moth_Character_BP_Rare_C",
 			"dinoNameTag": "Moth",
 			"customTag": "Moth",
 			"targetingTeamName": "Herbivores",
@@ -4350,19 +6183,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375,
+				"costLevel": 55,
+				"timeBase": 2625,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 110, "sprint": 220 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
+				"fly": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"walk": { "base": 96.8, "sprint": 193.6 },
-				"fly": { "base": 528 },
-				"swim": { "base": 264 }
+				"walk": { "base": 110, "sprint": 193.6 },
+				"fly": { "base": 600, "sprint": 1056 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.225
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -4375,7 +6222,7 @@
 		},
 		{
 			"name": "Phoenix",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Phoenix_Character_BP_Rare.Phoenix_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Phoenix_Character_BP_Rare.Phoenix_Character_BP_Rare_C",
 			"dinoNameTag": "Phoenix",
 			"customTag": "Phoenix",
 			"targetingTeamName": "Herbivores",
@@ -4388,19 +6235,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 220,
+				"timeBase": 14350,
+				"timeLevel": 1540
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 364, "sprint": 637 },
-				"fly": { "base": 840 },
-				"swim": { "base": 420 }
+				"walk": { "base": 520, "sprint": 637 },
+				"fly": { "base": 1200, "sprint": 1470 },
+				"swim": { "base": 1200 }
 			},
 			"movementD": {
 				"walk": { "base": 520, "sprint": 910 },
-				"fly": { "base": 1200 },
-				"swim": { "base": 600 }
+				"fly": { "base": 1200, "sprint": 2100 },
+				"swim": { "base": 1200 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 14,
@@ -4417,7 +6278,7 @@
 		},
 		{
 			"name": "Rock Elemental",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/RockGolem_Character_BP_Rare.RockGolem_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/RockGolem_Character_BP_Rare.RockGolem_Character_BP_Rare_C",
 			"dinoNameTag": "RockElemental",
 			"customTag": "RockElemental",
 			"targetingTeamName": "Carnivores_High",
@@ -4430,6 +6291,16 @@
 				"doStepDamage",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2200,
+				"costLevel": 55,
+				"timeBase": 15400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4440,6 +6311,7 @@
 			"movementD": {
 				"walk": { "base": 400, "sprint": 960 }
 			},
+			"staminaRates": { "sprint": -25 },
 			"attack": {
 				"defaultDmg": 160,
 				"defaultSwingRadius": 1200,
@@ -4455,7 +6327,7 @@
 		},
 		{
 			"name": "Thorny Dragon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/SpineyLizard_Character_BP_Rare.SpineyLizard_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/SpineyLizard_Character_BP_Rare.SpineyLizard_Character_BP_Rare_C",
 			"dinoNameTag": "SpineyLizard",
 			"customTag": "SpineyLizard",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4469,15 +6341,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 231.3, "sprint": 693.8 }
+				"walk": { "base": 196, "sprint": 693.8 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 196, "sprint": 588 }
+				"walk": { "base": 196, "sprint": 588 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -4493,7 +6381,7 @@
 		},
 		{
 			"name": "Vulture",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Vulture_Character_BP_Rare.Vulture_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Vulture_Character_BP_Rare.Vulture_Character_BP_Rare_C",
 			"dinoNameTag": "Vulture",
 			"customTag": "Dimorph",
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
@@ -4506,19 +6394,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 70, "sprint": 108.5 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 697.5 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
 				"walk": { "base": 70, "sprint": 108.5 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 697.5 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 23,
@@ -4528,7 +6430,7 @@
 		},
 		{
 			"name": "Fire Wyvern",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Wyvern_Character_BP_Fire_Rare.Wyvern_Character_BP_Fire_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Wyvern_Character_BP_Fire_Rare.Wyvern_Character_BP_Fire_Rare_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -4546,19 +6448,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -4574,7 +6490,7 @@
 		},
 		{
 			"name": "Lightning Wyvern",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Wyvern_Character_BP_Lightning_Rare.Wyvern_Character_BP_Lightning_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Wyvern_Character_BP_Lightning_Rare.Wyvern_Character_BP_Lightning_Rare_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -4592,19 +6508,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -4623,7 +6553,7 @@
 		},
 		{
 			"name": "Poison Wyvern",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Wyvern_Character_BP_Poison_Rare.Wyvern_Character_BP_Poison_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SE/Wyvern_Character_BP_Poison_Rare.Wyvern_Character_BP_Poison_Rare_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -4641,19 +6571,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -4676,7 +6620,7 @@
 		},
 		{
 			"name": "Sabertooth",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Saber_Character_BP_Rare.Saber_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Saber_Character_BP_Rare.Saber_Character_BP_Rare_C",
 			"dinoNameTag": "Sabertooth",
 			"customTag": "Sabertooth",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4690,17 +6634,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 25,
 				"maxSpeed": 1850
 			},
 			"movementW": {
-				"walk": { "base": 184, "sprint": 920 },
-				"swim": { "base": 240 }
+				"walk": { "base": 230, "sprint": 920 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 230, "sprint": 1150 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 29,
@@ -4710,7 +6668,7 @@
 		},
 		{
 			"name": "Sarco",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Sarco_Character_BP_Rare.Sarco_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Sarco_Character_BP_Rare.Sarco_Character_BP_Rare_C",
 			"dinoNameTag": "Sarco",
 			"customTag": "Sarco",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4726,15 +6684,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 550,
+				"costLevel": 55,
+				"timeBase": 3850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 437.4 }
+				"walk": { "base": 150, "sprint": 437.4 },
+				"swim": { "base": 750, "sprint": 1093.5 }
 			},
 			"movementD": {
-				"walk": { "base": 165, "sprint": 601.4 }
+				"walk": { "base": 165, "sprint": 601.4 },
+				"swim": { "base": 825, "sprint": 1503.6 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 35,
@@ -4750,7 +6724,7 @@
 		},
 		{
 			"name": "Brontosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Sauropod_Character_BP_Rare.Sauropod_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Sauropod_Character_BP_Rare.Sauropod_Character_BP_Rare_C",
 			"dinoNameTag": "Bronto",
 			"customTag": "Bronto",
 			"targetingTeamName": "Herbivores_Large",
@@ -4764,15 +6738,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 607.5 }
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 405 }
+				"walk": { "base": 180, "sprint": 405 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -4786,7 +6776,7 @@
 		},
 		{
 			"name": "Pulmonoscorpius",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Scorpion_Character_BP_Rare.Scorpion_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Scorpion_Character_BP_Rare.Scorpion_Character_BP_Rare_C",
 			"dinoNameTag": "Scorpion",
 			"customTag": "Scorpion",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4800,15 +6790,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 420 }
+				"walk": { "base": 300, "sprint": 420 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 420 }
+				"walk": { "base": 300, "sprint": 420 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -4818,7 +6824,7 @@
 		},
 		{
 			"name": "Ovis",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Sheep_Character_BP_Rare.Sheep_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Sheep_Character_BP_Rare.Sheep_Character_BP_Rare_C",
 			"dinoNameTag": "Sheep",
 			"customTag": "Sheep",
 			"targetingTeamName": "Herbivores",
@@ -4831,17 +6837,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 100, "sprint": 520 },
-				"swim": { "base": 300 }
+				"walk": { "base": 70, "sprint": 520 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
-				"walk": { "base": 90, "sprint": 468 },
-				"swim": { "base": 270 }
+				"walk": { "base": 120, "sprint": 468 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 12,
@@ -4851,7 +6871,7 @@
 		},
 		{
 			"name": "Araneo",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/SpiderS_Character_BP_Rare.SpiderS_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/SpiderS_Character_BP_Rare.SpiderS_Character_BP_Rare_C",
 			"dinoNameTag": "Spider",
 			"customTag": "Spider",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4864,15 +6884,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 100,
+				"costLevel": 55,
+				"timeBase": 700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 160, "sprint": 320 }
+				"walk": { "base": 160, "sprint": 320 },
+				"swim": { "base": 160 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -4888,7 +6924,7 @@
 		},
 		{
 			"name": "Spino",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Spino_Character_BP_Rare.Spino_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Spino_Character_BP_Rare.Spino_Character_BP_Rare_C",
 			"dinoNameTag": "Spino",
 			"customTag": "Spino",
 			"targetingTeamName": "Carnivores_High",
@@ -4904,15 +6940,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 452, "sprint": 1717.6 }
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 452, "sprint": 1717.6 }
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -4928,7 +6980,7 @@
 		},
 		{
 			"name": "Megaloceros",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Stag_Character_BP_Rare.Stag_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Stag_Character_BP_Rare.Stag_Character_BP_Rare_C",
 			"dinoNameTag": "Stag",
 			"customTag": "Stag",
 			"targetingTeamName": "Herbivores_Medium",
@@ -4941,6 +6993,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 900,
+				"costLevel": 55,
+				"timeBase": 6300,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4953,6 +7015,10 @@
 				"walk": { "base": 170, "sprint": 1020 },
 				"swim": { "base": 255 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 30,
 				"defaultSwingRadius": 250,
@@ -4961,7 +7027,7 @@
 		},
 		{
 			"name": "Stegosaurus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Stego_Character_BP_Rare.Stego_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Stego_Character_BP_Rare.Stego_Character_BP_Rare_C",
 			"dinoNameTag": "Stego",
 			"customTag": "Stego",
 			"targetingTeamName": "Herbivores_Medium",
@@ -4975,15 +7041,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 725,
+				"costLevel": 55,
+				"timeBase": 5075,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 221, "sprint": 607.7 }
+				"walk": { "base": 170, "sprint": 607.7 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 76.5, "sprint": 210.4 }
+				"walk": { "base": 76.5, "sprint": 210.4 },
+				"swim": { "base": 135 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -4993,7 +7075,7 @@
 		},
 		{
 			"name": "Tapejara",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Tapejara_Character_BP_Rare.Tapejara_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Tapejara_Character_BP_Rare.Tapejara_Character_BP_Rare_C",
 			"dinoNameTag": "Tapejara",
 			"customTag": "Tapejara",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -5007,19 +7089,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 539, "sprint": 862.4 },
-				"fly": { "base": 1540 },
-				"swim": { "base": 660 }
+				"walk": { "base": 245, "sprint": 862.4 },
+				"fly": { "base": 700, "sprint": 2464 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 245, "sprint": 392 },
-				"fly": { "base": 700 },
+				"fly": { "base": 700, "sprint": 1120 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -5033,7 +7129,7 @@
 		},
 		{
 			"name": "Terror Bird",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/TerrorBird_Character_BP_Rare.TerrorBird_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/TerrorBird_Character_BP_Rare.TerrorBird_Character_BP_Rare_C",
 			"dinoNameTag": "TerrorBird",
 			"customTag": "TerrorBird",
 			"targetingTeamName": "Carnivores_Medium",
@@ -5047,6 +7143,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 900,
+				"costLevel": 55,
+				"timeBase": 6300,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5059,6 +7165,10 @@
 				"walk": { "base": 255.4, "sprint": 1200.2 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 18,
 				"defaultSwingRadius": 110,
@@ -5067,22 +7177,38 @@
 		},
 		{
 			"name": "Therizinosaur",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Therizino_Character_BP_Rare.Therizino_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Therizino_Character_BP_Rare.Therizino_Character_BP_Rare_C",
 			"dinoNameTag": "Therizinosaurus",
 			"customTag": "Therizinosaurus",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
 			"mass": 222,
 			"dragWeight": 250,
 			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 349.5, "sprint": 978.6 }
+				"walk": { "base": 466, "sprint": 978.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 466, "sprint": 1304.8 }
+				"walk": { "base": 466, "sprint": 1304.8 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 52,
@@ -5096,7 +7222,7 @@
 		},
 		{
 			"name": "Thylacoleo",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Thylacoleo_Character_BP_Rare.Thylacoleo_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Thylacoleo_Character_BP_Rare.Thylacoleo_Character_BP_Rare_C",
 			"dinoNameTag": "Thylacoleo",
 			"customTag": "Thylacoleo",
 			"targetingTeamName": "Carnivores_Medium",
@@ -5111,17 +7237,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 1900
 			},
 			"movementW": {
-				"walk": { "base": 230, "sprint": 1150 },
-				"swim": { "base": 600 }
+				"walk": { "base": 184, "sprint": 1150 },
+				"swim": { "base": 480 }
 			},
 			"movementD": {
 				"walk": { "base": 230, "sprint": 1150 },
 				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -5137,7 +7277,7 @@
 		},
 		{
 			"name": "Beelzebufo",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Toad_Character_BP_Rare.Toad_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Toad_Character_BP_Rare.Toad_Character_BP_Rare_C",
 			"dinoNameTag": "Toad",
 			"customTag": "Toad",
 			"targetingTeamName": "Carnivores_Medium",
@@ -5151,6 +7291,16 @@
 				"canDrag",
 				"isAmphibious"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1425,
+				"costLevel": 55,
+				"timeBase": 9975,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 66,
 				"maxSpeed": 1770
@@ -5163,6 +7313,10 @@
 				"walk": { "base": 340, "sprint": 680 },
 				"swim": { "base": 595 }
 			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 144,
@@ -5174,7 +7328,7 @@
 		},
 		{
 			"name": "Triceratops",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Trike_Character_BP_Rare.Trike_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Trike_Character_BP_Rare.Trike_Character_BP_Rare_C",
 			"dinoNameTag": "Trike",
 			"customTag": "Trike",
 			"targetingTeamName": "Herbivores_Medium",
@@ -5188,15 +7342,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 202.5, "sprint": 607.5 }
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 94.5, "sprint": 283.5 }
+				"walk": { "base": 94.5, "sprint": 283.5 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -5209,24 +7379,38 @@
 		},
 		{
 			"name": "Troodon",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Troodon_Character_BP_Rare.Troodon_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Troodon_Character_BP_Rare.Troodon_Character_BP_Rare_C",
 			"dinoNameTag": "Troodon",
 			"customTag": "Troodon",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 100,
 			"dragWeight": 35,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 408, "sprint": 816 },
-				"swim": { "base": 255 }
+				"walk": { "base": 480, "sprint": 816 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 480, "sprint": 960 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 7,
@@ -5239,7 +7423,7 @@
 		},
 		{
 			"name": "Carbonemys",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Turtle_Character_BP_Rare.Turtle_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Turtle_Character_BP_Rare.Turtle_Character_BP_Rare_C",
 			"dinoNameTag": "Turtle",
 			"customTag": "Turtle",
 			"targetingTeamName": "Herbivores_Medium",
@@ -5253,15 +7437,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1600,
+				"costLevel": 55,
+				"timeBase": 11200,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 100, "sprint": 220 }
+				"walk": { "base": 100, "sprint": 220 },
+				"swim": { "base": 265 }
 			},
 			"movementD": {
-				"walk": { "base": 100, "sprint": 220 }
+				"walk": { "base": 100, "sprint": 220 },
+				"swim": { "base": 265 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 13,
@@ -5271,7 +7471,7 @@
 		},
 		{
 			"name": "Tusoteuthis",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Tusoteuthis_Character_BP_Rare.Tusoteuthis_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Tusoteuthis_Character_BP_Rare.Tusoteuthis_Character_BP_Rare_C",
 			"dinoNameTag": "Tusoteuthis",
 			"customTag": "Tusoteuthis",
 			"targetingTeamName": "Carnivore_Water",
@@ -5285,15 +7485,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 1000 }
+				"walk": { "base": 5000, "sprint": 7500 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"swim": { "base": 1000 }
+				"walk": { "base": 5000, "sprint": 7500 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -5308,7 +7524,7 @@
 		},
 		{
 			"name": "Yutyrannus",
-			"blueprintPath": "/Game/Mods/RareSightings/Dinos/RareDinos/Yutyrannus_Character_BP_Rare.Yutyrannus_Character_BP_Rare_C",
+			"bp": "/Game/Mods/RareSightings/Dinos/RareDinos/Yutyrannus_Character_BP_Rare.Yutyrannus_Character_BP_Rare_C",
 			"dinoNameTag": "Yutyrannus",
 			"customTag": "Yutyrannus",
 			"targetingTeamName": "Carnivores_High",
@@ -5323,6 +7539,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5333,6 +7559,7 @@
 			"movementD": {
 				"walk": { "base": 700, "sprint": 1610 }
 			},
+			"staminaRates": { "sprint": -40 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,

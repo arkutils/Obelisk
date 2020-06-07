@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1588570834",
-	"format": "1",
+	"version": "310.117.1591476450",
+	"format": "2",
 	"mod": {
 		"id": "1676159020",
 		"tag": "Aquaria",
@@ -10,7 +10,7 @@
 	"species": [
 		{
 			"name": "Anomalocaris",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Anomalo/Anomalo_Character_bp.Anomalo_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Anomalo/Anomalo_Character_bp.Anomalo_Character_bp_C",
 			"dinoNameTag": "Trilobite",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
@@ -24,15 +24,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 320 }
+				"walk": { "base": 230, "sprint": 920 },
+				"swim": { "base": 230 }
 			},
 			"movementD": {
-				"swim": { "base": 720 }
+				"walk": { "base": 517.5, "sprint": 2070 },
+				"swim": { "base": 517.5 }
+			},
+			"staminaRates": {
+				"sprint": 0,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -45,22 +61,38 @@
 		},
 		{
 			"name": "Arowana",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Arowana/Arowana_Character_bp.Arowana_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Arowana/Arowana_Character_bp.Arowana_Character_bp_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 300,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 150 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 100 }
 			},
 			"movementD": {
-				"swim": { "base": 337.5 }
+				"walk": { "base": 675, "sprint": 2700 },
+				"swim": { "base": 225 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -70,7 +102,7 @@
 		},
 		{
 			"name": "Cryptoclidus",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Crypto/Crypto_Character_bp.Crypto_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Crypto/Crypto_Character_bp.Crypto_Character_bp_C",
 			"dinoNameTag": "Cryptoclidus",
 			"customTag": "Cryptoclidus",
 			"targetingTeamName": "Herbivores_Medium",
@@ -84,15 +116,31 @@
 				"canDrag",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 1000, "sprint": 3500 },
 				"swim": { "base": 800 }
 			},
 			"movementD": {
+				"walk": { "base": 1000, "sprint": 3500 },
 				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -107,7 +155,7 @@
 		},
 		{
 			"name": "X-Cryptoclidus",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Crypto/Ocean_Crypto_Character_bp.Ocean_Crypto_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Crypto/Ocean_Crypto_Character_bp.Ocean_Crypto_Character_bp_C",
 			"dinoNameTag": "Cryptoclidus",
 			"customTag": "Cryptoclidus",
 			"targetingTeamName": "Herbivores_Medium",
@@ -121,15 +169,31 @@
 				"canDrag",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 1000, "sprint": 3500 },
 				"swim": { "base": 800 }
 			},
 			"movementD": {
+				"walk": { "base": 1000, "sprint": 3500 },
 				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -144,7 +208,7 @@
 		},
 		{
 			"name": "Eastmanosteus",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Eastman/Eastman_Character_BP.Eastman_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Eastman/Eastman_Character_BP.Eastman_Character_BP_C",
 			"dinoNameTag": "Eastman",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
@@ -158,15 +222,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 120, "sprint": 624 },
 				"swim": { "base": 120 }
 			},
 			"movementD": {
+				"walk": { "base": 270, "sprint": 1404 },
 				"swim": { "base": 270 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -176,13 +256,17 @@
 		},
 		{
 			"name": "Fiddler Crab",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Fiddler/Fiddler_Character_BP.Fiddler_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Fiddler/Fiddler_Character_BP.Fiddler_Character_BP_C",
 			"dinoNameTag": "Trilobite",
 			"customTag": "Trilobite",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 50,
 			"dragWeight": 30,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isAmphibious" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -193,6 +277,7 @@
 			"movementD": {
 				"walk": { "base": 70, "sprint": 420 }
 			},
+			"staminaRates": { "sprint": -5 },
 			"attack": {
 				"defaultDmg": 8,
 				"defaultSwingRadius": 90
@@ -200,7 +285,7 @@
 		},
 		{
 			"name": "Great White Shark",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/GreatWhite/GreatWhite_Character_bp.GreatWhite_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/GreatWhite/GreatWhite_Character_bp.GreatWhite_Character_bp_C",
 			"dinoNameTag": "Megalodon",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivore_Water",
@@ -215,15 +300,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 1000, "sprint": 3500 },
 				"swim": { "base": 800 }
 			},
 			"movementD": {
+				"walk": { "base": 1000, "sprint": 3500 },
 				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -237,7 +338,7 @@
 		},
 		{
 			"name": "Great Hammerhead Shark",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Hammerhead/Hammerhead_Character_bp.Hammerhead_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Hammerhead/Hammerhead_Character_bp.Hammerhead_Character_bp_C",
 			"dinoNameTag": "Hammerhead",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
@@ -251,15 +352,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 230, "sprint": 920 },
 				"swim": { "base": 230 }
 			},
 			"movementD": {
+				"walk": { "base": 517.5, "sprint": 2070 },
 				"swim": { "base": 517.5 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -273,7 +390,7 @@
 		},
 		{
 			"name": "Hydrarchos",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Hydrarchos/Hydrarchos_Character_BP.Hydrarchos_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Hydrarchos/Hydrarchos_Character_BP.Hydrarchos_Character_BP_C",
 			"dinoNameTag": "Basilosaurus",
 			"customTag": "Hydrarchos",
 			"targetingTeamName": "Carnivores_Low",
@@ -287,15 +404,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"walk": { "base": 400, "sprint": 2400 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 600 }
+				"walk": { "base": 400, "sprint": 2400 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 90,
@@ -308,7 +441,7 @@
 		},
 		{
 			"name": "Hydrotherosaurus",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Hydrothero/Hydrothero_Character_BP.Hydrothero_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Hydrothero/Hydrothero_Character_BP.Hydrothero_Character_BP_C",
 			"dinoNameTag": "Plesiosaur",
 			"customTag": "Hydrothero",
 			"targetingTeamName": "Herbivores_Large",
@@ -322,15 +455,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 700 }
+				"walk": { "base": 400, "sprint": 1600 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 700 }
+				"walk": { "base": 400, "sprint": 1600 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 90,
@@ -344,7 +493,7 @@
 		},
 		{
 			"name": "Kronosaurus",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Krona/Kronosaurus_Character_bp.Kronosaurus_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Krona/Kronosaurus_Character_bp.Kronosaurus_Character_bp_C",
 			"dinoNameTag": "Liopleurodon",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivores_Low",
@@ -360,16 +509,23 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 400 }
+				"walk": { "base": 200 },
+				"swim": { "base": 800, "sprint": 1600 }
 			},
 			"movementD": {
-				"swim": { "base": 800 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 800, "sprint": 3200 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
@@ -382,7 +538,7 @@
 		},
 		{
 			"name": "Leopard Seal",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/LeopardSeal/LeopardSeal_Character_BP.LeopardSeal_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/LeopardSeal/LeopardSeal_Character_BP.LeopardSeal_Character_BP_C",
 			"dinoNameTag": "Leopard Seal",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivores_Low",
@@ -400,15 +556,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 390 }
+				"walk": { "base": 105, "sprint": 225 },
+				"swim": { "base": 546, "sprint": 1170 }
 			},
 			"movementD": {
-				"swim": { "base": 780 }
+				"walk": { "base": 150, "sprint": 450 },
+				"swim": { "base": 780, "sprint": 2340 }
+			},
+			"staminaRates": {
+				"sprint": -45,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -422,7 +594,7 @@
 		},
 		{
 			"name": "Giant Octopus",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Octo/Octopus_Character_bp.Octopus_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Octo/Octopus_Character_bp.Octopus_Character_bp_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivores_Low",
@@ -436,15 +608,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 700 }
+				"walk": { "base": 400, "sprint": 1600 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 700 }
+				"walk": { "base": 400, "sprint": 1600 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -454,7 +642,7 @@
 		},
 		{
 			"name": "Ophthalmosaurus",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Ophthal/Ophthal_Character_bp.Ophthal_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Ophthal/Ophthal_Character_bp.Ophthal_Character_bp_C",
 			"dinoNameTag": "Dolphin",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Herbivore_Water",
@@ -469,15 +657,25 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 240 }
+				"walk": { "base": 100, "sprint": 60 },
+				"swim": { "base": 800, "sprint": 1536 }
 			},
 			"movementD": {
-				"swim": { "base": 800 }
+				"walk": { "base": 100, "sprint": 200 },
+				"swim": { "base": 800, "sprint": 5120 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -490,7 +688,7 @@
 		},
 		{
 			"name": "Orca",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Orca/Orca_Character_BP.Orca_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Orca/Orca_Character_BP.Orca_Character_BP_C",
 			"dinoNameTag": "Orca",
 			"customTag": "Orca",
 			"targetingTeamName": "Carnivore_Water",
@@ -504,16 +702,27 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 400 }
+				"walk": { "base": 300, "sprint": 600 }
 			},
 			"movementD": {
-				"swim": { "base": 900 }
+				"walk": { "base": 675, "sprint": 1350 }
 			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 170,
@@ -525,7 +734,7 @@
 		},
 		{
 			"name": "Orca",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Orca/Orca_Character_BP_Tameable.Orca_Character_BP_Tameable_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Orca/Orca_Character_BP_Tameable.Orca_Character_BP_Tameable_C",
 			"dinoNameTag": "Orca",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivore_Water",
@@ -539,16 +748,27 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 400 }
+				"walk": { "base": 300, "sprint": 600 }
 			},
 			"movementD": {
-				"swim": { "base": 900 }
+				"walk": { "base": 675, "sprint": 1350 }
 			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 170,
@@ -560,22 +780,38 @@
 		},
 		{
 			"name": "Perch",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Perch/Perch_Character_bp.Perch_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Perch/Perch_Character_bp.Perch_Character_bp_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 300,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 150 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 100 }
 			},
 			"movementD": {
-				"swim": { "base": 337.5 }
+				"walk": { "base": 675, "sprint": 2700 },
+				"swim": { "base": 225 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -585,22 +821,38 @@
 		},
 		{
 			"name": "Pike",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Pike/Pike_Character_bp.Pike_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Pike/Pike_Character_bp.Pike_Character_bp_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 300,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 150 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 100 }
 			},
 			"movementD": {
-				"swim": { "base": 337.5 }
+				"walk": { "base": 675, "sprint": 2700 },
+				"swim": { "base": 225 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -610,7 +862,7 @@
 		},
 		{
 			"name": "Titan Sailfish",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Sailfish/TitanSailfish_Character_BP.TitanSailfish_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Sailfish/TitanSailfish_Character_BP.TitanSailfish_Character_BP_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivore_Water",
@@ -624,15 +876,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 2400 }
+				"walk": { "base": 400, "sprint": 8000 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 2400 }
+				"walk": { "base": 400, "sprint": 8000 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -642,7 +910,7 @@
 		},
 		{
 			"name": "Shonisaurus",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Shoni/Shoni_Character_bp.Shoni_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Shoni/Shoni_Character_bp.Shoni_Character_bp_C",
 			"dinoNameTag": "Ichthy",
 			"customTag": "Shoni",
 			"targetingTeamName": "Carnivore_Water",
@@ -657,15 +925,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 1400 }
+				"walk": { "base": 230, "sprint": 2070 },
+				"swim": { "base": 230 }
 			},
 			"movementD": {
-				"swim": { "base": 1400 }
+				"walk": { "base": 230, "sprint": 2070 },
+				"swim": { "base": 230 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -679,22 +963,38 @@
 		},
 		{
 			"name": "Giant Vampire Squid",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/VampireSquid/VSquid_Character_bp.VSquid_Character_bp_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/VampireSquid/VSquid_Character_bp.VSquid_Character_bp_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 300,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 300 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 100 }
 			},
 			"movementD": {
-				"swim": { "base": 675 }
+				"walk": { "base": 675, "sprint": 2700 },
+				"swim": { "base": 225 }
+			},
+			"staminaRates": {
+				"sprint": -8,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -704,7 +1004,7 @@
 		},
 		{
 			"name": "Walrus",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Walrus/Walrus_Character_BP.Walrus_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Walrus/Walrus_Character_BP.Walrus_Character_BP_C",
 			"dinoNameTag": "Walrus",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Herbivores",
@@ -722,15 +1022,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 340 }
+				"walk": { "base": 84, "sprint": 180 },
+				"swim": { "base": 476, "sprint": 1020 }
 			},
 			"movementD": {
-				"swim": { "base": 680 }
+				"walk": { "base": 120, "sprint": 360 },
+				"swim": { "base": 680, "sprint": 2040 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -744,7 +1060,7 @@
 		},
 		{
 			"name": "Zygophyseter",
-			"blueprintPath": "/Game/Mods/Aquaria/FIsh/Zygo/Zygo_Character_BP.Zygo_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/FIsh/Zygo/Zygo_Character_BP.Zygo_Character_BP_C",
 			"dinoNameTag": "Basilosaurus",
 			"customTag": "Zygo",
 			"targetingTeamName": "Carnivores_Low",
@@ -758,15 +1074,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 800 }
+				"walk": { "base": 400, "sprint": 2400 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 800 }
+				"walk": { "base": 400, "sprint": 2400 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 90,
@@ -780,7 +1112,7 @@
 		},
 		{
 			"name": "Skeletal Rex",
-			"blueprintPath": "/Game/Mods/Aquaria/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
 			"dinoNameTag": "Bone Rex",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -794,15 +1126,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 377.5, "sprint": 1079.6 }
+				"walk": { "base": 755, "sprint": 1079.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 566.2, "sprint": 1619.5 }
+				"walk": { "base": 755, "sprint": 1619.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 170,
@@ -815,7 +1163,7 @@
 		},
 		{
 			"name": "Skeletal Bronto",
-			"blueprintPath": "/Game/Mods/Aquaria/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
+			"bp": "/Game/Mods/Aquaria/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
 			"dinoNameTag": "Bronto",
 			"customTag": "Bronto",
 			"targetingTeamName": "Herbivores_Large",
@@ -829,15 +1177,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 607.5 }
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 405 }
+				"walk": { "base": 180, "sprint": 405 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 90,

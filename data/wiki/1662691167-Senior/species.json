@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1573149003",
-	"format": "1",
+	"version": "310.117.1573149003",
+	"format": "2",
 	"mod": {
 		"id": "1662691167",
 		"tag": "Senior",
@@ -10,7 +10,7 @@
 	"species": [
 		{
 			"name": "Achillobator",
-			"blueprintPath": "/Game/Mods/Senior/Achillobator/Achillobator_Character_BP.Achillobator_Character_BP_C",
+			"bp": "/Game/Mods/Senior/Achillobator/Achillobator_Character_BP.Achillobator_Character_BP_C",
 			"dinoNameTag": "Raptor",
 			"customTag": "Senior",
 			"targetingTeamName": "Carnivores_Medium",
@@ -24,6 +24,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -35,6 +45,10 @@
 			"movementD": {
 				"walk": { "base": 256, "sprint": 1536 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -48,7 +62,7 @@
 		},
 		{
 			"name": "Arapaima",
-			"blueprintPath": "/Game/Mods/Senior/Arapaima/Pirarucu_Character_bp.Pirarucu_Character_bp_C",
+			"bp": "/Game/Mods/Senior/Arapaima/Pirarucu_Character_bp.Pirarucu_Character_bp_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "Senior",
 			"targetingTeamName": "Carnivores_Low",
@@ -62,15 +76,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 50 }
+				"walk": { "base": 100, "sprint": 210 },
+				"swim": { "base": 100 }
 			},
 			"movementD": {
+				"walk": { "base": 225, "sprint": 945 },
 				"swim": { "base": 225 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -83,7 +113,7 @@
 		},
 		{
 			"name": "Dakosaurus",
-			"blueprintPath": "/Game/Mods/Senior/Dakosaurus/Dakosaur_Character_BP.Dakosaur_Character_BP_C",
+			"bp": "/Game/Mods/Senior/Dakosaurus/Dakosaur_Character_BP.Dakosaur_Character_BP_C",
 			"dinoNameTag": "Sarco",
 			"customTag": "Senior",
 			"targetingTeamName": "Carnivores_High",
@@ -97,15 +127,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 525,
+				"costLevel": 55,
+				"timeBase": 3675,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 325 }
+				"walk": { "base": 50, "sprint": 48.7 },
+				"swim": { "base": 500, "sprint": 487.5 }
 			},
 			"movementD": {
-				"swim": { "base": 1462.5 }
+				"walk": { "base": 112.5, "sprint": 219.4 },
+				"swim": { "base": 1125, "sprint": 2193.7 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -120,7 +166,7 @@
 		},
 		{
 			"name": "Cyprus Dwarf Hippo",
-			"blueprintPath": "/Game/Mods/Senior/Hippo/CyprusHippo_Character_BP.CyprusHippo_Character_BP_C",
+			"bp": "/Game/Mods/Senior/Hippo/CyprusHippo_Character_BP.CyprusHippo_Character_BP_C",
 			"dinoNameTag": "Phiomia",
 			"customTag": "Senior",
 			"targetingTeamName": "Herbivores_Medium",
@@ -134,17 +180,25 @@
 				"canDrag",
 				"isAmphibious"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 144, "sprint": 1008 },
-				"swim": { "base": 774 }
+				"walk": { "base": 160, "sprint": 1008 },
+				"swim": { "base": 860 }
 			},
 			"movementD": {
 				"walk": { "base": 160, "sprint": 1120 },
 				"swim": { "base": 860 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -158,7 +212,7 @@
 		},
 		{
 			"name": "Megaraptor",
-			"blueprintPath": "/Game/Mods/Senior/Megaraptor/Megarap_Character_BP.Megarap_Character_BP_C",
+			"bp": "/Game/Mods/Senior/Megaraptor/Megarap_Character_BP.Megarap_Character_BP_C",
 			"dinoNameTag": "Allo",
 			"customTag": "Senior",
 			"targetingTeamName": "Carnivores_Medium",
@@ -173,6 +227,10 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -184,6 +242,10 @@
 			"movementD": {
 				"walk": { "base": 540, "sprint": 1890 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,

@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1563727344",
-	"format": "1",
+	"version": "310.117.1563727344",
+	"format": "2",
 	"mod": {
 		"id": "1498206270",
 		"tag": "SmallDragon",
@@ -10,7 +10,7 @@
 	"species": [
 		{
 			"name": "Dino Flyer",
-			"blueprintPath": "/Game/Mods/SmallDragon/Dino_Character_BP_DivingDragonFlyer.Dino_Character_BP_DivingDragonFlyer_C",
+			"bp": "/Game/Mods/SmallDragon/Dino_Character_BP_DivingDragonFlyer.Dino_Character_BP_DivingDragonFlyer_C",
 			"dinoNameTag": "Diving Flyer",
 			"customTag": "",
 			"targetingTeamName": "",
@@ -23,19 +23,28 @@
 				"canBeTorpid",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"ramp": "Player",
+				"maxExperience": 100000,
+				"maxLevels": 74
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 600, "sprint": 900 },
-				"fly": { "base": 600 },
+				"fly": { "base": 600, "sprint": 900 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 600, "sprint": 900 },
-				"fly": { "base": 600 },
+				"fly": { "base": 600, "sprint": 900 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -0.3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -44,7 +53,7 @@
 		},
 		{
 			"name": "Small Dragon",
-			"blueprintPath": "/Game/Mods/SmallDragon/SmallDragon_Character_BP.SmallDragon_Character_BP_C",
+			"bp": "/Game/Mods/SmallDragon/SmallDragon_Character_BP.SmallDragon_Character_BP_C",
 			"dinoNameTag": "Small Dragon",
 			"customTag": "Small Dragon",
 			"targetingTeamName": "Carnivores_High",
@@ -61,19 +70,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 330, "sprint": 990 },
-				"fly": { "base": 915, "sprint": 503.3 },
-				"swim": { "base": 60 }
+				"fly": { "base": 915, "sprint": 1509.8 },
+				"swim": { "base": 915 }
 			},
 			"movementD": {
-				"walk": { "base": 552.8, "sprint": 1658.3 },
-				"fly": { "base": 1532.6, "sprint": 842.9 },
-				"swim": { "base": 100.5 }
+				"walk": { "base": 495, "sprint": 1658.3 },
+				"fly": { "base": 1372.5, "sprint": 2528.8 },
+				"swim": { "base": 1372.5 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -1
 			},
 			"attack": {
 				"defaultDmg": 160,

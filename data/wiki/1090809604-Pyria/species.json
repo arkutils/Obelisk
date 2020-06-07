@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1586455859",
-	"format": "1",
+	"version": "310.117.1586455859",
+	"format": "2",
 	"mod": {
 		"id": "1090809604",
 		"tag": "Pyria",
@@ -10,7 +10,7 @@
 	"species": [
 		{
 			"name": "Rockwell",
-			"blueprintPath": "/Game/Mods/Pyria/Aberration/Boss/Rockwell/Rockwell_Character_BP.Rockwell_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Aberration/Boss/Rockwell/Rockwell_Character_BP.Rockwell_Character_BP_C",
 			"dinoNameTag": "Rockwell",
 			"customTag": "Rockwell",
 			"targetingTeamName": "Carnivores_High",
@@ -23,11 +23,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 0 }
+				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"swim": { "base": 0 }
+				"swim": { "base": 600 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 160,
 				"defaultSwingRadius": 1200,
@@ -40,7 +41,7 @@
 		},
 		{
 			"name": "RockwellTentacle",
-			"blueprintPath": "/Game/Mods/Pyria/Aberration/Boss/RockwellTentacle/RockwellTentacle_Character_BP.RockwellTentacle_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Aberration/Boss/RockwellTentacle/RockwellTentacle_Character_BP.RockwellTentacle_Character_BP_C",
 			"dinoNameTag": "",
 			"customTag": "RockwellTentacle",
 			"targetingTeamName": "",
@@ -53,11 +54,14 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 0 }
+				"walk": { "base": 0 },
+				"swim": { "base": 0 }
 			},
 			"movementD": {
-				"walk": { "base": 0 }
+				"walk": { "base": 0 },
+				"swim": { "base": 0 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90
@@ -65,7 +69,7 @@
 		},
 		{
 			"name": "Nameless",
-			"blueprintPath": "/Game/Mods/Pyria/Aberration/Dinos/ChupaCabra/ChupaCabra_Character_BP_Minion.ChupaCabra_Character_BP_Minion_C",
+			"bp": "/Game/Mods/Pyria/Aberration/Dinos/ChupaCabra/ChupaCabra_Character_BP_Minion.ChupaCabra_Character_BP_Minion_C",
 			"dinoNameTag": "Chupacabra",
 			"customTag": "Chupacabra",
 			"targetingTeamName": "Carnivores_High",
@@ -73,15 +77,25 @@
 			"dragWeight": 180,
 			"variants": [ "Minion" ],
 			"flags": [ "canBeDragged", "canBeTorpid", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 296.8, "sprint": 667.8 }
+				"walk": { "base": 424, "sprint": 667.8 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 424, "sprint": 954 }
+				"walk": { "base": 424, "sprint": 954 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 36,
@@ -95,7 +109,7 @@
 		},
 		{
 			"name": "Automaton",
-			"blueprintPath": "/Game/Mods/Pyria/Alchemy/Automaton/Automaton_Character_BP.Automaton_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/Automaton/Automaton_Character_BP.Automaton_Character_BP_C",
 			"dinoNameTag": "Automaton",
 			"customTag": "Automaton",
 			"targetingTeamName": "Carnivores_Medium",
@@ -108,6 +122,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -120,6 +144,7 @@
 				"walk": { "base": 200 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": { "swimOrFly": 0 },
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
@@ -132,7 +157,7 @@
 		},
 		{
 			"name": "Automaton",
-			"blueprintPath": "/Game/Mods/Pyria/Alchemy/Automaton/Automaton_Character_BP_Created.Automaton_Character_BP_Created_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/Automaton/Automaton_Character_BP_Created.Automaton_Character_BP_Created_C",
 			"dinoNameTag": "Automaton",
 			"customTag": "Automaton",
 			"targetingTeamName": "Carnivores_Medium",
@@ -145,6 +170,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -157,6 +192,7 @@
 				"walk": { "base": 200 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": { "swimOrFly": 0 },
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
@@ -169,7 +205,7 @@
 		},
 		{
 			"name": "Gargoyle",
-			"blueprintPath": "/Game/Mods/Pyria/Alchemy/Gargoyle/Gargoyle_Character_bp.Gargoyle_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/Gargoyle/Gargoyle_Character_bp.Gargoyle_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -186,19 +222,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 150, "sprint": 450 },
-				"fly": { "base": 550, "sprint": 330 },
+				"fly": { "base": 550, "sprint": 990 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 150, "sprint": 450 },
-				"fly": { "base": 550, "sprint": 330 },
+				"fly": { "base": 550, "sprint": 990 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -24
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -211,7 +255,7 @@
 		},
 		{
 			"name": "Sentinel",
-			"blueprintPath": "/Game/Mods/Pyria/Alchemy/Sentinel/Sentinel_Character_BP.Sentinel_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/Sentinel/Sentinel_Character_BP.Sentinel_Character_BP_C",
 			"dinoNameTag": "Krasue",
 			"customTag": "Krasue",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -224,19 +268,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 300, "sprint": 1290 },
-				"fly": { "base": 400, "sprint": 360 },
+				"fly": { "base": 400, "sprint": 1548 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 300, "sprint": 1290 },
-				"fly": { "base": 400, "sprint": 360 },
+				"fly": { "base": 400, "sprint": 1548 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -252,7 +304,7 @@
 		},
 		{
 			"name": "Drake",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/DragonKing/Drake/Drake_Character_BP.Drake_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/DragonKing/Drake/Drake_Character_BP.Drake_Character_BP_C",
 			"dinoNameTag": "Drake",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -269,19 +321,25 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 700, "sprint": 3500 },
-				"fly": { "base": 3000, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"fly": { "base": 3000, "sprint": 6000 }
 			},
 			"movementD": {
 				"walk": { "base": 700, "sprint": 3500 },
-				"fly": { "base": 3000, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"fly": { "base": 3000, "sprint": 6000 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -10
 			},
 			"attack": {
 				"defaultDmg": 120,
@@ -296,7 +354,7 @@
 		},
 		{
 			"name": "Escadora",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/DragonKing/Escadora/Escadora_Character_BP.Escadora_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/DragonKing/Escadora/Escadora_Character_BP.Escadora_Character_BP_C",
 			"dinoNameTag": "Escadora",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -313,19 +371,25 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 700, "sprint": 3500 },
-				"fly": { "base": 3000, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"fly": { "base": 3000, "sprint": 6000 }
 			},
 			"movementD": {
 				"walk": { "base": 700, "sprint": 3500 },
-				"fly": { "base": 3000, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"fly": { "base": 3000, "sprint": 6000 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -10
 			},
 			"attack": {
 				"defaultDmg": 120,
@@ -344,7 +408,7 @@
 		},
 		{
 			"name": "Ryu",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/DragonKing/Ryu/Ryu_Character_BP.Ryu_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/DragonKing/Ryu/Ryu_Character_BP.Ryu_Character_BP_C",
 			"dinoNameTag": "Ryu",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -360,15 +424,25 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 1600 }
+				"walk": { "base": 500, "sprint": 2000 },
+				"swim": { "base": 1600, "sprint": 5120 }
 			},
 			"movementD": {
-				"swim": { "base": 1600 }
+				"walk": { "base": 500, "sprint": 2000 },
+				"swim": { "base": 1600, "sprint": 5120 }
+			},
+			"staminaRates": {
+				"sprint": -60,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 115,
@@ -384,7 +458,7 @@
 		},
 		{
 			"name": "Smok",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/DragonKing/Smok/Smok_Character_BP.Smok_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/DragonKing/Smok/Smok_Character_BP.Smok_Character_BP_C",
 			"dinoNameTag": "Smok",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -402,19 +476,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 412, "sprint": 1178.3 },
-				"fly": { "base": 2400, "sprint": 1440 },
-				"swim": { "base": 240 }
+				"walk": { "base": 515, "sprint": 1178.3 },
+				"fly": { "base": 3000, "sprint": 4118.4 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 515, "sprint": 1472.9 },
-				"fly": { "base": 3000, "sprint": 1800 },
+				"fly": { "base": 3000, "sprint": 5148 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -50,
+				"swimOrFly": -20
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -432,7 +520,7 @@
 		},
 		{
 			"name": "Dimorphodon",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/DragonKing/Yggdrasil/Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Ygg.Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Ygg_C",
+			"bp": "/Game/Mods/Pyria/Creatures/DragonKing/Yggdrasil/Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Ygg.Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Ygg_C",
 			"dinoNameTag": "Dimorph",
 			"customTag": "Dimorph",
 			"targetingTeamName": "Herbivores_Large",
@@ -446,19 +534,29 @@
 				"isBossDino",
 				"isFlyerDino"
 			],
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 2000 },
-				"swim": { "base": 400 }
+				"fly": { "base": 2000, "sprint": 3600 },
+				"swim": { "base": 2000 }
 			},
 			"movementD": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 2000 },
-				"swim": { "base": 400 }
+				"fly": { "base": 2000, "sprint": 3600 },
+				"swim": { "base": 2000 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 23,
@@ -468,7 +566,7 @@
 		},
 		{
 			"name": "Yggdrasil",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/DragonKing/Yggdrasil/WildYgg_Character_BP.WildYgg_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/DragonKing/Yggdrasil/WildYgg_Character_BP.WildYgg_Character_BP_C",
 			"dinoNameTag": "Ygg",
 			"customTag": "DragonKing",
 			"targetingTeamName": "Herbivores_Large",
@@ -489,11 +587,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 425, "sprint": 2125 }
+				"walk": { "base": 850, "sprint": 2125 }
 			},
 			"movementD": {
 				"walk": { "base": 850, "sprint": 4250 }
 			},
+			"staminaRates": { "sprint": -760 },
 			"attack": {
 				"defaultDmg": 120,
 				"defaultSwingRadius": 300,
@@ -511,7 +610,7 @@
 		},
 		{
 			"name": "Yggdrasil",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/DragonKing/Yggdrasil/Ygg_Character_BP_Allied.Ygg_Character_BP_Allied_C",
+			"bp": "/Game/Mods/Pyria/Creatures/DragonKing/Yggdrasil/Ygg_Character_BP_Allied.Ygg_Character_BP_Allied_C",
 			"dinoNameTag": "Ygg",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Herbivores_Large",
@@ -534,14 +633,16 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 425, "sprint": 2125 },
-				"fly": { "base": 600, "sprint": 240 },
-				"swim": { "base": 150 }
+				"walk": { "base": 850, "sprint": 2125 },
+				"fly": { "base": 1200 }
 			},
 			"movementD": {
 				"walk": { "base": 850, "sprint": 4250 },
-				"fly": { "base": 1200, "sprint": 480 },
-				"swim": { "base": 300 }
+				"fly": { "base": 1200, "sprint": 2400 }
+			},
+			"staminaRates": {
+				"sprint": -760,
+				"swimOrFly": -1260
 			},
 			"attack": {
 				"defaultDmg": 120,
@@ -560,7 +661,7 @@
 		},
 		{
 			"name": "Demon",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Ferals/Demon/Demon_Character_bp.Demon_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Demon/Demon_Character_bp.Demon_Character_bp_C",
 			"dinoNameTag": "DarkPaladin",
 			"customTag": "DarkPaladin",
 			"targetingTeamName": "Carnivores_High",
@@ -574,6 +675,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -586,6 +697,10 @@
 				"walk": { "base": 170, "sprint": 1020 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
@@ -594,7 +709,7 @@
 		},
 		{
 			"name": "Gelragarian",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Gelragarian_Character_BP.Gelragarian_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Gelragarian_Character_BP.Gelragarian_Character_BP_C",
 			"dinoNameTag": "Gelragarian",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
@@ -608,6 +723,16 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -619,6 +744,10 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 700 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -632,7 +761,7 @@
 		},
 		{
 			"name": "Quinkan",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Ferals/Quinkan/Quinkan_Character_BP.Quinkan_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Quinkan/Quinkan_Character_BP.Quinkan_Character_BP_C",
 			"dinoNameTag": "Chupacabra",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Medium",
@@ -645,6 +774,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -656,6 +795,10 @@
 			"movementD": {
 				"walk": { "base": 288, "sprint": 1152 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -24,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -669,7 +812,7 @@
 		},
 		{
 			"name": "Saberian",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Ferals/Saberian/Saberian_Character_BP.Saberian_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Saberian/Saberian_Character_BP.Saberian_Character_BP_C",
 			"dinoNameTag": "Saberian",
 			"customTag": "Saberian",
 			"targetingTeamName": "Carnivores_Medium",
@@ -682,6 +825,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -693,6 +846,10 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 800 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -706,7 +863,7 @@
 		},
 		{
 			"name": "Tibur",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Ferals/Tibur/Tibur_Character_BP.Tibur_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Tibur/Tibur_Character_BP.Tibur_Character_BP_C",
 			"dinoNameTag": "Gelragarian",
 			"customTag": "Gelragarian",
 			"targetingTeamName": "Herbivores_Medium",
@@ -722,15 +879,31 @@
 				"isBigDino",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 700 },
+				"swim": { "base": 600, "sprint": 2100 }
 			},
 			"movementD": {
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 700 },
+				"swim": { "base": 600, "sprint": 2100 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -744,7 +917,7 @@
 		},
 		{
 			"name": "Marauding Tibur",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Ferals/Tibur/Tibur_Character_BP_Hostile.Tibur_Character_BP_Hostile_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Tibur/Tibur_Character_BP_Hostile.Tibur_Character_BP_Hostile_C",
 			"dinoNameTag": "Gelragarian",
 			"customTag": "Gelragarian",
 			"targetingTeamName": "Carnivore_Water",
@@ -761,15 +934,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 700 },
+				"swim": { "base": 600, "sprint": 2100 }
 			},
 			"movementD": {
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 700 },
+				"swim": { "base": 600, "sprint": 2100 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -782,7 +971,7 @@
 		},
 		{
 			"name": "Divine Archer",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Artemis/Artemis_Character_BP.Artemis_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Artemis/Artemis_Character_BP.Artemis_Character_BP_C",
 			"dinoNameTag": "Artemis",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
@@ -795,6 +984,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -806,6 +1005,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 480 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -826,7 +1029,7 @@
 		},
 		{
 			"name": "Divine Eminence",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP.Eminence_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP.Eminence_Character_BP_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
@@ -839,6 +1042,16 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -850,6 +1063,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 720 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -864,7 +1081,7 @@
 		},
 		{
 			"name": "Dark Insidious Eminence",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Dark.Eminence_Character_BP_Dark_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Dark.Eminence_Character_BP_Dark_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Berserker",
 			"targetingTeamName": "Carnivores_High",
@@ -881,6 +1098,12 @@
 				"isBossDino",
 				"isCarnivore"
 			],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -892,6 +1115,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 720 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -907,7 +1134,7 @@
 		},
 		{
 			"name": "Dark Insidious Eminence (Admin Avatar)",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Dark_Avatar.Eminence_Character_BP_Dark_Avatar_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Dark_Avatar.Eminence_Character_BP_Dark_Avatar_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
@@ -924,6 +1151,12 @@
 				"isBigDino",
 				"isBossDino"
 			],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -935,6 +1168,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 720 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -950,7 +1187,7 @@
 		},
 		{
 			"name": "Divine Fatewalker Eminence",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Fatewalker.Eminence_Character_BP_Fatewalker_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Fatewalker.Eminence_Character_BP_Fatewalker_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
@@ -964,6 +1201,16 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -975,6 +1222,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 720 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -990,7 +1241,7 @@
 		},
 		{
 			"name": "Divine Fatewalker Eminence (Admin Avatar)",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Fatewalker_Avatar.Eminence_Character_BP_Fatewalker_Avatar_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Fatewalker_Avatar.Eminence_Character_BP_Fatewalker_Avatar_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Berserker",
 			"targetingTeamName": "Carnivores_High",
@@ -1005,6 +1256,16 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1016,6 +1277,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 720 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1031,7 +1296,7 @@
 		},
 		{
 			"name": "Harpy",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Harpy/Harpy_Character_BP.Harpy_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Harpy/Harpy_Character_BP.Harpy_Character_BP_C",
 			"dinoNameTag": "Harpy",
 			"customTag": "Harpy",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1046,19 +1311,33 @@
 				"flyerAllowRidingInCaves",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 180, "sprint": 414 },
-				"fly": { "base": 540, "sprint": 378 },
-				"swim": { "base": 270 }
+				"walk": { "base": 200, "sprint": 414 },
+				"fly": { "base": 600, "sprint": 869.4 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 200, "sprint": 460 },
-				"fly": { "base": 600, "sprint": 420 },
+				"fly": { "base": 600, "sprint": 966 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1072,7 +1351,7 @@
 		},
 		{
 			"name": "Harpy",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Harpy/Harpy_Character_BP_Tameable.Harpy_Character_BP_Tameable_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Harpy/Harpy_Character_BP_Tameable.Harpy_Character_BP_Tameable_C",
 			"dinoNameTag": "Harpy",
 			"customTag": "Harpy",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -1087,19 +1366,33 @@
 				"flyerAllowRidingInCaves",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 180, "sprint": 414 },
-				"fly": { "base": 540, "sprint": 378 },
-				"swim": { "base": 270 }
+				"walk": { "base": 200, "sprint": 414 },
+				"fly": { "base": 600, "sprint": 869.4 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 200, "sprint": 460 },
-				"fly": { "base": 600, "sprint": 420 },
+				"fly": { "base": 600, "sprint": 966 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1113,7 +1406,7 @@
 		},
 		{
 			"name": "Medusa",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Medusa/Medusa_Character_bp.Medusa_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Medusa/Medusa_Character_bp.Medusa_Character_bp_C",
 			"dinoNameTag": "Medusa",
 			"customTag": "Medusa",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1127,15 +1420,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 660 }
+				"walk": { "base": 200, "sprint": 660 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 660 }
+				"walk": { "base": 200, "sprint": 660 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -1151,7 +1454,7 @@
 		},
 		{
 			"name": "Medusa",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Medusa/Medusa_Character_bp_Orphan.Medusa_Character_bp_Orphan_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Medusa/Medusa_Character_bp_Orphan.Medusa_Character_bp_Orphan_C",
 			"dinoNameTag": "Medusa",
 			"customTag": "Medusa",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1165,15 +1468,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 660 }
+				"walk": { "base": 200, "sprint": 660 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 660 }
+				"walk": { "base": 200, "sprint": 660 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -1189,7 +1502,7 @@
 		},
 		{
 			"name": "Mermaid",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/Mermaid_Character_BP.Mermaid_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/Mermaid_Character_BP.Mermaid_Character_BP_C",
 			"dinoNameTag": "Mermaid",
 			"customTag": "Mermaid",
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
@@ -1203,15 +1516,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 360 }
+				"walk": { "base": 600, "sprint": 720 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"swim": { "base": 1188 }
+				"walk": { "base": 1350, "sprint": 2376 },
+				"swim": { "base": 1350 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -1225,13 +1554,23 @@
 		},
 		{
 			"name": "Divine Zenith",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Mamono/Zenith/Zenith_Character_BP.Zenith_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Zenith/Zenith_Character_BP.Zenith_Character_BP_C",
 			"dinoNameTag": "Zenith",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 165,
 			"dragWeight": 580,
 			"flags": [ "allowCarryFlyerDinos", "allowMountedWeaponry", "canBeDragged", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1243,6 +1582,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 720 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1267,7 +1610,7 @@
 		},
 		{
 			"name": "Archdemon",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/ArchDemon/ArchDemon_Character_BP.ArchDemon_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/ArchDemon/ArchDemon_Character_BP.ArchDemon_Character_BP_C",
 			"dinoNameTag": "Rockwell",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_High",
@@ -1293,6 +1636,7 @@
 			"movementD": {
 				"walk": { "base": 350, "sprint": 1400 }
 			},
+			"staminaRates": { "sprint": -15 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -1307,7 +1651,7 @@
 		},
 		{
 			"name": "Archdemon (Admin Avatar)",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/ArchDemon/ArchDemon_Character_BP_Admin.ArchDemon_Character_BP_Admin_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/ArchDemon/ArchDemon_Character_BP_Admin.ArchDemon_Character_BP_Admin_C",
 			"dinoNameTag": "Rockwell",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_High",
@@ -1333,6 +1677,7 @@
 			"movementD": {
 				"walk": { "base": 350, "sprint": 1400 }
 			},
+			"staminaRates": { "sprint": -15 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -1347,7 +1692,7 @@
 		},
 		{
 			"name": "Centaur",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP_Female.Centaur_Character_BP_Female_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP_Female.Centaur_Character_BP_Female_C",
 			"dinoNameTag": "LadyCentaur",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores",
@@ -1361,6 +1706,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1372,6 +1727,10 @@
 			"movementD": {
 				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1389,7 +1748,7 @@
 		},
 		{
 			"name": "Centaur",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP_Female_Flame.Centaur_Character_BP_Female_Flame_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP_Female_Flame.Centaur_Character_BP_Female_Flame_C",
 			"dinoNameTag": "LadyCentaur",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores",
@@ -1403,6 +1762,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1414,6 +1783,10 @@
 			"movementD": {
 				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1430,7 +1803,7 @@
 		},
 		{
 			"name": "Centaur",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP_Female_Tranq.Centaur_Character_BP_Female_Tranq_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP_Female_Tranq.Centaur_Character_BP_Female_Tranq_C",
 			"dinoNameTag": "LadyCentaur",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores",
@@ -1444,6 +1817,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1455,6 +1838,10 @@
 			"movementD": {
 				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1472,7 +1859,7 @@
 		},
 		{
 			"name": "Centaur",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Male/Centaur_Character_BP_Male.Centaur_Character_BP_Male_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Male/Centaur_Character_BP_Male.Centaur_Character_BP_Male_C",
 			"dinoNameTag": "MaleCentaur",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores",
@@ -1487,6 +1874,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1498,6 +1895,10 @@
 			"movementD": {
 				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1511,7 +1912,7 @@
 		},
 		{
 			"name": "Dark Paladin",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Paladin/Paladin_Character_BP_Dark.Paladin_Character_BP_Dark_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Paladin/Paladin_Character_BP_Dark.Paladin_Character_BP_Dark_C",
 			"dinoNameTag": "DarkPaladin",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1524,6 +1925,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1535,6 +1946,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 480 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1549,7 +1964,7 @@
 		},
 		{
 			"name": "Dark Paladin",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Paladin/Paladin_Character_BP_Dark_Wild.Paladin_Character_BP_Dark_Wild_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Paladin/Paladin_Character_BP_Dark_Wild.Paladin_Character_BP_Dark_Wild_C",
 			"dinoNameTag": "DarkPaladin",
 			"customTag": "DarkPaladin",
 			"targetingTeamName": "Carnivores_High",
@@ -1563,6 +1978,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1574,6 +1999,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 480 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1588,7 +2017,7 @@
 		},
 		{
 			"name": "Dark Paladin",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Paladin/Paladin_Character_BP_Dark_Wild_Minion.Paladin_Character_BP_Dark_Wild_Minion_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Paladin/Paladin_Character_BP_Dark_Wild_Minion.Paladin_Character_BP_Dark_Wild_Minion_C",
 			"dinoNameTag": "DarkPaladin",
 			"customTag": "DarkPaladin",
 			"targetingTeamName": "Carnivores_High",
@@ -1603,6 +2032,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1614,6 +2053,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 480 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1628,7 +2071,7 @@
 		},
 		{
 			"name": "Divine Berserker",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Devine/Female/Berserker_Character_BP.Berserker_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Devine/Female/Berserker_Character_BP.Berserker_Character_BP_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1641,6 +2084,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1652,6 +2105,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 720 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1666,7 +2123,7 @@
 		},
 		{
 			"name": "Divine Paladin",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Devine/Paladin/Paladin_Character_BP.Paladin_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Devine/Paladin/Paladin_Character_BP.Paladin_Character_BP_C",
 			"dinoNameTag": "Paladin",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1679,6 +2136,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1690,6 +2157,10 @@
 			"movementD": {
 				"walk": { "base": 120, "sprint": 480 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1707,7 +2178,7 @@
 		},
 		{
 			"name": "Goblin (Daggers)",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Goblin/Goblin_Character_BP_Dagger.Goblin_Character_BP_Dagger_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Goblin/Goblin_Character_BP_Dagger.Goblin_Character_BP_Dagger_C",
 			"dinoNameTag": "Saberian",
 			"customTag": "Saberian",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1720,6 +2191,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1731,6 +2212,10 @@
 			"movementD": {
 				"walk": { "base": 150, "sprint": 600 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1743,7 +2228,7 @@
 		},
 		{
 			"name": "Goblin (Slingshot)",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Goblin/Goblin_Character_BP_Slingshot.Goblin_Character_BP_Slingshot_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Goblin/Goblin_Character_BP_Slingshot.Goblin_Character_BP_Slingshot_C",
 			"dinoNameTag": "Saberian",
 			"customTag": "Saberian",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1756,6 +2241,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1767,6 +2262,10 @@
 			"movementD": {
 				"walk": { "base": 150, "sprint": 525 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1782,7 +2281,7 @@
 		},
 		{
 			"name": "Goblin (Sword&Shield)",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Goblin/Goblin_Character_BP_Sword.Goblin_Character_BP_Sword_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Goblin/Goblin_Character_BP_Sword.Goblin_Character_BP_Sword_C",
 			"dinoNameTag": "Saberian",
 			"customTag": "Saberian",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1795,6 +2294,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1807,6 +2316,10 @@
 				"walk": { "base": 150, "sprint": 525 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
@@ -1815,7 +2328,7 @@
 		},
 		{
 			"name": "Hobgoblin",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/HobGoblin/Hobgoblin_Character_BP.Hobgoblin_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/HobGoblin/Hobgoblin_Character_BP.Hobgoblin_Character_BP_C",
 			"dinoNameTag": "Gelragarian",
 			"customTag": "Gelragarian",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1829,15 +2342,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 525 }
+				"walk": { "base": 150, "sprint": 525 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 525 }
+				"walk": { "base": 150, "sprint": 525 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1850,7 +2379,7 @@
 		},
 		{
 			"name": "Kobold",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Kobold/Kobold_Character_BP.Kobold_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Kobold/Kobold_Character_BP.Kobold_Character_BP_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1863,15 +2392,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 223.2, "sprint": 669.6 }
+				"walk": { "base": 223.2, "sprint": 669.6 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 223.2, "sprint": 669.6 }
+				"walk": { "base": 223.2, "sprint": 669.6 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -1884,7 +2429,7 @@
 		},
 		{
 			"name": "Ogre",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Ogre/Ogre_Character_BP.Ogre_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Ogre/Ogre_Character_BP.Ogre_Character_BP_C",
 			"dinoNameTag": "Rockwell",
 			"customTag": "",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -1910,6 +2455,7 @@
 			"movementD": {
 				"walk": { "base": 350 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -1922,7 +2468,7 @@
 		},
 		{
 			"name": "HC Ogre",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Ogre/Ogre_Character_BP_HC.Ogre_Character_BP_HC_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Ogre/Ogre_Character_BP_HC.Ogre_Character_BP_HC_C",
 			"dinoNameTag": "Rockwell",
 			"customTag": "",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -1948,6 +2494,7 @@
 			"movementD": {
 				"walk": { "base": 350 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -1961,7 +2508,7 @@
 		},
 		{
 			"name": "Enslaved Ogre",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Ogre/Ogre_Character_BP_Minion.Ogre_Character_BP_Minion_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Ogre/Ogre_Character_BP_Minion.Ogre_Character_BP_Minion_C",
 			"dinoNameTag": "Rockwell",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_High",
@@ -1987,6 +2534,7 @@
 			"movementD": {
 				"walk": { "base": 350 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -1999,7 +2547,7 @@
 		},
 		{
 			"name": "Orc",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Orc_Character_BP.Orc_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Orc_Character_BP.Orc_Character_BP_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2012,15 +2560,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 223.2, "sprint": 669.6 }
+				"walk": { "base": 223.2, "sprint": 669.6 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 223.2, "sprint": 669.6 }
+				"walk": { "base": 223.2, "sprint": 669.6 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -2030,7 +2594,7 @@
 		},
 		{
 			"name": "Orc",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Orc_Character_BP_Minion.Orc_Character_BP_Minion_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Orc_Character_BP_Minion.Orc_Character_BP_Minion_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2044,15 +2608,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 223.2, "sprint": 669.6 }
+				"walk": { "base": 223.2, "sprint": 669.6 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 223.2, "sprint": 669.6 }
+				"walk": { "base": 223.2, "sprint": 669.6 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -2062,22 +2642,38 @@
 		},
 		{
 			"name": "Fallen Soldier (Greatsword)",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_Greatsword.Fallen_Character_BP_Greatsword_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_Greatsword.Fallen_Character_BP_Greatsword_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 195,
 			"dragWeight": 250,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 112, "sprint": 560 }
+				"walk": { "base": 112, "sprint": 560 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 112, "sprint": 560 }
+				"walk": { "base": 112, "sprint": 560 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -2087,22 +2683,38 @@
 		},
 		{
 			"name": "Fallen Soldier (Sword&Shield)",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_Sword.Fallen_Character_BP_Sword_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_Sword.Fallen_Character_BP_Sword_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 195,
 			"dragWeight": 250,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 112, "sprint": 560 }
+				"walk": { "base": 112, "sprint": 560 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 112, "sprint": 560 }
+				"walk": { "base": 112, "sprint": 560 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -2112,22 +2724,38 @@
 		},
 		{
 			"name": "Shambling Fallen",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_wild.Fallen_Character_BP_wild_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_wild.Fallen_Character_BP_wild_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 195,
 			"dragWeight": 250,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 112, "sprint": 560 }
+				"walk": { "base": 112, "sprint": 560 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 112, "sprint": 560 }
+				"walk": { "base": 112, "sprint": 560 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -2137,7 +2765,7 @@
 		},
 		{
 			"name": "Krasue",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Krasue/Krasue_Character_BP.Krasue_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Krasue/Krasue_Character_BP.Krasue_Character_BP_C",
 			"dinoNameTag": "Krasue",
 			"customTag": "Krasue",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -2152,19 +2780,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 270, "sprint": 621 },
-				"fly": { "base": 360, "sprint": 180 },
-				"swim": { "base": 270 }
+				"walk": { "base": 300, "sprint": 621 },
+				"fly": { "base": 400, "sprint": 414 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 300, "sprint": 690 },
-				"fly": { "base": 400, "sprint": 200 },
+				"fly": { "base": 400, "sprint": 460 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -2177,7 +2819,7 @@
 		},
 		{
 			"name": "Enslaved Krasue",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Krasue/Krasue_Character_BP_Minion.Krasue_Character_BP_Minion_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Krasue/Krasue_Character_BP_Minion.Krasue_Character_BP_Minion_C",
 			"dinoNameTag": "KrasueMinion",
 			"customTag": "KrasueMinion",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -2192,19 +2834,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 270, "sprint": 621 },
-				"fly": { "base": 360, "sprint": 180 },
-				"swim": { "base": 270 }
+				"walk": { "base": 300, "sprint": 621 },
+				"fly": { "base": 400, "sprint": 414 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 300, "sprint": 690 },
-				"fly": { "base": 400, "sprint": 200 },
+				"fly": { "base": 400, "sprint": 460 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -2217,7 +2873,7 @@
 		},
 		{
 			"name": "Lich",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Lich/Lich_Character_bp.Lich_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Lich/Lich_Character_bp.Lich_Character_bp_C",
 			"dinoNameTag": "Lich",
 			"customTag": "Lich",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -2238,10 +2894,16 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 140, "sprint": 462 }
+				"walk": { "base": 350, "sprint": 462 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 350, "sprint": 1155 }
+				"walk": { "base": 350, "sprint": 1155 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -5
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -2256,7 +2918,7 @@
 		},
 		{
 			"name": "Benevolent Lich",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Lich/Lich_Character_bp_friendly.Lich_Character_bp_friendly_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Lich/Lich_Character_bp_friendly.Lich_Character_bp_friendly_C",
 			"dinoNameTag": "LichFriendly",
 			"customTag": "LichFriendly",
 			"targetingTeamName": "Herbivores_Large",
@@ -2279,14 +2941,18 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 140, "sprint": 462 },
-				"fly": { "base": 240 },
-				"swim": { "base": 120 }
+				"walk": { "base": 350, "sprint": 462 },
+				"fly": { "base": 600, "sprint": 792 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 350, "sprint": 1155 },
-				"fly": { "base": 600 },
+				"fly": { "base": 600, "sprint": 1980 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -5
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -2302,22 +2968,38 @@
 		},
 		{
 			"name": "Alpha Fulgur Carnotaurus",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/UberCarno/MegaCarno_Character_BP_Fulgur.MegaCarno_Character_BP_Fulgur_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/UberCarno/MegaCarno_Character_BP_Fulgur.MegaCarno_Character_BP_Fulgur_C",
 			"dinoNameTag": "Carno",
 			"customTag": "Carno",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 222,
 			"dragWeight": 450,
 			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 550, "sprint": 1925 }
+				"walk": { "base": 550, "sprint": 1925 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 550, "sprint": 1925 }
+				"walk": { "base": 550, "sprint": 1925 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 80,
@@ -2331,7 +3013,7 @@
 		},
 		{
 			"name": "Spited Revenant Alpha Carnotaurus",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/UberCarno/MegaCarno_Character_BP_Pyria.MegaCarno_Character_BP_Pyria_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/UberCarno/MegaCarno_Character_BP_Pyria.MegaCarno_Character_BP_Pyria_C",
 			"dinoNameTag": "Elite Carno",
 			"customTag": "Carno",
 			"targetingTeamName": "Carnivores_High",
@@ -2345,15 +3027,27 @@
 				"isBossDino",
 				"isCarnivore"
 			],
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 467.5, "sprint": 1309 }
+				"walk": { "base": 550, "sprint": 1309 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 550, "sprint": 1540 }
+				"walk": { "base": 550, "sprint": 1540 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 80,
@@ -2366,7 +3060,7 @@
 		},
 		{
 			"name": "Alpha Infernal Tyrannosaurus",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/UberRex/MegaRex_Character_BP_Infernal.MegaRex_Character_BP_Infernal_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/UberRex/MegaRex_Character_BP_Infernal.MegaRex_Character_BP_Infernal_C",
 			"dinoNameTag": "Rex",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -2380,15 +3074,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 700, "sprint": 2002 }
+				"walk": { "base": 700, "sprint": 2002 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 700, "sprint": 2002 }
+				"walk": { "base": 700, "sprint": 2002 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 170,
@@ -2402,7 +3112,7 @@
 		},
 		{
 			"name": "Spited Revenant Alpha Tyrannosaurus",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/UberRex/MegaRex_Character_BP_Pyria.MegaRex_Character_BP_Pyria_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/UberRex/MegaRex_Character_BP_Pyria.MegaRex_Character_BP_Pyria_C",
 			"dinoNameTag": "Elite Rex",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -2418,15 +3128,27 @@
 				"isBossDino",
 				"isCarnivore"
 			],
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 377.5, "sprint": 1079.6 }
+				"walk": { "base": 755, "sprint": 1079.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 566.2, "sprint": 1619.5 }
+				"walk": { "base": 755, "sprint": 1619.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 170,
@@ -2439,24 +3161,38 @@
 		},
 		{
 			"name": "Withered",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP.Withered_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP.Withered_Character_BP_C",
 			"dinoNameTag": "Withered",
 			"customTag": "Wiithered",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 45, "sprint": 103.5 },
-				"swim": { "base": 270 }
+				"walk": { "base": 50, "sprint": 103.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 50, "sprint": 115 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -2466,7 +3202,7 @@
 		},
 		{
 			"name": "Enslaved Withered",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_Minion.Withered_Character_BP_Minion_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_Minion.Withered_Character_BP_Minion_C",
 			"dinoNameTag": "WitheredMinion",
 			"customTag": "WiitheredMinion",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -2474,17 +3210,31 @@
 			"dragWeight": 85,
 			"variants": [ "Minion" ],
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 90, "sprint": 207 },
-				"swim": { "base": 270 }
+				"walk": { "base": 100, "sprint": 207 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 100, "sprint": 230 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -2494,24 +3244,38 @@
 		},
 		{
 			"name": "Withered",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_created.Withered_Character_BP_created_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_created.Withered_Character_BP_created_C",
 			"dinoNameTag": "Withered",
 			"customTag": "Wiithered",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 45, "sprint": 103.5 },
-				"swim": { "base": 270 }
+				"walk": { "base": 50, "sprint": 103.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 50, "sprint": 115 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -2521,7 +3285,7 @@
 		},
 		{
 			"name": "Marhromorph",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Aerocrusher/Marhro_Character_BP.Marhro_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Aerocrusher/Marhro_Character_BP.Marhro_Character_BP_C",
 			"dinoNameTag": "Marhro",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Herbivores_Large",
@@ -2538,19 +3302,25 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 495, "sprint": 1415.7 },
-				"fly": { "base": 600 },
-				"swim": { "base": 1000 }
+				"fly": { "base": 600, "sprint": 1716 }
 			},
 			"movementD": {
 				"walk": { "base": 495, "sprint": 1415.7 },
-				"fly": { "base": 600 },
-				"swim": { "base": 1000 }
+				"fly": { "base": 600, "sprint": 1716 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -2565,7 +3335,7 @@
 		},
 		{
 			"name": "Balrog",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/Balrog_Character_BP.Balrog_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/Balrog_Character_BP.Balrog_Character_BP_C",
 			"dinoNameTag": "Golem",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Medium",
@@ -2579,6 +3349,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2589,6 +3363,7 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1600 }
 			},
+			"staminaRates": { "sprint": -100 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -2600,7 +3375,7 @@
 		},
 		{
 			"name": "Balrog",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/Balrog_Character_BP_Created.Balrog_Character_BP_Created_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/Balrog_Character_BP_Created.Balrog_Character_BP_Created_C",
 			"dinoNameTag": "Golem",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Medium",
@@ -2614,6 +3389,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2624,6 +3403,7 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1600 }
 			},
+			"staminaRates": { "sprint": -100 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -2635,7 +3415,7 @@
 		},
 		{
 			"name": "Bantu",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Basilisk/Bantu_Character_BP.Bantu_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Basilisk/Bantu_Character_BP.Bantu_Character_BP_C",
 			"dinoNameTag": "Basilisk",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2649,15 +3429,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 288, "sprint": 662.4 }
+				"walk": { "base": 320, "sprint": 662.4 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 320, "sprint": 736 }
+				"walk": { "base": 320, "sprint": 736 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -2671,7 +3467,7 @@
 		},
 		{
 			"name": "Brute Wyvern",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/BruteWyvern/Wyvern_Character_bp_Brute.Wyvern_Character_bp_Brute_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/BruteWyvern/Wyvern_Character_bp_Brute.Wyvern_Character_bp_Brute_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivore_Water",
@@ -2688,17 +3484,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 2400 },
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 2400 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1200 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -65,
+				"swimOrFly": -20
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -2717,7 +3521,7 @@
 		},
 		{
 			"name": "Diorex",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/BruteWyvern/Wyvern_Character_bp_Diorex.Wyvern_Character_bp_Diorex_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/BruteWyvern/Wyvern_Character_bp_Diorex.Wyvern_Character_bp_Diorex_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivore_Water",
@@ -2740,12 +3544,16 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 2400 },
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 2400 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1200 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -65,
+				"swimOrFly": -20
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -2765,7 +3573,7 @@
 		},
 		{
 			"name": "HC Diorex",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/BruteWyvern/Wyvern_Character_bp_DiorexHC.Wyvern_Character_bp_DiorexHC_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/BruteWyvern/Wyvern_Character_bp_DiorexHC.Wyvern_Character_bp_DiorexHC_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivore_Water",
@@ -2788,12 +3596,16 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 2400 },
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 2400 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1200 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -65,
+				"swimOrFly": -20
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -2813,7 +3625,7 @@
 		},
 		{
 			"name": "Diorex",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/BruteWyvern/Wyvern_Character_bp_Diorex_Tameable.Wyvern_Character_bp_Diorex_Tameable_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/BruteWyvern/Wyvern_Character_bp_Diorex_Tameable.Wyvern_Character_bp_Diorex_Tameable_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -2830,6 +3642,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
@@ -2841,6 +3657,10 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1200 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -65,
+				"swimOrFly": -20
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -2860,7 +3680,7 @@
 		},
 		{
 			"name": "Chimera",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Chimera/Chimera_Character_BP.Chimera_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Chimera/Chimera_Character_BP.Chimera_Character_BP_C",
 			"dinoNameTag": "Chimera",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -2875,18 +3695,21 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 495, "sprint": 1732.5 },
-				"swim": { "base": 400 }
+				"walk": { "base": 495, "sprint": 1732.5 }
 			},
 			"movementD": {
-				"walk": { "base": 495, "sprint": 1732.5 },
-				"swim": { "base": 400 }
+				"walk": { "base": 495, "sprint": 1732.5 }
 			},
+			"staminaRates": { "sprint": -40 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -2899,7 +3722,7 @@
 		},
 		{
 			"name": "Cockatrice",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Cockatrice/Cockatrice_Character_BP.Cockatrice_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Cockatrice/Cockatrice_Character_BP.Cockatrice_Character_BP_C",
 			"dinoNameTag": "Cockatrice",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2913,6 +3736,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -2924,6 +3757,10 @@
 			"movementD": {
 				"walk": { "base": 300, "sprint": 1200 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -2938,7 +3775,7 @@
 		},
 		{
 			"name": "Colossus",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Colossus/PyriaColossus_Character_BP.PyriaColossus_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Colossus/PyriaColossus_Character_BP.PyriaColossus_Character_BP_C",
 			"dinoNameTag": "RockElemental",
 			"customTag": "Colossus",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -2964,6 +3801,7 @@
 			"movementD": {
 				"walk": { "base": 200 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -2979,7 +3817,7 @@
 		},
 		{
 			"name": "Dark Mana Reaper Drone",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp.DarkReaper_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp.DarkReaper_Character_bp_C",
 			"dinoNameTag": "Xenomorph",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2994,6 +3832,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3005,6 +3847,10 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1000 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -60,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3020,7 +3866,7 @@
 		},
 		{
 			"name": "Dark Mana Reaper Empress",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp_Empress.DarkReaper_Character_bp_Empress_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp_Empress.DarkReaper_Character_bp_Empress_C",
 			"dinoNameTag": "Xenomorph",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -3048,6 +3894,10 @@
 			"movementD": {
 				"walk": { "base": 400, "sprint": 2000 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -60,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3063,7 +3913,7 @@
 		},
 		{
 			"name": "Summoned Dark Mana Reaper Empress",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp_Empress_Controlled.DarkReaper_Character_bp_Empress_Controlled_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp_Empress_Controlled.DarkReaper_Character_bp_Empress_Controlled_C",
 			"dinoNameTag": "Xenomorph",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -3091,6 +3941,10 @@
 				"walk": { "base": 400, "sprint": 2000 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": {
+				"sprint": -60,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
@@ -3105,7 +3959,7 @@
 		},
 		{
 			"name": "Summoned Dark Mana Reaper Drone",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp_Wild.DarkReaper_Character_bp_Wild_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp_Wild.DarkReaper_Character_bp_Wild_C",
 			"dinoNameTag": "Xenomorph",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -3119,6 +3973,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3130,6 +3988,10 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1000 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -60,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3145,7 +4007,7 @@
 		},
 		{
 			"name": "Steelclaw Karkinos",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Steel.Crab_Character_BP_Steel_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Steel.Crab_Character_BP_Steel_C",
 			"dinoNameTag": "CaveCrab",
 			"customTag": "CaveCrab",
 			"targetingTeamName": "Carnivores_High",
@@ -3161,6 +4023,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 2800
@@ -3171,6 +4043,7 @@
 			"movementD": {
 				"walk": { "base": 420, "sprint": 735 }
 			},
+			"staminaRates": { "sprint": -4 },
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 110,
@@ -3188,7 +4061,7 @@
 		},
 		{
 			"name": "Wanderer Karkinos",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Wanderer.Crab_Character_BP_Wanderer_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Wanderer.Crab_Character_BP_Wanderer_C",
 			"dinoNameTag": "CaveCrab",
 			"customTag": "CaveCrab",
 			"targetingTeamName": "Carnivores_High",
@@ -3205,6 +4078,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 2800
@@ -3215,6 +4098,7 @@
 			"movementD": {
 				"walk": { "base": 420, "sprint": 966 }
 			},
+			"staminaRates": { "sprint": -4 },
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 110,
@@ -3232,7 +4116,7 @@
 		},
 		{
 			"name": "HC Wanderer Karkinos",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Wanderer_HC.Crab_Character_BP_Wanderer_HC_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Wanderer_HC.Crab_Character_BP_Wanderer_HC_C",
 			"dinoNameTag": "CaveCrab",
 			"customTag": "CaveCrab",
 			"targetingTeamName": "Carnivores_High",
@@ -3250,6 +4134,12 @@
 				"isBossDino",
 				"isCarnivore"
 			],
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 2800
@@ -3260,6 +4150,7 @@
 			"movementD": {
 				"walk": { "base": 420, "sprint": 966 }
 			},
+			"staminaRates": { "sprint": -4 },
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 110,
@@ -3277,7 +4168,7 @@
 		},
 		{
 			"name": "Hedron",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Wanderer_Hedron.Crab_Character_BP_Wanderer_Hedron_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Wanderer_Hedron.Crab_Character_BP_Wanderer_Hedron_C",
 			"dinoNameTag": "CaveCrab",
 			"customTag": "CaveCrab",
 			"targetingTeamName": "Carnivores_High",
@@ -3294,6 +4185,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 2800
@@ -3304,6 +4205,7 @@
 			"movementD": {
 				"walk": { "base": 420, "sprint": 1470 }
 			},
+			"staminaRates": { "sprint": -4 },
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 110,
@@ -3321,7 +4223,7 @@
 		},
 		{
 			"name": "Dagon",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Dagon/Dagon_Character_bp.Dagon_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Dagon/Dagon_Character_bp.Dagon_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Herbivores_Large",
@@ -3336,15 +4238,25 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 550, "sprint": 3300 }
+				"walk": { "base": 550, "sprint": 3300 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 550, "sprint": 3300 }
+				"walk": { "base": 550, "sprint": 3300 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3360,7 +4272,7 @@
 		},
 		{
 			"name": "Divine Allosaurus",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/DivineAllo/Allo_Character_BP_Divine.Allo_Character_BP_Divine_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/DivineAllo/Allo_Character_BP_Divine.Allo_Character_BP_Divine_C",
 			"dinoNameTag": "Allo",
 			"customTag": "Allo",
 			"targetingTeamName": "Herbivores_Large",
@@ -3374,15 +4286,31 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 2000 }
+				"walk": { "base": 400, "sprint": 2000 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 2000 }
+				"walk": { "base": 400, "sprint": 2000 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -3397,7 +4325,7 @@
 		},
 		{
 			"name": "Stygian Drachenthorn",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/DrachenThorne/DrachenThorn_Character_bp.DrachenThorn_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/DrachenThorne/DrachenThorn_Character_bp.DrachenThorn_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -3415,19 +4343,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 400, "sprint": 1200 },
-				"fly": { "base": 1300, "sprint": 1040 },
+				"fly": { "base": 1300, "sprint": 3120 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 400, "sprint": 1200 },
-				"fly": { "base": 1300, "sprint": 1040 },
+				"fly": { "base": 1300, "sprint": 3120 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -5
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3443,7 +4379,7 @@
 		},
 		{
 			"name": "Dracolich",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Dracolich/Dracolich_Character_bp.Dracolich_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Dracolich/Dracolich_Character_bp.Dracolich_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3461,19 +4397,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 250, "sprint": 1500 },
-				"fly": { "base": 700, "sprint": 420 },
+				"fly": { "base": 700, "sprint": 2520 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 250, "sprint": 1500 },
-				"fly": { "base": 700, "sprint": 420 },
+				"fly": { "base": 700, "sprint": 2520 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -12
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3489,7 +4433,7 @@
 		},
 		{
 			"name": "Everlast Drallion",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/Drallion_Character_bp_Dead.Drallion_Character_bp_Dead_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/Drallion_Character_bp_Dead.Drallion_Character_bp_Dead_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3518,6 +4462,10 @@
 				"walk": { "base": 250, "sprint": 1500 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -24
+			},
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
@@ -3533,7 +4481,7 @@
 		},
 		{
 			"name": "Augmented Everlast Drallion",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/Drallion_Character_bp_Dead_augmented.Drallion_Character_bp_Dead_augmented_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/Drallion_Character_bp_Dead_augmented.Drallion_Character_bp_Dead_augmented_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3548,15 +4496,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 250, "sprint": 1500 }
+				"walk": { "base": 250, "sprint": 1500 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"walk": { "base": 250, "sprint": 1500 }
+				"walk": { "base": 250, "sprint": 1500 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": 0,
+				"swimOrFly": -24
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3573,7 +4531,7 @@
 		},
 		{
 			"name": "Drallion",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Standard/Drallion_Character_bp.Drallion_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Standard/Drallion_Character_bp.Drallion_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3591,19 +4549,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 250, "sprint": 1500 },
-				"fly": { "base": 600, "sprint": 300 },
+				"fly": { "base": 600, "sprint": 1800 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 250, "sprint": 1500 },
-				"fly": { "base": 600, "sprint": 300 },
+				"fly": { "base": 600, "sprint": 1800 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -24
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3620,7 +4586,7 @@
 		},
 		{
 			"name": "Driger",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Driger/Driger_Character_bp.Driger_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Driger/Driger_Character_bp.Driger_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3635,6 +4601,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
@@ -3646,6 +4616,10 @@
 			"movementD": {
 				"walk": { "base": 300, "sprint": 3000 },
 				"swim": { "base": 520 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3659,26 +4633,40 @@
 		},
 		{
 			"name": "Golden Eagle",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Eagle/Eagle_Character_BP.Eagle_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Eagle/Eagle_Character_BP.Eagle_Character_BP_C",
 			"dinoNameTag": "Eagle",
 			"customTag": "Eagle",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 70,
 			"dragWeight": 70,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isFlyerDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 80, "sprint": 184 },
-				"fly": { "base": 800 },
-				"swim": { "base": 400 }
+				"fly": { "base": 800, "sprint": 1840 },
+				"swim": { "base": 800 }
 			},
 			"movementD": {
 				"walk": { "base": 80, "sprint": 184 },
-				"fly": { "base": 800 },
-				"swim": { "base": 400 }
+				"fly": { "base": 800, "sprint": 1840 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 23,
@@ -3688,7 +4676,7 @@
 		},
 		{
 			"name": "Ironwood Ent",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Ent/Ent_Character_bp.Ent_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Ent/Ent_Character_bp.Ent_Character_bp_C",
 			"dinoNameTag": "Ent",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Large",
@@ -3703,6 +4691,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3713,6 +4705,7 @@
 			"movementD": {
 				"walk": { "base": 150, "sprint": 345 }
 			},
+			"staminaRates": { "sprint": -20 },
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
@@ -3725,7 +4718,7 @@
 		},
 		{
 			"name": "Ironwood Ent",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Ent/Ent_Character_bp_Minion.Ent_Character_bp_Minion_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Ent/Ent_Character_bp_Minion.Ent_Character_bp_Minion_C",
 			"dinoNameTag": "Ent",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Large",
@@ -3740,6 +4733,10 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3750,6 +4747,7 @@
 			"movementD": {
 				"walk": { "base": 150, "sprint": 345 }
 			},
+			"staminaRates": { "sprint": -20 },
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
@@ -3762,7 +4760,7 @@
 		},
 		{
 			"name": "Ironwood Ent",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Ent/Ent_Character_bp_Tameable.Ent_Character_bp_Tameable_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Ent/Ent_Character_bp_Tameable.Ent_Character_bp_Tameable_C",
 			"dinoNameTag": "Ent",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Large",
@@ -3778,6 +4776,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3788,6 +4790,7 @@
 			"movementD": {
 				"walk": { "base": 150, "sprint": 345 }
 			},
+			"staminaRates": { "sprint": -20 },
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
@@ -3804,7 +4807,7 @@
 		},
 		{
 			"name": "Fire Elemental",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/FireBurb/Fireburb_Character_BP.Fireburb_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/FireBurb/Fireburb_Character_BP.Fireburb_Character_BP_C",
 			"dinoNameTag": "Phoenix",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3819,19 +4822,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 250, "sprint": 500 },
-				"fly": { "base": 600, "sprint": 660 },
+				"fly": { "base": 600, "sprint": 1320 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 250, "sprint": 500 },
-				"fly": { "base": 600, "sprint": 660 },
+				"fly": { "base": 600, "sprint": 1320 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -3845,7 +4862,7 @@
 		},
 		{
 			"name": "Fire Elemental",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/FireBurb/Fireburb_Character_BP_created.Fireburb_Character_BP_created_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/FireBurb/Fireburb_Character_BP_created.Fireburb_Character_BP_created_C",
 			"dinoNameTag": "Phoenix",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3860,19 +4877,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 250, "sprint": 500 },
-				"fly": { "base": 800, "sprint": 880 },
+				"fly": { "base": 800, "sprint": 1760 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 250, "sprint": 500 },
-				"fly": { "base": 800, "sprint": 880 },
+				"fly": { "base": 800, "sprint": 1760 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -3886,7 +4917,7 @@
 		},
 		{
 			"name": "Firepike Thorny Dragon",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Firepike/Firepike_Character_BP.Firepike_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Firepike/Firepike_Character_BP.Firepike_Character_BP_C",
 			"dinoNameTag": "SpineyLizard",
 			"customTag": "SpineyLizard",
 			"targetingTeamName": "Herbivores_Medium",
@@ -3899,15 +4930,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 231.3, "sprint": 832.6 }
+				"walk": { "base": 196, "sprint": 832.6 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 196, "sprint": 705.6 }
+				"walk": { "base": 196, "sprint": 705.6 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -3924,7 +4971,7 @@
 		},
 		{
 			"name": "Gelragarian Direwolf",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/GelraWoof/Direwolf_Character_BP_Gelra.Direwolf_Character_BP_Gelra_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/GelraWoof/Direwolf_Character_BP_Gelra.Direwolf_Character_BP_Gelra_C",
 			"dinoNameTag": "Direwolf",
 			"customTag": "Direwolf",
 			"targetingTeamName": "Herbivores_Medium",
@@ -3937,6 +4984,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3949,6 +5006,10 @@
 				"walk": { "base": 223.2, "sprint": 669.6 },
 				"swim": { "base": 240 }
 			},
+			"staminaRates": {
+				"sprint": -12,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 33,
 				"defaultSwingRadius": 160,
@@ -3960,7 +5021,7 @@
 		},
 		{
 			"name": "Soldier Bug",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Gigasect/Gigasect_Character_bp.Gigasect_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Gigasect/Gigasect_Character_bp.Gigasect_Character_bp_C",
 			"dinoNameTag": "",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3975,15 +5036,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 560 }
+				"walk": { "base": 200, "sprint": 560 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 560 }
+				"walk": { "base": 200, "sprint": 560 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -3997,24 +5068,38 @@
 		},
 		{
 			"name": "Glacial Basilisk",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/GlacialBasilisk/Basilisk_Character_BP_Glacial.Basilisk_Character_BP_Glacial_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/GlacialBasilisk/Basilisk_Character_BP_Glacial.Basilisk_Character_BP_Glacial_C",
 			"dinoNameTag": "Basilisk",
 			"customTag": "Basilisk",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 425,
 			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1950,
+				"costLevel": 55,
+				"timeBase": 13650,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 600, "sprint": 1680 },
-				"swim": { "base": 700 }
+				"swim": { "base": 700, "sprint": 1764 }
 			},
 			"movementD": {
 				"walk": { "base": 600, "sprint": 1680 },
-				"swim": { "base": 700 }
+				"swim": { "base": 700, "sprint": 1764 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -4033,13 +5118,23 @@
 		},
 		{
 			"name": "Infernal Basilisk",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/GlacialBasilisk/Basilisk_Character_BP_Infernal.Basilisk_Character_BP_Infernal_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/GlacialBasilisk/Basilisk_Character_BP_Infernal.Basilisk_Character_BP_Infernal_C",
 			"dinoNameTag": "Basilisk",
 			"customTag": "Basilisk",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 425,
 			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1950,
+				"costLevel": 55,
+				"timeBase": 13650,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4051,6 +5146,10 @@
 			"movementD": {
 				"walk": { "base": 600, "sprint": 1680 },
 				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -4066,7 +5165,7 @@
 		},
 		{
 			"name": "Goliath",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Goliath/Goliath_Character_bp.Goliath_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Goliath/Goliath_Character_bp.Goliath_Character_bp_C",
 			"dinoNameTag": "Goliath",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -4081,17 +5180,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 1440 },
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 1440 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 200, "sprint": 720 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": 0,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -4105,7 +5212,7 @@
 		},
 		{
 			"name": "Graviorex",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Graviorex/Graviorex_Character_bp.Graviorex_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Graviorex/Graviorex_Character_bp.Graviorex_Character_bp_C",
 			"dinoNameTag": "Graviorex",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -4123,19 +5230,25 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 300, "sprint": 900 },
-				"fly": { "base": 400, "sprint": 200 },
-				"swim": { "base": 300 }
+				"fly": { "base": 400, "sprint": 600 }
 			},
 			"movementD": {
 				"walk": { "base": 300, "sprint": 900 },
-				"fly": { "base": 400, "sprint": 200 },
-				"swim": { "base": 300 }
+				"fly": { "base": 400, "sprint": 600 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -150
 			},
 			"attack": {
 				"defaultDmg": 120,
@@ -4149,7 +5262,7 @@
 		},
 		{
 			"name": "Hellkite",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/HellKite/Hellkite_Character_bp.Hellkite_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/HellKite/Hellkite_Character_bp.Hellkite_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4168,19 +5281,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 140, "sprint": 420 },
-				"fly": { "base": 600, "sprint": 300 },
+				"fly": { "base": 600, "sprint": 900 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 140, "sprint": 420 },
-				"fly": { "base": 600, "sprint": 300 },
+				"fly": { "base": 600, "sprint": 900 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -5
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -4195,7 +5316,7 @@
 		},
 		{
 			"name": "Summoned Hellkite",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/HellKite/Hellkite_Character_bp_Minion.Hellkite_Character_bp_Minion_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/HellKite/Hellkite_Character_bp_Minion.Hellkite_Character_bp_Minion_C",
 			"dinoNameTag": "WyvernMinion",
 			"customTag": "WyvernMinion",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -4214,19 +5335,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 140, "sprint": 420 },
-				"fly": { "base": 800, "sprint": 400 },
+				"fly": { "base": 800, "sprint": 1200 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 140, "sprint": 420 },
-				"fly": { "base": 800, "sprint": 400 },
+				"fly": { "base": 800, "sprint": 1200 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -5
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -4241,7 +5370,7 @@
 		},
 		{
 			"name": "Hellhound",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Hellhound/Hellhound_Character_BP.Hellhound_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hellhound/Hellhound_Character_BP.Hellhound_Character_BP_C",
 			"dinoNameTag": "Direwolf",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4254,6 +5383,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4265,6 +5404,10 @@
 			"movementD": {
 				"walk": { "base": 223.2, "sprint": 781.2 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -12,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -4278,7 +5421,7 @@
 		},
 		{
 			"name": "Hellhound",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Hellhound/Hellhound_Character_BP_Wild.Hellhound_Character_BP_Wild_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hellhound/Hellhound_Character_BP_Wild.Hellhound_Character_BP_Wild_C",
 			"dinoNameTag": "Direwolf",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -4291,6 +5434,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4302,6 +5455,10 @@
 			"movementD": {
 				"walk": { "base": 223.2, "sprint": 781.2 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -12,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -4315,7 +5472,7 @@
 		},
 		{
 			"name": "Royal Hornet",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Hornet/PyriaHornet_Character_BP.PyriaHornet_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hornet/PyriaHornet_Character_BP.PyriaHornet_Character_BP_C",
 			"dinoNameTag": "Bee",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores",
@@ -4330,19 +5487,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 180, "sprint": 360 },
-				"fly": { "base": 800, "sprint": 880 },
+				"fly": { "base": 800, "sprint": 1760 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 180, "sprint": 360 },
-				"fly": { "base": 800, "sprint": 880 },
+				"fly": { "base": 800, "sprint": 1760 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -4355,7 +5526,7 @@
 		},
 		{
 			"name": "Horoku",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Horoku/Horoku_Character_BP.Horoku_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Horoku/Horoku_Character_BP.Horoku_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4371,19 +5542,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 180, "sprint": 360 },
-				"fly": { "base": 800, "sprint": 880 },
+				"fly": { "base": 800, "sprint": 1760 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 180, "sprint": 360 },
-				"fly": { "base": 800, "sprint": 880 },
+				"fly": { "base": 800, "sprint": 1760 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -4397,7 +5582,7 @@
 		},
 		{
 			"name": "Hydra",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Hydra/Terrestrial/Hydra_Character_BP.Hydra_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hydra/Terrestrial/Hydra_Character_BP.Hydra_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -4412,6 +5597,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4422,6 +5611,7 @@
 			"movementD": {
 				"walk": { "base": 350, "sprint": 1001 }
 			},
+			"staminaRates": { "sprint": -65 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -4436,7 +5626,7 @@
 		},
 		{
 			"name": "Glacier Golem",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/GlacierGolem_Character_BP.GlacierGolem_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/GlacierGolem_Character_BP.GlacierGolem_Character_BP_C",
 			"dinoNameTag": "Golem",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -4450,6 +5640,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4460,6 +5654,7 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 500 }
 			},
+			"staminaRates": { "sprint": -90 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -4476,7 +5671,7 @@
 		},
 		{
 			"name": "Glacier Golem",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/GlacierGolem_Character_BP_Created.GlacierGolem_Character_BP_Created_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/GlacierGolem_Character_BP_Created.GlacierGolem_Character_BP_Created_C",
 			"dinoNameTag": "Golem",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -4490,6 +5685,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4500,6 +5699,7 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 500 }
 			},
+			"staminaRates": { "sprint": -90 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -4516,7 +5716,7 @@
 		},
 		{
 			"name": "Ikuchi",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Ikuchi/Ikuchi_Character_BP.Ikuchi_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Ikuchi/Ikuchi_Character_BP.Ikuchi_Character_BP_C",
 			"dinoNameTag": "Ryu",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -4533,15 +5733,25 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 960 }
+				"walk": { "base": 500, "sprint": 1200 },
+				"swim": { "base": 1600, "sprint": 3072 }
 			},
 			"movementD": {
-				"swim": { "base": 1600 }
+				"walk": { "base": 500, "sprint": 2000 },
+				"swim": { "base": 1600, "sprint": 5120 }
+			},
+			"staminaRates": {
+				"sprint": -60,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 115,
@@ -4554,7 +5764,7 @@
 		},
 		{
 			"name": "Incinerox",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Incinerox/DG_Character_BP.DG_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Incinerox/DG_Character_BP.DG_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -4571,19 +5781,25 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 450, "sprint": 1350 },
-				"fly": { "base": 700 },
-				"swim": { "base": 300 }
+				"fly": { "base": 700, "sprint": 2100 }
 			},
 			"movementD": {
 				"walk": { "base": 450, "sprint": 1350 },
-				"fly": { "base": 700 },
-				"swim": { "base": 300 }
+				"fly": { "base": 700, "sprint": 2100 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -350
 			},
 			"attack": {
 				"defaultDmg": 120,
@@ -4597,7 +5813,7 @@
 		},
 		{
 			"name": "Elemental Kaiser Bug",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/KaiserBug/KaiserBug_Character_bp.KaiserBug_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/KaiserBug/KaiserBug_Character_bp.KaiserBug_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -4612,15 +5828,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 660 }
+				"walk": { "base": 200, "sprint": 660 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 660 }
+				"walk": { "base": 200, "sprint": 660 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -4638,7 +5864,7 @@
 		},
 		{
 			"name": "Ash Plume Rock Drake",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/MegaRockDrake/RockDrake_Character_BP_Ashen.RockDrake_Character_BP_Ashen_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/MegaRockDrake/RockDrake_Character_BP_Ashen.RockDrake_Character_BP_Ashen_C",
 			"dinoNameTag": "RockDrake",
 			"customTag": "RockDrake",
 			"targetingTeamName": "Carnivores_High",
@@ -4653,17 +5879,31 @@
 				"isCarnivore",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 520, "sprint": 1820 },
-				"swim": { "base": 480 }
+				"walk": { "base": 650, "sprint": 1820 },
+				"swim": { "base": 600, "sprint": 840 }
 			},
 			"movementD": {
-				"walk": { "base": 585, "sprint": 2047.5 },
-				"swim": { "base": 540 }
+				"walk": { "base": 650, "sprint": 2047.5 },
+				"swim": { "base": 600, "sprint": 945 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -4681,7 +5921,7 @@
 		},
 		{
 			"name": "Nerm",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Nerm/Nerm_Character_bp.Nerm_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Nerm/Nerm_Character_bp.Nerm_Character_bp_C",
 			"dinoNameTag": "Angler",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Low",
@@ -4695,15 +5935,31 @@
 				"canMountOnHumans",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 60, "sprint": 300 }
+				"walk": { "base": 60, "sprint": 300 },
+				"swim": { "base": 700 }
 			},
 			"movementD": {
-				"walk": { "base": 60, "sprint": 300 }
+				"walk": { "base": 60, "sprint": 300 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -4716,13 +5972,17 @@
 		},
 		{
 			"name": "Death Striker",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/NewDeath/Deathworm_Character_BP_Pyria.Deathworm_Character_BP_Pyria_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/NewDeath/Deathworm_Character_BP_Pyria.Deathworm_Character_BP_Pyria_C",
 			"dinoNameTag": "Deathworm",
 			"customTag": "Deathworm",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 600,
 			"dragWeight": 650,
 			"flags": [ "canBeTorpid", "doStepDamage", "isBigDino", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4733,6 +5993,7 @@
 			"movementD": {
 				"walk": { "base": 100 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 210,
 				"defaultSwingRadius": 1200,
@@ -4744,7 +6005,7 @@
 		},
 		{
 			"name": "Omen",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Omen/Omen_Character_BP.Omen_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Omen/Omen_Character_BP.Omen_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4759,19 +6020,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 250, "sprint": 1000 },
-				"fly": { "base": 700 },
+				"fly": { "base": 700, "sprint": 2800 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 250, "sprint": 1000 },
-				"fly": { "base": 700 },
+				"fly": { "base": 700, "sprint": 2800 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -4786,7 +6061,7 @@
 		},
 		{
 			"name": "Alpha Orthros",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Orthros/MegaOrthros_Character_bp.MegaOrthros_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Orthros/MegaOrthros_Character_bp.MegaOrthros_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4800,15 +6075,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 700, "sprint": 2310 }
+				"walk": { "base": 350, "sprint": 2310 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 350, "sprint": 1155 }
+				"walk": { "base": 350, "sprint": 1155 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -4822,7 +6107,7 @@
 		},
 		{
 			"name": "Orthros",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Orthros/Orthros_Character_bp.Orthros_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Orthros/Orthros_Character_bp.Orthros_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4837,15 +6122,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1800 }
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1800 }
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -4859,26 +6154,40 @@
 		},
 		{
 			"name": "Great Horned Owl",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Owl/PyriaOwl_Character_BP.PyriaOwl_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Owl/PyriaOwl_Character_BP.PyriaOwl_Character_BP_C",
 			"dinoNameTag": "Owl",
 			"customTag": "Owl",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 70,
 			"dragWeight": 70,
 			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isFlyerDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 600 },
-				"swim": { "base": 400 }
+				"fly": { "base": 600, "sprint": 1080 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 600 },
-				"swim": { "base": 400 }
+				"fly": { "base": 600, "sprint": 1080 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 23,
@@ -4888,7 +6197,7 @@
 		},
 		{
 			"name": "Peregriff",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Peregriff/Peregriff_Character_bp.Peregriff_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Peregriff/Peregriff_Character_bp.Peregriff_Character_bp_C",
 			"dinoNameTag": "Griffin",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_Medium",
@@ -4906,19 +6215,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 200, "sprint": 1000 },
-				"fly": { "base": 600, "sprint": 300 },
+				"fly": { "base": 600, "sprint": 1500 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1000 },
-				"fly": { "base": 600, "sprint": 300 },
+				"fly": { "base": 600, "sprint": 1500 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -14
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -4932,7 +6249,7 @@
 		},
 		{
 			"name": "Eldritch Hailfire Wyvern",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/Wyvern_Character_bp_Bazel.Wyvern_Character_bp_Bazel_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/Wyvern_Character_bp_Bazel.Wyvern_Character_bp_Bazel_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivore_Water",
@@ -4950,19 +6267,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 500, "sprint": 1500 },
-				"fly": { "base": 1200 },
+				"fly": { "base": 1200, "sprint": 3600 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 500, "sprint": 1500 },
-				"fly": { "base": 1200 },
+				"fly": { "base": 1200, "sprint": 3600 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -2,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -4976,7 +6301,7 @@
 		},
 		{
 			"name": "Miralis Yutyrannus",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/PyroYutie/PyroYutie_Character_bp.PyroYutie_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/PyroYutie/PyroYutie_Character_bp.PyroYutie_Character_bp_C",
 			"dinoNameTag": "Yutyrannus",
 			"customTag": "Yutyrannus",
 			"targetingTeamName": "Carnivores_High",
@@ -4991,15 +6316,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 1520 }
+				"walk": { "base": 400, "sprint": 1520 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 1520 }
+				"walk": { "base": 400, "sprint": 1520 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -5017,13 +6352,23 @@
 		},
 		{
 			"name": "Rabbit",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Rabbit/Rabbit_Character_bp.Rabbit_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Rabbit/Rabbit_Character_bp.Rabbit_Character_bp_C",
 			"dinoNameTag": "LanternPug",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 165,
 			"dragWeight": 10,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
@@ -5036,6 +6381,10 @@
 				"walk": { "base": 60, "sprint": 1500 },
 				"swim": { "base": 700 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
@@ -5044,7 +6393,7 @@
 		},
 		{
 			"name": "Reika",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Reika/Reika_Character_BP.Reika_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Reika/Reika_Character_BP.Reika_Character_BP_C",
 			"dinoNameTag": "Mantis",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
@@ -5057,15 +6406,31 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 304, "sprint": 912 }
+				"walk": { "base": 304, "sprint": 912 },
+				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 304, "sprint": 912 }
+				"walk": { "base": 304, "sprint": 912 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -24
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -5078,7 +6443,7 @@
 		},
 		{
 			"name": "Rok",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Rok/Rok_Character_bp.Rok_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Rok/Rok_Character_bp.Rok_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -5096,19 +6461,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 200, "sprint": 600 },
-				"fly": { "base": 700, "sprint": 560 },
+				"fly": { "base": 700, "sprint": 1680 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 200, "sprint": 600 },
-				"fly": { "base": 700, "sprint": 560 },
+				"fly": { "base": 700, "sprint": 1680 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -5
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -5127,7 +6500,7 @@
 		},
 		{
 			"name": "Salamander",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Salamander/Salamander_Character_BP.Salamander_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Salamander/Salamander_Character_BP.Salamander_Character_BP_C",
 			"dinoNameTag": "Basilisk",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores",
@@ -5141,6 +6514,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5152,6 +6535,10 @@
 			"movementD": {
 				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -90,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -5168,7 +6555,7 @@
 		},
 		{
 			"name": "Shmerghazberg",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Shmerg/Shmerg_Character_bp.Shmerg_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Shmerg/Shmerg_Character_bp.Shmerg_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -5183,15 +6570,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 2400 }
+				"walk": { "base": 200, "sprint": 2400 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 2400 }
+				"walk": { "base": 200, "sprint": 2400 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -5205,7 +6602,7 @@
 		},
 		{
 			"name": "SulfurWyrm",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/SulfurWyrm/SulfurWyrm_Character_bp.SulfurWyrm_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/SulfurWyrm/SulfurWyrm_Character_bp.SulfurWyrm_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -5220,15 +6617,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -5241,7 +6648,7 @@
 		},
 		{
 			"name": "Obsidian SulfurWyrm",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/SulfurWyrm/SulfurWyrm_Character_bp_Obsidian.SulfurWyrm_Character_bp_Obsidian_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/SulfurWyrm/SulfurWyrm_Character_bp_Obsidian.SulfurWyrm_Character_bp_Obsidian_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -5256,15 +6663,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -5277,7 +6694,7 @@
 		},
 		{
 			"name": "Polar SulfurWyrm",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/SulfurWyrm/SulfurWyrm_Character_bp_Polar.SulfurWyrm_Character_bp_Polar_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/SulfurWyrm/SulfurWyrm_Character_bp_Polar.SulfurWyrm_Character_bp_Polar_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -5292,15 +6709,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -5313,7 +6740,7 @@
 		},
 		{
 			"name": "Tarrasque",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Tarrasque/Tarra_Character_BP.Tarra_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Tarrasque/Tarra_Character_BP.Tarra_Character_BP_C",
 			"dinoNameTag": "Tarra",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
@@ -5327,15 +6754,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 180, "sprint": 540 }
+				"walk": { "base": 180, "sprint": 540 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 180, "sprint": 540 }
+				"walk": { "base": 180, "sprint": 540 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -35,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -5350,7 +6793,7 @@
 		},
 		{
 			"name": "Tatzelwurm",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Tatzelwurm/Tatzel_Character_BP.Tatzel_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Tatzelwurm/Tatzel_Character_BP.Tatzel_Character_BP_C",
 			"dinoNameTag": "Xenomorph",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -5363,6 +6806,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
@@ -5375,6 +6828,10 @@
 				"walk": { "base": 460, "sprint": 3680 },
 				"swim": { "base": 700 }
 			},
+			"staminaRates": {
+				"sprint": 0,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
@@ -5383,7 +6840,7 @@
 		},
 		{
 			"name": "Centaur Terror Bird",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/TaurBird/TerrorBird_Character_BP_Centaur.TerrorBird_Character_BP_Centaur_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/TaurBird/TerrorBird_Character_BP_Centaur.TerrorBird_Character_BP_Centaur_C",
 			"dinoNameTag": "TerrorBird",
 			"customTag": "TerrorBird",
 			"targetingTeamName": "Herbivores_Medium",
@@ -5396,6 +6853,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5408,6 +6875,10 @@
 				"walk": { "base": 223.2, "sprint": 1116 },
 				"swim": { "base": 240 }
 			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 33,
 				"defaultSwingRadius": 160,
@@ -5419,7 +6890,7 @@
 		},
 		{
 			"name": "Treader",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Treader/Treader_Character_BP.Treader_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Treader/Treader_Character_BP.Treader_Character_BP_C",
 			"dinoNameTag": "Golem",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
@@ -5435,6 +6906,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5445,6 +6920,7 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1300 }
 			},
+			"staminaRates": { "sprint": -90 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -5457,7 +6933,7 @@
 		},
 		{
 			"name": "Ursai",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Ursai/Ursai_Character_BP.Ursai_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Ursai/Ursai_Character_BP.Ursai_Character_BP_C",
 			"dinoNameTag": "Ursai",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
@@ -5471,15 +6947,31 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 1200 }
+				"walk": { "base": 150, "sprint": 1200 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 1200 }
+				"walk": { "base": 150, "sprint": 1200 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -5493,7 +6985,7 @@
 		},
 		{
 			"name": "Aura Seeker",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Voltwraith/AuraSeeker_Character_BP.AuraSeeker_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Voltwraith/AuraSeeker_Character_BP.AuraSeeker_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Herbivores_Medium",
@@ -5508,19 +7000,33 @@
 				"canDrag",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 525 },
-				"fly": { "base": 400, "sprint": 440 },
-				"swim": { "base": 150 }
+				"walk": { "base": 300, "sprint": 525 },
+				"fly": { "base": 800, "sprint": 1540 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 300, "sprint": 1050 },
-				"fly": { "base": 800, "sprint": 880 },
+				"fly": { "base": 800, "sprint": 3080 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -14
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -5534,7 +7040,7 @@
 		},
 		{
 			"name": "Summoned Dark Mana Seeker",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Voltwraith/DarkSeeker_Character_BP.DarkSeeker_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Voltwraith/DarkSeeker_Character_BP.DarkSeeker_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -5549,19 +7055,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 525 },
-				"fly": { "base": 575, "sprint": 632.5 },
-				"swim": { "base": 150 }
+				"walk": { "base": 300, "sprint": 525 },
+				"fly": { "base": 1150, "sprint": 2213.8 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 300, "sprint": 1050 },
-				"fly": { "base": 1150, "sprint": 1265 },
+				"fly": { "base": 1150, "sprint": 4427.5 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -14
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -5575,7 +7095,7 @@
 		},
 		{
 			"name": "Dark Mana Seeker",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Voltwraith/DarkSeeker_Character_BP_Tamed.DarkSeeker_Character_BP_Tamed_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Voltwraith/DarkSeeker_Character_BP_Tamed.DarkSeeker_Character_BP_Tamed_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -5592,19 +7112,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 525 },
-				"fly": { "base": 400, "sprint": 440 },
-				"swim": { "base": 150 }
+				"walk": { "base": 300, "sprint": 525 },
+				"fly": { "base": 800, "sprint": 1540 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 300, "sprint": 1050 },
-				"fly": { "base": 800, "sprint": 880 },
+				"fly": { "base": 800, "sprint": 3080 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -14
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -5618,7 +7152,7 @@
 		},
 		{
 			"name": "Voyager",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/Voyager/Voyager_Character_BP.Voyager_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Voyager/Voyager_Character_BP.Voyager_Character_BP_C",
 			"dinoNameTag": "Golem",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Large",
@@ -5633,6 +7167,10 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5643,6 +7181,7 @@
 			"movementD": {
 				"walk": { "base": 300, "sprint": 1950 }
 			},
+			"staminaRates": { "sprint": -90 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -5654,7 +7193,7 @@
 		},
 		{
 			"name": "Water Wyvern",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/WaterWyvern/Wyvern_Character_bp_Water.Wyvern_Character_bp_Water_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/WaterWyvern/Wyvern_Character_bp_Water.Wyvern_Character_bp_Water_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -5674,17 +7213,27 @@
 				"isFlyerDino",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"fly": { "base": 700 },
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 600 },
+				"fly": { "base": 700, "sprint": 1470 },
+				"swim": { "base": 600, "sprint": 1800 }
 			},
 			"movementD": {
-				"fly": { "base": 700 },
-				"swim": { "base": 600 }
+				"walk": { "base": 200, "sprint": 600 },
+				"fly": { "base": 700, "sprint": 1470 },
+				"swim": { "base": 600, "sprint": 1800 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -20
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -5698,7 +7247,7 @@
 		},
 		{
 			"name": "Cadavarex",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/rockwolf/Cadavarex_Character_bp.Cadavarex_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/rockwolf/Cadavarex_Character_bp.Cadavarex_Character_bp_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivore_Water",
@@ -5713,6 +7262,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
@@ -5724,6 +7277,10 @@
 			"movementD": {
 				"walk": { "base": 500, "sprint": 3000 },
 				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -5737,7 +7294,7 @@
 		},
 		{
 			"name": "Helosauria",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/snakehead/NotGirros_Character_BP.NotGirros_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/snakehead/NotGirros_Character_BP.NotGirros_Character_BP_C",
 			"dinoNameTag": "Megalania",
 			"customTag": "Girros",
 			"targetingTeamName": "Carnivores_Medium",
@@ -5750,6 +7307,16 @@
 				"canBeTorpid",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2125,
+				"costLevel": 55,
+				"timeBase": 14875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
@@ -5758,8 +7325,9 @@
 				"walk": { "base": 350, "sprint": 1225 }
 			},
 			"movementD": {
-				"walk": { "base": 350, "sprint": 1225 }
+				"walk": { "base": 437.5, "sprint": 1225 }
 			},
+			"staminaRates": { "sprint": -7 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
@@ -5776,7 +7344,7 @@
 		},
 		{
 			"name": "Painted-Flame Helosauria",
-			"blueprintPath": "/Game/Mods/Pyria/Creatures/Wildlife/snakehead/NotGirros_Character_BP_Fire.NotGirros_Character_BP_Fire_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/snakehead/NotGirros_Character_BP_Fire.NotGirros_Character_BP_Fire_C",
 			"dinoNameTag": "Megalania",
 			"customTag": "Girros",
 			"targetingTeamName": "Carnivores_Medium",
@@ -5789,6 +7357,16 @@
 				"canBeTorpid",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2125,
+				"costLevel": 55,
+				"timeBase": 14875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
@@ -5797,8 +7375,9 @@
 				"walk": { "base": 350, "sprint": 1225 }
 			},
 			"movementD": {
-				"walk": { "base": 350, "sprint": 1225 }
+				"walk": { "base": 437.5, "sprint": 1225 }
 			},
+			"staminaRates": { "sprint": -7 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
@@ -5815,7 +7394,7 @@
 		},
 		{
 			"name": "Corrupted Arthropluera",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Arthropluera/Arthro_Character_BP_Corrupt.Arthro_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Arthropluera/Arthro_Character_BP_Corrupt.Arthro_Character_BP_Corrupt_C",
 			"dinoNameTag": "Arthro Corrupt",
 			"customTag": "Arthro",
 			"targetingTeamName": "Carnivores_High",
@@ -5830,17 +7409,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 500,
+				"costLevel": 55,
+				"timeBase": 3500,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 180, "sprint": 486 },
-				"swim": { "base": 320 }
+				"walk": { "base": 225, "sprint": 486 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 146.2, "sprint": 394.9 },
-				"swim": { "base": 260 }
+				"walk": { "base": 225, "sprint": 394.9 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 18,
@@ -5856,7 +7449,7 @@
 		},
 		{
 			"name": "Corrupted Carnotaurus",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Carno/Carno_Character_BP_Corrupt.Carno_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Carno/Carno_Character_BP_Corrupt.Carno_Character_BP_Corrupt_C",
 			"dinoNameTag": "Carno Corrupt",
 			"customTag": "Carno",
 			"targetingTeamName": "Carnivores_High",
@@ -5871,15 +7464,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 318.8, "sprint": 892.5 }
+				"walk": { "base": 425, "sprint": 892.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 425, "sprint": 1190 }
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -5892,7 +7501,7 @@
 		},
 		{
 			"name": "Corrupted Chalicotherium",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Chalicotherium/Chalico_Character_BP_Corrupt.Chalico_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Chalicotherium/Chalico_Character_BP_Corrupt.Chalico_Character_BP_Corrupt_C",
 			"dinoNameTag": "Chalico",
 			"customTag": "Chalico",
 			"targetingTeamName": "Carnivores_High",
@@ -5909,15 +7518,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 675,
+				"costLevel": 55,
+				"timeBase": 4725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 210, "sprint": 850.5 }
+				"walk": { "base": 210, "sprint": 850.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 210, "sprint": 850.5 }
+				"walk": { "base": 210, "sprint": 850.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 36,
@@ -5950,7 +7575,7 @@
 		},
 		{
 			"name": "Corrupted Dilophosaur",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Dilo/Dilo_Character_BP_Corrupt.Dilo_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Dilo/Dilo_Character_BP_Corrupt.Dilo_Character_BP_Corrupt_C",
 			"dinoNameTag": "Dilo Corrupt",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_High",
@@ -5964,6 +7589,16 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 300,
+				"costLevel": 27.5,
+				"timeBase": 2100,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5975,6 +7610,10 @@
 			"movementD": {
 				"walk": { "base": 88, "sprint": 264 },
 				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -5990,7 +7629,7 @@
 		},
 		{
 			"name": "Corrupted Dimorphodon",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Dimorphodon/Dimorph_Character_BP_Corrupt.Dimorph_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Dimorphodon/Dimorph_Character_BP_Corrupt.Dimorph_Character_BP_Corrupt_C",
 			"dinoNameTag": "Dimorph Corrupt",
 			"customTag": "Dimorph",
 			"targetingTeamName": "Carnivores_High",
@@ -6005,19 +7644,33 @@
 				"isCorrupted",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
 				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450 },
-				"swim": { "base": 400 }
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 23,
@@ -6027,7 +7680,7 @@
 		},
 		{
 			"name": "Corrupted Giganotosaurus",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Giganotosaurus/Gigant_Character_BP_Corrupt.Gigant_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Giganotosaurus/Gigant_Character_BP_Corrupt.Gigant_Character_BP_Corrupt_C",
 			"dinoNameTag": "Gigant Corrupt",
 			"customTag": "Gigant",
 			"targetingTeamName": "Carnivores_High",
@@ -6043,16 +7696,27 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 60,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 588, "sprint": 1681.7 }
+				"walk": { "base": 1050, "sprint": 1681.7 }
 			},
 			"movementD": {
-				"walk": { "base": 588, "sprint": 1681.7 }
+				"walk": { "base": 1050, "sprint": 1681.7 }
 			},
+			"staminaRates": { "sprint": -29 },
 			"attack": {
 				"defaultDmg": 300,
 				"defaultSwingRadius": 850,
@@ -6065,7 +7729,7 @@
 		},
 		{
 			"name": "Corrupted Reaper King",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Nameless/Xenomorph_Character_BP_Male_Tamed_Corrupt.Xenomorph_Character_BP_Male_Tamed_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Nameless/Xenomorph_Character_BP_Male_Tamed_Corrupt.Xenomorph_Character_BP_Male_Tamed_Corrupt_C",
 			"dinoNameTag": "Xenomorph Corrupt",
 			"customTag": "Reaper King",
 			"targetingTeamName": "Carnivores_High",
@@ -6081,15 +7745,31 @@
 				"isCorrupted",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 20,
 				"maxSpeed": 2800
 			},
 			"movementW": {
-				"walk": { "base": 524.2, "sprint": 1782.5 }
+				"walk": { "base": 699, "sprint": 1782.5 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 466, "sprint": 1584.4 }
+				"walk": { "base": 466, "sprint": 1584.4 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 65,
@@ -6113,7 +7793,7 @@
 		},
 		{
 			"name": "Corrupted Paraceratherium",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Paraceratherium/Paracer_Character_BP_Corrupt.Paracer_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Paraceratherium/Paracer_Character_BP_Corrupt.Paracer_Character_BP_Corrupt_C",
 			"dinoNameTag": "Paracer",
 			"customTag": "Paracer",
 			"targetingTeamName": "Carnivores_High",
@@ -6130,15 +7810,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 260, "sprint": 715 }
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 260, "sprint": 715 }
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -12,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -6148,7 +7844,7 @@
 		},
 		{
 			"name": "Corrupted Pteranodon",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Ptero/Ptero_Character_BP_Corrupt.Ptero_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Ptero/Ptero_Character_BP_Corrupt.Ptero_Character_BP_Corrupt_C",
 			"dinoNameTag": "Ptera Corrupt",
 			"customTag": "Ptera",
 			"targetingTeamName": "Carnivores_High",
@@ -6165,19 +7861,33 @@
 				"isCorrupted",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 226.1, "sprint": 715 },
-				"fly": { "base": 521.7 },
-				"swim": { "base": 260.9 }
+				"walk": { "base": 260, "sprint": 715 },
+				"fly": { "base": 600, "sprint": 1650 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
 				"walk": { "base": 260, "sprint": 822.2 },
-				"fly": { "base": 600 },
-				"swim": { "base": 300 }
+				"fly": { "base": 600, "sprint": 1897.5 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -6191,7 +7901,7 @@
 		},
 		{
 			"name": "Corrupted Raptor",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Raptor/Raptor_Character_BP_Corrupt.Raptor_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Raptor/Raptor_Character_BP_Corrupt.Raptor_Character_BP_Corrupt_C",
 			"dinoNameTag": "Raptor Corrupt",
 			"customTag": "Raptor",
 			"targetingTeamName": "Carnivores_High",
@@ -6207,17 +7917,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 432, "sprint": 993.6 },
-				"swim": { "base": 270 }
+				"walk": { "base": 480, "sprint": 993.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 480, "sprint": 1104 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -6232,7 +7956,7 @@
 		},
 		{
 			"name": "Enraged Corrupted Rex",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Rex/MegaRex_Character_BP_Corrupt.MegaRex_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Rex/MegaRex_Character_BP_Corrupt.MegaRex_Character_BP_Corrupt_C",
 			"dinoNameTag": "Elite Rex Corrupt",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -6249,15 +7973,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 257.5, "sprint": 736.4 }
+				"walk": { "base": 515, "sprint": 736.4 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 386.2, "sprint": 1104.7 }
+				"walk": { "base": 515, "sprint": 1104.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -6271,7 +8011,7 @@
 		},
 		{
 			"name": "Corrupted Rex",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Rex/Rex_Character_BP_Corrupt.Rex_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Rex/Rex_Character_BP_Corrupt.Rex_Character_BP_Corrupt_C",
 			"dinoNameTag": "Rex Corrupt",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -6288,15 +8028,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 257.5, "sprint": 736.4 }
+				"walk": { "base": 515, "sprint": 736.4 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 386.2, "sprint": 1104.7 }
+				"walk": { "base": 515, "sprint": 1104.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 60,
@@ -6310,7 +8066,7 @@
 		},
 		{
 			"name": "Corrupted Rock Drake",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/RockDrake/RockDrake_Character_BP_Corrupt.RockDrake_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/RockDrake/RockDrake_Character_BP_Corrupt.RockDrake_Character_BP_Corrupt_C",
 			"dinoNameTag": "RockDrake Corrupt",
 			"customTag": "RockDrake",
 			"targetingTeamName": "Carnivores_High",
@@ -6327,17 +8083,31 @@
 				"isCorrupted",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 520, "sprint": 1820 },
-				"swim": { "base": 480 }
+				"walk": { "base": 650, "sprint": 1820 },
+				"swim": { "base": 600, "sprint": 840 }
 			},
 			"movementD": {
-				"walk": { "base": 585, "sprint": 2047.5 },
-				"swim": { "base": 540 }
+				"walk": { "base": 650, "sprint": 2047.5 },
+				"swim": { "base": 600, "sprint": 945 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -6354,7 +8124,7 @@
 		},
 		{
 			"name": "Corrupted Spino",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Spino/Spino_Character_BP_Corrupt.Spino_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Spino/Spino_Character_BP_Corrupt.Spino_Character_BP_Corrupt_C",
 			"dinoNameTag": "Spino Corrupt",
 			"customTag": "Spino",
 			"targetingTeamName": "Carnivores_High",
@@ -6372,15 +8142,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 452, "sprint": 1717.6 }
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 452, "sprint": 1717.6 }
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -6396,7 +8182,7 @@
 		},
 		{
 			"name": "Corrupted Stegosaurus",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Stego/Stego_Character_BP_Corrupt.Stego_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Stego/Stego_Character_BP_Corrupt.Stego_Character_BP_Corrupt_C",
 			"dinoNameTag": "Stego Corrupt",
 			"customTag": "Stego",
 			"targetingTeamName": "Carnivores_High",
@@ -6413,15 +8199,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 725,
+				"costLevel": 55,
+				"timeBase": 5075,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 221, "sprint": 607.7 }
+				"walk": { "base": 170, "sprint": 607.7 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 76.5, "sprint": 210.4 }
+				"walk": { "base": 76.5, "sprint": 210.4 },
+				"swim": { "base": 135 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -6431,7 +8233,7 @@
 		},
 		{
 			"name": "Enraged Triceratops",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Trike/MegaTrike_Character_BP_Corrupt.MegaTrike_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Trike/MegaTrike_Character_BP_Corrupt.MegaTrike_Character_BP_Corrupt_C",
 			"dinoNameTag": "Trike",
 			"customTag": "Trike",
 			"targetingTeamName": "Carnivores_High",
@@ -6448,15 +8250,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 202.5, "sprint": 607.5 }
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 94.5, "sprint": 283.5 }
+				"walk": { "base": 94.5, "sprint": 283.5 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 145,
@@ -6469,7 +8287,7 @@
 		},
 		{
 			"name": "Corrupted Triceratops",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Trike/Trike_Character_BP_Corrupt.Trike_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Trike/Trike_Character_BP_Corrupt.Trike_Character_BP_Corrupt_C",
 			"dinoNameTag": "Trike",
 			"customTag": "Trike",
 			"targetingTeamName": "Carnivores_High",
@@ -6486,15 +8304,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 202.5, "sprint": 607.5 }
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 94.5, "sprint": 283.5 }
+				"walk": { "base": 94.5, "sprint": 283.5 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 32,
@@ -6507,7 +8341,7 @@
 		},
 		{
 			"name": "Corrupted Wyvern",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Wyvern/Wyvern_Character_BP_Fire_Corrupt.Wyvern_Character_BP_Fire_Corrupt_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Corrupt/Wyvern/Wyvern_Character_BP_Fire_Corrupt.Wyvern_Character_BP_Fire_Corrupt_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -6527,19 +8361,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -6555,7 +8403,7 @@
 		},
 		{
 			"name": "Corrupt Tumor",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/KingKaiju/CorruptTumor_Character_BP.CorruptTumor_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/KingKaiju/CorruptTumor_Character_BP.CorruptTumor_Character_BP_C",
 			"dinoNameTag": "",
 			"customTag": "CorruptTumor",
 			"targetingTeamName": "",
@@ -6563,16 +8411,23 @@
 			"dragWeight": 35,
 			"variants": [ "Corrupted" ],
 			"flags": [ "isCorrupted" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600 }
+				"walk": { "base": 600 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 600 }
+				"walk": { "base": 600 },
+				"swim": { "base": 300 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90
@@ -6580,7 +8435,7 @@
 		},
 		{
 			"name": "Gamma King Titan",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/KingKaiju/KingKaiju_Character_BP.KingKaiju_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/KingKaiju/KingKaiju_Character_BP.KingKaiju_Character_BP_C",
 			"dinoNameTag": "King Titan",
 			"customTag": "KingKaiju",
 			"targetingTeamName": "",
@@ -6593,11 +8448,14 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1000 }
+				"walk": { "base": 1000 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 1000 }
+				"walk": { "base": 1000 },
+				"swim": { "base": 300 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
@@ -6628,13 +8486,14 @@
 		},
 		{
 			"name": "Mega Mek",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Mek/MegaMek_Character_BP.MegaMek_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Mek/MegaMek_Character_BP.MegaMek_Character_BP_C",
 			"dinoNameTag": "MegaMek",
 			"customTag": "MegaMek",
 			"targetingTeamName": "",
 			"mass": 10000,
 			"dragWeight": 1200,
 			"flags": [ "allowRiding", "doStepDamage", "isBigDino", "isRobot" ],
+			"levelCaps": { "maxExperience": 0 },
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 4500
@@ -6647,6 +8506,7 @@
 				"walk": { "base": 750 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
@@ -6662,13 +8522,17 @@
 		},
 		{
 			"name": "Defense Unit",
-			"blueprintPath": "/Game/Mods/Pyria/Extinction/Dinos/Tank/Defender_Character_BP.Defender_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/Extinction/Dinos/Tank/Defender_Character_BP.Defender_Character_BP_C",
 			"dinoNameTag": "EndTank",
 			"customTag": "EndTank",
 			"targetingTeamName": "Robot_Aggressive",
 			"mass": 225,
 			"dragWeight": 300,
 			"flags": [ "allowMountedWeaponry", "allowRiding", "canBeTorpid", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6681,6 +8545,7 @@
 				"walk": { "base": 325 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
@@ -6695,22 +8560,38 @@
 		},
 		{
 			"name": "Skeletal Carnotaurus",
-			"blueprintPath": "/Game/Mods/Pyria/PrimalEarth/Dinos/Carno/Bone_MegaCarno_Character_BP.Bone_MegaCarno_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/Dinos/Carno/Bone_MegaCarno_Character_BP.Bone_MegaCarno_Character_BP_C",
 			"dinoNameTag": "Elite Carno",
 			"customTag": "Carno",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 222,
 			"dragWeight": 250,
 			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 467.5, "sprint": 1309 }
+				"walk": { "base": 550, "sprint": 1309 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 550, "sprint": 1540 }
+				"walk": { "base": 550, "sprint": 1540 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 80,
@@ -6723,7 +8604,7 @@
 		},
 		{
 			"name": "Dragon",
-			"blueprintPath": "/Game/Mods/Pyria/PrimalEarth/Dinos/Dragon/Dragon_Character_BP.Dragon_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/Dinos/Dragon/Dragon_Character_BP.Dragon_Character_BP_C",
 			"dinoNameTag": "Dragon",
 			"customTag": "Dragon",
 			"targetingTeamName": "Carnivores_High",
@@ -6747,13 +8628,17 @@
 			},
 			"movementW": {
 				"walk": { "base": 1650, "sprint": 4950 },
-				"fly": { "base": 4000, "sprint": 2200 },
-				"swim": { "base": 1100 }
+				"fly": { "base": 4000, "sprint": 6600 },
+				"swim": { "base": 4000 }
 			},
 			"movementD": {
 				"walk": { "base": 1650, "sprint": 4950 },
-				"fly": { "base": 4000, "sprint": 2200 },
-				"swim": { "base": 1100 }
+				"fly": { "base": 4000, "sprint": 6600 },
+				"swim": { "base": 4000 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -6767,7 +8652,7 @@
 		},
 		{
 			"name": "Skeletal Rex",
-			"blueprintPath": "/Game/Mods/Pyria/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
 			"dinoNameTag": "Bone Rex",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -6781,15 +8666,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 377.5, "sprint": 1079.6 }
+				"walk": { "base": 755, "sprint": 1079.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 566.2, "sprint": 1619.5 }
+				"walk": { "base": 755, "sprint": 1619.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 170,
@@ -6802,7 +8703,7 @@
 		},
 		{
 			"name": "Skeletal Bronto",
-			"blueprintPath": "/Game/Mods/Pyria/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
 			"dinoNameTag": "Bronto",
 			"customTag": "Bronto",
 			"targetingTeamName": "Herbivores_Large",
@@ -6816,15 +8717,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 607.5 }
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 405 }
+				"walk": { "base": 180, "sprint": 405 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 90,
@@ -6834,7 +8751,7 @@
 		},
 		{
 			"name": "Dodo Wyvern",
-			"blueprintPath": "/Game/Mods/Pyria/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -6852,20 +8769,31 @@
 				"preventCharacterBasing",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 650, "sprint": 1300 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 1300 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 650, "sprint": 1300 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 1300 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 3000 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 160,
 				"defaultSwingRadius": 1200,
@@ -6885,7 +8813,7 @@
 		},
 		{
 			"name": "Manticore",
-			"blueprintPath": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Manticore/Manticore_Character_BP.Manticore_Character_BP_C",
+			"bp": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Manticore/Manticore_Character_BP.Manticore_Character_BP_C",
 			"dinoNameTag": "Manticore",
 			"customTag": "Manticore",
 			"targetingTeamName": "Carnivores_High",
@@ -6909,13 +8837,17 @@
 			},
 			"movementW": {
 				"walk": { "base": 1300, "sprint": 2600 },
-				"fly": { "base": 2200, "sprint": 1210 },
-				"swim": { "base": 1100 }
+				"fly": { "base": 2200, "sprint": 2420 },
+				"swim": { "base": 2200 }
 			},
 			"movementD": {
 				"walk": { "base": 1300, "sprint": 2600 },
-				"fly": { "base": 2200, "sprint": 1210 },
-				"swim": { "base": 1100 }
+				"fly": { "base": 2200, "sprint": 2420 },
+				"swim": { "base": 2200 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -6945,7 +8877,7 @@
 		},
 		{
 			"name": "Deathworm",
-			"blueprintPath": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Manticore/Minions/Deathworm_Character_Minion_BP.Deathworm_Character_Minion_BP_C",
+			"bp": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Manticore/Minions/Deathworm_Character_Minion_BP.Deathworm_Character_Minion_BP_C",
 			"dinoNameTag": "Deathworm",
 			"customTag": "Deathworm",
 			"targetingTeamName": "Carnivores_High",
@@ -6953,6 +8885,10 @@
 			"dragWeight": 1000,
 			"variants": [ "Minion" ],
 			"flags": [ "isBigDino", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6963,6 +8899,7 @@
 			"movementD": {
 				"walk": { "base": 0 }
 			},
+			"staminaRates": {},
 			"attack": {
 				"defaultDmg": 210,
 				"defaultSwingRadius": 1200,
@@ -6974,7 +8911,7 @@
 		},
 		{
 			"name": "Rock Elemental",
-			"blueprintPath": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Manticore/RockGolem_Character_Minion_BP.RockGolem_Character_Minion_BP_C",
+			"bp": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Manticore/RockGolem_Character_Minion_BP.RockGolem_Character_Minion_BP_C",
 			"dinoNameTag": "RockElemental",
 			"customTag": "RockElemental",
 			"targetingTeamName": "Carnivores_High",
@@ -6988,6 +8925,16 @@
 				"doStepDamage",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2200,
+				"costLevel": 55,
+				"timeBase": 15400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6998,6 +8945,7 @@
 			"movementD": {
 				"walk": { "base": 400, "sprint": 960 }
 			},
+			"staminaRates": { "sprint": -25 },
 			"attack": {
 				"defaultDmg": 160,
 				"defaultSwingRadius": 1200,
@@ -7013,7 +8961,7 @@
 		},
 		{
 			"name": "Zombie Fire Wyvern",
-			"blueprintPath": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieFire.Wyvern_Character_BP_ZombieFire_C",
+			"bp": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieFire.Wyvern_Character_BP_ZombieFire_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -7030,19 +8978,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -7058,7 +9020,7 @@
 		},
 		{
 			"name": "Zombie Lightning Wyvern",
-			"blueprintPath": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieLightning.Wyvern_Character_BP_ZombieLightning_C",
+			"bp": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieLightning.Wyvern_Character_BP_ZombieLightning_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -7075,19 +9037,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -7103,7 +9079,7 @@
 		},
 		{
 			"name": "Zombie Poison Wyvern",
-			"blueprintPath": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombiePoison.Wyvern_Character_BP_ZombiePoison_C",
+			"bp": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombiePoison.Wyvern_Character_BP_ZombiePoison_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -7120,19 +9096,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,

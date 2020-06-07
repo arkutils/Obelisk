@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1570545692",
-	"format": "1",
+	"version": "310.117.1570545692",
+	"format": "2",
 	"mod": {
 		"id": "899987403",
 		"tag": "Primal_Fear_Bosses",
@@ -10,13 +10,23 @@
 	"species": [
 		{
 			"name": "Alpha Gigantopithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Alpha/AlphaBigfoot/AlphaBigfoot_Character_BP_Aggressive.AlphaBigfoot_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Alpha/AlphaBigfoot/AlphaBigfoot_Character_BP_Aggressive.AlphaBigfoot_Character_BP_Aggressive_C",
 			"dinoNameTag": "AlphaBigfootAggressive",
 			"customTag": "AlphaBigfootAggressive",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 198,
 			"dragWeight": 150,
 			"flags": [ "allowCarryFlyerDinos", "allowMountedWeaponry", "canBeDragged", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
@@ -29,6 +39,10 @@
 				"walk": { "base": 292.5, "sprint": 1023.8 },
 				"swim": { "base": 450 }
 			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 200,
 				"defaultSwingRadius": 110,
@@ -40,24 +54,38 @@
 		},
 		{
 			"name": "Alpha Mesopithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Alpha/AlphaBigfoot/AlphaMonkey_Character_BP_Aggressive.AlphaMonkey_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Alpha/AlphaBigfoot/AlphaMonkey_Character_BP_Aggressive.AlphaMonkey_Character_BP_Aggressive_C",
 			"dinoNameTag": "PFAlphaMonkeyAgressive",
 			"customTag": "PFAlphaMonkeyAgressive",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 27.5,
+				"timeBase": 4025,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 126, "sprint": 504 },
-				"swim": { "base": 630 }
+				"walk": { "base": 60, "sprint": 504 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 240 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 50,
@@ -73,22 +101,38 @@
 		},
 		{
 			"name": "Alpha Araneo",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Alpha/AlphaSpider/AlphaSpiderS_Character_BP_Aggressive.AlphaSpiderS_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Alpha/AlphaSpider/AlphaSpiderS_Character_BP_Aggressive.AlphaSpiderS_Character_BP_Aggressive_C",
 			"dinoNameTag": "BossAlphaSpider",
 			"customTag": "BossAlphaSpider",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 90,
 			"dragWeight": 90,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 125000,
+				"costLevel": 27500,
+				"timeBase": 875000,
+				"timeLevel": 192500
+			},
 			"falling": {
 				"dmgMult": 10,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 160, "sprint": 320 }
+				"walk": { "base": 160, "sprint": 320 },
+				"swim": { "base": 160 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -98,7 +142,7 @@
 		},
 		{
 			"name": "Alpha Broodmother Lysrix",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Alpha/Broodmother/PFBAlphaSpiderL_Character_BP_Tameable_Child.PFBAlphaSpiderL_Character_BP_Tameable_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Alpha/Broodmother/PFBAlphaSpiderL_Character_BP_Tameable_Child.PFBAlphaSpiderL_Character_BP_Tameable_Child_C",
 			"dinoNameTag": "PFBAlphaBroodmother",
 			"customTag": "PFBBroodmother",
 			"targetingTeamName": "Carnivores_High",
@@ -113,15 +157,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 398, "sprint": 696.5 }
+				"walk": { "base": 398, "sprint": 696.5 },
+				"swim": { "base": 257 }
 			},
 			"movementD": {
-				"walk": { "base": 1058.7, "sprint": 1852.7 }
+				"walk": { "base": 557.2, "sprint": 1852.7 },
+				"swim": { "base": 359.8 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -143,7 +197,7 @@
 		},
 		{
 			"name": "Alpha DodoRex",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Alpha/Dodorex/PFBAlphaDodoRex_Character_BP_Child.PFBAlphaDodoRex_Character_BP_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Alpha/Dodorex/PFBAlphaDodoRex_Character_BP_Child.PFBAlphaDodoRex_Character_BP_Child_C",
 			"dinoNameTag": "PFBAlphaDodoRex",
 			"customTag": "PFBDodoRex",
 			"targetingTeamName": "Carnivores_High",
@@ -159,16 +213,21 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 515, "sprint": 2266 }
+				"walk": { "base": 1030, "sprint": 2266 }
 			},
 			"movementD": {
-				"walk": { "base": 515, "sprint": 2266 }
+				"walk": { "base": 1030, "sprint": 2266 }
 			},
+			"staminaRates": { "sprint": -40 },
 			"attack": {
 				"defaultDmg": 930,
 				"defaultSwingRadius": 826,
@@ -182,7 +241,7 @@
 		},
 		{
 			"name": "Alpha Dodo Wyvern",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Alpha/Dodowyvern/PFBAlphaDodoWyvern_Character_BP_Child.PFBAlphaDodoWyvern_Character_BP_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Alpha/Dodowyvern/PFBAlphaDodoWyvern_Character_BP_Child.PFBAlphaDodoWyvern_Character_BP_Child_C",
 			"dinoNameTag": "PFBAlphaDodoWyvern",
 			"customTag": "PFBDodoWyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -201,19 +260,33 @@
 				"isFlyerDino",
 				"preventCharacterBasing"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 250000,
+				"costLevel": 27500,
+				"timeBase": 1750000,
+				"timeLevel": 192500
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 853.5, "sprint": 1707 },
-				"fly": { "base": 1971, "sprint": 1314 },
-				"swim": { "base": 602.2 }
+				"walk": { "base": 1138, "sprint": 1707 },
+				"fly": { "base": 2628 },
+				"swim": { "base": 2628 }
 			},
 			"movementD": {
-				"walk": { "base": 853.5, "sprint": 1707 },
-				"fly": { "base": 1971, "sprint": 1314 },
-				"swim": { "base": 602.2 }
+				"walk": { "base": 1138, "sprint": 1707 },
+				"fly": { "base": 2628 },
+				"swim": { "base": 2628 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 825,
@@ -234,7 +307,7 @@
 		},
 		{
 			"name": "Alpha Dragon",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Alpha/Dragon/PFBAlphaDragon_Character_BP_Child.PFBAlphaDragon_Character_BP_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Alpha/Dragon/PFBAlphaDragon_Character_BP_Child.PFBAlphaDragon_Character_BP_Child_C",
 			"dinoNameTag": "PFBAlphaDragon",
 			"customTag": "PFBDragon",
 			"targetingTeamName": "Carnivores_High",
@@ -251,19 +324,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 495, "sprint": 1485 },
-				"fly": { "base": 3000, "sprint": 1650 },
-				"swim": { "base": 330 }
+				"fly": { "base": 3000, "sprint": 4950 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
 				"walk": { "base": 495, "sprint": 1485 },
-				"fly": { "base": 3000, "sprint": 1650 },
-				"swim": { "base": 330 }
+				"fly": { "base": 3000, "sprint": 4950 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 860,
@@ -277,7 +358,7 @@
 		},
 		{
 			"name": "Alpha Megapithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Alpha/Gorilla/PFBAlphaGorilla_Character_BP_Tameable_Child.PFBAlphaGorilla_Character_BP_Tameable_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Alpha/Gorilla/PFBAlphaGorilla_Character_BP_Tameable_Child.PFBAlphaGorilla_Character_BP_Tameable_Child_C",
 			"dinoNameTag": "PFBAlphaMegapithecus",
 			"customTag": "PFBMegapithecus",
 			"targetingTeamName": "Carnivores_High",
@@ -293,6 +374,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -304,6 +389,10 @@
 			"movementD": {
 				"walk": { "base": 738, "sprint": 2952 },
 				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 1025,
@@ -321,7 +410,7 @@
 		},
 		{
 			"name": "Alpha Manticore",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Alpha/Manticore/PFBAlphaManticore_Character_BP_New_Child.PFBAlphaManticore_Character_BP_New_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Alpha/Manticore/PFBAlphaManticore_Character_BP_New_Child.PFBAlphaManticore_Character_BP_New_Child_C",
 			"dinoNameTag": "PFBAlphaManticore",
 			"customTag": "PFBManticore",
 			"targetingTeamName": "Carnivores_High",
@@ -339,19 +428,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 2652, "sprint": 5304 },
-				"fly": { "base": 3600 },
-				"swim": { "base": 2640 }
+				"walk": { "base": 1326, "sprint": 5304 },
+				"fly": { "base": 1800, "sprint": 7200 },
+				"swim": { "base": 1800 }
 			},
 			"movementD": {
-				"walk": { "base": 2652, "sprint": 5304 },
-				"fly": { "base": 3600 },
-				"swim": { "base": 2640 }
+				"walk": { "base": 1326, "sprint": 5304 },
+				"fly": { "base": 1800, "sprint": 7200 },
+				"swim": { "base": 1800 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 875,
@@ -377,13 +474,23 @@
 		},
 		{
 			"name": "Apex Gigantopithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Apex/ApexBigfoot/ApexBigfoot_Character_BP_Aggressive.ApexBigfoot_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Apex/ApexBigfoot/ApexBigfoot_Character_BP_Aggressive.ApexBigfoot_Character_BP_Aggressive_C",
 			"dinoNameTag": "ApexBigfootAggressive",
 			"customTag": "ApexBigfootAggressive",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 198,
 			"dragWeight": 150,
 			"flags": [ "allowCarryFlyerDinos", "allowMountedWeaponry", "canBeDragged", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -396,6 +503,10 @@
 				"walk": { "base": 292.5, "sprint": 1023.8 },
 				"swim": { "base": 450 }
 			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 400,
 				"defaultSwingRadius": 110,
@@ -407,24 +518,38 @@
 		},
 		{
 			"name": "Apex Mesopithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Apex/ApexBigfoot/ApexMonkey_Character_BP_Aggressive.ApexMonkey_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Apex/ApexBigfoot/ApexMonkey_Character_BP_Aggressive.ApexMonkey_Character_BP_Aggressive_C",
 			"dinoNameTag": "PFApexMonkeyAgressive",
 			"customTag": "PFApexMonkeyAgressive",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 27.5,
+				"timeBase": 4025,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 126, "sprint": 504 },
-				"swim": { "base": 630 }
+				"walk": { "base": 60, "sprint": 504 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 240 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 100,
@@ -440,22 +565,38 @@
 		},
 		{
 			"name": "Apex Araneo",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Apex/ApexSpider/ApexSpiderS_Character_BP_Aggressive.ApexSpiderS_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Apex/ApexSpider/ApexSpiderS_Character_BP_Aggressive.ApexSpiderS_Character_BP_Aggressive_C",
 			"dinoNameTag": "BossApexSpider",
 			"customTag": "BossApexSpider",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 90,
 			"dragWeight": 90,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 100,
+				"costLevel": 55,
+				"timeBase": 700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 160, "sprint": 320 }
+				"walk": { "base": 160, "sprint": 320 },
+				"swim": { "base": 160 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -465,7 +606,7 @@
 		},
 		{
 			"name": "Apex Broodmother Lysrix",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Apex/Broodmother/PFBApexSpiderL_Character_BP_Tameable_Child.PFBApexSpiderL_Character_BP_Tameable_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Apex/Broodmother/PFBApexSpiderL_Character_BP_Tameable_Child.PFBApexSpiderL_Character_BP_Tameable_Child_C",
 			"dinoNameTag": "PFBApexBroodmother",
 			"customTag": "PFBBroodmother",
 			"targetingTeamName": "Carnivores_High",
@@ -480,15 +621,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 438, "sprint": 766.5 }
+				"walk": { "base": 438, "sprint": 766.5 },
+				"swim": { "base": 308 }
 			},
 			"movementD": {
-				"walk": { "base": 1165.1, "sprint": 2038.9 }
+				"walk": { "base": 613.2, "sprint": 2038.9 },
+				"swim": { "base": 431.2 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -510,7 +661,7 @@
 		},
 		{
 			"name": "Apex DodoRex",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Apex/Dodorex/PFBApexDodoRex_Character_BP_Child.PFBApexDodoRex_Character_BP_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Apex/Dodorex/PFBApexDodoRex_Character_BP_Child.PFBApexDodoRex_Character_BP_Child_C",
 			"dinoNameTag": "PFBApexDodoRex",
 			"customTag": "PFBDodoRex",
 			"targetingTeamName": "Carnivores_High",
@@ -526,16 +677,21 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 618, "sprint": 2719.2 }
+				"walk": { "base": 1236, "sprint": 2719.2 }
 			},
 			"movementD": {
-				"walk": { "base": 618, "sprint": 2719.2 }
+				"walk": { "base": 1236, "sprint": 2719.2 }
 			},
+			"staminaRates": { "sprint": -40 },
 			"attack": {
 				"defaultDmg": 1860,
 				"defaultSwingRadius": 1075,
@@ -549,7 +705,7 @@
 		},
 		{
 			"name": "Apex Dodo Wyvern",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Apex/Dodowyvern/PFBApexDodoWyvern_Character_BP_Child.PFBApexDodoWyvern_Character_BP_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Apex/Dodowyvern/PFBApexDodoWyvern_Character_BP_Child.PFBApexDodoWyvern_Character_BP_Child_C",
 			"dinoNameTag": "PFBApexDodoWyvern",
 			"customTag": "PFBDodoWyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -568,19 +724,33 @@
 				"isFlyerDino",
 				"preventCharacterBasing"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375000,
+				"costLevel": 38500,
+				"timeBase": 2625000,
+				"timeLevel": 269500
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1017.8, "sprint": 2035.5 },
-				"fly": { "base": 2365.5, "sprint": 1577 },
-				"swim": { "base": 602.2 }
+				"walk": { "base": 1357, "sprint": 2035.5 },
+				"fly": { "base": 3154 },
+				"swim": { "base": 3154 }
 			},
 			"movementD": {
-				"walk": { "base": 1017.8, "sprint": 2035.5 },
-				"fly": { "base": 2365.5, "sprint": 1577 },
-				"swim": { "base": 602.2 }
+				"walk": { "base": 1357, "sprint": 2035.5 },
+				"fly": { "base": 3154 },
+				"swim": { "base": 3154 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 1650,
@@ -601,7 +771,7 @@
 		},
 		{
 			"name": "Apex Dragon",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Apex/Dragon/PFBApexDragon_Character_BP_Child.PFBApexDragon_Character_BP_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Apex/Dragon/PFBApexDragon_Character_BP_Child.PFBApexDragon_Character_BP_Child_C",
 			"dinoNameTag": "PFBApexDragon",
 			"customTag": "PFBDragon",
 			"targetingTeamName": "Carnivores_High",
@@ -618,19 +788,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375000,
+				"costLevel": 38500,
+				"timeBase": 2625000,
+				"timeLevel": 269500
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 594, "sprint": 1782 },
-				"fly": { "base": 3600, "sprint": 1980 },
-				"swim": { "base": 330 }
+				"fly": { "base": 3600, "sprint": 5940 },
+				"swim": { "base": 3600 }
 			},
 			"movementD": {
 				"walk": { "base": 594, "sprint": 1782 },
-				"fly": { "base": 3600, "sprint": 1980 },
-				"swim": { "base": 330 }
+				"fly": { "base": 3600, "sprint": 5940 },
+				"swim": { "base": 3600 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 1720,
@@ -644,7 +828,7 @@
 		},
 		{
 			"name": "Apex Megapithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Apex/Gorilla/PFBApexGorilla_Character_BP_Tameable_Child.PFBApexGorilla_Character_BP_Tameable_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Apex/Gorilla/PFBApexGorilla_Character_BP_Tameable_Child.PFBApexGorilla_Character_BP_Tameable_Child_C",
 			"dinoNameTag": "PFBApexMegapithecus",
 			"customTag": "PFBMegapithecus",
 			"targetingTeamName": "Carnivores_High",
@@ -660,6 +844,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375000,
+				"costLevel": 38500,
+				"timeBase": 2625000,
+				"timeLevel": 269500
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -671,6 +865,10 @@
 			"movementD": {
 				"walk": { "base": 886, "sprint": 3544 },
 				"swim": { "base": 432 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 2050,
@@ -688,7 +886,7 @@
 		},
 		{
 			"name": "Apex Manticore",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Apex/Manticore/PFBApexManticore_Character_BP_New_Child.PFBApexManticore_Character_BP_New_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Apex/Manticore/PFBApexManticore_Character_BP_New_Child.PFBApexManticore_Character_BP_New_Child_C",
 			"dinoNameTag": "PFBApexManticore",
 			"customTag": "PFBManticore",
 			"targetingTeamName": "Carnivores_High",
@@ -706,19 +904,33 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375000,
+				"costLevel": 38500,
+				"timeBase": 2625000,
+				"timeLevel": 269500
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 3182, "sprint": 6364 },
-				"fly": { "base": 4320 },
-				"swim": { "base": 2640 }
+				"walk": { "base": 1591, "sprint": 6364 },
+				"fly": { "base": 2160, "sprint": 8640 },
+				"swim": { "base": 2160 }
 			},
 			"movementD": {
-				"walk": { "base": 3182, "sprint": 6364 },
-				"fly": { "base": 4320 },
-				"swim": { "base": 2640 }
+				"walk": { "base": 1591, "sprint": 6364 },
+				"fly": { "base": 2160, "sprint": 8640 },
+				"swim": { "base": 2160 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 1750,
@@ -744,22 +956,38 @@
 		},
 		{
 			"name": "Chaos Araneo",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Chaos/Broodmother/Minions/ChaosSpiderS_Character_BP_Aggressive.ChaosSpiderS_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Chaos/Broodmother/Minions/ChaosSpiderS_Character_BP_Aggressive.ChaosSpiderS_Character_BP_Aggressive_C",
 			"dinoNameTag": "BosschaosSpider",
 			"customTag": "BossChaosSpider",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 90,
 			"dragWeight": 90,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 100,
+				"costLevel": 55,
+				"timeBase": 700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 160, "sprint": 320 }
+				"walk": { "base": 160, "sprint": 320 },
+				"swim": { "base": 160 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 150,
@@ -769,7 +997,7 @@
 		},
 		{
 			"name": "Chaos Broodmother Lysrix",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Chaos/Broodmother/PFBChaosSpiderL_Character_BP_Tameable_Child.PFBChaosSpiderL_Character_BP_Tameable_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Chaos/Broodmother/PFBChaosSpiderL_Character_BP_Tameable_Child.PFBChaosSpiderL_Character_BP_Tameable_Child_C",
 			"dinoNameTag": "PFBChaosBroodmother",
 			"customTag": "PFBBroodmother",
 			"targetingTeamName": "Carnivores_High",
@@ -784,15 +1012,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 558, "sprint": 976.5 }
+				"walk": { "base": 558, "sprint": 976.5 },
+				"swim": { "base": 470 }
 			},
 			"movementD": {
-				"walk": { "base": 1484.3, "sprint": 2597.5 }
+				"walk": { "base": 781.2, "sprint": 2597.5 },
+				"swim": { "base": 658 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -814,7 +1052,7 @@
 		},
 		{
 			"name": "Chaos DodoRex",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Chaos/DodoRex/PFBChaosDodoRex_Character_BP_Child.PFBChaosDodoRex_Character_BP_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Chaos/DodoRex/PFBChaosDodoRex_Character_BP_Child.PFBChaosDodoRex_Character_BP_Child_C",
 			"dinoNameTag": "PFBChaosDodoRex",
 			"customTag": "PFBDodoRex",
 			"targetingTeamName": "Carnivores_High",
@@ -830,16 +1068,21 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 741.5, "sprint": 3262.6 }
+				"walk": { "base": 1483, "sprint": 3262.6 }
 			},
 			"movementD": {
-				"walk": { "base": 741.5, "sprint": 3262.6 }
+				"walk": { "base": 1483, "sprint": 3262.6 }
 			},
+			"staminaRates": { "sprint": -40 },
 			"attack": {
 				"defaultDmg": 17670,
 				"defaultSwingRadius": 993,
@@ -853,7 +1096,7 @@
 		},
 		{
 			"name": "Chaos Dodo Wyvern",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Chaos/Dodowyvern/PFBChaosDodoWyvern_Character_BP_Child.PFBChaosDodoWyvern_Character_BP_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Chaos/Dodowyvern/PFBChaosDodoWyvern_Character_BP_Child.PFBChaosDodoWyvern_Character_BP_Child_C",
 			"dinoNameTag": "PFBChaosDodoWyvern",
 			"customTag": "PFBDodoWyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -872,19 +1115,27 @@
 				"isFlyerDino",
 				"preventCharacterBasing"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1221.3, "sprint": 2442.6 },
-				"fly": { "base": 2838.8, "sprint": 1892.5 },
-				"swim": { "base": 723 }
+				"walk": { "base": 1628.4, "sprint": 2442.6 },
+				"fly": { "base": 3785 },
+				"swim": { "base": 3785 }
 			},
 			"movementD": {
-				"walk": { "base": 1221.3, "sprint": 2442.6 },
-				"fly": { "base": 2838.8, "sprint": 1892.5 },
-				"swim": { "base": 723 }
+				"walk": { "base": 1628.4, "sprint": 2442.6 },
+				"fly": { "base": 3785 },
+				"swim": { "base": 3785 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15510,
@@ -905,7 +1156,7 @@
 		},
 		{
 			"name": "Chaos Dragon",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Chaos/Dragon/PFBChaosDragon_Character_BP_Child.PFBChaosDragon_Character_BP_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Chaos/Dragon/PFBChaosDragon_Character_BP_Child.PFBChaosDragon_Character_BP_Child_C",
 			"dinoNameTag": "PFBChaosDragon",
 			"customTag": "PFBDragon",
 			"targetingTeamName": "Carnivores_High",
@@ -922,19 +1173,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 713, "sprint": 2139 },
-				"fly": { "base": 4320, "sprint": 2376 },
-				"swim": { "base": 330 }
+				"fly": { "base": 4320, "sprint": 7128 },
+				"swim": { "base": 4320 }
 			},
 			"movementD": {
 				"walk": { "base": 713, "sprint": 2139 },
-				"fly": { "base": 4320, "sprint": 2376 },
-				"swim": { "base": 330 }
+				"fly": { "base": 4320, "sprint": 7128 },
+				"swim": { "base": 4320 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 16168,
@@ -948,13 +1207,23 @@
 		},
 		{
 			"name": "Chaos Gigantopithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Chaos/Gorilla/Minions/ChaosBigfoot_Character_BP_Aggressive.ChaosBigfoot_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Chaos/Gorilla/Minions/ChaosBigfoot_Character_BP_Aggressive.ChaosBigfoot_Character_BP_Aggressive_C",
 			"dinoNameTag": "ChaosBigfootAggressive",
 			"customTag": "ChaosBigfootAggressive",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 198,
 			"dragWeight": 150,
 			"flags": [ "allowCarryFlyerDinos", "allowMountedWeaponry", "canBeDragged", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -967,6 +1236,10 @@
 				"walk": { "base": 292.5, "sprint": 1023.8 },
 				"swim": { "base": 450 }
 			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 600,
 				"defaultSwingRadius": 110,
@@ -978,24 +1251,38 @@
 		},
 		{
 			"name": "Chaos Mesopithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Chaos/Gorilla/Minions/ChaosMonkey_Character_BP_Aggressive.ChaosMonkey_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Chaos/Gorilla/Minions/ChaosMonkey_Character_BP_Aggressive.ChaosMonkey_Character_BP_Aggressive_C",
 			"dinoNameTag": "PFChaosMonkeyAgressive",
 			"customTag": "PFChaosMonkeyAgressive",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 27.5,
+				"timeBase": 4025,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 126, "sprint": 504 },
-				"swim": { "base": 630 }
+				"walk": { "base": 60, "sprint": 504 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 240 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 150,
@@ -1011,7 +1298,7 @@
 		},
 		{
 			"name": "Chaos Megapithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Chaos/Gorilla/PFBChaosGorilla_Character_BP_Tameable_Child.PFBChaosGorilla_Character_BP_Tameable_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Chaos/Gorilla/PFBChaosGorilla_Character_BP_Tameable_Child.PFBChaosGorilla_Character_BP_Tameable_Child_C",
 			"dinoNameTag": "PFBChaosMegapithecus",
 			"customTag": "PFBMegapithecus",
 			"targetingTeamName": "Carnivores_High",
@@ -1027,6 +1314,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1038,6 +1329,10 @@
 			"movementD": {
 				"walk": { "base": 1063, "sprint": 4252 },
 				"swim": { "base": 518 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 19270,
@@ -1055,7 +1350,7 @@
 		},
 		{
 			"name": "Chaos Manticore",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Chaos/Manticore/PFBChaosManticore_Character_BP_New_Child.PFBChaosManticore_Character_BP_New_Child_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Chaos/Manticore/PFBChaosManticore_Character_BP_New_Child.PFBChaosManticore_Character_BP_New_Child_C",
 			"dinoNameTag": "PFBChaosManticore",
 			"customTag": "PFBManticore",
 			"targetingTeamName": "Carnivores_High",
@@ -1073,19 +1368,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 3818, "sprint": 7636 },
-				"fly": { "base": 5184 },
-				"swim": { "base": 3200 }
+				"walk": { "base": 1909, "sprint": 7636 },
+				"fly": { "base": 2592, "sprint": 10368 },
+				"swim": { "base": 2592 }
 			},
 			"movementD": {
-				"walk": { "base": 3818, "sprint": 7636 },
-				"fly": { "base": 5184 },
-				"swim": { "base": 3200 }
+				"walk": { "base": 1909, "sprint": 7636 },
+				"fly": { "base": 2592, "sprint": 10368 },
+				"swim": { "base": 2592 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 16450,
@@ -1111,7 +1414,7 @@
 		},
 		{
 			"name": "Corrupted Raptor",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Extinction/Dinos/Corrupt/Raptor/BabyRaptor_Character_BP_Corrupt.BabyRaptor_Character_BP_Corrupt_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Extinction/Dinos/Corrupt/Raptor/BabyRaptor_Character_BP_Corrupt.BabyRaptor_Character_BP_Corrupt_C",
 			"dinoNameTag": "Raptor",
 			"customTag": "Raptor",
 			"targetingTeamName": "Carnivores_High",
@@ -1127,17 +1430,31 @@
 				"isCarnivore",
 				"isCorrupted"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 432, "sprint": 993.6 },
-				"swim": { "base": 270 }
+				"walk": { "base": 480, "sprint": 993.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 480, "sprint": 1104 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1152,7 +1469,7 @@
 		},
 		{
 			"name": "Primal Broodmother Lysrix",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Primal/Broodmother/PFBPrimalSpiderL_Character_BP_Tameable.PFBPrimalSpiderL_Character_BP_Tameable_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Primal/Broodmother/PFBPrimalSpiderL_Character_BP_Tameable.PFBPrimalSpiderL_Character_BP_Tameable_C",
 			"dinoNameTag": "PFBPrimalBroodmother",
 			"customTag": "PFBBroodmother",
 			"targetingTeamName": "Carnivores_High",
@@ -1171,10 +1488,16 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 414, "sprint": 724.5 }
+				"walk": { "base": 414, "sprint": 724.5 },
+				"swim": { "base": 428 }
 			},
 			"movementD": {
-				"walk": { "base": 1101.2, "sprint": 1927.2 }
+				"walk": { "base": 579.6, "sprint": 1927.2 },
+				"swim": { "base": 599.2 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -1196,7 +1519,7 @@
 		},
 		{
 			"name": "Primal DodoRex",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Primal/Dodorex/PFBPrimalDodoRex_Character_BP.PFBPrimalDodoRex_Character_BP_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Primal/Dodorex/PFBPrimalDodoRex_Character_BP.PFBPrimalDodoRex_Character_BP_C",
 			"dinoNameTag": "PFBPrimalDodoRex",
 			"customTag": "PFBDodoRex",
 			"targetingTeamName": "Carnivores_High",
@@ -1217,11 +1540,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 857.5, "sprint": 3773 }
+				"walk": { "base": 1715, "sprint": 3773 }
 			},
 			"movementD": {
-				"walk": { "base": 857.5, "sprint": 3773 }
+				"walk": { "base": 1715, "sprint": 3773 }
 			},
+			"staminaRates": { "sprint": -40 },
 			"attack": {
 				"defaultDmg": 150000,
 				"defaultSwingRadius": 1148,
@@ -1235,7 +1559,7 @@
 		},
 		{
 			"name": "Primal Dodo Wyvern",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Primal/Dodowyvern/PFBPrimalDodoWyvern_Character_BP.PFBPrimalDodoWyvern_Character_BP_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Primal/Dodowyvern/PFBPrimalDodoWyvern_Character_BP.PFBPrimalDodoWyvern_Character_BP_C",
 			"dinoNameTag": "PFBPrimalDodoWyvern",
 			"customTag": "PFBDodoWyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -1254,19 +1578,29 @@
 				"isFlyerDino",
 				"preventCharacterBasing"
 			],
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1423.5, "sprint": 2847 },
-				"fly": { "base": 2625, "sprint": 1750 },
-				"swim": { "base": 602.2 }
+				"walk": { "base": 1898, "sprint": 2847 },
+				"fly": { "base": 3500 },
+				"swim": { "base": 3500 }
 			},
 			"movementD": {
-				"walk": { "base": 1423.5, "sprint": 2847 },
-				"fly": { "base": 2625, "sprint": 1750 },
-				"swim": { "base": 602.2 }
+				"walk": { "base": 1898, "sprint": 2847 },
+				"fly": { "base": 3500 },
+				"swim": { "base": 3500 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 165000,
@@ -1287,7 +1621,7 @@
 		},
 		{
 			"name": "Primal Dragon",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Primal/Dragon/PFBPrimalDragon_Character_BP.PFBPrimalDragon_Character_BP_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Primal/Dragon/PFBPrimalDragon_Character_BP.PFBPrimalDragon_Character_BP_C",
 			"dinoNameTag": "PFBPrimalDragon",
 			"customTag": "PFBDragon",
 			"targetingTeamName": "Carnivores_High",
@@ -1311,13 +1645,17 @@
 			},
 			"movementW": {
 				"walk": { "base": 825, "sprint": 2475 },
-				"fly": { "base": 3500, "sprint": 1925 },
-				"swim": { "base": 550 }
+				"fly": { "base": 3500, "sprint": 5775 },
+				"swim": { "base": 3500 }
 			},
 			"movementD": {
 				"walk": { "base": 825, "sprint": 2475 },
-				"fly": { "base": 3500, "sprint": 1925 },
-				"swim": { "base": 550 }
+				"fly": { "base": 3500, "sprint": 5775 },
+				"swim": { "base": 3500 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 175000,
@@ -1331,7 +1669,7 @@
 		},
 		{
 			"name": "Primal Megapithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Primal/Gorilla/PFBPrimalGorilla_Character_BP_Tameable.PFBPrimalGorilla_Character_BP_Tameable_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Primal/Gorilla/PFBPrimalGorilla_Character_BP_Tameable.PFBPrimalGorilla_Character_BP_Tameable_C",
 			"dinoNameTag": "PFBPrimalMegapithecus",
 			"customTag": "PFBMegapithecus",
 			"targetingTeamName": "Carnivores_High",
@@ -1359,6 +1697,10 @@
 				"walk": { "base": 615, "sprint": 2460 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 140000,
 				"defaultSwingRadius": 1846,
@@ -1375,7 +1717,7 @@
 		},
 		{
 			"name": "Primal Manticore",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Primal/Manticore/PFBPrimalManticore_Character_BP_New.PFBPrimalManticore_Character_BP_New_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Primal/Manticore/PFBPrimalManticore_Character_BP_New.PFBPrimalManticore_Character_BP_New_C",
 			"dinoNameTag": "PFBPrimalManticore",
 			"customTag": "PFBManticore",
 			"targetingTeamName": "Carnivores_High",
@@ -1398,14 +1740,18 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 4420, "sprint": 8840 },
-				"fly": { "base": 3000 },
-				"swim": { "base": 4420 }
+				"walk": { "base": 2210, "sprint": 8840 },
+				"fly": { "base": 1500, "sprint": 6000 },
+				"swim": { "base": 1500 }
 			},
 			"movementD": {
-				"walk": { "base": 4420, "sprint": 8840 },
-				"fly": { "base": 3000 },
-				"swim": { "base": 4420 }
+				"walk": { "base": 2210, "sprint": 8840 },
+				"fly": { "base": 1500, "sprint": 6000 },
+				"swim": { "base": 1500 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 190000,
@@ -1431,13 +1777,23 @@
 		},
 		{
 			"name": "Primal Gigantopithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Primal/PrimalBigfoot/PrimalBigfoot_Character_BP_Aggressive.PrimalBigfoot_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Primal/PrimalBigfoot/PrimalBigfoot_Character_BP_Aggressive.PrimalBigfoot_Character_BP_Aggressive_C",
 			"dinoNameTag": "PrimalBigfootAggressive",
 			"customTag": "PrimalBigfootAggressive",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 198,
 			"dragWeight": 150,
 			"flags": [ "allowCarryFlyerDinos", "allowMountedWeaponry", "canBeDragged", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1450,6 +1806,10 @@
 				"walk": { "base": 292.5, "sprint": 1023.8 },
 				"swim": { "base": 450 }
 			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 4000,
 				"defaultSwingRadius": 110,
@@ -1461,24 +1821,38 @@
 		},
 		{
 			"name": "Primal Mesopithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Primal/PrimalBigfoot/PrimalMonkey_Character_BP_Aggressive.PrimalMonkey_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Primal/PrimalBigfoot/PrimalMonkey_Character_BP_Aggressive.PrimalMonkey_Character_BP_Aggressive_C",
 			"dinoNameTag": "PFPrimalMonkeyAgressive",
 			"customTag": "PFPrimalMonkeyAgressive",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 27.5,
+				"timeBase": 4025,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 126, "sprint": 504 },
-				"swim": { "base": 630 }
+				"walk": { "base": 60, "sprint": 504 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 240 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 1000,
@@ -1494,22 +1868,38 @@
 		},
 		{
 			"name": "Primal Araneo",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Primal/PrimalSpider/PrimalSpiderS_Character_BP_Aggressive.PrimalSpiderS_Character_BP_Aggressive_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Primal/PrimalSpider/PrimalSpiderS_Character_BP_Aggressive.PrimalSpiderS_Character_BP_Aggressive_C",
 			"dinoNameTag": "BossPrimalSpider",
 			"customTag": "BossPrimalSpider",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 90,
 			"dragWeight": 90,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 100,
+				"costLevel": 55,
+				"timeBase": 700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 400 }
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 160, "sprint": 320 }
+				"walk": { "base": 160, "sprint": 320 },
+				"swim": { "base": 160 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 1000,
@@ -1519,7 +1909,7 @@
 		},
 		{
 			"name": "Broodmother Lysrix",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Broodmother/PFBSpiderL_Character_BP_Tameable.PFBSpiderL_Character_BP_Tameable_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Broodmother/PFBSpiderL_Character_BP_Tameable.PFBSpiderL_Character_BP_Tameable_C",
 			"dinoNameTag": "PFBBroodmother",
 			"customTag": "PFBBroodmother",
 			"targetingTeamName": "Carnivores_High",
@@ -1533,15 +1923,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 357, "sprint": 624.8 }
+				"walk": { "base": 357, "sprint": 624.8 },
+				"swim": { "base": 214 }
 			},
 			"movementD": {
-				"walk": { "base": 949.6, "sprint": 1661.8 }
+				"walk": { "base": 499.8, "sprint": 1661.8 },
+				"swim": { "base": 299.6 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -1563,7 +1963,7 @@
 		},
 		{
 			"name": "DodoRex",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Dodorex/PFBDodoRex_Character_BP.PFBDodoRex_Character_BP_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Dodorex/PFBDodoRex_Character_BP.PFBDodoRex_Character_BP_C",
 			"dinoNameTag": "PFBDodoRex",
 			"customTag": "PFBDodoRex",
 			"targetingTeamName": "Carnivores_High",
@@ -1578,16 +1978,21 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 575, "sprint": 2530 }
+				"walk": { "base": 1150, "sprint": 2530 }
 			},
 			"movementD": {
-				"walk": { "base": 575, "sprint": 2530 }
+				"walk": { "base": 1150, "sprint": 2530 }
 			},
+			"staminaRates": { "sprint": -40 },
 			"attack": {
 				"defaultDmg": 186,
 				"defaultSwingRadius": 574,
@@ -1601,7 +2006,7 @@
 		},
 		{
 			"name": "Dodo Wyvern",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Dodowyvern/PFBDodoWyvern_Character_BP.PFBDodoWyvern_Character_BP_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Dodowyvern/PFBDodoWyvern_Character_BP.PFBDodoWyvern_Character_BP_C",
 			"dinoNameTag": "PFBDodoWyvern",
 			"customTag": "PFBDodoWyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -1619,19 +2024,33 @@
 				"isFlyerDino",
 				"preventCharacterBasing"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 711.8, "sprint": 1423.5 },
-				"fly": { "base": 2250, "sprint": 1500 },
-				"swim": { "base": 602.2 }
+				"walk": { "base": 949, "sprint": 1423.5 },
+				"fly": { "base": 3000 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 711.8, "sprint": 1423.5 },
-				"fly": { "base": 2250, "sprint": 1500 },
-				"swim": { "base": 602.2 }
+				"walk": { "base": 949, "sprint": 1423.5 },
+				"fly": { "base": 3000 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 165,
@@ -1652,7 +2071,7 @@
 		},
 		{
 			"name": "Dragon",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Dragon/PFBDragon_Character_BP.PFBDragon_Character_BP_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Dragon/PFBDragon_Character_BP.PFBDragon_Character_BP_C",
 			"dinoNameTag": "PFBDragon",
 			"customTag": "PFBDragon",
 			"targetingTeamName": "Carnivores_High",
@@ -1668,19 +2087,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 412.5, "sprint": 1237.5 },
-				"fly": { "base": 2500, "sprint": 1375 },
-				"swim": { "base": 275 }
+				"fly": { "base": 2500, "sprint": 4125 },
+				"swim": { "base": 2500 }
 			},
 			"movementD": {
 				"walk": { "base": 412.5, "sprint": 1237.5 },
-				"fly": { "base": 2500, "sprint": 1375 },
-				"swim": { "base": 275 }
+				"fly": { "base": 2500, "sprint": 4125 },
+				"swim": { "base": 2500 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 172,
@@ -1694,7 +2121,7 @@
 		},
 		{
 			"name": "Megapithecus",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Gorilla/PFBGorilla_Character_BP_Tameable.PFBGorilla_Character_BP_Tameable_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Gorilla/PFBGorilla_Character_BP_Tameable.PFBGorilla_Character_BP_Tameable_C",
 			"dinoNameTag": "PFBMegapithecus",
 			"customTag": "PFBMegapithecus",
 			"targetingTeamName": "Carnivores_High",
@@ -1709,6 +2136,10 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1720,6 +2151,10 @@
 			"movementD": {
 				"walk": { "base": 615, "sprint": 2460 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 205,
@@ -1737,7 +2172,7 @@
 		},
 		{
 			"name": "Manticore",
-			"blueprintPath": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Manticore/PFBManticore_Character_BP_New.PFBManticore_Character_BP_New_C",
+			"bp": "/Game/Mods/Primal_Fear_Bosses/Vanilla/Manticore/PFBManticore_Character_BP_New.PFBManticore_Character_BP_New_C",
 			"dinoNameTag": "PFBManticore",
 			"customTag": "PFBManticore",
 			"targetingTeamName": "Carnivores_High",
@@ -1754,19 +2189,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 2210, "sprint": 4420 },
-				"fly": { "base": 3000 },
-				"swim": { "base": 2200 }
+				"walk": { "base": 1105, "sprint": 4420 },
+				"fly": { "base": 1500, "sprint": 6000 },
+				"swim": { "base": 1500 }
 			},
 			"movementD": {
-				"walk": { "base": 2210, "sprint": 4420 },
-				"fly": { "base": 3000 },
-				"swim": { "base": 2200 }
+				"walk": { "base": 1105, "sprint": 4420 },
+				"fly": { "base": 1500, "sprint": 6000 },
+				"swim": { "base": 1500 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 175,

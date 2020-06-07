@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.77.1589084090",
-	"format": "1",
+	"version": "310.117.1591505817",
+	"format": "2",
 	"mod": {
 		"id": "1652120435",
 		"tag": "AtlasPort",
@@ -10,22 +10,38 @@
 	"species": [
 		{
 			"name": "Luminous Anglerfish",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Angler/AAngler_Character_BP.AAngler_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Angler/AAngler_Character_BP.AAngler_Character_BP_C",
 			"dinoNameTag": "Angler",
 			"customTag": "Angler",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 300,
 			"dragWeight": 250,
 			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 425,
+				"costLevel": 55,
+				"timeBase": 2975,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 200 }
+				"walk": { "base": 200, "sprint": 650 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 200 }
+				"walk": { "base": 200, "sprint": 650 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 30,
@@ -35,7 +51,7 @@
 		},
 		{
 			"name": "Atlas Hydra",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/AtlasHydra/AHydra_character_BP.AHydra_character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/AtlasHydra/AHydra_character_BP.AHydra_character_BP_C",
 			"dinoNameTag": "RockDrake",
 			"customTag": "DragonRelic",
 			"targetingTeamName": "Carnivores_High",
@@ -53,15 +69,25 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 450 }
+				"walk": { "base": 400, "sprint": 800 },
+				"swim": { "base": 900, "sprint": 1800 }
 			},
 			"movementD": {
-				"swim": { "base": 900 }
+				"walk": { "base": 400, "sprint": 1600 },
+				"swim": { "base": 900, "sprint": 3600 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -77,7 +103,7 @@
 		},
 		{
 			"name": "True Atlas Hydra",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/AtlasHydra/AHydra_character_BP_Boss.AHydra_character_BP_Boss_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/AtlasHydra/AHydra_character_BP_Boss.AHydra_character_BP_Boss_C",
 			"dinoNameTag": "RockDrake",
 			"customTag": "DragonRelic",
 			"targetingTeamName": "Carnivores_High",
@@ -101,10 +127,16 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 900 }
+				"walk": { "base": 670, "sprint": 3350 },
+				"swim": { "base": 900, "sprint": 4500 }
 			},
 			"movementD": {
-				"swim": { "base": 900 }
+				"walk": { "base": 670, "sprint": 3350 },
+				"swim": { "base": 900, "sprint": 4500 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -124,7 +156,7 @@
 		},
 		{
 			"name": "Flying Fisherman",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Bat/ABat_Character_BP.ABat_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Bat/ABat_Character_BP.ABat_Character_BP_C",
 			"dinoNameTag": "Bat",
 			"customTag": "ABat",
 			"targetingTeamName": "Carnivores_Low",
@@ -139,20 +171,31 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 0, "sprint": 0 },
-				"fly": { "base": 800, "sprint": 880 },
+				"walk": { "base": 0 },
+				"fly": { "base": 800, "sprint": 1760 },
 				"swim": { "base": 650 }
 			},
 			"movementD": {
-				"walk": { "base": 0, "sprint": 0 },
-				"fly": { "base": 800, "sprint": 880 },
+				"walk": { "base": 0 },
+				"fly": { "base": 800, "sprint": 1760 },
 				"swim": { "base": 650 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
@@ -165,7 +208,7 @@
 		},
 		{
 			"name": "Feral Boar",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Boar/ABoar_Character_BP.ABoar_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Boar/ABoar_Character_BP.ABoar_Character_BP_C",
 			"dinoNameTag": "Daeodon",
 			"customTag": "Boar",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -178,6 +221,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -189,6 +242,10 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1200 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -202,13 +259,23 @@
 		},
 		{
 			"name": "Pampas Cat",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Cat/Cat_Character_BP.Cat_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Cat/Cat_Character_BP.Cat_Character_BP_C",
 			"dinoNameTag": "Saber",
 			"customTag": "Saber",
 			"targetingTeamName": "Herbivores",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 27.5,
+				"timeBase": 4025,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
@@ -221,6 +288,10 @@
 				"walk": { "base": 60, "sprint": 540 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 10,
 				"defaultSwingRadius": 50,
@@ -229,22 +300,32 @@
 		},
 		{
 			"name": "Pirareeba Catfish",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Catfish/Catfish_Character_BP.Catfish_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Catfish/Catfish_Character_BP.Catfish_Character_BP_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_Low",
 			"mass": 100,
 			"dragWeight": 100,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 360 }
+				"walk": { "base": 190, "sprint": 950 },
+				"swim": { "base": 190 }
 			},
 			"movementD": {
-				"swim": { "base": 360 }
+				"walk": { "base": 190, "sprint": 950 },
+				"swim": { "base": 190 }
+			},
+			"staminaRates": {
+				"sprint": -19,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 4,
@@ -254,22 +335,32 @@
 		},
 		{
 			"name": "Derpmouth Cod",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Cod/Cod_Character_BP.Cod_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Cod/Cod_Character_BP.Cod_Character_BP_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 100,
 			"dragWeight": 32.5,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 190, "sprint": 399 },
 				"swim": { "base": 190 }
 			},
 			"movementD": {
+				"walk": { "base": 190, "sprint": 399 },
 				"swim": { "base": 190 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 4,
@@ -279,7 +370,7 @@
 		},
 		{
 			"name": "Pelagic Crocodile",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Crocodile/ACroc_Character_BP.ACroc_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Crocodile/ACroc_Character_BP.ACroc_Character_BP_C",
 			"dinoNameTag": "Sarco",
 			"customTag": "Sarco",
 			"targetingTeamName": "Carnivores_Medium",
@@ -294,17 +385,34 @@
 				"canDrag",
 				"isAmphibious",
 				"isBigDino",
-				"isCarnivore"
+				"isCarnivore",
+				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 550,
+				"costLevel": 55,
+				"timeBase": 3850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 750 }
+				"walk": { "base": 150, "sprint": 750 },
+				"swim": { "base": 750, "sprint": 1875 }
 			},
 			"movementD": {
-				"walk": { "base": 165, "sprint": 825 }
+				"walk": { "base": 165, "sprint": 825 },
+				"swim": { "base": 825, "sprint": 2062.5 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 35,
@@ -321,7 +429,7 @@
 		},
 		{
 			"name": "Mongrel Cyclops",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Cyclops/ACyclops_Character_bp.ACyclops_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Cyclops/ACyclops_Character_bp.ACyclops_Character_bp_C",
 			"dinoNameTag": "Rockwell",
 			"customTag": "DragonRelic",
 			"targetingTeamName": "Carnivores_High",
@@ -336,15 +444,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 450, "sprint": 2700 }
+				"walk": { "base": 450, "sprint": 2700 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 2700 }
+				"walk": { "base": 450, "sprint": 2700 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -359,7 +477,7 @@
 		},
 		{
 			"name": "Jiiba Dolphin",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Dolphin/ADolphin_Character_BP.ADolphin_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Dolphin/ADolphin_Character_BP.ADolphin_Character_BP_C",
 			"dinoNameTag": "Dolphin",
 			"customTag": "Dolphin",
 			"targetingTeamName": "Carnivore_Water",
@@ -373,15 +491,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 360 }
+				"walk": { "base": 600, "sprint": 720 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"swim": { "base": 1188 }
+				"walk": { "base": 1350, "sprint": 2376 },
+				"swim": { "base": 1350 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
@@ -391,7 +525,7 @@
 		},
 		{
 			"name": "Atlas Drake",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Drake/AtlasDrake_Character_BP.AtlasDrake_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Drake/AtlasDrake_Character_BP.AtlasDrake_Character_BP_C",
 			"dinoNameTag": "Dragon",
 			"customTag": "DragonRelic",
 			"targetingTeamName": "Carnivores_High",
@@ -409,19 +543,27 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 500, "sprint": 2500 },
-				"fly": { "base": 980, "sprint": 784 },
+				"fly": { "base": 980, "sprint": 3920 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 500, "sprint": 2500 },
-				"fly": { "base": 980, "sprint": 784 },
+				"fly": { "base": 980, "sprint": 3920 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -15
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -436,7 +578,7 @@
 		},
 		{
 			"name": "Midgard Moray",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Eel/AEel_Character_bp.AEel_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Eel/AEel_Character_bp.AEel_Character_bp_C",
 			"dinoNameTag": "Eel",
 			"customTag": "",
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
@@ -449,15 +591,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 300, "sprint": 1200 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
+				"walk": { "base": 300, "sprint": 1200 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -8,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -467,7 +625,7 @@
 		},
 		{
 			"name": "Forest Elephant",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Elephant/AElephant_Character_BP.AElephant_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Elephant/AElephant_Character_BP.AElephant_Character_BP_C",
 			"dinoNameTag": "Mammoth",
 			"customTag": "Mammoth",
 			"targetingTeamName": "Herbivores_Large",
@@ -481,15 +639,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 1200 }
+				"walk": { "base": 150, "sprint": 1200 },
+				"swim": { "base": 480 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 1200 }
+				"walk": { "base": 150, "sprint": 1200 },
+				"swim": { "base": 480 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -503,7 +677,7 @@
 		},
 		{
 			"name": "Infernal",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/FireElemental/Infernal_Character_bp.Infernal_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/FireElemental/Infernal_Character_bp.Infernal_Character_bp_C",
 			"dinoNameTag": "RockElemental",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_High",
@@ -521,19 +695,27 @@
 				"isBigDino",
 				"isFlyerDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 300, "sprint": 1800 },
-				"fly": { "base": 600 },
+				"fly": { "base": 600, "sprint": 3600 },
 				"swim": { "base": 900 }
 			},
 			"movementD": {
 				"walk": { "base": 300, "sprint": 1800 },
-				"fly": { "base": 600 },
+				"fly": { "base": 600, "sprint": 3600 },
 				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": 0,
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -552,7 +734,7 @@
 		},
 		{
 			"name": "Atlas Giraffe",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Giraffe/AGiraffe_Character_BP.AGiraffe_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Giraffe/AGiraffe_Character_BP.AGiraffe_Character_BP_C",
 			"dinoNameTag": "Paracer",
 			"customTag": "Giraffe",
 			"targetingTeamName": "Herbivores_Large",
@@ -566,15 +748,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 350, "sprint": 1400 }
+				"walk": { "base": 350, "sprint": 1400 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 350, "sprint": 1400 }
+				"walk": { "base": 350, "sprint": 1400 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -587,7 +785,7 @@
 		},
 		{
 			"name": "Lodestone Golem",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Golem/LGolem_Character_bp.LGolem_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Golem/LGolem_Character_bp.LGolem_Character_bp_C",
 			"dinoNameTag": "RockElemental",
 			"customTag": "LGolem",
 			"targetingTeamName": "Herbivores_Large",
@@ -602,15 +800,25 @@
 				"isAmphibious",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1200 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 900 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1200 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": 0,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -625,7 +833,7 @@
 		},
 		{
 			"name": "Aegis",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/GoodWhale/Aegis_Character_BP.Aegis_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/GoodWhale/Aegis_Character_BP.Aegis_Character_BP_C",
 			"dinoNameTag": "Basilosaurus",
 			"customTag": "Aegis",
 			"targetingTeamName": "Carnivore_Water",
@@ -639,15 +847,25 @@
 				"isBigDino",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"walk": { "base": 300, "sprint": 1050 },
+				"swim": { "base": 440 }
 			},
 			"movementD": {
-				"swim": { "base": 720 }
+				"walk": { "base": 360, "sprint": 1260 },
+				"swim": { "base": 528 }
+			},
+			"staminaRates": {
+				"sprint": 0,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 100,
@@ -657,7 +875,7 @@
 		},
 		{
 			"name": "Gorgon",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Gorgon/AGorgon_Character_bp.AGorgon_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Gorgon/AGorgon_Character_bp.AGorgon_Character_bp_C",
 			"dinoNameTag": "Titanboa",
 			"customTag": "Naga",
 			"targetingTeamName": "Carnivores_Medium",
@@ -671,15 +889,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1350 }
+				"walk": { "base": 300, "sprint": 1350 },
+				"swim": { "base": 900 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1350 }
+				"walk": { "base": 300, "sprint": 1350 },
+				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -693,7 +921,7 @@
 		},
 		{
 			"name": "Titanoboa",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Gorgon/BoaFrill_Character_BP_Minion.BoaFrill_Character_BP_Minion_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Gorgon/BoaFrill_Character_BP_Minion.BoaFrill_Character_BP_Minion_C",
 			"dinoNameTag": "Titanboa",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_Medium",
@@ -701,6 +929,10 @@
 			"dragWeight": 110,
 			"variants": [ "Minion" ],
 			"flags": [ "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -713,6 +945,10 @@
 				"walk": { "base": 225, "sprint": 900 },
 				"swim": { "base": 400 }
 			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 30,
 				"defaultSwingRadius": 110,
@@ -721,7 +957,7 @@
 		},
 		{
 			"name": "Naga",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Gorgon/Naga_Character_bp_Minion.Naga_Character_bp_Minion_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Gorgon/Naga_Character_bp_Minion.Naga_Character_bp_Minion_C",
 			"dinoNameTag": "Titanboa",
 			"customTag": "Naga",
 			"targetingTeamName": "Carnivores_Medium",
@@ -737,15 +973,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1800 }
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 900 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1800 }
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -760,7 +1006,7 @@
 		},
 		{
 			"name": "Savage Hammerhead",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Hammerhead/AHammerhead_Character_bp.AHammerhead_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Hammerhead/AHammerhead_Character_bp.AHammerhead_Character_bp_C",
 			"dinoNameTag": "Mega",
 			"customTag": "AHammer",
 			"targetingTeamName": "Carnivore_Water",
@@ -775,15 +1021,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 400 }
+				"walk": { "base": 230, "sprint": 1380 },
+				"swim": { "base": 230 }
 			},
 			"movementD": {
-				"swim": { "base": 900 }
+				"walk": { "base": 517.5, "sprint": 3105 },
+				"swim": { "base": 517.5 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -796,7 +1058,7 @@
 		},
 		{
 			"name": "Atlas Horse",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Horse/AHorse_Character_BP.AHorse_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Horse/AHorse_Character_BP.AHorse_Character_BP_C",
 			"dinoNameTag": "Equus",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -809,6 +1071,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -820,6 +1092,10 @@
 			"movementD": {
 				"walk": { "base": 292.5, "sprint": 1901.2 },
 				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -2.5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 8,
@@ -834,7 +1110,7 @@
 		},
 		{
 			"name": "Atlas Kodiak",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Kodiak/AKodiak_Character_bp.AKodiak_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Kodiak/AKodiak_Character_bp.AKodiak_Character_bp_C",
 			"dinoNameTag": "Direbear",
 			"customTag": "Direbear",
 			"targetingTeamName": "Carnivores_High",
@@ -850,15 +1126,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 270, "sprint": 1620 }
+				"walk": { "base": 270, "sprint": 1620 },
+				"swim": { "base": 500 }
 			},
 			"movementD": {
-				"walk": { "base": 270, "sprint": 1620 }
+				"walk": { "base": 270, "sprint": 1620 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -872,7 +1158,7 @@
 		},
 		{
 			"name": "Leatherwing",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Leatherwing/Leatherwing_character_bp.Leatherwing_character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Leatherwing/Leatherwing_character_bp.Leatherwing_character_bp_C",
 			"dinoNameTag": "Ptera",
 			"customTag": "Ptera",
 			"targetingTeamName": "Carnivores_Medium",
@@ -887,19 +1173,33 @@
 				"isFlyerDino",
 				"preventCharacterBasing"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 260, "sprint": 1040 },
-				"fly": { "base": 900 },
+				"fly": { "base": 900, "sprint": 3600 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 260, "sprint": 1040 },
-				"fly": { "base": 900 },
+				"fly": { "base": 900, "sprint": 3600 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -914,22 +1214,38 @@
 		},
 		{
 			"name": "Leech Viper",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/LeechViper/LeechViper_Character_bp.LeechViper_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/LeechViper/LeechViper_Character_bp.LeechViper_Character_bp_C",
 			"dinoNameTag": "Titanboa",
 			"customTag": "",
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
 			"mass": 300,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 300 }
+				"walk": { "base": 300, "sprint": 1200 },
+				"swim": { "base": 100 }
 			},
 			"movementD": {
-				"swim": { "base": 675 }
+				"walk": { "base": 675, "sprint": 2700 },
+				"swim": { "base": 225 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -942,7 +1258,7 @@
 		},
 		{
 			"name": "Lion",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Lion/Lion_Character_BP.Lion_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Lion/Lion_Character_BP.Lion_Character_BP_C",
 			"dinoNameTag": "Sabertooth",
 			"customTag": "Lion",
 			"targetingTeamName": "Carnivores_Medium",
@@ -956,6 +1272,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -968,6 +1294,10 @@
 				"walk": { "base": 223.2, "sprint": 1116 },
 				"swim": { "base": 240 }
 			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 33,
 				"defaultSwingRadius": 160,
@@ -979,7 +1309,7 @@
 		},
 		{
 			"name": "Phantom Manta",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Manta/AManta_Character_BP.AManta_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Manta/AManta_Character_BP.AManta_Character_BP_C",
 			"dinoNameTag": "Manta",
 			"customTag": "Manta",
 			"targetingTeamName": "Herbivore_Water",
@@ -993,15 +1323,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 1000, "sprint": 2000 },
 				"swim": { "base": 1000 }
 			},
 			"movementD": {
+				"walk": { "base": 1000, "sprint": 2000 },
 				"swim": { "base": 1000 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -1014,22 +1360,32 @@
 		},
 		{
 			"name": "Nyoomarlin",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Marlin/Marlin_Character_BP.Marlin_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Marlin/Marlin_Character_BP.Marlin_Character_BP_C",
 			"dinoNameTag": "Salmon",
 			"customTag": "",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 100,
 			"dragWeight": 32.5,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 450 }
+				"walk": { "base": 190, "sprint": 1710 },
+				"swim": { "base": 190 }
 			},
 			"movementD": {
-				"swim": { "base": 450 }
+				"walk": { "base": 190, "sprint": 1710 },
+				"swim": { "base": 190 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 4,
@@ -1039,7 +1395,7 @@
 		},
 		{
 			"name": "Leviathan, Lord of the Seas",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/MeanWhale/Experimental_character_Bp.Experimental_character_Bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/MeanWhale/Experimental_character_Bp.Experimental_character_Bp_C",
 			"dinoNameTag": "Basilosaurus",
 			"customTag": "Harbinger",
 			"targetingTeamName": "Carnivores_Low",
@@ -1055,15 +1411,27 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"walk": { "base": 400, "sprint": 2000 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 1350 }
+				"walk": { "base": 900, "sprint": 4500 },
+				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 90,
@@ -1078,7 +1446,7 @@
 		},
 		{
 			"name": "Harbinger",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/MeanWhale/harbinger_character_Bp.Harbinger_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/MeanWhale/harbinger_character_Bp.Harbinger_Character_BP_C",
 			"dinoNameTag": "Basilosaurus",
 			"customTag": "Harbinger",
 			"targetingTeamName": "Carnivores_Low",
@@ -1093,15 +1461,31 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"walk": { "base": 400, "sprint": 1200 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"swim": { "base": 1350 }
+				"walk": { "base": 900, "sprint": 2700 },
+				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 90,
@@ -1115,13 +1499,23 @@
 		},
 		{
 			"name": "Atlas Capuchin",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Monkey/AMonkey_Character_BP.AMonkey_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Monkey/AMonkey_Character_BP.AMonkey_Character_BP_C",
 			"dinoNameTag": "Monkey",
 			"customTag": "Monkey",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 27.5,
+				"timeBase": 4025,
+				"timeLevel": 192.5
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
@@ -1133,6 +1527,10 @@
 			"movementD": {
 				"walk": { "base": 60, "sprint": 540 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 10,
@@ -1148,7 +1546,7 @@
 		},
 		{
 			"name": "Naga",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Naga/Naga_Character_bp.Naga_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Naga/Naga_Character_bp.Naga_Character_bp_C",
 			"dinoNameTag": "Titanboa",
 			"customTag": "Naga",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1164,15 +1562,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1800 }
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 900 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1800 }
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -1187,7 +1595,7 @@
 		},
 		{
 			"name": "Olfend",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Olfend/Olfend_Character_BP.Olfend_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Olfend/Olfend_Character_BP.Olfend_Character_BP_C",
 			"dinoNameTag": "Camelsaurus",
 			"customTag": "Olfend",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1200,6 +1608,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1211,6 +1629,10 @@
 			"movementD": {
 				"walk": { "base": 325, "sprint": 1950 },
 				"swim": { "base": 265 }
+			},
+			"staminaRates": {
+				"sprint": -2.5,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 13,
@@ -1224,7 +1646,7 @@
 		},
 		{
 			"name": "Ostrich",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Ostrich/AOstrich_Character_BP.AOstrich_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Ostrich/AOstrich_Character_BP.AOstrich_Character_BP_C",
 			"dinoNameTag": "TerrorBird",
 			"customTag": "Ostrich",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -1237,6 +1659,16 @@
 				"canBeTorpid",
 				"canDrag"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1249,6 +1681,10 @@
 				"walk": { "base": 320, "sprint": 1920 },
 				"swim": { "base": 300 }
 			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
@@ -1260,7 +1696,7 @@
 		},
 		{
 			"name": "Heracles",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Parrot/AParrot_character_bp.AParrot_character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Parrot/AParrot_character_bp.AParrot_character_bp_C",
 			"dinoNameTag": "Ptera",
 			"customTag": "Parrot",
 			"targetingTeamName": "Herbivores",
@@ -1275,19 +1711,33 @@
 				"isFlyerDino",
 				"preventCharacterBasing"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
 				"walk": { "base": 260, "sprint": 1040 },
-				"fly": { "base": 900, "sprint": 450 },
+				"fly": { "base": 900, "sprint": 1800 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
 				"walk": { "base": 260, "sprint": 1040 },
-				"fly": { "base": 900, "sprint": 450 },
+				"fly": { "base": 900, "sprint": 1800 },
 				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 15,
@@ -1300,7 +1750,7 @@
 		},
 		{
 			"name": "Apophis Rattlesnake",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Rattlesnake/ARattler_Character_bp.ARattler_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Rattlesnake/ARattler_Character_bp.ARattler_Character_bp_C",
 			"dinoNameTag": "Titanboa",
 			"customTag": "Naga",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1316,15 +1766,25 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1650 }
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 700 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1650 }
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -1338,7 +1798,7 @@
 		},
 		{
 			"name": "Alpha Razortooth",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Razortooth/MegaRazortooth_Character_BP.MegaRazortooth_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/MegaRazortooth_Character_BP.MegaRazortooth_Character_BP_C",
 			"dinoNameTag": "Yutyrannus",
 			"customTag": "Razortooth",
 			"targetingTeamName": "Carnivores_High",
@@ -1352,6 +1812,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1362,6 +1832,7 @@
 			"movementD": {
 				"walk": { "base": 700, "sprint": 2450 }
 			},
+			"staminaRates": { "sprint": -35 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
@@ -1375,7 +1846,7 @@
 		},
 		{
 			"name": "Razortooth",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Razortooth/Razortooth_Character_BP.Razortooth_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/Razortooth_Character_BP.Razortooth_Character_BP_C",
 			"dinoNameTag": "Yutyrannus",
 			"customTag": "Razortooth",
 			"targetingTeamName": "Carnivores_High",
@@ -1390,6 +1861,16 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1400,6 +1881,7 @@
 			"movementD": {
 				"walk": { "base": 700, "sprint": 2450 }
 			},
+			"staminaRates": { "sprint": -35 },
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
@@ -1413,7 +1895,7 @@
 		},
 		{
 			"name": "Pangolin Rhinoceros",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Rhino/ARhino_Character_BP.ARhino_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Rhino/ARhino_Character_BP.ARhino_Character_BP_C",
 			"dinoNameTag": "Rhino",
 			"customTag": "PagRhino",
 			"targetingTeamName": "Herbivores_Medium",
@@ -1428,15 +1910,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 975,
+				"costLevel": 55,
+				"timeBase": 6825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 138.8, "sprint": 1665 }
+				"walk": { "base": 138.8, "sprint": 1665 },
+				"swim": { "base": 225 }
 			},
 			"movementD": {
-				"walk": { "base": 101.8, "sprint": 1221 }
+				"walk": { "base": 101.8, "sprint": 1221 },
+				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -1446,7 +1944,7 @@
 		},
 		{
 			"name": "Hippocampus",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Seahorse/Hippocampus_Character_bp.Hippocampus_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Seahorse/Hippocampus_Character_bp.Hippocampus_Character_bp_C",
 			"dinoNameTag": "Equus",
 			"customTag": "Hippocampus",
 			"targetingTeamName": "Carnivore_Water",
@@ -1461,15 +1959,31 @@
 				"canDrag",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 1000, "sprint": 4600 },
 				"swim": { "base": 800 }
 			},
 			"movementD": {
+				"walk": { "base": 1000, "sprint": 4600 },
 				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -2,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -1482,7 +1996,7 @@
 		},
 		{
 			"name": "Hippocampus",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Seahorse/Hippocampus_Character_bp_Herbivore.Hippocampus_Character_bp_Herbivore_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Seahorse/Hippocampus_Character_bp_Herbivore.Hippocampus_Character_bp_Herbivore_C",
 			"dinoNameTag": "Equus",
 			"customTag": "Hippocampus",
 			"targetingTeamName": "Carnivore_Water",
@@ -1497,15 +2011,31 @@
 				"canDrag",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
+				"walk": { "base": 1000, "sprint": 4600 },
 				"swim": { "base": 800 }
 			},
 			"movementD": {
+				"walk": { "base": 1000, "sprint": 4600 },
 				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -2,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
@@ -1518,7 +2048,7 @@
 		},
 		{
 			"name": "Shieldhorn",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/ShieldHorn/Shieldhorn_Character_BP.Shieldhorn_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/ShieldHorn/Shieldhorn_Character_BP.Shieldhorn_Character_bp_C",
 			"dinoNameTag": "Trike",
 			"customTag": "Trike",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -1532,15 +2062,25 @@
 				"canDrag",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 250, "sprint": 1500 }
+				"walk": { "base": 250, "sprint": 1500 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 250, "sprint": 1500 }
+				"walk": { "base": 250, "sprint": 1500 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
@@ -1555,7 +2095,7 @@
 		},
 		{
 			"name": "Siren",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Siren/Siren_Character_BP.Siren_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Siren/Siren_Character_BP.Siren_Character_BP_C",
 			"dinoNameTag": "Basilosaurus",
 			"customTag": "Aegis",
 			"targetingTeamName": "Carnivore_Water",
@@ -1570,15 +2110,25 @@
 				"isBigDino",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"walk": { "base": 300, "sprint": 1050 },
+				"swim": { "base": 440 }
 			},
 			"movementD": {
-				"swim": { "base": 720 }
+				"walk": { "base": 360, "sprint": 1260 },
+				"swim": { "base": 528 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 100,
@@ -1594,7 +2144,7 @@
 		},
 		{
 			"name": "Atlas Tiger",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Tiger/ATiger_Character_BP.ATiger_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Tiger/ATiger_Character_BP.ATiger_Character_BP_C",
 			"dinoNameTag": "Thylacoleo",
 			"customTag": "ATiger",
 			"targetingTeamName": "Carnivores_Medium",
@@ -1608,6 +2158,16 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1619,6 +2179,10 @@
 			"movementD": {
 				"walk": { "base": 256, "sprint": 1536 },
 				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 33,
@@ -1632,7 +2196,7 @@
 		},
 		{
 			"name": "Grand Tortugar",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Tortugar/Tortugar_Character_bp.Tortugar_Character_bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Tortugar/Tortugar_Character_bp.Tortugar_Character_bp_C",
 			"dinoNameTag": "Turtle",
 			"customTag": "Tortugar",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -1648,15 +2212,25 @@
 				"isCarnivore",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 600 }
+				"walk": { "base": 400, "sprint": 1000 },
+				"swim": { "base": 600, "sprint": 1500 }
 			},
 			"movementD": {
-				"swim": { "base": 600 }
+				"walk": { "base": 400, "sprint": 1000 },
+				"swim": { "base": 600, "sprint": 1500 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
@@ -1672,22 +2246,32 @@
 		},
 		{
 			"name": "Gargantuna",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Tuna/ATuna_Character_BP.ATuna_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Tuna/ATuna_Character_BP.ATuna_Character_BP_C",
 			"dinoNameTag": "Coel",
 			"customTag": "",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 100,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 250 }
+				"walk": { "base": 120, "sprint": 600 },
+				"swim": { "base": 150 }
 			},
 			"movementD": {
-				"swim": { "base": 250 }
+				"walk": { "base": 120, "sprint": 600 },
+				"swim": { "base": 150 }
+			},
+			"staminaRates": {
+				"sprint": -19,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 5,
@@ -1697,7 +2281,7 @@
 		},
 		{
 			"name": "Yakalo",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Yak/AYak_Character_BP.AYak_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Yak/AYak_Character_BP.AYak_Character_BP_C",
 			"dinoNameTag": "Phiomia",
 			"customTag": "CowYak",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -1711,6 +2295,16 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1722,6 +2316,10 @@
 			"movementD": {
 				"walk": { "base": 350, "sprint": 2100 },
 				"swim": { "base": 480 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -1731,7 +2329,7 @@
 		},
 		{
 			"name": "Polar Yakalo",
-			"blueprintPath": "/Game/Mods/AtlasPort/Critter/Yak/AYak_Character_BP_Polar.AYak_Character_BP_Polar_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/Yak/AYak_Character_BP_Polar.AYak_Character_BP_Polar_C",
 			"dinoNameTag": "Phiomia",
 			"customTag": "CowYak",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -1745,6 +2343,16 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1756,6 +2364,10 @@
 			"movementD": {
 				"walk": { "base": 350, "sprint": 2100 },
 				"swim": { "base": 480 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
@@ -1765,22 +2377,38 @@
 		},
 		{
 			"name": "Skeletal Carnotaurus",
-			"blueprintPath": "/Game/Mods/AtlasPort/PrimalEarth/Dinos/Carno/Bone_MegaCarno_Character_BP.Bone_MegaCarno_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/PrimalEarth/Dinos/Carno/Bone_MegaCarno_Character_BP.Bone_MegaCarno_Character_BP_C",
 			"dinoNameTag": "Elite Carno",
 			"customTag": "Carno",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 222,
 			"dragWeight": 250,
 			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 467.5, "sprint": 1309 }
+				"walk": { "base": 550, "sprint": 1309 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 550, "sprint": 1540 }
+				"walk": { "base": 550, "sprint": 1540 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 80,
@@ -1793,7 +2421,7 @@
 		},
 		{
 			"name": "Skeletal Rex",
-			"blueprintPath": "/Game/Mods/AtlasPort/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
 			"dinoNameTag": "Bone Rex",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High",
@@ -1807,15 +2435,31 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 377.5, "sprint": 1079.6 }
+				"walk": { "base": 755, "sprint": 1079.6 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 566.2, "sprint": 1619.5 }
+				"walk": { "base": 755, "sprint": 1619.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 170,
@@ -1828,7 +2472,7 @@
 		},
 		{
 			"name": "Skeletal Bronto",
-			"blueprintPath": "/Game/Mods/AtlasPort/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
 			"dinoNameTag": "Bronto",
 			"customTag": "Bronto",
 			"targetingTeamName": "Herbivores_Large",
@@ -1842,15 +2486,31 @@
 				"doStepDamage",
 				"isBigDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 607.5 }
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 150, "sprint": 405 }
+				"walk": { "base": 180, "sprint": 405 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 90,
@@ -1860,7 +2520,7 @@
 		},
 		{
 			"name": "Dodo Wyvern",
-			"blueprintPath": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
+			"bp": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -1878,20 +2538,31 @@
 				"preventCharacterBasing",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 650, "sprint": 1300 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 1300 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 650, "sprint": 1300 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 1300 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 3000 }
 			},
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 160,
 				"defaultSwingRadius": 1200,
@@ -1911,7 +2582,7 @@
 		},
 		{
 			"name": "Zombie Fire Wyvern",
-			"blueprintPath": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieFire.Wyvern_Character_BP_ZombieFire_C",
+			"bp": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieFire.Wyvern_Character_BP_ZombieFire_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -1928,19 +2599,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -1956,7 +2641,7 @@
 		},
 		{
 			"name": "Zombie Lightning Wyvern",
-			"blueprintPath": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieLightning.Wyvern_Character_BP_ZombieLightning_C",
+			"bp": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieLightning.Wyvern_Character_BP_ZombieLightning_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -1973,19 +2658,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -2001,7 +2700,7 @@
 		},
 		{
 			"name": "Zombie Poison Wyvern",
-			"blueprintPath": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombiePoison.Wyvern_Character_BP_ZombiePoison_C",
+			"bp": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombiePoison.Wyvern_Character_BP_ZombiePoison_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -2018,19 +2717,33 @@
 				"isFlyerDino",
 				"preventNeuter"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 345, "sprint": 796.9 },
-				"fly": { "base": 1500, "sprint": 1000 },
-				"swim": { "base": 550 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 160,
@@ -2046,7 +2759,7 @@
 		},
 		{
 			"name": "Submarine",
-			"blueprintPath": "/Game/Mods/AtlasPort/Submarine/AtlasSubmarine_BP.AtlasSubmarine_BP_C",
+			"bp": "/Game/Mods/AtlasPort/Submarine/AtlasSubmarine_BP.AtlasSubmarine_BP_C",
 			"dinoNameTag": "Mek",
 			"customTag": "Submarine",
 			"targetingTeamName": "Carnivore_Water",
@@ -2061,15 +2774,25 @@
 				"isRobot",
 				"isWaterDino"
 			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"swim": { "base": 800 }
+				"walk": { "base": 1000, "sprint": 3500 },
+				"swim": { "base": 800, "sprint": 2800 }
 			},
 			"movementD": {
-				"swim": { "base": 800 }
+				"walk": { "base": 1000, "sprint": 3500 },
+				"swim": { "base": 800, "sprint": 2800 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 40,
