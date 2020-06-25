@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "311.302.1592713840",
+	"version": "311.302.1593092108",
 	"format": "2",
 	"mod": {
 		"id": "2135314513",
@@ -8,45 +8,6 @@
 		"title": "Crystal Isles Dino Addition"
 	},
 	"species": [
-		{
-			"name": "Nameless",
-			"bp": "/Game/Mods/CI_Dinos/Aberration/Dinos/ChupaCabra/TrailerWildChupaCabra_Character_BP.TrailerWildChupaCabra_Character_BP_C",
-			"dinoNameTag": "Chupacabra",
-			"customTag": "Chupacabra",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 225,
-			"dragWeight": 180,
-			"flags": [ "canBeDragged", "canBeTorpid", "isCarnivore" ],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 424, "sprint": 667.8 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 424, "sprint": 954 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -14,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 36,
-				"defaultSwingRadius": 160,
-				"attacks": [
-					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 },
-					{ "name": "Spawn Minion", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Melee Bite", "interval": 0.63, "dmg": 10, "radius": 160, "stamina": 0 }
-				]
-			}
-		},
 		{
 			"name": "Crystal Ankylosaurus",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/CrystalAnkylo_Character_BP.CrystalAnkylo_Character_BP_C",
@@ -967,17 +928,73 @@
 		},
 		{
 			"name": "Grand Embertross",
-			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/GrandEmbertross_F_Character_BP.GrandEmbertross_F_Character_BP_C",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/CI_Embertross_Character_BP.CI_Embertross_Character_BP_C",
 			"dinoNameTag": "Phoenix",
 			"customTag": "LPhoenix",
-			"targetingTeamName": "Carnivores_Medium",
+			"targetingTeamName": "Herbivores",
 			"mass": 190,
 			"dragWeight": 35,
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowRiding",
 				"canBeDragged",
-				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 0.05,
+				"timeBase": 14350,
+				"timeLevel": 0.38
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 700 },
+				"fly": { "base": 1200, "sprint": 1680 },
+				"swim": { "base": 1200, "sprint": 1680 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1750 },
+				"fly": { "base": 1200, "sprint": 4200 },
+				"swim": { "base": 1200, "sprint": 4200 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 1200,
+				"defaultSwingRadius": 185,
+				"attacks": [
+					{ "name": "Attack Bite", "interval": 0.6, "dmg": 14, "radius": 350, "stamina": 0 },
+					{
+						"name": "Fireball (Rider)", "interval": 4, "dmg": 0, "radius": 0, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "Melee Rake", "interval": 1, "dmg": 23, "radius": 350, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Grand Embertross",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/GrandEmbertross_F_Character_BP.GrandEmbertross_F_Character_BP_C",
+			"dinoNameTag": "Phoenix",
+			"customTag": "LPhoenix",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 35,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
 				"canDrag",
 				"isCarnivore",
 				"isFlyerDino"
@@ -997,14 +1014,14 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 520, "sprint": 637 },
+				"walk": { "base": 500, "sprint": 612.5 },
 				"fly": { "base": 1200, "sprint": 1470 },
-				"swim": { "base": 1200 }
+				"swim": { "base": 1200, "sprint": 1470 }
 			},
 			"movementD": {
-				"walk": { "base": 520, "sprint": 910 },
+				"walk": { "base": 500, "sprint": 875 },
 				"fly": { "base": 1200, "sprint": 2100 },
-				"swim": { "base": 1200 }
+				"swim": { "base": 1200, "sprint": 2100 }
 			},
 			"staminaRates": {
 				"sprint": -5,

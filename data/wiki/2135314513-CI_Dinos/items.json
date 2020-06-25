@@ -1,5 +1,5 @@
 {
-	"version": "311.302.1592713840",
+	"version": "311.302.1593092108",
 	"format": "2",
 	"mod": {
 		"id": "2135314513",
@@ -62,6 +62,138 @@
 			"structureTemplate": "/Game/Mods/CI_Dinos/CraftingTable/CystalIsle_WorkBenchBP.CystalIsle_WorkBenchBP_C"
 		},
 		{
+			"name": "Ankylo Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/PrimalItemConsumable_Egg_CI_Ankylo.PrimalItemConsumable_Egg_CI_Ankylo_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"maxQuantity": 100,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"health": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"stamina": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				}
+			},
+			"egg": {
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 0.195, 0.156783, 0.0546, 1 ]
+					},
+					"cyan": {
+						"intensity": 0.6,
+						"color": [ 1, 0.399755, 0.2, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Ankylo Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/PrimalItemConsumable_Egg_CI_Ankylo_Fertilized.PrimalItemConsumable_Egg_CI_Ankylo_Fertilized_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"health": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"stamina": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/CrystalAnkylo_Character_BP.CrystalAnkylo_Character_BP_C",
+				"temperature": [ 16, 20 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 0.195, 0.156783, 0.0546, 1 ]
+					},
+					"cyan": {
+						"intensity": 0.6,
+						"color": [ 1, 0.399755, 0.2, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
 			"name": "Fertilized Crystal Magmasaur Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Crystal/LavaLizard/PrimalItemConsumable_Egg_LavaLizard_Fertilized.PrimalItemConsumable_Egg_LavaLizard_Fertilized_C",
@@ -108,7 +240,7 @@
 				}
 			},
 			"egg": {
-				"dinoClass": "/Game/Genesis/Dinos/Cherufe/Cherufe_Character_BP.Cherufe_Character_BP_C",
+				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/LavaLizard/CrystalLizard_Character_BP.CrystalLizard_Character_BP_C",
 				"temperature": [ 90, 110 ]
 			},
 			"cookingStats": {
@@ -215,33 +347,6 @@
 			}
 		},
 		{
-			"name": "Dinosaur Bone",
-			"description": "A very ancient looking bone, must be usefull for something!",
-			"blueprintPath": "/Game/Mods/CI_Dinos/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ARKBone.PrimalItemResource_ARKBone_C",
-			"icon": "/Game/Mods/CI_Dinos/PrimalEarth/CoreBlueprints/Resources/Icons/ARKBone_Icon.ARKBone_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 2,
-			"maxQuantity": 200,
-			"spoilage": { "time": 2678400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
 			"name": "Faceted Crystal",
 			"description": "This crystal has been polished naturally and is extra tastey to the Crystal \nDinos.",
 			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_FacetedCrystalCI.PrimalItemConsumable_FacetedCrystalCI_C",
@@ -294,10 +399,10 @@
 			}
 		},
 		{
-			"name": "Primal Crystal",
-			"description": "This crystal pulses with primal energy and is the Crystal Dinos favorite treat.",
+			"name": "Prime Crystal",
+			"description": "This crystal pulses with primal energy and is the Crystal Dinos favorite Food.",
 			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_PrimalCrystalCI.PrimalItemConsumable_PrimalCrystalCI_C",
-			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/PrimalCrystal.PrimalCrystal",
+			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/Prime_Crystal.Prime_Crystal",
 			"type": "MiscConsumable/Food",
 			"folders": [],
 			"weight": 0.1,
@@ -352,7 +457,7 @@
 		},
 		{
 			"name": "Pure Crystal",
-			"description": "This crystal is pure and one of the best treats to feed a Crystal Dinos.",
+			"description": "This crystal is pure and one of the treats to feed a Crystal Dinos.",
 			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_PureCrystalCI.PrimalItemConsumable_PureCrystalCI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/PureCrystal.PureCrystal",
 			"type": "MiscConsumable/Food",
@@ -404,7 +509,7 @@
 		},
 		{
 			"name": "Refined Crystal",
-			"description": "This crystal has been refined over time and can make a great treat for the Crystal Dinos.",
+			"description": "This crystal has been refined over time and can make a treat for the Crystal Dinos.",
 			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_RefinedCrystalCI.PrimalItemConsumable_RefinedCrystalCI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/RefinedCrystal.RefinedCrystal",
 			"type": "MiscConsumable/Food",
@@ -456,7 +561,7 @@
 		},
 		{
 			"name": "Rough Crystal",
-			"description": "This crystal makes for a tasty treat to the Crystal Dinos.",
+			"description": "This crystal makes for a tasty treat for Crystal Dinos.",
 			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_RoughCrystalCI.PrimalItemConsumable_RoughCrystalCI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/RoughCrystal.RoughCrystal",
 			"type": "MiscConsumable/Food",
@@ -558,88 +663,6 @@
 				"stamina": 0.01,
 				"food": 0.0525,
 				"weight": 0.01
-			}
-		},
-		{
-			"name": "Kibble (Argentavis Egg)",
-			"description": "This pet food recipe has been carefully designed to give balanced nutrition to almost any creature native to the island.  Includes the best protein, plant fibers to help with digestion, and egg to bind the mix.  Humans have difficulty digesting this.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/ScorchedEarth/Dinos/JugBug/PrimalItemConsumable_Kibble_JugBug.PrimalItemConsumable_Kibble_JugBug_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon.Kibble_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Crafted Foods" ],
-			"weight": 0.1,
-			"maxQuantity": 100,
-			"spoilage": { "time": 259200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 30,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 15,
-					"useItemQuality": true,
-					"descriptionIndex": 2,
-					"duration": 3
-				}
-			},
-			"cookingStats": {
-				"health": 0.01,
-				"stamina": 3,
-				"food": 2.25,
-				"weight": 0.05
-			}
-		},
-		{
-			"name": "Kibble (Vulture Egg)",
-			"description": "This pet food recipe has been carefully designed to give balanced nutrition to almost any creature native to the island.  Includes the best protein, plant fibers to help with digestion, and egg to bind the mix.  Humans have difficulty digesting this.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/ScorchedEarth/Dinos/Vulture/PrimalItemConsumable_Kibble_VultureEgg.PrimalItemConsumable_Kibble_VultureEgg_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon_ExSmall.Kibble_Icon_ExSmall",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Crafted Foods" ],
-			"weight": 0.1,
-			"maxQuantity": 100,
-			"spoilage": { "time": 259200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 30,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 16,
-					"useItemQuality": true,
-					"descriptionIndex": 2,
-					"duration": 3.2
-				}
-			},
-			"cookingStats": {
-				"health": 0.01,
-				"stamina": 3,
-				"food": 2.25,
-				"weight": 0.05
 			}
 		}
 	]
