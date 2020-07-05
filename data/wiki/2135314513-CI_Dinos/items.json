@@ -1,6 +1,6 @@
 {
-	"version": "312.13.1593200556",
-	"format": "2",
+	"version": "312.29.1593843376",
+	"format": "3",
 	"mod": {
 		"id": "2135314513",
 		"tag": "CI_Dinos",
@@ -10,7 +10,7 @@
 		{
 			"name": "Crystal Crafter",
 			"description": "Place materials along with blueprints in this to create certain advanced forged items.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/CraftingTable/PrimalItemStructure_CrystalCrafter.PrimalItemStructure_CrystalCrafter_C",
+			"bp": "/Game/Mods/CI_Dinos/CraftingTable/PrimalItemStructure_CrystalCrafter.PrimalItemStructure_CrystalCrafter_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/CI_Crafter.CI_Crafter",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
@@ -64,8 +64,8 @@
 		{
 			"name": "Ankylo Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/PrimalItemConsumable_Egg_CI_Ankylo.PrimalItemConsumable_Egg_CI_Ankylo_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/PrimalItemConsumable_Egg_CI_Ankylo.PrimalItemConsumable_Egg_CI_Ankylo_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Ankylo.HUD_DinoEgg_MIC_Inst_Ankylo",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
@@ -129,8 +129,8 @@
 		{
 			"name": "Fertilized Ankylo Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/PrimalItemConsumable_Egg_CI_Ankylo_Fertilized.PrimalItemConsumable_Egg_CI_Ankylo_Fertilized_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/PrimalItemConsumable_Egg_CI_Ankylo_Fertilized.PrimalItemConsumable_Egg_CI_Ankylo_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Ankylo.HUD_DinoEgg_MIC_Inst_Ankylo",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
@@ -194,9 +194,141 @@
 			}
 		},
 		{
+			"name": "Crystal Deinonychus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/PrimalItemConsumable_Egg_CrystalDein.PrimalItemConsumable_Egg_CrystalDein_C",
+			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/HUD_DinoEgg_MIC_Inst_CrystalDeinonychus.HUD_DinoEgg_MIC_Inst_CrystalDeinonychus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 7,
+			"maxQuantity": 100,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 35,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 8.75
+				},
+				"health": {
+					"value": 35,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 8.75
+				},
+				"stamina": {
+					"value": 35,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 8.75
+				}
+			},
+			"egg": {
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.2,
+						"color": [ 0, 0, 0, 1 ]
+					},
+					"cyan": {
+						"intensity": 3,
+						"color": [ 1, 0, 0.018187, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Crystal Deinonychus Egg",
+			"description": "",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/PrimalItemConsumable_Egg_CrystalDeinonychus_Fertilized.PrimalItemConsumable_Egg_CrystalDeinonychus_Fertilized_C",
+			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/HUD_DinoEgg_MIC_Inst_CrystalDeinonychus.HUD_DinoEgg_MIC_Inst_CrystalDeinonychus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 35,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 8.75
+				},
+				"health": {
+					"value": 35,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 8.75
+				},
+				"stamina": {
+					"value": 35,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 8.75
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/CrystalDeinonychus_Character_BP.CrystalDeinonychus_Character_BP_C",
+				"temperature": [ 80, 90 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.2,
+						"color": [ 0, 0, 0, 1 ]
+					},
+					"cyan": {
+						"intensity": 3,
+						"color": [ 1, 0, 0.018187, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
 			"name": "Fertilized Crystal Magmasaur Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Crystal/LavaLizard/PrimalItemConsumable_Egg_LavaLizard_Fertilized.PrimalItemConsumable_Egg_LavaLizard_Fertilized_C",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/LavaLizard/PrimalItemConsumable_Egg_LavaLizard_Fertilized.PrimalItemConsumable_Egg_LavaLizard_Fertilized_C",
 			"icon": "/Game/Genesis/Icons/Items/Item_CherufeEgg_Icon.Item_CherufeEgg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
@@ -253,7 +385,7 @@
 		{
 			"name": "Fertilized Crystal Drake Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Crystal/RockDrake/PrimalItemConsumable_Egg_CrystalDrake_Fertilized.PrimalItemConsumable_Egg_CrystalDrake_Fertilized_C",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/RockDrake/PrimalItemConsumable_Egg_CrystalDrake_Fertilized.PrimalItemConsumable_Egg_CrystalDrake_Fertilized_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/CI_DrakeEgg_Icon.CI_DrakeEgg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
@@ -310,8 +442,8 @@
 		{
 			"name": "Crystal Snow Owl Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/PrimalItemConsumable_Egg_CrystalOwl.PrimalItemConsumable_Egg_CrystalOwl_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/PrimalItemConsumable_Egg_CrystalOwl.PrimalItemConsumable_Egg_CrystalOwl_C",
+			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/HUD_DinoEgg_MIC_Inst_CrystalOwl.HUD_DinoEgg_MIC_Inst_CrystalOwl",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
@@ -375,8 +507,8 @@
 		{
 			"name": "Fertilized Crystal Snow Owl Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/PrimalItemConsumable_Egg_CrystalOwl_Fertilized.PrimalItemConsumable_Egg_CrystalOwl_Fertilized_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/PrimalItemConsumable_Egg_CrystalOwl_Fertilized.PrimalItemConsumable_Egg_CrystalOwl_Fertilized_C",
+			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/HUD_DinoEgg_MIC_Inst_CrystalOwl.HUD_DinoEgg_MIC_Inst_CrystalOwl",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
@@ -440,10 +572,10 @@
 			}
 		},
 		{
-			"name": "Phoenix Saddle",
-			"description": "Equip a Phoenix with this to ride it.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/Egg/PrimalItemArmor_PhoenixSaddle.PrimalItemArmor_PhoenixSaddle_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/Icons/ArgentavisSaddle_Icon.ArgentavisSaddle_Icon",
+			"name": "Embertross Saddle",
+			"description": "Equip this on a Embertross to ride it.",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/Egg/PrimalItemArmor_EmbertrossSaddle.PrimalItemArmor_EmbertrossSaddle_C",
+			"icon": "/Game/PrimalEarth/Dinos/Argentavis/Saddle/HUD_ArgentavisSaddle_Colorize_MIC.HUD_ArgentavisSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
@@ -481,7 +613,7 @@
 		{
 			"name": "Faceted Crystal",
 			"description": "This crystal has been polished naturally and is extra tastey to the Crystal \nDinos.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_FacetedCrystalCI.PrimalItemConsumable_FacetedCrystalCI_C",
+			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_FacetedCrystalCI.PrimalItemConsumable_FacetedCrystalCI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/FacetedCrystal.FacetedCrystal",
 			"type": "MiscConsumable/Food",
 			"folders": [],
@@ -533,7 +665,7 @@
 		{
 			"name": "Prime Crystal",
 			"description": "This crystal pulses with primal energy and is the Crystal Dinos favorite Food.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_PrimalCrystalCI.PrimalItemConsumable_PrimalCrystalCI_C",
+			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_PrimalCrystalCI.PrimalItemConsumable_PrimalCrystalCI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/Prime_Crystal.Prime_Crystal",
 			"type": "MiscConsumable/Food",
 			"folders": [],
@@ -590,7 +722,7 @@
 		{
 			"name": "Pure Crystal",
 			"description": "This crystal is pure and one of the treats to feed a Crystal Dinos.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_PureCrystalCI.PrimalItemConsumable_PureCrystalCI_C",
+			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_PureCrystalCI.PrimalItemConsumable_PureCrystalCI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/PureCrystal.PureCrystal",
 			"type": "MiscConsumable/Food",
 			"folders": [],
@@ -642,7 +774,7 @@
 		{
 			"name": "Refined Crystal",
 			"description": "This crystal has been refined over time and can make a treat for the Crystal Dinos.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_RefinedCrystalCI.PrimalItemConsumable_RefinedCrystalCI_C",
+			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_RefinedCrystalCI.PrimalItemConsumable_RefinedCrystalCI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/RefinedCrystal.RefinedCrystal",
 			"type": "MiscConsumable/Food",
 			"folders": [],
@@ -694,7 +826,7 @@
 		{
 			"name": "Rough Crystal",
 			"description": "This crystal makes for a tasty treat for Crystal Dinos.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_RoughCrystalCI.PrimalItemConsumable_RoughCrystalCI_C",
+			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_RoughCrystalCI.PrimalItemConsumable_RoughCrystalCI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/RoughCrystal.RoughCrystal",
 			"type": "MiscConsumable/Food",
 			"folders": [],
@@ -741,7 +873,7 @@
 		{
 			"name": "Briar Thorn",
 			"description": "A thick, sharp thorn that the liquefied creatures greatly enjoy.",
-			"blueprintPath": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_ThornCI.PrimalItemConsumable_ThornCI_C",
+			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_ThornCI.PrimalItemConsumable_ThornCI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/CI_Thorn_Icon.CI_Thorn_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [],
