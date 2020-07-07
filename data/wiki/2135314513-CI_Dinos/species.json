@@ -1,11 +1,11 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "312.29.1593843376",
+	"version": "312.32.1594067819",
 	"format": "2",
 	"mod": {
 		"id": "2135314513",
 		"tag": "CI_Dinos",
-		"title": "Crystal Isles Dino Addition"
+		"title": "Crystal Isles Dino Collection"
 	},
 	"species": [
 		{
@@ -60,10 +60,104 @@
 			}
 		},
 		{
-			"name": "Crystal Deinonychus",
-			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/CrystalDeinonychus_Character_BP.CrystalDeinonychus_Character_BP_C",
+			"name": "Deinonychus",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/CI_Deino_Character_BP.CI_Deino_Character_BP_C",
 			"dinoNameTag": "Deinonychus",
 			"customTag": "Deinonychus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 1296 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1440 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 350, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 30, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 30, "radius": 180, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Dodo",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/CI_Dummy_Deino_Character_BP.CI_Dummy_Deino_Character_BP_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "Dodo",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65, "sprint": 136.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5, "sprint": 95.5 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Crystal Deinonychus",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/CrystalDeinonychus_Character_BP.CrystalDeinonychus_Character_BP_C",
+			"dinoNameTag": "C_Deinonychus",
+			"customTag": "C_Deinonychus",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 165,
 			"dragWeight": 85,
@@ -544,7 +638,7 @@
 			"levelCaps": {
 				"maxExperience": 22213960,
 				"maxLevels": 88,
-				"capOffset": 50
+				"capOffset": 0
 			},
 			"cloning": {
 				"costBase": 1850,
@@ -565,7 +659,7 @@
 				"swim": { "base": 800 }
 			},
 			"staminaRates": {
-				"sprint": -4,
+				"sprint": -25,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -1290,7 +1384,7 @@
 			"name": "Grand Embertross",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/GrandEmbertross_F_Character_BP.GrandEmbertross_F_Character_BP_C",
 			"dinoNameTag": "Phoenix",
-			"customTag": "LPhoenix",
+			"customTag": "Embertross",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,
 			"dragWeight": 35,
