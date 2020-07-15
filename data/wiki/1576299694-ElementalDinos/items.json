@@ -1,5 +1,5 @@
 {
-	"version": "312.29.1593436691",
+	"version": "312.47.1594653119",
 	"format": "3",
 	"mod": {
 		"id": "1576299694",
@@ -460,10 +460,6 @@
 			"folders": [ "Armor", "Cloth" ],
 			"weight": 0.5,
 			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
 			"crafting": {
 				"xp": 0.6,
 				"bpCraftTime": 5,
@@ -473,28 +469,18 @@
 				"recipe": [
 					{
 						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
 						"qty": 10,
-						"type": "PrimalItemConsumable_FuryPoop_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Silicon_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Element_C"
-					},
-					{
-						"exact": false,
-						"qty": 60,
-						"type": "PrimalItemResource_Obsidian_C"
-					},
-					{
-						"exact": false,
-						"qty": 60,
 						"type": "PrimalItemResource_Metal_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemResource_ElementalOmniCrystal_C"
 					}
 				]
 			},
@@ -513,10 +499,6 @@
 			"folders": [ "Armor", "Cloth" ],
 			"weight": 0.5,
 			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
 			"crafting": {
 				"xp": 0.6,
 				"bpCraftTime": 5,
@@ -831,10 +813,6 @@
 			"folders": [ "Armor", "Cloth" ],
 			"weight": 0.5,
 			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
 			"crafting": {
 				"xp": 0.6,
 				"bpCraftTime": 5,
@@ -10472,7 +10450,7 @@
 			"name": "Affinity token",
 			"description": "These tokens are acquired by gaining affinity.",
 			"bp": "/Game/Mods/ElementalDinos/Crafting/Resources/PrimalItemResource_AffinityToken.PrimalItemResource_AffinityToken_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Emotes/EmoteHeart_Icon.EmoteHeart_Icon",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Emotes/EmoteHeart_Icon.EmoteHeart_Icon",
 			"type": "Resource",
 			"folders": [],
 			"weight": 0,
@@ -13688,7 +13666,7 @@
 			"name": "Jerboa skull",
 			"description": "Ooh look at the all-powerful survivor.  It must have taken a lot to bring down such a vicious beast.  ",
 			"bp": "/Game/Mods/ElementalDinos/Crafting/Resources/PrimalItemResource_JerboaSkull.PrimalItemResource_JerboaSkull_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/Icons/SkullMask_Icon.SkullMask_Icon",
+			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/Icons/SkullMask_Icon.SkullMask_Icon",
 			"type": "Resource",
 			"folders": [],
 			"weight": 0.05,
@@ -31372,6 +31350,66 @@
 			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapElementalSpyglass.WeapElementalSpyglass_C"
 		},
 		{
+			"name": "Small elemental gem",
+			"description": "Drag some luminescent essence over this gem.  Then use this launch small projectiles of the selected element.  ",
+			"bp": "/Game/Mods/ElementalDinos/Weapons/PrimalItem_ElementalGem.PrimalItem_ElementalGem_C",
+			"icon": "/Game/Mods/ElementalDinos/Materials/MagicGem_ElementalTextures/MagicGemIcon.MagicGemIcon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Manipulation" ],
+			"weight": 0.5,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 11.35,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalAirEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalFireEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalIceEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalLightningEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalNatureEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalStoneEssenceLumin_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ElementalWaterEssenceLumin_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 11.35,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapElementalGem.WeapElementalGem_C"
+		},
+		{
 			"name": "Air Resist Grenade",
 			"description": "Creates a column of unstable air essence that nullifies air damage.",
 			"bp": "/Game/Mods/ElementalDinos/Weapons/PrimalItem_ElementalGrenadeResistAir.PrimalItem_ElementalGrenadeResistAir_C",
@@ -32292,52 +32330,15 @@
 					},
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponMachinedPistol_C"
+						"qty": 40,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
 			"repair": {
 				"xp": 35,
 				"time": 5,
-				"resourceMult": 0.5,
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalAirEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalFireEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalIceEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalLightningEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalNatureEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalStoneEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalWaterEssence_C"
-					}
-				]
+				"resourceMult": 0.5
 			},
 			"weaponTemplate": "/Game/PrimalEarth/CoreBlueprints/Weapons/WeapMachinedPistol.WeapMachinedPistol_C"
 		},
@@ -32432,52 +32433,15 @@
 					},
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponMachinedSniper_C"
+						"qty": 160,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
 			"repair": {
 				"xp": 234,
 				"time": 5,
-				"resourceMult": 0.5,
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalWaterEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalStoneEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalNatureEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalLightningEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalIceEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalFireEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalAirEssence_C"
-					}
-				]
+				"resourceMult": 0.5
 			},
 			"weaponTemplate": "/Game/Mods/ElementalDinos/Weapons/WeapMachinedSniper_Scope_Elemental.WeapMachinedSniper_Scope_Elemental_C"
 		},
@@ -32681,52 +32645,15 @@
 					},
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponRifle_C"
+						"qty": 70,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
 			"repair": {
 				"xp": 180,
 				"time": 5,
-				"resourceMult": 0.5,
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalAirEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalFireEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalIceEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalLightningEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalNatureEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalStoneEssence_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalWaterEssence_C"
-					}
-				]
+				"resourceMult": 0.5
 			},
 			"weaponTemplate": "/Game/PrimalEarth/CoreBlueprints/Weapons/WeapRifle.WeapRifle_C"
 		},
@@ -33544,13 +33471,18 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponSword_C"
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalAirEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalAirEssence_C"
+						"qty": 60,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
 					}
 				]
 			},
@@ -33566,7 +33498,7 @@
 					},
 					{
 						"exact": false,
-						"qty": 1,
+						"qty": 5,
 						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
@@ -33595,13 +33527,18 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponSword_C"
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalAirEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalAirEssence_C"
+						"qty": 60,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
 					}
 				]
 			},
@@ -33617,7 +33554,7 @@
 					},
 					{
 						"exact": false,
-						"qty": 1,
+						"qty": 5,
 						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
@@ -33646,13 +33583,18 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponSword_C"
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalFireEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalFireEssence_C"
+						"qty": 60,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
 					}
 				]
 			},
@@ -33664,12 +33606,12 @@
 					{
 						"exact": false,
 						"qty": 1,
-						"type": "PrimalItemResource_MetalIngot_C"
+						"type": "PrimalItemResource_ElementalFireEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalFireCrystal_C"
+						"qty": 5,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
@@ -33697,13 +33639,18 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponSword_C"
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalIceEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalWaterEssence_C"
+						"qty": 60,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
 					}
 				]
 			},
@@ -33715,12 +33662,12 @@
 					{
 						"exact": false,
 						"qty": 1,
-						"type": "PrimalItemResource_MetalIngot_C"
+						"type": "PrimalItemResource_ElementalIceEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalIceEssence_C"
+						"qty": 5,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
@@ -33748,13 +33695,18 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponSword_C"
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalLightningEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalLightningEssence_C"
+						"qty": 60,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
 					}
 				]
 			},
@@ -33766,12 +33718,12 @@
 					{
 						"exact": false,
 						"qty": 1,
-						"type": "PrimalItemResource_MetalIngot_C"
+						"type": "PrimalItemResource_ElementalLightningEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalLightningEssence_C"
+						"qty": 5,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
@@ -33799,13 +33751,18 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponSword_C"
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalNatureEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalNatureEssence_C"
+						"qty": 60,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
 					}
 				]
 			},
@@ -33817,12 +33774,12 @@
 					{
 						"exact": false,
 						"qty": 1,
-						"type": "PrimalItemResource_MetalIngot_C"
+						"type": "PrimalItemResource_ElementalNatureEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalNatureEssence_C"
+						"qty": 5,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
@@ -33850,13 +33807,18 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponSword_C"
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalStoneEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalStoneEssence_C"
+						"qty": 60,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
 					}
 				]
 			},
@@ -33868,12 +33830,12 @@
 					{
 						"exact": false,
 						"qty": 1,
-						"type": "PrimalItemResource_MetalIngot_C"
+						"type": "PrimalItemResource_ElementalStoneEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalStoneEssence_C"
+						"qty": 5,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
@@ -33901,13 +33863,18 @@
 				"recipe": [
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_WeaponSword_C"
+						"qty": 10,
+						"type": "PrimalItemResource_ElementalWaterEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementalWaterEssence_C"
+						"qty": 60,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
 					}
 				]
 			},
@@ -33919,12 +33886,12 @@
 					{
 						"exact": false,
 						"qty": 1,
-						"type": "PrimalItemResource_MetalIngot_C"
+						"type": "PrimalItemResource_ElementalWaterEssence_C"
 					},
 					{
 						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ElementalWaterEssence_C"
+						"qty": 5,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
