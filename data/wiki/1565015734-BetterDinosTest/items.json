@@ -1,5 +1,5 @@
 {
-	"version": "312.40.1594426975",
+	"version": "312.47.1594843321",
 	"format": "3",
 	"mod": {
 		"id": "1565015734",
@@ -854,7 +854,7 @@
 		},
 		{
 			"name": "Rock Drake Saddle (BD Version)",
-			"description": "Equip a Rock Drake with this to ride it.",
+			"description": "Equip a Rock Drake with this to ride it. Crafting this item will give a completely Vanilla Saddle.",
 			"bp": "/Game/Mods/BetterDinosTest/CorruptedEggers/PrimalItemArmor_RockDrakeSaddle_BD.PrimalItemArmor_RockDrakeSaddle_BD_C",
 			"icon": "/Game/Aberration/Dinos/RockDrake/saddle/HUD_MIC_RockDrakeSaddle.HUD_MIC_RockDrakeSaddle",
 			"type": "Equipment/DinoSaddle",
@@ -911,7 +911,7 @@
 				"ignoreInWater": false
 			},
 			"crafting": {
-				"xp": 1,
+				"xp": 0.5,
 				"bpCraftTime": 5,
 				"minLevelReq": 0,
 				"productCount": 1,
@@ -935,7 +935,7 @@
 					{
 						"exact": false,
 						"qty": 10,
-						"type": "PrimalItemResource_RedSap_C"
+						"type": "PrimalItemResource_Gem_Element_C"
 					}
 				]
 			},
@@ -957,6 +957,58 @@
 					"descriptionIndex": 0,
 					"duration": 5
 				}
+			}
+		},
+		{
+			"name": "Alduins Heart",
+			"description": "An item indestinguishable from Primal Crystal, to those who enjoy eating such things anyway...",
+			"bp": "/Game/Mods/BetterDinosTest/CorruptedEggers/PrimalItemResource_AlduinsHeart.PrimalItemResource_AlduinsHeart_C",
+			"icon": "/Game/Mods/BetterDinosTest/CorruptedEggers/AlduinsHeart_Icon.AlduinsHeart_Icon",
+			"type": "Resource",
+			"folders": [ "Consumables" ],
+			"weight": 1,
+			"maxQuantity": 10,
+			"spoilage": {
+				"time": 2700,
+				"productBP": "/Game/Extinction/CoreBlueprints/Resources/PrimalItemResource_RedSap.PrimalItemResource_RedSap_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.5,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemConsumable_MammalMilk_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_Egg_Large_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Gem_Element_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
 			}
 		},
 		{
@@ -1189,7 +1241,7 @@
 				"ignoreInWater": false
 			},
 			"crafting": {
-				"xp": 1,
+				"xp": 0.5,
 				"bpCraftTime": 10,
 				"minLevelReq": 0,
 				"productCount": 1,
@@ -1565,6 +1617,515 @@
 					"cyan": {
 						"intensity": 1,
 						"color": [ 0.207843, 0.058824, 0.223529, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Piranha Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/BetterDinosTest/Fish/Piranha/PrimalItemConsumable_UnderwaterEgg_PiranhaBD.PrimalItemConsumable_UnderwaterEgg_PiranhaBD_C",
+			"icon": "/Game/Mods/BetterDinosTest/Fish/Piranha/HUD_FishEgg_Colorize_MIC_PiranhaBD.HUD_FishEgg_Colorize_MIC_PiranhaBD",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Fish/BDPiranha_Character_BP.BDPiranha_Character_BP_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.755, 0.740466, 0.464325, 0.5 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 0.465, 0.391375, 0.2325, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Piranha Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/BetterDinosTest/Fish/Piranha/PrimalItemConsumable_UnderwaterEgg_PiranhaBD_Aberrant.PrimalItemConsumable_UnderwaterEgg_PiranhaBD_Aberrant_C",
+			"icon": "/Game/Mods/BetterDinosTest/Fish/Piranha/HUD_FishEgg_Colorize_MIC_PiranhaBD.HUD_FishEgg_Colorize_MIC_PiranhaBD",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Fish/BDPiranha_Character_BP_Aberrant.BDPiranha_Character_BP_Aberrant_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.755, 0.740466, 0.464325, 0.5 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 0.465, 0.391375, 0.2325, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Cooked High Protein Fish Meat",
+			"description": "Sates your hunger SLIGHTLY, and provides health while being digested.  Wild carnivores will eat it, but prefer raw meat. Cooking this meat destroys any health giving properties it had, but makes it last much longer",
+			"bp": "/Game/Mods/BetterDinosTest/Fish/Salmon/PrimalItemConsumable_CookedHPFishMeat.PrimalItemConsumable_CookedHPFishMeat_C",
+			"icon": "/Game/Mods/BetterDinosTest/Fish/Salmon/CookedHPFishMeat_Icon.CookedHPFishMeat_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Meat" ],
+			"weight": 0.1,
+			"maxQuantity": 50,
+			"spoilage": {
+				"time": 2600,
+				"productBP": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 20,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": true,
+						"qty": 1,
+						"type": "PrimalItemConsumable_HPFishMeat_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 10,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 1.666667
+				},
+				"health": {
+					"value": 5,
+					"useItemQuality": true,
+					"descriptionIndex": 1,
+					"duration": 1.25
+				}
+			},
+			"cookingStats": {
+				"health": 0.11,
+				"stamina": 0.01,
+				"food": 0.2,
+				"weight": 0.02
+			}
+		},
+		{
+			"name": "Raw High Protein Fish Meat",
+			"description": "Extra nutritious fish meat, full of Omega 3. Pescavores can wolf this down quickly, and will feel the benefits. Restore Health at a much faster rate than force feeding with regular Raw Fish Meat. Not at all recommended for use in taming though.",
+			"bp": "/Game/Mods/BetterDinosTest/Fish/Salmon/PrimalItemConsumable_HPFishMeat.PrimalItemConsumable_HPFishMeat_C",
+			"icon": "/Game/Mods/BetterDinosTest/Fish/Salmon/HPFishMeat_Icon.HPFishMeat_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Meat" ],
+			"weight": 0.1,
+			"maxQuantity": 40,
+			"spoilage": {
+				"time": 800,
+				"productBP": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 2.5,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 0.5
+				},
+				"health": {
+					"value": -5,
+					"useItemQuality": true,
+					"descriptionIndex": 3,
+					"duration": 1.25
+				}
+			},
+			"cookingStats": {
+				"health": 0.11,
+				"stamina": 0.01,
+				"food": 0.15,
+				"weight": 0.02
+			}
+		},
+		{
+			"name": "Fertilized Salmon Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/BetterDinosTest/Fish/Salmon/PrimalItemConsumable_UnderwaterEgg_SalmonBD.PrimalItemConsumable_UnderwaterEgg_SalmonBD_C",
+			"icon": "/Game/Mods/BetterDinosTest/Fish/Salmon/HUD_FishEgg_Colorize_MIC_Salmon_BD.HUD_FishEgg_Colorize_MIC_Salmon_BD",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Fish/BDSalmon_Character.BDSalmon_Character_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 1, 0.268348, 0.066083, 1 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 5, 0.100153, 0, 30 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Aberrant Salmon Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/BetterDinosTest/Fish/Salmon/PrimalItemConsumable_UnderwaterEgg_SalmonBD_Aberrant.PrimalItemConsumable_UnderwaterEgg_SalmonBD_Aberrant_C",
+			"icon": "/Game/Mods/BetterDinosTest/Fish/Salmon/HUD_FishEgg_Colorize_MIC_Salmon_BD.HUD_FishEgg_Colorize_MIC_Salmon_BD",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Fish/BDSalmon_Character.BDSalmon_Character_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 1, 0.268348, 0.066083, 1 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 5, 0.100153, 0, 30 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Lunar Salmon Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/BetterDinosTest/Fish/Salmon/PrimalItemConsumable_UnderwaterEgg_SalmonBD_Lunar.PrimalItemConsumable_UnderwaterEgg_SalmonBD_Lunar_C",
+			"icon": "/Game/Mods/BetterDinosTest/Fish/Salmon/HUD_FishEgg_Colorize_MIC_Salmon_BD.HUD_FishEgg_Colorize_MIC_Salmon_BD",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Fish/BDSalmon_Character_Lunar.BDSalmon_Character_Lunar_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 1, 0.268348, 0.066083, 1 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 5, 0.100153, 0, 30 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Rare Lunar Salmon Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/BetterDinosTest/Fish/Salmon/PrimalItemConsumable_UnderwaterEgg_SalmonBD_RareLunar.PrimalItemConsumable_UnderwaterEgg_SalmonBD_RareLunar_C",
+			"icon": "/Game/Mods/BetterDinosTest/Fish/Salmon/HUD_FishEgg_Colorize_MIC_Salmon_BD.HUD_FishEgg_Colorize_MIC_Salmon_BD",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Fish/BDSalmon_Character_Lunar_Rare.BDSalmon_Character_Lunar_Rare_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 1, 0.268348, 0.066083, 1 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 5, 0.100153, 0, 30 ]
 					}
 				}
 			},
@@ -2721,7 +3282,7 @@
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Meat" ],
 			"weight": 0.1,
-			"maxQuantity": 40,
+			"maxQuantity": 50,
 			"spoilage": {
 				"time": 1000,
 				"productBP": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C"
@@ -2783,7 +3344,7 @@
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Meat" ],
 			"weight": 0.1,
-			"maxQuantity": 30,
+			"maxQuantity": 40,
 			"spoilage": {
 				"time": 540,
 				"productBP": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C"
@@ -5012,7 +5573,7 @@
 		},
 		{
 			"name": "Wire Fish Basket",
-			"description": "Trap certain fish in this basket to tame and transport them!",
+			"description": "Trap certain fish in this basket to tame and transport them! Tougher and with a better range and less initialization time than a regular wooden fish basket.",
 			"bp": "/Game/Mods/BetterDinosTest/WireFishBasket/PrimalItemStructure_FishBasket_Wire.PrimalItemStructure_FishBasket_Wire_C",
 			"icon": "/Game/Mods/BetterDinosTest/WireFishBasket/WireFishBasket_Icon.WireFishBasket_Icon",
 			"type": "Structure",
@@ -5303,7 +5864,7 @@
 			"maxQuantity": 1,
 			"spoilage": { "time": 691200 },
 			"crafting": {
-				"xp": 1,
+				"xp": 0.5,
 				"bpCraftTime": 5,
 				"minLevelReq": 0,
 				"productCount": 1,
@@ -5436,7 +5997,7 @@
 				"ignoreInWater": false
 			},
 			"crafting": {
-				"xp": 1,
+				"xp": 0.5,
 				"bpCraftTime": 10,
 				"minLevelReq": 0,
 				"productCount": 1,
@@ -5504,7 +6065,7 @@
 				"ignoreInWater": false
 			},
 			"crafting": {
-				"xp": 20,
+				"xp": 0.5,
 				"bpCraftTime": 3,
 				"minLevelReq": 0,
 				"productCount": 1,
@@ -5524,8 +6085,8 @@
 			}
 		},
 		{
-			"name": "Fish Basket",
-			"description": "Trap certain fish in this basket to tame and transport them!",
+			"name": "Fish Basket (BD Version)",
+			"description": "Trap certain fish in this basket to tame and transport them! Note that crafting this item will give you a completely vanilla fish basket.",
 			"bp": "/Game/Mods/BetterDinosTest/WorkBench/Uniques/PrimalItemStructure_FishBasketBD.PrimalItemStructure_FishBasketBD_C",
 			"icon": "/Game/Aberration/Icons/Structures/FishBasket_Icon.FishBasket_Icon",
 			"type": "Structure",
