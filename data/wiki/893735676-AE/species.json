@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.117.1591520740",
+	"version": "312.47.1594983860",
 	"format": "2",
 	"mod": {
 		"id": "893735676",
@@ -4729,6 +4729,72 @@
 					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
 					{ "name": "Taunt", "interval": 0, "dmg": 1800, "radius": 2000, "stamina": 2 },
 					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 2200, "radius": 614, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Poison Wyvern",
+			"bp": "/Game/Mods/AE/Dinos/Alpha/Wyvern/Other/Wyvern_Character_BP_Poison.Wyvern_Character_BP_Poison_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{
+						"name": "Poison (Rider)", "interval": 4, "dmg": 0, "radius": 0, "stamina": 65,
+						"isProjectile": true
+					},
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 },
+					{
+						"name": "Poison (AI)", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					}
 				]
 			}
 		},
@@ -9617,7 +9683,7 @@
 		{
 			"name": "Elemental Poison Indominus Rex",
 			"bp": "/Game/Mods/AE/Dinos/Elemental/Indom/PoisMini_Indom_Character_BP.PoisMini_Indom_Character_BP_C",
-			"dinoNameTag": "Elem_Indom_Pois",
+			"dinoNameTag": "Elem_Indom_Poison",
 			"customTag": "Alpha_Indom",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
@@ -16018,6 +16084,65 @@
 			}
 		},
 		{
+			"name": "Bionic Magmasaur",
+			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_Boss_Lvl3.Robot_Cherufe_Character_BP_Boss_Lvl3_C",
+			"dinoNameTag": "LavaLizard_AE",
+			"customTag": "LavaLizard",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 10000,
+			"dragWeight": 4000,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 0,
+				"costLevel": 0.01,
+				"timeBase": 0,
+				"timeLevel": 0.04
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 656.2 },
+				"swim": { "base": 600, "sprint": 682.5 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 1968.8 },
+				"swim": { "base": 720, "sprint": 2047.5 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 560000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 640000, "radius": 450, "stamina": 10 },
+					{
+						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					},
+					{ "name": "VentForge", "interval": 30, "dmg": 540000, "radius": 2000, "stamina": 2 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 640000, "radius": 350, "stamina": 10 },
+					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 20, "dmg": 640000, "radius": 450, "stamina": 10 }
+				]
+			}
+		},
+		{
 			"name": "Phantasmal Broodmother",
 			"bp": "/Game/Mods/AE/Dinos/EndBoss/Broodmother/EndBoss_Phantasm_Broodmother_Character_BP.EndBoss_Phantasm_Broodmother_Character_BP_C",
 			"dinoNameTag": "Light_Broodmother",
@@ -21190,6 +21315,56 @@
 			}
 		},
 		{
+			"name": "Infernal Astrocetus",
+			"bp": "/Game/Mods/AE/Dinos/Infernal/SpaceWhale/SpaceWhale_Character_BP_Infernal.SpaceWhale_Character_BP_Infernal_C",
+			"dinoNameTag": "Space Whale_Infernal",
+			"customTag": "Space Whale",
+			"targetingTeamName": "",
+			"mass": 2000,
+			"dragWeight": 4000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"fly": { "base": 1000 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"fly": { "base": 1300 },
+				"swim": { "base": 780 }
+			},
+			"staminaRates": { "swimOrFly": -0.185 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 5000, "radius": 750, "stamina": 84 },
+					{ "name": "None", "interval": 0, "dmg": 5000, "radius": 1000, "stamina": 150 },
+					{ "name": "Hyperdrive", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Infernal Spino",
 			"bp": "/Game/Mods/AE/Dinos/Infernal/Spino/InfernalSpino_Character_BP.InfernalSpino_Character_BP_C",
 			"dinoNameTag": "Infernal_Spino",
@@ -21572,7 +21747,7 @@
 		},
 		{
 			"name": "Mystical BigFoot",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/BigFoot/Immortal_Bigfoot_Character_BP.Immortal_Bigfoot_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/BigFoot/Mystical_Bigfoot_Character_BP.Mystical_Bigfoot_Character_BP_C",
 			"dinoNameTag": "Immortal_Bigfoot",
 			"customTag": "Immortal_Bigfoot",
 			"targetingTeamName": "Carnivores_High",
@@ -21605,7 +21780,7 @@
 				"swim": { "base": 675 }
 			},
 			"staminaRates": {
-				"sprint": -10,
+				"sprint": -40,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -21619,7 +21794,7 @@
 		},
 		{
 			"name": "Mystical BigFoot (Hard Mode)",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/BigFoot/Immortal_Bigfoot_Character_BP_Hard.Immortal_Bigfoot_Character_BP_Hard_C",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/BigFoot/Mystical_Bigfoot_Character_BP_Hard.Mystical_Bigfoot_Character_BP_Hard_C",
 			"dinoNameTag": "Immortal_Bigfoot_Hard",
 			"customTag": "Immortal_Bigfoot",
 			"targetingTeamName": "Carnivores_High",
@@ -21652,7 +21827,7 @@
 				"swim": { "base": 675 }
 			},
 			"staminaRates": {
-				"sprint": -10,
+				"sprint": -40,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -21804,7 +21979,7 @@
 		},
 		{
 			"name": "Mystical Mammoth",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/Mammoth/Immortal_Mammoth_Character_BP.Immortal_Mammoth_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/Mammoth/Mystical_Mammoth_Character_BP.Mystical_Mammoth_Character_BP_C",
 			"dinoNameTag": "Immortal_Mammoth",
 			"customTag": "Alpha_Mammoth",
 			"targetingTeamName": "Carnivores_High",
@@ -21849,7 +22024,7 @@
 		},
 		{
 			"name": "Mystical Mammoth (Hard Mode)",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/Mammoth/Immortal_Mammoth_Character_BP_Hard.Immortal_Mammoth_Character_BP_Hard_C",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/Mammoth/Mystical_Mammoth_Character_BP_Hard.Mystical_Mammoth_Character_BP_Hard_C",
 			"dinoNameTag": "Immortal_Mammoth_Hard",
 			"customTag": "Alpha_Mammoth",
 			"targetingTeamName": "Carnivores_High",
@@ -21894,7 +22069,7 @@
 		},
 		{
 			"name": "Mystical Rhino",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/Rhino/Immortal_Rhino_Character_BP.Immortal_Rhino_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/Rhino/Mystical_Rhino_Character_BP.Mystical_Rhino_Character_BP_C",
 			"dinoNameTag": "Immortal_Rhino",
 			"customTag": "Alpha_Rhino",
 			"targetingTeamName": "Carnivores_High",
@@ -21940,7 +22115,7 @@
 		},
 		{
 			"name": "Mystical Rhino (Hard Mode)",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/Rhino/Immortal_Rhino_Character_BP_Hard.Immortal_Rhino_Character_BP_Hard_C",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/Rhino/Mystical_Rhino_Character_BP_Hard.Mystical_Rhino_Character_BP_Hard_C",
 			"dinoNameTag": "Immortal_Rhino_Hard",
 			"customTag": "Alpha_Rhino",
 			"targetingTeamName": "Carnivores_High",
@@ -21986,7 +22161,7 @@
 		},
 		{
 			"name": "Mystical Wyvern",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/Wyvern/Immortal_Wyvern_Character_BP.Immortal_Wyvern_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/Wyvern/Mystical_Wyvern_Character_BP.Mystical_Wyvern_Character_BP_C",
 			"dinoNameTag": "Immortal_Wyvern",
 			"customTag": "Alpha_Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -22043,7 +22218,7 @@
 		},
 		{
 			"name": "Mystical Wyvern (Hard Mode)",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/Wyvern/Immortal_Wyvern_Character_BP_Hard.Immortal_Wyvern_Character_BP_Hard_C",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/Wyvern/Mystical_Wyvern_Character_BP_Hard.Mystical_Wyvern_Character_BP_Hard_C",
 			"dinoNameTag": "Immortal_Wyvern_Hard",
 			"customTag": "Alpha_Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -27295,6 +27470,67 @@
 			}
 		},
 		{
+			"name": "Poison Robot Magmasaur",
+			"bp": "/Game/Mods/AE/Dinos/Robot/Robot_Magmasaur/Robot_Cherufe_Character_BP_Poison_AE.Robot_Cherufe_Character_BP_Poison_AE_C",
+			"dinoNameTag": "LavaLizard_AE",
+			"customTag": "LavaLizard",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 550,
+			"dragWeight": 555,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 0,
+				"costLevel": 0.01,
+				"timeBase": 0,
+				"timeLevel": 0.04
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 656.2 },
+				"swim": { "base": 600, "sprint": 682.5 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 1968.8 },
+				"swim": { "base": 720, "sprint": 2047.5 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 56000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 56000, "radius": 450, "stamina": 10 },
+					{
+						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					},
+					{ "name": "VentForge", "interval": 30, "dmg": 55000, "radius": 2000, "stamina": 2 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 56000, "radius": 350, "stamina": 10 },
+					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 20, "dmg": 56000, "radius": 450, "stamina": 10 }
+				]
+			}
+		},
+		{
 			"name": "Eternal Robot Therizinosaur",
 			"bp": "/Game/Mods/AE/Dinos/Robot/Robot_Therizino/RobotTherizino_Character_BP.RobotTherizino_Character_BP_C",
 			"dinoNameTag": "AE_Robot_Theri",
@@ -31916,8 +32152,8 @@
 				"defaultDmg": 6000,
 				"defaultSwingRadius": 110,
 				"attacks": [
-					{ "name": "ClawAttack", "interval": 0.4, "dmg": 3800, "radius": 225, "stamina": 0 },
-					{ "name": "ClawHarvest", "interval": 0.4, "dmg": 3300, "radius": 250, "stamina": 0 },
+					{ "name": "ClawAttack", "interval": 0.4, "dmg": 510, "radius": 225, "stamina": 0 },
+					{ "name": "ClawHarvest", "interval": 0.4, "dmg": 580, "radius": 250, "stamina": 0 },
 					{ "name": "BiteHarvest", "interval": 4, "dmg": 3800, "radius": 225, "stamina": 0 },
 					{ "name": "JazzHands", "interval": 4, "dmg": 3300, "radius": 250, "stamina": 0 }
 				]
@@ -34945,6 +35181,60 @@
 			}
 		},
 		{
+			"name": "Tapejara",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Tapejara_Character_BP_AE.Tapejara_Character_BP_AE_C",
+			"dinoNameTag": "Tapejara",
+			"customTag": "Tapejara",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 862.4 },
+				"fly": { "base": 700, "sprint": 2464 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 245, "sprint": 392 },
+				"fly": { "base": 700, "sprint": 1120 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Thylacoleo",
 			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Thylacoleo_Character_BP_AE.Thylacoleo_Character_BP_AE_C",
 			"dinoNameTag": "Thylacoleo_AE",
@@ -35091,6 +35381,60 @@
 				"attacks": [
 					{ "name": "Attack With Debuff", "interval": 0.25, "dmg": 7, "radius": 110, "stamina": 0 },
 					{ "name": "Jump", "interval": 5, "dmg": 7, "radius": 110, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Tropeognathus",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Tropeognathus_Character_BP_AE.Tropeognathus_Character_BP_AE_C",
+			"dinoNameTag": "Tropeognathus_AE",
+			"customTag": "Tropeognathus",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 0,
+				"costLevel": 0.01,
+				"timeBase": 0,
+				"timeLevel": 0.04
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 539 },
+				"fly": { "base": 700, "sprint": 1540 },
+				"swim": { "base": 300, "sprint": 660 }
+			},
+			"movementD": {
+				"walk": { "base": 735, "sprint": 245 },
+				"fly": { "base": 2100, "sprint": 700 },
+				"swim": { "base": 900, "sprint": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 }
 				]
 			}
 		},
