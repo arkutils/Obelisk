@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "312.29.1593954162",
+	"version": "312.52.1595282366",
 	"format": "2",
 	"mod": {
 		"id": "1984936918",
@@ -682,6 +682,60 @@
 			}
 		},
 		{
+			"name": "Raven",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Raven/Raven_MM_Character_BP.Raven_MM_Character_BP_C",
+			"dinoNameTag": "Raven",
+			"customTag": "Raven",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 80,
+			"dragWeight": 150,
+			"flags": [
+				"allowFlyerLandedRider",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 60, "sprint": 72.8 },
+				"fly": { "base": 300, "sprint": 363.8 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 60, "sprint": 135 },
+				"fly": { "base": 300, "sprint": 675 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 350,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 10, "radius": 100, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 4, "dmg": 10, "radius": 100, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 4, "dmg": 10, "radius": 100, "stamina": 120 }
+				]
+			}
+		},
+		{
 			"name": "Shadowcat",
 			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Shadowcat/Shadowcat_character_BP.Shadowcat_character_BP_C",
 			"dinoNameTag": "Shadowcat",
@@ -734,6 +788,41 @@
 					{ "name": "Pounce", "interval": 0, "dmg": 30, "radius": 0, "stamina": 0 },
 					{ "name": "Maul", "interval": 0, "dmg": 40, "radius": 0, "stamina": 0 }
 				]
+			}
+		},
+		{
+			"name": "Snake",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/Snakes/Snake_MM_Character_BP.Snake_MM_Character_BP_C",
+			"dinoNameTag": "Snake",
+			"customTag": "",
+			"targetingTeamName": "Herbivores",
+			"mass": 100,
+			"dragWeight": 110,
+			"flags": [ "canBeDragged", "canDrag", "canMountOnHumans", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 225, "sprint": 378 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 225, "sprint": 630 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 110,
+				"attacks": [ { "name": "Melee", "interval": 0.6, "dmg": 10, "radius": 110, "stamina": 0 } ]
 			}
 		},
 		{
