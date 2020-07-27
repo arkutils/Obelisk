@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.117.1591505817",
+	"version": "312.57.1595806438",
 	"format": "2",
 	"mod": {
 		"id": "1652120435",
@@ -403,12 +403,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 150, "sprint": 750 },
-				"swim": { "base": 750, "sprint": 1875 }
+				"walk": { "base": 150, "sprint": 825 },
+				"swim": { "base": 750, "sprint": 2062.5 }
 			},
 			"movementD": {
-				"walk": { "base": 165, "sprint": 825 },
-				"swim": { "base": 825, "sprint": 2062.5 }
+				"walk": { "base": 165, "sprint": 907.5 },
+				"swim": { "base": 825, "sprint": 2268.8 }
 			},
 			"staminaRates": {
 				"sprint": -20,
@@ -1943,6 +1943,59 @@
 			}
 		},
 		{
+			"name": "Tyrant Scorpion",
+			"bp": "/Game/Mods/AtlasPort/Critter/Scorpion/AScorpion_Character_BP.AScorpion_Character_BP_C",
+			"dinoNameTag": "Scorpion",
+			"customTag": "AScorpion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 120,
+			"dragWeight": 280,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 360, "sprint": 864 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 360, "sprint": 864 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Claws", "interval": 0.1, "dmg": 25, "radius": 250, "stamina": 0 },
+					{ "name": "VenomStab", "interval": 5, "dmg": 35, "radius": 250, "stamina": 0 },
+					{ "name": "Taunt", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "HeldSting", "interval": 15, "dmg": 64, "radius": 250, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Hippocampus",
 			"bp": "/Game/Mods/AtlasPort/Critter/Seahorse/Hippocampus_Character_bp.Hippocampus_Character_bp_C",
 			"dinoNameTag": "Equus",
@@ -2577,183 +2630,6 @@
 						"name": "Breathe_Poison", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
 						"isProjectile": true
 					}
-				]
-			}
-		},
-		{
-			"name": "Zombie Fire Wyvern",
-			"bp": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieFire.Wyvern_Character_BP_ZombieFire_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 800,
-			"dragWeight": 555,
-			"flags": [
-				"allowFlyerLandedRider",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 2050,
-				"costLevel": 55,
-				"timeBase": 14350,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 690, "sprint": 796.9 },
-				"fly": { "base": 3000, "sprint": 2310 },
-				"swim": { "base": 3000 }
-			},
-			"movementD": {
-				"walk": { "base": 690, "sprint": 796.9 },
-				"fly": { "base": 3000, "sprint": 2310 },
-				"swim": { "base": 3000 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -0.275
-			},
-			"attack": {
-				"defaultDmg": 160,
-				"defaultSwingRadius": 1200,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
-					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
-					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
-					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
-					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
-				]
-			}
-		},
-		{
-			"name": "Zombie Lightning Wyvern",
-			"bp": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombieLightning.Wyvern_Character_BP_ZombieLightning_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 800,
-			"dragWeight": 555,
-			"flags": [
-				"allowFlyerLandedRider",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 2050,
-				"costLevel": 55,
-				"timeBase": 14350,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 690, "sprint": 796.9 },
-				"fly": { "base": 3000, "sprint": 2310 },
-				"swim": { "base": 3000 }
-			},
-			"movementD": {
-				"walk": { "base": 690, "sprint": 796.9 },
-				"fly": { "base": 3000, "sprint": 2310 },
-				"swim": { "base": 3000 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -0.275
-			},
-			"attack": {
-				"defaultDmg": 160,
-				"defaultSwingRadius": 1200,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
-					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
-					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
-					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
-					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
-				]
-			}
-		},
-		{
-			"name": "Zombie Poison Wyvern",
-			"bp": "/Game/Mods/AtlasPort/ScorchedEarth/Dinos/Wyvern/Wyvern_Character_BP_ZombiePoison.Wyvern_Character_BP_ZombiePoison_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 800,
-			"dragWeight": 555,
-			"flags": [
-				"allowFlyerLandedRider",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 2050,
-				"costLevel": 55,
-				"timeBase": 14350,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 690, "sprint": 796.9 },
-				"fly": { "base": 3000, "sprint": 2310 },
-				"swim": { "base": 3000 }
-			},
-			"movementD": {
-				"walk": { "base": 690, "sprint": 796.9 },
-				"fly": { "base": 3000, "sprint": 2310 },
-				"swim": { "base": 3000 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -0.275
-			},
-			"attack": {
-				"defaultDmg": 160,
-				"defaultSwingRadius": 1200,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
-					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
-					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
-					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
-					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
 				]
 			}
 		},
