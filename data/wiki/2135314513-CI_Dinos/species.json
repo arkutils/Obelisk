@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "312.32.1594067819",
+	"version": "312.72.1596738310",
 	"format": "2",
 	"mod": {
 		"id": "2135314513",
@@ -365,6 +365,56 @@
 			}
 		},
 		{
+			"name": "Crystal Moth",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Moth/Crystal_Moth_BP.Crystal_Moth_BP_C",
+			"dinoNameTag": "Moth",
+			"customTag": "Moth",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375,
+				"costLevel": 55,
+				"timeBase": 2625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 110, "sprint": 220 },
+				"fly": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 110, "sprint": 193.6 },
+				"fly": { "base": 600, "sprint": 1056 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.225
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "DropSpores", "interval": 17, "dmg": 18, "radius": 200, "stamina": 50 } ]
+			}
+		},
+		{
 			"name": "Crystal Spine Otter",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Otter/CrystalOtter_Character_BP.CrystalOtter_Character_BP_C",
 			"dinoNameTag": "Otter",
@@ -566,6 +616,61 @@
 			}
 		},
 		{
+			"name": "Crystal Basilisk",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Snake/Crystal_Basi_BP.Crystal_Basi_BP_C",
+			"dinoNameTag": "Basilisk",
+			"customTag": "Basilisk",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 425,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1950,
+				"costLevel": 55,
+				"timeBase": 13650,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1008 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1680 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.67, "dmg": 55, "radius": 275, "stamina": 10 },
+					{
+						"name": "Ranged", "interval": 8, "dmg": 55, "radius": 300, "stamina": 65,
+						"isProjectile": true
+					},
+					{ "name": "Gaze", "interval": 20, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Crystal Snow Owl",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/Crystal_Owl_Character_BP.Crystal_Owl_Character_BP_C",
 			"dinoNameTag": "Owl",
@@ -616,6 +721,56 @@
 					{ "name": "Melee", "interval": 0.6, "dmg": 30, "radius": 240, "stamina": 0 },
 					{ "name": "Encapsulate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "PredatorVision", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Crystal Stygimoloch",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Stygimoloch/Crystal_Styg_Character_BP.Crystal_Styg_Character_BP_C",
+			"dinoNameTag": "Pachy",
+			"customTag": "Pachy",
+			"targetingTeamName": "Herbivores",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 300,
+				"costLevel": 44,
+				"timeBase": 2100,
+				"timeLevel": 308
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 546 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 173, "sprint": 519 },
+				"swim": { "base": 259.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 10, "radius": 65, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
@@ -764,6 +919,99 @@
 					{ "name": "Bite", "interval": 0.4, "dmg": 1200, "radius": 850, "stamina": 0 },
 					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Gnash", "interval": 0.4, "dmg": 1200, "radius": 850, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Liquefied Griffin",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Liquefied/Griffin/Liq_Griffin_Character_BP.Liq_Griffin_Character_BP_C",
+			"dinoNameTag": "Griffin",
+			"customTag": "Griffin",
+			"targetingTeamName": "Carnivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 200,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 240, "sprint": 750 },
+				"fly": { "base": 600, "sprint": 1500 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 240, "sprint": 750 },
+				"fly": { "base": 600, "sprint": 1500 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 23,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Claw", "interval": 1, "dmg": 32, "radius": 750, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 23, "radius": 500, "stamina": 60 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 192, "radius": 1500, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 125, "radius": 2000, "stamina": 30 }
+				]
+			}
+		},
+		{
+			"name": "Liquefied Indominus Rex",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Liquefied/Indom/Liq_Indom_BP.Liq_Indom_BP_C",
+			"dinoNameTag": "Indom",
+			"customTag": "Indom",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 4000,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 704.9, "sprint": 1209.6 }
+			},
+			"movementD": {
+				"walk": { "base": 704.9, "sprint": 1612.8 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 290,
+				"defaultSwingRadius": 850,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 350, "radius": 850, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 1100, "radius": 850, "stamina": 0 }
 				]
 			}
 		},
@@ -1335,6 +1583,7 @@
 				"allowFlyerLandedRider",
 				"allowRiding",
 				"canBeDragged",
+				"canBeTorpid",
 				"canDrag",
 				"isCarnivore",
 				"isFlyerDino"
@@ -1383,7 +1632,7 @@
 		{
 			"name": "Grand Embertross",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/GrandEmbertross_F_Character_BP.GrandEmbertross_F_Character_BP_C",
-			"dinoNameTag": "Phoenix",
+			"dinoNameTag": "Embertross",
 			"customTag": "Embertross",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,
@@ -1435,6 +1684,170 @@
 						"isProjectile": true
 					},
 					{ "name": "Melee Rake", "interval": 1, "dmg": 23, "radius": 350, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Ember Pegasus",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/Pegasus/CI_FirePegasus_Character_BP.CI_FirePegasus_Character_BP_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Equus",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 175,
+			"dragWeight": 125,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"ramp": "Player",
+				"maxExperience": 100000,
+				"maxLevels": 74
+			},
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"fly": { "base": 390, "sprint": 1544.4 },
+				"swim": { "base": 390 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 965.2 },
+				"fly": { "base": 390, "sprint": 1287 },
+				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -0.3
+			},
+			"attack": {
+				"defaultDmg": 1200,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.4, "dmg": 1200, "radius": 220, "stamina": 10 },
+					{ "name": "BuckKick", "interval": 0.4, "dmg": 1200, "radius": 220, "stamina": 100 },
+					{ "name": "Whinney", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Ember Pegasus",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/Pegasus/EmberPegasus_Character_BP.EmberPegasus_Character_BP_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Equus",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 175,
+			"dragWeight": 125,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"fly": { "base": 390, "sprint": 1544.4 },
+				"swim": { "base": 390 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 965.2 },
+				"fly": { "base": 390, "sprint": 1287 },
+				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 1200,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.4, "dmg": 15, "radius": 220, "stamina": 10 },
+					{ "name": "BuckKick", "interval": 0.4, "dmg": 25, "radius": 220, "stamina": 100 },
+					{ "name": "Whinney", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Ember Yutyrannus",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/Yuty/EmberYuty_Character_BP.EmberYuty_Character_BP_C",
+			"dinoNameTag": "Yutyrannus",
+			"customTag": "Yutyrannus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 1610 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 1610 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 55, "radius": 500, "stamina": 10 },
+					{ "name": "Fear", "interval": 1, "dmg": 1, "radius": 1500, "stamina": 250 },
+					{ "name": "Courage", "interval": 1, "dmg": 1, "radius": 1500, "stamina": 250 },
+					{ "name": "CourageToFollowers", "interval": 25, "dmg": 1, "radius": 1500, "stamina": 0 }
 				]
 			}
 		}
