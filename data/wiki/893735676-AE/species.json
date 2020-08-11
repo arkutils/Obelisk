@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "312.52.1595060407",
+	"version": "312.72.1597136295",
 	"format": "2",
 	"mod": {
 		"id": "893735676",
@@ -5093,7 +5093,10 @@
 				"defaultSwingRadius": 870,
 				"attacks": [
 					{ "name": "None", "interval": 0.6, "dmg": 4800, "radius": 870, "stamina": 0 },
-					{ "name": "Flame", "interval": 9, "dmg": 0, "radius": 1, "stamina": 100 },
+					{
+						"name": "Flame", "interval": 9, "dmg": 0, "radius": 1, "stamina": 100,
+						"isProjectile": true
+					},
 					{ "name": "Minions", "interval": 9, "dmg": 0, "radius": 1, "stamina": 100 }
 				]
 			}
@@ -16429,7 +16432,6 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
-				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -16485,7 +16487,6 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
-				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -16541,7 +16542,6 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
-				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -16597,7 +16597,6 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
-				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -26781,6 +26780,61 @@
 			}
 		},
 		{
+			"name": "Eternal Robot Bloodstalker",
+			"bp": "/Game/Mods/AE/Dinos/Robot/BloodStalker/Robot_BogSpider_Character_BP_AE.Robot_BogSpider_Character_BP_AE_C",
+			"dinoNameTag": "Bloodstalker_Robot",
+			"customTag": "Bog Spider",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 200,
+			"dragWeight": 300,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 0,
+				"costLevel": 0.05,
+				"timeBase": 0,
+				"timeLevel": 0.38
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 8000
+			},
+			"movementW": {
+				"walk": { "base": 450, "sprint": 1458 },
+				"swim": { "base": 450, "sprint": 1822.5 }
+			},
+			"movementD": {
+				"walk": { "base": 450, "sprint": 1458 },
+				"swim": { "base": 450, "sprint": 1822.5 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 4500,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "WebLeft", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WebRight", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Stab", "interval": 0.25, "dmg": 4500, "radius": 450, "stamina": 5 },
+					{ "name": "AI Bio-Grapple", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Eternal Robot Enforcer",
 			"bp": "/Game/Mods/AE/Dinos/Robot/Extinction/Enforcer/Enforcer_Character_BP_AE.Enforcer_Character_BP_AE_C",
 			"dinoNameTag": "Enforcer_AE",
@@ -27350,67 +27404,6 @@
 		{
 			"name": "Fire Robot Magmasaur",
 			"bp": "/Game/Mods/AE/Dinos/Robot/Robot_Magmasaur/Robot_Cherufe_Character_BP_Fire_AE.Robot_Cherufe_Character_BP_Fire_AE_C",
-			"dinoNameTag": "LavaLizard_AE",
-			"customTag": "LavaLizard",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 550,
-			"dragWeight": 555,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 22213960,
-				"maxLevels": 88,
-				"capOffset": 50
-			},
-			"cloning": {
-				"costBase": 0,
-				"costLevel": 0.01,
-				"timeBase": 0,
-				"timeLevel": 0.04
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 750, "sprint": 656.2 },
-				"swim": { "base": 600, "sprint": 682.5 }
-			},
-			"movementD": {
-				"walk": { "base": 900, "sprint": 1968.8 },
-				"swim": { "base": 720, "sprint": 2047.5 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 56000,
-				"defaultSwingRadius": 1200,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 56000, "radius": 450, "stamina": 10 },
-					{
-						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
-						"isProjectile": true
-					},
-					{ "name": "VentForge", "interval": 30, "dmg": 55000, "radius": 2000, "stamina": 2 },
-					{ "name": "Claw", "interval": 0.5, "dmg": 56000, "radius": 350, "stamina": 10 },
-					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Taunt", "interval": 20, "dmg": 56000, "radius": 450, "stamina": 10 }
-				]
-			}
-		},
-		{
-			"name": "Lightning Robot Magmasaur",
-			"bp": "/Game/Mods/AE/Dinos/Robot/Robot_Magmasaur/Robot_Cherufe_Character_BP_Lightning_AE.Robot_Cherufe_Character_BP_Lightning_AE_C",
 			"dinoNameTag": "LavaLizard_AE",
 			"customTag": "LavaLizard",
 			"targetingTeamName": "Carnivores_High",
@@ -29258,13 +29251,7 @@
 			"mass": 1000,
 			"dragWeight": 1000,
 			"variants": [ "Minion" ],
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canDrag",
-				"doStepDamage",
-				"isCarnivore"
-			],
+			"flags": [ "allowMountedWeaponry", "canDrag", "doStepDamage", "isCarnivore" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
 				"maxLevels": 73
@@ -30041,6 +30028,117 @@
 			}
 		},
 		{
+			"name": "Prince Andrew",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/PrinceAndrew/Thylacoleo_Character_BP_PrinceAndrew.Thylacoleo_Character_BP_PrinceAndrew_C",
+			"dinoNameTag": "PrinceAndrew",
+			"customTag": "Thylacoleo",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 180,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 0.01,
+				"timeBase": 17.5,
+				"timeLevel": 0.04
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 280, "sprint": 1750 },
+				"swim": { "base": 480, "sprint": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 1750 },
+				"swim": { "base": 600, "sprint": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Claw", "interval": 0.2, "dmg": 4000, "radius": 250, "stamina": 0 },
+					{ "name": "Release", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 2, "dmg": 400, "radius": 160, "stamina": 5 },
+					{ "name": "Pounce", "interval": 0, "dmg": 1500, "radius": 0, "stamina": 0 },
+					{ "name": "Maul", "interval": 0, "dmg": 1500, "radius": 0, "stamina": 0 },
+					{ "name": "Claw", "interval": 1, "dmg": 4000, "radius": 250, "stamina": 0 },
+					{ "name": "Roar Meteor", "interval": 2, "dmg": 400, "radius": 160, "stamina": 5 }
+				]
+			}
+		},
+		{
+			"name": "Peter",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/PrinceAndrew/Thylacoleo_Character_BP_PrinceAndrew_Minions.Thylacoleo_Character_BP_PrinceAndrew_Minions_C",
+			"dinoNameTag": "PrinceAndrew_Minion",
+			"customTag": "Thylacoleo",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 180,
+			"variants": [ "Minion" ],
+			"flags": [
+				"allowCarryFlyerDinos",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 280, "sprint": 1750 },
+				"swim": { "base": 480, "sprint": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 1750 },
+				"swim": { "base": 600, "sprint": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Claw", "interval": 0.2, "dmg": 4000, "radius": 250, "stamina": 0 },
+					{ "name": "Release", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 2, "dmg": 400, "radius": 160, "stamina": 5 },
+					{ "name": "Pounce", "interval": 0, "dmg": 1500, "radius": 0, "stamina": 0 },
+					{ "name": "Maul", "interval": 0, "dmg": 1500, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Simpleton",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/SpacedPanda/Simpleton_Character_BP.Simpleton_Character_BP_C",
 			"dinoNameTag": "Prime_DireBear",
@@ -30048,13 +30146,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 330,
 			"dragWeight": 295,
-			"flags": [
-				"allowMountedWeaponry",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino"
-			],
+			"flags": [ "canBeDragged", "canDrag", "doStepDamage", "isBigDino" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
 				"maxLevels": 73
@@ -30208,7 +30300,6 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
-				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -32348,6 +32439,241 @@
 					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
 					{ "name": "Taunt", "interval": 0, "dmg": 3600, "radius": 2000, "stamina": 2 },
 					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 4400, "radius": 614, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Blood Crystal Wyvern",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/CIWyverns/CrystalWyvern_Character_BP_Blood_AE.CrystalWyvern_Character_BP_Blood_AE_C",
+			"dinoNameTag": "Blood_Wyvern_AE",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 600,
+			"dragWeight": 416,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 155000,
+				"costLevel": 55,
+				"timeBase": 1085000,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 569.3, "sprint": 597.7 },
+				"fly": { "base": 2447.5, "sprint": 2141.6 },
+				"swim": { "base": 2447.5, "sprint": 2569.9 }
+			},
+			"movementD": {
+				"walk": { "base": 569.3, "sprint": 597.7 },
+				"fly": { "base": 2447.5, "sprint": 2141.6 },
+				"swim": { "base": 2447.5, "sprint": 2569.9 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 375,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 45, "radius": 375, "stamina": 10 },
+					{ "name": "Flame (Blood)", "interval": 5, "dmg": 0, "radius": 0, "stamina": 120 },
+					{ "name": "Grab", "interval": 1, "dmg": 14, "radius": 225, "stamina": 30 },
+					{ "name": "Wing", "interval": 3, "dmg": 45, "radius": 1500, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 1, "dmg": 45, "radius": 460, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Ember Crystal Wyvern",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/CIWyverns/CrystalWyvern_Character_BP_Ember_AE.CrystalWyvern_Character_BP_Ember_AE_C",
+			"dinoNameTag": "Ember_Wyvern_AE",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 600,
+			"dragWeight": 416,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 155000,
+				"costLevel": 55,
+				"timeBase": 1085000,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 569.3, "sprint": 597.7 },
+				"fly": { "base": 2447.5, "sprint": 2141.6 },
+				"swim": { "base": 2447.5, "sprint": 2569.9 }
+			},
+			"movementD": {
+				"walk": { "base": 569.3, "sprint": 597.7 },
+				"fly": { "base": 2447.5, "sprint": 2141.6 },
+				"swim": { "base": 2447.5, "sprint": 2569.9 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 375,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 45, "radius": 375, "stamina": 10 },
+					{ "name": "Flame (Ember)", "interval": 5, "dmg": 0, "radius": 0, "stamina": 120 },
+					{ "name": "Grab", "interval": 1, "dmg": 14, "radius": 225, "stamina": 30 },
+					{ "name": "Wing", "interval": 3, "dmg": 45, "radius": 1500, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 1, "dmg": 45, "radius": 460, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Alpha Blood Crystal Wyvern",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/CIWyverns/CrystalWyvern_Character_BP_Mega_AE.CrystalWyvern_Character_BP_Mega_AE_C",
+			"dinoNameTag": "Alpha_Blood_Wyvern_AE",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 600,
+			"dragWeight": 416,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 155000,
+				"costLevel": 55,
+				"timeBase": 1085000,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 569.3, "sprint": 597.7 },
+				"fly": { "base": 2447.5, "sprint": 2141.6 },
+				"swim": { "base": 2447.5, "sprint": 2569.9 }
+			},
+			"movementD": {
+				"walk": { "base": 569.3, "sprint": 597.7 },
+				"fly": { "base": 2447.5, "sprint": 2141.6 },
+				"swim": { "base": 2447.5, "sprint": 2569.9 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 210,
+				"defaultSwingRadius": 515,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 80, "radius": 515, "stamina": 10 },
+					{ "name": "Flame (Blood)", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20 },
+					{ "name": "Grab", "interval": 1, "dmg": 25, "radius": 310, "stamina": 40 },
+					{ "name": "Wing", "interval": 3, "dmg": 80, "radius": 2065, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 1, "dmg": 80, "radius": 635, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Tropical Crystal Wyvern",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/CIWyverns/CrystalWyvern_Character_BP_WS_AE.CrystalWyvern_Character_BP_WS_AE_C",
+			"dinoNameTag": "Tropical_Wyvern_AE",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 600,
+			"dragWeight": 416,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 155000,
+				"costLevel": 55,
+				"timeBase": 1085000,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 569.3, "sprint": 597.7 },
+				"fly": { "base": 2447.5, "sprint": 2141.6 },
+				"swim": { "base": 2447.5, "sprint": 2569.9 }
+			},
+			"movementD": {
+				"walk": { "base": 569.3, "sprint": 597.7 },
+				"fly": { "base": 2447.5, "sprint": 2141.6 },
+				"swim": { "base": 2447.5, "sprint": 2569.9 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 375,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 45, "radius": 375, "stamina": 10 },
+					{ "name": "Flame (Water)", "interval": 5, "dmg": 0, "radius": 0, "stamina": 120 },
+					{ "name": "Grab", "interval": 1, "dmg": 14, "radius": 225, "stamina": 30 },
+					{ "name": "Wing", "interval": 3, "dmg": 45, "radius": 1500, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 1, "dmg": 45, "radius": 460, "stamina": 10 }
 				]
 			}
 		},
