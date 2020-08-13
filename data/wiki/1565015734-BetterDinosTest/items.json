@@ -1,5 +1,5 @@
 {
-	"version": "312.47.1594843321",
+	"version": "312.72.1597265710",
 	"format": "3",
 	"mod": {
 		"id": "1565015734",
@@ -415,6 +415,85 @@
 				"stamina": 0.8,
 				"food": 0.8,
 				"weight": 0.3
+			}
+		},
+		{
+			"name": "Mana Restoration Potion",
+			"description": "Helps restore the Mana of a hard working Liopleurodon.",
+			"bp": "/Game/Mods/BetterDinosTest/BetterLiopleurodon/HealingBuffs/PrimalItemConsumable_ManaRestore.PrimalItemConsumable_ManaRestore_C",
+			"icon": "/Game/Mods/BetterDinosTest/BetterLiopleurodon/HealingBuffs/ManaPotion_Icon.ManaPotion_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0.3,
+			"maxQuantity": 100,
+			"spoilage": { "time": 1800 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_WhaleOil_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemResource_ToughHide_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_MammalMilk_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_RareMushroom_C"
+					},
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemConsumable_PorkChop_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_CookedHPFishMeat_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_RareFlower_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"water": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"forceUseOnDino": true,
+					"duration": 50
+				}
+			},
+			"cookingStats": {
+				"health": 0.11,
+				"stamina": 0.01,
+				"food": 0.15,
+				"weight": 0.02
 			}
 		},
 		{
@@ -2128,63 +2207,6 @@
 						"color": [ 5, 0.100153, 0, 30 ]
 					}
 				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
-			"name": "Fertilized Wyvern Egg",
-			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/BetterDinosTest/IceWyvern/Egg/RAG_Item_Egg_Wyvern_Fertilized_Ice.RAG_Item_Egg_Wyvern_Fertilized_Ice_C",
-			"icon": "/Game/Mods/BetterDinosTest/IceWyvern/Egg/IceWyvern_Egg_BD.IceWyvern_Egg_BD",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/Ragnarok/Custom_Assets/Dinos/Wyvern/Ice_Wyvern/Ragnarok_Wyvern_Override_Ice.Ragnarok_Wyvern_Override_Ice_C",
-				"temperature": [ 80, 90 ]
 			},
 			"cookingStats": {
 				"health": 0.8,
@@ -6127,6 +6149,377 @@
 				"resourceMult": 0.5
 			},
 			"structureTemplate": "/Game/PrimalEarth/Structures/FishBasket.FishBasket_C"
+		},
+		{
+			"name": "Chibi-Liopleurodon",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_BDLiop.PrimalItemSkin_ChibiDino_BDLiop_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Stygimoloch",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_Stygi.PrimalItemSkin_ChibiDino_Stygi_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Styracosaurus",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_Styrac.PrimalItemSkin_ChibiDino_Styrac_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Tek Ankylosaurus",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekAnky.PrimalItemSkin_ChibiDino_TekAnky_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Tek Giganotosaurus",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekGigant.PrimalItemSkin_ChibiDino_TekGigant_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Tek Griffin",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekGriffin.PrimalItemSkin_ChibiDino_TekGriffin_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Tek Mosa",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekMosa.PrimalItemSkin_ChibiDino_TekMosa_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Tek Parasaur",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekParasaur.PrimalItemSkin_ChibiDino_TekParasaur_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Tek Quetzal",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekQuetzal.PrimalItemSkin_ChibiDino_TekQuetzal_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-TekRaptor",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekRaptor.PrimalItemSkin_ChibiDino_TekRaptor_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Tek Rex",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekRex.PrimalItemSkin_ChibiDino_TekRex_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Tek Stego",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekStego.PrimalItemSkin_ChibiDino_TekStego_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Chibi-Tek Trike",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItemSkin_ChibiDino_TekTrike.PrimalItemSkin_ChibiDino_TekTrike_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Random KBD Chibi-Dino",
+			"description": "Try your luck and craft a random chibi-dino! This includes the KBD exclusive Tek Dino, Stygi, Styrac and Liop Chibis!",
+			"bp": "/Game/Mods/BetterDinosTest/_BDFunctions/100/PrimalItem_ChibiDino_BDRandomCraftable.PrimalItem_ChibiDino_BDRandomCraftable_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
+			"type": "Resource",
+			"folders": [],
+			"weight": 0.05,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemSkin_ChibiDino_Base_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
 		}
 	]
 }
