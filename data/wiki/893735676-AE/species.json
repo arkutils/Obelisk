@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "312.72.1597136295",
+	"version": "312.84.1598012083",
 	"format": "2",
 	"mod": {
 		"id": "893735676",
@@ -16311,6 +16311,59 @@
 			}
 		},
 		{
+			"name": "Phantasmal Gorilla (Hard Mode)",
+			"bp": "/Game/Mods/AE/Dinos/EndBoss/Gorilla/Phantasmal_Gorilla_Character_BP_Hard.Phantasmal_Gorilla_Character_BP_Hard_C",
+			"dinoNameTag": "Phantasmal_Gorilla_Hard",
+			"customTag": "Alpha_Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"variants": [ "Alpha", "Boss" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 920, "sprint": 3680 },
+				"swim": { "base": 345 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 3200 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 675000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 1, "dmg": 675000, "radius": 600, "stamina": 30 },
+					{
+						"name": "ThrowRock", "interval": 11, "dmg": 675000, "radius": 1200, "stamina": 100,
+						"isProjectile": true
+					},
+					{ "name": "None", "interval": 35, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Phantasmal Manticore",
 			"bp": "/Game/Mods/AE/Dinos/EndBoss/Manticore/EndBoss_Phantasm_Manticore_Character_BP.EndBoss_Phantasm_Manticore_Character_BP_C",
 			"dinoNameTag": "Light_Manticore",
@@ -22067,6 +22120,116 @@
 			}
 		},
 		{
+			"name": "Mystical Pteranodon (Hard Mode)",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/Ptero/AlphaPteroJP_Character_BP.AlphaPteroJP_Character_BP_C",
+			"dinoNameTag": "Mystical_Ptero_Hard",
+			"customTag": "Tapejara",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000000,
+			"dragWeight": 149,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBossDino",
+				"isFlyerDino"
+			],
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 180, "sprint": 576 },
+				"fly": { "base": 594, "sprint": 1900.8 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 480 },
+				"fly": { "base": 660, "sprint": 1584 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 760000,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 760000, "radius": 350, "stamina": 0 },
+					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 250, "stamina": 40 },
+					{ "name": "Taunt", "interval": 20, "dmg": 760000, "radius": 250, "stamina": 70 },
+					{ "name": "picki", "interval": 3, "dmg": 5, "radius": 250, "stamina": 0 },
+					{ "name": "picki", "interval": 4, "dmg": 5, "radius": 250, "stamina": 0 },
+					{ "name": "Minions", "interval": 1, "dmg": 760000, "radius": 350, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Mystical Pteranodon",
+			"bp": "/Game/Mods/AE/Dinos/Mystical/Ptero/PteroGrab_Character_BP_AE.PteroGrab_Character_BP_AE_C",
+			"dinoNameTag": "Mystical_Ptero",
+			"customTag": "Tapejara",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 10000,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 270, "sprint": 864 },
+				"fly": { "base": 594, "sprint": 1900.8 },
+				"swim": { "base": 270, "sprint": 864 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 720 },
+				"fly": { "base": 660, "sprint": 1584 },
+				"swim": { "base": 300, "sprint": 720 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 30, "radius": 180, "stamina": 0 },
+					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
+					{ "name": "Taunt", "interval": 20, "dmg": 50, "radius": 200, "stamina": 70 },
+					{ "name": "picki", "interval": 3, "dmg": 5, "radius": 200, "stamina": 0 },
+					{ "name": "picki", "interval": 4, "dmg": 5, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Mystical Rhino",
 			"bp": "/Game/Mods/AE/Dinos/Mystical/Rhino/Mystical_Rhino_Character_BP.Mystical_Rhino_Character_BP_C",
 			"dinoNameTag": "Immortal_Rhino",
@@ -26830,7 +26993,8 @@
 					{ "name": "WebLeft", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "WebRight", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Stab", "interval": 0.25, "dmg": 4500, "radius": 450, "stamina": 5 },
-					{ "name": "AI Bio-Grapple", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "AI Bio-Grapple", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Stab", "interval": 0.25, "dmg": 4500, "radius": 450, "stamina": 5 }
 				]
 			}
 		},
@@ -27404,6 +27568,67 @@
 		{
 			"name": "Fire Robot Magmasaur",
 			"bp": "/Game/Mods/AE/Dinos/Robot/Robot_Magmasaur/Robot_Cherufe_Character_BP_Fire_AE.Robot_Cherufe_Character_BP_Fire_AE_C",
+			"dinoNameTag": "LavaLizard_AE",
+			"customTag": "LavaLizard",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 550,
+			"dragWeight": 555,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 0,
+				"costLevel": 0.01,
+				"timeBase": 0,
+				"timeLevel": 0.04
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 656.2 },
+				"swim": { "base": 600, "sprint": 682.5 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 1968.8 },
+				"swim": { "base": 720, "sprint": 2047.5 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 56000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 56000, "radius": 450, "stamina": 10 },
+					{
+						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					},
+					{ "name": "VentForge", "interval": 30, "dmg": 55000, "radius": 2000, "stamina": 2 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 56000, "radius": 350, "stamina": 10 },
+					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 20, "dmg": 56000, "radius": 450, "stamina": 10 }
+				]
+			}
+		},
+		{
+			"name": "Lightning Robot Magmasaur",
+			"bp": "/Game/Mods/AE/Dinos/Robot/Robot_Magmasaur/Robot_Cherufe_Character_BP_Lightning_AE.Robot_Cherufe_Character_BP_Lightning_AE_C",
 			"dinoNameTag": "LavaLizard_AE",
 			"customTag": "LavaLizard",
 			"targetingTeamName": "Carnivores_High",
