@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "312.72.1597347645",
+	"version": "313.7.1598986213",
 	"format": "2",
 	"mod": {
 		"id": "2135314513",
@@ -8,6 +8,112 @@
 		"title": "Crystal Isles Dino Addition"
 	},
 	"species": [
+		{
+			"name": "Crystal Unka",
+			"bp": "/Game/Mods/CI_Dinos/Crystal_Dragons/Crystal_Unka_BP.Crystal_Unka_BP_C",
+			"dinoNameTag": "Crystal Unka",
+			"customTag": "Crystal Unka",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1000 },
+				"fly": { "base": 1500, "sprint": 3750 },
+				"swim": { "base": 1500, "sprint": 7500 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1000 },
+				"fly": { "base": 1500, "sprint": 3750 },
+				"swim": { "base": 1500, "sprint": 7500 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Flame", "interval": 12, "dmg": 0, "radius": 0, "stamina": 20 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 }
+				]
+			}
+		},
+		{
+			"name": "Crystal Whelping",
+			"bp": "/Game/Mods/CI_Dinos/Crystal_Dragons/Crystal_Whelp_BP.Crystal_Whelp_BP_C",
+			"dinoNameTag": "Crystal Whelp",
+			"customTag": "Crystal Whelp",
+			"targetingTeamName": "Herbivores",
+			"mass": 70,
+			"dragWeight": 70,
+			"flags": [
+				"allowFlyerLandedRider",
+				"canBeDragged",
+				"canBeTorpid",
+				"canMountOnHumans",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 80, "sprint": 288 },
+				"fly": { "base": 450, "sprint": 1296 },
+				"swim": { "base": 450, "sprint": 1620 }
+			},
+			"movementD": {
+				"walk": { "base": 80, "sprint": 288 },
+				"fly": { "base": 450, "sprint": 1296 },
+				"swim": { "base": 450, "sprint": 1620 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 23,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 23, "radius": 200, "stamina": 0 } ]
+			}
+		},
 		{
 			"name": "Crystal Ankylosaurus",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/CrystalAnkylo_Character_BP.CrystalAnkylo_Character_BP_C",
@@ -106,7 +212,7 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 350, "stamina": 0 },
-					{ "name": "Pounce", "interval": 9, "dmg": 30, "radius": 300, "stamina": 5 },
+					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 30, "radius": 180, "stamina": 0 }
 				]
@@ -200,7 +306,7 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 350, "stamina": 0 },
-					{ "name": "Pounce", "interval": 9, "dmg": 30, "radius": 300, "stamina": 5 },
+					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 30, "radius": 180, "stamina": 0 }
 				]
@@ -775,8 +881,53 @@
 			}
 		},
 		{
+			"name": "Crystal Therizinosaur",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Theri/Crystal_Theri_BP.Crystal_Theri_BP_C",
+			"dinoNameTag": "Therizinosaurus",
+			"customTag": "Therizinosaurus",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 466, "sprint": 978.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "ClawAttack", "interval": 0.4, "dmg": 52, "radius": 225, "stamina": 0 },
+					{ "name": "ClawHarvest", "interval": 0.4, "dmg": 5, "radius": 250, "stamina": 0 },
+					{ "name": "BiteHarvest", "interval": 4, "dmg": 52, "radius": 225, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Crystal Megachelon",
-			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Turtle/Crystal_turtle_Character_Bp.Crystal_turtle_Character_Bp_C",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Turtle/Crystal_turtle_Character_Bp.Crystal_Turtle_Character_BP_C",
 			"dinoNameTag": "GiantTurtle",
 			"customTag": "GiantTurtle",
 			"targetingTeamName": "Herbivores_Large",
@@ -1353,6 +1504,62 @@
 			}
 		},
 		{
+			"name": "Liquefied Spino",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Liquefied/Spino/Liq_Spino_Character_BP.Liq_Spino_Character_BP_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 40, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 }
+				]
+			}
+		},
+		{
 			"name": "Liquefied Stegosaurus",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Liquefied/Stego/Liq_Stego_Character_BP.Liq_Stego_Character_BP_C",
 			"dinoNameTag": "Stego",
@@ -1398,6 +1605,61 @@
 				"defaultDmg": 47,
 				"defaultSwingRadius": 450,
 				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 47, "radius": 500, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Liquefied Thylacoleo",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Liquefied/Thylacoleo/Liq_Thyla_Character_BP.Liq_Thyla_Character_BP_C",
+			"dinoNameTag": "Thylacoleo",
+			"customTag": "Thylacoleo",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 180,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 184, "sprint": 1150 },
+				"swim": { "base": 480 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 1150 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Claw", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "Release", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 30, "radius": 0, "stamina": 0 },
+					{ "name": "Maul", "interval": 0, "dmg": 40, "radius": 0, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -1589,8 +1851,9 @@
 				"isFlyerDino"
 			],
 			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
+				"ramp": "Player",
+				"maxExperience": 100000,
+				"maxLevels": 74
 			},
 			"cloning": {
 				"costBase": 2050,
@@ -1614,7 +1877,7 @@
 			},
 			"staminaRates": {
 				"sprint": -5,
-				"swimOrFly": -3
+				"swimOrFly": -0.3
 			},
 			"attack": {
 				"defaultDmg": 1200,
@@ -1789,7 +2052,7 @@
 			},
 			"staminaRates": {
 				"sprint": -5,
-				"swimOrFly": -0.325
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 1200,
