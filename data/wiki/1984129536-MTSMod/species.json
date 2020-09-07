@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "312.57.1595257761",
+	"version": "313.11.1599458276",
 	"format": "2",
 	"mod": {
 		"id": "1984129536",
@@ -8,60 +8,6 @@
 		"title": "MTS.co.uk Community Mod"
 	},
 	"species": [
-		{
-			"name": "Bloodstalker",
-			"bp": "/Game/Mods/MTSMod/Bloodstalker/BogSpider_Character_BP_MTS.BogSpider_Character_BP_MTS_C",
-			"dinoNameTag": "Bloodstalker",
-			"customTag": "Bog Spider",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 200,
-			"dragWeight": 300,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 22213960,
-				"maxLevels": 88,
-				"capOffset": 50
-			},
-			"cloning": {
-				"costBase": 875,
-				"costLevel": 55,
-				"timeBase": 6125,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 8000
-			},
-			"movementW": {
-				"walk": { "base": 450, "sprint": 1458 },
-				"swim": { "base": 450, "sprint": 1822.5 }
-			},
-			"movementD": {
-				"walk": { "base": 450, "sprint": 1458 },
-				"swim": { "base": 450, "sprint": 1822.5 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 26,
-				"defaultSwingRadius": 450,
-				"attacks": [
-					{ "name": "WebLeft", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "WebRight", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Stab", "interval": 0.25, "dmg": 26, "radius": 450, "stamina": 5 },
-					{ "name": "AI Bio-Grapple", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
 		{
 			"name": "Kentrosaurus",
 			"bp": "/Game/Mods/MTSMod/Kentro/Kentro_Character_BP_MTS.Kentro_Character_BP_MTS_C",
@@ -104,6 +50,60 @@
 					{ "name": "Bite", "interval": 0.5, "dmg": 10, "radius": 200, "stamina": 0 },
 					{ "name": "TailSwipe", "interval": 0.5, "dmg": 42, "radius": 125, "stamina": 0 },
 					{ "name": "TailSlam", "interval": 0.5, "dmg": 42, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Managarmr",
+			"bp": "/Game/Mods/MTSMod/Managarmr/IceJumper_Character_BP_MTS.IceJumper_Character_BP_MTS_C",
+			"dinoNameTag": "Managarmr",
+			"customTag": "Managarmr",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 40,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1250, "sprint": 2500 },
+				"swim": { "base": 1050, "sprint": 2415 }
+			},
+			"movementD": {
+				"walk": { "base": 1250, "sprint": 2500 },
+				"swim": { "base": 1050, "sprint": 2415 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "DashFwd", "interval": 1, "dmg": 10, "radius": 0, "stamina": 0 },
+					{
+						"name": "IceBreath", "interval": 10, "dmg": 15, "radius": 0, "stamina": 15,
+						"isProjectile": true
+					},
+					{ "name": "Bite", "interval": 1, "dmg": 35, "radius": 300, "stamina": 0 }
 				]
 			}
 		},
