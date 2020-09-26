@@ -4,7 +4,7 @@
 	"properties": {
 		"version": {
 			"title": "Version",
-			"description": "Data version of the format <gamemajor>.<gamemajor>.<specificversion>, e.g. '306.83.4740398'",
+			"description": "Data version of the format <gamemajor>.<gameminor>.<specificversion>, e.g. '306.83.4740398'",
 			"type": "string"
 		},
 		"format": {
@@ -142,7 +142,8 @@
 					"$ref": "#/definitions/Location"
 				},
 				"immune": {
-					"title": "Immune",
+					"title": "Explicitly immune species",
+					"default": [],
 					"type": "array",
 					"items": {
 						"type": "string"
@@ -152,8 +153,7 @@
 			"required": [
 				"start",
 				"center",
-				"end",
-				"immune"
+				"end"
 			],
 			"additionalProperties": false
 		}

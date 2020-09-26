@@ -4,7 +4,7 @@
 	"properties": {
 		"version": {
 			"title": "Version",
-			"description": "Data version of the format <gamemajor>.<gamemajor>.<specificversion>, e.g. '306.83.4740398'",
+			"description": "Data version of the format <gamemajor>.<gameminor>.<specificversion>, e.g. '306.83.4740398'",
 			"type": "string"
 		},
 		"format": {
@@ -27,6 +27,14 @@
 		},
 		"worldSettings": {
 			"$ref": "#/definitions/export__wiki__maps__models__WorldSettings"
+		},
+		"trades": {
+			"title": "Trades",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Trade"
+			}
 		},
 		"playerSpawns": {
 			"title": "Playerspawns",
@@ -176,7 +184,7 @@
 				},
 				"latMulti": {
 					"title": "Latitude Multiplier",
-					"description": "LatScale in meters. Divide centimeter distance from Y axis by this value.",
+					"description": "Latitude scale in meters. Divide centimeter distance from Y axis by this value.",
 					"anyOf": [
 						{
 							"type": "number"
@@ -191,7 +199,7 @@
 				},
 				"longMulti": {
 					"title": "Longitude Multiplier",
-					"description": "LongScale in meters. Divide centimeter distance from X axis by this value",
+					"description": "Longitude scale in meters. Divide centimeter distance from X axis by this value",
 					"anyOf": [
 						{
 							"type": "number"
@@ -249,7 +257,7 @@
 				},
 				"onlyEventGlobalSwaps": {
 					"title": "Onlyeventglobalswaps",
-					"description": "Controls whether Primal Game Data's random class replacements are allowed.",
+					"description": "Controls whether Primal Game Data's random non-event class replacements are allowed.",
 					"default": false,
 					"type": "boolean"
 				},
@@ -268,14 +276,6 @@
 					"items": {
 						"type": "string"
 					}
-				},
-				"availableTrades": {
-					"title": "Availabletrades",
-					"default": [],
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
 				}
 			},
 			"required": [
@@ -286,6 +286,35 @@
 				"longScale",
 				"maxDifficulty",
 				"mapTextures"
+			],
+			"additionalProperties": false
+		},
+		"Trade": {
+			"title": "Trade",
+			"type": "object",
+			"properties": {
+				"bp": {
+					"title": "Bp",
+					"type": "string"
+				},
+				"item": {
+					"title": "Item",
+					"type": "string"
+				},
+				"qty": {
+					"title": "Qty",
+					"type": "integer"
+				},
+				"cost": {
+					"title": "Cost",
+					"type": "integer"
+				}
+			},
+			"required": [
+				"bp",
+				"item",
+				"qty",
+				"cost"
 			],
 			"additionalProperties": false
 		},
