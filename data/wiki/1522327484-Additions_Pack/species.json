@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "311.98.1592261873",
+	"version": "313.57.1601860719",
 	"format": "2",
 	"mod": {
 		"id": "1522327484",
@@ -67,6 +67,62 @@
 		{
 			"name": "X-Acrocanthosaurus",
 			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/Bog_Acrocanthosaurus_Character_BP.Bog_Acrocanthosaurus_Character_BP_C",
+			"dinoNameTag": "Acro",
+			"customTag": "Acro",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 450,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 650, "sprint": 1144 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 650, "sprint": 1430 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -18,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 55, "radius": 400, "stamina": 0 },
+					{ "name": "Shield Stance", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Stomp", "interval": 15, "dmg": 95, "radius": 800, "stamina": 7 },
+					{ "name": "ShieldBash", "interval": 0, "dmg": 20, "radius": 800, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "AdrenalineBite", "interval": 2, "dmg": 55, "radius": 400, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Acrocanthosaurus",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/Scorched_Acrocanthosaurus_Character_BP.Scorched_Acrocanthosaurus_Character_BP_C",
 			"dinoNameTag": "Acro",
 			"customTag": "Acro",
 			"targetingTeamName": "Carnivores_High",
@@ -607,14 +663,15 @@
 			}
 		},
 		{
-			"name": "Xiphactinus",
-			"bp": "/Game/Mods/Additions_Pack/Xiphactinus/Dino/Xiph_Character_BP.Xiph_Character_BP_C",
+			"name": "Abyssal Xiphactinus",
+			"bp": "/Game/Mods/Additions_Pack/Xiphactinus/Dino/AbyssalXiph_Character_BP.AbyssalXiph_Character_BP_C",
 			"dinoNameTag": "Xiph",
 			"customTag": "Xiph",
 			"targetingTeamName": "Carnivores_Large",
 			"mass": 200,
 			"dragWeight": 250,
 			"flags": [
+				"allowCarryFlyerDinos",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
@@ -632,25 +689,143 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 900, "sprint": 1350 },
-				"swim": { "base": 900 }
+				"walk": { "base": 50, "sprint": 120 },
+				"swim": { "base": 750, "sprint": 1800 }
 			},
 			"movementD": {
-				"walk": { "base": 1530, "sprint": 2692.8 },
-				"swim": { "base": 1530 }
+				"walk": { "base": 50, "sprint": 135 },
+				"swim": { "base": 750, "sprint": 2025 }
 			},
 			"staminaRates": {
-				"sprint": -5,
+				"sprint": -7,
 				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "Bite", "interval": 0.55, "dmg": 23, "radius": 200, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 23, "radius": 300, "stamina": 0 },
+					{ "name": "Grab", "interval": 10, "dmg": 5, "radius": 400, "stamina": 20 },
+					{ "name": "Consume Target", "interval": 0, "dmg": 100, "radius": 200, "stamina": 0 },
+					{ "name": "Thashing", "interval": 3, "dmg": 5, "radius": 150, "stamina": 5 },
+					{ "name": "Jump on Land", "interval": 3.5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Lunge Bleed", "interval": 0, "dmg": 35, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "X-Xiphactinus",
+			"bp": "/Game/Mods/Additions_Pack/Xiphactinus/Dino/OceanXiph_Character_BP.OceanXiph_Character_BP_C",
+			"dinoNameTag": "Xiph",
+			"customTag": "Xiph",
+			"targetingTeamName": "Carnivores_Large",
+			"mass": 200,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 50, "sprint": 120 },
+				"swim": { "base": 750, "sprint": 1800 }
+			},
+			"movementD": {
+				"walk": { "base": 50, "sprint": 135 },
+				"swim": { "base": 750, "sprint": 2025 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 23, "radius": 300, "stamina": 0 },
+					{ "name": "Grab", "interval": 10, "dmg": 5, "radius": 400, "stamina": 20 },
+					{ "name": "Consume Target", "interval": 0, "dmg": 100, "radius": 200, "stamina": 0 },
+					{ "name": "Thashing", "interval": 3, "dmg": 5, "radius": 150, "stamina": 5 },
+					{ "name": "Jump on Land", "interval": 3.5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Lunge Bleed", "interval": 0, "dmg": 35, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Xiphactinus",
+			"bp": "/Game/Mods/Additions_Pack/Xiphactinus/Dino/Xiph_Character_BP.Xiph_Character_BP_C",
+			"dinoNameTag": "Xiph",
+			"customTag": "Xiph",
+			"targetingTeamName": "Carnivores_Large",
+			"mass": 200,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 50, "sprint": 120 },
+				"swim": { "base": 750, "sprint": 1800 }
+			},
+			"movementD": {
+				"walk": { "base": 50, "sprint": 135 },
+				"swim": { "base": 750, "sprint": 2025 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 23, "radius": 300, "stamina": 0 },
+					{ "name": "Grab", "interval": 10, "dmg": 5, "radius": 400, "stamina": 20 },
+					{ "name": "Consume Target", "interval": 0, "dmg": 100, "radius": 200, "stamina": 0 },
+					{ "name": "Thashing", "interval": 3, "dmg": 5, "radius": 150, "stamina": 5 },
+					{ "name": "Jump on Land", "interval": 3.5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Lunge Bleed", "interval": 0, "dmg": 35, "radius": 0, "stamina": 0 }
+				]
 			}
 		}
 	]

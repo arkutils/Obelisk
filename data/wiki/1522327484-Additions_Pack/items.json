@@ -1,5 +1,5 @@
 {
-	"version": "312.29.1592356709",
+	"version": "313.57.1601860719",
 	"format": "3",
 	"mod": {
 		"id": "1522327484",
@@ -1447,11 +1447,11 @@
 		},
 		{
 			"name": "Xiphactinus Saddle",
-			"description": "Ride that Dino!",
+			"description": "Equip a Xiphactinus with this to Ride it!",
 			"bp": "/Game/Mods/Additions_Pack/Xiphactinus/Blueprints/PrimalItemArmor_XiphSaddle.PrimalItemArmor_XiphSaddle_C",
-			"icon": "/Game/PrimalEarth/Test_Craig/Saddle_TempIcon.Saddle_TempIcon",
+			"icon": "/Game/PrimalEarth/Dinos/Basilosaurus/Saddle/HUD_BasiloSaddle_Colorize_MIC.HUD_BasiloSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
-			"folders": [ "" ],
+			"folders": [ "Saddles" ],
 			"weight": 20,
 			"maxQuantity": 1,
 			"crafting": {
@@ -1473,8 +1473,13 @@
 					},
 					{
 						"exact": false,
-						"qty": 30,
+						"qty": 50,
 						"type": "PrimalItemResource_ChitinPaste_C"
+					},
+					{
+						"exact": false,
+						"qty": 15,
+						"type": "PrimalItemResource_MetalIngot_C"
 					}
 				]
 			},
@@ -1482,6 +1487,207 @@
 				"xp": 60,
 				"time": 5,
 				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Fertilized Xiphactinus Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/Additions_Pack/Xiphactinus/Blueprints/PrimalItemConsumable_UnderwaterEgg_Xiphactinus.PrimalItemConsumable_UnderwaterEgg_Xiphactinus_C",
+			"icon": "/Game/Mods/Additions_Pack/Xiphactinus/Blueprints/HUD_FishEgg_Colorize_MIC_Xiph.HUD_FishEgg_Colorize_MIC_Xiph",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 2,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/Additions_Pack/Xiphactinus/Dino/Xiph_Character_BP.Xiph_Character_BP_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.205, 0.133528, 0.083025, 1 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 0.045, 0.006013, 0, 0 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Xiphactinus Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/Additions_Pack/Xiphactinus/Blueprints/PrimalItemConsumable_UnderwaterEgg_Xiphactinus_Abyssal.PrimalItemConsumable_UnderwaterEgg_Xiphactinus_Abyssal_C",
+			"icon": "/Game/Mods/Additions_Pack/Xiphactinus/Blueprints/HUD_FishEgg_Colorize_MIC_Xiph_Abyssal.HUD_FishEgg_Colorize_MIC_Xiph_Abyssal",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 2,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/Additions_Pack/Xiphactinus/Dino/AbyssalXiph_Character_BP.AbyssalXiph_Character_BP_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0, 0, 0, 1 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 0.13, 0.017371, 0, 0 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Xiphactinus Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/Additions_Pack/Xiphactinus/Blueprints/PrimalItemConsumable_UnderwaterEgg_Xiphactinus_Ocean.PrimalItemConsumable_UnderwaterEgg_Xiphactinus_Ocean_C",
+			"icon": "/Game/Mods/Additions_Pack/Xiphactinus/Blueprints/HUD_FishEgg_Colorize_MIC_Xiph_Ocean.HUD_FishEgg_Colorize_MIC_Xiph_Ocean",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 2,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"health": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				},
+				"stamina": {
+					"value": 30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 7.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/Additions_Pack/Xiphactinus/Dino/OceanXiph_Character_BP.OceanXiph_Character_BP_C",
+				"temperature": [ -75, 75 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.063491, 0.201084, 0.205, 1 ]
+					},
+					"cyan": {
+						"intensity": 1,
+						"color": [ 0, 0.042955, 0.045, 0 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
 			}
 		}
 	]
