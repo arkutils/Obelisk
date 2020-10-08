@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "310.117.1590354157",
+	"version": "314.3.1602184312",
 	"format": "2",
 	"mod": {
 		"id": "1675895024",
@@ -333,7 +333,10 @@
 			"attack": {
 				"defaultDmg": 30,
 				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Charged Shock", "interval": 30, "dmg": 30, "radius": 1800, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -371,7 +374,51 @@
 			"attack": {
 				"defaultDmg": 30,
 				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Charged Shock", "interval": 30, "dmg": 30, "radius": 1800, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Big Jelly",
+			"bp": "/Game/Mods/NoUntameables/Cnidaria/Cnidaria_Character_BP_Tameable_Big.Cnidaria_Character_BP_Tameable_Big_C",
+			"dinoNameTag": "Cnidaria",
+			"customTag": "Cnidaria",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 100,
+			"dragWeight": 33,
+			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 500,
+				"costLevel": 55,
+				"timeBase": 3500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"movementD": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Charged Shock", "interval": 30, "dmg": 30, "radius": 1800, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -380,7 +427,7 @@
 			"dinoNameTag": "Deathworm",
 			"customTag": "Deathworm",
 			"targetingTeamName": "Carnivores_High",
-			"mass": 1200,
+			"mass": 3000,
 			"dragWeight": 1000,
 			"flags": [
 				"allowCarryFlyerDinos",
@@ -401,7 +448,7 @@
 				"timeLevel": 1540
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -427,7 +474,7 @@
 			"dinoNameTag": "Deathworm",
 			"customTag": "Deathworm",
 			"targetingTeamName": "Carnivores_High",
-			"mass": 1200,
+			"mass": 3000,
 			"dragWeight": 1000,
 			"flags": [
 				"allowCarryFlyerDinos",
@@ -448,7 +495,7 @@
 				"timeLevel": 1540
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -474,7 +521,7 @@
 			"dinoNameTag": "Deathworm",
 			"customTag": "Deathworm",
 			"targetingTeamName": "Carnivores_High",
-			"mass": 1200,
+			"mass": 3000,
 			"dragWeight": 1000,
 			"flags": [
 				"allowCarryFlyerDinos",
@@ -488,7 +535,7 @@
 				"maxLevels": 73
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -514,7 +561,7 @@
 			"dinoNameTag": "Elite Worm",
 			"customTag": "Deathworm",
 			"targetingTeamName": "Carnivores_High",
-			"mass": 1200,
+			"mass": 3000,
 			"dragWeight": 1000,
 			"flags": [
 				"allowCarryFlyerDinos",
@@ -535,7 +582,7 @@
 				"timeLevel": 1540
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -751,6 +798,54 @@
 				"defaultDmg": 8,
 				"defaultSwingRadius": 175,
 				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 7, "radius": 175, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "X-Jug Bug",
+			"bp": "/Game/Mods/NoUntameables/JugBug/Bog_Jugbug_Character_BP_Tameable.Bog_Jugbug_Character_BP_Tameable_C",
+			"dinoNameTag": "Jugbug",
+			"customTag": "Jugbug",
+			"targetingTeamName": "Herbivores",
+			"mass": 100,
+			"dragWeight": 30,
+			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isFlyerDino" ],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 625,
+				"costLevel": 55,
+				"timeBase": 4375,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 60, "sprint": 150 },
+				"fly": { "base": 120, "sprint": 300 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 60, "sprint": 150 },
+				"fly": { "base": 120, "sprint": 300 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [
+					{ "name": "Ground bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Fly bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Explosive", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
 			}
 		},
 		{

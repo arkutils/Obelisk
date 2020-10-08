@@ -1,5 +1,5 @@
 {
-	"version": "313.23.1600286520",
+	"version": "314.3.1602182813",
 	"format": "3",
 	"mod": {
 		"id": "839162288",
@@ -660,7 +660,7 @@
 		},
 		{
 			"name": "Celestial Shield",
-			"description": "A metal shield on a layer of leather. Absorbs damage from the front when activated. Reduces all incoming damage by 50%",
+			"description": "A metal shield on a layer of leather. Absorbs damage from the front when activated. Reduces all incoming damage by 20%",
 			"bp": "/Game/Mods/Primal_Fear/Armor/Celestial_Armor/Shield/PrimalItemArmor_Valor_Shield.PrimalItemArmor_Valor_Shield_C",
 			"icon": "/Game/Mods/Primal_Fear/Armor/Celestial_Armor/Shield/HUD_Valor_ManticoreShield_Colorize_MIC.HUD_Valor_ManticoreShield_Colorize_MIC",
 			"type": "Equipment/Shield",
@@ -19320,12 +19320,12 @@
 					},
 					{
 						"exact": false,
-						"qty": 2,
+						"qty": 1,
 						"type": "PrimalItemResource_CreatorSoul_C"
 					},
 					{
 						"exact": false,
-						"qty": 2,
+						"qty": 1,
 						"type": "PrimalItemResource_DestroyerSoul_C"
 					},
 					{
@@ -19690,7 +19690,7 @@
 			"name": "Pikkon, the Creator Summon",
 			"description": "Consume this to summon Pikkon, the Creator boss.",
 			"bp": "/Game/Mods/Primal_Fear/Dinos/Creator_Boss/Items/PrimalItemConsumable_CreatorBoss.PrimalItemConsumable_CreatorBoss_C",
-			"icon": "/Game/Mods/Primal_Fear/Dinos/Creator_Boss/CreatorBossSummonNEW.CreatorBossSummonNEW",
+			"icon": "/Game/Mods/Primal_Fear/Dinos/Creator_Boss/Items/CreatorBossSummon_V2.CreatorBossSummon_V2",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Boss Summoners", "Tier 5" ],
 			"weight": 0.1,
@@ -19825,6 +19825,122 @@
 					"setAddValue": true,
 					"duration": 500
 				}
+			}
+		},
+		{
+			"name": "Fertilized Pikkon, the Creator Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Primal_Fear/Dinos/Creator_Boss/V3/Egg/PrimalItemConsumable_Egg_Creator_Fertilized.PrimalItemConsumable_Egg_Creator_Fertilized_C",
+			"icon": "/Game/Mods/Primal_Fear/Dinos/Creator_Boss/V3/Egg/HUD_DinoEgg_MIC_Inst_Creator.HUD_DinoEgg_MIC_Inst_Creator",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 15,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 20
+				},
+				"health": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 20
+				},
+				"stamina": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 20
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/Primal_Fear/Dinos/Creator_Boss/V3/TamedVersion/CreatorBoss_Character_BP_Tamed.CreatorBoss_Character_BP_Tamed_C",
+				"temperature": [ 32, 34 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 0, 0, 0, 1 ]
+					},
+					"cyan": {
+						"intensity": 1.5,
+						"color": [ 0, 0.95, 0.618151, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Pikkon, the Creator Armor",
+			"description": "Equip a Pikkon, the Creator with this to gain armor.",
+			"bp": "/Game/Mods/Primal_Fear/Dinos/Creator_Boss/V3/TamedVersion/Saddle/PrimalItemArmor_PFCreatorArmor.PrimalItemArmor_PFCreatorArmor_C",
+			"icon": "/Game/PrimalEarth/Dinos/Argentavis/Saddle/HUD_ArgentavisSaddle_Colorize_MIC.HUD_ArgentavisSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Destroyer" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 72.4,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 475,
+						"type": "PrimalItemResource_Hide_Celestial_C"
+					},
+					{
+						"exact": false,
+						"qty": 475,
+						"type": "PrimalItemResource_Hide_Demonic_C"
+					},
+					{
+						"exact": false,
+						"qty": 1450,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 1625,
+						"type": "PrimalItemResource_ChitinOrKeratin_C"
+					},
+					{
+						"exact": false,
+						"qty": 1025,
+						"type": "PrimalItemResource_MetalIngot_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 72.4,
+				"time": 5,
+				"resourceMult": 0.5
 			}
 		},
 		{
@@ -27756,7 +27872,7 @@
 			}
 		},
 		{
-			"name": "Fertilized Omega Reaper Egg",
+			"name": "Fertilized Black Omega Reaper Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/Primal_Fear/Dinos/Omega/Reaper/Egg/PrimalItemConsumable_Egg_OmegaReaper_Fertilized_Black.PrimalItemConsumable_Egg_OmegaReaper_Fertilized_Black_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
