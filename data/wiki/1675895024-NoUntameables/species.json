@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "314.3.1602184312",
+	"version": "314.13.1603130669",
 	"format": "2",
 	"mod": {
 		"id": "1675895024",
@@ -381,8 +381,8 @@
 			}
 		},
 		{
-			"name": "Big Jelly",
-			"bp": "/Game/Mods/NoUntameables/Cnidaria/Cnidaria_Character_BP_Tameable_Big.Cnidaria_Character_BP_Tameable_Big_C",
+			"name": "Cnidaria (Debug)",
+			"bp": "/Game/Mods/NoUntameables/Cnidaria/DEBUG_Cnidaria_Character_BP_Tameable_Big.DEBUG_Cnidaria_Character_BP_Tameable_Big_C",
 			"dinoNameTag": "Cnidaria",
 			"customTag": "Cnidaria",
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
@@ -392,6 +392,48 @@
 			"levelCaps": {
 				"maxExperience": 3550010,
 				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 500,
+				"costLevel": 55,
+				"timeBase": 3500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"movementD": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Charged Shock", "interval": 10, "dmg": 30, "radius": 1800, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "X-Cnidaria",
+			"bp": "/Game/Mods/NoUntameables/Cnidaria/Ocean_Cnidaria_Character_BP_Tameable.Ocean_Cnidaria_Character_BP_Tameable_C",
+			"dinoNameTag": "Cnidaria",
+			"customTag": "Cnidaria",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 100,
+			"dragWeight": 33,
+			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
 			},
 			"cloning": {
 				"costBase": 500,
@@ -1233,6 +1275,56 @@
 				"attacks": [
 					{ "name": "Ground bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
 					{ "name": "Fly bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Reaper Queen (Debug)",
+			"bp": "/Game/Mods/NoUntameables/NamelessQueen/DEBUG_Xenomorph_Character_BP_Female_Wild.DEBUG_Xenomorph_Character_BP_Female_Wild_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Female" ],
+			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1350, "sprint": 3240 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2880 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 105, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 65, "radius": 1400, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 10, "dmg": 10, "radius": 800, "stamina": 0 },
+					{ "name": "Roar", "interval": 60, "dmg": 5, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 100, "stamina": 5 }
 				]
 			}
 		},
