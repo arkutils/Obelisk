@@ -1,0 +1,131 @@
+{
+	"title": "Engram data for the Wiki",
+	"type": "object",
+	"properties": {
+		"version": {
+			"title": "Version",
+			"description": "Data version of the format <gamemajor>.<gameminor>.<specificversion>, e.g. '306.83.4740398'",
+			"type": "string"
+		},
+		"format": {
+			"title": "Format",
+			"description": "Free-form format identifier, changed only when incompatibilities are introduced",
+			"type": "string"
+		},
+		"mod": {
+			"title": "Mod info",
+			"description": "Source module information",
+			"allOf": [
+				{
+					"$ref": "#/definitions/ModInfo"
+				}
+			]
+		},
+		"species": {
+			"title": "Species",
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Engram"
+			}
+		}
+	},
+	"required": [
+		"version",
+		"format",
+		"species"
+	],
+	"additionalProperties": false,
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"ModInfo": {
+			"title": "ModInfo",
+			"type": "object",
+			"properties": {
+				"id": {
+					"title": "Mod ID",
+					"type": "string"
+				},
+				"tag": {
+					"title": "Blueprint tag",
+					"description": "Used in place of the mod ID in blueprint paths",
+					"type": "string"
+				},
+				"title": {
+					"title": "Mod name",
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"tag",
+				"title"
+			]
+		},
+		"EngramRequirements": {
+			"title": "EngramRequirements",
+			"type": "object",
+			"properties": {
+				"characterLevel": {
+					"title": "Required character level",
+					"type": "integer"
+				},
+				"engramPoints": {
+					"title": "Required number of points",
+					"type": "integer"
+				},
+				"otherEngrams": {
+					"title": "Required engrams",
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"Engram": {
+			"title": "Engram",
+			"type": "object",
+			"properties": {
+				"description": {
+					"title": "Description",
+					"type": "string"
+				},
+				"blueprintPath": {
+					"title": "Full blueprint path of the engram",
+					"type": "string"
+				},
+				"itemBlueprintPath": {
+					"title": "Full blueprint path of the item",
+					"type": "string"
+				},
+				"group": {
+					"title": "DLC group",
+					"type": "string"
+				},
+				"requirements": {
+					"$ref": "#/definitions/EngramRequirements"
+				},
+				"manualUnlock": {
+					"title": "Unlockable in UI",
+					"description": "Whether the engram can be unlocked by the player in UI",
+					"type": "boolean"
+				},
+				"givesBP": {
+					"title": "Craftable in inventory",
+					"description": "Whether the player can craft the item in their inventory",
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"blueprintPath",
+				"itemBlueprintPath",
+				"group",
+				"requirements",
+				"manualUnlock",
+				"givesBP"
+			],
+			"additionalProperties": false
+		}
+	}
+}
