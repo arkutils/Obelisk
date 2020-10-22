@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "312.57.1595963523",
+	"version": "314.13.1603392444",
 	"format": "2",
 	"mod": {
 		"id": "1523045986",
@@ -9,14 +9,15 @@
 	},
 	"species": [
 		{
-			"name": "Akhlut",
-			"bp": "/Game/Mods/Paranoia/Cryptids/Ahklut/Akhlut_Character_bp.Akhlut_Character_bp_C",
+			"name": "Ahklut",
+			"bp": "/Game/Mods/Paranoia/Cryptids/Ahklut/Ahklut_Character_BP.Ahklut_Character_BP_C",
 			"dinoNameTag": "Basilosaurus",
-			"customTag": "Thylacoleo",
-			"targetingTeamName": "Carnivores_Low",
-			"mass": 400,
-			"dragWeight": 400,
+			"customTag": "Ahklut",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 330,
+			"dragWeight": 550,
 			"flags": [
+				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
@@ -31,28 +32,111 @@
 				"maxExperience": 3550010,
 				"maxLevels": 73
 			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 520, "sprint": 3120 },
-				"swim": { "base": 700, "sprint": 2100 }
+				"walk": { "base": 350, "sprint": 1575 },
+				"swim": { "base": 700, "sprint": 3150 }
 			},
 			"movementD": {
-				"walk": { "base": 520, "sprint": 3120 },
-				"swim": { "base": 700, "sprint": 2100 }
+				"walk": { "base": 500, "sprint": 2250 },
+				"swim": { "base": 1000, "sprint": 4500 }
 			},
 			"staminaRates": {
 				"sprint": -14,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 300,
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.05, "dmg": 50, "radius": 450, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.8, "dmg": 45, "radius": 470, "stamina": 0 },
+					{ "name": "Lunge", "interval": 20, "dmg": 45, "radius": 600, "stamina": 300 },
+					{ "name": "ClawStrike", "interval": 5, "dmg": 53, "radius": 570, "stamina": 50 },
+					{
+						"name": "MAUL, BOI-YEEEE",
+						"interval": 0,
+						"dmg": 60,
+						"radius": 5,
+						"stamina": 0
+					},
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BackwardWaterDash", "interval": 0, "dmg": 40, "radius": 300, "stamina": 300 },
+					{ "name": "ForwardWaterDash", "interval": 0, "dmg": 0, "radius": 0, "stamina": 300 }
+				]
+			}
+		},
+		{
+			"name": "Sacred Ahklut",
+			"bp": "/Game/Mods/Paranoia/Cryptids/Ahklut/Ahklut_Character_BP_Sacred.Ahklut_Character_BP_Sacred_C",
+			"dinoNameTag": "Basilosaurus",
+			"customTag": "Ahklut",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 1575 },
+				"swim": { "base": 700, "sprint": 3150 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2250 },
+				"swim": { "base": 1000, "sprint": 4500 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.8, "dmg": 45, "radius": 470, "stamina": 0 },
+					{ "name": "Lunge", "interval": 20, "dmg": 45, "radius": 600, "stamina": 300 },
+					{ "name": "ClawStrike", "interval": 5, "dmg": 53, "radius": 570, "stamina": 50 },
+					{
+						"name": "MAUL, BOI-YEEEE",
+						"interval": 0,
+						"dmg": 60,
+						"radius": 5,
+						"stamina": 0
+					},
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BackwardWaterDash", "interval": 0, "dmg": 40, "radius": 300, "stamina": 300 },
+					{ "name": "ForwardWaterDash", "interval": 0, "dmg": 0, "radius": 0, "stamina": 300 }
 				]
 			}
 		},
@@ -297,48 +381,57 @@
 			}
 		},
 		{
-			"name": "Emela Ntouka",
+			"name": "Emela-Ntouka",
 			"bp": "/Game/Mods/Paranoia/Cryptids/EMELA/Emela_Character_BP.Emela_Character_BP_C",
-			"dinoNameTag": "Pachyrhinosaurus",
+			"dinoNameTag": "Trike",
 			"customTag": "Emela",
 			"targetingTeamName": "Carnivore_Water",
-			"mass": 400,
-			"dragWeight": 470,
+			"mass": 330,
+			"dragWeight": 550,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
-				"canDrag"
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
 				"maxLevels": 73
 			},
 			"cloning": {
-				"costBase": 500,
-				"costLevel": 55,
-				"timeBase": 3500,
-				"timeLevel": 385
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
 			},
 			"falling": {
-				"dmgMult": 110,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 270, "sprint": 1500 }
+				"walk": { "base": 182, "sprint": 2080 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
-				"walk": { "base": 270, "sprint": 1500 }
+				"walk": { "base": 260, "sprint": 2080 },
+				"swim": { "base": 300 }
 			},
-			"staminaRates": { "sprint": -24 },
+			"staminaRates": {
+				"sprint": -24,
+				"swimOrFly": -3
+			},
 			"attack": {
-				"defaultDmg": 32,
-				"defaultSwingRadius": 430,
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Head Attack", "interval": 0.6, "dmg": 55, "radius": 320, "stamina": 0 },
-					{ "name": "Head Attack", "interval": 5, "dmg": 78, "radius": 400, "stamina": 150 },
-					{ "name": "Camo Cloud", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 6, "dmg": 42, "radius": 300, "stamina": 0 },
+					{ "name": "Horn", "interval": 0.2, "dmg": 53, "radius": 400, "stamina": 0 },
+					{ "name": "Slam", "interval": 10, "dmg": 60, "radius": 400, "stamina": 50 },
+					{ "name": "Threaten", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
@@ -349,7 +442,7 @@
 			"customTag": "Firespitter",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 400,
-			"dragWeight": 250,
+			"dragWeight": 350,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -368,11 +461,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 1600 },
+				"walk": { "base": 500, "sprint": 1500 },
 				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 1600 },
+				"walk": { "base": 500, "sprint": 1500 },
 				"swim": { "base": 600 }
 			},
 			"staminaRates": {
@@ -383,57 +476,14 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 50, "radius": 300, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 3, "dmg": 35, "radius": 300, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 8, "dmg": 50, "radius": 200, "stamina": 200 },
-					{ "name": "BiteNomFury", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Nigerien Firespitter",
-			"bp": "/Game/Mods/Paranoia/Cryptids/Firespitter/FireSpitter_character_BP_Adult.FireSpitter_character_BP_Adult_C",
-			"dinoNameTag": "RockDrake",
-			"customTag": "Firespitter",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 400,
-			"dragWeight": 250,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 400, "sprint": 1600 },
-				"swim": { "base": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 400, "sprint": 1600 },
-				"swim": { "base": 600 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 50, "radius": 300, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 3, "dmg": 35, "radius": 300, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 8, "dmg": 50, "radius": 200, "stamina": 200 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 50, "radius": 300, "stamina": 0 },
+					{ "name": "Claw", "interval": 3, "dmg": 42, "radius": 300, "stamina": 0 },
+					{ "name": "Fire", "interval": 8, "dmg": 50, "radius": 200, "stamina": 200 },
+					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Ground Claw", "interval": 3, "dmg": 42, "radius": 300, "stamina": 20 },
+					{ "name": "Ground Fire", "interval": 8, "dmg": 50, "radius": 200, "stamina": 400 },
+					{ "name": "Ground Claw Exit", "interval": 3, "dmg": 55, "radius": 300, "stamina": 30 },
+					{ "name": "Ground Fire Exit", "interval": 8, "dmg": 50, "radius": 200, "stamina": 400 }
 				]
 			}
 		},
@@ -1128,54 +1178,6 @@
 					{ "name": "Bite", "interval": 0.3, "dmg": 45, "radius": 240, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.3, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.3, "dmg": 0, "radius": 0, "stamina": 400 }
-				]
-			}
-		},
-		{
-			"name": "Phaya Naga",
-			"bp": "/Game/Mods/Paranoia/Cryptids/naga/PhayaNaga_Character_bp.PhayaNaga_Character_bp_C",
-			"dinoNameTag": "Basilisk",
-			"customTag": "Gigantophis",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 400,
-			"dragWeight": 200,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isCarnivore",
-				"isWaterDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 400, "sprint": 2400 },
-				"swim": { "base": 1000, "sprint": 3000 }
-			},
-			"movementD": {
-				"walk": { "base": 400, "sprint": 2400 },
-				"swim": { "base": 1000, "sprint": 3000 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": 0
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.05, "dmg": 65, "radius": 300, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.05, "dmg": 0, "radius": 0, "stamina": 200 },
-					{ "name": "Bite", "interval": 0.05, "dmg": 0, "radius": 0, "stamina": 200 }
 				]
 			}
 		},
