@@ -1,5 +1,5 @@
 {
-	"version": "312.57.1595963523",
+	"version": "314.13.1603392444",
 	"format": "1.13",
 	"mod": {
 		"id": "1523045986",
@@ -8,8 +8,8 @@
 	},
 	"species": [
 		{
-			"name": "Akhlut",
-			"blueprintPath": "/Game/Mods/Paranoia/Cryptids/Ahklut/Akhlut_Character_bp.Akhlut_Character_bp",
+			"name": "Ahklut",
+			"blueprintPath": "/Game/Mods/Paranoia/Cryptids/Ahklut/Ahklut_Character_BP.Ahklut_Character_BP",
 			"fullStatsRaw": [
 				[ 800, 0.14, 0.27, 0.5, 0 ],
 				[ 400, 0.1, 0.1, 0, 0 ],
@@ -34,29 +34,104 @@
 			},
 			"colors": [
 				{
-					"name": "Main Body",
-					"colors": [ "Black", "NearBlack" ]
+					"name": "White Regions",
+					"colors": [ "Dino Albino", "NearWhite", "White" ]
+				},
+				{
+					"name": "OuterEye",
+					"colors": [ "Dino Deep Blue", "Dino Medium Blue" ]
+				},
+				{
+					"name": "Back1",
+					"colors": [ "ActualBlack", "Black", "BlackSands", "NearBlack" ]
+				},
+				{
+					"name": "Eye Inner",
+					"colors": [ "Glacial", "PowderBlue" ]
 				},
 				null,
-				null,
-				null,
-				null,
 				{
-					"name": "Stripes and Belly",
-					"colors": [ "Dino Albino", "Light Grey", "White" ]
+					"name": "OtherBody",
+					"colors": [ "ActualBlack", "Black", "BlackSands", "NearBlack" ]
 				}
 			],
 			"taming": {
 				"nonViolent": false,
 				"violent": true,
 				"tamingIneffectiveness": 1.25,
-				"affinityNeeded0": 3450,
-				"affinityIncreasePL": 150,
+				"affinityNeeded0": 5000,
+				"affinityIncreasePL": 130,
 				"torporDepletionPS0": 0.9,
 				"foodConsumptionBase": 0.003156,
 				"foodConsumptionMult": 150
 			},
 			"TamedBaseHealthMultiplier": 1,
+			"NoImprintingForSpeed": false,
+			"doesNotUseOxygen": true,
+			"displayedStats": 919
+		},
+		{
+			"name": "Sacred Ahklut",
+			"blueprintPath": "/Game/Mods/Paranoia/Cryptids/Ahklut/Ahklut_Character_BP_Sacred.Ahklut_Character_BP_Sacred",
+			"fullStatsRaw": [
+				[ 800, 0.14, 0.27, 0.5, 0 ],
+				[ 400, 0.1, 0.1, 0, 0 ],
+				[ 1800, 0.06, 0, 0.5, 0 ],
+				[ 270, 0.1, 0.1, 0, 0 ],
+				[ 4400, 0.1, 0.1, 0, 0 ],
+				null,
+				null,
+				[ 430, 0.02, 0.04, 0, 0 ],
+				[ 1, 0.05, 0.1, 0.5, 0.4 ],
+				[ 1, 0, 0.01, 0, 0 ],
+				null,
+				null
+			],
+			"immobilizedBy": [],
+			"breeding": {
+				"gestationTime": 28571.4286,
+				"incubationTime": 0,
+				"maturationTime": 333333.333,
+				"matingCooldownMin": 64800,
+				"matingCooldownMax": 172800
+			},
+			"colors": [
+				{
+					"name": "White Regions",
+					"colors": [ "Dino Albino", "NearWhite", "White" ]
+				},
+				{
+					"name": "Eyes",
+					"colors": [ "Dino Deep Blue", "Dino Medium Blue" ]
+				},
+				{
+					"name": "Orange-Red Markings",
+					"colors": [ "Coral", "DragonFire", "Orange", "Vermillion" ]
+				},
+				{
+					"name": "Green Markings",
+					"colors": [ "Dino Light Green", "Light Green", "MediumTurquoise", "Mint" ]
+				},
+				{
+					"name": "OuterEye",
+					"colors": [ "Glacial", "PowderBlue" ]
+				},
+				{
+					"name": "Body",
+					"colors": [ "ActualBlack", "Black", "BlackSands", "NearBlack" ]
+				}
+			],
+			"taming": {
+				"nonViolent": false,
+				"violent": true,
+				"tamingIneffectiveness": 1.25,
+				"affinityNeeded0": 5000,
+				"affinityIncreasePL": 130,
+				"torporDepletionPS0": 0.9,
+				"foodConsumptionBase": 0.003156,
+				"foodConsumptionMult": 150
+			},
+			"TamedBaseHealthMultiplier": 1.15,
 			"NoImprintingForSpeed": false,
 			"doesNotUseOxygen": true,
 			"displayedStats": 919
@@ -567,10 +642,10 @@
 			"displayedStats": 927
 		},
 		{
-			"name": "Emela Ntouka",
+			"name": "Emela-Ntouka",
 			"blueprintPath": "/Game/Mods/Paranoia/Cryptids/EMELA/Emela_Character_BP.Emela_Character_BP",
 			"fullStatsRaw": [
-				[ 900, 0.12, 0.27, 0.5, 0 ],
+				[ 900, 0.2, 0.27, 0.5, 0 ],
 				[ 400, 0.1, 0.1, 0, 0 ],
 				[ 2400, 0.06, 0, 0.5, 0 ],
 				[ 150, 0.1, 0.1, 0, 0 ],
@@ -586,88 +661,78 @@
 			"immobilizedBy": [ "Chain Bola", "Large Bear Trap" ],
 			"breeding": {
 				"gestationTime": 0,
-				"incubationTime": 5999.52004,
-				"eggTempMin": 26,
-				"eggTempMax": 32,
-				"maturationTime": 166666.667,
+				"incubationTime": 17998.5601,
+				"eggTempMin": 32,
+				"eggTempMax": 34,
+				"maturationTime": 333333.333,
 				"matingCooldownMin": 64800,
 				"matingCooldownMax": 172800
 			},
 			"colors": [
 				{
-					"name": "Unknown",
+					"name": "Body Lower",
 					"colors": [
-						"Black",
-						"Dark Grey",
-						"Dino Albino",
+						"BigFoot0",
+						"BigFoot4",
+						"BigFoot5",
+						"DarkWolfFur",
 						"Dino Dark Brown",
-						"Dino Dark Green",
-						"Dino Dark Orange",
-						"Dino Dark Red",
-						"Dino Dark Yellow",
 						"Dino Darker Grey",
-						"Dino Medium Brown"
+						"Dino Light Brown",
+						"Dino Medium Brown",
+						"Dino Medium Green",
+						"DragonBase0",
+						"DragonGreen0",
+						"DragonGreen1",
+						"DragonGreen2",
+						"Light Grey",
+						"WolfFur"
 					]
 				},
 				{
-					"name": "Unknown",
+					"name": "Claws",
 					"colors": [
-						"Black",
-						"Dark Grey",
-						"Dino Albino",
-						"Dino Dark Brown",
-						"Dino Dark Green",
-						"Dino Dark Orange",
-						"Dino Dark Red",
-						"Dino Dark Yellow",
+						"BigFoot0",
 						"Dino Darker Grey",
-						"Dino Medium Brown"
+						"Dino Light Brown",
+						"Dino Light Green",
+						"Dino Light Yellow",
+						"Dino Medium Brown",
+						"Dino Medium Green",
+						"DragonGreen2",
+						"Light Grey"
 					]
 				},
 				null,
 				{
-					"name": "Unknown",
+					"name": "Spikes Base",
 					"colors": [
-						"Black",
-						"Dark Grey",
-						"Dino Albino",
+						"DarkWolfFur",
 						"Dino Dark Brown",
 						"Dino Dark Green",
-						"Dino Dark Orange",
-						"Dino Dark Red",
 						"Dino Dark Yellow",
 						"Dino Darker Grey",
-						"Dino Medium Brown"
+						"Dino Medium Brown",
+						"DragonGreen0",
+						"Light Grey",
+						"NearBlack"
 					]
 				},
+				null,
 				{
-					"name": "Unknown",
+					"name": "Body Upper",
 					"colors": [
-						"Black",
-						"Dark Grey",
-						"Dino Albino",
+						"DarkWolfFur",
 						"Dino Dark Brown",
-						"Dino Dark Green",
 						"Dino Dark Orange",
-						"Dino Dark Red",
 						"Dino Dark Yellow",
-						"Dino Darker Grey",
-						"Dino Medium Brown"
-					]
-				},
-				{
-					"name": "Unknown",
-					"colors": [
-						"Black",
-						"Dark Grey",
-						"Dino Albino",
-						"Dino Dark Brown",
-						"Dino Dark Green",
-						"Dino Dark Orange",
-						"Dino Dark Red",
-						"Dino Dark Yellow",
-						"Dino Darker Grey",
-						"Dino Medium Brown"
+						"Dino Medium Brown",
+						"DragonBase0",
+						"DragonBase1",
+						"DragonGreen0",
+						"DragonGreen3",
+						"NearBlack",
+						"WyvernBlue1"
 					]
 				}
 			],
@@ -675,22 +740,11 @@
 				"nonViolent": false,
 				"violent": true,
 				"tamingIneffectiveness": 1.25,
-				"affinityNeeded0": 3333,
-				"affinityIncreasePL": 138,
+				"affinityNeeded0": 5000,
+				"affinityIncreasePL": 150,
 				"torporDepletionPS0": 1.1,
 				"foodConsumptionBase": 0.003156,
 				"foodConsumptionMult": 352.0631
-			},
-			"boneDamageAdjusters": {
-				"c_head": 2,
-				"c_neck2": 2,
-				"c_neck1": 1.73,
-				"c_back4": 1.28,
-				"c_back3": 1.12,
-				"c_tail2": 0.8,
-				"c_tail3": 0.66,
-				"c_tail4": 0.5,
-				"c_tail5": 0.5
 			},
 			"TamedBaseHealthMultiplier": 1,
 			"NoImprintingForSpeed": false,
@@ -708,7 +762,7 @@
 				[ 3000, 0.1, 0.1, 0, 0 ],
 				null,
 				null,
-				[ 500, 0.02, 0.04, 0, 0 ],
+				[ 650, 0.02, 0.04, 0, 0 ],
 				[ 1, 0.05, 0.1, 0.5, 0.4 ],
 				[ 1, 0, 0.01, 0, 0 ],
 				null,
@@ -726,122 +780,102 @@
 			},
 			"colors": [
 				{
-					"name": "Main",
+					"name": "Body Lower",
 					"colors": [
+						"BigFoot0",
+						"BigFoot4",
+						"BigFoot5",
+						"DarkWolfFur",
 						"Dino Dark Brown",
-						"Dino Dark Green",
-						"Dino Dark Orange",
-						"Dino Dark Yellow",
+						"Dino Darker Grey",
+						"Dino Light Brown",
 						"Dino Medium Brown",
-						"DragonBase0"
-					]
-				},
-				null,
-				null,
-				null,
-				{
-					"name": "BackAndArmor",
-					"colors": [
-						"Black",
-						"Dino Dark Red",
-						"DragonFire",
-						"DragonGreen0",
-						"DragonGreen1",
-						"DragonGreen2"
-					]
-				},
-				{
-					"name": "Underbelly",
-					"colors": [
-						"Black",
-						"Dino Dark Red",
-						"DragonFire",
+						"Dino Medium Green",
+						"DragonBase0",
 						"DragonGreen0",
 						"DragonGreen1",
 						"DragonGreen2",
-						"NearWhite"
+						"Light Grey",
+						"WolfFur"
 					]
-				}
-			],
-			"taming": {
-				"nonViolent": true,
-				"violent": false,
-				"tamingIneffectiveness": 1.25,
-				"affinityNeeded0": 7825,
-				"affinityIncreasePL": 150,
-				"wakeAffinityMult": 1.65,
-				"wakeFoodDeplMult": 2,
-				"foodConsumptionBase": 0.003156,
-				"foodConsumptionMult": 352.0631
-			},
-			"TamedBaseHealthMultiplier": 1,
-			"NoImprintingForSpeed": false,
-			"doesNotUseOxygen": false,
-			"displayedStats": 927
-		},
-		{
-			"name": "Nigerien Firespitter",
-			"blueprintPath": "/Game/Mods/Paranoia/Cryptids/Firespitter/FireSpitter_character_BP_Adult.FireSpitter_character_BP_Adult",
-			"fullStatsRaw": [
-				[ 870, 0.2, 0.27, 0.5, 0 ],
-				[ 500, 0.1, 0.1, 0, 0 ],
-				[ 2000, 0.06, 0, 0.5, 0 ],
-				[ 150, 0.1, 0.1, 0, 0 ],
-				[ 3000, 0.1, 0.1, 0, 0 ],
-				null,
-				null,
-				[ 500, 0.02, 0.04, 0, 0 ],
-				[ 1, 0.05, 0.1, 0.5, 0.4 ],
-				[ 1, 0, 0.01, 0, 0 ],
-				null,
-				null
-			],
-			"immobilizedBy": [ "Chain Bola", "Large Bear Trap" ],
-			"breeding": {
-				"gestationTime": 0,
-				"incubationTime": 5999.52004,
-				"eggTempMin": 26,
-				"eggTempMax": 32,
-				"maturationTime": 333333.333,
-				"matingCooldownMin": 64800,
-				"matingCooldownMax": 172800
-			},
-			"colors": [
+				},
 				{
-					"name": "Main",
+					"name": "Claws",
 					"colors": [
+						"BigFoot0",
+						"Dino Darker Grey",
+						"Dino Light Brown",
+						"Dino Light Green",
+						"Dino Light Yellow",
+						"Dino Medium Brown",
+						"Dino Medium Green",
+						"DragonGreen2",
+						"Light Grey"
+					]
+				},
+				{
+					"name": "Armor Plating Highlights",
+					"colors": [
+						"BigFoot0",
+						"Bigfoot5",
+						"DarkWolfFur",
+						"Dino Dark Orange",
+						"Dino Dark Yellow",
+						"Dino Darker Grey",
+						"Dino Light Brown",
+						"Dino Light Orange",
+						"Dino Light Yellow",
+						"Dino Medium Brown",
+						"DragonBase1",
+						"DragonFire",
+						"DragonGreen2",
+						"Light Grey",
+						"WolfFur"
+					]
+				},
+				{
+					"name": "Spikes Base",
+					"colors": [
+						"DarkWolfFur",
 						"Dino Dark Brown",
 						"Dino Dark Green",
+						"Dino Dark Yellow",
+						"Dino Darker Grey",
+						"Dino Medium Brown",
+						"DragonGreen0",
+						"Light Grey",
+						"NearBlack"
+					]
+				},
+				{
+					"name": "Belly",
+					"colors": [
+						"Dark Grey",
+						"Dino Light Brown",
+						"Dino Light Green",
+						"Dino Light Yellow",
+						"Dino Medium Brown",
+						"DragonBase1",
+						"DragonGreen1",
+						"DragonGreen2",
+						"DragonGreen3",
+						"Light Grey"
+					]
+				},
+				{
+					"name": "Body Upper",
+					"colors": [
+						"DarkWolfFur",
+						"Dino Dark Brown",
 						"Dino Dark Orange",
 						"Dino Dark Yellow",
 						"Dino Medium Brown",
-						"DragonBase0"
-					]
-				},
-				null,
-				null,
-				null,
-				{
-					"name": "BackAndArmor",
-					"colors": [
-						"Black",
-						"Dino Dark Red",
-						"DragonFire",
+						"DragonBase0",
+						"DragonBase1",
 						"DragonGreen0",
-						"DragonGreen1",
-						"DragonGreen2"
-					]
-				},
-				{
-					"name": "Underbelly",
-					"colors": [
-						"Black",
-						"Dino Dark Red",
-						"DragonFire",
-						"DragonGreen0",
-						"DragonGreen1",
-						"DragonGreen2",
-						"NearWhite"
+						"DragonGreen3",
+						"NearBlack",
+						"WyvernBlue1"
 					]
 				}
 			],
@@ -1800,7 +1834,7 @@
 			"fullStatsRaw": [
 				[ 600, 0.15, 0.26, 0, 0 ],
 				[ 400, 0.2, 0.2, 0, 0 ],
-				[ 1000, 0.06, 0, 0.5, 0 ],
+				[ 800, 0.06, 0, 0.5, 0 ],
 				[ 150, 0.1, 0.1, 0, 0 ],
 				[ 3300, 0.1, 0.1, 0, 0.15 ],
 				null,
@@ -1939,134 +1973,6 @@
 			"NoImprintingForSpeed": false,
 			"doesNotUseOxygen": false,
 			"displayedStats": 927
-		},
-		{
-			"name": "Phaya Naga",
-			"blueprintPath": "/Game/Mods/Paranoia/Cryptids/naga/PhayaNaga_Character_bp.PhayaNaga_Character_bp",
-			"fullStatsRaw": [
-				[ 1800, 0.2, 0.27, 0.5, 0 ],
-				[ 500, 0.1, 0.1, 0, 0 ],
-				[ 2700, 0.06, 0, 0.5, 0 ],
-				null,
-				[ 1200, 0.1, 0.1, 0, 0.15 ],
-				null,
-				null,
-				[ 1000, 0.02, 0.04, 0, 0 ],
-				[ 1, 0.05, 0.1, 0.4, 0.35 ],
-				[ 1, 0, 0.01, 0, 0 ],
-				null,
-				null
-			],
-			"immobilizedBy": [],
-			"breeding": {
-				"gestationTime": 0,
-				"incubationTime": 5999.52004,
-				"eggTempMin": 26,
-				"eggTempMax": 32,
-				"maturationTime": 333333.333,
-				"matingCooldownMin": 64800,
-				"matingCooldownMax": 172800
-			},
-			"colors": [
-				{
-					"name": "Body Main",
-					"colors": [
-						"Black",
-						"Dark Grey",
-						"Dino Albino",
-						"Dino Dark Brown",
-						"Dino Dark Orange",
-						"Dino Dark Yellow",
-						"Dino Darker Grey",
-						"Dino Medium Brown",
-						"Dino Medium Green",
-						"DragonBase0",
-						"DragonGreen0",
-						"DragonGreen3",
-						"WyvernBlue1",
-						"WyvernPurple0"
-					]
-				},
-				{
-					"name": "Horns",
-					"colors": [
-						"Black",
-						"Dino Albino",
-						"Dino Light Blue",
-						"Dino Light Brown",
-						"Dino Light Green",
-						"Dino Light Orange",
-						"Dino Light Purple",
-						"Dino Light Yellow",
-						"Dino Medium Brown",
-						"DragonBase1",
-						"DragonGreen2",
-						"Light Grey"
-					]
-				},
-				{
-					"name": "Underbelly",
-					"colors": [
-						"BigFoot0",
-						"BigFoot5",
-						"Black",
-						"Dino Albino",
-						"Dino Light Brown",
-						"Dino Light Green",
-						"Dino Light Purple",
-						"Dino Light Yellow",
-						"Dino Medium Brown",
-						"DragonGreen3",
-						"Light Grey",
-						"WolfFur"
-					]
-				},
-				null,
-				{
-					"name": "Emissive",
-					"colors": [
-						"Dino Albino",
-						"Dino Light Blue",
-						"Dino Light Brown",
-						"Dino Light Green",
-						"Dino Light Orange",
-						"Dino Light Purple",
-						"Dino Light Red",
-						"Dino Light Yellow",
-						"Dino Medium Blue",
-						"Dino Medium Green",
-						"DragonBase1",
-						"DragonFire",
-						"DragonGreen3"
-					]
-				},
-				{
-					"name": "Highlights",
-					"colors": [
-						"Bigfoot0",
-						"Dino Albino",
-						"Dino Light Brown",
-						"Dino Medium Brown",
-						"Dino light yellow",
-						"Grey",
-						"wolffur"
-					]
-				}
-			],
-			"taming": {
-				"nonViolent": false,
-				"violent": true,
-				"tamingIneffectiveness": 1.25,
-				"affinityNeeded0": 3450,
-				"affinityIncreasePL": 150,
-				"torporDepletionPS0": 0.3,
-				"foodConsumptionBase": 0.001543,
-				"foodConsumptionMult": 199.984
-			},
-			"TamedBaseHealthMultiplier": 1,
-			"NoImprintingForSpeed": false,
-			"doesNotUseOxygen": false,
-			"displayedStats": 919
 		},
 		{
 			"name": "Ogopogo",
