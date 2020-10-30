@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "314.13.1603351434",
+	"version": "315.9.1604079981",
 	"format": "2",
 	"mod": {
 		"id": "1373744537",
@@ -8,6 +8,68 @@
 		"title": "Additional Creatures 2: Wild Ark"
 	},
 	"species": [
+		{
+			"name": "Corrosion Wyvern",
+			"bp": "/Game/Mods/AC2/AcidWyvern/Wyvern_Character_BP_Acid.Wyvern_Character_BP_Acid_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Poison (Rider)", "interval": 4, "dmg": 0, "radius": 0, "stamina": 25 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 },
+					{ "name": "Poison (AI)", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20 },
+					{ "name": "Roars", "interval": 9, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
 		{
 			"name": "Amphicyon",
 			"bp": "/Game/Mods/AC2/Amphi/Amphi_Character_BP_Adult.Amphi_Character_BP_Adult_C",
@@ -1416,6 +1478,56 @@
 			}
 		},
 		{
+			"name": "X-Austroraptor",
+			"bp": "/Game/Mods/AC2/aussie/Bog_Austro_Character_BP.Bog_Austro_Character_BP_C",
+			"dinoNameTag": "Raptor",
+			"customTag": "Austroraptor",
+			"targetingTeamName": "Herbivores",
+			"mass": 400,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 170, "sprint": 1360 },
+				"swim": { "base": 400, "sprint": 1280 }
+			},
+			"movementD": {
+				"walk": { "base": 170, "sprint": 1360 },
+				"swim": { "base": 400, "sprint": 1280 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 16, "radius": 200, "stamina": 0 },
+					{ "name": "Claws", "interval": 5, "dmg": 12, "radius": 200, "stamina": 0 },
+					{ "name": "Bork", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Lunge", "interval": 5, "dmg": 28, "radius": 280, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Balaur",
 			"bp": "/Game/Mods/AC2/balaur/Balaur_Character_BP.Balaur_Character_BP_C",
 			"dinoNameTag": "Deinonychus",
@@ -2020,8 +2132,124 @@
 			}
 		},
 		{
+			"name": "X-Deinocheirus",
+			"bp": "/Game/Mods/AC2/deinoch/Bog_Deinocheirus_Character_BP.Bog_Deinocheirus_Character_BP_C",
+			"dinoNameTag": "Deinoch",
+			"customTag": "Deinoch",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 367.5, "sprint": 2520 },
+				"swim": { "base": 490 }
+			},
+			"movementD": {
+				"walk": { "base": 525, "sprint": 2520 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "ClawSmacks", "interval": 0.2, "dmg": 50, "radius": 300, "stamina": 0 },
+					{ "name": "Uppercut", "interval": 18, "dmg": 168, "radius": 300, "stamina": 120 },
+					{ "name": "DoubleSmack", "interval": 10, "dmg": 90, "radius": 300, "stamina": 0 },
+					{ "name": "BrutalUppercutLeft", "interval": 0.2, "dmg": 168, "radius": 300, "stamina": 120 },
+					{ "name": "BrutalUppercutRight", "interval": 0.2, "dmg": 168, "radius": 300, "stamina": 120 },
+					{ "name": "Bite", "interval": 7, "dmg": 40, "radius": 480, "stamina": 0 },
+					{ "name": "RoarStationary", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "RoarMoving", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Deinocheirus",
 			"bp": "/Game/Mods/AC2/deinoch/Deinocheirus_Character_BP.Deinocheirus_Character_BP_C",
+			"dinoNameTag": "Deinoch",
+			"customTag": "Deinoch",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 367.5, "sprint": 2520 },
+				"swim": { "base": 490 }
+			},
+			"movementD": {
+				"walk": { "base": 525, "sprint": 2520 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "ClawSmacks", "interval": 0.2, "dmg": 50, "radius": 300, "stamina": 0 },
+					{ "name": "Uppercut", "interval": 18, "dmg": 168, "radius": 300, "stamina": 120 },
+					{ "name": "DoubleSmack", "interval": 10, "dmg": 90, "radius": 300, "stamina": 0 },
+					{ "name": "BrutalUppercutLeft", "interval": 0.2, "dmg": 168, "radius": 300, "stamina": 120 },
+					{ "name": "BrutalUppercutRight", "interval": 0.2, "dmg": 168, "radius": 300, "stamina": 120 },
+					{ "name": "Bite", "interval": 7, "dmg": 40, "radius": 480, "stamina": 0 },
+					{ "name": "RoarStationary", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "RoarMoving", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Aberrant Deinocheirus",
+			"bp": "/Game/Mods/AC2/deinoch/Deinocheirus_Character_BP_Aberrant.Deinocheirus_Character_BP_Aberrant_C",
 			"dinoNameTag": "Deinoch",
 			"customTag": "Deinoch",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
@@ -2219,6 +2447,54 @@
 			}
 		},
 		{
+			"name": "X-Gigantophis",
+			"bp": "/Game/Mods/AC2/gigantophis/Ocean_Gigantophis_Character_bp.Ocean_Gigantophis_Character_bp_C",
+			"dinoNameTag": "Basilisk",
+			"customTag": "Gigantophis",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 480,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 340, "sprint": 1020 },
+				"swim": { "base": 1000, "sprint": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 340, "sprint": 1020 },
+				"swim": { "base": 1000, "sprint": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.05, "dmg": 45, "radius": 400, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 50, "radius": 340, "stamina": 0 }
+				]
+			}
+		},
+		{
 			"name": "Gigantoraptor",
 			"bp": "/Game/Mods/AC2/gigantor/Gigantor_Character_BP.Gigantor_Character_BP_C",
 			"dinoNameTag": "Therizinosaurus",
@@ -2267,6 +2543,51 @@
 		{
 			"name": "Gigantspinosaurus",
 			"bp": "/Game/Mods/AC2/gigas/Gigas_Character_BP.Gigas_Character_BP_C",
+			"dinoNameTag": "Kentro",
+			"customTag": "Gigantspino",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 220,
+			"dragWeight": 250,
+			"flags": [ "allowMountedWeaponry", "allowRiding", "canBeDragged", "canBeTorpid" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 122,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 144, "sprint": 1152 },
+				"swim": { "base": 198 }
+			},
+			"movementD": {
+				"walk": { "base": 160, "sprint": 1280 },
+				"swim": { "base": 220 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "Tail", "interval": 0.4, "dmg": 30, "radius": 480, "stamina": 0 },
+					{ "name": "Bite", "interval": 5, "dmg": 20, "radius": 480, "stamina": 0 },
+					{ "name": "RawrXD", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Aberrant Gigantspinosaurus",
+			"bp": "/Game/Mods/AC2/gigas/Gigas_Character_BP_Aberrant.Gigas_Character_BP_Aberrant_C",
 			"dinoNameTag": "Kentro",
 			"customTag": "Gigantspino",
 			"targetingTeamName": "Herbivores_Medium",
@@ -2426,7 +2747,7 @@
 			"customTag": "Hatzeg",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 300,
-			"dragWeight": 550,
+			"dragWeight": 850,
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
