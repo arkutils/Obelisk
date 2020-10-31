@@ -62,6 +62,45 @@
 				"title"
 			]
 		},
+		"MinMaxRange": {
+			"title": "MinMaxRange",
+			"type": "object",
+			"properties": {
+				"min": {
+					"title": "Min",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						}
+					]
+				},
+				"max": {
+					"title": "Max",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						}
+					]
+				}
+			},
+			"required": [
+				"min",
+				"max"
+			],
+			"additionalProperties": false
+		},
 		"MinMaxPowerRange": {
 			"title": "MinMaxPowerRange",
 			"type": "object",
@@ -221,6 +260,56 @@
 					"title": "Bp",
 					"description": "Full blueprint path",
 					"type": "string"
+				},
+				"name": {
+					"title": "Name",
+					"default": "",
+					"type": "string"
+				},
+				"description": {
+					"title": "Description",
+					"default": "",
+					"type": "string"
+				},
+				"maxItems": {
+					"title": "Maxitems",
+					"default": 0,
+					"type": "integer"
+				},
+				"maxWeight": {
+					"title": "Maxweight",
+					"default": 25,
+					"type": "number"
+				},
+				"noRepeatsInSets": {
+					"title": "No repeats in sets",
+					"description": "Entries cannot be picked more than once per set",
+					"type": "boolean"
+				},
+				"qualityMult": {
+					"title": "Quality range",
+					"default": {
+						"min": 1.0,
+						"max": 1.0
+					},
+					"allOf": [
+						{
+							"$ref": "#/definitions/MinMaxRange"
+						}
+					]
+				},
+				"qtyMult": {
+					"title": "Quantity range",
+					"default": {
+						"min": 1.0,
+						"max": 1.0,
+						"pow": 1.0
+					},
+					"allOf": [
+						{
+							"$ref": "#/definitions/MinMaxPowerRange"
+						}
+					]
 				},
 				"sets": {
 					"title": "Sets",
