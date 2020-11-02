@@ -1,5 +1,5 @@
 {
-	"version": "315.9.1604079981",
+	"version": "315.9.1604273359",
 	"format": "3",
 	"mod": {
 		"id": "1373744537",
@@ -1146,10 +1146,10 @@
 		{
 			"name": "Prime Dart",
 			"description": "A shock dart, increased in potency with the strange Alpha Blood material found in Additional Alphas. Never spoils, easier to carry, 3x potency of shock darts",
-			"bp": "/Game/Mods/AC2/Items/Weapons/TranqRifle/PrimalItemAmmo_RefinedTranqDartAC.PrimalItemAmmo_RefinedTranqDartAC_C",
+			"bp": "/Game/Mods/AC2/Items/Weapons/TranqRifle/PrimalItemAmmo_AC2PrimeDart.PrimalItemAmmo_AC2PrimeDart_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/TranqDart2_Icon.TranqDart2_Icon",
 			"type": "Ammo",
-			"folders": [ "Weapons", "Ammo" ],
+			"folders": [],
 			"weight": 0.05,
 			"maxQuantity": 100,
 			"durability": {
@@ -1158,7 +1158,7 @@
 			},
 			"crafting": {
 				"xp": 0.05,
-				"bpCraftTime": 1,
+				"bpCraftTime": 0.5,
 				"minLevelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": [ 0, 0.05 ],
@@ -1184,7 +1184,7 @@
 		{
 			"name": "Improved Tranq Dart",
 			"description": "A potent dart for when you can't wait for Shock Darts. Between normal and Shocking in potency. Roughly 1/2 times stronger than normal darts!",
-			"bp": "/Game/Mods/AC2/Items/Weapons/TranqRifle/PrimalItemAmmo_TranqDartAC.PrimalItemAmmo_TranqDartAC_C",
+			"bp": "/Game/Mods/AC2/Items/Weapons/TranqRifle/PrimalItemAmmo_Ac2ImprovedDart.PrimalItemAmmo_Ac2ImprovedDart_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/TranqDart_Icon.TranqDart_Icon",
 			"type": "Ammo",
 			"folders": [ "Weapons", "Ammo" ],
@@ -2556,6 +2556,112 @@
 					"cyan": {
 						"intensity": 1.5,
 						"color": [ 1, 1, 1, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Suchomimus Saddle",
+			"description": "Equip a Suchomimus with this to ride it.",
+			"bp": "/Game/Mods/AC2/Suchomimus/PrimalItemArmor_SuccSaddle.PrimalItemArmor_SuccSaddle_C",
+			"icon": "/Game/PrimalEarth/Dinos/Baryonyx/Baryonyx_Saddle/HUD_BaryonyxSaddle_Colorize_MIC.HUD_BaryonyxSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 62.8,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 290,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 155,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_MetalIngot_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 62.8,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Fertilized Suchomimus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Suchomimus/PrimalItemConsumable_Egg_Succ_Fertilized.PrimalItemConsumable_Egg_Succ_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Yuty.HUD_DinoEgg_MIC_Inst_Yuty",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 10,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 20
+				},
+				"health": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 20
+				},
+				"stamina": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 20
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Suchomimus/Suchomimus_Character_bp.Suchomimus_Character_bp_C",
+				"temperature": [ 32, 34 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 0.355, 0.274757, 0.120458, 1 ]
+					},
+					"cyan": {
+						"intensity": 1.5,
+						"color": [ 1, 0.351066, 0.168014, 1 ]
 					}
 				}
 			},
