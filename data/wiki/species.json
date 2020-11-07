@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/species.json",
-	"version": "315.9.5752464",
+	"version": "316.18.5797625",
 	"format": "2",
 	"species": [
 		{
@@ -7224,7 +7224,7 @@
 			"customTag": "Baryonyx",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
-			"dragWeight": 120,
+			"dragWeight": 210,
 			"variants": [ "Bog", "Escort", "Genesis", "Mission" ],
 			"flags": [
 				"allowMountedWeaponry",
@@ -9215,8 +9215,11 @@
 				"defaultSwingRadius": 500,
 				"attacks": [
 					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 },
+					{ "name": "Trunk Grab", "interval": 1.5, "dmg": 0, "radius": 500, "stamina": 0 },
+					{ "name": "Trumpet", "interval": 60, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "Swimming Attack", "interval": 1, "dmg": 48, "radius": 500, "stamina": 20 },
 					{ "name": "Stomp", "interval": 1.5, "dmg": 69, "radius": 800, "stamina": 40 },
-					{ "name": "Swimming Attack", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 }
+					{ "name": "Carried Tusk Swipe", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 }
 				]
 			}
 		},
@@ -9645,7 +9648,7 @@
 			"customTag": "Baryonyx",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
-			"dragWeight": 120,
+			"dragWeight": 210,
 			"variants": [ "Bog", "Gauntlet", "Genesis", "Mission" ],
 			"flags": [
 				"allowMountedWeaponry",
@@ -11070,7 +11073,12 @@
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 450,
-				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -11791,12 +11799,13 @@
 			"name": "Onyc",
 			"bp": "/Game/Genesis/Dinos/MissionVariants/Gauntlet/Volcanic/Bat_Character_BP_Gauntlet.Bat_Character_BP_Gauntlet_C",
 			"dinoNameTag": "Bat",
-			"customTag": "",
+			"customTag": "Onyc",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
 			"dragWeight": 35,
 			"variants": [ "Gauntlet", "Genesis", "Mission", "Volcano" ],
 			"flags": [
+				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"doStepDamage",
@@ -12959,8 +12968,11 @@
 				"defaultSwingRadius": 500,
 				"attacks": [
 					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 },
+					{ "name": "Trunk Grab", "interval": 1.5, "dmg": 0, "radius": 500, "stamina": 0 },
+					{ "name": "Trumpet", "interval": 60, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "Swimming Attack", "interval": 1, "dmg": 48, "radius": 500, "stamina": 20 },
 					{ "name": "Stomp", "interval": 1.5, "dmg": 69, "radius": 800, "stamina": 40 },
-					{ "name": "Swimming Attack", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 }
+					{ "name": "Carried Tusk Swipe", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 }
 				]
 			}
 		},
@@ -13271,7 +13283,7 @@
 			"customTag": "Baryonyx",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
-			"dragWeight": 120,
+			"dragWeight": 210,
 			"variants": [ "Bog", "Genesis", "Hunt", "Mission" ],
 			"flags": [
 				"allowMountedWeaponry",
@@ -16452,7 +16464,12 @@
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 450,
-				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -17476,12 +17493,18 @@
 			"name": "Onyc",
 			"bp": "/Game/Genesis/Dinos/MissionVariants/Retrieve/Volcanic/Bat_Character_BP_Retrieve.Bat_Character_BP_Retrieve_C",
 			"dinoNameTag": "Bat",
-			"customTag": "",
+			"customTag": "Onyc",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
 			"dragWeight": 35,
 			"variants": [ "Genesis", "Mission", "Retrieve", "Volcano" ],
-			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isFlyerDino" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino"
+			],
 			"levelCaps": {
 				"maxExperience": 3550010,
 				"maxLevels": 73
@@ -20773,7 +20796,7 @@
 			"customTag": "Baryonyx",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,
-			"dragWeight": 120,
+			"dragWeight": 210,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -20821,7 +20844,7 @@
 			"customTag": "Baryonyx",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,
-			"dragWeight": 120,
+			"dragWeight": 210,
 			"variants": [ "Aberrant" ],
 			"flags": [
 				"allowMountedWeaponry",
@@ -20918,11 +20941,17 @@
 			"name": "Onyc",
 			"bp": "/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
 			"dinoNameTag": "Bat",
-			"customTag": "",
+			"customTag": "Onyc",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,
 			"dragWeight": 35,
-			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isFlyerDino" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino"
+			],
 			"levelCaps": {
 				"maxExperience": 3550010,
 				"maxLevels": 73
@@ -25627,8 +25656,11 @@
 				"defaultSwingRadius": 500,
 				"attacks": [
 					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 },
+					{ "name": "Trunk Grab", "interval": 1.5, "dmg": 0, "radius": 500, "stamina": 0 },
+					{ "name": "Trumpet", "interval": 60, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "Swimming Attack", "interval": 1, "dmg": 48, "radius": 500, "stamina": 20 },
 					{ "name": "Stomp", "interval": 1.5, "dmg": 69, "radius": 800, "stamina": 40 },
-					{ "name": "Swimming Attack", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 }
+					{ "name": "Carried Tusk Swipe", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 }
 				]
 			}
 		},
@@ -30340,7 +30372,12 @@
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 450,
-				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -30388,7 +30425,12 @@
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 450,
-				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -30484,7 +30526,12 @@
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 450,
-				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -30533,7 +30580,12 @@
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 450,
-				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
+				]
 			}
 		},
 		{
