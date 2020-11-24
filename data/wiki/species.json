@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/species.json",
-	"version": "316.27.5807887",
+	"version": "318.9.5874465",
 	"format": "2",
 	"species": [
 		{
@@ -3779,8 +3779,7 @@
 				"isBigDino",
 				"isCarnivore",
 				"isCorrupted",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -4013,8 +4012,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -10722,8 +10720,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -11526,8 +11523,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -12661,8 +12657,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -12721,8 +12716,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -19188,8 +19182,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -19249,8 +19242,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -23341,6 +23333,41 @@
 			}
 		},
 		{
+			"name": "Super Turkey",
+			"bp": "/Game/PrimalEarth/Dinos/Dodo/Turkey_Character_BP.Turkey_Character_BP_C",
+			"dinoNameTag": "",
+			"customTag": "",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 800,
+			"dragWeight": 1000,
+			"flags": [ "canBeDragged", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 260, "sprint": 546 },
+				"swim": { "base": 1200 }
+			},
+			"movementD": {
+				"walk": { "base": 130, "sprint": 273 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 61,
+				"defaultSwingRadius": 110,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 61, "radius": 110, "stamina": 0 } ]
+			}
+		},
+		{
 			"name": "Zomdodo",
 			"bp": "/Game/PrimalEarth/Dinos/Dodo/ZombieDodo_Character_BP.ZombieDodo_Character_BP_C",
 			"dinoNameTag": "Dodo",
@@ -23423,6 +23450,45 @@
 		{
 			"name": "DodoRex",
 			"bp": "/Game/PrimalEarth/Dinos/DodoRex/DodoRex_Character_BP_FearEvolved.DodoRex_Character_BP_FearEvolved_C",
+			"dinoNameTag": "DodoRex",
+			"customTag": "DodoRex",
+			"targetingTeamName": "TargetOnlyPlayers",
+			"mass": 400,
+			"dragWeight": 1500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1300, "sprint": 2860 }
+			},
+			"movementD": {
+				"walk": { "base": 1300, "sprint": 2860 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 666,
+				"defaultSwingRadius": 870,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 666, "radius": 870, "stamina": 0 },
+					{ "name": "Flame", "interval": 9, "dmg": 0, "radius": 1, "stamina": 100 }
+				]
+			}
+		},
+		{
+			"name": "DodoRex",
+			"bp": "/Game/PrimalEarth/Dinos/DodoRex/DodoRex_Character_BP_TurkeyTrials.DodoRex_Character_BP_TurkeyTrials_C",
 			"dinoNameTag": "DodoRex",
 			"customTag": "DodoRex",
 			"targetingTeamName": "TargetOnlyPlayers",
@@ -31833,8 +31899,7 @@
 				"isBigDino",
 				"isCarnivore",
 				"isFlyerDino",
-				"preventCharacterBasing",
-				"preventNeuter"
+				"preventCharacterBasing"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -32755,8 +32820,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -32816,8 +32880,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -32877,8 +32940,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -32938,8 +33000,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -33002,8 +33063,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -33070,8 +33130,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -33131,8 +33190,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -33195,8 +33253,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"preventNeuter"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
