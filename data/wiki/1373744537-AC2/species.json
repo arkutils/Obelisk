@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "318.14.1607061352",
+	"version": "318.14.1607396076",
 	"format": "2",
 	"mod": {
 		"id": "1373744537",
@@ -406,6 +406,51 @@
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 380, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 5, "dmg": 50, "radius": 400, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Europasaurus",
+			"bp": "/Game/Mods/AC2/Europa/Europa_Character_bp.Europa_Character_bp_C",
+			"dinoNameTag": "Bronto",
+			"customTag": "Europa",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 100, "sprint": 1200 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 100, "sprint": 1200 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 18, "radius": 240, "stamina": 0 },
+					{ "name": "Stomps", "interval": 0.4, "dmg": 25, "radius": 400, "stamina": 0 }
 				]
 			}
 		},
@@ -2681,62 +2726,7 @@
 		},
 		{
 			"name": "Harpagornis",
-			"bp": "/Game/Mods/AC2/harpa/Harpa_Character_BP.Harpa_Character_BP_C",
-			"dinoNameTag": "Argent",
-			"customTag": "Argent",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 120,
-			"dragWeight": 150,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 1700,
-				"costLevel": 55,
-				"timeBase": 11900,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 230, "sprint": 772.8 },
-				"fly": { "base": 1000, "sprint": 2352 },
-				"swim": { "base": 1000 }
-			},
-			"movementD": {
-				"walk": { "base": 230, "sprint": 966 },
-				"fly": { "base": 1000, "sprint": 2940 },
-				"swim": { "base": 1000 }
-			},
-			"staminaRates": {
-				"sprint": -15,
-				"swimOrFly": -5
-			},
-			"attack": {
-				"defaultDmg": 25,
-				"defaultSwingRadius": 210,
-				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 48, "radius": 240, "stamina": 0 },
-					{ "name": "None", "interval": 8, "dmg": 60, "radius": 240, "stamina": 250 },
-					{ "name": "None", "interval": 70, "dmg": 1, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Harpagornis",
-			"bp": "/Game/Mods/AC2/harpa/Harpa_character_bp_Diving.Harpa_character_bp_Diving_C",
+			"bp": "/Game/Mods/AC2/harpa/Harpa_character_bp.Harpa_character_bp_C",
 			"dinoNameTag": "Argent",
 			"customTag": "Argent",
 			"targetingTeamName": "Carnivores_Medium",
@@ -2783,9 +2773,10 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 200,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 48, "radius": 240, "stamina": 0 },
-					{ "name": "GrabNab", "interval": 8, "dmg": 60, "radius": 240, "stamina": 250 },
-					{ "name": "Drill Run", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Attacks", "interval": 0.6, "dmg": 38, "radius": 240, "stamina": 0 },
+					{ "name": "Squawk", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Squawk(land)", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "HyperTalonPunch", "interval": 15, "dmg": 150, "radius": 250, "stamina": 280 }
 				]
 			}
 		},
@@ -3100,14 +3091,16 @@
 			"dinoNameTag": "Allo",
 			"customTag": "Australo",
 			"targetingTeamName": "Carnivores_Medium",
-			"mass": 190,
+			"mass": 330,
 			"dragWeight": 250,
 			"flags": [
+				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"isBigDino",
 				"isCarnivore"
 			],
 			"levelCaps": {
@@ -3115,9 +3108,9 @@
 				"maxLevels": 73
 			},
 			"cloning": {
-				"costBase": 1300,
+				"costBase": 1675,
 				"costLevel": 55,
-				"timeBase": 9100,
+				"timeBase": 11725,
 				"timeLevel": 385
 			},
 			"falling": {
@@ -3125,76 +3118,24 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 1680 },
-				"swim": { "base": 800 }
+				"walk": { "base": 280, "sprint": 1800 },
+				"swim": { "base": 455 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 1680 },
-				"swim": { "base": 800 }
+				"walk": { "base": 400, "sprint": 1800 },
+				"swim": { "base": 650 }
 			},
 			"staminaRates": {
 				"sprint": -6,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 20,
-				"defaultSwingRadius": 200,
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.04, "dmg": 42, "radius": 250, "stamina": 0 },
-					{ "name": "Claw", "interval": 0.7, "dmg": 38, "radius": 300, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Australovenator Subspecies",
-			"bp": "/Game/Mods/AC2/lovenator/Australoven_Character_BP_Subspecies.Australoven_Character_BP_Subspecies_C",
-			"dinoNameTag": "Allo",
-			"customTag": "Australo",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 190,
-			"dragWeight": 250,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 1300,
-				"costLevel": 55,
-				"timeBase": 9100,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 400, "sprint": 2200 },
-				"swim": { "base": 500 }
-			},
-			"movementD": {
-				"walk": { "base": 400, "sprint": 2200 },
-				"swim": { "base": 500 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 20,
-				"defaultSwingRadius": 200,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.04, "dmg": 42, "radius": 250, "stamina": 0 },
-					{ "name": "Claw", "interval": 0.7, "dmg": 38, "radius": 300, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.04, "dmg": 35, "radius": 220, "stamina": 0 },
+					{ "name": "Claws", "interval": 0.4, "dmg": 25, "radius": 220, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},

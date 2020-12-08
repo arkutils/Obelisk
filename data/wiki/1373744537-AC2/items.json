@@ -1,5 +1,5 @@
 {
-	"version": "318.14.1606890475",
+	"version": "318.14.1607396076",
 	"format": "3",
 	"mod": {
 		"id": "1373744537",
@@ -482,6 +482,112 @@
 				"xp": 2,
 				"time": 5,
 				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Europasaurus Saddle",
+			"description": "Equip a Europasaurus with this to ride it.",
+			"bp": "/Game/Mods/AC2/Europa/PrimalItemArmor_EuropaSaddle.PrimalItemArmor_EuropaSaddle_C",
+			"icon": "/Game/PrimalEarth/Dinos/Stego/Saddle/HUD_StegoSaddle_Colorize_MIC.HUD_StegoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 17.6,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 225,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 350,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 25,
+						"type": "PrimalItemResource_Wood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 17.6,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Fertilized Europasaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Europa/PrimalItemConsumable_Egg_Europa_Fertilized.PrimalItemConsumable_Egg_Europa_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego.HUD_DinoEgg_MIC_Inst_Stego",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 55,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 13.75
+				},
+				"health": {
+					"value": 55,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 13.75
+				},
+				"stamina": {
+					"value": 55,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 13.75
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Europa/Europa_Character_bp.Europa_Character_bp_C",
+				"temperature": [ 22, 28 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.01, 0.05, 0.011337, 1 ]
+					},
+					"cyan": {
+						"intensity": 3,
+						"color": [ 0.7, 0.7, 0.035, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
 			}
 		},
 		{
@@ -4718,73 +4824,6 @@
 		{
 			"name": "Fertilized Harpagornis Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AC2/harpa/PrimalItemConsumable_Egg_Argent_Fertilized22.PrimalItemConsumable_Egg_Argent_Fertilized22_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Argent.HUD_DinoEgg_MIC_Inst_Argent",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/AC2/harpa/Harpa_Character_BP.Harpa_Character_BP_C",
-				"temperature": [ 12, 13.5 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.420848, 0.8, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 1, 1, 1, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
-			"name": "Fertilized Harpagornis Egg",
-			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AC2/harpa/PrimalItemConsumable_Egg_DivingHarpa_Fertilized.PrimalItemConsumable_Egg_DivingHarpa_Fertilized_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Argent.HUD_DinoEgg_MIC_Inst_Argent",
 			"type": "MiscConsumable/Food",
@@ -4829,7 +4868,7 @@
 				}
 			},
 			"egg": {
-				"dinoClass": "/Game/Mods/AC2/harpa/Harpa_character_bp_Diving.Harpa_character_bp_Diving_C",
+				"dinoClass": "/Game/Mods/AC2/harpa/Harpa_character_bp.Harpa_character_bp_C",
 				"temperature": [ 12, 13.5 ],
 				"hudColorisation": {
 					"red": {
@@ -5548,73 +5587,6 @@
 			},
 			"egg": {
 				"dinoClass": "/Game/Mods/AC2/lovenator/Australoven_Character_BP.Australoven_Character_BP_C",
-				"temperature": [ 29, 35 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.34902, 0.141176, 0.094118, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.435294, 0.32549, 0.376471, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
-			"name": "Fertilized Australovenator Subspecies Egg",
-			"description": "",
-			"bp": "/Game/Mods/AC2/lovenator/PrimalItemConsumable_Egg_Australo_FertilizedSubspecies.PrimalItemConsumable_Egg_Australo_FertilizedSubspecies_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Baryonyx.HUD_DinoEgg_MIC_Inst_Baryonyx",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/AC2/lovenator/Australoven_Character_BP_Subspecies.Australoven_Character_BP_Subspecies_C",
 				"temperature": [ 29, 35 ],
 				"hudColorisation": {
 					"red": {
