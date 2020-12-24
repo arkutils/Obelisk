@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "318.14.1596388005",
+	"version": "320.38.1608751410",
 	"format": "2",
 	"mod": {
 		"id": "2110243671",
@@ -110,10 +110,61 @@
 				"attacks": [
 					{ "name": "BitePeck", "interval": 0.04, "dmg": 30, "radius": 265, "stamina": 0 },
 					{ "name": "Claws", "interval": 5, "dmg": 25, "radius": 265, "stamina": 0 },
-					{ "name": "Pounce", "interval": 10, "dmg": 40, "radius": 300, "stamina": 0 },
+					{ "name": "Pounce", "interval": 10, "dmg": 40, "radius": 300, "stamina": 40 },
 					{ "name": "Hipcheck", "interval": 10, "dmg": 45, "radius": 265, "stamina": 0 },
 					{ "name": "Clop", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Rawr", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Kutsu-Ya-Ku",
+			"bp": "/Game/Mods/GrandHunt/Monsters/KutsuYaKu/KutsuYaKu_Character_bp.KutsuYaKu_Character_bp_C",
+			"dinoNameTag": "KutsuYaKu",
+			"customTag": "KutsuYaKu",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 400,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 280, "sprint": 1680 },
+				"swim": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 280, "sprint": 1680 },
+				"swim": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BitePeck", "interval": 0.4, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "Claws", "interval": 6, "dmg": 27, "radius": 300, "stamina": 0 },
+					{ "name": "KutsuStomp", "interval": 10, "dmg": 35, "radius": 300, "stamina": 100 },
+					{ "name": "Hipcheck", "interval": 10, "dmg": 50, "radius": 300, "stamina": 150 },
+					{ "name": "Clop", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ClopRoar", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
