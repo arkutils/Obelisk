@@ -1,5 +1,5 @@
 {
-	"version": "320.18.1606285276",
+	"version": "320.50.1610505956",
 	"format": "3",
 	"mod": {
 		"id": "1984129536",
@@ -828,33 +828,6 @@
 			}
 		},
 		{
-			"name": "Dinosaur Bone",
-			"description": "A very ancient looking bone, must be usefull for something!",
-			"bp": "/Game/Mods/MTSMod/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ARKBone.PrimalItemResource_ARKBone_C",
-			"icon": "/Game/Mods/MTSMod/PrimalEarth/CoreBlueprints/Resources/Icons/ARKBone_Icon.ARKBone_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 2,
-			"maxQuantity": 200,
-			"spoilage": { "time": 2678400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
 			"name": "Unassembled TEK Hover Skiff",
 			"description": "Craft this item to assemble a new TEK Hover Skiff.\n\nMTS TEK Hover Skiff Changes;\n- Cannot pick Reapers, Rock Elementals or Wyverns (wild & tamed) using tractor beam.\n- Increased crafting cost from 168 to 200 Element.\n- Requires Player Level 105 and completion of Beta Master Controller to unlock.",
 			"bp": "/Game/Mods/MTSMod/Skiff/PrimalItem_Spawner_HoverSkiff_MTS.PrimalItem_Spawner_HoverSkiff_MTS_C",
@@ -973,6 +946,60 @@
 				"food": 0.8,
 				"weight": 0.3
 			}
+		},
+		{
+			"name": "Tek Teleporter",
+			"description": "Allows instantaneous traversal between Teleporters! Requires Tek Generator to power, and Element & Tek Engram to use.",
+			"bp": "/Game/Mods/MTSMod/Teleporter/PrimalItemStructure_TekTeleporter_MTS.PrimalItemStructure_TekTeleporter_MTS_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKLargeTeleporter_Icon.TEKLargeTeleporter_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Misc" ],
+			"weight": 4,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 33,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 85,
+						"type": "PrimalItemResource_Element_C"
+					},
+					{
+						"exact": false,
+						"qty": 2500,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 600,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 150,
+						"type": "PrimalItemResource_BlackPearl_C"
+					},
+					{
+						"exact": false,
+						"qty": 1200,
+						"type": "PrimalItemResource_Polymer_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 33,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/MTSMod/Teleporter/TekTeleporter_MTS.TekTeleporter_MTS_C"
 		},
 		{
 			"name": "Vault",
