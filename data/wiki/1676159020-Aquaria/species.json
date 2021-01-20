@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "318.14.1607626986",
+	"version": "321.1.1611092537",
 	"format": "2",
 	"mod": {
 		"id": "1676159020",
@@ -8,6 +8,57 @@
 		"title": "Additional Creatures: Aquaria"
 	},
 	"species": [
+		{
+			"name": "Acrophyseter",
+			"bp": "/Game/Mods/Aquaria/FIsh/Acro/Acroph_Character_bp.Acroph_Character_bp_C",
+			"dinoNameTag": "Basilosaurus",
+			"customTag": "Acroph",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isWaterDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1000, "sprint": 3500 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 1000, "sprint": 3500 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 25, "radius": 320, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
 		{
 			"name": "Anomalocaris",
 			"bp": "/Game/Mods/Aquaria/FIsh/Anomalo/Anomalo_Character_bp.Anomalo_Character_bp_C",
@@ -530,7 +581,7 @@
 		{
 			"name": "Great White Shark",
 			"bp": "/Game/Mods/Aquaria/FIsh/GreatWhite/GreatWhite_Character_bp.GreatWhite_Character_bp_C",
-			"dinoNameTag": "Megalodon",
+			"dinoNameTag": "Mega",
 			"customTag": "Aquaria",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 300,
@@ -629,6 +680,110 @@
 					{ "name": "None", "interval": 0.2, "dmg": 29, "radius": 240, "stamina": 0 },
 					{ "name": "None", "interval": 0.2, "dmg": 29, "radius": 240, "stamina": 0 },
 					{ "name": "None", "interval": 0.2, "dmg": 29, "radius": 240, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Helicoprion",
+			"bp": "/Game/Mods/Aquaria/FIsh/Helicoprion/Helicoprion_Character_bp.Helicoprion_Character_bp_C",
+			"dinoNameTag": "Mega",
+			"customTag": "Helicoprion",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "None", "interval": 0.2, "dmg": 20, "radius": 320, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 30, "radius": 320, "stamina": 50 }
+				]
+			}
+		},
+		{
+			"name": "X-Helicoprion",
+			"bp": "/Game/Mods/Aquaria/FIsh/Helicoprion/Ocean_Helicoprion_Character_bp.Ocean_Helicoprion_Character_bp_C",
+			"dinoNameTag": "Mega",
+			"customTag": "Helicoprion",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "None", "interval": 0.2, "dmg": 20, "radius": 320, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 30, "radius": 320, "stamina": 50 }
 				]
 			}
 		},
@@ -1143,6 +1298,62 @@
 				"defaultDmg": 40,
 				"defaultSwingRadius": 170,
 				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 10, "radius": 220, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Piraiba Catfish",
+			"bp": "/Game/Mods/Aquaria/FIsh/Piraiba/Piraiba_Character_bp.Piraiba_Character_bp_C",
+			"dinoNameTag": "Piranha",
+			"customTag": "LauLau",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 300,
+			"dragWeight": 350,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 2400 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 2400 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.01, "dmg": 45, "radius": 320, "stamina": 0 },
+					{ "name": "BiteGrab", "interval": 10, "dmg": 45, "radius": 350, "stamina": 0 },
+					{ "name": "SUCC", "interval": 0, "dmg": 5, "radius": 500, "stamina": 50 },
+					{ "name": "StopSucc", "interval": 0, "dmg": 0, "radius": 500, "stamina": 0 },
+					{ "name": "ChompIntoShake", "interval": 0, "dmg": 30, "radius": 5, "stamina": 0 },
+					{ "name": "SpitVictim", "interval": 0, "dmg": 100, "radius": 5, "stamina": 0 },
+					{ "name": "PANIC", "interval": 0, "dmg": 60, "radius": 5, "stamina": 0 }
+				]
 			}
 		},
 		{
