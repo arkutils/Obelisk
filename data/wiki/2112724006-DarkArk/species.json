@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "318.14.1604887561",
+	"version": "321.1.1611603239",
 	"format": "2",
 	"mod": {
 		"id": "2112724006",
@@ -4467,8 +4467,8 @@
 				"isWaterDino"
 			],
 			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
+				"maxExperience": 261747100,
+				"maxLevels": 88
 			},
 			"cloning": {
 				"costBase": 625,
@@ -4541,62 +4541,6 @@
 				"defaultDmg": 5,
 				"defaultSwingRadius": 90,
 				"attacks": [ { "name": "Melee Player", "interval": 1, "dmg": 1, "radius": 0, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Hesperornis",
-			"bp": "/Game/Mods/DarkArk/Dinos/Hesperornis/old_DA_Hesperornis_Character_BP.old_DA_Hesperornis_Character_BP_C",
-			"dinoNameTag": "Hesperornis",
-			"customTag": "Hesperornis",
-			"targetingTeamName": "Herbivores",
-			"mass": 50,
-			"dragWeight": 120,
-			"flags": [
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"canMountOnHumans",
-				"isAmphibious",
-				"isCarnivore",
-				"isWaterDino"
-			],
-			"levelCaps": {
-				"maxExperience": 261747100,
-				"maxLevels": 88
-			},
-			"cloning": {
-				"costBase": 625,
-				"costLevel": 55,
-				"timeBase": 4375,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 125, "sprint": 187.5 },
-				"fly": { "base": 450, "sprint": 675 },
-				"swim": { "base": 210, "sprint": 420 }
-			},
-			"movementD": {
-				"walk": { "base": 125, "sprint": 187.5 },
-				"fly": { "base": 450, "sprint": 675 },
-				"swim": { "base": 210, "sprint": 420 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Land Bite", "interval": 0.2, "dmg": 1, "radius": 50, "stamina": 0 },
-					{ "name": "dive", "interval": 10, "dmg": 0, "radius": 105, "stamina": 0 },
-					{ "name": "Dive Bite", "interval": 0.2, "dmg": 25, "radius": 100, "stamina": 0 },
-					{ "name": "Atop Water Bite", "interval": 0.2, "dmg": 10, "radius": 150, "stamina": 0 }
-				]
 			}
 		},
 		{
@@ -11133,6 +11077,97 @@
 					{ "name": "Ram", "interval": 30, "dmg": 40, "radius": 430, "stamina": 0 },
 					{ "name": "Thatch Gather", "interval": 0.63, "dmg": 32, "radius": 430, "stamina": 0 }
 				]
+			}
+		},
+		{
+			"name": "Styracosaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Styraco/Nest/DA_Styraco_Character_BP_Mother.DA_Styraco_Character_BP_Mother_C",
+			"dinoNameTag": "Trike",
+			"customTag": "Styraco",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 450 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "None", "interval": 0.63, "dmg": 30, "radius": 430, "stamina": 0 },
+					{ "name": "Ram", "interval": 30, "dmg": 40, "radius": 430, "stamina": 0 },
+					{ "name": "Thatch Gather", "interval": 0.63, "dmg": 32, "radius": 430, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Styracosaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Styraco/Nest/DA_Styraco_Nest_Character_BP.DA_Styraco_Nest_Character_BP_C",
+			"dinoNameTag": "TrikeNest",
+			"customTag": "TrikeNest",
+			"targetingTeamName": "Nests",
+			"mass": 50000,
+			"dragWeight": 1000,
+			"flags": [ "canBeDragged", "canBeTorpid" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
 			}
 		},
 		{

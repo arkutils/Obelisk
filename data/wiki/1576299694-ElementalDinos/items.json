@@ -1,5 +1,5 @@
 {
-	"version": "320.38.1608525367",
+	"version": "321.1.1611573278",
 	"format": "3",
 	"mod": {
 		"id": "1576299694",
@@ -8271,7 +8271,7 @@
 					{
 						"exact": true,
 						"qty": 10,
-						"type": "PrimalItemResource_ApexDrop_NatureWyvern_C"
+						"type": "PrimalItemResource_ApexDrop_PoisonWyvern_C"
 					},
 					{
 						"exact": false,
@@ -8586,6 +8586,54 @@
 						"exact": false,
 						"qty": 100,
 						"type": "PrimalItemResource_ElementalVaporEssenceLumin_C"
+					}
+				]
+			}
+		},
+		{
+			"name": "Vapor Magmasaur",
+			"description": "Use this item to summon a vapor magmasaur.",
+			"bp": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItem_Spawner_Elemental_Custom_VaporCherufe.PrimalItem_Spawner_Elemental_Custom_VaporCherufe_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Entries/Icons/DinoEntryIcon_Cherufe_Vapor.DinoEntryIcon_Cherufe_Vapor",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Drakes" ],
+			"weight": 100,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItem_PureEssence_Vapor_C"
+					},
+					{
+						"exact": true,
+						"qty": 100,
+						"type": "PrimalItemResource_ApexDrop_WaterWyvern_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ApexDrop_FireWyvern_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_ElementalWaterCatalystCrystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_ElementalFireCatalystCrystal_C"
 					}
 				]
 			}
@@ -18324,6 +18372,63 @@
 			}
 		},
 		{
+			"name": "Fertilized Magmasaur Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_Egg_Cherufe_Vapor_Fertilized.PrimalItemConsumable_Egg_Cherufe_Vapor_Fertilized_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Eggs/Item_CherufeEgg_Vapor_Icon.Item_CherufeEgg_Vapor_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 50,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 35,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 8.75
+				},
+				"health": {
+					"value": 35,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 8.75
+				},
+				"stamina": {
+					"value": 35,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 8.75
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/ElementalDinos/Dinos/Cherufe_Character_Elemental_Vapor_BP.Cherufe_Character_Elemental_Vapor_BP_C",
+				"temperature": [ 90, 110 ]
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
 			"name": "Fertilized Nature Compy Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_Egg_Compy_Elemental_Fire_Fertilized.PrimalItemConsumable_Egg_Compy_Elemental_Fire_Fertilized_C",
@@ -22497,6 +22602,73 @@
 			}
 		},
 		{
+			"name": "Fertilized Storm Moth Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_Egg_Moth_Elemental_Fen_Fertilized.PrimalItemConsumable_Egg_Moth_Elemental_Fen_Fertilized_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Eggs/HUD_DinoEgg_MIC_Inst_MothFen.HUD_DinoEgg_MIC_Inst_MothFen",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"health": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"stamina": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/ElementalDinos/Dinos/Moth_Character_Elemental_Fen_BP.Moth_Character_Elemental_Fen_BP_C",
+				"temperature": [ -38, 38 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 0, 1, 0.797938, 1 ]
+					},
+					"cyan": {
+						"intensity": 0.6,
+						"color": [ 0, 0, 0, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
 			"name": "Fertilized Fire Moth Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_Egg_Moth_Elemental_Fire_Fertilized.PrimalItemConsumable_Egg_Moth_Elemental_Fire_Fertilized_C",
@@ -22553,6 +22725,73 @@
 					"cyan": {
 						"intensity": 0.6,
 						"color": [ 0.861719, 0.078859, 1, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Storm Moth Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_Egg_Moth_Elemental_Glacial_Fertilized.PrimalItemConsumable_Egg_Moth_Elemental_Glacial_Fertilized_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Eggs/HUD_DinoEgg_MIC_Inst_MothGlacial.HUD_DinoEgg_MIC_Inst_MothGlacial",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"health": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"stamina": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/ElementalDinos/Dinos/Moth_Character_Elemental_Glacial_BP.Moth_Character_Elemental_Glacial_BP_C",
+				"temperature": [ -38, 38 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 0, 0.074347, 1, 1 ]
+					},
+					"cyan": {
+						"intensity": 0.6,
+						"color": [ 0, 0, 0, 1 ]
 					}
 				}
 			},
@@ -22683,6 +22922,73 @@
 					"red": {
 						"intensity": 0.8,
 						"color": [ 0.957148, 0.400667, 1, 1 ]
+					},
+					"cyan": {
+						"intensity": 0.6,
+						"color": [ 0, 0, 0, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Storm Moth Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_Egg_Moth_Elemental_Vapor_Fertilized.PrimalItemConsumable_Egg_Moth_Elemental_Vapor_Fertilized_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Eggs/HUD_DinoEgg_MIC_Inst_MothVapor.HUD_DinoEgg_MIC_Inst_MothVapor",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"health": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				},
+				"stamina": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/ElementalDinos/Dinos/Moth_Character_Elemental_Vapor_BP.Moth_Character_Elemental_Vapor_BP_C",
+				"temperature": [ -38, 38 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.8,
+						"color": [ 1, 0.157705, 0, 1 ]
 					},
 					"cyan": {
 						"intensity": 0.6,
@@ -28615,371 +28921,6 @@
 			"weaponTemplate": "/Game/Mods/ElementalDinos/Misc/WeapEmptyCryopod_NoDebuff.WeapEmptyCryopod_NoDebuff_C"
 		},
 		{
-			"name": "Festive Dino Candy",
-			"description": "Has a curious effect when consumed by a dinosaur.",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_FestiveDinoCandy.PrimalItemConsumable_FestiveDinoCandy_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/HUD_ChristmasCandy_Colorize.HUD_ChristmasCandy_Colorize",
-			"type": "MiscConsumable/Food",
-			"folders": [],
-			"weight": 0.1,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
-			"name": "Holiday Tree",
-			"description": "This is the perfect tree to use when celebrating the winter solstace!",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_ChristmasTree.PrimalItemStructure_ChristmasTree_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/ChristmasTree_Icon.ChristmasTree_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"maxQuantity": 100,
-			"spoilage": { "time": 1814400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 12,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_MistleToe_C"
-					},
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 40,
-						"type": "PrimalItemResource_Thatch_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 12,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Christmas_Tree/Furniture_ChristmasTree.Furniture_ChristmasTree_C"
-		},
-		{
-			"name": "Snowman",
-			"description": "Put a hat on it for extra fun!",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Snowman.PrimalItemStructure_Snowman_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/Snowman_Icon.Snowman_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"maxQuantity": 100,
-			"spoilage": { "time": 1814400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 18,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 7,
-						"type": "PrimalItemResource_MistleToe_C"
-					},
-					{
-						"exact": false,
-						"qty": 8,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemConsumable_Veggie_Rockarrot_C"
-					},
-					{
-						"exact": false,
-						"qty": 5,
-						"type": "PrimalItemResource_Obsidian_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Fibers_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 18,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Christmas_Tree/Furniture_Snowman.Furniture_Snowman_C"
-		},
-		{
-			"name": "Holiday Stocking",
-			"description": "An oversized sock that adds jolliness to any holiday. Requires attaching to a wall.",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Stocking.PrimalItemStructure_Stocking_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/Stocking_Icon.Stocking_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"maxQuantity": 100,
-			"spoilage": { "time": 1814400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 4,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemResource_MistleToe_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 8,
-						"type": "PrimalItemResource_Hide_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 4,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Stocking/Sign_Wall_Stocking.Sign_Wall_Stocking_C"
-		},
-		{
-			"name": "Gift Box",
-			"description": "Put items in this and inscribe a Tribemember's name, and only they will be able to open it, with a bang!",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_StorageBox_ChristmasGift.PrimalItemStructure_StorageBox_ChristmasGift_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/Present2_Icon.Present2_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"maxQuantity": 100,
-			"spoilage": { "time": 1814400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 9,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 3,
-						"type": "PrimalItemResource_MistleToe_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Thatch_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Fibers_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 9,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Christmas_Gift/StorageBox_ChristmasGift.StorageBox_ChristmasGift_C"
-		},
-		{
-			"name": "Wreath",
-			"description": "A decorative collection of leaves that make any room festive. Requires attaching to a wall.",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Wreath.PrimalItemStructure_Wreath_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/Wreath_Icon.Wreath_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"maxQuantity": 100,
-			"spoilage": { "time": 1814400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 7,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 4,
-						"type": "PrimalItemResource_MistleToe_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_Thatch_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_Fibers_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 7,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Wreath/Furniture_Wall_Wreath.Furniture_Wall_Wreath_C"
-		},
-		{
-			"name": "Holiday Lights",
-			"description": "A decorative string of lights that make any room festive.  Requires attaching to a wall.",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_XmasLights.PrimalItemStructure_XmasLights_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/ChristmasLight_Icon.ChristmasLight_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"maxQuantity": 100,
-			"spoilage": { "time": 1814400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 3,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_MistleToe_C"
-					},
-					{
-						"exact": false,
-						"qty": 3,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Crystal_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 3,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/lightCable/Furniture_WallChain_XmasLights.Furniture_WallChain_XmasLights_C"
-		},
-		{
-			"name": "Coal",
-			"description": "Have you been naughty?",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Coal.PrimalItemResource_Coal_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/Coal_Icon.Coal_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 5,
-			"maxQuantity": 200,
-			"spoilage": { "time": 1814400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
-			"name": "Mistletoe",
-			"description": "Have you been nice?",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_MistleToe.PrimalItemResource_MistleToe_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/Mistletoe_Icon.Mistletoe_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 1,
-			"maxQuantity": 200,
-			"spoilage": { "time": 1814400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
 			"name": "Elemental absorber",
 			"description": "When activated, will absorb elemental essence from nearby elemental creatures and synthesize crystals.  ",
 			"bp": "/Game/Mods/ElementalDinos/Structures/PrimalItemStructure_Absorber.PrimalItemStructure_Absorber_C",
@@ -33802,7 +33743,7 @@
 					{
 						"exact": false,
 						"qty": 1,
-						"type": "PrimalItemResource_ApexDrop_NatureWyvern_C"
+						"type": "PrimalItemResource_ApexDrop_PoisonWyvern_C"
 					}
 				]
 			},

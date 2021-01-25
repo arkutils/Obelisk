@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "320.38.1608525367",
+	"version": "321.1.1611573278",
 	"format": "2",
 	"mod": {
 		"id": "1576299694",
@@ -5353,6 +5353,67 @@
 						"name": "Throw Snow Friendly", "interval": 3, "dmg": 32, "radius": 400, "stamina": 75,
 						"isProjectile": true
 					}
+				]
+			}
+		},
+		{
+			"name": "Magmasaur (Vapor)",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Cherufe_Character_Elemental_Vapor_BP.Cherufe_Character_Elemental_Vapor_BP_C",
+			"dinoNameTag": "LavaLizard_Vapor",
+			"customTag": "LavaLizard",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 550,
+			"dragWeight": 555,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1000, "sprint": 875 },
+				"swim": { "base": 600, "sprint": 525 }
+			},
+			"movementD": {
+				"walk": { "base": 1000, "sprint": 2625 },
+				"swim": { "base": 600, "sprint": 1575 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 82,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 240, "radius": 450, "stamina": 10 },
+					{
+						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					},
+					{ "name": "VentForge", "interval": 30, "dmg": 70, "radius": 2000, "stamina": 2 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 120, "radius": 350, "stamina": 10 },
+					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 20, "dmg": 120, "radius": 450, "stamina": 10 },
+					{ "name": "Taunt", "interval": 20, "dmg": 120, "radius": 450, "stamina": 150 }
 				]
 			}
 		},
@@ -12564,6 +12625,61 @@
 			}
 		},
 		{
+			"name": "Lymantria (Fen)",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Moth_Character_Elemental_Fen_BP.Moth_Character_Elemental_Fen_BP_C",
+			"dinoNameTag": "Moth_Fen",
+			"customTag": "Moth",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375,
+				"costLevel": 55,
+				"timeBase": 2625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 110, "sprint": 220 },
+				"fly": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 110, "sprint": 242 },
+				"fly": { "base": 600, "sprint": 1320 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.225
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.67, "dmg": 72, "radius": 200, "stamina": 5 },
+					{ "name": "LaunchProj", "interval": 6, "dmg": 18, "radius": 200, "stamina": 25 },
+					{ "name": "DropSpores", "interval": 17, "dmg": 18, "radius": 200, "stamina": 25 }
+				]
+			}
+		},
+		{
 			"name": "Lymantria (Fire)",
 			"bp": "/Game/Mods/ElementalDinos/Dinos/Moth_Character_Elemental_Fire_BP.Moth_Character_Elemental_Fire_BP_C",
 			"dinoNameTag": "Moth_Fire",
@@ -12614,6 +12730,61 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.67, "dmg": 18, "radius": 200, "stamina": 5 },
 					{ "name": "DropSpores", "interval": 17, "dmg": 18, "radius": 200, "stamina": 25 }
+				]
+			}
+		},
+		{
+			"name": "Lymantria (Glacial)",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Moth_Character_Elemental_Glacial_BP.Moth_Character_Elemental_Glacial_BP_C",
+			"dinoNameTag": "Moth_Glacial",
+			"customTag": "Moth",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375,
+				"costLevel": 55,
+				"timeBase": 2625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 110, "sprint": 220 },
+				"fly": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 110, "sprint": 242 },
+				"fly": { "base": 600, "sprint": 1320 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.225
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.67, "dmg": 72, "radius": 200, "stamina": 5 },
+					{ "name": "ThrowRock", "interval": 6, "dmg": 18, "radius": 200, "stamina": 25 },
+					{ "name": "Spores", "interval": 17, "dmg": 0, "radius": 0, "stamina": 25 }
 				]
 			}
 		},
@@ -12672,9 +12843,9 @@
 			}
 		},
 		{
-			"name": "Storm moth",
+			"name": "Lymantria (Storm)",
 			"bp": "/Game/Mods/ElementalDinos/Dinos/Moth_Character_Elemental_Storm_BP.Moth_Character_Elemental_Storm_BP_C",
-			"dinoNameTag": "Moth",
+			"dinoNameTag": "Moth_Storm",
 			"customTag": "Moth",
 			"targetingTeamName": "Herbivores",
 			"mass": 190,
@@ -12720,12 +12891,70 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 370,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.67, "dmg": 18, "radius": 200, "stamina": 5 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 72, "radius": 200, "stamina": 5 },
 					{
 						"name": "Lightning", "interval": 3, "dmg": 18, "radius": 200, "stamina": 75,
 						"isProjectile": true
 					},
 					{ "name": "DropSpores", "interval": 10, "dmg": 18, "radius": 200, "stamina": 25 }
+				]
+			}
+		},
+		{
+			"name": "Lymantria (Vapor)",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Moth_Character_Elemental_Vapor_BP.Moth_Character_Elemental_Vapor_BP_C",
+			"dinoNameTag": "Moth_Vapor",
+			"customTag": "Moth",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 375,
+				"costLevel": 55,
+				"timeBase": 2625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 110, "sprint": 220 },
+				"fly": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 110, "sprint": 242 },
+				"fly": { "base": 600, "sprint": 1320 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.225
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.67, "dmg": 72, "radius": 200, "stamina": 5 },
+					{
+						"name": "BreathAttack", "interval": 3, "dmg": 18, "radius": 200, "stamina": 25,
+						"isProjectile": true
+					},
+					{ "name": "DropSpores", "interval": 17, "dmg": 18, "radius": 200, "stamina": 25 }
 				]
 			}
 		},
@@ -20269,51 +20498,6 @@
 					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 280, "stamina": 0 },
 					{ "name": "None", "interval": 0.63, "dmg": 96, "radius": 560, "stamina": 100 },
 					{ "name": "WaterExplode", "interval": 5, "dmg": 100, "radius": 500, "stamina": 100 }
-				]
-			}
-		},
-		{
-			"name": "GachaClaus",
-			"bp": "/Game/Mods/ElementalDinos/Extinction/Dinos/Gacha/Gacha_Claus_Character_BP.Gacha_Claus_Character_BP_C",
-			"dinoNameTag": "Gacha",
-			"customTag": "Gacha",
-			"targetingTeamName": "Herbivores",
-			"mass": 400,
-			"dragWeight": 350,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 1550,
-				"costLevel": 55,
-				"timeBase": 10850,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 750 },
-				"swim": { "base": 200 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 750 },
-				"swim": { "base": 200 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 150,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.67, "dmg": 32, "radius": 200, "stamina": 0 },
-					{ "name": "MeleeSmash", "interval": 0.7, "dmg": 30, "radius": 150, "stamina": 0 },
-					{ "name": "Gather", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		}
