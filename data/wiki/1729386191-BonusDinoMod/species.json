@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "318.9.1605841401",
+	"version": "322.10.1613287740",
 	"format": "2",
 	"mod": {
 		"id": "1729386191",
@@ -381,6 +381,63 @@
 			}
 		},
 		{
+			"name": "Padillasaurus",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Padilla/Padilla_Character_BP.Padilla_Character_BP_C",
+			"dinoNameTag": "Bronto",
+			"customTag": "Padilla",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 330,
+			"dragWeight": 450,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 70, "sprint": 330 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 100, "sprint": 330 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "FrontStomps", "interval": 0.1, "dmg": 35, "radius": 300, "stamina": 0 },
+					{ "name": "BackStomps", "interval": 0.1, "dmg": 35, "radius": 300, "stamina": 0 },
+					{ "name": "LeftTail", "interval": 2, "dmg": 42, "radius": 475, "stamina": 0 },
+					{ "name": "RightTail", "interval": 2, "dmg": 42, "radius": 475, "stamina": 0 },
+					{ "name": "FearRoar", "interval": 30, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "CourageRoar", "interval": 30, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Taunt", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Stomp", "interval": 5, "dmg": 55, "radius": 450, "stamina": 50 }
+				]
+			}
+		},
+		{
 			"name": "Skorpiovenator",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Skorpiovenator/Scorpiovenator_Character_BP.Scorpiovenator_Character_BP_C",
 			"dinoNameTag": "Carno",
@@ -539,50 +596,6 @@
 			}
 		},
 		{
-			"name": "Skeletal Carnotaurus",
-			"bp": "/Game/Mods/BonusDinoMod/PrimalEarth/Dinos/Carno/Bone_MegaCarno_Character_BP.Bone_MegaCarno_Character_BP_C",
-			"dinoNameTag": "Elite Carno",
-			"customTag": "Carno",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 222,
-			"dragWeight": 250,
-			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 650,
-				"costLevel": 55,
-				"timeBase": 4550,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 550, "sprint": 1309 },
-				"swim": { "base": 400 }
-			},
-			"movementD": {
-				"walk": { "base": 550, "sprint": 1540 },
-				"swim": { "base": 400 }
-			},
-			"staminaRates": {
-				"sprint": -15,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 80,
-				"defaultSwingRadius": 180,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 80, "radius": 180, "stamina": 0 },
-					{ "name": "Gore", "interval": 0.5, "dmg": 80, "radius": 190, "stamina": 0 }
-				]
-			}
-		},
-		{
 			"name": "Skeletal Rex",
 			"bp": "/Game/Mods/BonusDinoMod/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
 			"dinoNameTag": "Bone Rex",
@@ -679,67 +692,6 @@
 				"defaultDmg": 90,
 				"defaultSwingRadius": 1000,
 				"attacks": [ { "name": "melee", "interval": 1.2, "dmg": 90, "radius": 1000, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Dodo Wyvern",
-			"bp": "/Game/Mods/BonusDinoMod/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 800,
-			"dragWeight": 1000,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino",
-				"preventCharacterBasing"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 2050,
-				"costLevel": 55,
-				"timeBase": 14350,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 1300 },
-				"fly": { "base": 3000, "sprint": 2000 },
-				"swim": { "base": 3000 }
-			},
-			"movementD": {
-				"walk": { "base": 1300 },
-				"fly": { "base": 3000, "sprint": 2000 },
-				"swim": { "base": 3000 }
-			},
-			"staminaRates": { "swimOrFly": -3 },
-			"attack": {
-				"defaultDmg": 160,
-				"defaultSwingRadius": 1200,
-				"attacks": [
-					{ "name": "Bite (AI)", "interval": 1, "dmg": 600, "radius": 1000, "stamina": 10 },
-					{
-						"name": "Breathe_Lightning", "interval": 6.5, "dmg": 0, "radius": 0, "stamina": 125,
-						"isProjectile": true
-					},
-					{ "name": "Breathe_Fire", "interval": 5, "dmg": 0, "radius": 0, "stamina": 125 },
-					{
-						"name": "Breathe_Poison", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
-						"isProjectile": true
-					}
-				]
 			}
 		}
 	]
