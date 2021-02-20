@@ -1,5 +1,5 @@
 {
-	"version": "322.10.1613580570",
+	"version": "322.15.1613845774",
 	"format": "3",
 	"mod": {
 		"id": "2112724006",
@@ -1674,7 +1674,7 @@
 		{
 			"name": "Fertilized Angler Egg",
 			"description": "Eat it to gain tremendous nourishment",
-			"bp": "/Game/Mods/DarkArk/Dinos/Angler/DA_PrimalItemConsumable_UnderwaterEgg_Angler.DA_PrimalItemConsumable_UnderwaterEgg_Angler_C",
+			"bp": "/Game/Mods/DarkArk/Dinos/Anglerfish/DA_PrimalItemConsumable_UnderwaterEgg_Angler.DA_PrimalItemConsumable_UnderwaterEgg_Angler_C",
 			"icon": "/Game/PrimalEarth/Items/FishEgg/HUD_FishEgg_Colorize_MIC_Angler.HUD_FishEgg_Colorize_MIC_Angler",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
@@ -6671,7 +6671,7 @@
 				}
 			},
 			"egg": {
-				"dinoClass": "/Game/Mods/DarkArk/Dinos/Oviraptor/DA_Oviraptor_Character_BP.DA_Oviraptor_Character_BP_C",
+				"dinoClass": "/Game/Mods/DarkArk/Dinos/Oviraptor/Baby/DA_Oviraptor_Character_BP_Child.DA_Oviraptor_Character_BP_Child_C",
 				"temperature": [ 50, 55 ],
 				"hudColorisation": {
 					"red": {
@@ -10576,7 +10576,7 @@
 					{
 						"exact": false,
 						"qty": 1,
-						"type": "DA_PrimalItemArmor_6_ExtraordinarySaddle_C"
+						"type": "DA_PrimalItemArmor_5_ExceptionalSaddle_C"
 					}
 				]
 			},
@@ -10652,7 +10652,7 @@
 			}
 		},
 		{
-			"name": "Large Fertilized Tropeognathus Egg",
+			"name": "Gargantuan Tropeognathus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes. If fertilized, must be hatched using a Living Nest.",
 			"bp": "/Game/Mods/DarkArk/Dinos/Tropeognathus/Nest/DA_PrimalItemConsumable_Egg_Tropeognathus_Fertilized.DA_PrimalItemConsumable_Egg_Tropeognathus_Fertilized_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Tropeognathus.HUD_DinoEgg_MIC_Inst_Tropeognathus",
@@ -12773,7 +12773,7 @@
 					},
 					{
 						"exact": false,
-						"qty": 10,
+						"qty": 5,
 						"type": "DA_PrimalItemConsumable_Salmon_Egg_C"
 					}
 				]
@@ -13453,6 +13453,32 @@
 					"forceUseOnDino": true,
 					"duration": 3
 				}
+			}
+		},
+		{
+			"name": "Human Hair",
+			"description": "A lock of human hair!",
+			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Hair.DA_PrimalItemResource_Hair_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Hair_Icon.Hair_Icon",
+			"type": "Resource",
+			"folders": [],
+			"weight": 0.01,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
 			}
 		},
 		{
@@ -16076,6 +16102,55 @@
 				"resourceMult": 0.5
 			},
 			"structureTemplate": "/Game/Mods/DarkArk/Structures/Tent/DA_Tent_BP.DA_Tent_BP_C"
+		},
+		{
+			"name": "Feeding Trough",
+			"description": "Put food for your nearby pets in this, and they'll automatically eat it when hungry!",
+			"bp": "/Game/Mods/DarkArk/Structures/Trough/DA_PrimalItemStructure_FeedingTrough.DA_PrimalItemStructure_FeedingTrough_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/FeedingTrough_Icon.FeedingTrough_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 120,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 60,
+						"type": "PrimalItemResource_Thatch_C"
+					},
+					{
+						"exact": false,
+						"qty": 40,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 8,
+						"type": "PrimalItemResource_Metal_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/DarkArk/Structures/Trough/DA_FeedingTrough.DA_FeedingTrough_C"
 		},
 		{
 			"name": "Explosive Arrow",

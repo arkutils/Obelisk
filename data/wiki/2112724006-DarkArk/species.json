@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "322.10.1613580570",
+	"version": "322.15.1613845774",
 	"format": "2",
 	"mod": {
 		"id": "2112724006",
@@ -57,7 +57,8 @@
 				"canBeTorpid",
 				"canDrag",
 				"isBigDino",
-				"isCarnivore"
+				"isCarnivore",
+				"isWaterDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -227,7 +228,7 @@
 		},
 		{
 			"name": "Anglerfish",
-			"bp": "/Game/Mods/DarkArk/Dinos/Angler/DA_Angler_Character_BP.DA_Angler_Character_BP_C",
+			"bp": "/Game/Mods/DarkArk/Dinos/Anglerfish/Baby/DA_Angler_Character_BP_Child.DA_Angler_Character_BP_Child_C",
 			"dinoNameTag": "Angler",
 			"customTag": "Angler",
 			"targetingTeamName": "Carnivore_Water",
@@ -275,7 +276,7 @@
 		},
 		{
 			"name": "Anglerfish",
-			"bp": "/Game/Mods/DarkArk/Dinos/Anglerfish/Baby/DA_Angler_Character_BP_Child.DA_Angler_Character_BP_Child_C",
+			"bp": "/Game/Mods/DarkArk/Dinos/Anglerfish/DA_Angler_Character_BP.DA_Angler_Character_BP_C",
 			"dinoNameTag": "Angler",
 			"customTag": "Angler",
 			"targetingTeamName": "Carnivore_Water",
@@ -426,12 +427,64 @@
 		},
 		{
 			"name": "Ankylosaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Ankylo/Nest/DA_Ankylo_Character_BP_Mother.DA_Ankylo_Character_BP_Mother_C",
+			"dinoNameTag": "Anky",
+			"customTag": "Anky",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 300,
+			"dragWeight": 160,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 50, "radius": 250, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Ankylosaurus",
 			"bp": "/Game/Mods/DarkArk/Dinos/Ankylo/Nest/DA_Ankylo_Nest_Character_BP.DA_Ankylo_Nest_Character_BP_C",
 			"dinoNameTag": "AnkyloNest",
 			"customTag": "AnkyloNest",
-			"targetingTeamName": "Herbivores",
+			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 25,
+			"dragWeight": 1000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -821,7 +874,7 @@
 		{
 			"name": "Argentavis",
 			"bp": "/Game/Mods/DarkArk/Dinos/Argent/Nest/DA_Argent_Nest_Character_BP.DA_Argent_Nest_Character_BP_C",
-			"dinoNameTag": "DiloNest",
+			"dinoNameTag": "ArgentNest",
 			"customTag": "ArgentNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
@@ -2103,6 +2156,38 @@
 						"isProjectile": true
 					}
 				]
+			}
+		},
+		{
+			"name": "Cnidaria",
+			"bp": "/Game/Mods/DarkArk/Dinos/Cnidaria/DA_Cnidaria_Character_BP.DA_Cnidaria_Character_BP_C",
+			"dinoNameTag": "Cnidaria",
+			"customTag": "PackDino",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 100,
+			"dragWeight": 21,
+			"flags": [ "canBeDragged", "canDrag", "isCarnivore", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 75 },
+				"swim": { "base": 75 }
+			},
+			"movementD": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 } ]
 			}
 		},
 		{
@@ -3572,6 +3657,47 @@
 		},
 		{
 			"name": "Dodo",
+			"bp": "/Game/Mods/DarkArk/Dinos/Dodo/Nest/DA_Dodo_Character_BP_Father.DA_Dodo_Character_BP_Father_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "Dodo",
+			"targetingTeamName": "Herbivores_Skittish",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65, "sprint": 136.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5, "sprint": 95.5 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Dodo",
 			"bp": "/Game/Mods/DarkArk/Dinos/Dodo/Nest/DA_Dodo_Nest_Character_BP.DA_Dodo_Nest_Character_BP_C",
 			"dinoNameTag": "DodoNest",
 			"customTag": "DodoNest",
@@ -4042,6 +4168,36 @@
 			}
 		},
 		{
+			"name": "Eurypterid",
+			"bp": "/Game/Mods/DarkArk/Dinos/Euryp/DA_Euryp_Character.DA_Euryp_Character_C",
+			"dinoNameTag": "Euryp",
+			"customTag": "Euryp",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [ "canBeTorpid", "isWaterDino" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 90 }
+			},
+			"movementD": {
+				"walk": { "base": 90 }
+			},
+			"staminaRates": {},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 175,
+				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 7, "radius": 175, "stamina": 0 } ]
+			}
+		},
+		{
 			"name": "Gallimimus",
 			"bp": "/Game/Mods/DarkArk/Dinos/Galli/Baby/DA_Galli_Character_BP_Child.DA_Galli_Character_BP_Child_C",
 			"dinoNameTag": "Galli",
@@ -4095,6 +4251,54 @@
 			"dinoNameTag": "Galli",
 			"customTag": "Galli",
 			"targetingTeamName": "Herbivores_Medium",
+			"mass": 200,
+			"dragWeight": 125,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 825, "sprint": 2305 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 825, "sprint": 2305 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 170,
+				"attacks": [ { "name": "Melee", "interval": 0.4, "dmg": 8, "radius": 170, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Gallimimus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Galli/Nest/DA_Galli_Character_BP_Father.DA_Galli_Character_BP_Father_C",
+			"dinoNameTag": "Galli",
+			"customTag": "Galli",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 200,
 			"dragWeight": 125,
 			"flags": [
@@ -5183,13 +5387,19 @@
 		},
 		{
 			"name": "Kairuku",
-			"bp": "/Game/Mods/DarkArk/Dinos/Kairuku/Nest/DA_Kairuku_Nest_Character_BP.DA_Kairuku_Nest_Character_BP_C",
-			"dinoNameTag": "KairukuNest",
-			"customTag": "KairukuNest",
-			"targetingTeamName": "Herbivores",
-			"mass": 50000,
+			"bp": "/Game/Mods/DarkArk/Dinos/Kairuku/Nest/DA_Kairuku_Character_BP_Mother.DA_Kairuku_Character_BP_Mother_C",
+			"dinoNameTag": "Kairu",
+			"customTag": "Kairu",
+			"targetingTeamName": "Herbivores_Skittish",
+			"mass": 50,
 			"dragWeight": 35,
-			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isCarnivore"
+			],
 			"levelCaps": {
 				"maxExperience": 261747100,
 				"maxLevels": 88
@@ -5220,6 +5430,53 @@
 				"defaultDmg": 8,
 				"defaultSwingRadius": 105,
 				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 8, "radius": 105, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Kairuku",
+			"bp": "/Game/Mods/DarkArk/Dinos/Kairuku/Nest/DA_Kairuku_Nest_Character_BP.DA_Kairuku_Nest_Character_BP_C",
+			"dinoNameTag": "KairukuNest",
+			"customTag": "KairukuNest",
+			"targetingTeamName": "Herbivores_Skittish",
+			"mass": 50000,
+			"dragWeight": 35,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1025,
+				"costLevel": 27.5,
+				"timeBase": 7175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 70, "sprint": 147 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 38.5, "sprint": 80.8 },
+				"swim": { "base": 247.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 105,
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 3, "radius": 180, "stamina": 0 } ]
 			}
 		},
 		{
@@ -6127,7 +6384,7 @@
 			"bp": "/Game/Mods/DarkArk/Dinos/Megalania/Baby/DA_Megalania_Character_BP_Child.DA_Megalania_Character_BP_Child_C",
 			"dinoNameTag": "Megalania",
 			"customTag": "Megalania",
-			"targetingTeamName": "",
+			"targetingTeamName": "Carnivores_Medium_Fierce",
 			"mass": 100,
 			"dragWeight": 35,
 			"flags": [
@@ -6135,7 +6392,8 @@
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
-				"isCarnivore"
+				"isCarnivore",
+				"isWaterDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -6180,7 +6438,7 @@
 			"bp": "/Game/Mods/DarkArk/Dinos/Megalania/DA_Megalania_Character_BP.DA_Megalania_Character_BP_C",
 			"dinoNameTag": "Megalania",
 			"customTag": "Megalania",
-			"targetingTeamName": "",
+			"targetingTeamName": "Carnivores_Medium_Fierce",
 			"mass": 100,
 			"dragWeight": 35,
 			"flags": [
@@ -6424,7 +6682,8 @@
 				"allowRiding",
 				"canBeTorpid",
 				"canDrag",
-				"isCarnivore"
+				"isCarnivore",
+				"isWaterDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -7593,7 +7852,89 @@
 		},
 		{
 			"name": "Oviraptor",
+			"bp": "/Game/Mods/DarkArk/Dinos/Oviraptor/Baby/DA_Oviraptor_Character_BP_Child.DA_Oviraptor_Character_BP_Child_C",
+			"dinoNameTag": "Ovi",
+			"customTag": "Ovi",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 90,
+			"dragWeight": 40,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 1500,
+				"costLevel": 55,
+				"timeBase": 10500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 320, "sprint": 902.4 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 208, "sprint": 674.5 },
+				"swim": { "base": 195 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 115,
+				"attacks": [ { "name": "None", "interval": 0.1, "dmg": 5, "radius": 115, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Oviraptor",
 			"bp": "/Game/Mods/DarkArk/Dinos/Oviraptor/DA_Oviraptor_Character_BP.DA_Oviraptor_Character_BP_C",
+			"dinoNameTag": "Ovi",
+			"customTag": "Ovi",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 90,
+			"dragWeight": 40,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 1500,
+				"costLevel": 55,
+				"timeBase": 10500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 320, "sprint": 902.4 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 208, "sprint": 674.5 },
+				"swim": { "base": 195 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 115,
+				"attacks": [ { "name": "None", "interval": 0.1, "dmg": 5, "radius": 115, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Oviraptor",
+			"bp": "/Game/Mods/DarkArk/Dinos/Oviraptor/Nest/DA_Oviraptor_Character_BP_Mother.DA_Oviraptor_Character_BP_Mother_C",
 			"dinoNameTag": "Ovi",
 			"customTag": "Ovi",
 			"targetingTeamName": "Carnivores_Low",
@@ -8001,57 +8342,6 @@
 			"dinoNameTag": "Para",
 			"customTag": "Parasaur",
 			"targetingTeamName": "Herbivores_Medium",
-			"mass": 200,
-			"dragWeight": 125,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"levelCaps": {
-				"maxExperience": 261747100,
-				"maxLevels": 88
-			},
-			"cloning": {
-				"costBase": 350,
-				"costLevel": 38.5,
-				"timeBase": 2450,
-				"timeLevel": 269.5
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 916.5 },
-				"swim": { "base": 450 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 611 },
-				"swim": { "base": 450 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 12,
-				"defaultSwingRadius": 100,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 10, "radius": 100, "stamina": 5 },
-					{ "name": "AlertPulse", "interval": 0, "dmg": 0, "radius": 0, "stamina": 15 },
-					{ "name": "Frighten", "interval": 120, "dmg": 0, "radius": 0, "stamina": 80 }
-				]
-			}
-		},
-		{
-			"name": "Parasaur",
-			"bp": "/Game/Mods/DarkArk/Dinos/Para/Nest/DA_Para_Character_BP_Mother.DA_Para_Character_BP_Mother_C",
-			"dinoNameTag": "Para",
-			"customTag": "Parasaur",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 200,
 			"dragWeight": 125,
 			"flags": [
@@ -8829,61 +9119,6 @@
 		},
 		{
 			"name": "Pteranodon",
-			"bp": "/Game/Mods/DarkArk/Dinos/Ptero/Nest/DA_Ptero_Character_BP_Mother.DA_Ptero_Character_BP_Mother_C",
-			"dinoNameTag": "Ptera",
-			"customTag": "Ptera",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 190,
-			"dragWeight": 149,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 261747100,
-				"maxLevels": 88
-			},
-			"cloning": {
-				"costBase": 1975,
-				"costLevel": 55,
-				"timeBase": 13825,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 260, "sprint": 715 },
-				"fly": { "base": 600, "sprint": 1650 },
-				"swim": { "base": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 260, "sprint": 822.2 },
-				"fly": { "base": 600, "sprint": 1897.5 },
-				"swim": { "base": 600 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -0.325
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 200,
-				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 15, "radius": 200, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
-					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 50, "radius": 260, "stamina": 90 }
-				]
-			}
-		},
-		{
-			"name": "Pteranodon",
 			"bp": "/Game/Mods/DarkArk/Dinos/Ptero/Nest/DA_Ptero_Nest_Character_BP.DA_Ptero_Nest_Character_BP_C",
 			"dinoNameTag": "PteroNest",
 			"customTag": "PteroNest",
@@ -9040,7 +9275,8 @@
 				"canDrag",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino"
+				"isFlyerDino",
+				"isWaterDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -9136,10 +9372,10 @@
 		},
 		{
 			"name": "Quetzal",
-			"bp": "/Game/Mods/DarkArk/Dinos/Quetz/Nest/DA_Quetz_Character_BP_Mother.DA_Quetz_Character_BP_Mother_C",
+			"bp": "/Game/Mods/DarkArk/Dinos/Quetz/Nest/DA_Quetz_Character_BP_Father.DA_Quetz_Character_BP_Father_C",
 			"dinoNameTag": "Quetz",
 			"customTag": "Quetz",
-			"targetingTeamName": "Carnivores_Opportunist",
+			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
 			"dragWeight": 500,
 			"flags": [
@@ -9168,12 +9404,67 @@
 			},
 			"movementW": {
 				"walk": { "base": 478.8, "sprint": 1149.1 },
-				"fly": { "base": 665, "sprint": 1596 },
+				"fly": { "base": 665, "sprint": 4788 },
 				"swim": { "base": 665 }
 			},
 			"movementD": {
 				"walk": { "base": 360, "sprint": 684 },
-				"fly": { "base": 500, "sprint": 950 },
+				"fly": { "base": 500, "sprint": 2850 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.185
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 32, "radius": 720, "stamina": 16 },
+					{ "name": "None", "interval": 1, "dmg": 32, "radius": 370, "stamina": 80 }
+				]
+			}
+		},
+		{
+			"name": "Quetzal",
+			"bp": "/Game/Mods/DarkArk/Dinos/Quetz/Nest/DA_Quetz_Character_BP_Mother.DA_Quetz_Character_BP_Mother_C",
+			"dinoNameTag": "Quetz",
+			"customTag": "Quetz",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 478.8, "sprint": 1149.1 },
+				"fly": { "base": 665, "sprint": 4788 },
+				"swim": { "base": 665 }
+			},
+			"movementD": {
+				"walk": { "base": 360, "sprint": 684 },
+				"fly": { "base": 500, "sprint": 2850 },
 				"swim": { "base": 500 }
 			},
 			"staminaRates": {
@@ -9635,7 +9926,61 @@
 			"bp": "/Game/Mods/DarkArk/Dinos/Rex/Baby/DA_Rex_Character_BP_Child.DA_Rex_Character_BP_Child_C",
 			"dinoNameTag": "Rex",
 			"customTag": "Rex",
-			"targetingTeamName": "Carnivores_Medium",
+			"targetingTeamName": "Carnivores_High_Rex",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 515, "sprint": 736.4 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 515, "sprint": 1104.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 95, "radius": 300, "stamina": 0 },
+					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (AI)", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Rex",
+			"bp": "/Game/Mods/DarkArk/Dinos/Rex/DA_Rex_Character_BP.DA_Rex_Character_BP_C",
+			"dinoNameTag": "Rex",
+			"customTag": "Rex",
+			"targetingTeamName": "Carnivores_High_Rex",
 			"mass": 400,
 			"dragWeight": 550,
 			"flags": [
@@ -9685,7 +10030,7 @@
 		},
 		{
 			"name": "Rex",
-			"bp": "/Game/Mods/DarkArk/Dinos/Rex/DA_Rex_Character_BP.DA_Rex_Character_BP_C",
+			"bp": "/Game/Mods/DarkArk/Dinos/Rex/Nest/DA_Rex_Character_BP_Father.DA_Rex_Character_BP_Father_C",
 			"dinoNameTag": "Rex",
 			"customTag": "Rex",
 			"targetingTeamName": "Carnivores_High_Rex",
@@ -10205,62 +10550,6 @@
 		},
 		{
 			"name": "Sarcosuchus",
-			"bp": "/Game/Mods/DarkArk/Dinos/Sarco/Nest/DA_Sarco_Character_BP_Mother.DA_Sarco_Character_BP_Mother_C",
-			"dinoNameTag": "Sarco",
-			"customTag": "Sarco",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 220,
-			"dragWeight": 200,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isAmphibious",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 261747100,
-				"maxLevels": 88
-			},
-			"cloning": {
-				"costBase": 550,
-				"costLevel": 55,
-				"timeBase": 3850,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 150, "sprint": 546.7 },
-				"swim": { "base": 750, "sprint": 1366.9 }
-			},
-			"movementD": {
-				"walk": { "base": 165, "sprint": 601.4 },
-				"swim": { "base": 825, "sprint": 1503.6 }
-			},
-			"staminaRates": {
-				"sprint": -20,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 35,
-				"defaultSwingRadius": 160,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.1, "dmg": 50, "radius": 160, "stamina": 10 },
-					{ "name": "Roll", "interval": 10, "dmg": 60, "radius": 160, "stamina": 95 },
-					{ "name": "Lunge", "interval": 1, "dmg": 40, "radius": 210, "stamina": 125 },
-					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 35, "radius": 160, "stamina": 30 },
-					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 35, "radius": 160, "stamina": 35 }
-				]
-			}
-		},
-		{
-			"name": "Sarcosuchus",
 			"bp": "/Game/Mods/DarkArk/Dinos/Sarco/Nest/DA_Sarco_Nest_Character_BP.DA_Sarco_Nest_Character_BP_C",
 			"dinoNameTag": "SarcoNest",
 			"customTag": "SarcoNest",
@@ -10406,7 +10695,9 @@
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
-				"canDrag"
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -10539,7 +10830,7 @@
 			"bp": "/Game/Mods/DarkArk/Dinos/Spino/Baby/DA_Spino_Character_BP_Child.DA_Spino_Character_BP_Child_C",
 			"dinoNameTag": "Spino",
 			"customTag": "Spino",
-			"targetingTeamName": "Carnivores_High",
+			"targetingTeamName": "Carnivores_High_Spino",
 			"mass": 500,
 			"dragWeight": 550,
 			"flags": [
@@ -10550,7 +10841,8 @@
 				"doStepDamage",
 				"isAmphibious",
 				"isBigDino",
-				"isCarnivore"
+				"isCarnivore",
+				"isWaterDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -10604,7 +10896,61 @@
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
-				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 80, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 70, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 70, "radius": 420, "stamina": 12 }
+				]
+			}
+		},
+		{
+			"name": "Spino",
+			"bp": "/Game/Mods/DarkArk/Dinos/Spino/Nest/DA_Spino_Character_BP_Father.DA_Spino_Character_BP_Father_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High_Spino",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
 				"isBigDino",
 				"isCarnivore"
 			],
@@ -10660,7 +11006,6 @@
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
-				"isAmphibious",
 				"isBigDino",
 				"isCarnivore"
 			],
@@ -11081,59 +11426,6 @@
 		},
 		{
 			"name": "Styracosaurus",
-			"bp": "/Game/Mods/DarkArk/Dinos/Styraco/Nest/DA_Styraco_Character_BP_Mother.DA_Styraco_Character_BP_Mother_C",
-			"dinoNameTag": "Trike",
-			"customTag": "Styraco",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 225,
-			"dragWeight": 300,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino"
-			],
-			"levelCaps": {
-				"maxExperience": 261747100,
-				"maxLevels": 88
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 150, "sprint": 607.5 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 150, "sprint": 450 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -14,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 32,
-				"defaultSwingRadius": 430,
-				"attacks": [
-					{ "name": "None", "interval": 0.63, "dmg": 30, "radius": 430, "stamina": 0 },
-					{ "name": "Ram", "interval": 30, "dmg": 40, "radius": 430, "stamina": 0 },
-					{ "name": "Thatch Gather", "interval": 0.63, "dmg": 32, "radius": 430, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Styracosaurus",
 			"bp": "/Game/Mods/DarkArk/Dinos/Styraco/Nest/DA_Styraco_Nest_Character_BP.DA_Styraco_Nest_Character_BP_C",
 			"dinoNameTag": "TrikeNest",
 			"customTag": "TrikeNest",
@@ -11184,7 +11476,8 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"isFlyerDino"
+				"isFlyerDino",
+				"isWaterDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -12301,59 +12594,6 @@
 		},
 		{
 			"name": "Triceratops",
-			"bp": "/Game/Mods/DarkArk/Dinos/Trike/Nest/DA_Trike_Character_BP_Mother.DA_Trike_Character_BP_Mother_C",
-			"dinoNameTag": "Trike",
-			"customTag": "Trike",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 225,
-			"dragWeight": 300,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 150, "sprint": 607.5 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 150, "sprint": 450 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -14,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 32,
-				"defaultSwingRadius": 430,
-				"attacks": [
-					{ "name": "None", "interval": 0.63, "dmg": 40, "radius": 430, "stamina": 0 },
-					{ "name": "Ram", "interval": 30, "dmg": 50, "radius": 430, "stamina": 0 },
-					{ "name": "Berry Gather Hit", "interval": 0.63, "dmg": 32, "radius": 430, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Triceratops",
 			"bp": "/Game/Mods/DarkArk/Dinos/Trike/Nest/DA_Trike_Nest_Character_BP.DA_Trike_Nest_Character_BP_C",
 			"dinoNameTag": "TrikeNest",
 			"customTag": "TrikeNest",
@@ -12559,7 +12799,8 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"isFlyerDino"
+				"isFlyerDino",
+				"isWaterDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -13082,55 +13323,6 @@
 		},
 		{
 			"name": "Vulture",
-			"bp": "/Game/Mods/DarkArk/Dinos/Vulture/Nest/DA_Vulture_Character_BP_Mother.DA_Vulture_Character_BP_Mother_C",
-			"dinoNameTag": "Vulture",
-			"customTag": "Dimorph",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 70,
-			"dragWeight": 70,
-			"flags": [
-				"canBeDragged",
-				"canBeTorpid",
-				"canMountOnHumans",
-				"isCarnivore",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 261747100,
-				"maxLevels": 88
-			},
-			"cloning": {
-				"costBase": 800,
-				"costLevel": 55,
-				"timeBase": 5600,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 70, "sprint": 108.5 },
-				"fly": { "base": 450, "sprint": 697.5 },
-				"swim": { "base": 450 }
-			},
-			"movementD": {
-				"walk": { "base": 70, "sprint": 108.5 },
-				"fly": { "base": 450, "sprint": 697.5 },
-				"swim": { "base": 450 }
-			},
-			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 23,
-				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "Bite", "interval": 0.6, "dmg": 23, "radius": 220, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Vulture",
 			"bp": "/Game/Mods/DarkArk/Dinos/Vulture/Nest/DA_Vulture_Nest_Character_BP.DA_Vulture_Nest_Character_BP_C",
 			"dinoNameTag": "MoschopsNest",
 			"customTag": "VultureNest",
@@ -13267,55 +13459,6 @@
 		},
 		{
 			"name": "Yutyrannus",
-			"bp": "/Game/Mods/DarkArk/Dinos/Yuty/Nest/DA_Yuty_Character_BP_Mother.DA_Yuty_Character_BP_Mother_C",
-			"dinoNameTag": "Yutyrannus",
-			"customTag": "Yutyrannus",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 5000,
-			"dragWeight": 500,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 261747100,
-				"maxLevels": 88
-			},
-			"cloning": {
-				"costBase": 2350,
-				"costLevel": 55,
-				"timeBase": 16450,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 700, "sprint": 1610 }
-			},
-			"movementD": {
-				"walk": { "base": 700, "sprint": 1610 }
-			},
-			"staminaRates": { "sprint": -40 },
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 55, "radius": 500, "stamina": 10 },
-					{ "name": "Fear", "interval": 1, "dmg": 1, "radius": 1500, "stamina": 250 },
-					{ "name": "Courage", "interval": 1, "dmg": 1, "radius": 1500, "stamina": 250 },
-					{ "name": "CourageToFollowers", "interval": 25, "dmg": 1, "radius": 1500, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Yutyrannus",
 			"bp": "/Game/Mods/DarkArk/Dinos/Yuty/Nest/DA_Yuty_Nest_Character_BP.DA_Yuty_Nest_Character_BP_C",
 			"dinoNameTag": "Dodo",
 			"customTag": "YutyNesting",
@@ -13355,8 +13498,8 @@
 		{
 			"name": "Decaying Corpse",
 			"bp": "/Game/Mods/DarkArk/Survivors/DeadSurvivors/Flies/DA_1_Fallen_Character_BP.DA_1_Fallen_Character_BP_C",
-			"dinoNameTag": "Dodo",
-			"customTag": "TrikeNesting",
+			"dinoNameTag": "FallenSurvivor1",
+			"customTag": "FallenSurvivor1",
 			"targetingTeamName": "Herbivores",
 			"mass": 50000,
 			"dragWeight": 25,
@@ -13396,8 +13539,8 @@
 		{
 			"name": "Decaying Corpse",
 			"bp": "/Game/Mods/DarkArk/Survivors/DeadSurvivors/Flies/DA_2_Fallen_Character_BP.DA_2_Fallen_Character_BP_C",
-			"dinoNameTag": "Dodo",
-			"customTag": "TrikeNesting",
+			"dinoNameTag": "FallenSurvivor2",
+			"customTag": "FallenSurvivor2",
 			"targetingTeamName": "Herbivores",
 			"mass": 50000,
 			"dragWeight": 25,
@@ -13437,8 +13580,8 @@
 		{
 			"name": "Decaying Corpse",
 			"bp": "/Game/Mods/DarkArk/Survivors/DeadSurvivors/Flies/DA_3_Fallen_Character_BP.DA_3_Fallen_Character_BP_C",
-			"dinoNameTag": "Dodo",
-			"customTag": "TrikeNesting",
+			"dinoNameTag": "FallenSurvivor3",
+			"customTag": "FallenSurvivor3",
 			"targetingTeamName": "Herbivores",
 			"mass": 50000,
 			"dragWeight": 25,
@@ -13478,8 +13621,8 @@
 		{
 			"name": "Decaying Corpse",
 			"bp": "/Game/Mods/DarkArk/Survivors/DeadSurvivors/Fog/DA_5_Fallen_Character_BP.DA_5_Fallen_Character_BP_C",
-			"dinoNameTag": "Dodo",
-			"customTag": "TrikeNesting",
+			"dinoNameTag": "FallenSurvivor5",
+			"customTag": "FallenSurvivor5",
 			"targetingTeamName": "Herbivores",
 			"mass": 50000,
 			"dragWeight": 25,
@@ -13519,8 +13662,8 @@
 		{
 			"name": "Decaying Corpse",
 			"bp": "/Game/Mods/DarkArk/Survivors/DeadSurvivors/Fog/DA_6_Fallen_Character_BP.DA_6_Fallen_Character_BP_C",
-			"dinoNameTag": "Dodo",
-			"customTag": "TrikeNesting",
+			"dinoNameTag": "FallenSurvivor6",
+			"customTag": "FallenSurvivor6",
 			"targetingTeamName": "Herbivores",
 			"mass": 50000,
 			"dragWeight": 25,
@@ -13601,8 +13744,8 @@
 		{
 			"name": "Decaying Corpse",
 			"bp": "/Game/Mods/DarkArk/Survivors/DeadSurvivors/Snow/DA_7_Fallen_Character_BP.DA_7_Fallen_Character_BP_C",
-			"dinoNameTag": "Dodo",
-			"customTag": "TrikeNesting",
+			"dinoNameTag": "FallenSurvivor7",
+			"customTag": "FallenSurvivor7",
 			"targetingTeamName": "Herbivores",
 			"mass": 50000,
 			"dragWeight": 25,
@@ -13642,8 +13785,8 @@
 		{
 			"name": "Decaying Corpse",
 			"bp": "/Game/Mods/DarkArk/Survivors/DeadSurvivors/Snow/DA_8_Fallen_Character_BP.DA_8_Fallen_Character_BP_C",
-			"dinoNameTag": "Dodo",
-			"customTag": "TrikeNesting",
+			"dinoNameTag": "FallenSurvivor8",
+			"customTag": "FallenSurvivor8",
 			"targetingTeamName": "Herbivores",
 			"mass": 50000,
 			"dragWeight": 25,
@@ -13683,8 +13826,8 @@
 		{
 			"name": "Decaying Corpse",
 			"bp": "/Game/Mods/DarkArk/Survivors/DeadSurvivors/Snow/DA_9_Fallen_Character_BP.DA_9_Fallen_Character_BP_C",
-			"dinoNameTag": "Dodo",
-			"customTag": "TrikeNesting",
+			"dinoNameTag": "FallenSurvivor9",
+			"customTag": "FallenSurvivor9",
 			"targetingTeamName": "Herbivores",
 			"mass": 50000,
 			"dragWeight": 25,
