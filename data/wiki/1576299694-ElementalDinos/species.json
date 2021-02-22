@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "321.1.1611573278",
+	"version": "322.15.1613995590",
 	"format": "2",
 	"mod": {
 		"id": "1576299694",
@@ -2419,7 +2419,6 @@
 				"isBigDino",
 				"isBossDino",
 				"isCarnivore",
-				"isFlyerDino",
 				"isRaidDino"
 			],
 			"falling": {
@@ -2428,12 +2427,10 @@
 			},
 			"movementW": {
 				"walk": { "base": 1200, "sprint": 3600 },
-				"fly": { "base": 1500, "sprint": 2475 },
 				"swim": { "base": 1500 }
 			},
 			"movementD": {
 				"walk": { "base": 1200, "sprint": 3600 },
-				"fly": { "base": 1500, "sprint": 2475 },
 				"swim": { "base": 1500 }
 			},
 			"staminaRates": {
@@ -4473,6 +4470,116 @@
 					{ "name": "Melee", "interval": 0.15, "dmg": 35, "radius": 250, "stamina": 0 },
 					{ "name": "SwimStun", "interval": 7, "dmg": 25, "radius": 300, "stamina": 20 },
 					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Fen Basilisk",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Basilisk_Character_Elemental_Fen_BP.Basilisk_Character_Elemental_Fen_BP_C",
+			"dinoNameTag": "Basilisk",
+			"customTag": "Basilisk",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 425,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1950,
+				"costLevel": 55,
+				"timeBase": 13650,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1008 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1680 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.67, "dmg": 55, "radius": 275, "stamina": 10 },
+					{
+						"name": "Ranged", "interval": 8, "dmg": 55, "radius": 300, "stamina": 65,
+						"isProjectile": true
+					},
+					{ "name": "Gaze", "interval": 20, "dmg": 0, "radius": 0, "stamina": 700 },
+					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Vapor Basilisk",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Basilisk_Character_Elemental_Vapor_BP.Basilisk_Character_Elemental_Vapor_BP_C",
+			"dinoNameTag": "Basilisk_Vapor",
+			"customTag": "Basilisk",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 425,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1950,
+				"costLevel": 55,
+				"timeBase": 13650,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1008 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1680 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.67, "dmg": 100, "radius": 275, "stamina": 10 },
+					{
+						"name": "Ranged", "interval": 4, "dmg": 55, "radius": 300, "stamina": 65,
+						"isProjectile": true
+					},
+					{ "name": "Gaze", "interval": 20, "dmg": 0, "radius": 0, "stamina": 700 },
+					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
@@ -8174,6 +8281,162 @@
 					{ "name": "Bite - UnTamed", "interval": 1, "dmg": 15, "radius": 200, "stamina": 0 },
 					{ "name": "Shock - UnTamed", "interval": 10, "dmg": 35, "radius": 1000, "stamina": 0 },
 					{ "name": "Shock - Tamed", "interval": 3, "dmg": 5, "radius": 1000, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Fen Enforcer",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Enforcer_Character_Elemental_Fen_BP.Enforcer_Character_Elemental_Fen_BP_C",
+			"dinoNameTag": "Enforcer_Fen",
+			"customTag": "",
+			"targetingTeamName": "Robot_Neutral",
+			"mass": 500,
+			"dragWeight": 35,
+			"flags": [ "allowMountedWeaponry", "allowRiding", "canBeDragged" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1402.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1650 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 34, "radius": 300, "stamina": 25 },
+					{ "name": "Blink", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 300 },
+					{ "name": "Blast", "interval": 15, "dmg": 0, "radius": 0, "stamina": 500 }
+				]
+			}
+		},
+		{
+			"name": "Glacial Enforcer",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Enforcer_Character_Elemental_Glacial_BP.Enforcer_Character_Elemental_Glacial_BP_C",
+			"dinoNameTag": "Enforcer_Glacial",
+			"customTag": "",
+			"targetingTeamName": "Robot_Neutral",
+			"mass": 500,
+			"dragWeight": 35,
+			"flags": [ "allowMountedWeaponry", "allowRiding", "canBeDragged" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1402.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1650 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 34, "radius": 300, "stamina": 25 },
+					{ "name": "Blink", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 300 },
+					{ "name": "Blast", "interval": 15, "dmg": 0, "radius": 0, "stamina": 500 }
+				]
+			}
+		},
+		{
+			"name": "Storm Enforcer",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Enforcer_Character_Elemental_Storm_BP.Enforcer_Character_Elemental_Storm_BP_C",
+			"dinoNameTag": "Enforcer_Storm",
+			"customTag": "",
+			"targetingTeamName": "Robot_Neutral",
+			"mass": 500,
+			"dragWeight": 35,
+			"flags": [ "allowMountedWeaponry", "allowRiding", "canBeDragged" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1402.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1650 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 34, "radius": 300, "stamina": 25 },
+					{ "name": "Blink", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 300 },
+					{ "name": "Blast", "interval": 15, "dmg": 0, "radius": 0, "stamina": 500 }
+				]
+			}
+		},
+		{
+			"name": "Vapor Enforcer",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Enforcer_Character_Elemental_Vapor_BP.Enforcer_Character_Elemental_Vapor_BP_C",
+			"dinoNameTag": "Enforcer_Vapor",
+			"customTag": "",
+			"targetingTeamName": "Robot_Neutral",
+			"mass": 500,
+			"dragWeight": 35,
+			"flags": [ "allowMountedWeaponry", "allowRiding", "canBeDragged" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1402.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1650 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 34, "radius": 300, "stamina": 25 },
+					{ "name": "Blink", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 300 },
+					{ "name": "Blast", "interval": 15, "dmg": 0, "radius": 0, "stamina": 500 }
 				]
 			}
 		},
@@ -12674,7 +12937,10 @@
 				"defaultSwingRadius": 370,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.67, "dmg": 72, "radius": 200, "stamina": 5 },
-					{ "name": "LaunchProj", "interval": 6, "dmg": 18, "radius": 200, "stamina": 25 },
+					{
+						"name": "LaunchProj", "interval": 6, "dmg": 18, "radius": 200, "stamina": 25,
+						"isProjectile": true
+					},
 					{ "name": "DropSpores", "interval": 17, "dmg": 18, "radius": 200, "stamina": 25 }
 				]
 			}
@@ -12783,7 +13049,10 @@
 				"defaultSwingRadius": 370,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.67, "dmg": 72, "radius": 200, "stamina": 5 },
-					{ "name": "ThrowRock", "interval": 6, "dmg": 18, "radius": 200, "stamina": 25 },
+					{
+						"name": "ThrowRock", "interval": 6, "dmg": 18, "radius": 200, "stamina": 25,
+						"isProjectile": true
+					},
 					{ "name": "Spores", "interval": 17, "dmg": 0, "radius": 0, "stamina": 25 }
 				]
 			}
@@ -20498,6 +20767,51 @@
 					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 280, "stamina": 0 },
 					{ "name": "None", "interval": 0.63, "dmg": 96, "radius": 560, "stamina": 100 },
 					{ "name": "WaterExplode", "interval": 5, "dmg": 100, "radius": 500, "stamina": 100 }
+				]
+			}
+		},
+		{
+			"name": "GachaClaus",
+			"bp": "/Game/Mods/ElementalDinos/Extinction/Dinos/Gacha/Gacha_Claus_Character_BP.Gacha_Claus_Character_BP_C",
+			"dinoNameTag": "Gacha",
+			"customTag": "Gacha",
+			"targetingTeamName": "Herbivores",
+			"mass": 400,
+			"dragWeight": 350,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 750 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 750 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 150,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.67, "dmg": 32, "radius": 200, "stamina": 0 },
+					{ "name": "MeleeSmash", "interval": 0.7, "dmg": 30, "radius": 150, "stamina": 0 },
+					{ "name": "Gather", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		}
