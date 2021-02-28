@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "322.15.1613950705",
+	"version": "323.17.1614481036",
 	"format": "2",
 	"mod": {
 		"id": "2112724006",
@@ -195,7 +195,7 @@
 			"customTag": "AlloNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -484,7 +484,7 @@
 			"customTag": "AnkyloNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -676,7 +676,7 @@
 			"customTag": "ArchaNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 10,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -818,7 +818,7 @@
 		},
 		{
 			"name": "Argentavis",
-			"bp": "/Game/Mods/DarkArk/Dinos/Argent/Nest/DA_Argent_Character_BP_Mother.DA_Argent_Character_BP_Mother_C",
+			"bp": "/Game/Mods/DarkArk/Dinos/Argent/DA_Argent_Character_BP_Wild.DA_Argent_Character_BP_Wild_C",
 			"dinoNameTag": "Argent",
 			"customTag": "Argent",
 			"targetingTeamName": "Carnivores_Opportunist",
@@ -848,9 +848,65 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 260, "sprint": 315.3 },
-				"fly": { "base": 600, "sprint": 727.5 },
+				"walk": { "base": 390, "sprint": 472.9 },
+				"fly": { "base": 900, "sprint": 1091.3 },
+				"swim": { "base": 900 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 585 },
+				"fly": { "base": 600, "sprint": 1350 },
 				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 25,
+				"defaultSwingRadius": 210,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 25, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 4, "dmg": 12, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 4, "dmg": 12, "radius": 300, "stamina": 120 }
+				]
+			}
+		},
+		{
+			"name": "Argentavis",
+			"bp": "/Game/Mods/DarkArk/Dinos/Argent/Nest/DA_Argent_Character_BP_Mother.DA_Argent_Character_BP_Mother_C",
+			"dinoNameTag": "Argent",
+			"customTag": "Argent",
+			"targetingTeamName": "Carnivores_Opportunist",
+			"mass": 190,
+			"dragWeight": 150,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 390, "sprint": 472.9 },
+				"fly": { "base": 900, "sprint": 1091.3 },
+				"swim": { "base": 900 }
 			},
 			"movementD": {
 				"walk": { "base": 260, "sprint": 585 },
@@ -878,7 +934,7 @@
 			"customTag": "ArgentNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -1113,7 +1169,7 @@
 			"customTag": "BaryonyxNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -1744,7 +1800,7 @@
 			"customTag": "BrontoNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -1778,8 +1834,8 @@
 		{
 			"name": "Alpha Carnotaurus",
 			"bp": "/Game/Mods/DarkArk/Dinos/Carno/Alpha/DA_MegaCarno_Character_BP.DA_MegaCarno_Character_BP_C",
-			"dinoNameTag": "Elite Carno",
-			"customTag": "Carno",
+			"dinoNameTag": "MegaCarno",
+			"customTag": "MegaCarno",
 			"targetingTeamName": "Carnivores_High_Alpha",
 			"mass": 222,
 			"dragWeight": 250,
@@ -1985,7 +2041,7 @@
 			"customTag": "CarnoNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -2346,7 +2402,7 @@
 			"customTag": "CompyNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -2598,7 +2654,7 @@
 			"customTag": "DeinonychusNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -2730,7 +2786,7 @@
 			"customTag": "DiloNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -2864,7 +2920,7 @@
 			"customTag": "DimetroNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -2945,7 +3001,7 @@
 			"customTag": "DimorphNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -3230,7 +3286,7 @@
 			"customTag": "DiplodocusNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -3483,7 +3539,8 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"isCarnivore"
+				"isCarnivore",
+				"isWaterDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -3698,16 +3755,16 @@
 		},
 		{
 			"name": "Dodo",
-			"bp": "/Game/Mods/DarkArk/Dinos/Dodo/Nest/DA_Dodo_Nest_Character_BP.DA_Dodo_Nest_Character_BP_C",
-			"dinoNameTag": "DodoNest",
-			"customTag": "DodoNest",
+			"bp": "/Game/Mods/DarkArk/Dinos/Dodo/Nest/DA_Dodo_Character_BP_Mother.DA_Dodo_Character_BP_Mother_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "Dodo",
 			"targetingTeamName": "Herbivores_Skittish",
-			"mass": 50000,
-			"dragWeight": 10,
-			"flags": [ "canBeDragged", "canBeTorpid", "canDrag" ],
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
 			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
+				"maxExperience": 261747100,
+				"maxLevels": 88
 			},
 			"cloning": {
 				"costBase": 25,
@@ -3734,7 +3791,45 @@
 			"attack": {
 				"defaultDmg": 5,
 				"defaultSwingRadius": 90,
-				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 1, "radius": 180, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.1, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Dodo",
+			"bp": "/Game/Mods/DarkArk/Dinos/Dodo/Nest/DA_Dodo_Nest_Character_BP.DA_Dodo_Nest_Character_BP_C",
+			"dinoNameTag": "DodoNest",
+			"customTag": "MorellatopsNest",
+			"targetingTeamName": "Nests",
+			"mass": 50000,
+			"dragWeight": 20000,
+			"flags": [ "canBeDragged", "canBeTorpid" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
 			}
 		},
 		{
@@ -4396,7 +4491,7 @@
 			"customTag": "GalliNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -4617,12 +4712,106 @@
 		},
 		{
 			"name": "Giganotosaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Gigant/Nest/DA_Gigant_Character_BP_Father.DA_Gigant_Character_BP_Father_C",
+			"dinoNameTag": "Gigant",
+			"customTag": "Gigant",
+			"targetingTeamName": "Carnivores_High_Gigant",
+			"mass": 400,
+			"dragWeight": 950,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 60,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1050, "sprint": 1681.7 }
+			},
+			"movementD": {
+				"walk": { "base": 1050, "sprint": 1681.7 }
+			},
+			"staminaRates": { "sprint": -29 },
+			"attack": {
+				"defaultDmg": 300,
+				"defaultSwingRadius": 850,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 850, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 120, "radius": 850, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Giganotosaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Gigant/Nest/DA_Gigant_Character_BP_Mother.DA_Gigant_Character_BP_Mother_C",
+			"dinoNameTag": "Gigant",
+			"customTag": "Gigant",
+			"targetingTeamName": "Carnivores_High_Gigant",
+			"mass": 400,
+			"dragWeight": 950,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 60,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1050, "sprint": 1681.7 }
+			},
+			"movementD": {
+				"walk": { "base": 1050, "sprint": 1681.7 }
+			},
+			"staminaRates": { "sprint": -29 },
+			"attack": {
+				"defaultDmg": 300,
+				"defaultSwingRadius": 850,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 850, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 120, "radius": 850, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Giganotosaurus",
 			"bp": "/Game/Mods/DarkArk/Dinos/Gigant/Nest/DA_Gigant_Nest_Character_BP.DA_Gigant_Nest_Character_BP_C",
 			"dinoNameTag": "Dodo",
 			"customTag": "GigantNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -4716,7 +4905,7 @@
 			"customTag": "HesperornisNest",
 			"targetingTeamName": "Nests",
 			"mass": 50,
-			"dragWeight": 10,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -4916,7 +5105,7 @@
 			"customTag": "IchthyornisNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -5110,7 +5299,7 @@
 			"customTag": "IguanodonNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -5645,7 +5834,7 @@
 			"customTag": "KaprosuchusNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -5773,7 +5962,7 @@
 			"customTag": "KentroNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -5807,8 +5996,8 @@
 		{
 			"name": "Alpha Leedsichthys",
 			"bp": "/Game/Mods/DarkArk/Dinos/Leedsichthys/Alpha/DA_Alpha_Leedsichthys_Character_BP.DA_Alpha_Leedsichthys_Character_BP_C",
-			"dinoNameTag": "Leedsichthys",
-			"customTag": "Leedsichthys",
+			"dinoNameTag": "MegaLeedsichthys",
+			"customTag": "MegaLeedsichthys",
 			"targetingTeamName": "Carnivores_High_Alpha",
 			"mass": 300,
 			"dragWeight": 1300,
@@ -5978,7 +6167,7 @@
 			"customTag": "LystroNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -6348,7 +6537,7 @@
 			"customTag": "MantisNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -6493,7 +6682,7 @@
 			"customTag": "MegalaniaNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -6527,8 +6716,8 @@
 		{
 			"name": "Alpha Megalodon",
 			"bp": "/Game/Mods/DarkArk/Dinos/Megalodon/Alpha/DA_MegaMegalodon_Character_BP.DA_MegaMegalodon_Character_BP_C",
-			"dinoNameTag": "Elite Mega",
-			"customTag": "Megalodon",
+			"dinoNameTag": "MegaMegalodon",
+			"customTag": "MegaMegalodon",
 			"targetingTeamName": "Carnivores_High_Alpha",
 			"mass": 300,
 			"dragWeight": 250,
@@ -6848,7 +7037,7 @@
 			"customTag": "MegalosaurusNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -7104,7 +7293,7 @@
 			"customTag": "MicroraptorNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 10,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -7377,8 +7566,8 @@
 		{
 			"name": "Alpha Mosasaur",
 			"bp": "/Game/Mods/DarkArk/Dinos/Mosa/Alpha/DA_Mosa_Character_BP_Mega.DA_Mosa_Character_BP_Mega_C",
-			"dinoNameTag": "Mosasaur",
-			"customTag": "Mosasaur",
+			"dinoNameTag": "MegaMosasaur",
+			"customTag": "MegaMosasaur",
 			"targetingTeamName": "Carnivores_High_Alpha",
 			"mass": 300,
 			"dragWeight": 899,
@@ -7718,7 +7907,7 @@
 			"customTag": "MoschopsNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -7980,7 +8169,7 @@
 			"customTag": "OviraptorNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -8112,7 +8301,7 @@
 			"customTag": "PachyNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -8255,7 +8444,7 @@
 			"customTag": "PachyrhinoNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -8446,7 +8635,7 @@
 			"customTag": "ParaNest",
 			"targetingTeamName": "Nests",
 			"mass": 5,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -8522,7 +8711,10 @@
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 550,
-				"attacks": [ { "name": "melee", "interval": 0.375, "dmg": 45, "radius": 550, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "melee", "interval": 0.375, "dmg": 45, "radius": 550, "stamina": 0 },
+					{ "name": "melee", "interval": 0.375, "dmg": 35, "radius": 550, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -8626,7 +8818,7 @@
 			"customTag": "PegomastaxNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -8815,7 +9007,7 @@
 			"customTag": "PelaNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -9282,7 +9474,7 @@
 			"customTag": "PteroNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 10,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -9433,8 +9625,7 @@
 				"canDrag",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"isWaterDino"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -9487,6 +9678,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
 				"isFlyerDino"
@@ -9542,6 +9734,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
 				"isFlyerDino"
@@ -9597,6 +9790,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
 				"isFlyerDino"
@@ -9645,7 +9839,7 @@
 			"customTag": "QuetzNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -9679,8 +9873,8 @@
 		{
 			"name": "Alpha Raptor",
 			"bp": "/Game/Mods/DarkArk/Dinos/Raptor/Alpha/DA_MegaRaptor_Character_BP.DA_MegaRaptor_Character_BP_C",
-			"dinoNameTag": "Elite Raptor",
-			"customTag": "Raptor",
+			"dinoNameTag": "MegaRaptor",
+			"customTag": "MegaRaptor",
 			"targetingTeamName": "Carnivores_High_Alpha",
 			"mass": 185,
 			"dragWeight": 400,
@@ -9944,7 +10138,7 @@
 			"customTag": "RaptorNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -10031,8 +10225,8 @@
 		{
 			"name": "Alpha T-Rex",
 			"bp": "/Game/Mods/DarkArk/Dinos/Rex/Alpha/DA_MegaRex_Character_BP.DA_MegaRex_Character_BP_C",
-			"dinoNameTag": "Elite Rex",
-			"customTag": "Rex",
+			"dinoNameTag": "MegaRex",
+			"customTag": "MegaRex",
 			"targetingTeamName": "Carnivores_High_Alpha",
 			"mass": 400,
 			"dragWeight": 550,
@@ -10188,118 +10382,12 @@
 		},
 		{
 			"name": "Rex",
-			"bp": "/Game/Mods/DarkArk/Dinos/Rex/Nest/DA_Rex_Character_BP_Father.DA_Rex_Character_BP_Father_C",
-			"dinoNameTag": "Rex",
-			"customTag": "Rex",
-			"targetingTeamName": "Carnivores_High_Rex",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 261747100,
-				"maxLevels": 88
-			},
-			"cloning": {
-				"costBase": 2175,
-				"costLevel": 55,
-				"timeBase": 15225,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 515, "sprint": 736.4 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 515, "sprint": 1104.7 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 60,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 95, "radius": 300, "stamina": 0 },
-					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (AI)", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Rex",
-			"bp": "/Game/Mods/DarkArk/Dinos/Rex/Nest/DA_Rex_Character_BP_Mother.DA_Rex_Character_BP_Mother_C",
-			"dinoNameTag": "Rex",
-			"customTag": "Rex",
-			"targetingTeamName": "Carnivores_High_Rex",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 261747100,
-				"maxLevels": 88
-			},
-			"cloning": {
-				"costBase": 2175,
-				"costLevel": 55,
-				"timeBase": 15225,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 515, "sprint": 736.4 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 515, "sprint": 1104.7 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 60,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 95, "radius": 300, "stamina": 0 },
-					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (AI)", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Rex",
 			"bp": "/Game/Mods/DarkArk/Dinos/Rex/Nest/DA_Rex_Nest_Character_BP.DA_Rex_Nest_Character_BP_C",
 			"dinoNameTag": "RexNest",
 			"customTag": "RexNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -10769,7 +10857,7 @@
 			"customTag": "SarcoNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -11268,7 +11356,7 @@
 			"customTag": "SpinoNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -11550,7 +11638,7 @@
 			"customTag": "StegoNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -11748,7 +11836,7 @@
 			"customTag": "TrikeNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -11949,7 +12037,7 @@
 			"customTag": "TapejaraNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -12132,7 +12220,7 @@
 			"customTag": "TerrorBirdNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -12216,7 +12304,64 @@
 			"targetingTeamName": "Herbivores_Large_Aggressive",
 			"mass": 222,
 			"dragWeight": 250,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "canDrag" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
+			"levelCaps": {
+				"maxExperience": 261747100,
+				"maxLevels": 88
+			},
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 466, "sprint": 978.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "ClawAttack", "interval": 0.4, "dmg": 52, "radius": 225, "stamina": 0 },
+					{ "name": "ClawHarvest", "interval": 0.4, "dmg": 5, "radius": 250, "stamina": 0 },
+					{ "name": "BiteHarvest", "interval": 4, "dmg": 52, "radius": 225, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Therizinosaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Therizino/Nest/DA_Therizino_Character_BP_Mother.DA_Therizino_Character_BP_Mother_C",
+			"dinoNameTag": "Therizinosaurus",
+			"customTag": "Therizinosaurus",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
 			"levelCaps": {
 				"maxExperience": 261747100,
 				"maxLevels": 88
@@ -12260,7 +12405,7 @@
 			"customTag": "TherizinosaurusNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -12352,7 +12497,7 @@
 			"customTag": "ThornyDragonNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -12580,7 +12725,7 @@
 			"bp": "/Game/Mods/DarkArk/Dinos/Titanoboa/Nest/DA_Titanoboa_Character_BP_Mother.DA_Titanoboa_Character_BP_Mother_C",
 			"dinoNameTag": "Titanboa",
 			"customTag": "",
-			"targetingTeamName": "Carnivores_High_Spino",
+			"targetingTeamName": "Carnivores_Medium_Mean",
 			"mass": 100,
 			"dragWeight": 110,
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
@@ -12623,7 +12768,7 @@
 			"customTag": "TitanboaNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -13019,7 +13164,7 @@
 			"customTag": "TrikeNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -13174,7 +13319,7 @@
 			"customTag": "TroodonNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -13219,8 +13364,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"isFlyerDino",
-				"isWaterDino"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 261747100,
@@ -13319,7 +13463,7 @@
 			"customTag": "TropeognathusNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -13453,7 +13597,7 @@
 			"customTag": "TurtleNest",
 			"targetingTeamName": "Nests",
 			"mass": 50,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -13487,8 +13631,8 @@
 		{
 			"name": "Alpha Tusoteuthis",
 			"bp": "/Game/Mods/DarkArk/Dinos/Tuso/Alpha/DA_Mega_Tusoteuthis_Character_BP.DA_Mega_Tusoteuthis_Character_BP_C",
-			"dinoNameTag": "Tusoteuthis",
-			"customTag": "Tusoteuthis",
+			"dinoNameTag": "MegaTusoteuthis",
+			"customTag": "MegaTusoteuthis",
 			"targetingTeamName": "Carnivores_High_Alpha",
 			"mass": 300,
 			"dragWeight": 1500,
@@ -13797,7 +13941,7 @@
 			"customTag": "VultureNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -13933,7 +14077,7 @@
 			"customTag": "YutyNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
-			"dragWeight": 1000,
+			"dragWeight": 20000,
 			"flags": [ "canBeDragged", "canBeTorpid" ],
 			"levelCaps": {
 				"maxExperience": 3550010,
