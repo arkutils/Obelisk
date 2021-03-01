@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "318.9.1599153423",
+	"version": "323.17.1614559701",
 	"format": "2",
 	"mod": {
 		"id": "2135314513",
@@ -61,7 +61,7 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
 					{ "name": "Flame", "interval": 12, "dmg": 0, "radius": 0, "stamina": 20 },
-					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 }
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 20 }
 				]
 			}
 		},
@@ -162,6 +162,110 @@
 					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.67, "dmg": 30, "radius": 250, "stamina": 0 },
 					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Crystal Argent",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Argent/Crystal_Argent_Character_BP.Crystal_Argent_Character_BP_C",
+			"dinoNameTag": "Argent",
+			"customTag": "Argent",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 190,
+			"dragWeight": 150,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 260, "sprint": 315.3 },
+				"fly": { "base": 600, "sprint": 727.5 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 585 },
+				"fly": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 25,
+				"defaultSwingRadius": 210,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 25, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 4, "dmg": 12, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 4, "dmg": 12, "radius": 300, "stamina": 120 }
+				]
+			}
+		},
+		{
+			"name": "Crystal Golem",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/CrystalGolem/CrystalGolem_Character_BP.CrystalGolem_Character_BP_C",
+			"dinoNameTag": "RockElemental",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 2200,
+				"costLevel": 55,
+				"timeBase": 15400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 960 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 960 }
+			},
+			"staminaRates": { "sprint": -25 },
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 1, "dmg": 120, "radius": 550, "stamina": 25 },
+					{
+						"name": "ThrowRock", "interval": 11, "dmg": 120, "radius": 1200, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "Swipe", "interval": 3, "dmg": 80, "radius": 600, "stamina": 25 }
 				]
 			}
 		},
