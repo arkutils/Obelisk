@@ -1,5 +1,5 @@
 {
-	"version": "324.7.1614644925",
+	"version": "324.7.1614707045",
 	"format": "3",
 	"mod": {
 		"id": "1373744537",
@@ -1045,6 +1045,39 @@
 				"resourceMult": 0.5
 			},
 			"structureTemplate": "/Game/Mods/AC2/Items/SPEKTOR/GenomeAssembly/StorageBox_GenomeAssembly.StorageBox_GenomeAssembly_C"
+		},
+		{
+			"name": "Gasball to Gasoline",
+			"description": "A chemical process which can turn Congealed Gas Balls into Gasoline.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Table/PrimalItemResource_GasballToGas.PrimalItemResource_GasballToGas_C",
+			"icon": "/Game/Aberration/Icons/Resources/Gas_Icon.Gas_Icon",
+			"type": "Resource",
+			"folders": [ "Resources" ],
+			"weight": 0.5,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 5,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Gas_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
 		},
 		{
 			"name": "Sciences Table",
@@ -2216,6 +2249,93 @@
 						"exact": false,
 						"qty": 5,
 						"type": "PrimalItemResource_Oil_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Create Harvester Mech",
+			"description": "Build and construct a massive Harvester Mech: Deisgned by the C.A.A. to assist in harvesting resources (mineral preferrably), Be warned: IT'S HEAVY!",
+			"bp": "/Game/Mods/AC2/Items/WhyLucielle/Harvester/PrimalItemConsumable_Harvester.PrimalItemConsumable_Harvester_C",
+			"icon": "/Game/Extinction/Icons/Dinos/MekRiderCockpit_Icon.MekRiderCockpit_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Robots" ],
+			"weight": 0.1,
+			"maxQuantity": 100,
+			"spoilage": { "time": 120000 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 200,
+				"bpCraftTime": 60,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 200,
+						"type": "PrimalItemResource_Crystal_C"
+					},
+					{
+						"exact": false,
+						"qty": 2000,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 500,
+						"type": "PrimalItemResource_Electronics_C"
+					},
+					{
+						"exact": false,
+						"qty": 600,
+						"type": "PrimalItemResource_Polymer_C"
+					},
+					{
+						"exact": false,
+						"qty": 500,
+						"type": "PrimalItemResource_ChitinPaste_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Robotics Diesel",
+			"description": "Refined Gasoline used in powering advanced robotics",
+			"bp": "/Game/Mods/AC2/Items/WhyLucielle/Harvester/PrimalItemResource_RoboticsDiesel.PrimalItemResource_RoboticsDiesel_C",
+			"icon": "/Game/PrimalEarth/Test_Craig/Gasoline_Icon.Gasoline_Icon",
+			"type": "Resource",
+			"folders": [ "Resources" ],
+			"weight": 0.5,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 5,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemResource_Gasoline_C"
 					}
 				]
 			},
