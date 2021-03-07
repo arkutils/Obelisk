@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "322.15.1613688953",
+	"version": "324.18.1615143978",
 	"format": "2",
 	"mod": {
 		"id": "1565015734",
@@ -2808,6 +2808,100 @@
 					{ "name": "Sting", "interval": 0.3, "dmg": 14, "radius": 275, "stamina": 20 },
 					{ "name": "Melee Wild", "interval": 0.3, "dmg": 7, "radius": 220, "stamina": 0 }
 				]
+			}
+		},
+		{
+			"name": "Ferox",
+			"bp": "/Game/Mods/BetterDinosTest/Ferox/Biggun/BDShapeshifter_Large_Character_BP.BDShapeshifter_Large_Character_BP_C",
+			"dinoNameTag": "Bigly",
+			"customTag": "Bigly",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 165,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1620 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1800 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 46,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 46, "radius": 500, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 32, "radius": 500, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 32, "radius": 180, "stamina": 0 },
+					{
+						"name": "Throw Boulder", "interval": 15, "dmg": 17, "radius": 400, "stamina": 75,
+						"isProjectile": true
+					}
+				]
+			}
+		},
+		{
+			"name": "Ferox",
+			"bp": "/Game/Mods/BetterDinosTest/Ferox/Smalls/Shapeshifter_Small_Character_BP.Shapeshifter_Small_Character_BP_C",
+			"dinoNameTag": "Gremlin",
+			"customTag": "Smalls",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"levelCaps": {
+				"maxExperience": 22213960,
+				"maxLevels": 88,
+				"capOffset": 50
+			},
+			"cloning": {
+				"costBase": 1275,
+				"costLevel": 55,
+				"timeBase": 8925,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 156, "sprint": 366.6 },
+				"swim": { "base": 150 }
+			},
+			"movementD": {
+				"walk": { "base": 156, "sprint": 549.9 },
+				"swim": { "base": 150 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Sniff", "interval": 999, "dmg": 6, "radius": 65, "stamina": 0 } ]
 			}
 		},
 		{
