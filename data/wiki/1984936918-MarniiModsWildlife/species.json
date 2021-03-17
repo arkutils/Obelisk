@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "314.3.1602354582",
+	"version": "324.22.1615930199",
 	"format": "2",
 	"mod": {
 		"id": "1984936918",
@@ -110,7 +110,10 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.08, "dmg": 33, "radius": 160, "stamina": 5 },
 					{ "name": "Howl", "interval": 180, "dmg": 0, "radius": 0, "stamina": 35 },
-					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 }
+					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 },
+					{ "name": "Interact", "interval": 0, "dmg": 0, "radius": 0, "stamina": 2 },
+					{ "name": "Play", "interval": 0, "dmg": 0, "radius": 0, "stamina": 2 },
+					{ "name": "Play", "interval": 0, "dmg": 0, "radius": 0, "stamina": 2 }
 				]
 			}
 		},
@@ -215,7 +218,13 @@
 			"targetingTeamName": "Herbivores_Medium",
 			"mass": 195,
 			"dragWeight": 120,
-			"flags": [ "allowMountedWeaponry", "allowRiding", "canBeDragged", "canDrag" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
 			"levelCaps": {
 				"maxExperience": 3550010,
 				"maxLevels": 73
@@ -597,8 +606,7 @@
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
-				"isFlyerDino",
-				"preventCharacterBasing"
+				"isFlyerDino"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -633,8 +641,8 @@
 				"defaultSwingRadius": 90,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.6, "dmg": 25, "radius": 240, "stamina": 0 },
-					{ "name": "Taunt1", "interval": 0, "dmg": 0, "radius": 0, "stamina": 2 },
-					{ "name": "Taunt2", "interval": 0, "dmg": 0, "radius": 0, "stamina": 2 }
+					{ "name": "Taunt2", "interval": 0, "dmg": 0, "radius": 0, "stamina": 2 },
+					{ "name": "Taunt1", "interval": 0, "dmg": 0, "radius": 0, "stamina": 2 }
 				]
 			}
 		},
@@ -763,13 +771,13 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 60, "sprint": 72.8 },
-				"fly": { "base": 300, "sprint": 363.8 },
+				"walk": { "base": 60, "sprint": 165 },
+				"fly": { "base": 300, "sprint": 825 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 60, "sprint": 135 },
-				"fly": { "base": 300, "sprint": 675 },
+				"walk": { "base": 60, "sprint": 165 },
+				"fly": { "base": 300, "sprint": 825 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -833,11 +841,11 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
 				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
 					{ "name": "Claw", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
-					{ "name": "Release", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
-					{ "name": "Pounce", "interval": 0, "dmg": 30, "radius": 0, "stamina": 0 },
-					{ "name": "Maul", "interval": 0, "dmg": 40, "radius": 0, "stamina": 0 }
+					{ "name": "Taunt", "interval": 0, "dmg": 0, "radius": 0, "stamina": 2 },
+					{ "name": "Taunt2", "interval": 0, "dmg": 0, "radius": 0, "stamina": 2 }
 				]
 			}
 		},

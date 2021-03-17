@@ -1,5 +1,5 @@
 {
-	"version": "313.35.1600857723",
+	"version": "324.22.1615930199",
 	"format": "3",
 	"mod": {
 		"id": "1984936918",
@@ -11,6 +11,32 @@
 			"name": "Wolf Pup",
 			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
 			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/CanisLupus/Chibi/PrimalItemSkin_ChibiDino_MMwolf.PrimalItemSkin_ChibiDino_MMwolf_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Rare.ChibiIconMaterial_Inst_Rare",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 12,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Juvenile Wolf",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/CanisLupus/Chibi/PrimalItemSkin_ChibiDino_MMwolf2.PrimalItemSkin_ChibiDino_MMwolf2_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Rare.ChibiIconMaterial_Inst_Rare",
 			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
@@ -1193,7 +1219,7 @@
 			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/CraftingTable/PrimalItemStructure_MMWildlifeBench.PrimalItemStructure_MMWildlifeBench_C",
 			"icon": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/CraftingTable/Textures/MMWicon.MMWicon",
 			"type": "Structure",
-			"folders": [ "Structures", "Crafting", "z_Saddles" ],
+			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
 			"maxQuantity": 100,
 			"durability": {
@@ -1227,34 +1253,154 @@
 			"structureTemplate": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/CraftingTable/StorageBox_MMWBench.StorageBox_MMWBench_C"
 		},
 		{
-			"name": "Rawhide",
-			"description": "A thick piece of Rawhide removed from a dead animal.",
-			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Resources/Resource_Rawhide.Resource_Rawhide_C",
-			"icon": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Resources/Tex_leather_08_b.Tex_leather_08_b",
-			"type": "Resource",
-			"folders": [],
-			"weight": 0.01,
-			"maxQuantity": 200,
+			"name": "Feeding Trough",
+			"description": "Put food for your nearby pets in this, and they'll automatically eat it when hungry!",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/FeedingStation/PrimalItemStructure_MM_FeedingStation.PrimalItemStructure_MM_FeedingStation_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/FeedingTrough_Icon.FeedingTrough_Icon",
+			"type": "Structure",
+			"folders": [ "Decor" ],
+			"weight": 4,
+			"maxQuantity": 100,
 			"durability": {
 				"min": 0,
 				"ignoreInWater": false
 			},
 			"crafting": {
-				"xp": 1,
+				"xp": 3.7,
 				"bpCraftTime": 5,
 				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 120,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 40,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_Metal_C"
+					}
+				]
 			},
 			"repair": {
-				"xp": 2,
+				"xp": 3.7,
 				"time": 5,
 				"resourceMult": 0.5
-			}
+			},
+			"structureTemplate": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/FeedingStation/MM_FeedingStation.MM_FeedingStation_C"
+		},
+		{
+			"name": "Piece of meat",
+			"description": "A piece of meat",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/Food/PrimalItemStructure_MM_Meat_A.PrimalItemStructure_MM_Meat_A_C",
+			"icon": "/Game/Mods/MarniiModsWildlife/PrimalEarth/Test/rawmeat.rawmeat",
+			"type": "Structure",
+			"folders": [ "Decor" ],
+			"weight": 4,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.73,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_RawPrimeMeat_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 0.73,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/Food/MM_Meat_A.MM_Meat_A_C"
+		},
+		{
+			"name": "Pelt",
+			"description": "A pelt that can be placed on floors and walls",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/Pelts/PrimalItemStructure_MM_Pelts.PrimalItemStructure_MM_Pelts_C",
+			"icon": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/Pelts/Textures/Pelts_MM.Pelts_MM",
+			"type": "Structure",
+			"folders": [ "Decor" ],
+			"weight": 4,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.73,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_PeltOrHair_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 0.73,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/Pelts/MM_Pelts.MM_Pelts_C"
+		},
+		{
+			"name": "Sheepskin",
+			"description": "A pelt that can be placed on floors and walls",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/Pelts/PrimalItemStructure_MM_Sheepskin.PrimalItemStructure_MM_Sheepskin_C",
+			"icon": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/Pelts/Textures/Sheepskin_MM.Sheepskin_MM",
+			"type": "Structure",
+			"folders": [ "Decor" ],
+			"weight": 4,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.73,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_PeltOrHair_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 0.73,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/MarniiModsWildlife/Wildlife/z_MM_Items/Decor/Pelts/MM_Sheepskins.MM_Sheepskins_C"
 		},
 		{
 			"name": "Large Owl Saddle",
-			"description": "Equip a wolf with this to ride it.",
+			"description": "This saddle can be used on a Large Owl",
 			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/z_Saddles/Avian/BigOwl/PrimalItemArmor_MM_Bigowl.PrimalItemArmor_MM_Bigowl_C",
 			"icon": "/Game/Extinction/Icons/Saddles/HUD_SnowOwlSaddle_Icon_Colorized_MIC.HUD_SnowOwlSaddle_Icon_Colorized_MIC",
 			"type": "Equipment/DinoSaddle",
@@ -1365,6 +1511,39 @@
 			},
 			"repair": {
 				"xp": 62.8,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Decorated Wolf Saddle skin",
+			"description": "Use this on your wolf Saddle for an alternative look!",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/z_Saddles/Canine/PrimalItemArmor_MMWolf_SkinA.PrimalItemArmor_MMWolf_SkinA_C",
+			"icon": "/Game/Mods/MarniiModsWildlife/Wildlife/z_Saddles/Canine/Wolf_saddleMM.Wolf_saddleMM",
+			"type": "Skin",
+			"folders": [ "Skins" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": true,
+						"qty": 1,
+						"type": "PrimalItemResource_Fibers_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
 				"time": 5,
 				"resourceMult": 0.5
 			}
@@ -1521,6 +1700,39 @@
 			},
 			"repair": {
 				"xp": 62.8,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Decorated Shadowcat Saddle Skin",
+			"description": "Use this on your Shadowcat saddle for an alternative look!",
+			"bp": "/Game/Mods/MarniiModsWildlife/Wildlife/z_Saddles/Feline/Shadowcat/PrimalItemArmor_Shadowcat_SkinA.PrimalItemArmor_Shadowcat_SkinA_C",
+			"icon": "/Game/Mods/MarniiModsWildlife/Wildlife/z_Saddles/Feline/Shadowcat/Textures/Shadowcat_saddle.Shadowcat_saddle",
+			"type": "Skin",
+			"folders": [ "Skins" ],
+			"weight": 0,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": true,
+						"qty": 1,
+						"type": "PrimalItemResource_Fibers_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
 				"time": 5,
 				"resourceMult": 0.5
 			}
