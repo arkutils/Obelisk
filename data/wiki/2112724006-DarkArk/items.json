@@ -1,5 +1,5 @@
 {
-	"version": "322.15.1613928667",
+	"version": "324.24.1616362176",
 	"format": "3",
 	"mod": {
 		"id": "2112724006",
@@ -11400,7 +11400,7 @@
 			"weight": 1,
 			"maxQuantity": 10,
 			"spoilage": {
-				"time": 900,
+				"time": 1800,
 				"productBP": "/Game/Mods/DarkArk/Food/Brews/DA_PrimalItemConsumable_BloodPack_Child.DA_PrimalItemConsumable_BloodPack_Child_C"
 			},
 			"durability": {
@@ -13021,7 +13021,7 @@
 					{
 						"exact": false,
 						"qty": 3,
-						"type": "PrimalItemResource_Sap_C"
+						"type": "DA_PrimalItemResource_MorelMushroom_C"
 					}
 				]
 			},
@@ -13478,6 +13478,90 @@
 			}
 		},
 		{
+			"name": "Cave Guano",
+			"description": "Cave guano is used to craft gunpowder or can be used as a valuable fertilizer. Will decompose into valuable sulfur over time.",
+			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Guano.DA_PrimalItemResource_Guano_C",
+			"icon": "/Game/Mods/DarkArk/Resource/Guano_Icon.Guano_Icon",
+			"type": "MiscConsumable/Other",
+			"folders": [ "Consumables", "Feces" ],
+			"weight": 3,
+			"maxQuantity": 1,
+			"spoilage": {
+				"time": 10000,
+				"productBP": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Sulfur.DA_PrimalItemResource_Sulfur_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"statEffects": {
+				"health": {
+					"value": -140,
+					"useItemQuality": true,
+					"descriptionIndex": 3,
+					"duration": 35
+				},
+				"food": {
+					"value": 1,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"allowWhenFull": false,
+					"duration": 1
+				}
+			},
+			"cookingStats": {
+				"health": -0.15,
+				"stamina": -0.15,
+				"food": 0.1,
+				"weight": 0.01
+			}
+		},
+		{
+			"name": "Gunpowder",
+			"description": "An powerful propellant. Necessary for any firearm or explosive.",
+			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Gunpowder.DA_PrimalItemResource_Gunpowder_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Gunpowder_Icon.Gunpowder_Icon",
+			"type": "Resource",
+			"folders": [],
+			"weight": 0.1,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.05,
+				"bpCraftTime": 1,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Sparkpowder_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Charcoal_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
 			"name": "Human Hair",
 			"description": "A lock of human hair!",
 			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Hair.DA_PrimalItemResource_Hair_C",
@@ -13574,6 +13658,93 @@
 				"minLevelReq": 0,
 				"productCount": 15,
 				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Honeycomb Morel",
+			"description": "An exceptionally rare and delicious mushroom, its distinctive sweet and woody taste allows it to be used as a substitute for honey in recipes. ",
+			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_MorelMushroom.DA_PrimalItemResource_MorelMushroom_C",
+			"icon": "/Game/Mods/DarkArk/Resource/MorelMushroom_Icon.MorelMushroom_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables" ],
+			"weight": 0.1,
+			"maxQuantity": 3,
+			"spoilage": { "time": 3600 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 3600,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_AnglerGel_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 20,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 3.333333
+				},
+				"health": {
+					"value": 8,
+					"useItemQuality": true,
+					"descriptionIndex": 1,
+					"duration": 2
+				}
+			},
+			"cookingStats": {
+				"health": 0.11,
+				"stamina": 0.01,
+				"food": 0.2,
+				"weight": 0.02
+			}
+		},
+		{
+			"name": "Oil",
+			"description": "A thick blob of unrefined oil.  Can be refined with hide to make gasoline.",
+			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Oil.DA_PrimalItemResource_Oil_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/OilFuel_Icon.OilFuel_Icon",
+			"type": "Resource",
+			"folders": [],
+			"weight": 0.2,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 15,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "DA_PrimalItemConsumable_Egg_Hesperonis_C"
+					}
+				]
 			},
 			"repair": {
 				"xp": 2,
@@ -15585,8 +15756,8 @@
 					},
 					{
 						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_Fibers_C"
+						"qty": 50,
+						"type": "PrimalItemResource_RareFlower_C"
 					},
 					{
 						"exact": false,
@@ -15596,7 +15767,7 @@
 					{
 						"exact": false,
 						"qty": 50,
-						"type": "PrimalItemResource_Stone_C"
+						"type": "PrimalItemResource_RareMushroom_C"
 					}
 				]
 			},
@@ -15694,6 +15865,55 @@
 				"resourceMult": 0.5
 			},
 			"structureTemplate": "/Game/Mods/DarkArk/Structures/Campfire/DA_Campfire.DA_Campfire_C"
+		},
+		{
+			"name": "Standing Torch",
+			"description": "A torch on a tall piece of wood that lights and warms the immediate area.",
+			"bp": "/Game/Mods/DarkArk/Structures/Claynest/DA_PrimalItemStructure_ClayNest.DA_PrimalItemStructure_ClayNest_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TorchEmplacement_Icon.TorchEmplacement_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood" ],
+			"weight": 4,
+			"maxQuantity": 3,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.9,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 8,
+						"type": "PrimalItemResource_Thatch_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Flint_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Stone_C"
+					},
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemResource_Wood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 0.9,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/DarkArk/Structures/Claynest/DA_ClayNest.DA_ClayNest_C"
 		},
 		{
 			"name": "Compost Bin",
@@ -15974,6 +16194,40 @@
 			"structureTemplate": "/Game/Mods/DarkArk/Structures/CookingPot/DA_CookingPot.DA_CookingPot_C"
 		},
 		{
+			"name": "Wooden Foundation",
+			"description": "A foundation is required to build structures in an area.  This one is made from sturdy wood.",
+			"bp": "/Game/Mods/DarkArk/Structures/EmberNest/DA_PrimalItemStructure_EmberNest.DA_PrimalItemStructure_EmberNest_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/WoodFloor_Icon.WoodFloor_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Nests" ],
+			"weight": 4,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 3,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemResource_Wood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 3,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/DarkArk/Structures/EmberNest/DA_EmberNest.DA_EmberNest_C"
+		},
+		{
 			"name": "Ember Nest",
 			"description": "A nesting collection of fibrous green plant materials with patches of thatch. Wood embers, warmed by sparkpowder, generate heat to keep Extra Small and Small eggs safely incubating over time. When active, the nest requires regular maintenance.",
 			"bp": "/Game/Mods/DarkArk/Structures/Incubator/DA_PrimalItemStructure_Incubator.DA_PrimalItemStructure_Incubator_C",
@@ -16023,8 +16277,8 @@
 			"structureTemplate": "/Game/Mods/DarkArk/Structures/Incubator/DA_Incubator.DA_Incubator_C"
 		},
 		{
-			"name": "Clay Nest",
-			"description": "A nest made primarily of clay and feathers, on a bed of wood and stone, mimicking mud nests found in the wild. Organic polymer is used as an exceptionally effective temperature regulator for sensitive Medium and Large eggs, regardless of environmental conditions. When active, the nest requires regular maintenance.",
+			"name": "Clay Polymer Nest",
+			"description": "A nest made primarily of a clay and organic polymer mixture, exceptionally effective at regulating the temperature for sensitive Medium and Large eggs, regardless of most environmental conditions. When active, the nest requires regular maintenance.",
 			"bp": "/Game/Mods/DarkArk/Structures/MudNest/DA_PrimalItemStructure_MudNest.DA_PrimalItemStructure_MudNest_C",
 			"icon": "/Game/Mods/DarkArk/Structures/MudNest/DA_Living_Nest_Icon.DA_Living_Nest_Icon",
 			"type": "Structure",
@@ -16049,13 +16303,13 @@
 					},
 					{
 						"exact": false,
-						"qty": 100,
-						"type": "DA_PrimalItemResource_Feathers_C"
+						"qty": 20,
+						"type": "PrimalItemResource_Polymer_Organic_C"
 					},
 					{
 						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Wood_C"
+						"qty": 1,
+						"type": "PrimalItemStructure_StandingTorch_C"
 					},
 					{
 						"exact": false,
