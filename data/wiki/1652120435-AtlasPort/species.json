@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "324.7.1614972505",
+	"version": "326.3.1618113006",
 	"format": "2",
 	"mod": {
 		"id": "1652120435",
@@ -443,6 +443,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"doStepDamage",
 				"isBigDino",
 				"isCarnivore"
 			],
@@ -455,11 +456,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 450, "sprint": 2700 },
+				"walk": { "base": 450, "sprint": 1800 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 2700 },
+				"walk": { "base": 450, "sprint": 1800 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -470,9 +471,10 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Slaps", "interval": 0.4, "dmg": 80, "radius": 340, "stamina": 0 },
-					{ "name": "Slams", "interval": 5, "dmg": 90, "radius": 340, "stamina": 0 },
-					{ "name": "360", "interval": 8, "dmg": 100, "radius": 200, "stamina": 0 },
+					{ "name": "Slaps", "interval": 0.4, "dmg": 85, "radius": 525, "stamina": 0 },
+					{ "name": "Slam", "interval": 5, "dmg": 150, "radius": 525, "stamina": 100 },
+					{ "name": "Uppercut", "interval": 10, "dmg": 100, "radius": 525, "stamina": 100 },
+					{ "name": "Spin", "interval": 10, "dmg": 70, "radius": 525, "stamina": 100 },
 					{ "name": "RawrMf", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
@@ -523,6 +525,114 @@
 				"defaultDmg": 20,
 				"defaultSwingRadius": 140,
 				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 15, "radius": 240, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Atlas Drake",
+			"bp": "/Game/Mods/AtlasPort/Critter/Drake/ADrake_Character_BP.ADrake_Character_BP_C",
+			"dinoNameTag": "Dragon",
+			"customTag": "AtlasDrake",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1050 },
+				"fly": { "base": 1500, "sprint": 4725 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1050 },
+				"fly": { "base": 1500, "sprint": 4725 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 600, "stamina": 0 },
+					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Claws", "interval": 8, "dmg": 62, "radius": 450, "stamina": 0 },
+					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Atlas Flame Drake",
+			"bp": "/Game/Mods/AtlasPort/Critter/Drake/ADrake_Character_BP_Fire.ADrake_Character_BP_Fire_C",
+			"dinoNameTag": "Dragon",
+			"customTag": "AtlasDrake",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1050 },
+				"fly": { "base": 1500, "sprint": 4725 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1050 },
+				"fly": { "base": 1500, "sprint": 4725 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 600, "stamina": 0 },
+					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Claws", "interval": 8, "dmg": 62, "radius": 450, "stamina": 0 },
+					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -951,22 +1061,32 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 45, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 30, "dmg": 50, "radius": 600, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 180, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Claws", "interval": 0.4, "dmg": 45, "radius": 200, "stamina": 0 },
+					{ "name": "Scream", "interval": 30, "dmg": 50, "radius": 600, "stamina": 0 },
+					{ "name": "Proj", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Noodles", "interval": 180, "dmg": 0, "radius": 0, "stamina": 200 }
 				]
 			}
 		},
 		{
-			"name": "Titanoboa",
-			"bp": "/Game/Mods/AtlasPort/Critter/Gorgon/BoaFrill_Character_BP_Minion.BoaFrill_Character_BP_Minion_C",
+			"name": "Apophis Rattlesnake",
+			"bp": "/Game/Mods/AtlasPort/Critter/Gorgon/ARattler_Character_bp_Minion.ARattler_Character_bp_Minion_C",
 			"dinoNameTag": "Titanboa",
-			"customTag": "",
+			"customTag": "Naga",
 			"targetingTeamName": "Carnivores_Medium",
-			"mass": 100,
-			"dragWeight": 110,
+			"mass": 400,
+			"dragWeight": 300,
 			"variants": [ "Minion" ],
-			"flags": [ "canBeDragged", "canDrag", "isCarnivore" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
 			"levelCaps": {
 				"maxExperience": 3550010,
 				"maxLevels": 73
@@ -976,21 +1096,25 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 900 },
-				"swim": { "base": 400 }
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 700 }
 			},
 			"movementD": {
-				"walk": { "base": 225, "sprint": 900 },
-				"swim": { "base": 400 }
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 700 }
 			},
 			"staminaRates": {
-				"sprint": -6,
+				"sprint": -40,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 30,
-				"defaultSwingRadius": 110,
-				"attacks": [ { "name": "Melee", "interval": 0.67, "dmg": 36, "radius": 110, "stamina": 0 } ]
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 400, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 25 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
 			}
 		},
 		{
@@ -1006,6 +1130,7 @@
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
+				"canBeTorpid",
 				"canDrag",
 				"isAmphibious",
 				"isBigDino",
@@ -1842,7 +1967,7 @@
 			"customTag": "Naga",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 400,
-			"dragWeight": 550,
+			"dragWeight": 300,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",

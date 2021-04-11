@@ -1,5 +1,5 @@
 {
-	"version": "324.7.1614972505",
+	"version": "326.3.1618113006",
 	"format": "3",
 	"mod": {
 		"id": "1652120435",
@@ -75,13 +75,13 @@
 			}
 		},
 		{
-			"name": "Fertilized Great Hydra Egg",
-			"description": "",
-			"bp": "/Game/Mods/AtlasPort/Critter/AtlasHydra/PrimalItemConsumable_Egg_Hydra_Fertilized.PrimalItemConsumable_Egg_Hydra_Fertilized_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Megalania.HUD_DinoEgg_MIC_Inst_Megalania",
+			"name": "Fertilized Atlas Hydra Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AtlasPort/Critter/AtlasHydra/PrimalItemConsumable_Egg_AtlasHydra_Fertilized.PrimalItemConsumable_Egg_AtlasHydra_Fertilized_C",
+			"icon": "/Game/Genesis/Dinos/GiantTurtle/HUD_DinoEgg_MIC_Inst_GiantTurtle.HUD_DinoEgg_MIC_Inst_GiantTurtle",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
-			"weight": 7,
+			"weight": 50,
 			"maxQuantity": 1,
 			"spoilage": { "time": 691200 },
 			"durability": {
@@ -102,35 +102,35 @@
 			},
 			"statEffects": {
 				"food": {
-					"value": 35,
+					"value": 130,
 					"useItemQuality": true,
 					"descriptionIndex": 0,
-					"duration": 8.75
+					"duration": 32.5
 				},
 				"health": {
-					"value": 35,
+					"value": 160,
 					"useItemQuality": true,
 					"descriptionIndex": 0,
-					"duration": 8.75
+					"duration": 40
 				},
 				"stamina": {
-					"value": 35,
+					"value": 130,
 					"useItemQuality": true,
 					"descriptionIndex": 0,
-					"duration": 8.75
+					"duration": 32.5
 				}
 			},
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/AtlasHydra/AHydra_character_BP.AHydra_character_BP_C",
-				"temperature": [ 29, 35 ],
+				"temperature": [ -75, 75 ],
 				"hudColorisation": {
 					"red": {
-						"intensity": 1,
-						"color": [ 0.09, 0.054669, 0.03465, 1 ]
+						"intensity": 1.5,
+						"color": [ 0.048737, 0.065, 0.064379, 1 ]
 					},
 					"cyan": {
-						"intensity": 2,
-						"color": [ 0.445, 0.264697, 0.063388, 1 ]
+						"intensity": 5,
+						"color": [ 0.356863, 0.176471, 0.168627, 1 ]
 					}
 				}
 			},
@@ -501,6 +501,50 @@
 				"stamina": 0.8,
 				"food": 0.8,
 				"weight": 0.3
+			}
+		},
+		{
+			"name": "Atlas Drake Saddle",
+			"description": "Equip a species of Atlas Drake with this to ride it.",
+			"bp": "/Game/Mods/AtlasPort/Critter/Drake/PrimalItemArmor_AtlasDrakeSaddle.PrimalItemArmor_AtlasDrakeSaddle_C",
+			"icon": "/Game/PrimalEarth/Dinos/Yutyrannus/Saddle/HUD_YutySaddle_Colorize_MIC.HUD_YutySaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 86,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 425,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 350,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 135,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 125,
+						"type": "PrimalItemResource_Silicon_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 86,
+				"time": 5,
+				"resourceMult": 0.5
 			}
 		},
 		{
@@ -2466,6 +2510,100 @@
 			},
 			"repair": {
 				"xp": 22.2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Mythos Kibble",
+			"description": "A blended kibble made using various ingredients and mythos. Will calm even the mightiest of supernatural creatures.",
+			"bp": "/Game/Mods/AtlasPort/Item/Mythos/PrimalItemConsumable_Kibble_Base_Mythos.PrimalItemConsumable_Kibble_Base_Mythos_C",
+			"icon": "/Game/Mods/AtlasPort/ItemIcons/Mythos_Apex_Kibble.Mythos_Apex_Kibble",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.1,
+			"maxQuantity": 100,
+			"spoilage": { "time": 259200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 2,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemConsumable_Egg_Shield_Fertilized_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_Egg_Razor_Fertilized_C"
+					},
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_Egg_Tortugar_Fertilized_C"
+					},
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemConsumable_Kibble_Base_Special_C"
+					},
+					{
+						"exact": false,
+						"qty": 25,
+						"type": "PrimalItemResource_Mythos_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 1,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 0.2
+				}
+			},
+			"cookingStats": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05
+			}
+		},
+		{
+			"name": "Mythos",
+			"description": "A strange material found on some creatures. Pulses with a strange energy...",
+			"bp": "/Game/Mods/AtlasPort/Item/Mythos/PrimalItemResource_Mythos.PrimalItemResource_Mythos_C",
+			"icon": "/Game/Mods/AtlasPort/ItemIcons/Item_MagicMarrow_Icon.Item_MagicMarrow_Icon",
+			"type": "Resource",
+			"folders": [],
+			"weight": 1,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
 				"time": 5,
 				"resourceMult": 0.5
 			}
