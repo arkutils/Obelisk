@@ -1,5 +1,5 @@
 {
-	"version": "324.7.1614972208",
+	"version": "326.3.1618943253",
 	"format": "3",
 	"mod": {
 		"id": "1373744537",
@@ -862,7 +862,7 @@
 		{
 			"name": "Gigatitan Saddle",
 			"description": "Equip a Gigatitan with this to ride it.",
-			"bp": "/Game/Mods/AC2/Gigatitan/PrimalItemArmor_GigatitanSaddle.PrimalItemArmor_GigatitanSaddle_C",
+			"bp": "/Game/Mods/AC2/Gigatitan/PrimalItemArmor_LorgeMantisSaddle.PrimalItemArmor_LorgeMantisSaddle_C",
 			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -1070,6 +1070,58 @@
 			"type": "Resource",
 			"folders": [],
 			"weight": 0,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Mangrove Tree Wood",
+			"description": "A thick, sturdy cutting from a swamp tree, such as a mangrove or cypress.",
+			"bp": "/Game/Mods/AC2/Items/Resource/PrimalItemResource_Wood_Cypress.PrimalItemResource_Wood_Cypress_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Oak_Log.Oak_Log",
+			"type": "Resource",
+			"folders": [],
+			"weight": 0.25,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Redwood Tree Wood",
+			"description": "A thick, sturdy cutting from a redwood tree.",
+			"bp": "/Game/Mods/AC2/Items/Resource/PrimalItemResource_Wood_Redwood.PrimalItemResource_Wood_Redwood_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Cedar_Log.Cedar_Log",
+			"type": "Resource",
+			"folders": [],
+			"weight": 0.25,
 			"maxQuantity": 1000,
 			"durability": {
 				"min": 0,
@@ -2910,6 +2962,420 @@
 			}
 		},
 		{
+			"name": "Lucanidae Saddle",
+			"description": "Equip a Lucanidae with this to ride it.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemArmor_LucaSaddle.PrimalItemArmor_LucaSaddle_C",
+			"icon": "/Game/PrimalEarth/Dinos/Trike/Saddle/HUD_TrikeSaddle_Colorize_MIC.HUD_TrikeSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 22.2,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 400,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 600,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_Silicon_C"
+					},
+					{
+						"exact": false,
+						"qty": 100,
+						"type": "PrimalItemResource_ChitinPaste_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 22.2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Fertilized Lucanidae Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemConsumable_Egg_Lucanidae_Fertilized.PrimalItemConsumable_Egg_Lucanidae_Fertilized_C",
+			"icon": "/Game/Genesis/Icons/Items/Item_BogSpiderEgg_Icon.Item_BogSpiderEgg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 8,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 50,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 12.5
+				},
+				"health": {
+					"value": 50,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 12.5
+				},
+				"stamina": {
+					"value": 50,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 12.5
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Lucanidae/Lucanidae_Character_bp.Lucanidae_Character_bp_C",
+				"temperature": [ 27, 30 ]
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Microbial Wood",
+			"description": "Wood coated in microbes and bacteria from a Lucanidae's stomach. Makes the wood easier to digest.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemConsumable_MicrobialWood.PrimalItemConsumable_MicrobialWood_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Wood_Icon.Wood_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.25,
+			"maxQuantity": 1000,
+			"spoilage": {
+				"time": 60,
+				"productBP": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Wood.PrimalItemResource_Wood_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 4,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Microbial Mangrove Wood",
+			"description": "Mangrove wood coated in microbes and bacteria from a Lucanidae's stomach. Makes the wood easier to digest.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemConsumable_MicrobialWood_Cypress.PrimalItemConsumable_MicrobialWood_Cypress_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Oak_Log.Oak_Log",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.25,
+			"maxQuantity": 1000,
+			"spoilage": {
+				"time": 60,
+				"productBP": "/Game/Mods/AC2/Items/Resource/PrimalItemResource_Wood_Cypress.PrimalItemResource_Wood_Cypress_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 4,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Microbial Fungal Wood",
+			"description": "Fungal Wood coated in microbes and bacteria from a Lucanidae's stomach. Makes the wood easier to digest.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemConsumable_MicrobialWood_Fungal.PrimalItemConsumable_MicrobialWood_Fungal_C",
+			"icon": "/Game/Aberration/Icons/Resources/MushroomBark.MushroomBark",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.25,
+			"maxQuantity": 1000,
+			"spoilage": {
+				"time": 60,
+				"productBP": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemResource_FungalWood.PrimalItemResource_FungalWood_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 4,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_FungalWood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Microbial Redwood",
+			"description": "Redwood coated in microbes and bacteria from a Lucanidae's stomach. Makes the wood easier to digest.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemConsumable_MicrobialWood_Redwood.PrimalItemConsumable_MicrobialWood_Redwood_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Cedar_Log.Cedar_Log",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.25,
+			"maxQuantity": 1000,
+			"spoilage": {
+				"time": 60,
+				"productBP": "/Game/Mods/AC2/Items/Resource/PrimalItemResource_Wood_Redwood.PrimalItemResource_Wood_Redwood_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 4,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_FungalWood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Microbial Slurry Wood",
+			"description": "Rotten meat slathered over wood in hopes that a lucanidae will eat it. It will, but begrudgingly.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemConsumable_MicrobialWood_Slurry.PrimalItemConsumable_MicrobialWood_Slurry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/SpoiledMeat_Icon.SpoiledMeat_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.25,
+			"maxQuantity": 1000,
+			"spoilage": {
+				"time": 300,
+				"productBP": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C"
+			},
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 4,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemConsumable_SpoiledMeat_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Microbial Mangrove Wood Production",
+			"description": "Lucanidae uses bacteria and microbes in its stomach to partially rot away wood, and enrich it. This makes the wood easier to digest and easier to draw nutrients from. Lucanidae prefers this over normal food.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemResource_ProcessCypressWood.PrimalItemResource_ProcessCypressWood_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Oak_Log.Oak_Log",
+			"type": "Resource",
+			"folders": [],
+			"weight": 2,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 5,
+				"bpCraftTime": 8,
+				"minLevelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Wood_Cypress_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Microbial Fungal Wood Production",
+			"description": "Lucanidae uses bacteria and microbes in its stomach to partially rot away wood, and enrich it. This makes the wood easier to digest and easier to draw nutrients from. Lucanidae prefers this over normal food.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemResource_ProcessFungalWood.PrimalItemResource_ProcessFungalWood_C",
+			"icon": "/Game/Aberration/Icons/Resources/MushroomBark.MushroomBark",
+			"type": "Resource",
+			"folders": [],
+			"weight": 2,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 5,
+				"bpCraftTime": 8,
+				"minLevelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_FungalWood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Microbial Redwood Production",
+			"description": "Lucanidae uses bacteria and microbes in its stomach to partially rot away wood, and enrich it. This makes the wood easier to digest and easier to draw nutrients from. Lucanidae adores the flavor of this!!",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemResource_ProcessRedwoodWood.PrimalItemResource_ProcessRedwoodWood_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Cedar_Log.Cedar_Log",
+			"type": "Resource",
+			"folders": [],
+			"weight": 2,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 5,
+				"bpCraftTime": 8,
+				"minLevelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Wood_Redwood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Microbial Wood Production",
+			"description": "Lucanidae uses bacteria and microbes in its stomach to partially rot away wood, and enrich it. This makes the wood easier to digest and easier to draw nutrients from. Lucanidae prefer scarfing this down regularly.",
+			"bp": "/Game/Mods/AC2/Lucanidae/PrimalItemResource_ProcessWood.PrimalItemResource_ProcessWood_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Wood_Icon.Wood_Icon",
+			"type": "Resource",
+			"folders": [],
+			"weight": 2,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 5,
+				"bpCraftTime": 8,
+				"minLevelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Wood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
 			"name": "Metriacanthosaurus Saddle",
 			"description": "Equip a Metriacanthosaurus with this to ride it.",
 			"bp": "/Game/Mods/AC2/Metria/PrimalItemArmor_MetriaSaddle.PrimalItemArmor_MetriaSaddle_C",
@@ -3225,6 +3691,49 @@
 				"stamina": 0.8,
 				"food": 0.8,
 				"weight": 0.3
+			}
+		},
+		{
+			"name": "Common Mushroom",
+			"description": "This mushroom can be found pretty much everywhere. It's tasty, and heals you slowly over time. Great in recipes!",
+			"bp": "/Game/Mods/AC2/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_CommonMushroom.PrimalItemResource_CommonMushroom_C",
+			"icon": "/Game/PrimalEarth/Test_Craig/RareMushroom_Icon.RareMushroom_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [],
+			"weight": 0.2,
+			"maxQuantity": 100,
+			"spoilage": { "time": 25920 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 3,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"pctOf": "max",
+					"pctAbsRange": [ 0, 0 ],
+					"duration": 0.2
+				}
+			},
+			"cookingStats": {
+				"health": 0.05,
+				"stamina": 0.2,
+				"food": 0.1,
+				"weight": 0.1
 			}
 		},
 		{
@@ -3916,6 +4425,179 @@
 					"cyan": {
 						"intensity": 1.5,
 						"color": [ 1, 0.351066, 0.168014, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Psittacosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Taco/PrimalItemConsumable_Egg_Taco_Fertilized.PrimalItemConsumable_Egg_Taco_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Dilo.HUD_DinoEgg_MIC_Inst_Dilo",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 20,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 5
+				},
+				"health": {
+					"value": 20,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 5
+				},
+				"stamina": {
+					"value": 25,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 6.25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Taco/Taco_Character_bp.Taco_Character_bp_C",
+				"temperature": [ 28, 32 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 0.93,
+						"color": [ 0.8, 0.8, 0.7, 1 ]
+					},
+					"cyan": {
+						"intensity": 1.5,
+						"color": [ 0.4, 0.05, 0.1, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Torosaurus Saddle",
+			"description": "Equip a Torosaurus with this to ride it.",
+			"bp": "/Game/Mods/AC2/Torosaurus/PrimalItemArmor_ToroSaddle.PrimalItemArmor_ToroSaddle_C",
+			"icon": "/Game/PrimalEarth/Dinos/Pachyrhinosaurus/Saddle/HUD_PachyrhinoSaddle_Colorize_MIC.HUD_PachyrhinoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"crafting": {
+				"xp": 22.2,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 210,
+						"type": "PrimalItemResource_Hide_C"
+					},
+					{
+						"exact": false,
+						"qty": 200,
+						"type": "PrimalItemResource_Fibers_C"
+					},
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_Wood_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 22.2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Fertilized Trike Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Torosaurus/PrimalItemConsumable_Egg_Toro_Fertilized.PrimalItemConsumable_Egg_Toro_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Trike.HUD_DinoEgg_MIC_Inst_Trike",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 9,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 45,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 11.25
+				},
+				"health": {
+					"value": 45,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 11.25
+				},
+				"stamina": {
+					"value": 45,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 11.25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Torosaurus/Torosaur_Character_BP.Torosaur_Character_BP_C",
+				"temperature": [ 22, 28 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.265, 0.24907, 0.053, 1 ]
+					},
+					"cyan": {
+						"intensity": 1.5,
+						"color": [ 1, 1, 1, 1 ]
 					}
 				}
 			},
@@ -7883,12 +8565,12 @@
 		},
 		{
 			"name": "Fertilized Smok Saurovindico Egg",
-			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AC2/smok/PrimalItemConsumable_Egg_Smok_Fertilized.PrimalItemConsumable_Egg_Smok_Fertilized_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Rex.HUD_DinoEgg_MIC_Inst_Rex",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Gigant.HUD_DinoEgg_MIC_Inst_Gigant",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
-			"weight": 15,
+			"weight": 6,
 			"maxQuantity": 1,
 			"spoilage": { "time": 691200 },
 			"durability": {
@@ -7909,35 +8591,236 @@
 			},
 			"statEffects": {
 				"food": {
-					"value": 80,
+					"value": 100,
 					"useItemQuality": true,
 					"descriptionIndex": 0,
-					"duration": 20
+					"duration": 25
 				},
 				"health": {
-					"value": 80,
+					"value": 100,
 					"useItemQuality": true,
 					"descriptionIndex": 0,
-					"duration": 20
+					"duration": 25
 				},
 				"stamina": {
-					"value": 80,
+					"value": 100,
 					"useItemQuality": true,
 					"descriptionIndex": 0,
-					"duration": 20
+					"duration": 25
 				}
 			},
 			"egg": {
 				"dinoClass": "/Game/Mods/AC2/smok/Saurovindico_Character_BP.Saurovindico_Character_BP_C",
-				"temperature": [ 32, 34 ],
+				"temperature": [ 43, 44 ],
 				"hudColorisation": {
 					"red": {
-						"intensity": 0.8,
-						"color": [ 0.355, 0.048384, 0.0355, 1 ]
+						"intensity": 1,
+						"color": [ 0.355, 0.258, 0.227, 1 ]
 					},
 					"cyan": {
-						"intensity": 1.5,
-						"color": [ 0.986833, 1, 0.77, 1 ]
+						"intensity": 21,
+						"color": [ 0, 0.494, 1, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Aberrant Smok Saurovindico Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/smok/PrimalItemConsumable_Egg_Smok_FertilizedAb.PrimalItemConsumable_Egg_Smok_FertilizedAb_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Gigant.HUD_DinoEgg_MIC_Inst_Gigant",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 25
+				},
+				"health": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 25
+				},
+				"stamina": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/smok/Saurovindico_Character_BP_Aberrant.Saurovindico_Character_BP_Aberrant_C",
+				"temperature": [ 43, 44 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.355, 0.258, 0.227, 1 ]
+					},
+					"cyan": {
+						"intensity": 21,
+						"color": [ 0, 0.494, 1, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized Crystal Smok Saurovindico Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/smok/PrimalItemConsumable_Egg_Smok_FertilizedCrystal.PrimalItemConsumable_Egg_Smok_FertilizedCrystal_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Gigant.HUD_DinoEgg_MIC_Inst_Gigant",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 25
+				},
+				"health": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 25
+				},
+				"stamina": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/smok/Saurovindico_Character_BP_Crystal.Saurovindico_Character_BP_Crystal_C",
+				"temperature": [ 43, 44 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.355, 0.258, 0.227, 1 ]
+					},
+					"cyan": {
+						"intensity": 21,
+						"color": [ 0, 0.494, 1, 1 ]
+					}
+				}
+			},
+			"cookingStats": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3
+			}
+		},
+		{
+			"name": "Fertilized X-Smok Saurovindico Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/smok/PrimalItemConsumable_Egg_Smok_FertilizedX.PrimalItemConsumable_Egg_Smok_FertilizedX_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Gigant.HUD_DinoEgg_MIC_Inst_Gigant",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"maxQuantity": 1,
+			"spoilage": { "time": 691200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 25
+				},
+				"health": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 25
+				},
+				"stamina": {
+					"value": 100,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 25
+				}
+			},
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/smok/Volcano_Saurovindico_Character_BP.Volcano_Saurovindico_Character_BP_C",
+				"temperature": [ 43, 44 ],
+				"hudColorisation": {
+					"red": {
+						"intensity": 1,
+						"color": [ 0.355, 0.258, 0.227, 1 ]
+					},
+					"cyan": {
+						"intensity": 21,
+						"color": [ 0, 0.494, 1, 1 ]
 					}
 				}
 			},
