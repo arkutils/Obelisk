@@ -1,5 +1,5 @@
 {
-	"version": "312.65.1596148809",
+	"version": "326.3.1618981807",
 	"format": "3",
 	"mod": {
 		"id": "1090809604",
@@ -1595,7 +1595,7 @@
 			"maxQuantity": 100,
 			"spoilage": {
 				"time": 120000,
-				"productBP": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C"
+				"productBP": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C"
 			},
 			"durability": {
 				"min": 0,
@@ -1715,11 +1715,6 @@
 						"exact": false,
 						"qty": 120,
 						"type": "PrimalItemResource_ManaDark_C"
-					},
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_PearlDust_C"
 					},
 					{
 						"exact": false,
@@ -1919,7 +1914,7 @@
 			"maxQuantity": 100,
 			"spoilage": {
 				"time": 120000,
-				"productBP": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C"
+				"productBP": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C"
 			},
 			"durability": {
 				"min": 0,
@@ -2268,7 +2263,7 @@
 			"maxQuantity": 100,
 			"spoilage": {
 				"time": 120000,
-				"productBP": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C"
+				"productBP": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C"
 			},
 			"durability": {
 				"min": 0,
@@ -2421,7 +2416,7 @@
 			"maxQuantity": 100,
 			"spoilage": {
 				"time": 120000,
-				"productBP": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C"
+				"productBP": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C"
 			},
 			"durability": {
 				"min": 0,
@@ -2743,11 +2738,6 @@
 						"exact": false,
 						"qty": 100,
 						"type": "PrimalItemResource_Element_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_PearlDust_C"
 					}
 				]
 			},
@@ -3674,6 +3664,138 @@
 			}
 		},
 		{
+			"name": "Recruiter's Badge",
+			"description": "Use this to let your chosen delegate attempt to recruit the other races of Pyria.",
+			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemConsumable_RecruiterBadge.PrimalItemConsumable_RecruiterBadge_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/RecruiterBadge.RecruiterBadge",
+			"type": "MiscConsumable/Food",
+			"folders": [],
+			"weight": 0.1,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_MetalIngot_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Gelragarian Ingot",
+			"description": "Give it to a Gelragarian and they will be able to upgrade weapons sold at their shop! Can also be refined if you give a Gelragarian smithy enough metal.",
+			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemResource_GelraIngot.PrimalItemResource_GelraIngot_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/GelragarianIngot.GelragarianIngot",
+			"type": "Resource",
+			"folders": [ "Special Order" ],
+			"weight": 1,
+			"maxQuantity": 300,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 20,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Metal_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Mermaid Ingot",
+			"description": "Give it to a Gelragarian and they will be able to upgrade weapons bought from a Mermaid shop! Can also be refined if you give a Gelragarian smithy enough metal.",
+			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemResource_MermaIngot.PrimalItemResource_MermaIngot_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/MermaidIngot.MermaidIngot",
+			"type": "Resource",
+			"folders": [ "Special Order" ],
+			"weight": 1,
+			"maxQuantity": 300,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 20,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Metal_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Orc Ingot",
+			"description": "Give it to a Orc and they will be able to upgrade weapons sold at their shop! Can also be refined if you give a Orc smithy enough metal.",
+			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemResource_OrcIngot.PrimalItemResource_OrcIngot_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/OrcIngot.OrcIngot",
+			"type": "Resource",
+			"folders": [ "Special Order" ],
+			"weight": 1,
+			"maxQuantity": 300,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 20,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Metal_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
 			"name": "Alchemy Station",
 			"description": "Place ingredients and resources in here to create various mystical items!",
 			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemStructure_AlchemyStation.PrimalItemStructure_AlchemyStation_C",
@@ -4431,35 +4553,9 @@
 			}
 		},
 		{
-			"name": "Fulgur Crystal",
-			"description": "A crystal rarely found in nature, though commonly found growing on the elder HC Diorex. These strange, blue crystals are highly conductive by nature; and can easily store, conduct, and generate massive electrical charges. A prized resource!",
-			"bp": "/Game/Mods/Pyria/Creatures/Undead/UberCarno/PrimalItemResource_Fulgurcrystal.PrimalItemResource_Fulgurcrystal_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/FulgurCrystal.FulgurCrystal",
-			"type": "Resource",
-			"folders": [],
-			"weight": 0.5,
-			"maxQuantity": 3000,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
 			"name": "Balrog Core",
 			"description": "This trophy proves your worth as a hunter.\nThe core of a Balrog, that once- and still does- hold it's life energy. Can be used to create a loyal Balrog of your own.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/PrimalItemResource_ApexDrop_Balrog.PrimalItemResource_ApexDrop_Balrog_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_ApexDrop_Balrog.PrimalItemResource_ApexDrop_Balrog_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/BalrogCore.BalrogCore",
 			"type": "Resource",
 			"folders": [],
@@ -4485,7 +4581,7 @@
 		{
 			"name": "Balrog Black Pearl",
 			"description": "Only a Balrog is able to generate the heat needed to return Black Pearl Dust into it's original form. Useful if you need black pearls in their original state, but want them broken down for ease of carry. Reform em when you need em!",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/PrimalItemResource_BalrogBlackPearl.PrimalItemResource_BalrogBlackPearl_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogBlackPearl.PrimalItemResource_BalrogBlackPearl_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/BlackPearl_Icon.BlackPearl_Icon",
 			"type": "Resource",
 			"folders": [],
@@ -4518,7 +4614,7 @@
 		{
 			"name": "Balrog Meat Jerky",
 			"description": "Meat Jerky created by your Balrog quick-cooking raw meat! Mmmm~",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/PrimalItemResource_BalrogJerky.PrimalItemResource_BalrogJerky_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogJerky.PrimalItemResource_BalrogJerky_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Jerky_Icon.Jerky_Icon",
 			"type": "Resource",
 			"folders": [],
@@ -4551,7 +4647,7 @@
 		{
 			"name": "Balrog Prime Meat Jerky",
 			"description": "Prime Meat Jerky created by your Balrog quick-cooking raw prime meat! Mmmm~",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/PrimalItemResource_BalrogJerkyPrime.PrimalItemResource_BalrogJerkyPrime_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogJerkyPrime.PrimalItemResource_BalrogJerkyPrime_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/PrimeJerky_Icon.PrimeJerky_Icon",
 			"type": "Resource",
 			"folders": [],
@@ -4584,7 +4680,7 @@
 		{
 			"name": "Balrog Metal Ingot",
 			"description": "Metal Ingots efficiently smelted from your Balrog on command. Useful!",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/PrimalItemResource_BalrogMetal.PrimalItemResource_BalrogMetal_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogMetal.PrimalItemResource_BalrogMetal_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/MetalIngot_Icon.MetalIngot_Icon",
 			"type": "Resource",
 			"folders": [],
@@ -4617,7 +4713,7 @@
 		{
 			"name": "Balrog Obsidian",
 			"description": "Obsidian effectively created from your Balrog on command, by baking sand into volcanic glass. Useful!",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/PrimalItemResource_BalrogObsidian.PrimalItemResource_BalrogObsidian_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogObsidian.PrimalItemResource_BalrogObsidian_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Obsidian_Icon.Obsidian_Icon",
 			"type": "Resource",
 			"folders": [],
@@ -4650,7 +4746,7 @@
 		{
 			"name": "Balrog Propellant",
 			"description": "Propellant created by your Balrog breaking down sulfur into Propellant. Useful!",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/PrimalItemResource_BalrogPropellant.PrimalItemResource_BalrogPropellant_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogPropellant.PrimalItemResource_BalrogPropellant_C",
 			"icon": "/Game/ScorchedEarth/Icons/Resources/Propellant_Icon.Propellant_Icon",
 			"type": "Resource",
 			"folders": [],
@@ -4683,7 +4779,7 @@
 		{
 			"name": "Balrog Sulfur",
 			"description": "Sulfur created by your Balrog breaking down stone into sulfur. Useful!",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/PrimalItemResource_BalrogSulfur.PrimalItemResource_BalrogSulfur_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogSulfur.PrimalItemResource_BalrogSulfur_C",
 			"icon": "/Game/ScorchedEarth/Icons/Resources/Sulfur_Icon.Sulfur_Icon",
 			"type": "Resource",
 			"folders": [],
@@ -4716,7 +4812,7 @@
 		{
 			"name": "Black Pearl Dust",
 			"description": "Only a Balrog is capable of generating enough heat to burn down black pearls into this dust. Strangely enough, in this state Black Pearls seem to have even higher magic power... Can also be reformed into it's original state, but only by a Balrog.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/PrimalItemResource_PearlDust.PrimalItemResource_PearlDust_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_PearlDust.PrimalItemResource_PearlDust_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/BlackPearlDust.BlackPearlDust",
 			"type": "Resource",
 			"folders": [],
@@ -4739,6 +4835,1385 @@
 						"type": "PrimalItemResource_BlackPearl_C"
 					}
 				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Fire Elemental Core",
+			"description": "This trophy proves your worth as a hunter.\nThe core of a Fire Elemental, that once- and still does- hold it's life energy. Can be used to create a loyal Fire Elemental of your own.",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/FireElemental/PrimalItemResource_ApexDrop_FireBurb.PrimalItemResource_ApexDrop_FireBurb_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/FireElementalCore.FireElementalCore",
+			"type": "Resource",
+			"folders": [],
+			"weight": 2,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Glacier Golem Core",
+			"description": "This trophy proves your worth as a hunter.\nThe core of a Glacier Golem, that once- and still does- hold it's life energy. Can be used to create a loyal Glacier Golem of your own.",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/GlacierGolemCore.GlacierGolemCore",
+			"type": "Resource",
+			"folders": [],
+			"weight": 2,
+			"maxQuantity": 100,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Ice Crystal",
+			"description": "Created by a Glacier Golem. If removed from its inventory, it will quickly spoil.",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_Crystal_Ice.PrimalItemResource_Crystal_Ice_C",
+			"icon": "/Game/PrimalEarth/Test_Craig/Crystal_Icon.Crystal_Icon",
+			"type": "Resource",
+			"folders": [],
+			"weight": 0.1,
+			"maxQuantity": 1000,
+			"spoilage": { "time": 300 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_WaterElement_C"
+					},
+					{
+						"exact": false,
+						"qty": 5,
+						"type": "PrimalItemResource_Stone_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Create Crystals",
+			"description": "Ice Crystals created by your tamed Glacier Golem slowly processing stone to crystal, at your command.",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_GolemCrystal.PrimalItemResource_GolemCrystal_C",
+			"icon": "/Game/PrimalEarth/Test_Craig/Crystal_Icon.Crystal_Icon",
+			"type": "Resource",
+			"folders": [],
+			"weight": 0,
+			"maxQuantity": 3000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 10,
+				"minLevelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Stone_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_WaterElement_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Gelragarian's Shop",
+			"description": "Everything you need to set up a shop for a Gelragarian! Place it down and they'll handle the rest!",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/PrimalItemStructure_GelragarianSmithy.PrimalItemStructure_GelragarianSmithy_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 4,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.25,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 6.25,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/GelragarianSmithy.GelragarianSmithy_C"
+		},
+		{
+			"name": "Bastard Sword",
+			"description": "A weapon made by gelragarian's. It's Huge and heavy but those swings will be devestating! It works more like a hatchet than a sword for gathering!",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/BastardSword/PrimalItem_WeaponBastardSword.PrimalItem_WeaponBastardSword_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/Textures/HUD_GelraBastardSwordForged_Colorize_MIC.HUD_GelraBastardSwordForged_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 30,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.6,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 6.6,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/BastardSword/WeapBastardSword.WeapBastardSword_C"
+		},
+		{
+			"name": "Bladed Mace",
+			"description": "A weapon made by Gelragarians. It's heavy but strong. It can mine minerals like a pickaxe or axe!",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/BladedMace/PrimalItem_WeaponBladedMace.PrimalItem_WeaponBladedMace_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/BladedMace/BladedAxe_Icon.BladedAxe_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 15,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/BladedMace/WeapBladedMace.WeapBladedMace_C"
+		},
+		{
+			"name": "Great Axe",
+			"description": "A weapon made by Gelragarians. It's heavy but strong. It works like an extremely dangerous hatchet!",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/GreatAxe/PrimalItem_WeaponGreatAxe.PrimalItem_WeaponGreatAxe_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/GreatAxe/GreatAxe_Icon.GreatAxe_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 35,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/GreatAxe/WeapGreatAxe.WeapGreatAxe_C"
+		},
+		{
+			"name": "War Hammer",
+			"description": "A weapon made by Gelragarians. It's heavy but not as heavy as the other weapons. It can mine minerals like a pickaxe or axe!",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/Hammer/PrimalItem_WeaponHammer.PrimalItem_WeaponHammer_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/Hammer/Warhammer_Icon.Warhammer_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 10,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/Hammer/WeapHammer.WeapHammer_C"
+		},
+		{
+			"name": "Long Sword",
+			"description": "A weapon made by Gelragarians. It's heavy but strong and long! It works more like a hatchet than a sword for gathering!",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/LongSword/PrimalItem_WeaponLongSword.PrimalItem_WeaponLongSword_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/LongSword/LongSword_Icon.LongSword_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 15,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.6,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 6.6,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/LongSword/WeapLongSword.WeapLongSword_C"
+		},
+		{
+			"name": "Spiked Hammer",
+			"description": "A weapon made by Gelragarians. It's heavy but strong. It can mine minerals like a pickaxe or axe!",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/SpikedHammer/PrimalItem_WeaponSpikedHammer.PrimalItem_WeaponSpikedHammer_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/SpikedHammer/SpikedHammer_Icon.SpikedHammer_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/SpikedHammer/WeapSpikedHammer.WeapSpikedHammer_C"
+		},
+		{
+			"name": "Cultivated Bio Toxin",
+			"description": "Powerful toxin harvested from an organism. This particular version was cultivated by mermaids![Gives 5]",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/PrimalItemConsumable_JellyVenom_Merm.PrimalItemConsumable_JellyVenom_Merm_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/JellyfishGel_Icon.JellyfishGel_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Ocean Resources" ],
+			"weight": 0.05,
+			"maxQuantity": 1000,
+			"spoilage": { "time": 2700 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 2,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_CookedLambChop_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"torpidity": {
+					"value": 80,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 16
+				},
+				"health": {
+					"value": -30,
+					"useItemQuality": true,
+					"descriptionIndex": 0,
+					"duration": 3.75
+				}
+			}
+		},
+		{
+			"name": "Cultivated Ammonite Bile",
+			"description": "A congealed glob of Ammonite Bile. Can be used for medicinal purposes when carefully prepared. This particular version was cultivated by mermaids!",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/PrimalItemResource_AmmoniteBlood_Merm.PrimalItemResource_AmmoniteBlood_Merm_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/AmmoniteBile_Icon.AmmoniteBile_Icon",
+			"type": "Resource",
+			"folders": [ "Ocean Resources" ],
+			"weight": 0.1,
+			"maxQuantity": 1000,
+			"spoilage": { "time": 10800 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 3,
+						"type": "PrimalItemConsumable_CookedLambChop_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Cultivated AnglerGel",
+			"description": "A thick, viscous substance that can sustain a flame for a remarkably long duration. This particular version was cultivated by mermaids![Gives 20]",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/PrimalItemResource_AnglerGel_Merm.PrimalItemResource_AnglerGel_Merm_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Angler_LightSource_Icon.Angler_LightSource_Icon",
+			"type": "Resource",
+			"folders": [ "Ocean Resources" ],
+			"weight": 0.005,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_CookedLambChop_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"food": {
+					"value": 8,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 8
+				}
+			}
+		},
+		{
+			"name": "Cultvated Black Pearl",
+			"description": "A rare resource from the bottom of the sea...This particular version was cultivated by mermaids!",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/PrimalItemResource_BlackPearl_Merm.PrimalItemResource_BlackPearl_Merm_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/BlackPearl_Icon.BlackPearl_Icon",
+			"type": "Resource",
+			"folders": [ "Ocean Resources" ],
+			"weight": 1,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 2,
+						"type": "PrimalItemConsumable_CookedLambChop_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Cultivated Organic Polymer",
+			"description": "These incredibly strong, lightweight plates are somehow naturally made in certain creatures. Incredibly hazardous to human health if consumed. This particular version was cultivated by mermaids!",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/PrimalItemResource_Polymer_Organic_Merm.PrimalItemResource_Polymer_Organic_Merm_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/OrganicPolymer_Icon.OrganicPolymer_Icon",
+			"type": "Resource",
+			"folders": [ "Ocean Resources" ],
+			"weight": 0.125,
+			"maxQuantity": 1000,
+			"spoilage": { "time": 1800 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.56,
+				"bpCraftTime": 2,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_CookedLambChop_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 0.56,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"health": {
+					"value": -500,
+					"useItemQuality": false,
+					"descriptionIndex": 0,
+					"duration": 0
+				}
+			},
+			"cookingStats": {
+				"health": -0.5,
+				"stamina": -0.5,
+				"food": 0.1,
+				"weight": 0.01
+			}
+		},
+		{
+			"name": "Cultivated Silica Pearls",
+			"description": "These pearls are made almost entirely of Silicon.  Can be refined into Silicon plates. This particular version was cultivated by mermaids!",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/PrimalItemResource_Silicon_Merm.PrimalItemResource_Silicon_Merm_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Pearl_Icon.Pearl_Icon",
+			"type": "Resource",
+			"folders": [ "Ocean Resources" ],
+			"weight": 0.01,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_CookedLambChop_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Mermaid's Shop",
+			"description": "Everything you need to set up a shop for a mermaid! Make sure it's in water and she'll be right at home!",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/PrimalItemStructure_MermaidRock.PrimalItemStructure_MermaidRock_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 4,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.25,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 6.25,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/MermaidRockShop.MermaidRockShop_C"
+		},
+		{
+			"name": "Mermaid Dueling Sword",
+			"description": "It's a bit longer than a normal sword but still somehow lighter you should be able to swing faster with this!",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/PrimalItem_WeaponDuelingSword.PrimalItem_WeaponDuelingSword_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/DuelingSwordIcon.DuelingSwordIcon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 3.5,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.6,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 15,
+						"type": "PrimalItemResource_Hide_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 6.6,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/WeapDuelingSword.WeapDuelingSword_C"
+		},
+		{
+			"name": "Mermaid Long Sword",
+			"description": "Longer than a normal sword but weighs the same! It also does more damage.",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/PrimalItem_WeaponMermLongSword.PrimalItem_WeaponMermLongSword_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/MermaidLongSwordIcon.MermaidLongSwordIcon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 5,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.6,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 50,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 15,
+						"type": "PrimalItemResource_Hide_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 6.6,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/WeapMermLongSword.WeapMermLongSword_C"
+		},
+		{
+			"name": "Mermaid Trident",
+			"description": "A Trident used by mermaids, it weighs the same as a pike but deals more damage!",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/PrimalItem_WeaponMermTrident.PrimalItem_WeaponMermTrident_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/MermTridentIcon.MermTridentIcon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 10,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 6,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/WeapMermTrident.WeapMermTrident_C"
+		},
+		{
+			"name": "Mermaid Silver Spear",
+			"description": "A spear used by mermaids. it's longer than a normal pike and its lighter as well which allows for swifter attacks.",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/PrimalItem_WeaponSilverSpear.PrimalItem_WeaponSilverSpear_C",
+			"icon": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/MermSilverSpearIcon.MermSilverSpearIcon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 7,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 10,
+						"type": "PrimalItemResource_MetalIngot_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_Hide_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 6,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/WeaponMeshes/WeapMermSpear.WeapMermSpear_C"
+		},
+		{
+			"name": "Bug Repellant",
+			"description": "This gnarly paste makes you nearly invisible to bugs, bats, and spiders. Just don't attack them or get too close, and they'll ignore you! Effect lasts 10 minutes. [Gives 20]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemConsumable_BugRepellant_Cent.PrimalItemConsumable_BugRepellant_Cent_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/BugRepellent_Icon.BugRepellent_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Bundles" ],
+			"weight": 0.1,
+			"maxQuantity": 1000,
+			"spoilage": { "time": 18000 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 8,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_SweetVeggieCake_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Lesser Antidote",
+			"description": "Cures Lesser Afflictions![Gives 20]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemConsumable_CureLow_Cent.PrimalItemConsumable_CureLow_Cent_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Antidote_Icon.Antidote_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Bundles" ],
+			"weight": 0.1,
+			"maxQuantity": 1000,
+			"spoilage": { "time": 259200 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 40,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_SweetVeggieCake_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"health": {
+					"value": 1,
+					"useItemQuality": false,
+					"descriptionIndex": 0,
+					"duration": 1
+				}
+			}
+		},
+		{
+			"name": "Narcotic",
+			"description": "Increases your health, but puts you to sleep.[Gives 60]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemConsumable_Narcotic_cent.PrimalItemConsumable_Narcotic_Cent_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Narcotic_Icon.Narcotic_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Bundles" ],
+			"weight": 0.1,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 2,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_SweetVeggieCake_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"torpidity": {
+					"value": 40,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 8
+				},
+				"health": {
+					"value": 8,
+					"useItemQuality": true,
+					"descriptionIndex": 1,
+					"duration": 0.5
+				}
+			}
+		},
+		{
+			"name": "Stimulant",
+			"description": "Keeps you awake, but dehydrates you.[Gives 60]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemConsumable_Stimulant_Cent.PrimalItemConsumable_Stimulant_Cent_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Stimulant_Icon.Stimulant_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Bundles" ],
+			"weight": 0.1,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.05,
+				"bpCraftTime": 1,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_SweetVeggieCake_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"torpidity": {
+					"value": -40,
+					"useItemQuality": true,
+					"descriptionIndex": 2,
+					"duration": 8
+				},
+				"water": {
+					"value": -15,
+					"useItemQuality": true,
+					"descriptionIndex": 1,
+					"duration": 1
+				}
+			}
+		},
+		{
+			"name": "Cementing Paste",
+			"description": "This thick, waterproof paste could be used as mortar, or to thicken another substance.[Gives 40]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemResource_ChitinPaste_Cent.PrimalItemResource_ChitinPaste_Cent_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/CementPaste_Icon.CementPaste_Icon",
+			"type": "Resource",
+			"folders": [ "Bundles" ],
+			"weight": 0.01,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.2,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_SweetVeggieCake_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Gunpowder",
+			"description": "An powerful propellant. Necessary for any firearm or explosive.[Gives 30]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemResource_Gunpowder_Cent.PrimalItemResource_Gunpowder_Cent_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Gunpowder_Icon.Gunpowder_Icon",
+			"type": "Resource",
+			"folders": [ "Bundles" ],
+			"weight": 0.1,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.05,
+				"bpCraftTime": 1,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_SweetVeggieCake_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Propellant",
+			"description": "Used to manufacture highly flammable substances. [Gives 40]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemResource_Propellant_Cent.PrimalItemResource_Propellant_Cent_C",
+			"icon": "/Game/ScorchedEarth/Icons/Resources/Propellant_Icon.Propellant_Icon",
+			"type": "Resource",
+			"folders": [ "Bundles" ],
+			"weight": 0.5,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_SweetVeggieCake_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Sparkpowder",
+			"description": "Created by grinding flint with stone in a Mortar and Pestle or Chemistry Table.[Gives 60]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemResource_Sparkpowder_Cent.PrimalItemResource_Sparkpowder_Cent_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Sparkpowder_Icon.Sparkpowder_Icon",
+			"type": "Resource",
+			"folders": [ "Bundles" ],
+			"weight": 0.1,
+			"maxQuantity": 1000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 0.06,
+				"bpCraftTime": 1,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_SweetVeggieCake_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 0.06,
+				"time": 5,
+				"resourceMult": 0.5
+			}
+		},
+		{
+			"name": "Centaur Shop",
+			"description": "Everything you need to set up a shop for a Centaur! Make sure it's not in water and they'll be right at home!",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemStructure_CentaurMarket.PrimalItemStructure_CentaurMarket_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 4,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.25,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 6.25,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/CentaurPlainShop.CentaurPlainShop_C"
+		},
+		{
+			"name": "Centaur Shop",
+			"description": "Everything you need to set up a shop for a Centaur! Make sure it's not in water and they'll be right at home!",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemStructure_CentaurMarket2.PrimalItemStructure_CentaurMarket2_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 4,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.25,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 6.25,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/CentaurPlainShop2.CentaurPlainShop2_C"
+		},
+		{
+			"name": "Orc Shop",
+			"description": "Everything you need to set up a shop for an Orc! Place it down and they'll handle the rest!",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/PrimalItemStructure_OrcSmithy.PrimalItemStructure_OrcSmithy_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 4,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.25,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ]
+			},
+			"repair": {
+				"xp": 6.25,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"structureTemplate": "/Game/Mods/Pyria/Creatures/NearKin/Orc/OrcSmithy.OrcSmithy_C"
+		},
+		{
+			"name": "Barbarian's Axe",
+			"description": "A weapon made by Orcs. It's heavy but not as heavy as the other weapons. It can mine minerals like a pickaxe or axe! It is very basic with no special qualities, however it is very easy and cheap to make.",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/BarbariansAxe/PrimalItem_WeaponBarbarianAxe.PrimalItem_WeaponBarbarianAxe_C",
+			"icon": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/BarbariansAxe/BarbarianAxe_Icon.BarbarianAxe_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 10,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/BarbariansAxe/WeapBarbarianAxe.WeapBarbarianAxe_C"
+		},
+		{
+			"name": "Savage Axe",
+			"description": "A weapon made by Orcs. It's relatively light and easy to use. It works like an extremely dangerous hatchet! Can also cause a minor bleed effect on hit [15% chance]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageAxe/PrimalItem_WeaponSavageAxe.PrimalItem_WeaponSavageAxe_C",
+			"icon": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageAxe/SavageAxe_Icon.SavageAxe_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 35,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageAxe/WeapSavageAxe.WeapSavageAxe_C"
+		},
+		{
+			"name": "Savage Club",
+			"description": "A weapon made by Orcs. It's heavy but strong. It can mine minerals like a pickaxe or axe! Can also cause a minor bleed effect on hit [40% chance]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageClub/PrimalItem_WeaponSavageClub.PrimalItem_WeaponSavageClub_C",
+			"icon": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageClub/SavageClub_Icon.SavageClub_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 20,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageClub/WeapSavageClub.WeapSavageClub_C"
+		},
+		{
+			"name": "Savage Cutlas",
+			"description": "A weapon made by Orcs. It's heavy but strong! Can also cause a minor bleed effect on hit [25% chance]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageCutlas/PrimalItem_WeaponSavageCutlas.PrimalItem_WeaponSavageCutlas_C",
+			"icon": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageCutlas/SavageCutlas_Icon.SavageCutlas_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 15,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 6.6,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 6.6,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageCutlas/WeapOrcCutlas.WeapOrcCutlas_C"
+		},
+		{
+			"name": "Savage Great Axe",
+			"description": "A weapon made by Orcs. It's heavy but strong. It works like an extremely dangerous hatchet! Can also cause a minor bleed effect on hit [60% chance]",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageGreatAxe/PrimalItem_WeaponSavageGreatAxe.PrimalItem_WeaponSavageGreatAxe_C",
+			"icon": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageGreatAxe/SavageGreatAxe_Icon.SavageGreatAxe_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 35,
+			"maxQuantity": 1,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1.4,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemConsumable_BeerJar_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 1.4,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"weaponTemplate": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageGreatAxe/WeapSavageGreatAxe.WeapSavageGreatAxe_C"
+		},
+		{
+			"name": "Fulgur Crystal",
+			"description": "A crystal rarely found in nature, though commonly found growing on the elder HC Diorex. These strange, blue crystals are highly conductive by nature; and can easily store, conduct, and generate massive electrical charges. A prized resource!",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/UberCarno/PrimalItemResource_Fulgurcrystal.PrimalItemResource_Fulgurcrystal_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/FulgurCrystal.FulgurCrystal",
+			"type": "Resource",
+			"folders": [],
+			"weight": 0.5,
+			"maxQuantity": 3000,
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 5,
+				"minLevelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": [ 0, 0.05 ]
 			},
 			"repair": {
 				"xp": 2,
@@ -5029,137 +6504,6 @@
 				"minLevelReq": 0,
 				"productCount": 15,
 				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
-			"name": "Pyrian Karkinos Saddle",
-			"description": "Equip a Karkinos with this to ride it. It's made from resources easily accessible in Pyria.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/PrimalItemArmor_CrabSaddlePyria.PrimalItemArmor_CrabSaddlePyria_C",
-			"icon": "/Game/Aberration/Dinos/Crab/cave_crab_saddle/HUD_Crab_Saddle_Colorize.HUD_Crab_Saddle_Colorize",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"maxQuantity": 1,
-			"crafting": {
-				"xp": 26.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 170,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 26.8,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
-			"name": "Upgraded Pyrian Karkinos Saddle",
-			"description": "A Pyrian Karkinos saddle, upgraded with Mana and a Drallion Stone. Defeat an HC Wanderer Karkinos to unlock this engram.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/PrimalItemArmor_CrabSaddlePyria_UG.PrimalItemArmor_CrabSaddlePyria_UG_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UpgradedKarkinosSaddle.UpgradedKarkinosSaddle",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"maxQuantity": 1,
-			"crafting": {
-				"xp": 26.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 170,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_ApexDrop_Mana_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_DrallionGem_C"
-					},
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 26.8,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
-			"name": "Steelclaw Karkinos Carapace",
-			"description": "The hardened carapace of a Steelclaw Karkinos. It's incredibly similar to smelted metal, and can be used in place of metal ingots.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/PrimalItemResource_SteelclawCarapace.PrimalItemResource_SteelclawCarapace_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/SteelclawCarapace.SteelclawCarapace",
-			"type": "Resource",
-			"folders": [],
-			"weight": 0.4,
-			"maxQuantity": 300,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 20,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemResource_Metal_C"
-					}
-				]
 			},
 			"repair": {
 				"xp": 2,
@@ -5616,32 +6960,6 @@
 			}
 		},
 		{
-			"name": "Fire Elemental Core",
-			"description": "This trophy proves your worth as a hunter.\nThe core of a Fire Elemental, that once- and still does- hold it's life energy. Can be used to create a loyal Fire Elemental of your own.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/FireBurb/PrimalItemResource_ApexDrop_FireBurb.PrimalItemResource_ApexDrop_FireBurb_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/FireElementalCore.FireElementalCore",
-			"type": "Resource",
-			"folders": [],
-			"weight": 2,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
 			"name": "Firepike Thorny Dragon Egg",
 			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Firepike/PrimalItemConsumable_Egg_SpineyLizardPyria.PrimalItemConsumable_Egg_SpineyLizardPyria_C",
@@ -5931,197 +7249,6 @@
 				"stamina": 0.8,
 				"food": 0.8,
 				"weight": 0.3
-			}
-		},
-		{
-			"name": "GravioRex Egg",
-			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Graviorex/PrimalItemConsumable_Egg_Graviorex.PrimalItemConsumable_Egg_Graviorex_C",
-			"icon": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 40,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 120,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 30
-				},
-				"health": {
-					"value": 150,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 37.5
-				},
-				"stamina": {
-					"value": 120,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 30
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.01, 0.01, 1 ]
-					},
-					"cyan": {
-						"intensity": 0.5,
-						"color": [ 0.1, 3, 0, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
-			"name": "Fertilized GravioRex Egg",
-			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Graviorex/PrimalItemConsumable_Egg_Graviorex_Fertilized.PrimalItemConsumable_Egg_Graviorex_Fertilized_C",
-			"icon": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 40,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 120,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 30
-				},
-				"health": {
-					"value": 150,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 37.5
-				},
-				"stamina": {
-					"value": 120,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 30
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/Graviorex/Graviorex_Character_bp.Graviorex_Character_bp_C",
-				"temperature": [ 43, 44 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.01, 0.01, 1 ]
-					},
-					"cyan": {
-						"intensity": 0.5,
-						"color": [ 0.1, 3, 0, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
-			"name": "Glacier Golem Core",
-			"description": "This trophy proves your worth as a hunter.\nThe core of a Glacier Golem, that once- and still does- hold it's life energy. Can be used to create a loyal Glacier Golem of your own.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/GlacierGolemCore.GlacierGolemCore",
-			"type": "Resource",
-			"folders": [],
-			"weight": 2,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
-			"name": "Glacier Golem Crystal",
-			"description": "Ice Crystals created by your tamed Glacier Golem slowly processing stone to crystal, at your command.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/PrimalItemResource_GolemCrystal.PrimalItemResource_GolemCrystal_C",
-			"icon": "/Game/PrimalEarth/Test_Craig/Crystal_Icon.Crystal_Icon",
-			"type": "Resource",
-			"folders": [],
-			"weight": 0,
-			"maxQuantity": 3000,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_Stone_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
@@ -7022,138 +8149,6 @@
 			}
 		},
 		{
-			"name": "Salamander Egg",
-			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Salamander/PrimalItemConsumable_Egg_Mander.PrimalItemConsumable_Egg_Mander_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Raptor.HUD_DinoEgg_MIC_Inst_Raptor",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 7,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.01, 0.01, 1 ]
-					},
-					"cyan": {
-						"intensity": 0.5,
-						"color": [ 0.42, 0.049218, 0.042, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
-			"name": "Fertilized Salamander Egg",
-			"description": "",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Salamander/PrimalItemConsumable_Egg_Salamander_Fertilized.PrimalItemConsumable_Egg_Salamander_Fertilized_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Raptor.HUD_DinoEgg_MIC_Inst_Raptor",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/Salamander/Salamander_Character_BP.Salamander_Character_BP_C",
-				"temperature": [ 20, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.01, 0.01, 1 ]
-					},
-					"cyan": {
-						"intensity": 0.5,
-						"color": [ 0.42, 0.049218, 0.042, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3
-			}
-		},
-		{
 			"name": "Centaur Terror Bird Egg",
 			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/TaurBird/PrimalItemConsumable_Egg_TerrorbirdTaur.PrimalItemConsumable_Egg_TerrorbirdTaur_C",
@@ -7485,45 +8480,6 @@
 			}
 		},
 		{
-			"name": "Helosauria Saddle",
-			"description": "Equip a Helosauria with this to ride it.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/snakehead/PrimalItemArmor_GirrosSaddle.PrimalItemArmor_GirrosSaddle_C",
-			"icon": "/Game/PrimalEarth/Dinos/Megalania/saddle/HUD_MegalaniaSaddle_Colorize_MIC.HUD_MegalaniaSaddle_Colorize_MIC",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"maxQuantity": 1,
-			"crafting": {
-				"xp": 62.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 315,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 215,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 45,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 62.8,
-				"time": 5,
-				"resourceMult": 0.5
-			}
-		},
-		{
 			"name": "Dinosaur Feces",
 			"description": "Everyone poops.\nCan provide nitrogen to help crops grow in their plots.  Would be more efficient fertilizer if combined with thatch in a bin.",
 			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_DinoPoop.PrimalItemConsumable_DinoPoop_C",
@@ -7567,15 +8523,14 @@
 			}
 		},
 		{
-			"name": "Dinosaur Bone",
-			"description": "A very ancient looking bone, must be usefull for something!",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ARKBone.PrimalItemResource_ARKBone_C",
-			"icon": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Resources/Icons/ARKBone_Icon.ARKBone_Icon",
-			"type": "Resource",
+			"name": "Base Club",
+			"description": "The base club for beating stuff",
+			"bp": "/Game/Mods/Pyria/PrimalItem_WeaponBasePyria.PrimalItem_WeaponBasePyria_C",
+			"icon": "/Game/OldAssets/Effects/Textures/LensFlare/Flare_02.Flare_02",
+			"type": "Weapon",
 			"folders": [],
 			"weight": 2,
-			"maxQuantity": 200,
-			"spoilage": { "time": 2678400 },
+			"maxQuantity": 1,
 			"durability": {
 				"min": 0,
 				"ignoreInWater": false
@@ -7584,19 +8539,37 @@
 				"xp": 1,
 				"bpCraftTime": 5,
 				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Stone_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Wood_C"
+					},
+					{
+						"exact": false,
+						"qty": 1,
+						"type": "PrimalItemResource_Thatch_C"
+					}
+				]
 			},
 			"repair": {
 				"xp": 2,
 				"time": 5,
 				"resourceMult": 0.5
-			}
+			},
+			"weaponTemplate": "/Game/PrimalEarth/CoreBlueprints/Weapons/WeapBaseClub.WeapBaseClub_C"
 		},
 		{
 			"name": "Pyrian Ravager Saddle",
 			"description": "Equip a Ravager with this to ride it. It's made from materials easily accessible in Pyria.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_CavewolfSaddlePyria.PrimalItemArmor_CavewolfSaddlePyria_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_CavewolfSaddlePyria.PrimalItemArmor_CavewolfSaddlePyria_C",
 			"icon": "/Game/Aberration/Dinos/CaveWolf/Saddle/HUD_CaveWolf_Saddle_Colorize.HUD_CaveWolf_Saddle_Colorize",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -7635,7 +8608,7 @@
 		{
 			"name": "Pyrian Ravager Combat Saddle",
 			"description": "Ravagers are a respected and frequently used mount in Pyria. Equip a Ravager with this to not also ride it, but provide more armor to it.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_CavewolfSaddlePyriaBattle.PrimalItemArmor_CavewolfSaddlePyriaBattle_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_CavewolfSaddlePyriaBattle.PrimalItemArmor_CavewolfSaddlePyriaBattle_C",
 			"icon": "/Game/Aberration/Dinos/CaveWolf/Saddle/HUD_CaveWolf_Saddle_Promo_Colorize.HUD_CaveWolf_Saddle_Promo_Colorize",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -7679,7 +8652,7 @@
 		{
 			"name": "Upgraded Pyrian Ravager Combat Saddle",
 			"description": "A Pyrian Ravager Combat Saddle, upgraded by enchanting it using mana and a Drallion Gem. Defeat an Ogre to unlock this engram.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_CavewolfSaddlePyriaBattle_UG.PrimalItemArmor_CavewolfSaddlePyriaBattle_UG_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_CavewolfSaddlePyriaBattle_UG.PrimalItemArmor_CavewolfSaddlePyriaBattle_UG_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/UpgradedRavagerCombatSaddle.UpgradedRavagerCombatSaddle",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -7733,7 +8706,7 @@
 		{
 			"name": "Dragonkin Kinship Rune",
 			"description": "A kinship rune specifically designed for all forms of dragonkin, and some other beasts. Harder to craft, but provides more protection. Compatible with Classic Flyers Wyverns and Griffins.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_DragonKinship.PrimalItemArmor_DragonKinship_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_DragonKinship.PrimalItemArmor_DragonKinship_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/DragonkinKinshipRune.DragonkinKinshipRune",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -7772,7 +8745,7 @@
 		{
 			"name": "Upgraded Dragonkin Kinship Rune",
 			"description": "A Dragonkin Kinship Rune upgraded with a Drallion Gem and Mana.\nDefeat an ArchDemon to unlock this engram.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_DragonKinship_UG.PrimalItemArmor_DragonKinship_UG_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_DragonKinship_UG.PrimalItemArmor_DragonKinship_UG_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/UpgradedDragonkinKinshipRune.UpgradedDragonkinKinshipRune",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -7821,7 +8794,7 @@
 		{
 			"name": "Kinship Rune",
 			"description": "An enchanted rune that strengthens your mount, by strengthening the bond you have with it. Acts similar to a saddle, and is universally compatible with many of Pyria's creatures.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_Kinship.PrimalItemArmor_Kinship_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_Kinship.PrimalItemArmor_Kinship_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/KinshipRune.KinshipRune",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -7860,7 +8833,7 @@
 		{
 			"name": "Upgraded Kinship Rune",
 			"description": "An upgraded Kinship Rune, empowered by Mana and a Drallion Gem. Defeat an Ogre to unlock this engram.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_Kinship_UG.PrimalItemArmor_Kinship_UG_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_Kinship_UG.PrimalItemArmor_Kinship_UG_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/UpgradedKinshipRune.UpgradedKinshipRune",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -7909,7 +8882,7 @@
 		{
 			"name": "Offhand Metal Shield",
 			"description": "An offhand Metal shield for sentient beings, provides some armor.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_OffhandMetal.PrimalItemArmor_OffhandMetal_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_OffhandMetal.PrimalItemArmor_OffhandMetal_C",
 			"icon": "/Game/PrimalEarth/WeaponShieldMetal/HUD_MetalShield_Colorize_MIC.HUD_MetalShield_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -7938,7 +8911,7 @@
 		{
 			"name": "Offhand Riot Shield",
 			"description": "An offhand Riot shield for sentient beings, provides some  armor.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_OffhandRiot.PrimalItemArmor_OffhandRiot_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_OffhandRiot.PrimalItemArmor_OffhandRiot_C",
 			"icon": "/Game/PrimalEarth/WeaponRiotShieldTransparent/HUD_TransparentRiotShield_Colorize_MIC.HUD_TransparentRiotShield_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -7967,7 +8940,7 @@
 		{
 			"name": "Offhand Royal Shield",
 			"description": "An offhand shield for sentient beings, provides some armor. Augmented with a drallion gem and mana, given a rather royal and extravagant look. Defeat an Ogre to unlock this.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_OffhandSpecial.PrimalItemArmor_OffhandSpecial_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_OffhandSpecial.PrimalItemArmor_OffhandSpecial_C",
 			"icon": "/Game/ScorchedEarth/WeaponManticoreShield/HUD_ManticoreShield_Colorize_MIC.HUD_ManticoreShield_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
@@ -8011,7 +8984,7 @@
 		{
 			"name": "Offhand Wooden Shield",
 			"description": "An offhand wooden shield for sentient beings, provides some slight armor.",
-			"bp": "/Game/Mods/Pyria/PrimalItemArmor_OffhandWood.PrimalItemArmor_OffhandWood_C",
+			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_OffhandWood.PrimalItemArmor_OffhandWood_C",
 			"icon": "/Game/PrimalEarth/WeaponWoodShield/HUD_Shield_Colorize_MIC.HUD_Shield_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],

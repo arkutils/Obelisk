@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "318.9.1597445621",
+	"version": "326.3.1618981807",
 	"format": "2",
 	"mod": {
 		"id": "1090809604",
@@ -561,8 +561,378 @@
 			}
 		},
 		{
-			"name": "Demon",
+			"name": "Balrog",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/Balrog_Character_BP.Balrog_Character_BP_C",
+			"dinoNameTag": "Golem",
+			"customTag": "Pyria",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 2000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 1600 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 1600 }
+			},
+			"staminaRates": { "sprint": -100 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 6, "dmg": 100, "radius": 800, "stamina": 0 },
+					{ "name": "Bite", "interval": 10, "dmg": 280, "radius": 800, "stamina": 900 }
+				]
+			}
+		},
+		{
+			"name": "Balrog",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/Balrog_Character_BP_Created.Balrog_Character_BP_Created_C",
+			"dinoNameTag": "Golem",
+			"customTag": "Pyria",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 2000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 1600 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 1600 }
+			},
+			"staminaRates": { "sprint": -100 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 6, "dmg": 100, "radius": 800, "stamina": 0 },
+					{ "name": "Bite", "interval": 10, "dmg": 280, "radius": 800, "stamina": 900 }
+				]
+			}
+		},
+		{
+			"name": "Colossus",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Colossus/PyriaColossus_Character_BP.PyriaColossus_Character_BP_C",
+			"dinoNameTag": "RockElemental",
+			"customTag": "Colossus",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 50000,
+			"dragWeight": 5900,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 200 }
+			},
+			"staminaRates": {},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "ArmSwipes", "interval": 0.4, "dmg": 1200, "radius": 1000, "stamina": 0 },
+					{ "name": "Bite", "interval": 18, "dmg": 2700, "radius": 1200, "stamina": 0 },
+					{ "name": "Bite", "interval": 7, "dmg": 1700, "radius": 1200, "stamina": 0 },
+					{ "name": "Bite", "interval": 7, "dmg": 1400, "radius": 1200, "stamina": 0 },
+					{ "name": "Bite", "interval": 10, "dmg": 1450, "radius": 1200, "stamina": 0 },
+					{ "name": "Bite", "interval": 20, "dmg": 1000, "radius": 5200, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Fire Elemental",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/FireElemental/Fireburb_Character_BP.Fireburb_Character_BP_C",
+			"dinoNameTag": "Phoenix",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250, "sprint": 500 },
+				"fly": { "base": 600, "sprint": 1320 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 250, "sprint": 500 },
+				"fly": { "base": 600, "sprint": 1320 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.5, "dmg": 15, "radius": 100, "stamina": 250 }
+				]
+			}
+		},
+		{
+			"name": "Fire Elemental",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/FireElemental/Fireburb_Character_BP_created.Fireburb_Character_BP_created_C",
+			"dinoNameTag": "Phoenix",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250, "sprint": 500 },
+				"fly": { "base": 800, "sprint": 1760 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 250, "sprint": 500 },
+				"fly": { "base": 800, "sprint": 1760 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.5, "dmg": 15, "radius": 100, "stamina": 250 }
+				]
+			}
+		},
+		{
+			"name": "Glacier Golem",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/GlacierGolem_Character_BP.GlacierGolem_Character_BP_C",
+			"dinoNameTag": "Golem",
+			"customTag": "Pyria",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 900 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 900 }
+			},
+			"staminaRates": { "sprint": -90 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Punch", "interval": 0.4, "dmg": 100, "radius": 400, "stamina": 0 },
+					{ "name": "Smash", "interval": 5, "dmg": 150, "radius": 300, "stamina": 0 },
+					{ "name": "CrushGrip", "interval": 15, "dmg": 180, "radius": 1000, "stamina": 0 },
+					{
+						"name": "Bite", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			}
+		},
+		{
+			"name": "Glacier Golem",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/GlacierGolem_Character_BP_Created.GlacierGolem_Character_BP_Created_C",
+			"dinoNameTag": "Golem",
+			"customTag": "Pyria",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 900 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 900 }
+			},
+			"staminaRates": { "sprint": -90 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Punch", "interval": 0.4, "dmg": 100, "radius": 400, "stamina": 0 },
+					{ "name": "Smash", "interval": 5, "dmg": 150, "radius": 300, "stamina": 0 },
+					{ "name": "CrushGrip", "interval": 15, "dmg": 180, "radius": 1000, "stamina": 0 },
+					{
+						"name": "Bite", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			}
+		},
+		{
+			"name": "Feral Demon",
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Demon/Demon_Character_bp.Demon_Character_bp_C",
+			"dinoNameTag": "DarkPaladin",
+			"customTag": "DarkPaladin",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 165,
+			"dragWeight": 120,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 170, "sprint": 1020 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 170, "sprint": 1020 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 150, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Feral Demon",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Demon/Demon_Character_bp_Summoned.Demon_Character_bp_Summoned_C",
 			"dinoNameTag": "DarkPaladin",
 			"customTag": "DarkPaladin",
 			"targetingTeamName": "Carnivores_High",
@@ -614,7 +984,7 @@
 			"dinoNameTag": "Gelragarian",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
-			"mass": 400,
+			"mass": 100,
 			"dragWeight": 250,
 			"flags": [
 				"allowMountedWeaponry",
@@ -654,9 +1024,12 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 50, "radius": 65, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 100, "stamina": 0 },
-					{ "name": "Melee", "interval": 20, "dmg": 100, "radius": 100, "stamina": 0 }
+					{ "name": "2 hit combo", "interval": 0.5, "dmg": 40, "radius": 150, "stamina": 0 },
+					{ "name": "3 hit combo", "interval": 3, "dmg": 35, "radius": 175, "stamina": 0 },
+					{ "name": "BEEG smash", "interval": 20, "dmg": 50, "radius": 200, "stamina": 0 },
+					{ "name": "2 hit combo(LongWep)", "interval": 0.5, "dmg": 45, "radius": 250, "stamina": 0 },
+					{ "name": "3 hit combo(Long Wep)", "interval": 3, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "BEEG smash(Long Wep)", "interval": 20, "dmg": 55, "radius": 350, "stamina": 0 }
 				]
 			}
 		},
@@ -757,8 +1130,61 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 65, "stamina": 0 },
+					{ "name": "Melee", "interval": 7, "dmg": 55, "radius": 65, "stamina": 0 },
+					{ "name": "Melee", "interval": 5, "dmg": 60, "radius": 100, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Saberian",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Saberian/Saberian_Character_BP_Avatar.Saberian_Character_BP_Avatar_C",
+			"dinoNameTag": "Saberian",
+			"customTag": "Saberian",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 800 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 800 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 65, "stamina": 0 },
 					{ "name": "Melee", "interval": 3, "dmg": 55, "radius": 65, "stamina": 0 },
-					{ "name": "Melee", "interval": 6, "dmg": 60, "radius": 100, "stamina": 0 }
+					{ "name": "Melee", "interval": 6, "dmg": 60, "radius": 100, "stamina": 0 },
+					{ "name": "Melee", "interval": 6, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
@@ -811,7 +1237,7 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 45, "radius": 150, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 50, "radius": 150, "stamina": 0 },
+					{ "name": "Melee", "interval": 5, "dmg": 50, "radius": 150, "stamina": 0 },
 					{ "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 150, "stamina": 0 }
 				]
 			}
@@ -866,7 +1292,7 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 45, "radius": 150, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 50, "radius": 150, "stamina": 0 }
+					{ "name": "Melee", "interval": 5, "dmg": 50, "radius": 150, "stamina": 0 }
 				]
 			}
 		},
@@ -876,7 +1302,7 @@
 			"dinoNameTag": "Artemis",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
-			"mass": 165,
+			"mass": 100,
 			"dragWeight": 120,
 			"flags": [
 				"allowCarryFlyerDinos",
@@ -915,15 +1341,9 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{
-						"name": "Melee", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					},
-					{
-						"name": "Melee", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					},
-					{ "name": "Melee", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Normal", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Ballista", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Melee", "interval": 15, "dmg": 0, "radius": 0, "stamina": 50 },
 					{ "name": "Melee", "interval": 0.4, "dmg": 25, "radius": 100, "stamina": 0 }
 				]
 			}
@@ -933,7 +1353,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP.Eminence_Character_BP_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Medium",
+			"targetingTeamName": "Herbivores_Large",
 			"mass": 2000,
 			"dragWeight": 180,
 			"flags": [
@@ -958,11 +1378,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 720 },
+				"walk": { "base": 140, "sprint": 840 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 120, "sprint": 720 },
+				"walk": { "base": 140, "sprint": 840 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -974,17 +1394,18 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 75, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 3, "dmg": 85, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 6, "dmg": 105, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 8, "dmg": 105, "radius": 200, "stamina": 0 }
+					{ "name": "Wind Blades", "interval": 3, "dmg": 85, "radius": 200, "stamina": 50 },
+					{ "name": "Shockwave", "interval": 6, "dmg": 65, "radius": 200, "stamina": 100 },
+					{ "name": "Melee", "interval": 8, "dmg": 105, "radius": 200, "stamina": 150 },
+					{ "name": "Incalescent Undex", "interval": 25, "dmg": 70, "radius": 200, "stamina": 400 }
 				]
 			}
 		},
 		{
-			"name": "Dark Insidious Eminence",
+			"name": "Insidious Eminence",
 			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Dark.Eminence_Character_BP_Dark_C",
 			"dinoNameTag": "Berserker",
-			"customTag": "Berserker",
+			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 2000,
 			"dragWeight": 180,
@@ -996,8 +1417,7 @@
 				"canBeTorpid",
 				"canDrag",
 				"isBigDino",
-				"isBossDino",
-				"isCarnivore"
+				"isBossDino"
 			],
 			"cloning": {
 				"costBase": 575,
@@ -1010,11 +1430,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 720 },
+				"walk": { "base": 140, "sprint": 840 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 120, "sprint": 720 },
+				"walk": { "base": 140, "sprint": 840 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -1026,10 +1446,63 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 75, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 3, "dmg": 85, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 6, "dmg": 105, "radius": 200, "stamina": 0 },
+					{ "name": "Wind Blades", "interval": 3, "dmg": 85, "radius": 200, "stamina": 0 },
+					{ "name": "Shockwave", "interval": 6, "dmg": 65, "radius": 200, "stamina": 0 },
 					{ "name": "Melee", "interval": 8, "dmg": 105, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 200, "dmg": 105, "radius": 200, "stamina": 0 }
+					{ "name": "Incalescent Undex", "interval": 25, "dmg": 70, "radius": 200, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Dark Insidious Eminence (Admin Avatar)",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_DarkAvatar.Eminence_Character_BP_DarkAvatar_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 2000,
+			"dragWeight": 180,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isBossDino"
+			],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 840 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 140, "sprint": 840 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 75, "radius": 200, "stamina": 0 },
+					{ "name": "Wind Blades", "interval": 3, "dmg": 85, "radius": 200, "stamina": 0 },
+					{ "name": "Shockwave", "interval": 6, "dmg": 65, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 8, "dmg": 105, "radius": 200, "stamina": 0 },
+					{ "name": "Incalescent Undex", "interval": 25, "dmg": 70, "radius": 200, "stamina": 0 }
 				]
 			}
 		},
@@ -1083,6 +1556,59 @@
 					{ "name": "Melee", "interval": 6, "dmg": 105, "radius": 200, "stamina": 0 },
 					{ "name": "Melee", "interval": 8, "dmg": 105, "radius": 200, "stamina": 0 },
 					{ "name": "None", "interval": 200, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Dark Insidious Eminence",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Eminence/Eminence_Character_BP_Dark_Boss.Eminence_Character_BP_Dark_Boss_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Berserker",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 2000,
+			"dragWeight": 180,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 75, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 3, "dmg": 85, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 6, "dmg": 105, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 8, "dmg": 105, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 200, "dmg": 105, "radius": 200, "stamina": 0 }
 				]
 			}
 		},
@@ -1196,116 +1722,6 @@
 			}
 		},
 		{
-			"name": "Harpy",
-			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Harpy/Harpy_Character_BP.Harpy_Character_BP_C",
-			"dinoNameTag": "Harpy",
-			"customTag": "Harpy",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 165,
-			"dragWeight": 112,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"flyerAllowRidingInCaves",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 414 },
-				"fly": { "base": 600, "sprint": 869.4 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 460 },
-				"fly": { "base": 600, "sprint": 966 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 18, "radius": 130, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 22, "radius": 130, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 22, "radius": 130, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Harpy",
-			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Harpy/Harpy_Character_BP_Tameable.Harpy_Character_BP_Tameable_C",
-			"dinoNameTag": "Harpy",
-			"customTag": "Harpy",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 165,
-			"dragWeight": 112,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"flyerAllowRidingInCaves",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 414 },
-				"fly": { "base": 600, "sprint": 869.4 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 460 },
-				"fly": { "base": 600, "sprint": 966 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 18, "radius": 130, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 22, "radius": 130, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 22, "radius": 130, "stamina": 0 }
-				]
-			}
-		},
-		{
 			"name": "Medusa",
 			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Medusa/Medusa_Character_bp.Medusa_Character_bp_C",
 			"dinoNameTag": "Medusa",
@@ -1395,9 +1811,10 @@
 				"attacks": [
 					{ "name": "Claws", "interval": 0.4, "dmg": 25, "radius": 200, "stamina": 0 },
 					{ "name": "Arrow", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Arrow", "interval": 8, "dmg": 80, "radius": 320, "stamina": 0 },
-					{ "name": "Arrow", "interval": 15, "dmg": 1, "radius": 600, "stamina": 0 },
-					{ "name": "Arrow", "interval": 0.4, "dmg": 42, "radius": 600, "stamina": 0 }
+					{ "name": "Magic", "interval": 8, "dmg": 80, "radius": 320, "stamina": 0 },
+					{ "name": "TailStun", "interval": 3, "dmg": 62, "radius": 600, "stamina": 50 },
+					{ "name": "Stinger", "interval": 3, "dmg": 38, "radius": 200, "stamina": 50 },
+					{ "name": "STARE", "interval": 12, "dmg": 10, "radius": 1000, "stamina": 0 }
 				]
 			}
 		},
@@ -1406,9 +1823,9 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/Mermaid_Character_BP.Mermaid_Character_BP_C",
 			"dinoNameTag": "Mermaid",
 			"customTag": "Mermaid",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 300,
-			"dragWeight": 75,
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 100,
+			"dragWeight": 200,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -1447,9 +1864,24 @@
 				"defaultDmg": 20,
 				"defaultSwingRadius": 140,
 				"attacks": [
-					{ "name": "None", "interval": 0.55, "dmg": 15, "radius": 240, "stamina": 0 },
-					{ "name": "None", "interval": 5, "dmg": 25, "radius": 140, "stamina": 0 },
-					{ "name": "None", "interval": 5, "dmg": 0, "radius": 65, "stamina": 10 }
+					{ "name": "TailSwipe", "interval": 0.55, "dmg": 15, "radius": 240, "stamina": 0 },
+					{ "name": "StunSlam", "interval": 5, "dmg": 25, "radius": 140, "stamina": 0 },
+					{ "name": "DeAggro", "interval": 20, "dmg": 0, "radius": 65, "stamina": 10 },
+					{ "name": "Ice Gate", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Slash(Duel)", "interval": 0.5, "dmg": 29, "radius": 150, "stamina": 0 },
+					{ "name": "Slash(Long)", "interval": 0.5, "dmg": 27, "radius": 150, "stamina": 0 },
+					{ "name": "Slash(Trident)", "interval": 0.5, "dmg": 23, "radius": 150, "stamina": 0 },
+					{ "name": "Slash(Spear)", "interval": 0.5, "dmg": 25, "radius": 150, "stamina": 0 },
+					{ "name": "Stab(Duel)", "interval": 2, "dmg": 32, "radius": 120, "stamina": 0 },
+					{ "name": "Stab(Long)", "interval": 2, "dmg": 32, "radius": 120, "stamina": 0 },
+					{ "name": "Stab(Trident)", "interval": 2, "dmg": 26, "radius": 120, "stamina": 0 },
+					{ "name": "Stab(Spear)", "interval": 2, "dmg": 28, "radius": 120, "stamina": 0 },
+					{ "name": "Spin(Duel)", "interval": 5, "dmg": 54, "radius": 200, "stamina": 0 },
+					{ "name": "Spin(Long)", "interval": 5, "dmg": 52, "radius": 200, "stamina": 0 },
+					{ "name": "Spin(Trident)", "interval": 5, "dmg": 48, "radius": 200, "stamina": 0 },
+					{ "name": "Spin(Spear)", "interval": 5, "dmg": 50, "radius": 200, "stamina": 0 },
+					{ "name": "Enchant", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Ice Shot", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
@@ -1458,7 +1890,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Zenith/Zenith_Character_BP.Zenith_Character_BP_C",
 			"dinoNameTag": "Zenith",
 			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"targetingTeamName": "Herbivores_Large",
 			"mass": 165,
 			"dragWeight": 580,
 			"flags": [ "allowCarryFlyerDinos", "allowMountedWeaponry", "canBeDragged", "canDrag" ],
@@ -1492,27 +1924,21 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 2, "dmg": 120, "radius": 850, "stamina": 0 },
-					{ "name": "Melee", "interval": 18, "dmg": 0, "radius": 0, "stamina": 0 },
-					{
-						"name": "Melee", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					},
-					{ "name": "Melee", "interval": 15, "dmg": 185, "radius": 900, "stamina": 0 },
-					{ "name": "Melee", "interval": 15, "dmg": 185, "radius": 900, "stamina": 0 },
-					{ "name": "Melee", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Melee", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{
-						"name": "Melee", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
+					{ "name": "Will Of The Wind", "interval": 2, "dmg": 120, "radius": 850, "stamina": 0 },
+					{ "name": "Lightning Curtain", "interval": 20, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "Hailstorm", "interval": 30, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "Supernova", "interval": 15, "dmg": 185, "radius": 900, "stamina": 100 },
+					{ "name": "Aura Burst", "interval": 15, "dmg": 185, "radius": 900, "stamina": 100 },
+					{ "name": "Aura Barrage", "interval": 10, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Star Flare", "interval": 15, "dmg": 0, "radius": 0, "stamina": 350 },
+					{ "name": "EarthenMaiden", "interval": 20, "dmg": 0, "radius": 0, "stamina": 150 }
 				]
 			}
 		},
 		{
 			"name": "Archdemon",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/ArchDemon/ArchDemon_Character_BP.ArchDemon_Character_BP_C",
-			"dinoNameTag": "Rockwell",
+			"dinoNameTag": "Wyvern",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
@@ -1553,7 +1979,7 @@
 		{
 			"name": "Archdemon (Admin Avatar)",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/ArchDemon/ArchDemon_Character_BP_Admin.ArchDemon_Character_BP_Admin_C",
-			"dinoNameTag": "Rockwell",
+			"dinoNameTag": "Wyvern",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
@@ -1593,13 +2019,12 @@
 		},
 		{
 			"name": "Centaur",
-			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP_Female.Centaur_Character_BP_Female_C",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP.Centaur_Character_BP_C",
 			"dinoNameTag": "LadyCentaur",
 			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores",
-			"mass": 165,
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 100,
 			"dragWeight": 125,
-			"variants": [ "Female" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -1637,177 +2062,170 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ArrowShot", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Melee", "interval": 0.2, "dmg": 10, "radius": 200, "stamina": 0 },
 					{ "name": "Melee", "interval": 0.2, "dmg": 20, "radius": 70, "stamina": 0 },
-					{
-						"name": "Melee", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
-				]
-			}
-		},
-		{
-			"name": "Centaur",
-			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP_Female_Flame.Centaur_Character_BP_Female_Flame_C",
-			"dinoNameTag": "LadyCentaur",
-			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores",
-			"mass": 165,
-			"dragWeight": 85,
-			"variants": [ "Female", "Flame" ],
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 320, "sprint": 960 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 320, "sprint": 960 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -20,
-				"swimOrFly": 0
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 10, "radius": 200, "stamina": 0 },
-					{
-						"name": "Melee", "interval": 2, "dmg": 0, "radius": 70, "stamina": 0,
-						"isProjectile": true
-					}
-				]
-			}
-		},
-		{
-			"name": "Centaur",
-			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP_Female_Tranq.Centaur_Character_BP_Female_Tranq_C",
-			"dinoNameTag": "LadyCentaur",
-			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores",
-			"mass": 165,
-			"dragWeight": 85,
-			"variants": [ "Female", "Tranq" ],
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 320, "sprint": 960 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 320, "sprint": 960 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -20,
-				"swimOrFly": 0
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 10, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 20, "radius": 70, "stamina": 0 },
-					{
-						"name": "Melee", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
-				]
-			}
-		},
-		{
-			"name": "Centaur",
-			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Male/Centaur_Character_BP_Male.Centaur_Character_BP_Male_C",
-			"dinoNameTag": "MaleCentaur",
-			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores",
-			"mass": 165,
-			"dragWeight": 125,
-			"variants": [ "Male" ],
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 320, "sprint": 960 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 320, "sprint": 960 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -20,
-				"swimOrFly": 0
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 100, "stamina": 0 },
 					{ "name": "Melee", "interval": 5, "dmg": 32, "radius": 100, "stamina": 0 },
 					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 100, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Dark Archer",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Archer/Artemis_Character_BP_Dark.Artemis_Character_BP_Dark_C",
+			"dinoNameTag": "Artemis",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 120,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 480 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 480 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Normal", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Ballista", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Melee", "interval": 15, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 25, "radius": 100, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Divine Berserker",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Berserker/Berserker_Character_BP_Dark.Berserker_Character_BP_Dark_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 120,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 45, "radius": 120, "stamina": 0 },
+					{ "name": "Melee", "interval": 6, "dmg": 35, "radius": 120, "stamina": 0 },
+					{ "name": "Melee", "interval": 4, "dmg": 45, "radius": 120, "stamina": 0 },
+					{ "name": "Melee", "interval": 8, "dmg": 125, "radius": 700, "stamina": 50 }
+				]
+			}
+		},
+		{
+			"name": "Insidious Fortitudo",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Fortitudo/Fortitudo_Character_BP_Dark.Fortitudo_Character_BP_Dark_C",
+			"dinoNameTag": "Paladin",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 100,
+			"dragWeight": 120,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 480 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 480 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 87, "radius": 150, "stamina": 0 },
+					{ "name": "WideSwing", "interval": 12, "dmg": 200, "radius": 300, "stamina": 25 },
+					{ "name": "DynamicEntry", "interval": 15, "dmg": 250, "radius": 250, "stamina": 100 },
+					{ "name": "RisingDisasterFrost", "interval": 20, "dmg": 125, "radius": 150, "stamina": 300 },
+					{ "name": "GiganticSlamFrost", "interval": 20, "dmg": 325, "radius": 1300, "stamina": 500 },
+					{ "name": "Counter", "interval": 15, "dmg": 0, "radius": 0, "stamina": 30 }
 				]
 			}
 		},
@@ -1816,7 +2234,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Paladin/Paladin_Character_BP_Dark.Paladin_Character_BP_Dark_C",
 			"dinoNameTag": "DarkPaladin",
 			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Medium",
+			"targetingTeamName": "Carnivores_Medium",
 			"mass": 165,
 			"dragWeight": 120,
 			"flags": [
@@ -1858,8 +2276,8 @@
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 65, "radius": 150, "stamina": 0 },
 					{ "name": "Melee", "interval": 0.2, "dmg": 65, "radius": 150, "stamina": 0 },
-					{ "name": "Melee", "interval": 15, "dmg": 85, "radius": 150, "stamina": 0 },
-					{ "name": "Melee", "interval": 100, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Dark Fire Uppercut", "interval": 15, "dmg": 35, "radius": 150, "stamina": 125 },
+					{ "name": "Summon", "interval": 100, "dmg": 0, "radius": 0, "stamina": 300 }
 				]
 			}
 		},
@@ -1909,9 +2327,9 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 65, "radius": 150, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 65, "radius": 150, "stamina": 0 },
-					{ "name": "Melee", "interval": 15, "dmg": 85, "radius": 150, "stamina": 0 },
+					{ "name": "Horizontal Swing", "interval": 0.2, "dmg": 65, "radius": 150, "stamina": 0 },
+					{ "name": "Stab", "interval": 0.2, "dmg": 65, "radius": 150, "stamina": 0 },
+					{ "name": "Dark Fire Shoryuken", "interval": 15, "dmg": 85, "radius": 150, "stamina": 0 },
 					{ "name": "Melee", "interval": 100, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
@@ -1971,12 +2389,115 @@
 			}
 		},
 		{
+			"name": "Insidious Zenith",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Corrupted/Zenith/Zenith_Character_BP_Dark.Zenith_Character_BP_Dark_C",
+			"dinoNameTag": "Zenith",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 165,
+			"dragWeight": 580,
+			"flags": [ "allowCarryFlyerDinos", "allowMountedWeaponry", "canBeDragged", "canDrag" ],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 720 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Will Of The Wind", "interval": 2, "dmg": 120, "radius": 850, "stamina": 0 },
+					{ "name": "MeteorRain", "interval": 20, "dmg": 0, "radius": 0, "stamina": 150 },
+					{ "name": "PoisonStorm", "interval": 30, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "ElectroBurst", "interval": 15, "dmg": 190, "radius": 900, "stamina": 100 },
+					{ "name": "Aura Burst", "interval": 15, "dmg": 185, "radius": 900, "stamina": 75 },
+					{ "name": "Aura Barrage", "interval": 10, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Glacial End", "interval": 15, "dmg": 0, "radius": 0, "stamina": 425 },
+					{ "name": "Nature'sWrath", "interval": 20, "dmg": 0, "radius": 1000, "stamina": 150 }
+				]
+			}
+		},
+		{
+			"name": "Divine Convalesce",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Devine/Convalesce/Convalesce_Character_BP.Convalesce_Character_BP_C",
+			"dinoNameTag": "Paladin",
+			"customTag": "Offhand",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 100,
+			"dragWeight": 120,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 750 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 750 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 300, "stamina": 0 },
+					{ "name": "Photon Cannon", "interval": 1, "dmg": 40, "radius": 120, "stamina": 10 },
+					{ "name": "Smite", "interval": 25, "dmg": 45, "radius": 120, "stamina": 125 },
+					{ "name": "Lion'sHeart", "interval": 40, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "WallOfLight", "interval": 30, "dmg": 0, "radius": 0, "stamina": 50 }
+				]
+			}
+		},
+		{
 			"name": "Divine Berserker",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Devine/Female/Berserker_Character_BP.Berserker_Character_BP_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 165,
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 100,
 			"dragWeight": 120,
 			"flags": [
 				"allowCarryFlyerDinos",
@@ -2016,9 +2537,64 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 45, "radius": 120, "stamina": 0 },
-					{ "name": "Melee", "interval": 4, "dmg": 55, "radius": 120, "stamina": 0 },
+					{ "name": "Melee", "interval": 6, "dmg": 35, "radius": 120, "stamina": 0 },
 					{ "name": "Melee", "interval": 4, "dmg": 45, "radius": 120, "stamina": 0 },
 					{ "name": "Melee", "interval": 8, "dmg": 70, "radius": 600, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Divine Fortitudo",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Devine/Fortitudo/Fortitudo_Character_BP.Fortitudo_Character_BP_C",
+			"dinoNameTag": "Paladin",
+			"customTag": "Offhand",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 100,
+			"dragWeight": 120,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 160, "sprint": 800 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 160, "sprint": 800 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 87, "radius": 150, "stamina": 0 },
+					{ "name": "WideSwing", "interval": 12, "dmg": 200, "radius": 300, "stamina": 25 },
+					{ "name": "DynamicEntry", "interval": 15, "dmg": 250, "radius": 250, "stamina": 100 },
+					{ "name": "RisingDisaster", "interval": 20, "dmg": 125, "radius": 150, "stamina": 300 },
+					{ "name": "GiganticSlam", "interval": 20, "dmg": 400, "radius": 1300, "stamina": 500 },
+					{ "name": "Counter", "interval": 15, "dmg": 0, "radius": 0, "stamina": 30 }
 				]
 			}
 		},
@@ -2028,7 +2604,7 @@
 			"dinoNameTag": "Paladin",
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
-			"mass": 165,
+			"mass": 100,
 			"dragWeight": 120,
 			"flags": [
 				"allowCarryFlyerDinos",
@@ -2070,10 +2646,63 @@
 					{ "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 120, "stamina": 0 },
 					{ "name": "Melee", "interval": 3, "dmg": 40, "radius": 120, "stamina": 0 },
 					{ "name": "Melee", "interval": 3, "dmg": 45, "radius": 120, "stamina": 0 },
-					{
-						"name": "Melee", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
+					{ "name": "Melee", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Goblin",
+			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Goblin/Goblin_Character_BP.Goblin_Character_BP_C",
+			"dinoNameTag": "Saberian",
+			"customTag": "Goblin",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "SwordDoubleSlash", "interval": 1, "dmg": 17, "radius": 65, "stamina": 0 },
+					{ "name": "SwordSpin", "interval": 2, "dmg": 19, "radius": 65, "stamina": 0 },
+					{ "name": "SwordGapCloser", "interval": 3.5, "dmg": 33, "radius": 65, "stamina": 0 },
+					{ "name": "ClubDoubleSlash", "interval": 1, "dmg": 4, "radius": 65, "stamina": 0 },
+					{ "name": "ClubSpin", "interval": 2, "dmg": 6, "radius": 65, "stamina": 0 },
+					{ "name": "ClubGapCloser", "interval": 3.5, "dmg": 16, "radius": 65, "stamina": 0 },
+					{ "name": "DaggerSlashAndThrow", "interval": 1, "dmg": 6, "radius": 65, "stamina": 0 },
+					{ "name": "DaggerSpin", "interval": 2, "dmg": 7, "radius": 65, "stamina": 0 }
 				]
 			}
 		},
@@ -2237,6 +2866,7 @@
 			"dragWeight": 250,
 			"flags": [
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -2273,8 +2903,9 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 150, "stamina": 0 },
-					{ "name": "Melee", "interval": 20, "dmg": 60, "radius": 140, "stamina": 0 }
+					{ "name": "Club Swipe", "interval": 0.2, "dmg": 40, "radius": 150, "stamina": 0 },
+					{ "name": "Club Slam", "interval": 20, "dmg": 60, "radius": 140, "stamina": 0 },
+					{ "name": "BEEG Slam", "interval": 0.2, "dmg": 40, "radius": 150, "stamina": 0 }
 				]
 			}
 		},
@@ -2331,7 +2962,7 @@
 		{
 			"name": "Ogre",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Ogre/Ogre_Character_BP.Ogre_Character_BP_C",
-			"dinoNameTag": "Rockwell",
+			"dinoNameTag": "Wyvern",
 			"customTag": "",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
 			"mass": 1000,
@@ -2370,7 +3001,7 @@
 		{
 			"name": "HC Ogre",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Ogre/Ogre_Character_BP_HC.Ogre_Character_BP_HC_C",
-			"dinoNameTag": "Rockwell",
+			"dinoNameTag": "Wyvern",
 			"customTag": "",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
 			"mass": 1000,
@@ -2410,7 +3041,7 @@
 		{
 			"name": "Enslaved Ogre",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Ogre/Ogre_Character_BP_Minion.Ogre_Character_BP_Minion_C",
-			"dinoNameTag": "Rockwell",
+			"dinoNameTag": "Wyvern",
 			"customTag": "",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
@@ -2447,7 +3078,7 @@
 			}
 		},
 		{
-			"name": "Orc",
+			"name": "Orc Fighter",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Orc_Character_BP.Orc_Character_BP_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
@@ -2476,11 +3107,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 223.2, "sprint": 669.6 },
+				"walk": { "base": 223.2, "sprint": 892.8 },
 				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 223.2, "sprint": 669.6 },
+				"walk": { "base": 223.2, "sprint": 892.8 },
 				"swim": { "base": 240 }
 			},
 			"staminaRates": {
@@ -2490,11 +3121,21 @@
 			"attack": {
 				"defaultDmg": 33,
 				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "None", "interval": 0.08, "dmg": 35, "radius": 160, "stamina": 5 } ]
+				"attacks": [
+					{ "name": "FighterBasicAttacks", "interval": 0.08, "dmg": 48, "radius": 200, "stamina": 5 },
+					{ "name": "FighterGapCloser", "interval": 3.5, "dmg": 82, "radius": 400, "stamina": 5 },
+					{ "name": "FighterPalmStrike", "interval": 7.5, "dmg": 110, "radius": 650, "stamina": 5 },
+					{ "name": "FighterStomp", "interval": 7, "dmg": 95, "radius": 500, "stamina": 5 },
+					{ "name": "SoldierBasicAttacks", "interval": 0.08, "dmg": 56, "radius": 200, "stamina": 5 },
+					{ "name": "SoldierGapCloser", "interval": 3.5, "dmg": 95, "radius": 300, "stamina": 5 },
+					{ "name": "SoldierGroundChaser", "interval": 7, "dmg": 122, "radius": 450, "stamina": 5 },
+					{ "name": "TendonStrike", "interval": 7, "dmg": 67, "radius": 150, "stamina": 5 },
+					{ "name": "FighterRunningAttack", "interval": 3.5, "dmg": 82, "radius": 400, "stamina": 5 }
+				]
 			}
 		},
 		{
-			"name": "Orc",
+			"name": "Orc Fighter",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Orc_Character_BP_Minion.Orc_Character_BP_Minion_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
@@ -2524,11 +3165,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 223.2, "sprint": 669.6 },
+				"walk": { "base": 223.2, "sprint": 892.8 },
 				"swim": { "base": 240 }
 			},
 			"movementD": {
-				"walk": { "base": 223.2, "sprint": 669.6 },
+				"walk": { "base": 223.2, "sprint": 892.8 },
 				"swim": { "base": 240 }
 			},
 			"staminaRates": {
@@ -2538,7 +3179,17 @@
 			"attack": {
 				"defaultDmg": 33,
 				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "None", "interval": 0.08, "dmg": 55, "radius": 160, "stamina": 5 } ]
+				"attacks": [
+					{ "name": "FighterBasicAttacks", "interval": 0.08, "dmg": 48, "radius": 200, "stamina": 5 },
+					{ "name": "FighterGapCloser", "interval": 3.5, "dmg": 82, "radius": 400, "stamina": 5 },
+					{ "name": "FighterPalmStrike", "interval": 7.5, "dmg": 110, "radius": 650, "stamina": 5 },
+					{ "name": "FighterStomp", "interval": 7, "dmg": 95, "radius": 500, "stamina": 5 },
+					{ "name": "SoldierBasicAttacks", "interval": 0.08, "dmg": 56, "radius": 200, "stamina": 5 },
+					{ "name": "SoldierGapCloser", "interval": 3.5, "dmg": 95, "radius": 300, "stamina": 5 },
+					{ "name": "SoldierGroundChaser", "interval": 7, "dmg": 122, "radius": 450, "stamina": 5 },
+					{ "name": "TendonStrike", "interval": 7, "dmg": 67, "radius": 150, "stamina": 5 },
+					{ "name": "FighterRunningAttack", "interval": 3.5, "dmg": 82, "radius": 400, "stamina": 5 }
+				]
 			}
 		},
 		{
@@ -3185,136 +3836,6 @@
 			}
 		},
 		{
-			"name": "Marhromorph",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Aerocrusher/Marhro_Character_BP.Marhro_Character_BP_C",
-			"dinoNameTag": "Marhro",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Herbivores_Large",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"flyerAllowRidingInCaves",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 495, "sprint": 1415.7 },
-				"fly": { "base": 600, "sprint": 1716 }
-			},
-			"movementD": {
-				"walk": { "base": 495, "sprint": 1415.7 },
-				"fly": { "base": 600, "sprint": 1716 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 300, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 300, "stamina": 0 },
-					{ "name": "Bite", "interval": 3, "dmg": 0, "radius": 300, "stamina": 0 },
-					{ "name": "Bite", "interval": 3, "dmg": 0, "radius": 300, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Balrog",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/Balrog_Character_BP.Balrog_Character_BP_C",
-			"dinoNameTag": "Golem",
-			"customTag": "Pyria",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 2000,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 1600 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 1600 }
-			},
-			"staminaRates": { "sprint": -100 },
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 6, "dmg": 100, "radius": 800, "stamina": 0 },
-					{ "name": "Bite", "interval": 10, "dmg": 280, "radius": 800, "stamina": 900 }
-				]
-			}
-		},
-		{
-			"name": "Balrog",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Balrog/Balrog_Character_BP_Created.Balrog_Character_BP_Created_C",
-			"dinoNameTag": "Golem",
-			"customTag": "Pyria",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 2000,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 1600 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 1600 }
-			},
-			"staminaRates": { "sprint": -100 },
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 6, "dmg": 100, "radius": 800, "stamina": 0 },
-					{ "name": "Bite", "interval": 10, "dmg": 280, "radius": 800, "stamina": 900 }
-				]
-			}
-		},
-		{
 			"name": "Bantu",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Basilisk/Bantu_Character_BP.Bantu_Character_BP_C",
 			"dinoNameTag": "Basilisk",
@@ -3605,19 +4126,19 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 495, "sprint": 1732.5 }
+				"walk": { "base": 495, "sprint": 2475 }
 			},
 			"movementD": {
-				"walk": { "base": 495, "sprint": 1732.5 }
+				"walk": { "base": 495, "sprint": 2475 }
 			},
-			"staminaRates": { "sprint": -40 },
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 68, "radius": 350, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 62, "radius": 350, "stamina": 0 },
 					{ "name": "Rawr", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "None", "interval": 8, "dmg": 180, "radius": 320, "stamina": 600 }
+					{ "name": "None", "interval": 8, "dmg": 100, "radius": 320, "stamina": 600 }
 				]
 			}
 		},
@@ -3670,49 +4191,7 @@
 					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 240, "stamina": 0 },
 					{ "name": "Melee", "interval": 0.2, "dmg": 18, "radius": 240, "stamina": 0 },
 					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 240, "stamina": 0 },
-					{ "name": "Melee", "interval": 5, "dmg": 0, "radius": 0, "stamina": 360 }
-				]
-			}
-		},
-		{
-			"name": "Colossus",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Colossus/PyriaColossus_Character_BP.PyriaColossus_Character_BP_C",
-			"dinoNameTag": "RockElemental",
-			"customTag": "Colossus",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 50000,
-			"dragWeight": 5900,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isBossDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200 }
-			},
-			"movementD": {
-				"walk": { "base": 200 }
-			},
-			"staminaRates": {},
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "ArmSwipes", "interval": 0.4, "dmg": 1200, "radius": 1000, "stamina": 0 },
-					{ "name": "Bite", "interval": 18, "dmg": 2700, "radius": 1200, "stamina": 0 },
-					{ "name": "Bite", "interval": 7, "dmg": 1700, "radius": 1200, "stamina": 0 },
-					{ "name": "Bite", "interval": 7, "dmg": 1400, "radius": 1200, "stamina": 0 },
-					{ "name": "Bite", "interval": 10, "dmg": 1450, "radius": 1200, "stamina": 0 },
-					{ "name": "Bite", "interval": 20, "dmg": 1000, "radius": 5200, "stamina": 0 }
+					{ "name": "Melee", "interval": 10, "dmg": 0, "radius": 0, "stamina": 360 }
 				]
 			}
 		},
@@ -3750,18 +4229,18 @@
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -60,
+				"sprint": -10,
 				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 5, "dmg": 32, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 8, "dmg": 0, "radius": 0, "stamina": 280 },
-					{ "name": "BiteNomFury", "interval": 5, "dmg": 15, "radius": 200, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Tail", "interval": 5, "dmg": 32, "radius": 200, "stamina": 0 },
+					{ "name": "Proj", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Spear", "interval": 5, "dmg": 15, "radius": 300, "stamina": 0 }
 				]
 			}
 		},
@@ -3868,6 +4347,7 @@
 			"dragWeight": 250,
 			"flags": [
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -3891,234 +4371,18 @@
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -60,
+				"sprint": -10,
 				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 32, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 3, "dmg": 20, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 15, "dmg": 0, "radius": 0, "stamina": 280 },
-					{ "name": "BiteNomFury", "interval": 5, "dmg": 15, "radius": 200, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Steelclaw Karkinos",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Steel.Crab_Character_BP_Steel_C",
-			"dinoNameTag": "CaveCrab",
-			"customTag": "CaveCrab",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 6200,
-			"dragWeight": 3000,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isAmphibious",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 1250,
-				"costLevel": 55,
-				"timeBase": 8750,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 2800
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 525 }
-			},
-			"movementD": {
-				"walk": { "base": 420, "sprint": 735 }
-			},
-			"staminaRates": { "sprint": -4 },
-			"attack": {
-				"defaultDmg": 20,
-				"defaultSwingRadius": 110,
-				"attacks": [
-					{ "name": "ClawLft", "interval": 0.1, "dmg": 80, "radius": 450, "stamina": 0 },
-					{ "name": "ClawRit", "interval": 0.1, "dmg": 80, "radius": 450, "stamina": 0 },
-					{ "name": "GrabLft (not for AI)", "interval": 1, "dmg": 0, "radius": 475, "stamina": 0 },
-					{ "name": "GrabRit", "interval": 1, "dmg": 0, "radius": 475, "stamina": 0 },
-					{ "name": "ClawAttackDoubleSmash", "interval": 1, "dmg": 145, "radius": 500, "stamina": 0 },
-					{ "name": "StartThrow", "interval": 0.1, "dmg": 0, "radius": 350, "stamina": 0 },
-					{ "name": "ClawLftWild", "interval": 0.1, "dmg": 80, "radius": 450, "stamina": 0 },
-					{ "name": "ClawRitWild", "interval": 0.1, "dmg": 80, "radius": 450, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Wanderer Karkinos",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Wanderer.Crab_Character_BP_Wanderer_C",
-			"dinoNameTag": "CaveCrab",
-			"customTag": "CaveCrab",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 6000,
-			"dragWeight": 890,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isAmphibious",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 1250,
-				"costLevel": 55,
-				"timeBase": 8750,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 20,
-				"maxSpeed": 2800
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 690 }
-			},
-			"movementD": {
-				"walk": { "base": 420, "sprint": 966 }
-			},
-			"staminaRates": { "sprint": -4 },
-			"attack": {
-				"defaultDmg": 20,
-				"defaultSwingRadius": 110,
-				"attacks": [
-					{ "name": "ClawLft", "interval": 0.1, "dmg": 50, "radius": 350, "stamina": 0 },
-					{ "name": "ClawRit", "interval": 0.1, "dmg": 50, "radius": 350, "stamina": 0 },
-					{ "name": "GrabLft (not for AI)", "interval": 1, "dmg": 0, "radius": 375, "stamina": 0 },
-					{ "name": "GrabRit", "interval": 1, "dmg": 0, "radius": 375, "stamina": 0 },
-					{ "name": "ClawAttackDoubleSmash", "interval": 1, "dmg": 70, "radius": 400, "stamina": 0 },
-					{ "name": "StartThrow", "interval": 0.1, "dmg": 0, "radius": 350, "stamina": 0 },
-					{ "name": "ClawLftWild", "interval": 7, "dmg": 50, "radius": 350, "stamina": 0 },
-					{ "name": "ClawLftWild", "interval": 0.1, "dmg": 50, "radius": 350, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "HC Wanderer Karkinos",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Wanderer_HC.Crab_Character_BP_Wanderer_HC_C",
-			"dinoNameTag": "CaveCrab",
-			"customTag": "CaveCrab",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 30000,
-			"dragWeight": 4000,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isAmphibious",
-				"isBigDino",
-				"isBossDino",
-				"isCarnivore"
-			],
-			"cloning": {
-				"costBase": 1250,
-				"costLevel": 55,
-				"timeBase": 8750,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 20,
-				"maxSpeed": 2800
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 690 }
-			},
-			"movementD": {
-				"walk": { "base": 420, "sprint": 966 }
-			},
-			"staminaRates": { "sprint": -4 },
-			"attack": {
-				"defaultDmg": 20,
-				"defaultSwingRadius": 110,
-				"attacks": [
-					{ "name": "ClawLft", "interval": 0.1, "dmg": 90, "radius": 350, "stamina": 0 },
-					{ "name": "ClawRit", "interval": 0.1, "dmg": 90, "radius": 350, "stamina": 0 },
-					{ "name": "GrabLft (not for AI)", "interval": 1, "dmg": 0, "radius": 375, "stamina": 0 },
-					{ "name": "GrabRit", "interval": 1, "dmg": 0, "radius": 375, "stamina": 0 },
-					{ "name": "ClawAttackDoubleSmash", "interval": 1, "dmg": 150, "radius": 400, "stamina": 0 },
-					{ "name": "StartThrow", "interval": 0.1, "dmg": 0, "radius": 350, "stamina": 0 },
-					{ "name": "ClawLftWild", "interval": 7, "dmg": 50, "radius": 350, "stamina": 0 },
-					{ "name": "ClawLftWild", "interval": 30, "dmg": 140, "radius": 350, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Hedron",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Crab/Crab_Character_BP_Wanderer_Hedron.Crab_Character_BP_Wanderer_Hedron_C",
-			"dinoNameTag": "CaveCrab",
-			"customTag": "CaveCrab",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 6000,
-			"dragWeight": 890,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isAmphibious",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 1250,
-				"costLevel": 55,
-				"timeBase": 8750,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 20,
-				"maxSpeed": 2800
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 1050 }
-			},
-			"movementD": {
-				"walk": { "base": 420, "sprint": 1470 }
-			},
-			"staminaRates": { "sprint": -4 },
-			"attack": {
-				"defaultDmg": 20,
-				"defaultSwingRadius": 110,
-				"attacks": [
-					{ "name": "ClawLft", "interval": 0.1, "dmg": 90, "radius": 350, "stamina": 0 },
-					{ "name": "ClawRit", "interval": 0.1, "dmg": 90, "radius": 350, "stamina": 0 },
-					{ "name": "GrabLft (not for AI)", "interval": 1, "dmg": 0, "radius": 375, "stamina": 0 },
-					{ "name": "GrabRit", "interval": 1, "dmg": 0, "radius": 375, "stamina": 0 },
-					{ "name": "ClawAttackDoubleSmash", "interval": 1, "dmg": 160, "radius": 400, "stamina": 0 },
-					{ "name": "StartThrow", "interval": 0.1, "dmg": 0, "radius": 350, "stamina": 0 },
-					{ "name": "ClawLftWild", "interval": 7, "dmg": 130, "radius": 350, "stamina": 0 },
-					{ "name": "ClawLftWild", "interval": 0.1, "dmg": 90, "radius": 350, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 32, "radius": 200, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Tail", "interval": 3, "dmg": 20, "radius": 200, "stamina": 0 },
+					{ "name": "Proj", "interval": 15, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Spear", "interval": 5, "dmg": 15, "radius": 300, "stamina": 0 }
 				]
 			}
 		},
@@ -4164,8 +4428,8 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 65, "radius": 520, "stamina": 0 },
-					{ "name": "HeadSlam", "interval": 4, "dmg": 70, "radius": 520, "stamina": 0 },
-					{ "name": "HeadSlam", "interval": 30, "dmg": 178, "radius": 520, "stamina": 0 },
+					{ "name": "HeadSlam", "interval": 4, "dmg": 80, "radius": 520, "stamina": 0 },
+					{ "name": "HeadSlam", "interval": 30, "dmg": 150, "radius": 520, "stamina": 0 },
 					{ "name": "HeadSlam", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "HeadSlam", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -4425,7 +4689,7 @@
 					{ "name": "BiteNomFury", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 3, "dmg": 35, "radius": 200, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 0, "dmg": 35, "radius": 270, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 12, "dmg": 40, "radius": 250, "stamina": 100 },
 					{ "name": "BiteNomFury", "interval": 10, "dmg": 30, "radius": 600, "stamina": 0 }
 				]
 			}
@@ -4476,11 +4740,11 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0, "dmg": 45, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 3, "dmg": 35, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0, "dmg": 35, "radius": 270, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "Bite", "interval": 0, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Tail", "interval": 3, "dmg": 45, "radius": 200, "stamina": 0 },
+					{ "name": "Claw", "interval": 0, "dmg": 35, "radius": 270, "stamina": 0 },
+					{ "name": "BleedClaw", "interval": 12, "dmg": 40, "radius": 250, "stamina": 100 },
 					{ "name": "BiteNomFury", "interval": 10, "dmg": 30, "radius": 600, "stamina": 0 }
 				]
 			}
@@ -4526,8 +4790,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 42, "radius": 150, "stamina": 0 },
-					{ "name": "HeadSlam", "interval": 1.3, "dmg": 34, "radius": 200, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 35, "radius": 250, "stamina": 0 },
+					{ "name": "HeadSlam", "interval": 5, "dmg": 30, "radius": 250, "stamina": 0 },
 					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
 				]
 			}
@@ -4632,7 +4896,8 @@
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
-				"isBigDino"
+				"isBigDino",
+				"isCarnivore"
 			],
 			"levelCaps": {
 				"maxExperience": 3550010,
@@ -4707,116 +4972,6 @@
 			}
 		},
 		{
-			"name": "Fire Elemental",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/FireBurb/Fireburb_Character_BP.Fireburb_Character_BP_C",
-			"dinoNameTag": "Phoenix",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 250, "sprint": 500 },
-				"fly": { "base": 600, "sprint": 1320 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 250, "sprint": 500 },
-				"fly": { "base": 600, "sprint": 1320 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 30, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 100, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.5, "dmg": 15, "radius": 100, "stamina": 250 }
-				]
-			}
-		},
-		{
-			"name": "Fire Elemental",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/FireBurb/Fireburb_Character_BP_created.Fireburb_Character_BP_created_C",
-			"dinoNameTag": "Phoenix",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 250, "sprint": 500 },
-				"fly": { "base": 800, "sprint": 1760 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 250, "sprint": 500 },
-				"fly": { "base": 800, "sprint": 1760 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 30, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 100, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.5, "dmg": 15, "radius": 100, "stamina": 250 }
-				]
-			}
-		},
-		{
 			"name": "Firepike Thorny Dragon",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Firepike/Firepike_Character_BP.Firepike_Character_BP_C",
 			"dinoNameTag": "SpineyLizard",
@@ -4866,7 +5021,7 @@
 						"name": "Tail needles", "interval": 3, "dmg": 10, "radius": 2000, "stamina": 120,
 						"isProjectile": true
 					},
-					{ "name": "Tail needles", "interval": 8, "dmg": 45, "radius": 800, "stamina": 120 }
+					{ "name": "Tail needles", "interval": 8, "dmg": 55, "radius": 800, "stamina": 120 }
 				]
 			}
 		},
@@ -4962,8 +5117,8 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 45, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 5, "dmg": 22, "radius": 200, "stamina": 120 }
+					{ "name": "BiteNomFury", "interval": 5, "dmg": 35, "radius": 200, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 8, "dmg": 22, "radius": 200, "stamina": 120 }
 				]
 			}
 		},
@@ -5067,7 +5222,7 @@
 		{
 			"name": "Goliath",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Goliath/Goliath_Character_bp.Goliath_Character_bp_C",
-			"dinoNameTag": "Goliath",
+			"dinoNameTag": "Bigfoot",
 			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
@@ -5090,74 +5245,24 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 1440 },
+				"walk": { "base": 500, "sprint": 1800 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 720 },
+				"walk": { "base": 500, "sprint": 1800 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": 0,
+				"sprint": -15,
 				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 0,
 				"attacks": [
-					{ "name": "Claw", "interval": 1, "dmg": 48, "radius": 240, "stamina": 0 },
-					{ "name": "Claw", "interval": 0.4, "dmg": 58, "radius": 240, "stamina": 120 },
-					{ "name": "Claw", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Graviorex",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Graviorex/Graviorex_Character_bp.Graviorex_Character_bp_C",
-			"dinoNameTag": "Graviorex",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 3000,
-			"dragWeight": 550,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"flyerAllowRidingInCaves",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 900 },
-				"fly": { "base": 400, "sprint": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 900 },
-				"fly": { "base": 400, "sprint": 600 }
-			},
-			"staminaRates": {
-				"sprint": -20,
-				"swimOrFly": -150
-			},
-			"attack": {
-				"defaultDmg": 120,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 80, "radius": 100, "stamina": 0 },
-					{ "name": "BOOM", "interval": 5, "dmg": 110, "radius": 300, "stamina": 0 },
-					{ "name": "None", "interval": 15, "dmg": 80, "radius": 700, "stamina": 0 }
+					{ "name": "Claw", "interval": 0, "dmg": 48, "radius": 400, "stamina": 0 },
+					{ "name": "Claw", "interval": 0.4, "dmg": 58, "radius": 400, "stamina": 50 },
+					{ "name": "Claw", "interval": 4, "dmg": 0, "radius": 0, "stamina": 200 }
 				]
 			}
 		},
@@ -5372,60 +5477,6 @@
 			}
 		},
 		{
-			"name": "Royal Hornet",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hornet/PyriaHornet_Character_BP.PyriaHornet_Character_BP_C",
-			"dinoNameTag": "Bee",
-			"customTag": "Pyria",
-			"targetingTeamName": "Herbivores",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 180, "sprint": 360 },
-				"fly": { "base": 800, "sprint": 1760 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 180, "sprint": 360 },
-				"fly": { "base": 800, "sprint": 1760 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 30, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
 			"name": "Horoku",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Horoku/Horoku_Character_BP.Horoku_Character_BP_C",
 			"dinoNameTag": "Wyvern",
@@ -5475,9 +5526,9 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.5, "dmg": 15, "radius": 200, "stamina": 0 },
 					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 100, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.5, "dmg": 15, "radius": 100, "stamina": 0 }
+					{ "name": "Melee", "interval": 0, "dmg": 15, "radius": 100, "stamina": 0 }
 				]
 			}
 		},
@@ -5518,100 +5569,9 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 80, "radius": 300, "stamina": 0 },
-					{ "name": "Bite", "interval": 17, "dmg": 7, "radius": 800, "stamina": 200 },
-					{ "name": "Bite", "interval": 60, "dmg": 650, "radius": 5000, "stamina": 650 },
-					{ "name": "Bite", "interval": 5, "dmg": 0, "radius": 0, "stamina": 650 },
-					{ "name": "Bite", "interval": 5, "dmg": 100, "radius": 450, "stamina": 650 }
-				]
-			}
-		},
-		{
-			"name": "Glacier Golem",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/GlacierGolem_Character_BP.GlacierGolem_Character_BP_C",
-			"dinoNameTag": "Golem",
-			"customTag": "Pyria",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 1000,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 500 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 500 }
-			},
-			"staminaRates": { "sprint": -90 },
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 70, "radius": 400, "stamina": 0 },
-					{ "name": "Bite", "interval": 5, "dmg": 130, "radius": 300, "stamina": 0 },
-					{ "name": "Bite", "interval": 15, "dmg": 160, "radius": 1000, "stamina": 0 },
-					{
-						"name": "Bite", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
-				]
-			}
-		},
-		{
-			"name": "Glacier Golem",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/IceGolem/GlacierGolem_Character_BP_Created.GlacierGolem_Character_BP_Created_C",
-			"dinoNameTag": "Golem",
-			"customTag": "Pyria",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 1000,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 500 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 500 }
-			},
-			"staminaRates": { "sprint": -90 },
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 70, "radius": 400, "stamina": 0 },
-					{ "name": "Bite", "interval": 5, "dmg": 130, "radius": 300, "stamina": 0 },
-					{ "name": "Bite", "interval": 15, "dmg": 160, "radius": 1000, "stamina": 0 },
-					{
-						"name": "Bite", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
+					{ "name": "Roar", "interval": 30, "dmg": 7, "radius": 800, "stamina": 200 },
+					{ "name": "FlameBreath", "interval": 10, "dmg": 0, "radius": 0, "stamina": 650 },
+					{ "name": "Stomp", "interval": 15, "dmg": 100, "radius": 450, "stamina": 650 }
 				]
 			}
 		},
@@ -5651,7 +5611,7 @@
 				"swim": { "base": 1600, "sprint": 5120 }
 			},
 			"staminaRates": {
-				"sprint": -60,
+				"sprint": -30,
 				"swimOrFly": 0
 			},
 			"attack": {
@@ -5659,7 +5619,7 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 400, "stamina": 0 },
-					{ "name": "Bite", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "WaterBreath", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 }
 				]
 			}
 		},
@@ -5692,11 +5652,11 @@
 			},
 			"movementW": {
 				"walk": { "base": 450, "sprint": 1350 },
-				"fly": { "base": 700, "sprint": 2100 }
+				"fly": { "base": 700, "sprint": 0 }
 			},
 			"movementD": {
 				"walk": { "base": 450, "sprint": 1350 },
-				"fly": { "base": 700, "sprint": 2100 }
+				"fly": { "base": 700, "sprint": 0 }
 			},
 			"staminaRates": {
 				"sprint": -10,
@@ -5706,7 +5666,7 @@
 				"defaultDmg": 120,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 105, "radius": 460, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 460, "stamina": 0 },
 					{ "name": "Bite", "interval": 30, "dmg": 0, "radius": 0, "stamina": 450 },
 					{ "name": "Bite", "interval": 3, "dmg": 0, "radius": 0, "stamina": 150 }
 				]
@@ -5753,10 +5713,10 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 95, "radius": 250, "stamina": 0 },
-					{ "name": "HeadSlam", "interval": 1.3, "dmg": 60, "radius": 200, "stamina": 0 },
+					{ "name": "Claws", "interval": 0.4, "dmg": 90, "radius": 250, "stamina": 0 },
+					{ "name": "Tail", "interval": 6, "dmg": 60, "radius": 200, "stamina": 0 },
 					{
-						"name": "Tailsmack", "interval": 6, "dmg": 0, "radius": 0, "stamina": 0,
+						"name": "Shot", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
 					},
 					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
@@ -6098,58 +6058,6 @@
 			}
 		},
 		{
-			"name": "Peregriff",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Peregriff/Peregriff_Character_bp.Peregriff_Character_bp_C",
-			"dinoNameTag": "Griffin",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"flyerAllowRidingInCaves",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 1000 },
-				"fly": { "base": 600, "sprint": 1500 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 1000 },
-				"fly": { "base": 600, "sprint": 1500 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -15,
-				"swimOrFly": -14
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 55, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 45, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			}
-		},
-		{
 			"name": "Eldritch Hailfire Wyvern",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/Wyvern_Character_bp_Bazel.Wyvern_Character_bp_Bazel_C",
 			"dinoNameTag": "Wyvern",
@@ -6227,11 +6135,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 1520 },
+				"walk": { "base": 500, "sprint": 1900 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 1520 },
+				"walk": { "base": 500, "sprint": 1900 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -6277,11 +6185,11 @@
 			},
 			"movementW": {
 				"walk": { "base": 60, "sprint": 1500 },
-				"swim": { "base": 700 }
+				"swim": { "base": 100 }
 			},
 			"movementD": {
 				"walk": { "base": 60, "sprint": 1500 },
-				"swim": { "base": 700 }
+				"swim": { "base": 100 }
 			},
 			"staminaRates": {
 				"sprint": -4,
@@ -6291,56 +6199,6 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 28, "radius": 240, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Reika",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Reika/Reika_Character_BP.Reika_Character_BP_C",
-			"dinoNameTag": "Mantis",
-			"customTag": "Pyria",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 500,
-			"dragWeight": 320,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 1450,
-				"costLevel": 55,
-				"timeBase": 10150,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 304, "sprint": 912 },
-				"swim": { "base": 240 }
-			},
-			"movementD": {
-				"walk": { "base": 304, "sprint": 912 },
-				"swim": { "base": 240 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -24
-			},
-			"attack": {
-				"defaultDmg": 33,
-				"defaultSwingRadius": 160,
-				"attacks": [
-					{ "name": "None", "interval": 0.08, "dmg": 40, "radius": 160, "stamina": 5 },
-					{ "name": "None", "interval": 0.08, "dmg": 40, "radius": 160, "stamina": 0 }
-				]
 			}
 		},
 		{
@@ -6390,68 +6248,13 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 85, "radius": 220, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 6, "dmg": 0, "radius": 0, "stamina": 0 },
 					{
-						"name": "BiteNomFury", "interval": 3, "dmg": 0, "radius": 0, "stamina": 10,
+						"name": "BiteNomFury", "interval": 10, "dmg": 0, "radius": 0, "stamina": 50,
 						"isProjectile": true
 					},
-					{ "name": "BiteNomFury", "interval": 3, "dmg": 78, "radius": 240, "stamina": 10 },
-					{ "name": "BiteNomFury", "interval": 15, "dmg": 160, "radius": 240, "stamina": 100 }
-				]
-			}
-		},
-		{
-			"name": "Salamander",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Salamander/Salamander_Character_BP.Salamander_Character_BP_C",
-			"dinoNameTag": "Basilisk",
-			"customTag": "Pyria",
-			"targetingTeamName": "Herbivores",
-			"mass": 165,
-			"dragWeight": 112,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 320, "sprint": 960 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 320, "sprint": 960 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -90,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 150, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 240, "stamina": 0 },
-					{
-						"name": "Melee", "interval": 6, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
+					{ "name": "BiteNomFury", "interval": 10, "dmg": 60, "radius": 240, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 15, "dmg": 160, "radius": 240, "stamina": 25 }
 				]
 			}
 		},
@@ -6481,23 +6284,23 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 2400 },
+				"walk": { "base": 300, "sprint": 3600 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 2400 },
+				"walk": { "base": 300, "sprint": 3600 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -40,
+				"sprint": -20,
 				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 62, "radius": 400, "stamina": 0 },
-					{ "name": "HeadSlam", "interval": 1.3, "dmg": 25, "radius": 200, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 50, "radius": 400, "stamina": 0 },
+					{ "name": "HeadSlam", "interval": 5, "dmg": 30, "radius": 200, "stamina": 0 },
 					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
 				]
 			}
@@ -6542,56 +6345,7 @@
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 35, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 35, "radius": 200, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Obsidian SulfurWyrm",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/SulfurWyrm/SulfurWyrm_Character_bp_Obsidian.SulfurWyrm_Character_bp_Obsidian_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 400 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 400 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 45, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 45, "radius": 200, "stamina": 0 }
-				]
+				"attacks": [ { "name": "Bite", "interval": 0.4, "dmg": 35, "radius": 280, "stamina": 0 } ]
 			}
 		},
 		{
@@ -6634,10 +6388,7 @@
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 35, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 35, "radius": 200, "stamina": 0 }
-				]
+				"attacks": [ { "name": "BiteNomFury", "interval": 0.4, "dmg": 35, "radius": 280, "stamina": 0 } ]
 			}
 		},
 		{
@@ -6694,53 +6445,6 @@
 			}
 		},
 		{
-			"name": "Tatzelwurm",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Tatzelwurm/Tatzel_Character_BP.Tatzel_Character_BP_C",
-			"dinoNameTag": "Xenomorph",
-			"customTag": "Pyria",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 165,
-			"dragWeight": 112,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 460, "sprint": 3680 },
-				"swim": { "base": 700 }
-			},
-			"movementD": {
-				"walk": { "base": 460, "sprint": 3680 },
-				"swim": { "base": 700 }
-			},
-			"staminaRates": {
-				"sprint": 0,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 12, "radius": 240, "stamina": 0 } ]
-			}
-		},
-		{
 			"name": "Centaur Terror Bird",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/TaurBird/TerrorBird_Character_BP_Centaur.TerrorBird_Character_BP_Centaur_C",
 			"dinoNameTag": "TerrorBird",
@@ -6787,101 +6491,6 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.08, "dmg": 30, "radius": 240, "stamina": 5 },
 					{ "name": "None", "interval": 0.08, "dmg": 5, "radius": 240, "stamina": 5 }
-				]
-			}
-		},
-		{
-			"name": "Treader",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Treader/Treader_Character_BP.Treader_Character_BP_C",
-			"dinoNameTag": "Golem",
-			"customTag": "Pyria",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 1000,
-			"dragWeight": 550,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 1300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 1300 }
-			},
-			"staminaRates": { "sprint": -90 },
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.1, "dmg": 14, "radius": 150, "stamina": 0 },
-					{ "name": "Bite", "interval": 2, "dmg": 14, "radius": 240, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.1, "dmg": 14, "radius": 240, "stamina": 0 }
-				]
-			}
-		},
-		{
-			"name": "Ursai",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Ursai/Ursai_Character_BP.Ursai_Character_BP_C",
-			"dinoNameTag": "Ursai",
-			"customTag": "Pyria",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 225,
-			"dragWeight": 300,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 150, "sprint": 1200 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 150, "sprint": 1200 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -14,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 45, "radius": 240, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 52, "radius": 120, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
@@ -6934,9 +6543,9 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 260, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.5, "dmg": 32, "radius": 260, "stamina": 0 },
 					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 4, "dmg": 0, "radius": 200, "stamina": 120 }
+					{ "name": "Melee", "interval": 10, "dmg": 0, "radius": 200, "stamina": 120 }
 				]
 			}
 		},
@@ -6951,6 +6560,7 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -6989,7 +6599,7 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 260, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 350, "stamina": 0 },
 					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
 					{ "name": "Melee", "interval": 4, "dmg": 0, "radius": 200, "stamina": 120 }
 				]
@@ -7046,50 +6656,9 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 260, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.5, "dmg": 32, "radius": 350, "stamina": 0 },
 					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 4, "dmg": 0, "radius": 200, "stamina": 120 }
-				]
-			}
-		},
-		{
-			"name": "Voyager",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Voyager/Voyager_Character_BP.Voyager_Character_BP_C",
-			"dinoNameTag": "Golem",
-			"customTag": "Pyria",
-			"targetingTeamName": "Herbivores_Large",
-			"mass": 1000,
-			"dragWeight": 550,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino"
-			],
-			"levelCaps": {
-				"maxExperience": 3550010,
-				"maxLevels": 73
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 1950 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 1950 }
-			},
-			"staminaRates": { "sprint": -90 },
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.1, "dmg": 25, "radius": 180, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.1, "dmg": 30, "radius": 180, "stamina": 0 }
+					{ "name": "Melee", "interval": 10, "dmg": 0, "radius": 200, "stamina": 120 }
 				]
 			}
 		},
@@ -7134,16 +6703,16 @@
 				"swim": { "base": 600, "sprint": 1800 }
 			},
 			"staminaRates": {
-				"sprint": -40,
+				"sprint": -10,
 				"swimOrFly": -20
 			},
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 85, "radius": 220, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 50, "radius": 220, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 40, "dmg": 1, "radius": 600, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "BiteNomFury", "interval": 5, "dmg": 0, "radius": 0, "stamina": 100 }
 				]
 			}
 		},
@@ -7188,8 +6757,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 64, "radius": 300, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 54, "radius": 320, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 48, "radius": 300, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 8, "dmg": 45, "radius": 320, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
