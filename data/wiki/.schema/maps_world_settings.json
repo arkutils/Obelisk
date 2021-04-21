@@ -113,7 +113,7 @@
 					"type": "string"
 				},
 				"exact": {
-					"title": "Exact",
+					"title": "Match class exactly",
 					"default": false,
 					"type": "boolean"
 				},
@@ -121,25 +121,25 @@
 					"title": "To",
 					"type": "array",
 					"items": {
-						"type": "string"
-					}
-				},
-				"weights": {
-					"title": "Weights",
-					"type": "array",
-					"items": {
-						"type": "number"
+						"type": "array",
+						"items": [
+							{
+								"type": "number"
+							},
+							{
+								"type": "string"
+							}
+						]
 					}
 				},
 				"during": {
-					"title": "During",
+					"title": "Event the rule is active in",
 					"default": "None",
 					"type": "string"
 				}
 			},
 			"required": [
-				"to",
-				"weights"
+				"to"
 			],
 			"additionalProperties": false
 		},
@@ -190,6 +190,9 @@
 							"type": "number"
 						},
 						{
+							"type": "integer"
+						},
+						{
 							"type": "number"
 						},
 						{
@@ -203,6 +206,9 @@
 					"anyOf": [
 						{
 							"type": "number"
+						},
+						{
+							"type": "integer"
 						},
 						{
 							"type": "number"
@@ -220,6 +226,9 @@
 							"type": "number"
 						},
 						{
+							"type": "integer"
+						},
+						{
 							"type": "number"
 						},
 						{
@@ -233,6 +242,9 @@
 					"anyOf": [
 						{
 							"type": "number"
+						},
+						{
+							"type": "integer"
 						},
 						{
 							"type": "number"
@@ -334,6 +346,9 @@
 							"type": "number"
 						},
 						{
+							"type": "integer"
+						},
+						{
 							"type": "number"
 						},
 						{
@@ -348,6 +363,9 @@
 							"type": "number"
 						},
 						{
+							"type": "integer"
+						},
+						{
 							"type": "number"
 						},
 						{
@@ -360,6 +378,9 @@
 					"anyOf": [
 						{
 							"type": "number"
+						},
+						{
+							"type": "integer"
 						},
 						{
 							"type": "number"

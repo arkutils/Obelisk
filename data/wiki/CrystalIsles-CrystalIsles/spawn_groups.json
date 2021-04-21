@@ -1,2405 +1,3021 @@
 {
-	"version": "312.9.5212451",
-	"format": "3",
+	"$schema": "../.schema/spawn_groups.json",
+	"version": "326.3.6518171",
+	"format": "4",
 	"mod": {
 		"id": "CrystalIsles",
 		"tag": "CrystalIsles",
 		"title": "CrystalIsles"
 	},
-	"spawngroups": [
+	"containers": [
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_CaveWolves.CI_CaveWolves_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_CaveWolves.CI_CaveWolves_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Cave Wolf (1-4)",
 					"weight": 0.085,
-					"classes": [
-						"/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C",
-						"/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C",
-						"/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C",
-						"/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 },
-						{ "x": 0, "y": 300, "z": 0 },
-						{ "x": 0, "y": -297, "z": 0 }
-					],
-					"classWeights": [ 1, 0.8, 0.6, 0.4 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.8,
+							"bp": "/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C",
+							"offset": { "x": 0, "y": 300, "z": 0 }
+						},
+						{
+							"chance": 0.4,
+							"bp": "/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C",
+							"offset": { "x": 0, "y": -297, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C",
-					"desiredNumberMult": 0.075
+					"bp": "/Game/Aberration/Dinos/CaveWolf/CaveWolf_Character_BP.CaveWolf_Character_BP_C",
+					"mult": 0.075
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_Ants.CI_DinoSpawnEntries_Ants_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_Ants.CI_DinoSpawnEntries_Ants_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Ants (1-3)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ant/FlyingAnt_Character_BP.FlyingAnt_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/FlyingAnt_Character_BP.FlyingAnt_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dung Beetles (1-2)",
 					"weight": 0.04,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.6 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP_C"
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP_C",
-					"desiredNumberMult": 0.04
+					"bp": "/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP_C",
+					"mult": 0.04
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_Bog.CI_DinoSpawnEntries_Bog_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_Bog.CI_DinoSpawnEntries_Bog_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Vulture (1-3)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/ScorchedEarth/Dinos/Vulture/Vulture_Character_BP.Vulture_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/Vulture/Vulture_Character_BP.Vulture_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/Vulture/Vulture_Character_BP.Vulture_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 250, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/Vulture/Vulture_Character_BP.Vulture_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/ScorchedEarth/Dinos/Vulture/Vulture_Character_BP.Vulture_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/ScorchedEarth/Dinos/Vulture/Vulture_Character_BP.Vulture_Character_BP_C",
+							"offset": { "x": 250, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Phiomia (1-2)",
 					"weight": 0.075,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dragonfly Spawn (4) 1",
 					"weight": 0.15,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Ants (4)",
 					"weight": 0.15,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ant/FlyingAnt_Character_BP.FlyingAnt_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/FlyingAnt_Character_BP.FlyingAnt_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Paracer (1)",
 					"weight": 0.1,
-					"classes": [ "/Game/PrimalEarth/Dinos/Paraceratherium/Paracer_Character_BP.Paracer_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Paraceratherium/Paracer_Character_BP.Paracer_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Boa (1)",
 					"weight": 0.15,
-					"classes": [ "/Game/PrimalEarth/Dinos/BoaFrill/BoaFrill_Character_BP.BoaFrill_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/BoaFrill/BoaFrill_Character_BP.BoaFrill_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Acha (1)",
 					"weight": 0.075,
-					"classes": [ "/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Trike (1-2)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Turtle (1-2)",
 					"weight": 0.22,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Lystro (1-2)",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Stego (1-3)",
 					"weight": 0.05,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Spiders (1-2)",
 					"weight": 0.25,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Spider-Small/SpiderS_Character_BP.SpiderS_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Spider-Small/SpiderS_Character_BP.SpiderS_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Spider-Small/SpiderS_Character_BP.SpiderS_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Spider-Small/SpiderS_Character_BP.SpiderS_Character_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Bats (1-4)",
 					"weight": 0.33,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 1, "y": 0, "z": 0 },
-						{ "x": 1, "y": 0, "z": 0 },
-						{ "x": 0, "y": 1, "z": 0 },
-						{ "x": 0, "y": 1, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5, 0.25 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
+							"offset": { "x": 1, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
+							"offset": { "x": 1, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
+							"offset": { "x": 0, "y": 1, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
+							"offset": { "x": 0, "y": 1, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Jugbug (2)",
 					"weight": 0.15,
-					"classes": [
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Megatherium (1-2)",
 					"weight": 0.0125,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Megatherium/Megatherium_Character_BP.Megatherium_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Megatherium/Megatherium_Character_BP.Megatherium_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -340, "z": 0 }
-					],
-					"classWeights": [ 1, 0.1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Megatherium/Megatherium_Character_BP.Megatherium_Character_BP_C"
+						},
+						{
+							"chance": 0.1,
+							"bp": "/Game/PrimalEarth/Dinos/Megatherium/Megatherium_Character_BP.Megatherium_Character_BP_C",
+							"offset": { "x": 0, "y": -340, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Daedon (2-4)",
 					"weight": 0.0725,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 250, "y": 0, "z": 0 },
-						{ "x": -250, "y": 0, "z": 0 },
-						{ "x": -250, "y": -250, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 0.7, 0.6 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C",
+							"offset": { "x": 250, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C",
+							"offset": { "x": -250, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C",
+							"offset": { "x": -250, "y": -250, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/ScorchedEarth/Dinos/Vulture/Vulture_Character_BP.Vulture_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/ScorchedEarth/Dinos/Vulture/Vulture_Character_BP.Vulture_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
-					"desiredNumberMult": 0.125
+					"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+					"mult": 0.125
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
-					"desiredNumberMult": 0.45
+					"bp": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
+					"mult": 0.45
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
-					"desiredNumberMult": 0.45
+					"bp": "/Game/PrimalEarth/Dinos/Paraceratherium/Paracer_Character_BP.Paracer_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Paraceratherium/Paracer_Character_BP.Paracer_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/BoaFrill/BoaFrill_Character_BP.BoaFrill_Character_BP_C",
+					"mult": 0.15
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/BoaFrill/BoaFrill_Character_BP.BoaFrill_Character_BP_C",
-					"desiredNumberMult": 0.15
+					"bp": "/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+					"mult": 0.3
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
-					"desiredNumberMult": 0.3
+					"bp": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
+					"mult": 0.25
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
-					"desiredNumberMult": 0.25
+					"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Arthropluera/Arthro_Character_BP.Arthro_Character_BP_C",
+					"mult": 0.025
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Arthropluera/Arthro_Character_BP.Arthro_Character_BP_C",
-					"desiredNumberMult": 0.025
+					"bp": "/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
+					"mult": 0.15
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP_C",
-					"desiredNumberMult": 0.15
+					"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Character_BaseBP.Jugbug_Character_BaseBP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Character_BaseBP.Jugbug_Character_BaseBP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Megatherium/Megatherium_Character_BP.Megatherium_Character_BP_C",
+					"mult": 0.01
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Megatherium/Megatherium_Character_BP.Megatherium_Character_BP_C",
-					"desiredNumberMult": 0.01
-				},
-				{
-					"class": "/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Daeodon/Daeodon_Character_BP.Daeodon_Character_BP_C",
+					"mult": 0.1
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_CavernEasy.CI_DinoSpawnEntries_CavernEasy_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_CavernEasy.CI_DinoSpawnEntries_CavernEasy_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "LightBug",
 					"weight": 0.12,
-					"classes": [ "/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C" ],
-					"spawnOffsets": [ { "x": 300, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Lantern Lizards",
 					"weight": 0.12,
-					"classes": [ "/Game/Aberration/Dinos/LanternLizard/LanternLizard_Character_BP.LanternLizard_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 300, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/Aberration/Dinos/LanternLizard/LanternLizard_Character_BP.LanternLizard_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Acha (3)",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 150, "y": 0, "z": 0 },
-						{ "x": 0, "y": -150, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5, 0.25 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C"
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C",
+							"offset": { "x": 150, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C",
+							"offset": { "x": 0, "y": -150, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Jugbug Oil (1)",
 					"weight": 0.2,
-					"classes": [ "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 300, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Desert Moth (1-2)",
 					"weight": 0.33,
-					"classes": [
-						"/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 0.667 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.667,
+							"bp": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
-					"desiredNumberMult": 0.05
+					"bp": "/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
+					"mult": 0.05
 				},
 				{
-					"class": "/Game/Aberration/Dinos/LanternLizard/LanternLizard_Character_BP.LanternLizard_Character_BP_C",
-					"desiredNumberMult": 0.12
+					"bp": "/Game/Aberration/Dinos/LanternLizard/LanternLizard_Character_BP.LanternLizard_Character_BP_C",
+					"mult": 0.12
 				},
 				{
-					"class": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Achatina/Achatina_Character_BP.Achatina_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
-					"desiredNumberMult": 0.33
+					"bp": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
+					"mult": 0.33
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_DevilsWater.CI_DinoSpawnEntries_DevilsWater_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_DevilsWater.CI_DinoSpawnEntries_DevilsWater_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Tuso",
 					"weight": 1,
-					"classes": [ "/Game/PrimalEarth/Dinos/Tusoteuthis/Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Tusoteuthis/Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Plesio",
 					"weight": 1,
-					"classes": [ "/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Mosasaurus",
 					"weight": 1,
-					"classes": [ "/Game/PrimalEarth/Dinos/Mosasaurus/Mosa_Character_BP.Mosa_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Mosasaurus/Mosa_Character_BP.Mosa_Character_BP_C"
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Tusoteuthis/Tusoteuthis_Character_BP.Tusoteuthis_Character_BP_C",
-					"desiredNumberMult": 1
-				},
-				{
-					"class": "/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C",
-					"desiredNumberMult": 0.5
-				},
-				{
-					"class": "/Game/PrimalEarth/Dinos/Mosasaurus/Mosa_Character_BP.Mosa_Character_BP_C",
-					"desiredNumberMult": 1
+					"bp": "/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C",
+					"mult": 0.5
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_ElementBubbles_Large.CI_DinoSpawnEntries_ElementBubbles_Large_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_ElementBubbles_Large.CI_DinoSpawnEntries_ElementBubbles_Large_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Piranha",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Piranha/Piranha_Character_BP.Piranha_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Piranha/Piranha_Character_BP.Piranha_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Piranha/Piranha_Character_BP.Piranha_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 100, "z": 0 },
-						{ "x": 100, "y": 0, "z": 0 },
-						{ "x": 200, "y": 150, "z": 0 },
-						{ "x": 150, "y": 200, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Piranha/Piranha_Character_BP.Piranha_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Piranha/Piranha_Character_BP.Piranha_Character_BP_C",
+							"offset": { "x": 0, "y": 100, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Piranha/Piranha_Character_BP.Piranha_Character_BP_C",
+							"offset": { "x": 100, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Jellyfish (1-2)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": 260, "y": -150, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Angler (1-2)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Eels",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": -250, "y": 0, "z": 0 },
-						{ "x": -250, "y": -250, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 0.75, 0.65 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Piranha/Piranha_Character_BP.Piranha_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Piranha/Piranha_Character_BP.Piranha_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
+					"mult": 0.1
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_EmberWyverns.CI_DinoSpawnEntries_EmberWyverns_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_EmberWyverns.CI_DinoSpawnEntries_EmberWyverns_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Ember Wyverns (1)",
 					"weight": 0.33,
-					"classes": [ "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ],
-					"classSwaps": [
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C"
+						}
+					],
+					"randomSwaps": [
 						{
 							"from": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C",
 							"to": [
-								"/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C",
-								"/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Mega.CrystalWyvern_Character_BP_Mega_C"
-							],
-							"weights": [ 1, 0.05 ]
+								[ 1, "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C" ],
+								[ 0.05, "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Mega.CrystalWyvern_Character_BP_Mega_C" ]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_FloatingIslands_Main.CI_DinoSpawnEntries_FloatingIslands_Main_C",
+			"maxNPCNumberMultiplier": 1,
+			"entries": [
+				{
+					"name": "Para (1-3)",
+					"weight": 0.125,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.667,
+							"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.333,
+							"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Trike (1-3)",
+					"weight": 0.075,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.667,
+							"bp": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.333,
+							"bp": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Ankylo (1-3)",
+					"weight": 0.075,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ankylo/Ankylo_Character_BP.Ankylo_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/Ankylo/Ankylo_Character_BP.Ankylo_Character_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.3,
+							"bp": "/Game/PrimalEarth/Dinos/Ankylo/Ankylo_Character_BP.Ankylo_Character_BP_C",
+							"offset": { "x": 0, "y": 300, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Stego (1-2)",
+					"weight": 0.125,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Sauropod (1-3)",
+					"weight": 0.1,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Sauropod/Sauropod_Character_BP.Sauropod_Character_BP_C"
+						}
+					]
+				},
+				{
+					"name": "Ptero (1-4)",
+					"weight": 0.15,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
+							"offset": { "x": -250, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
+							"offset": { "x": 250, "y": 0, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Phiomia (1)",
+					"weight": 0.125,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Dilo (1-4)",
+					"weight": 0.1,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C"
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+							"offset": { "x": 250, "y": 0, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Raptor (1-2)",
+					"weight": 0.13,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Turtle (1-2)",
+					"weight": 0.11,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Dragonfly Spawn (4) 1",
+					"weight": 0.2,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Dragonfly Spawn (4) 1",
+					"weight": 0.2,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Dimorphs (1-3)",
+					"weight": 0.1,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.667,
+							"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.333,
+							"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Monkeys (1-3)",
+					"weight": 0.07,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C"
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Tapajera (1)",
+					"weight": 0.15,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Ichthy (2-4)",
+					"weight": 0.1,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
+							"offset": { "x": 0, "y": 200, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
+							"offset": { "x": 0, "y": -200, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
+							"offset": { "x": -200, "y": -200, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
+							"offset": { "x": 200, "y": 200, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Kentro (1-3)",
+					"weight": 0.075,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C"
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.45,
+							"bp": "/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Argentavis (1)",
+					"weight": 0.15,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Equus (1-4)",
+					"weight": 0.2,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Equus/Equus_Character_BP.Equus_Character_BP_C"
+						},
+						{
+							"chance": 0.8,
+							"bp": "/Game/PrimalEarth/Dinos/Equus/Equus_Character_BP.Equus_Character_BP_C",
+							"offset": { "x": 0, "y": -300, "z": 0 }
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/Equus/Equus_Character_BP.Equus_Character_BP_C",
+							"offset": { "x": 0, "y": 300, "z": 0 }
+						},
+						{
+							"chance": 0.45,
+							"bp": "/Game/PrimalEarth/Dinos/Equus/Equus_Character_BP.Equus_Character_BP_C",
+							"offset": { "x": 300, "y": 300, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Sheep (1)",
+					"weight": 0.0065,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Sheep/Sheep_Character_BP.Sheep_Character_BP_C"
+						}
+					]
+				},
+				{
+					"name": "Desert Moth (1-2)",
+					"weight": 0.1,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.667,
+							"bp": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Jugbug Oil (1-3)",
+					"weight": 0.1,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
+				},
+				{
+					"name": "Paracer (1)",
+					"weight": 0.1,
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Paraceratherium/Paracer_Character_BP.Paracer_Character_BP_C"
 						}
 					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C",
-					"desiredNumberMult": 1
+					"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+					"mult": 0.1
+				},
+				{
+					"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+					"mult": 0.125
+				},
+				{
+					"bp": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
+					"mult": 0.45
+				},
+				{
+					"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+					"mult": 0.175
+				},
+				{
+					"bp": "/Game/PrimalEarth/Dinos/Paraceratherium/Paracer_Character_BP.Paracer_Character_BP_C",
+					"mult": 0.1
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_FloatingIslands_Main.CI_DinoSpawnEntries_FloatingIslands_Main_C",
-			"maxNPCNumberMultiplier": 1,
-			"entries": [
-				{
-					"name": "Para (1-3)",
-					"weight": 0.125,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.667, 0.333 ]
-				},
-				{
-					"name": "Trike (1-3)",
-					"weight": 0.075,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.667, 0.333 ]
-				},
-				{
-					"name": "Ankylo (1-3)",
-					"weight": 0.075,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ankylo/Ankylo_Character_BP.Ankylo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ankylo/Ankylo_Character_BP.Ankylo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ankylo/Ankylo_Character_BP.Ankylo_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 },
-						{ "x": 0, "y": 300, "z": 0 }
-					],
-					"classWeights": [ 1, 0.6, 0.3 ]
-				},
-				{
-					"name": "Stego (1-2)",
-					"weight": 0.125,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
-				},
-				{
-					"name": "Sauropod (1-3)",
-					"weight": 0.1,
-					"classes": [ "/Game/PrimalEarth/Dinos/Sauropod/Sauropod_Character_BP.Sauropod_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
-				},
-				{
-					"name": "Ptero (1-4)",
-					"weight": 0.15,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": -250, "y": 0, "z": 0 },
-						{ "x": 250, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 0.7, 0.6, 0.25 ]
-				},
-				{
-					"name": "Phiomia (1)",
-					"weight": 0.125,
-					"classes": [ "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 300, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
-				},
-				{
-					"name": "Dilo (1-4)",
-					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 250, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5, 0.25 ]
-				},
-				{
-					"name": "Raptor (1-2)",
-					"weight": 0.13,
-					"classes": [ "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C" ],
-					"spawnOffsets": [
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
-				},
-				{
-					"name": "Turtle (1-2)",
-					"weight": 0.11,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
-				},
-				{
-					"name": "Dragonfly Spawn (4) 1",
-					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
-				},
-				{
-					"name": "Dragonfly Spawn (4) 1",
-					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
-				},
-				{
-					"name": "Dimorphs (1-3)",
-					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.667, 0.333 ]
-				},
-				{
-					"name": "Monkeys (1-3)",
-					"weight": 0.07,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5, 0.25 ]
-				},
-				{
-					"name": "Tapajera (1)",
-					"weight": 0.15,
-					"classes": [ "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 680, "z": 0 } ],
-					"classWeights": [ 1 ]
-				},
-				{
-					"name": "Ichthy (2-4)",
-					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 200, "z": 0 },
-						{ "x": 0, "y": -200, "z": 0 },
-						{ "x": -200, "y": -200, "z": 0 },
-						{ "x": 200, "y": 200, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 0.75, 0.5 ]
-				},
-				{
-					"name": "Kentro (1-3)",
-					"weight": 0.075,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.7, 0.45 ]
-				},
-				{
-					"name": "Argentavis (1)",
-					"weight": 0.15,
-					"classes": [ "/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 300, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
-				},
-				{
-					"name": "Equus (1-4)",
-					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Equus/Equus_Character_BP.Equus_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Equus/Equus_Character_BP.Equus_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Equus/Equus_Character_BP.Equus_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Equus/Equus_Character_BP.Equus_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -300, "z": 0 },
-						{ "x": 0, "y": 300, "z": 0 },
-						{ "x": 300, "y": 300, "z": 0 }
-					],
-					"classWeights": [ 1, 0.8, 0.6, 0.45 ]
-				},
-				{
-					"name": "Sheep (1)",
-					"weight": 0.0065,
-					"classes": [ "/Game/PrimalEarth/Dinos/Sheep/Sheep_Character_BP.Sheep_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
-				},
-				{
-					"name": "Desert Moth (1-2)",
-					"weight": 0.1,
-					"classes": [
-						"/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 },
-						{ "x": 0, "y": 300, "z": 0 },
-						{ "x": 0, "y": -300, "z": 0 }
-					],
-					"classWeights": [ 1, 0.667 ]
-				},
-				{
-					"name": "Jugbug Oil (1-3)",
-					"weight": 0.1,
-					"classes": [
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5 ]
-				},
-				{
-					"name": "Paracer (1)",
-					"weight": 0.1,
-					"classes": [ "/Game/PrimalEarth/Dinos/Paraceratherium/Paracer_Character_BP.Paracer_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
-				}
-			],
-			"limits": [
-				{
-					"class": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-					"desiredNumberMult": 0.1
-				},
-				{
-					"class": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
-					"desiredNumberMult": 0.125
-				},
-				{
-					"class": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
-					"desiredNumberMult": 0.45
-				},
-				{
-					"class": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
-					"desiredNumberMult": 0.175
-				},
-				{
-					"class": "/Game/PrimalEarth/Dinos/Paraceratherium/Paracer_Character_BP.Paracer_Character_BP_C",
-					"desiredNumberMult": 0.1
-				}
-			]
-		},
-		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_FloatingIslands_Small.CI_DinoSpawnEntries_FloatingIslands_Small_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_FloatingIslands_Small.CI_DinoSpawnEntries_FloatingIslands_Small_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Para (1-3)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.6, 0.3 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C"
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.3,
+							"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Stego (1-2)",
 					"weight": 0.025,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dilo (1-4)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 250, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5, 0.25 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C"
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+							"offset": { "x": 250, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Raptor (1-2)",
 					"weight": 0.13,
-					"classes": [ "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C" ],
-					"spawnOffsets": [
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Phiomia (1-2)",
 					"weight": 0.075,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Turtle (1-2)",
 					"weight": 0.11,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Compy Spawn (1-5)",
 					"weight": 0.135,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 },
-						{ "x": 80, "y": 80, "z": 0 }
-					],
-					"classWeights": [ 1, 0.7, 0.65, 0.45, 0.3 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.65,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.45,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						},
+						{
+							"chance": 0.3,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": 80, "y": 80, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dragonfly Spawn (4) 1",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dragonfly Spawn (4) 2",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dimorphs (1-3)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.667, 0.333 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.667,
+							"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.333,
+							"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Monkeys (1-3)",
 					"weight": 0.07,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5, 0.25 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C"
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Oviraptor (1)",
 					"weight": 0.055,
-					"classes": [ "/Game/PrimalEarth/Dinos/Oviraptor/Oviraptor_Character_BP.Oviraptor_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Oviraptor/Oviraptor_Character_BP.Oviraptor_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Lystro (1-2)",
 					"weight": 0.125,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Tapajera (1)",
 					"weight": 0.15,
-					"classes": [ "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 680, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Archa (1)",
 					"weight": 0.15,
-					"classes": [ "/Game/PrimalEarth/Dinos/Archaeopteryx/Archa_Character_BP.Archa_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 250, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Archaeopteryx/Archa_Character_BP.Archa_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Ichthy (2-4)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 200, "z": 0 },
-						{ "x": 0, "y": -200, "z": 0 },
-						{ "x": -200, "y": -200, "z": 0 },
-						{ "x": 200, "y": 200, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 0.75, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
+							"offset": { "x": 0, "y": 200, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
+							"offset": { "x": 0, "y": -200, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
+							"offset": { "x": -200, "y": -200, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
+							"offset": { "x": 200, "y": 200, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Ptero (1-2)",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Ptero (1-2)",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Microraptor (3-5)",
 					"weight": 0.04,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -100, "z": 0 },
-						{ "x": 0, "y": 100, "z": 0 },
-						{ "x": 100, "y": 100, "z": 0 },
-						{ "x": -100, "y": -100, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 0.7, 0.4 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
+							"offset": { "x": 0, "y": -100, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
+							"offset": { "x": 0, "y": 100, "z": 0 }
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
+							"offset": { "x": 100, "y": 100, "z": 0 }
+						},
+						{
+							"chance": 0.4,
+							"bp": "/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
+							"offset": { "x": -100, "y": -100, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Kentro (1-3)",
 					"weight": 0.075,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.7, 0.45 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C"
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.45,
+							"bp": "/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Argentavis (1)",
 					"weight": 0.15,
-					"classes": [ "/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 300, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Sheep (1)",
 					"weight": 0.0065,
-					"classes": [ "/Game/PrimalEarth/Dinos/Sheep/Sheep_Character_BP.Sheep_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Sheep/Sheep_Character_BP.Sheep_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Ignuanadon (1)",
 					"weight": 0.085,
-					"classes": [ "/Game/PrimalEarth/Dinos/Iguanodon/Iguanodon_Character_BP.Iguanodon_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Iguanodon/Iguanodon_Character_BP.Iguanodon_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Desert Moth (1-2)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 },
-						{ "x": 0, "y": 300, "z": 0 },
-						{ "x": 0, "y": -300, "z": 0 }
-					],
-					"classWeights": [ 1, 0.667 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.667,
+							"bp": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Jugbug Oil (1-3)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Oil_Character_BP.Jugbug_Oil_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Jugbug Water (1-3)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C",
-						"/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/ScorchedEarth/Dinos/JugBug/Jugbug_Water_Character_BP.Jugbug_Water_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
-					"desiredNumberMult": 0.25
+					"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
+					"mult": 0.25
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-					"desiredNumberMult": 0.25
+					"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+					"mult": 0.25
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
-					"desiredNumberMult": 0.3
+					"bp": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
+					"mult": 0.3
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
-					"desiredNumberMult": 0.135
+					"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
+					"mult": 0.135
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Oviraptor/Oviraptor_Character_BP.Oviraptor_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Oviraptor/Oviraptor_Character_BP.Oviraptor_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-					"desiredNumberMult": 0.16
+					"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+					"mult": 0.16
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C",
-					"desiredNumberMult": 0.01
+					"bp": "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C",
+					"mult": 0.01
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Archaeopteryx/Archa_Character_BP.Archa_Character_BP_C",
-					"desiredNumberMult": 1
+					"bp": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
+					"mult": 0.125
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Ichthyornis/Ichthyornis_Character_BP.Ichthyornis_Character_BP_C",
-					"desiredNumberMult": 0.125
+					"bp": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
+					"mult": 0.25
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C",
-					"desiredNumberMult": 0.25
+					"bp": "/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
+					"mult": 0.065
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Microraptor/Microraptor_Character_BP.Microraptor_Character_BP_C",
-					"desiredNumberMult": 0.065
+					"bp": "/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Kentrosaurus/Kentro_Character_BP.Kentro_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP_C",
+					"mult": 0.3
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP_C",
-					"desiredNumberMult": 0.3
+					"bp": "/Game/PrimalEarth/Dinos/Sheep/Sheep_Character_BP.Sheep_Character_BP_C",
+					"mult": 0.01
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Sheep/Sheep_Character_BP.Sheep_Character_BP_C",
-					"desiredNumberMult": 0.01
+					"bp": "/Game/PrimalEarth/Dinos/Iguanodon/Iguanodon_Character_BP.Iguanodon_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Iguanodon/Iguanodon_Character_BP.Iguanodon_Character_BP_C",
-					"desiredNumberMult": 0.1
-				},
-				{
-					"class": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
-					"desiredNumberMult": 0.05
+					"bp": "/Game/ScorchedEarth/Dinos/Moth/Moth_Character_BP.Moth_Character_BP_C",
+					"mult": 0.05
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_OtterPonds.CI_DinoSpawnEntries_OtterPonds_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_OtterPonds.CI_DinoSpawnEntries_OtterPonds_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Fish One To Four",
 					"weight": 1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": -250, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 0.7, 0.4 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.4,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
+							"offset": { "x": -250, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Fish One To Four",
 					"weight": 1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": -250, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 0.7, 0.4 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.4,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
+							"offset": { "x": -250, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Fish One To Four",
 					"weight": 1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": -250, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 0.7, 0.4 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.4,
+							"bp": "/Game/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP.Coel_Character_BP_C",
+							"offset": { "x": -250, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Otter One to Two",
 					"weight": 1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Otter/Otter_Character_BP.Otter_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Otter/Otter_Character_BP.Otter_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Otter/Otter_Character_BP.Otter_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Otter/Otter_Character_BP.Otter_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 200, "z": 0 },
-						{ "x": 200, "y": 0, "z": 0 },
-						{ "x": 0, "y": 800, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Otter/Otter_Character_BP.Otter_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Otter/Otter_Character_BP.Otter_Character_BP_C",
+							"offset": { "x": 0, "y": 200, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Otter/Otter_Character_BP.Otter_Character_BP_C",
+							"offset": { "x": 200, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Otter/Otter_Character_BP.Otter_Character_BP_C",
+							"offset": { "x": 0, "y": 800, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Baryonyx/Baryonyx_Character_BP.Baryonyx_Character_BP_C",
-					"desiredNumberMult": 0.035
+					"bp": "/Game/PrimalEarth/Dinos/Baryonyx/Baryonyx_Character_BP.Baryonyx_Character_BP_C",
+					"mult": 0.035
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_PoohBears.CI_DinoSpawnEntries_PoohBears_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_PoohBears.CI_DinoSpawnEntries_PoohBears_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Bears (1-4)",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Direbear/Direbear_Character_BP.Direbear_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Direbear/Direbear_Character_BP.Direbear_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Direbear/Direbear_Character_BP.Direbear_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 },
-						{ "x": 0, "y": 300, "z": 0 },
-						{ "x": 0, "y": -300, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5, 0.25 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Direbear/Direbear_Character_BP.Direbear_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Direbear/Direbear_Character_BP.Direbear_Character_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Direbear/Direbear_Character_BP.Direbear_Character_BP_C",
+							"offset": { "x": 0, "y": 300, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Direbear/Direbear_Character_BP.Direbear_Character_BP_C",
-					"desiredNumberMult": 0.3
+					"bp": "/Game/PrimalEarth/Dinos/Direbear/Direbear_Character_BP.Direbear_Character_BP_C",
+					"mult": 0.3
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_SaberPride.CI_DinoSpawnEntries_SaberPride_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_SaberPride.CI_DinoSpawnEntries_SaberPride_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Saber (3-5)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": 0, "y": 300, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 },
-						{ "x": 0, "y": -300, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 0.5, 7 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
+							"offset": { "x": 0, "y": 300, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 7,
+							"bp": "/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
+							"offset": { "x": 0, "y": -300, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP_C",
+					"mult": 0.2
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_WaterTunnels.CI_DinoSpawnEntries_WaterTunnels_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_WaterTunnels.CI_DinoSpawnEntries_WaterTunnels_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Ammonite 4",
 					"weight": 0.725,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ammonite/Ammonite_Character.Ammonite_Character_C",
-						"/Game/PrimalEarth/Dinos/Ammonite/Ammonite_Character.Ammonite_Character_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ammonite/Ammonite_Character.Ammonite_Character_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ammonite/Ammonite_Character.Ammonite_Character_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Cnidara",
 					"weight": 0.65,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": -100, "y": 400, "z": 0 },
-						{ "x": 100, "y": -400, "z": 0 }
-					],
-					"classWeights": [ 1, 0.85, 0.75 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C"
+						},
+						{
+							"chance": 0.85,
+							"bp": "/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
+							"offset": { "x": -100, "y": 400, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Anglers (1-2)",
 					"weight": 0.15,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C"
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Eel (6)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -150, "z": 0 }
-					],
-					"classWeights": [ 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
+							"offset": { "x": 0, "y": -150, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Mosa (1)",
 					"weight": 0.01,
-					"classes": [ "/Game/PrimalEarth/Dinos/Mosasaurus/Mosa_Character_BP.Mosa_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Mosasaurus/Mosa_Character_BP.Mosa_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Plessy (2)",
 					"weight": 0.01,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": 0, "y": 500, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C",
+							"offset": { "x": 0, "y": 500, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Manta",
 					"weight": 0.24,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Manta/Manta_Character_BP_Aberrant.Manta_Character_BP_Aberrant_C",
-						"/Game/PrimalEarth/Dinos/Manta/Manta_Character_BP_Aberrant.Manta_Character_BP_Aberrant_C",
-						"/Game/PrimalEarth/Dinos/Manta/Manta_Character_BP_Aberrant.Manta_Character_BP_Aberrant_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Manta/Manta_Character_BP_Aberrant.Manta_Character_BP_Aberrant_C"
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Manta/Manta_Character_BP_Aberrant.Manta_Character_BP_Aberrant_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Manta/Manta_Character_BP_Aberrant.Manta_Character_BP_Aberrant_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Eurypterid 4",
 					"weight": 1.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C",
-						"/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C",
-						"/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C",
-						"/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 250, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C",
+							"offset": { "x": 250, "y": 0, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Ammonite/Ammonite_Character.Ammonite_Character_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Ammonite/Ammonite_Character.Ammonite_Character_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
-					"desiredNumberMult": 0.3
+					"bp": "/Game/PrimalEarth/Dinos/Cnidaria/Cnidaria_Character_BP.Cnidaria_Character_BP_C",
+					"mult": 0.3
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C",
-					"desiredNumberMult": 0.67
+					"bp": "/Game/PrimalEarth/Dinos/Anglerfish/Angler_Character_BP.Angler_Character_BP_C",
+					"mult": 0.67
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Eel/Eel_Character_BP.Eel_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Mosasaurus/Mosa_Character_BP.Mosa_Character_BP_C",
-					"desiredNumberMult": 0.01
+					"bp": "/Game/PrimalEarth/Dinos/Mosasaurus/Mosa_Character_BP.Mosa_Character_BP_C",
+					"mult": 0.01
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C",
-					"desiredNumberMult": 0.01
+					"bp": "/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP_C",
+					"mult": 0.01
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C",
-					"desiredNumberMult": 0.09
+					"bp": "/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character_C",
+					"mult": 0.09
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_WolfPack.CI_DinoSpawnEntries_WolfPack_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_DinoSpawnEntries_WolfPack.CI_DinoSpawnEntries_WolfPack_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Wolves (3-5)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": 0, "y": 300, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 },
-						{ "x": 0, "y": -300, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 0.5, 7 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
+							"offset": { "x": 0, "y": 300, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 7,
+							"bp": "/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
+							"offset": { "x": 0, "y": -300, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP_C",
+					"mult": 0.2
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_HoneyBees.CI_HoneyBees_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/CI_HoneyBees.CI_HoneyBees_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "HoneyBee",
 					"weight": 1,
-					"classes": [
-						"/Game/Mods/CrystalIsles/Assets/Dinos/HoneyBee/HoneyBee_Character_BP.HoneyBee_Character_BP_C",
-						"/Game/Mods/CrystalIsles/Assets/Dinos/HoneyBee/HoneyBee_Character_BP.HoneyBee_Character_BP_C",
-						"/Game/Mods/CrystalIsles/Assets/Dinos/HoneyBee/HoneyBee_Character_BP.HoneyBee_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 200 },
-						{ "x": 150, "y": 0, "z": 200 },
-						{ "x": 0, "y": 150, "z": 200 }
-					],
-					"classWeights": [ 1, 1, 1 ]
-				}
-			],
-			"limits": [
-				{
-					"class": "/Game/Mods/CrystalIsles/Assets/Dinos/HoneyBee/HoneyBee_Character_BP.HoneyBee_Character_BP_C",
-					"desiredNumberMult": 1
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/Mods/CrystalIsles/Assets/Dinos/HoneyBee/HoneyBee_Character_BP.HoneyBee_Character_BP_C",
+							"offset": { "x": 0, "y": 0, "z": 200 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/Mods/CrystalIsles/Assets/Dinos/HoneyBee/HoneyBee_Character_BP.HoneyBee_Character_BP_C",
+							"offset": { "x": 150, "y": 0, "z": 200 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/Mods/CrystalIsles/Assets/Dinos/HoneyBee/HoneyBee_Character_BP.HoneyBee_Character_BP_C",
+							"offset": { "x": 0, "y": 150, "z": 200 }
+						}
+					]
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntries/CI_DinoSpawnEntries_AggressiveCrysWyv.CI_DinoSpawnEntries_AggressiveCrysWyv_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntries/CI_DinoSpawnEntries_AggressiveCrysWyv.CI_DinoSpawnEntries_AggressiveCrysWyv_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Ember Wyverns (1) -- Small Chance to be Mega",
 					"weight": 0.33,
-					"classes": [ "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ],
-					"classSwaps": [
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C"
+						}
+					],
+					"randomSwaps": [
 						{
 							"from": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C",
 							"to": [
-								"/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C",
-								"/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Mega.CrystalWyvern_Character_BP_Mega_C"
-							],
-							"weights": [ 1, 0.05 ]
+								[ 1, "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C" ],
+								[ 0.05, "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Mega.CrystalWyvern_Character_BP_Mega_C" ]
+							]
 						}
 					]
 				},
 				{
 					"name": "Wyverns (1)",
 					"weight": 0.33,
-					"classes": [ "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_WS.CrystalWyvern_Character_BP_WS_C" ],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_WS.CrystalWyvern_Character_BP_WS_C"
+						}
+					]
 				},
 				{
 					"name": "Wyverns (1)",
 					"weight": 0.33,
-					"classes": [ "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Blood.CrystalWyvern_Character_BP_Blood_C" ],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Blood.CrystalWyvern_Character_BP_Blood_C"
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C",
-					"desiredNumberMult": 0.33
+					"bp": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Ember.CrystalWyvern_Character_BP_Ember_C",
+					"mult": 0.33
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_WS.CrystalWyvern_Character_BP_WS_C",
-					"desiredNumberMult": 0.33
+					"bp": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_WS.CrystalWyvern_Character_BP_WS_C",
+					"mult": 0.33
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Blood.CrystalWyvern_Character_BP_Blood_C",
-					"desiredNumberMult": 0.33
+					"bp": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalWyvern_Character_BP_Blood.CrystalWyvern_Character_BP_Blood_C",
+					"mult": 0.33
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntries/CI_DinoSpawnEntries_ElementalChamber.CI_DinoSpawnEntries_ElementalChamber_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntries/CI_DinoSpawnEntries_ElementalChamber.CI_DinoSpawnEntries_ElementalChamber_C",
 			"maxNPCNumberMultiplier": 1.1,
 			"entries": [
 				{
 					"name": "Lightbug (1-3)",
 					"weight": 0.08,
-					"classes": [
-						"/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
-						"/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
-						"/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.667, 0.333 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.667,
+							"bp": "/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.333,
+							"bp": "/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Pulmonoscorpius (1)",
 					"weight": 0.012,
-					"classes": [ "/Game/PrimalEarth/Dinos/Scorpion/Scorpion_Character_BP_Aberrant.Scorpion_Character_BP_Aberrant_C" ],
-					"spawnOffsets": [ { "x": 150, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Scorpion/Scorpion_Character_BP_Aberrant.Scorpion_Character_BP_Aberrant_C",
+							"offset": { "x": 150, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "OctoBat (1-3)",
 					"weight": 0.07,
-					"classes": [
-						"/Game/Aberration/Dinos/Pteroteuthis/Pteroteuthis_Char_BP.Pteroteuthis_Char_BP_C",
-						"/Game/Aberration/Dinos/Pteroteuthis/Pteroteuthis_Char_BP.Pteroteuthis_Char_BP_C",
-						"/Game/Aberration/Dinos/Pteroteuthis/Pteroteuthis_Char_BP.Pteroteuthis_Char_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/Aberration/Dinos/Pteroteuthis/Pteroteuthis_Char_BP.Pteroteuthis_Char_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/Aberration/Dinos/Pteroteuthis/Pteroteuthis_Char_BP.Pteroteuthis_Char_BP_C",
+							"offset": { "x": -300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/Aberration/Dinos/Pteroteuthis/Pteroteuthis_Char_BP.Pteroteuthis_Char_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Carno (1-2)",
 					"weight": 0.07,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP_Aberrant.Carno_Character_BP_Aberrant_C",
-						"/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP_Aberrant.Carno_Character_BP_Aberrant_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP_Aberrant.Carno_Character_BP_Aberrant_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP_Aberrant.Carno_Character_BP_Aberrant_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Arthropluera (1-2)",
 					"weight": 0.07,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Arthropluera/Arthro_Character_BP_Aberrant.Arthro_Character_BP_Aberrant_C",
-						"/Game/PrimalEarth/Dinos/Arthropluera/Arthro_Character_BP_Aberrant.Arthro_Character_BP_Aberrant_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": 150, "y": 260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Arthropluera/Arthro_Character_BP_Aberrant.Arthro_Character_BP_Aberrant_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Arthropluera/Arthro_Character_BP_Aberrant.Arthro_Character_BP_Aberrant_C",
+							"offset": { "x": 150, "y": 260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Purlovia (1-2)",
 					"weight": 0.055,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Purlovia/Purlovia_Character_BP_Aberrant.Purlovia_Character_BP_Aberrant_C",
-						"/Game/PrimalEarth/Dinos/Purlovia/Purlovia_Character_BP_Aberrant.Purlovia_Character_BP_Aberrant_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": 150, "y": 260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Purlovia/Purlovia_Character_BP_Aberrant.Purlovia_Character_BP_Aberrant_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Purlovia/Purlovia_Character_BP_Aberrant.Purlovia_Character_BP_Aberrant_C",
+							"offset": { "x": 150, "y": 260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Megalosaurus (1-2)",
 					"weight": 0.08,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Megalosaurus/Megalosaurus_Character_BP_Aberrant.Megalosaurus_Character_BP_Aberrant_C",
-						"/Game/PrimalEarth/Dinos/Megalosaurus/Megalosaurus_Character_BP_Aberrant.Megalosaurus_Character_BP_Aberrant_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": 150, "y": 260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Megalosaurus/Megalosaurus_Character_BP_Aberrant.Megalosaurus_Character_BP_Aberrant_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Megalosaurus/Megalosaurus_Character_BP_Aberrant.Megalosaurus_Character_BP_Aberrant_C",
+							"offset": { "x": 150, "y": 260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Spinosaurus (1)",
 					"weight": 0.1,
-					"classes": [ "/Game/PrimalEarth/Dinos/Spino/Spino_Character_BP_Aberrant.Spino_Character_BP_Aberrant_C" ],
-					"spawnOffsets": [ { "x": 300, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Spino/Spino_Character_BP_Aberrant.Spino_Character_BP_Aberrant_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Glowtail (1)",
 					"weight": 0.1,
-					"classes": [ "/Game/Aberration/Dinos/LanternBird/LanternBird_Character_BP.LanternBird_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 300, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/Aberration/Dinos/LanternBird/LanternBird_Character_BP.LanternBird_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Beetles (1-2)",
 					"weight": 0.04,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP_Aberrant.DungBeetle_Character_BP_Aberrant_C",
-						"/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP_Aberrant.DungBeetle_Character_BP_Aberrant_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP_Aberrant.DungBeetle_Character_BP_Aberrant_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP_Aberrant.DungBeetle_Character_BP_Aberrant_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
-					"desiredNumberMult": 0.15
+					"bp": "/Game/Aberration/Dinos/Lightbug/Lightbug_Character_BaseBP.Lightbug_Character_BaseBP_C",
+					"mult": 0.15
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Scorpion/Scorpion_Character_BP_Aberrant.Scorpion_Character_BP_Aberrant_C",
-					"desiredNumberMult": 0.05
+					"bp": "/Game/PrimalEarth/Dinos/Scorpion/Scorpion_Character_BP_Aberrant.Scorpion_Character_BP_Aberrant_C",
+					"mult": 0.05
 				},
 				{
-					"class": "/Game/Aberration/Dinos/Pteroteuthis/Pteroteuthis_Char_BP.Pteroteuthis_Char_BP_C",
-					"desiredNumberMult": 0.15
+					"bp": "/Game/Aberration/Dinos/Pteroteuthis/Pteroteuthis_Char_BP.Pteroteuthis_Char_BP_C",
+					"mult": 0.15
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP_Aberrant.Carno_Character_BP_Aberrant_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP_Aberrant.Carno_Character_BP_Aberrant_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Arthropluera/Arthro_Character_BP_Aberrant.Arthro_Character_BP_Aberrant_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Arthropluera/Arthro_Character_BP_Aberrant.Arthro_Character_BP_Aberrant_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Purlovia/Purlovia_Character_BP.Purlovia_Character_BP_C",
-					"desiredNumberMult": 0.15
+					"bp": "/Game/PrimalEarth/Dinos/Purlovia/Purlovia_Character_BP.Purlovia_Character_BP_C",
+					"mult": 0.15
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Megalosaurus/Megalosaurus_Character_BP_Aberrant.Megalosaurus_Character_BP_Aberrant_C",
-					"desiredNumberMult": 0.025
+					"bp": "/Game/PrimalEarth/Dinos/Megalosaurus/Megalosaurus_Character_BP_Aberrant.Megalosaurus_Character_BP_Aberrant_C",
+					"mult": 0.025
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Spino/Spino_Character_BP_Aberrant.Spino_Character_BP_Aberrant_C",
-					"desiredNumberMult": 0.015
+					"bp": "/Game/PrimalEarth/Dinos/Spino/Spino_Character_BP_Aberrant.Spino_Character_BP_Aberrant_C",
+					"mult": 0.015
 				},
 				{
-					"class": "/Game/Aberration/Dinos/LanternBird/LanternBird_Character_BP.LanternBird_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/Aberration/Dinos/LanternBird/LanternBird_Character_BP.LanternBird_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP_Aberrant.DungBeetle_Character_BP_Aberrant_C",
-					"desiredNumberMult": 0.05
+					"bp": "/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP_Aberrant.DungBeetle_Character_BP_Aberrant_C",
+					"mult": 0.05
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntries/CI_DinoSpawnEntries_Tropeo.CI_DinoSpawnEntries_Tropeo_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntries/CI_DinoSpawnEntries_Tropeo.CI_DinoSpawnEntries_Tropeo_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Tropeo (1)",
 					"weight": 1,
-					"classes": [ "/Game/PrimalEarth/Dinos/Tropeognathus/Tropeognathus_Character_BP.Tropeognathus_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 10000 } ],
-					"classWeights": [ 1 ]
-				}
-			],
-			"limits": [
-				{
-					"class": "/Game/PrimalEarth/Dinos/Tropeognathus/Tropeognathus_Character_BP.Tropeognathus_Character_BP_C",
-					"desiredNumberMult": 1
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Tropeognathus/Tropeognathus_Character_BP.Tropeognathus_Character_BP_C",
+							"offset": { "x": 0, "y": 0, "z": 10000 }
+						}
+					]
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntriesJungle.DinoSpawnEntriesJungle_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntriesJungle.DinoSpawnEntriesJungle_C",
 			"maxNPCNumberMultiplier": 1.1,
 			"entries": [
 				{
 					"name": "Dodo Spawn (1-5)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 },
-						{ "x": 0, "y": -340, "z": 0 },
-						{ "x": 0, "y": 340, "z": 0 }
-					],
-					"classWeights": [ 1, 0.8, 0.6, 0.4, 0.2 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.8,
+							"bp": "/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C"
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						},
+						{
+							"chance": 0.4,
+							"bp": "/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
+							"offset": { "x": 0, "y": -340, "z": 0 }
+						},
+						{
+							"chance": 0.2,
+							"bp": "/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
+							"offset": { "x": 0, "y": 340, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Para (1-3)",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.6, 0.3 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C"
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.3,
+							"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Trike (1-3)",
 					"weight": 0.075,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.6 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C"
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Stego (1-2)",
 					"weight": 0.025,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dilo (1-4)",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 250, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.5, 0.25 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C"
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+							"offset": { "x": 250, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Raptor (1-2)",
 					"weight": 0.13,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Phiomia (1-2)",
 					"weight": 0.075,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Turtle (1-2)",
 					"weight": 0.11,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Carno (1)",
 					"weight": 0.025,
-					"classes": [ "/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP.Carno_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 250, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP.Carno_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Ant Spawn (1-5) 1",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ant/FlyingAnt_Character_BP.FlyingAnt_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Ant/FlyingAnt_Character_BP.FlyingAnt_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 },
-						{ "x": 80, "y": 80, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/FlyingAnt_Character_BP.FlyingAnt_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Ant/FlyingAnt_Character_BP.FlyingAnt_Character_BP_C",
+							"offset": { "x": 80, "y": 80, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Compy Spawn (1-5)",
 					"weight": 0.135,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 },
-						{ "x": 80, "y": 80, "z": 0 }
-					],
-					"classWeights": [ 1, 0.7, 0.65, 0.45, 0.3 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 0.7,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.65,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.45,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						},
+						{
+							"chance": 0.3,
+							"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+							"offset": { "x": 80, "y": 80, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dragonfly Spawn (4) 1",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dragonfly Spawn (4) 2",
 					"weight": 0.2,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 80, "z": 0 },
-						{ "x": 80, "y": 0, "z": 0 },
-						{ "x": -80, "y": 0, "z": 0 },
-						{ "x": 0, "y": -80, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": 80, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": -80, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP_C",
+							"offset": { "x": 0, "y": -80, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Dimorphs (1-3)",
 					"weight": 0.1,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 300, "y": 0, "z": 0 },
-						{ "x": -150, "y": 260, "z": 0 },
-						{ "x": -150, "y": -260, "z": 0 }
-					],
-					"classWeights": [ 1, 0.667, 0.333 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+							"offset": { "x": 300, "y": 0, "z": 0 }
+						},
+						{
+							"chance": 0.667,
+							"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+							"offset": { "x": -150, "y": 260, "z": 0 }
+						},
+						{
+							"chance": 0.333,
+							"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+							"offset": { "x": -150, "y": -260, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Diplodocus (1)",
 					"weight": 0.03,
-					"classes": [ "/Game/PrimalEarth/Dinos/Diplodocus/Diplodocus_Character_BP.Diplodocus_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 250, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Diplodocus/Diplodocus_Character_BP.Diplodocus_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Monkeys (1-3)",
 					"weight": 0.07,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -250, "z": 0 },
-						{ "x": 0, "y": 250, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5, 0.25 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C"
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
+							"offset": { "x": 0, "y": -250, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
+							"offset": { "x": 0, "y": 250, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Pachy (1-2)",
 					"weight": 0.07,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Pachy/Pachy_Character_BP.Pachy_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Pachy/Pachy_Character_BP.Pachy_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.6 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Pachy/Pachy_Character_BP.Pachy_Character_BP_C"
+						},
+						{
+							"chance": 0.6,
+							"bp": "/Game/PrimalEarth/Dinos/Pachy/Pachy_Character_BP.Pachy_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Oviraptor (1)",
 					"weight": 0.055,
-					"classes": [ "/Game/PrimalEarth/Dinos/Oviraptor/Oviraptor_Character_BP.Oviraptor_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Oviraptor/Oviraptor_Character_BP.Oviraptor_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Lystro (1-2)",
 					"weight": 0.125,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Tapajera (1)",
 					"weight": 0.02,
-					"classes": [ "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 680, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Chalico (1-3)",
 					"weight": 0.015,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Chalicotherium/Chalico_Character_BP.Chalico_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Chalicotherium/Chalico_Character_BP.Chalico_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Chalicotherium/Chalico_Character_BP.Chalico_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -340, "z": 0 },
-						{ "x": 0, "y": 340, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75, 0.25 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Chalicotherium/Chalico_Character_BP.Chalico_Character_BP_C"
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Chalicotherium/Chalico_Character_BP.Chalico_Character_BP_C",
+							"offset": { "x": 0, "y": -340, "z": 0 }
+						},
+						{
+							"chance": 0.25,
+							"bp": "/Game/PrimalEarth/Dinos/Chalicotherium/Chalico_Character_BP.Chalico_Character_BP_C",
+							"offset": { "x": 0, "y": 340, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Moschops (1-2)",
 					"weight": 0.05,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Moschops/Moschops_Character_BP.Moschops_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Moschops/Moschops_Character_BP.Moschops_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1, 0.75 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Moschops/Moschops_Character_BP.Moschops_Character_BP_C",
+							"offset": { "x": 0, "y": 680, "z": 0 }
+						},
+						{
+							"chance": 0.75,
+							"bp": "/Game/PrimalEarth/Dinos/Moschops/Moschops_Character_BP.Moschops_Character_BP_C",
+							"offset": { "x": 0, "y": -680, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Therizo (1)",
 					"weight": 0.045,
-					"classes": [ "/Game/PrimalEarth/Dinos/Therizinosaurus/Therizino_Character_BP.Therizino_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Therizinosaurus/Therizino_Character_BP.Therizino_Character_BP_C"
+						}
+					]
 				},
 				{
 					"name": "Troodon (3-4)",
 					"weight": 0.045,
-					"classes": [
-						"/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C",
-						"/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C"
-					],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": -180, "z": 0 },
-						{ "x": 0, "y": 180, "z": 0 },
-						{ "x": -180, "y": 0, "z": 0 }
-					],
-					"classWeights": [ 1, 1, 1, 0.5 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C"
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C",
+							"offset": { "x": 0, "y": -180, "z": 0 }
+						},
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C",
+							"offset": { "x": 0, "y": 180, "z": 0 }
+						},
+						{
+							"chance": 0.5,
+							"bp": "/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C",
+							"offset": { "x": -180, "y": 0, "z": 0 }
+						}
+					]
 				},
 				{
 					"name": "Ignuanadon (1)",
 					"weight": 0.085,
-					"classes": [ "/Game/PrimalEarth/Dinos/Iguanodon/Iguanodon_Character_BP.Iguanodon_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Iguanodon/Iguanodon_Character_BP.Iguanodon_Character_BP_C"
+						}
+					]
 				}
 			],
 			"limits": [
 				{
-					"class": "/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
-					"desiredNumberMult": 0.15
+					"bp": "/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP_C",
+					"mult": 0.15
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
-					"desiredNumberMult": 0.25
+					"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
+					"mult": 0.25
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
-					"desiredNumberMult": 0.15
+					"bp": "/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C",
+					"mult": 0.15
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
-					"desiredNumberMult": 0.25
+					"bp": "/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+					"mult": 0.25
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP.Carno_Character_BP_C",
-					"desiredNumberMult": 0.05
+					"bp": "/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP.Carno_Character_BP_C",
+					"mult": 0.05
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
-					"desiredNumberMult": 0.3
+					"bp": "/Game/PrimalEarth/Dinos/Ant/Insect_Character_Base.Insect_Character_Base_C",
+					"mult": 0.3
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
-					"desiredNumberMult": 0.135
+					"bp": "/Game/PrimalEarth/Dinos/Monkey/Monkey_Character_BP.Monkey_Character_BP_C",
+					"mult": 0.135
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Pachy/Pachy_Character_BP.Pachy_Character_BP_C",
-					"desiredNumberMult": 0.15
+					"bp": "/Game/PrimalEarth/Dinos/Pachy/Pachy_Character_BP.Pachy_Character_BP_C",
+					"mult": 0.15
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Oviraptor/Oviraptor_Character_BP.Oviraptor_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Oviraptor/Oviraptor_Character_BP.Oviraptor_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
-					"desiredNumberMult": 0.16
+					"bp": "/Game/PrimalEarth/Dinos/Compy/Compy_Character_BP.Compy_Character_BP_C",
+					"mult": 0.16
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Diplodocus/Diplodocus_Character_BP.Diplodocus_Character_BP_C",
-					"desiredNumberMult": 0.085
+					"bp": "/Game/PrimalEarth/Dinos/Diplodocus/Diplodocus_Character_BP.Diplodocus_Character_BP_C",
+					"mult": 0.085
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
-					"desiredNumberMult": 0.2
+					"bp": "/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP_C",
+					"mult": 0.2
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C",
-					"desiredNumberMult": 0.01
+					"bp": "/Game/PrimalEarth/Dinos/Tapejara/Tapejara_Character_BP.Tapejara_Character_BP_C",
+					"mult": 0.01
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Chalicotherium/Chalico_Character_BP.Chalico_Character_BP_C",
-					"desiredNumberMult": 0.05
+					"bp": "/Game/PrimalEarth/Dinos/Chalicotherium/Chalico_Character_BP.Chalico_Character_BP_C",
+					"mult": 0.05
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Moschops/Moschops_Character_BP.Moschops_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Moschops/Moschops_Character_BP.Moschops_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Therizinosaurus/Therizino_Character_BP.Therizino_Character_BP_C",
-					"desiredNumberMult": 0.05
+					"bp": "/Game/PrimalEarth/Dinos/Therizinosaurus/Therizino_Character_BP.Therizino_Character_BP_C",
+					"mult": 0.05
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Troodon/Troodon_Character_BP.Troodon_Character_BP_C",
+					"mult": 0.1
 				},
 				{
-					"class": "/Game/PrimalEarth/Dinos/Iguanodon/Iguanodon_Character_BP.Iguanodon_Character_BP_C",
-					"desiredNumberMult": 0.1
+					"bp": "/Game/PrimalEarth/Dinos/Iguanodon/Iguanodon_Character_BP.Iguanodon_Character_BP_C",
+					"mult": 0.1
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntries_Griffin.DinoSpawnEntries_Griffin_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnEntries_Griffin.DinoSpawnEntries_Griffin_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Unicorn (1)",
 					"weight": 1,
-					"classes": [ "/Game/PrimalEarth/Dinos/Griffin/Griffin_Character_BP.Griffin_Character_BP_C" ],
-					"spawnOffsets": [ { "x": 0, "y": 0, "z": 0 } ],
-					"classWeights": [ 1 ]
-				}
-			],
-			"limits": [
-				{
-					"class": "/Game/PrimalEarth/Dinos/Griffin/Griffin_Character_BP.Griffin_Character_BP_C",
-					"desiredNumberMult": 1
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/PrimalEarth/Dinos/Griffin/Griffin_Character_BP.Griffin_Character_BP_C"
+						}
+					]
 				}
 			]
 		},
 		{
-			"blueprintPath": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnentries_Icewyvern.DinoSpawnentries_IceWyvern_C",
+			"bp": "/Game/Mods/CrystalIsles/Assets/Blueprints/DinoSpawnentries_Icewyvern.DinoSpawnentries_IceWyvern_C",
 			"maxNPCNumberMultiplier": 1,
 			"entries": [
 				{
 					"name": "Wyverns (1)",
 					"weight": 0.25,
-					"classes": [ "/Game/Mods/Ragnarok/Custom_Assets/Dinos/Wyvern/Ragnarok_Wyvern_Override.Ragnarok_Wyvern_Override_C" ],
-					"spawnOffsets": [
-						{ "x": 0, "y": 0, "z": 0 },
-						{ "x": 0, "y": 680, "z": 0 },
-						{ "x": 0, "y": -680, "z": 0 }
-					],
-					"classWeights": [ 1 ]
+					"species": [
+						{
+							"chance": 1,
+							"bp": "/Game/Mods/Ragnarok/Custom_Assets/Dinos/Wyvern/Ragnarok_Wyvern_Override.Ragnarok_Wyvern_Override_C"
+						}
+					]
 				}
 			]
 		}
