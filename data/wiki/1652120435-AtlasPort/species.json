@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "326.13.1618197415",
+	"version": "327.19.1620276269",
 	"format": "2",
 	"mod": {
 		"id": "1652120435",
@@ -591,7 +591,8 @@
 					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 600, "stamina": 0 },
 					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
 					{ "name": "Claws", "interval": 8, "dmg": 62, "radius": 450, "stamina": 0 },
-					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ExtraProjectile", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
@@ -646,7 +647,64 @@
 					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 600, "stamina": 0 },
 					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
 					{ "name": "Claws", "interval": 8, "dmg": 62, "radius": 450, "stamina": 0 },
-					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ExtraProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 200 }
+				]
+			}
+		},
+		{
+			"name": "Atlas Storm Drake",
+			"bp": "/Game/Mods/AtlasPort/Critter/Drake/ADrake_Character_BP_Storm.ADrake_Character_BP_Storm_C",
+			"dinoNameTag": "Dragon",
+			"customTag": "AtlasDrake",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1050 },
+				"fly": { "base": 1500, "sprint": 4725 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1050 },
+				"fly": { "base": 1500, "sprint": 4725 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 600, "stamina": 0 },
+					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 300 },
+					{ "name": "Claws", "interval": 8, "dmg": 62, "radius": 450, "stamina": 0 },
+					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WindBreath", "interval": 10, "dmg": 0, "radius": 0, "stamina": 180 }
 				]
 			}
 		},
