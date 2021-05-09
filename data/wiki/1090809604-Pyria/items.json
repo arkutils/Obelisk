@@ -1,5 +1,5 @@
 {
-	"version": "326.13.1619501669",
+	"version": "327.19.1620578021",
 	"format": "3",
 	"mod": {
 		"id": "1090809604",
@@ -735,8 +735,60 @@
 			}
 		},
 		{
+			"name": "Grand Elixir",
+			"description": "Heals 250 HP per second for 10 seconds. Recovers 100 food per sec to compensate.Not for player consumption.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GrandElixir.PrimalItemConsumable_GrandElixir_C",
+			"icon": "/Game/Mods/Pyria/CustomIcons/GreatElixir.GreatElixir",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0.1,
+			"maxQuantity": 100,
+			"spoilage": { "time": 120000 },
+			"durability": {
+				"min": 0,
+				"ignoreInWater": false
+			},
+			"crafting": {
+				"xp": 1,
+				"bpCraftTime": 2,
+				"minLevelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": [ 0, 0.05 ],
+				"recipe": [
+					{
+						"exact": false,
+						"qty": 30,
+						"type": "PrimalItemResource_RareFlower_C"
+					},
+					{
+						"exact": false,
+						"qty": 20,
+						"type": "PrimalItemResource_RareMushroom_C"
+					},
+					{
+						"exact": false,
+						"qty": 160,
+						"type": "PrimalItemConsumable_Berry_Tintoberry_C"
+					}
+				]
+			},
+			"repair": {
+				"xp": 2,
+				"time": 5,
+				"resourceMult": 0.5
+			},
+			"statEffects": {
+				"health": {
+					"value": 500,
+					"useItemQuality": true,
+					"descriptionIndex": 1,
+					"duration": 20
+				}
+			}
+		},
+		{
 			"name": "Great Elixir",
-			"description": "Heals 500 health in 20 seconds. A good item to use for players or small mounts. Also removes many health-effecting ailments.",
+			"description": "Heals 80 HP pers second for 10 seconds. Recovers 20 food per sec to compensate.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GreatElixir.PrimalItemConsumable_GreatElixir_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/GreatElixir.GreatElixir",
 			"type": "MiscConsumable/Food",
@@ -925,7 +977,7 @@
 		},
 		{
 			"name": "Light Elixir",
-			"description": "Heals 120 health in 10 seconds. A good item to use for players with lower health caps.",
+			"description": "Heals 200 health in 10 seconds. A good item to use for players with lower health caps.Slightly regenerates food to compensate.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_LightElixir.PrimalItemConsumable_LightElixir_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/LightElixir.LightElixir",
 			"type": "MiscConsumable/Food",
@@ -965,19 +1017,11 @@
 				"xp": 2,
 				"time": 5,
 				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"health": {
-					"value": 120,
-					"useItemQuality": true,
-					"descriptionIndex": 1,
-					"duration": 10
-				}
 			}
 		},
 		{
 			"name": "High Elixir",
-			"description": "Heals 30% of health in 30 seconds. A must-have for prolonged combat. Defeat an Ogre, or any sort of Pyrian \"alpha\" creature to unlock this.",
+			"description": "Heals 25% of health over 60 seconds. A must-have for prolonged combat. Defeat an Ogre, or any sort of Pyrian \"alpha\" creature to unlock this.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_MaxElixir.PrimalItemConsumable_MaxElixir_C",
 			"icon": "/Game/Mods/Pyria/CustomIcons/HighElixir.HighElixir",
 			"type": "MiscConsumable/Food",
