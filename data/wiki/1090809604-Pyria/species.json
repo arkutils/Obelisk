@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "327.19.1620578021",
+	"version": "327.19.1621026364",
 	"format": "2",
 	"mod": {
 		"id": "1090809604",
@@ -954,11 +954,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 480 },
+				"walk": { "base": 120, "sprint": 600 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 120, "sprint": 480 },
+				"walk": { "base": 120, "sprint": 600 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -1009,11 +1009,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 480 },
+				"walk": { "base": 120, "sprint": 600 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 120, "sprint": 480 },
+				"walk": { "base": 120, "sprint": 600 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -3008,11 +3008,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 480 },
+				"walk": { "base": 120, "sprint": 600 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 120, "sprint": 480 },
+				"walk": { "base": 120, "sprint": 600 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -3386,11 +3386,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 480 },
+				"walk": { "base": 120, "sprint": 600 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 120, "sprint": 480 },
+				"walk": { "base": 120, "sprint": 600 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -4812,15 +4812,15 @@
 				"isCarnivore"
 			],
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 2000 },
+				"walk": { "base": 700, "sprint": 3500 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 2000 },
+				"walk": { "base": 700, "sprint": 3500 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -4841,6 +4841,53 @@
 		},
 		{
 			"name": "Summoned Dark Mana Reaper Empress",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp_Empress_Avatar.DarkReaper_Character_bp_Empress_Avatar_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Pyria",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 40000,
+			"dragWeight": 99999,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -60,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 1300, "radius": 1800, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 20, "dmg": 1000, "radius": 2400, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 22, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 100, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 100, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "Summoned Dark Mana Reaper Empress",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp_Empress_Controlled.DarkReaper_Character_bp_Empress_Controlled_C",
 			"dinoNameTag": "Xenomorph",
 			"customTag": "Pyria",
@@ -4853,20 +4900,21 @@
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
+				"isAmphibious",
 				"isBigDino",
 				"isBossDino",
 				"isCarnivore"
 			],
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 2000 },
+				"walk": { "base": 700, "sprint": 3500 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 2000 },
+				"walk": { "base": 700, "sprint": 3500 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -6309,7 +6357,55 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 50, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 340, "stamina": 0 }
+					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 340, "stamina": 0 },
+					{ "name": "EE", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			}
+		},
+		{
+			"name": "NERM OVERLORD",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Nerm/Nerm_Character_bp_Meme.Nerm_Character_bp_Meme_C",
+			"dinoNameTag": "Angler",
+			"customTag": "Pyria",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 155,
+			"dragWeight": 60,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"levelCaps": {
+				"maxExperience": 3550010,
+				"maxLevels": 73
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"swim": { "base": 2000 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"swim": { "base": 2000 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 800, "radius": 800, "stamina": 0 },
+					{ "name": "Melee", "interval": 3, "dmg": 500, "radius": 900, "stamina": 0 },
+					{ "name": "Melee", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			}
 		},
