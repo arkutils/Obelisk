@@ -1,6 +1,7 @@
 {
-	"version": "312.29.1488771984",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1488771984",
+	"format": "4",
 	"mod": {
 		"id": "729352919",
 		"tag": "IndomRex",
@@ -11,619 +12,380 @@
 			"name": "CamoSmoke",
 			"description": "",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Comp/PrimalItem_CamoSmoke.PrimalItem_CamoSmoke_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/Test/RepairIcon.RepairIcon",
 			"type": "MiscConsumable/Food",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
 			"folders": [ "Misc" ],
 			"weight": 0,
-			"maxQuantity": 1,
-			"spoilage": { "time": 0.5 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": true
-			},
+			"stackSize": 1,
+			"spoilsIn": 0.5,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Destroy Minions",
 			"description": "",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Comp/PrimalItem_DestroyMinionsIR.PrimalItem_DestroyMinionsIR_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/Test/RepairIcon.RepairIcon",
 			"type": "MiscConsumable/Food",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
 			"folders": [ "Misc" ],
 			"weight": 0,
-			"maxQuantity": 1,
-			"spoilage": { "time": 0.5 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": true
-			},
+			"stackSize": 1,
+			"spoilsIn": 0.5,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Indom Rex Egg",
 			"description": "<RichColor Color=\"1,0.5,0,1\">Eat to fully heal a pet, recharge some stamina and satisfy some hunger.</>",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Items/Eggs/PrimalItemConsumable_Egg_IR.PrimalItemConsumable_Egg_IR_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
 			"icon": "/Game/Mods/IndomRex/IndomRex/Items/Eggs/HUD_DinoEgg_MIC_Inst_IR.HUD_DinoEgg_MIC_Inst_IR",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 2,
-			"maxQuantity": 200,
-			"spoilage": { "time": 8912 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 0.2,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
+			"stackSize": 200,
+			"spoilsIn": 8912,
+			"statEffects": [
+				{
+					"stat": "food", "value": 0.2, "useItemQuality": true,
 					"pctOf": "max",
-					"pctAbsRange": [ 0, 0 ],
-					"duration": 0
+					"pctAbsRange": { "min": 0, "max": 0 }
 				},
-				"health": {
-					"value": 1000000000,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 0
-				},
-				"stamina": {
-					"value": 0.25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
+				{ "stat": "health", "value": 1000000000, "useItemQuality": true },
+				{
+					"stat": "stamina", "value": 0.25, "useItemQuality": true,
 					"pctOf": "max",
-					"pctAbsRange": [ 0, 0 ],
-					"duration": 0
+					"pctAbsRange": { "min": 0, "max": 0 }
 				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.1,
-						"color": [ 0.039237, 0.040069, 0.045, 1 ]
-					},
-					"cyan": {
-						"intensity": 70,
-						"color": [ 0.455, 0.06108, 0, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Baby Indom Rex Egg",
 			"description": "<RichColor Color=\"1,0.5,0,1\">Eat to fully heal a pet, recharge some stamina and satisfy some hunger.</>",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Items/Eggs/PrimalItemConsumable_Egg_IR_Fertilized.PrimalItemConsumable_Egg_IR_Fertilized_C",
+			"parent": "/Game/Mods/IndomRex/IndomRex/Items/Eggs/PrimalItemConsumable_Egg_IR.PrimalItemConsumable_Egg_IR_C",
 			"icon": "/Game/Mods/IndomRex/IndomRex/Items/Eggs/HUD_DinoEgg_MIC_Inst_IR.HUD_DinoEgg_MIC_Inst_IR",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 2,
-			"maxQuantity": 1,
-			"spoilage": { "time": 891200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 0.2,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
+			"stackSize": 1,
+			"spoilsIn": 891200,
+			"statEffects": [
+				{
+					"stat": "food", "value": 0.2, "useItemQuality": true,
 					"pctOf": "max",
-					"pctAbsRange": [ 0, 0 ],
-					"duration": 0
+					"pctAbsRange": { "min": 0, "max": 0 }
 				},
-				"health": {
-					"value": 1000000000,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 0
-				},
-				"stamina": {
-					"value": 0.25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
+				{ "stat": "health", "value": 1000000000, "useItemQuality": true },
+				{
+					"stat": "stamina", "value": 0.25, "useItemQuality": true,
 					"pctOf": "max",
-					"pctAbsRange": [ 0, 0 ],
-					"duration": 0
+					"pctAbsRange": { "min": 0, "max": 0 }
 				}
-			},
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/IndomRex/IndomRex/IndomRex_Character_BP.IndomRex_Character_BP_C",
-				"temperature": [ 45, 46 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.1,
-						"color": [ 0.039237, 0.040069, 0.045, 1 ]
-					},
-					"cyan": {
-						"intensity": 70,
-						"color": [ 0.455, 0.06108, 0, 1 ]
-					}
-				}
+				"temperature": { "min": 45, "max": 46 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Baby Indom Rex Big Egg",
 			"description": "<RichColor Color=\"1,0.5,0,1\">Eat to fully heal a pet, recharge some stamina and satisfy some hunger.</>",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Items/Eggs/PrimalItemConsumable_Egg_IR_FertilizedH.PrimalItemConsumable_Egg_IR_FertilizedH_C",
+			"parent": "/Game/Mods/IndomRex/IndomRex/Items/Eggs/PrimalItemConsumable_Egg_IR.PrimalItemConsumable_Egg_IR_C",
 			"icon": "/Game/Mods/IndomRex/IndomRex/Items/Eggs/HUD_DinoEgg_MIC_Inst_IR.HUD_DinoEgg_MIC_Inst_IR",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 2,
-			"maxQuantity": 1,
-			"spoilage": { "time": 891200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 0.2,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
+			"stackSize": 1,
+			"spoilsIn": 891200,
+			"statEffects": [
+				{
+					"stat": "food", "value": 0.2, "useItemQuality": true,
 					"pctOf": "max",
-					"pctAbsRange": [ 0, 0 ],
-					"duration": 0
+					"pctAbsRange": { "min": 0, "max": 0 }
 				},
-				"health": {
-					"value": 1000000000,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 0
-				},
-				"stamina": {
-					"value": 0.25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
+				{ "stat": "health", "value": 1000000000, "useItemQuality": true },
+				{
+					"stat": "stamina", "value": 0.25, "useItemQuality": true,
 					"pctOf": "max",
-					"pctAbsRange": [ 0, 0 ],
-					"duration": 0
+					"pctAbsRange": { "min": 0, "max": 0 }
 				}
-			},
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/IndomRex/IndomRex/IndomRexH_Character_BP.IndomRexH_Character_BP_C",
-				"temperature": [ 45, 46 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.1,
-						"color": [ 0.039237, 0.040069, 0.045, 1 ]
-					},
-					"cyan": {
-						"intensity": 70,
-						"color": [ 0.455, 0.06108, 0, 1 ]
-					}
-				}
+				"temperature": { "min": 45, "max": 46 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Death",
 			"description": "",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Items/PrimalItem_DeathIR.PrimalItem_DeathIR_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/Test/RepairIcon.RepairIcon",
 			"type": "MiscConsumable/Food",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
 			"folders": [ "Misc" ],
 			"weight": 0,
-			"maxQuantity": 1,
-			"spoilage": { "time": 0.5 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": true
-			},
+			"stackSize": 1,
+			"spoilsIn": 0.5,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Indominus Artifact",
 			"description": "<RichColor Color=\"1,0.5,0,1\">Equip this on a tamed Indom Rex Nemesis to make it stronger. Water retention stat means Damage.</>",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Items/PrimalItem_IndomArtifact.PrimalItem_IndomArtifact_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/Mods/IndomRex/IndomRex/Items/ItemMats/IndomArtifact_Icon.IndomArtifact_Icon",
 			"type": "Equipment/DinoSaddle",
-			"folders": [],
 			"weight": 5,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 3,
-				"minLevelReq": 0,
+				"time": 3,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 3,
-						"type": "PrimalItemConsumable_Egg_IR_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 0,
-				"time": 5,
-				"resourceMult": 1
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 3, "type": "PrimalItemConsumable_Egg_IR_C" } ]
 			}
 		},
 		{
 			"name": "Indom Dino Wiper",
 			"description": "Admin Use to wipe all current existing Wild Indom and Orcs from map.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Items/PrimalItem_IndomDinoWiper.PrimalItem_IndomDinoWiper_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/GPS_Icon.GPS_Icon",
 			"type": "MiscConsumable/Other",
-			"folders": [],
 			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Indom Scanner",
 			"description": "Scan for Wild Indom Nemesis and display the total count. Admin only.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Items/PrimalItem_IndomScanner.PrimalItem_IndomScanner_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/MagnifyingGlass_Icon.MagnifyingGlass_Icon",
 			"type": "MiscConsumable/Other",
-			"folders": [],
 			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Indom Shrine Wiper",
 			"description": "Admin Use to destroy all currently built Indom Shrines from ark.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Items/PrimalItem_IndomShrineWiper.PrimalItem_IndomShrineWiper_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/GPS_Icon.GPS_Icon",
 			"type": "MiscConsumable/Other",
-			"folders": [],
 			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "High Orc Item",
 			"description": "Summon the High Orc.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Orc/PrimalItem_IndomOrcHItem.PrimalItem_IndomOrcHItem_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/Sword_Icon.Sword_Icon",
 			"type": "MiscConsumable/Other",
-			"folders": [],
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
 			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": true
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Orc Item",
 			"description": "Summon the Orc.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Orc/PrimalItem_IndomOrcItem.PrimalItem_IndomOrcItem_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/Sword_Icon.Sword_Icon",
 			"type": "MiscConsumable/Other",
-			"folders": [],
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
 			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": true
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Indom Minion Item",
 			"description": "Summon the Indom Minion.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/PrimalItem_IndomMinionItem.PrimalItem_IndomMinionItem_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/CrystalBallOn_Icon.CrystalBallOn_Icon",
 			"type": "MiscConsumable/Food",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
 			"folders": [ "Misc" ],
 			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": true
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Indom Minion H Item",
 			"description": "Summon the Indom Minion.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/PrimalItem_IndomMinionItemH.PrimalItem_IndomMinionItemH_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/CrystalBallOn_Icon.CrystalBallOn_Icon",
 			"type": "MiscConsumable/Food",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
 			"folders": [ "Misc" ],
 			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": true
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "IndomRex Item",
 			"description": "Summon the Indom Rex Nemesis.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/PrimalItem_IndomRexItem.PrimalItem_IndomRexItem_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/IndomRex/IndomRex/Items/ItemMats/IndomArtifact_Icon.IndomArtifact_Icon",
 			"type": "MiscConsumable/Other",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
 			"folders": [ "Misc" ],
 			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": true
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "IndomRexH Item",
 			"description": "Summon the Indom Rex Nemesis.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/PrimalItem_IndomRexItemH.PrimalItem_IndomRexItemH_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/IndomRex/IndomRex/Items/ItemMats/IndomArtifact_Icon.IndomArtifact_Icon",
 			"type": "MiscConsumable/Other",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
 			"folders": [ "Misc" ],
 			"weight": 0,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": true
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 0.5,
-				"minLevelReq": 0,
+				"time": 0.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Indominus Shrine",
 			"description": "Build this to enable Indominus Rex Nemesis spawns in the wild.",
 			"bp": "/Game/Mods/IndomRex/IndomRex/Shrine/PrimalItemStructure_IndomShrine.PrimalItemStructure_IndomShrine_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Mods/IndomRex/IndomRex/Shrine/IndomShrine_IconIR.IndomShrine_IconIR",
 			"type": "Structure",
-			"folders": [],
 			"weight": 4,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 1.5,
-				"minLevelReq": 0,
+				"time": 1.5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_Metal_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_Stone_C"
-					}
+					{ "qty": 30, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Stone_C" }
 				]
 			},
-			"repair": {
-				"xp": 0,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Mods/IndomRex/IndomRex/Shrine/IndomShrine.IndomShrine_C"
+			"structure": "/Game/Mods/IndomRex/IndomRex/Shrine/IndomShrine.IndomShrine_C"
 		}
 	]
 }

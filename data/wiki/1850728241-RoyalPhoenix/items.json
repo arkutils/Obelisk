@@ -1,6 +1,7 @@
 {
-	"version": "312.29.1567289771",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1567289771",
+	"format": "4",
 	"mod": {
 		"id": "1850728241",
 		"tag": "RoyalPhoenix",
@@ -11,133 +12,64 @@
 			"name": "Fertilized Royal Phoenix Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/RoyalPhoenix/PrimalItemConsumable_Egg_RoyPhoenix_Fertilized.PrimalItemConsumable_Egg_RoyPhoenix_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Argent.PrimalItemConsumable_Egg_Argent_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Argent.HUD_DinoEgg_MIC_Inst_Argent",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/RoyalPhoenix/RPhoenix_character_bp.RPhoenix_character_bp_C",
-				"temperature": [ 12, 13.5 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.420848, 0.8, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 1, 1, 1, 1 ]
-					}
-				}
+				"temperature": { "min": 12, "max": 13.5 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Smelted Metal Ingot",
 			"description": "Although the inventory of a Royal Phoenix cannot cook meat, it can turn raw metal into metal ingots over time!",
 			"bp": "/Game/Mods/RoyalPhoenix/PrimalItemResource_SmeltedMetalIngot.PrimalItemResource_SmeltedMetalIngot_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/MetalIngot_Icon.MetalIngot_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 2,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 5,
-				"bpCraftTime": 3.5,
-				"minLevelReq": 0,
+				"time": 3.5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemResource_Metal_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemResource_Metal_C" } ]
 			}
 		},
 		{
 			"name": "Smelted Scrap Metal Ingot",
 			"description": "Although the inventory of a Royal Phoenix cannot cook meat, it can turn scrap metal into scrap metal ingots over time!",
 			"bp": "/Game/Mods/RoyalPhoenix/PrimalItemResource_SmeltedScrapIngot.PrimalItemResource_SmeltedScrapIngot_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Extinction/Icons/Resources/ScrapMetalIngot_Icon.ScrapMetalIngot_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 2,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 5,
-				"bpCraftTime": 3.5,
-				"minLevelReq": 0,
+				"time": 3.5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemResource_ScrapMetal_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemResource_ScrapMetal_C" } ]
 			}
 		}
 	]

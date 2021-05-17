@@ -1,0 +1,546 @@
+{
+	"title": "Item data for the Wiki",
+	"type": "object",
+	"properties": {
+		"version": {
+			"title": "Version",
+			"description": "Data version of the format <gamemajor>.<gameminor>.<specificversion>, e.g. '306.83.4740398'",
+			"type": "string"
+		},
+		"format": {
+			"title": "Format",
+			"description": "Free-form format identifier, changed only when incompatibilities are introduced",
+			"type": "string"
+		},
+		"mod": {
+			"title": "Mod info",
+			"description": "Source module information",
+			"allOf": [
+				{
+					"$ref": "#/definitions/ModInfo"
+				}
+			]
+		},
+		"items": {
+			"title": "Items",
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Item"
+			}
+		}
+	},
+	"required": [
+		"version",
+		"format",
+		"items"
+	],
+	"additionalProperties": false,
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"definitions": {
+		"ModInfo": {
+			"title": "ModInfo",
+			"type": "object",
+			"properties": {
+				"id": {
+					"title": "Mod ID",
+					"type": "string"
+				},
+				"tag": {
+					"title": "Blueprint tag",
+					"description": "Used in place of the mod ID in blueprint paths",
+					"type": "string"
+				},
+				"title": {
+					"title": "Mod name",
+					"type": "string"
+				}
+			},
+			"required": [
+				"id",
+				"tag",
+				"title"
+			]
+		},
+		"MinMaxRange": {
+			"title": "MinMaxRange",
+			"type": "object",
+			"properties": {
+				"min": {
+					"title": "Min",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"max": {
+					"title": "Max",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				}
+			},
+			"required": [
+				"min",
+				"max"
+			],
+			"additionalProperties": false
+		},
+		"RecipeIngredient": {
+			"title": "RecipeIngredient",
+			"type": "object",
+			"properties": {
+				"exact": {
+					"title": "Exact",
+					"description": "If true, child classes cannot be used in place",
+					"default": false,
+					"type": "boolean"
+				},
+				"qty": {
+					"title": "Base quantity",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"type": {
+					"title": "Item class name",
+					"type": "string"
+				}
+			},
+			"required": [
+				"qty",
+				"type"
+			],
+			"additionalProperties": false
+		},
+		"CraftingData": {
+			"title": "CraftingData",
+			"type": "object",
+			"properties": {
+				"xp": {
+					"title": "Xp",
+					"description": "XP granted per item crafted",
+					"type": "number"
+				},
+				"time": {
+					"title": "Time",
+					"description": "Time it takes to craft a blueprint",
+					"type": "number"
+				},
+				"levelReq": {
+					"title": "Required player level",
+					"type": "integer"
+				},
+				"productCount": {
+					"title": "Productcount",
+					"description": "If zero, the item is likely given via scripts or triggers a specific action (like boss summoners)",
+					"type": "integer"
+				},
+				"skillQualityMult": {
+					"title": "Skillqualitymult",
+					"description": "Min and max multipliers of Crafting Skill's effect on quality",
+					"allOf": [
+						{
+							"$ref": "#/definitions/MinMaxRange"
+						}
+					]
+				},
+				"recipe": {
+					"title": "Recipe",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/RecipeIngredient"
+					}
+				}
+			},
+			"required": [
+				"xp",
+				"time",
+				"levelReq",
+				"productCount",
+				"skillQualityMult",
+				"recipe"
+			],
+			"additionalProperties": false
+		},
+		"RepairData": {
+			"title": "RepairData",
+			"type": "object",
+			"properties": {
+				"xp": {
+					"title": "Xp",
+					"description": "XP granted per item repaired",
+					"type": "number"
+				},
+				"time": {
+					"title": "Time",
+					"description": "Time to repair an item",
+					"type": "number"
+				},
+				"recipe": {
+					"title": "Recipe",
+					"description": "Required ingredients, if different from crafting",
+					"default": [],
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/RecipeIngredient"
+					}
+				}
+			},
+			"required": [
+				"xp",
+				"time"
+			],
+			"additionalProperties": false
+		},
+		"StatEffectData": {
+			"title": "StatEffectData",
+			"type": "object",
+			"properties": {
+				"stat": {
+					"title": "Stat",
+					"type": "string"
+				},
+				"value": {
+					"title": "Value",
+					"description": "Stat value to set/add",
+					"type": "number"
+				},
+				"useItemQuality": {
+					"title": "Useitemquality",
+					"description": "Whether item quality is used",
+					"default": false,
+					"type": "boolean"
+				},
+				"pctOf": {
+					"title": "Pctof",
+					"description": "If set, this effect's value is a percentage of current/max stat value.",
+					"type": "string"
+				},
+				"pctAbsRange": {
+					"$ref": "#/definitions/MinMaxRange"
+				},
+				"setValue": {
+					"title": "Setvalue",
+					"description": "Whether the current stat value is overriden by this effect's value.",
+					"default": false,
+					"type": "boolean"
+				},
+				"setAddValue": {
+					"title": "Setaddvalue",
+					"description": "Whether this effect's is instantly added to current stat value.",
+					"default": false,
+					"type": "boolean"
+				},
+				"forceUseOnDino": {
+					"title": "Forceuseondino",
+					"description": "Whether can be used on dinos",
+					"default": false,
+					"type": "boolean"
+				},
+				"allowWhenFull": {
+					"title": "Allowwhenfull",
+					"description": "Whether allowed when stat is full",
+					"default": true,
+					"type": "boolean"
+				},
+				"qualityMult": {
+					"title": "Qualitymult",
+					"description": "Item quality effect (addition)",
+					"default": 1.0,
+					"type": "number"
+				},
+				"duration": {
+					"title": "Duration",
+					"description": "Effect duration in seconds",
+					"default": 0,
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				}
+			},
+			"required": [
+				"stat",
+				"value"
+			],
+			"additionalProperties": false
+		},
+		"EggData": {
+			"title": "EggData",
+			"type": "object",
+			"properties": {
+				"dinoClass": {
+					"title": "Dinoclass",
+					"description": "Dino to be spawned",
+					"type": "string"
+				},
+				"temperature": {
+					"title": "Temperature",
+					"description": "Hatching temperature range",
+					"allOf": [
+						{
+							"$ref": "#/definitions/MinMaxRange"
+						}
+					]
+				}
+			},
+			"required": [
+				"dinoClass",
+				"temperature"
+			],
+			"additionalProperties": false
+		},
+		"CookingIngredientData": {
+			"title": "CookingIngredientData",
+			"type": "object",
+			"properties": {
+				"health": {
+					"title": "Health",
+					"description": "Health increased per item",
+					"default": 0,
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"stamina": {
+					"title": "Stamina",
+					"description": "Stamina increased per item",
+					"default": 0,
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"food": {
+					"title": "Food",
+					"description": "Food increased per item",
+					"default": 0,
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"weight": {
+					"title": "Weight",
+					"description": "Weight increased per item",
+					"default": 0,
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"water": {
+					"title": "Water",
+					"description": "Water increased per item in a drink",
+					"default": 0,
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"Item": {
+			"title": "Item",
+			"type": "object",
+			"properties": {
+				"name": {
+					"title": "Name",
+					"type": "string"
+				},
+				"description": {
+					"title": "Description",
+					"type": "string"
+				},
+				"bp": {
+					"title": "Blueprint path",
+					"type": "string"
+				},
+				"parent": {
+					"title": "Parent",
+					"description": "Full path to the parent class of this item",
+					"type": "string"
+				},
+				"icon": {
+					"title": "Icon",
+					"description": "Blueprint path pointing to either a texture or material instance.",
+					"type": "string"
+				},
+				"type": {
+					"title": "Type",
+					"type": "string"
+				},
+				"flags": {
+					"title": "Flags",
+					"description": "Relevant boolean flags that are True for this item",
+					"default": [],
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"folders": {
+					"title": "Crafting station folder",
+					"description": "These are the folders in a crafting station where this item's blueprint is shown.",
+					"default": [],
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"weight": {
+					"title": "Weight",
+					"description": "Weight of a single item",
+					"type": "number"
+				},
+				"stackSize": {
+					"title": "Stacksize",
+					"type": "integer"
+				},
+				"spoilsIn": {
+					"title": "Spoilsin",
+					"description": "Spoilage time in seconds",
+					"type": "number"
+				},
+				"spoilsTo": {
+					"title": "Spoilsto",
+					"description": "Blueprint path of the spoilage product",
+					"type": "string"
+				},
+				"durability": {
+					"title": "Durability",
+					"description": "Durability at 100% quality",
+					"type": "number"
+				},
+				"crafting": {
+					"$ref": "#/definitions/CraftingData"
+				},
+				"repair": {
+					"$ref": "#/definitions/RepairData"
+				},
+				"structure": {
+					"title": "Structure",
+					"description": "Blueprint path of the structure created by this item (can by looked up in structures.json).",
+					"type": "string"
+				},
+				"weapon": {
+					"title": "Weapon",
+					"description": "Blueprint path of the weapon created by this item (can by looked up in weapons.json).",
+					"type": "string"
+				},
+				"statEffects": {
+					"title": "Stateffects",
+					"description": "Stat changes caused by consumption of the item",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/StatEffectData"
+					}
+				},
+				"egg": {
+					"$ref": "#/definitions/EggData"
+				},
+				"cooking": {
+					"$ref": "#/definitions/CookingIngredientData"
+				}
+			},
+			"required": [
+				"bp"
+			],
+			"additionalProperties": false
+		}
+	}
+}

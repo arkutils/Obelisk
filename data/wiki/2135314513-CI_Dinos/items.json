@@ -1,6 +1,7 @@
 {
-	"version": "324.18.1614996923",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1614996923",
+	"format": "4",
 	"mod": {
 		"id": "2135314513",
 		"tag": "CI_Dinos",
@@ -11,2004 +12,898 @@
 			"name": "Crystal Crafter",
 			"description": "Place materials along with blueprints in this to create certain advanced forged items.",
 			"bp": "/Game/Mods/CI_Dinos/CraftingTable/PrimalItemStructure_CrystalCrafter.PrimalItemStructure_CrystalCrafter_C",
+			"parent": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemStructure_B_CI.PrimalItemStructure_B_CI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/CI_Crafter.CI_Crafter",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 6.25,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 5,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Stone_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_Crystal_C"
-					}
+					{ "qty": 5, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Crystal_C" }
 				]
 			},
-			"repair": {
-				"xp": 6.25,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Mods/CI_Dinos/CraftingTable/CystalIsle_WorkBenchBP.CystalIsle_WorkBenchBP_C"
+			"structure": "/Game/Mods/CI_Dinos/CraftingTable/CystalIsle_WorkBenchBP.CystalIsle_WorkBenchBP_C"
 		},
 		{
 			"name": "Crystal Whelp Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Crystal_Dragons/Tiger/Egg/PrimalItemConsumable_Egg_Whelp.PrimalItemConsumable_Egg_Whelp_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Small.PrimalItemConsumable_Egg_Small_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Dimp.HUD_DinoEgg_MIC_Inst_Dimp",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"health": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"stamina": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.025, 0.025, 0.025, 1 ]
-					},
-					"cyan": {
-						"intensity": 0.6,
-						"color": [ 0.02, 0.9, 1, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Crystal Whelp Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Crystal_Dragons/Tiger/Egg/PrimalItemConsumable_Egg_Whelp_Fertilized.PrimalItemConsumable_Egg_Whelp_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Dimorph.PrimalItemConsumable_Egg_Dimorph_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Dimp.HUD_DinoEgg_MIC_Inst_Dimp",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"health": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"stamina": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Crystal_Dragons/Crystal_Whelp_BP.Crystal_Whelp_BP_C",
-				"temperature": [ 35, 38 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.025, 0.025, 0.025, 1 ]
-					},
-					"cyan": {
-						"intensity": 0.6,
-						"color": [ 0.02, 0.9, 1, 1 ]
-					}
-				}
+				"temperature": { "min": 35, "max": 38 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Unka Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Crystal_Dragons/unka/Eggs/Unka/PrimalItemConsumable_Egg_Fertilized_Unka.PrimalItemConsumable_Egg_Fertilized_Unka_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Wyvern_Fertilized.PrimalItemConsumable_Egg_Wyvern_Fertilized_C",
 			"icon": "/Game/Mods/CI_Dinos/Crystal_Dragons/Unka/Eggs/UnkaEgg_Icon.UnkaEgg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Crystal_Dragons/Crystal_Unka_BP.Crystal_Unka_BP_C",
-				"temperature": [ 80, 90 ]
+				"temperature": { "min": 80, "max": 90 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Ankylo Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/PrimalItemConsumable_Egg_CI_Ankylo.PrimalItemConsumable_Egg_CI_Ankylo_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Medium.PrimalItemConsumable_Egg_Medium_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/Egg/HUD_DinoEgg_MIC_Inst_Ankylo_CI.HUD_DinoEgg_MIC_Inst_Ankylo_CI",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"health": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"stamina": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.221126, 0.283978, 0.7, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.680939, 0.828793, 1, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Ankylo Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/PrimalItemConsumable_Egg_CI_Ankylo_Fertilized.PrimalItemConsumable_Egg_CI_Ankylo_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Ankylo.PrimalItemConsumable_Egg_Ankylo_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/Egg/HUD_DinoEgg_MIC_Inst_Ankylo_CI.HUD_DinoEgg_MIC_Inst_Ankylo_CI",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"health": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"stamina": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/Ankylo/CrystalAnkylo_Character_BP.CrystalAnkylo_Character_BP_C",
-				"temperature": [ 16, 20 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.221126, 0.283978, 0.7, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.680939, 0.828793, 1, 1 ]
-					}
-				}
+				"temperature": { "min": 16, "max": 20 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Argentavis Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Argent/Egg/PrimalItemConsumable_Egg_Argent_CI.PrimalItemConsumable_Egg_Argent_CI_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Large.PrimalItemConsumable_Egg_Large_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Argent/Egg/HUD_DinoEgg_MIC_Inst_Argent_CI.HUD_DinoEgg_MIC_Inst_Argent_CI",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.37, 0.20521, 0.077115, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.5, 0.75, 0.05, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Argentavis Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Argent/Egg/PrimalItemConsumable_Egg_Argent_Fertilized_CI.PrimalItemConsumable_Egg_Argent_Fertilized_CI_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Argent.PrimalItemConsumable_Egg_Argent_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Argent/Egg/HUD_DinoEgg_MIC_Inst_Argent_CI.HUD_DinoEgg_MIC_Inst_Argent_CI",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/Argent/Crystal_Argent_Character_BP.Crystal_Argent_Character_BP_C",
-				"temperature": [ 12, 13.5 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.37, 0.20521, 0.077115, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.5, 0.75, 0.05, 1 ]
-					}
-				}
+				"temperature": { "min": 12, "max": 13.5 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Crystal Deinonychus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/PrimalItemConsumable_Egg_CrystalDein.PrimalItemConsumable_Egg_CrystalDein_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Small.PrimalItemConsumable_Egg_Small_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/Egg/HUD_DinoEgg_MIC_Inst_CrystalDeinonychus.HUD_DinoEgg_MIC_Inst_CrystalDeinonychus",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 7,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.2,
-						"color": [ 0, 0, 0, 1 ]
-					},
-					"cyan": {
-						"intensity": 3,
-						"color": [ 1, 0, 0.018187, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Crystal Deinonychus Egg",
 			"description": "",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/PrimalItemConsumable_Egg_CrystalDeinonychus_Fertilized.PrimalItemConsumable_Egg_CrystalDeinonychus_Fertilized_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Special.PrimalItemConsumable_Egg_Special_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/Egg/HUD_DinoEgg_MIC_Inst_CrystalDeinonychus.HUD_DinoEgg_MIC_Inst_CrystalDeinonychus",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 6,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/Deinonychus/CrystalDeinonychus_Character_BP.CrystalDeinonychus_Character_BP_C",
-				"temperature": [ 80, 90 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.2,
-						"color": [ 0, 0, 0, 1 ]
-					},
-					"cyan": {
-						"intensity": 3,
-						"color": [ 1, 0, 0.018187, 1 ]
-					}
-				}
+				"temperature": { "min": 80, "max": 90 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Crystal Magmasaur Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/LavaLizard/PrimalItemConsumable_Egg_LavaLizard_Fertilized.PrimalItemConsumable_Egg_LavaLizard_Fertilized_C",
+			"parent": "/Game/Genesis/Dinos/Cherufe/PrimalItemConsumable_Egg_Cherufe.PrimalItemConsumable_Egg_Cherufe_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/LavaLizard/Egg/Item_Lava_Egg_Icon.Item_Lava_Egg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/LavaLizard/CrystalLizard_Character_BP.CrystalLizard_Character_BP_C",
-				"temperature": [ 90, 110 ]
+				"temperature": { "min": 90, "max": 110 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Moth Crystal Egg",
 			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Moth/Egg/PrimalItemConsumable_Egg_CI_Moth.PrimalItemConsumable_Egg_CI_Moth_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Moth/Egg/Moth_Egg.Moth_Egg",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"health": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"stamina": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Crystal Moth Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Moth/Egg/PrimalItemConsumable_Egg_CI_Moth_Fertilized.PrimalItemConsumable_Egg_CI_Moth_Fertilized_C",
-			"icon": null,
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Dimorph.PrimalItemConsumable_Egg_Dimorph_C",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"health": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"stamina": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/Moth/Crystal_Moth_BP.Crystal_Moth_BP_C",
-				"temperature": [ 35, 38 ]
+				"temperature": { "min": 35, "max": 38 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Crystal Drake Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/RockDrake/PrimalItemConsumable_Egg_CrystalDrake_Fertilized.PrimalItemConsumable_Egg_CrystalDrake_Fertilized_C",
+			"parent": "/Game/Aberration/Dinos/RockDrake/PrimalItemConsumable_Egg_RockDrake.PrimalItemConsumable_Egg_RockDrake_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/RockDrake/Egg/CI_DrakeEgg_Icon.CI_DrakeEgg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/RockDrake/CrystalDrake_Character_BP.CrystalDrake_Character_BP_C",
-				"temperature": [ -90, -80 ]
+				"temperature": { "min": -90, "max": -80 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Crystal Basilisk Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Snake/PrimalItemConsumable_Egg_CrystalBasilisk_Fertilized.PrimalItemConsumable_Egg_CrystalBasilisk_Fertilized_C",
+			"parent": "/Game/Aberration/Dinos/RockDrake/PrimalItemConsumable_Egg_RockDrake.PrimalItemConsumable_Egg_RockDrake_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Snake/Egg/CI_BasiliEgg_Icon.CI_BasiliEgg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/Snake/Crystal_Basi_BP.Crystal_Basi_BP_C",
-				"temperature": [ 0, 0 ]
+				"temperature": { "min": 0, "max": 0 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Crystal Snow Owl Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/PrimalItemConsumable_Egg_CrystalOwl.PrimalItemConsumable_Egg_CrystalOwl_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Large.PrimalItemConsumable_Egg_Large_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/Egg/HUD_DinoEgg_MIC_Inst_CrystalOwl.HUD_DinoEgg_MIC_Inst_CrystalOwl",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.62145, 0.923025, 1, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.5589, 0.365, 1, 500 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Crystal Snow Owl Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/PrimalItemConsumable_Egg_CrystalOwl_Fertilized.PrimalItemConsumable_Egg_CrystalOwl_Fertilized_C",
+			"parent": "/Game/Extinction/Dinos/Owl/PrimalItemConsumable_Egg_Owl.PrimalItemConsumable_Egg_Owl_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/Egg/HUD_DinoEgg_MIC_Inst_CrystalOwl.HUD_DinoEgg_MIC_Inst_CrystalOwl",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/SnowOwl/Crystal_Owl_Character_BP.Crystal_Owl_Character_BP_C",
-				"temperature": [ 12, 13.5 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.62145, 0.923025, 1, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.5589, 0.365, 1, 500 ]
-					}
-				}
+				"temperature": { "min": 12, "max": 13.5 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Crystal Stygimoloch Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Stygimoloch/Egg/PrimalItemConsumable_Egg_Stygi.PrimalItemConsumable_Egg_Stygi_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Small.PrimalItemConsumable_Egg_Small_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Stygimoloch/Egg/HUD_DinoEgg_MIC_Inst_Stygi.HUD_DinoEgg_MIC_Inst_Stygi",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 7,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.195, 0, 0.007327, 1 ]
-					},
-					"cyan": {
-						"intensity": 4,
-						"color": [ 0.505, 0.307451, 0, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Crystal Stygimoloch Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Stygimoloch/Egg/PrimalItemConsumable_Egg_Stygi_Fertilized.PrimalItemConsumable_Egg_Stygi_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Pachy.PrimalItemConsumable_Egg_Pachy_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Crystal/Stygimoloch/Egg/HUD_DinoEgg_MIC_Inst_Stygi.HUD_DinoEgg_MIC_Inst_Stygi",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/Stygimoloch/Crystal_Styg_Character_BP.Crystal_Styg_Character_BP_C",
-				"temperature": [ 24, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.195, 0, 0.007327, 1 ]
-					},
-					"cyan": {
-						"intensity": 4,
-						"color": [ 0.505, 0.307451, 0, 1 ]
-					}
-				}
+				"temperature": { "min": 24, "max": 28 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Crystal Therizino Egg",
 			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Theri/Egg/PrimalItemConsumable_Egg_CrystalTherizino.PrimalItemConsumable_Egg_CrystalTherizino_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_XtraLarge.PrimalItemConsumable_Egg_XtraLarge_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Theirzino.HUD_DinoEgg_MIC_Inst_Theirzino",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 2,
-						"color": [ 0.035, 0.035, 0.035, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.207843, 0.168627, 0.243137, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Crystal Fertilized Therizino Egg",
 			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Theri/Egg/PrimalItemConsumable_Egg_CrystalTherizino_Fertilized.PrimalItemConsumable_Egg_CrystalTherizino_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Therizino.PrimalItemConsumable_Egg_Therizino_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Theirzino.HUD_DinoEgg_MIC_Inst_Theirzino",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Crystal/Theri/Crystal_Theri_BP.Crystal_Theri_BP_C",
-				"temperature": [ 26, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 2,
-						"color": [ 0.035, 0.035, 0.035, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.207843, 0.168627, 0.243137, 1 ]
-					}
-				}
+				"temperature": { "min": 26, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Grand Embertross Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/PrimalItemConsumable_Egg_Ember.PrimalItemConsumable_Egg_Ember_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Large.PrimalItemConsumable_Egg_Large_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/HUD_DinoEgg_MIC_Inst_Ember.HUD_DinoEgg_MIC_Inst_Ember",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 50, 5.955369, 0.692299, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 50, 2.335891, 0.692299, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Grand Embertross Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/PrimalItemConsumable_Egg_Ember_Fertilized.PrimalItemConsumable_Egg_Ember_Fertilized_C",
-			"icon": null,
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Argent.PrimalItemConsumable_Egg_Argent_C",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Variants/EmberToss/GrandEmbertross_F_Character_BP.GrandEmbertross_F_Character_BP_C",
-				"temperature": [ 12, 13.5 ]
+				"temperature": { "min": 12, "max": 13.5 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Ember Yuty Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/Yuty/Egg/PrimalItemConsumable_Egg_EmberYuty.PrimalItemConsumable_Egg_EmberYuty_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Special.PrimalItemConsumable_Egg_Special_C",
 			"icon": "/Game/Mods/CI_Dinos/Dinos_Variants/Yuty/Egg/Item_EmberYuty_Egg_Icon.Item_EmberYuty_Egg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 15,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Ember Yuty Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Variants/Yuty/Egg/PrimalItemConsumable_Egg_EmberYuty_Fertilized.PrimalItemConsumable_Egg_EmberYuty_Fertilized_C",
-			"icon": null,
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Yuty.PrimalItemConsumable_Egg_Yuty_C",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 15,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/CI_Dinos/Dinos_Variants/Yuty/EmberYuty_Character_BP.EmberYuty_Character_BP_C",
-				"temperature": [ 32, 34 ]
+				"temperature": { "min": 32, "max": 34 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Faceted Crystal",
 			"description": "This crystal has been polished naturally and is extra tastey to the Crystal \nDinos.",
 			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_FacetedCrystalCI.PrimalItemConsumable_FacetedCrystalCI_C",
+			"parent": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemConsumableEatable_CI.PrimalItemConsumableEatable_CI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/FacetedCrystal.FacetedCrystal",
 			"type": "MiscConsumable/Food",
-			"folders": [],
 			"weight": 0.1,
-			"maxQuantity": 20,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 20,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemConsumable_RoughCrystalCI_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					}
+					{ "qty": 10, "type": "PrimalItemConsumable_RoughCrystalCI_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
 			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 10,
-					"useItemQuality": true,
-					"descriptionIndex": 2,
-					"duration": 2
-				},
-				"health": {
-					"value": -5,
-					"useItemQuality": true,
-					"descriptionIndex": 3,
-					"duration": 1.25
-				}
-			}
+			"statEffects": [
+				{ "stat": "food", "value": 10, "useItemQuality": true, "duration": 2 },
+				{ "stat": "health", "value": -5, "useItemQuality": true, "duration": 1.25 }
+			]
 		},
 		{
 			"name": "Prime Crystal",
 			"description": "This crystal pulses with primal energy and is the Crystal Dinos favorite Food.",
 			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_PrimalCrystalCI.PrimalItemConsumable_PrimalCrystalCI_C",
+			"parent": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemConsumableEatable_CI.PrimalItemConsumableEatable_CI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/Prime_Crystal.Prime_Crystal",
 			"type": "MiscConsumable/Food",
-			"folders": [],
 			"weight": 0.1,
-			"maxQuantity": 20,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 20,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 15,
-						"type": "PrimalItemResource_Gem_BioLum_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemConsumable_RoughCrystalCI_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					}
+					{ "qty": 15, "type": "PrimalItemResource_Gem_BioLum_C" },
+					{ "qty": 20, "type": "PrimalItemConsumable_RoughCrystalCI_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
 			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 10,
-					"useItemQuality": true,
-					"descriptionIndex": 2,
-					"duration": 2
-				}
-			}
+			"statEffects": [ { "stat": "food", "value": 10, "useItemQuality": true, "duration": 2 } ]
 		},
 		{
 			"name": "Pure Crystal",
 			"description": "This crystal is pure and one of the treats to feed a Crystal Dinos.",
 			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_PureCrystalCI.PrimalItemConsumable_PureCrystalCI_C",
+			"parent": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemConsumableEatable_CI.PrimalItemConsumableEatable_CI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/PureCrystal.PureCrystal",
 			"type": "MiscConsumable/Food",
-			"folders": [],
 			"weight": 0.1,
-			"maxQuantity": 20,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 20,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 5,
-						"type": "PrimalItemConsumable_RoughCrystalCI_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					}
+					{ "qty": 5, "type": "PrimalItemConsumable_RoughCrystalCI_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
 			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 10,
-					"useItemQuality": true,
-					"descriptionIndex": 2,
-					"duration": 2
-				},
-				"health": {
-					"value": -5,
-					"useItemQuality": true,
-					"descriptionIndex": 3,
-					"duration": 1.25
-				}
-			}
+			"statEffects": [
+				{ "stat": "food", "value": 10, "useItemQuality": true, "duration": 2 },
+				{ "stat": "health", "value": -5, "useItemQuality": true, "duration": 1.25 }
+			]
 		},
 		{
 			"name": "Refined Crystal",
 			"description": "This crystal has been refined over time and can make a treat for the Crystal Dinos.",
 			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_RefinedCrystalCI.PrimalItemConsumable_RefinedCrystalCI_C",
+			"parent": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemConsumableEatable_CI.PrimalItemConsumableEatable_CI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/RefinedCrystal.RefinedCrystal",
 			"type": "MiscConsumable/Food",
-			"folders": [],
 			"weight": 0.1,
-			"maxQuantity": 20,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 20,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 15,
-						"type": "PrimalItemConsumable_RoughCrystalCI_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					}
+					{ "qty": 15, "type": "PrimalItemConsumable_RoughCrystalCI_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
 			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 10,
-					"useItemQuality": true,
-					"descriptionIndex": 2,
-					"duration": 2
-				},
-				"health": {
-					"value": -5,
-					"useItemQuality": true,
-					"descriptionIndex": 3,
-					"duration": 1.25
-				}
-			}
+			"statEffects": [
+				{ "stat": "food", "value": 10, "useItemQuality": true, "duration": 2 },
+				{ "stat": "health", "value": -5, "useItemQuality": true, "duration": 1.25 }
+			]
 		},
 		{
 			"name": "Rough Crystal",
 			"description": "This crystal makes for a tasty treat for Crystal Dinos.",
 			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_RoughCrystalCI.PrimalItemConsumable_RoughCrystalCI_C",
+			"parent": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemConsumableEatable_CI.PrimalItemConsumableEatable_CI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/RoughCrystal.RoughCrystal",
 			"type": "MiscConsumable/Food",
-			"folders": [],
 			"weight": 0.1,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 5,
-						"type": "PrimalItemResource_Crystal_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
 				"time": 5,
-				"resourceMult": 0.5
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 5, "type": "PrimalItemResource_Crystal_C" } ]
 			},
-			"statEffects": {
-				"food": {
-					"value": 10,
-					"useItemQuality": true,
-					"descriptionIndex": 2,
-					"duration": 2
-				},
-				"health": {
-					"value": -5,
-					"useItemQuality": true,
-					"descriptionIndex": 3,
-					"duration": 1.25
-				}
-			}
+			"statEffects": [
+				{ "stat": "food", "value": 10, "useItemQuality": true, "duration": 2 },
+				{ "stat": "health", "value": -5, "useItemQuality": true, "duration": 1.25 }
+			]
 		},
 		{
 			"name": "Briar Thorn",
 			"description": "A thick, sharp thorn that the liquefied creatures greatly enjoy.",
 			"bp": "/Game/Mods/CI_Dinos/Resources/PrimalItemConsumable_ThornCI.PrimalItemConsumable_ThornCI_C",
+			"parent": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemConsumableEatable_CI.PrimalItemConsumableEatable_CI_C",
 			"icon": "/Game/Mods/CI_Dinos/Assets/Textures/CI_Thorn_Icon.CI_Thorn_Icon",
 			"type": "MiscConsumable/Food",
-			"folders": [],
 			"weight": 0.1,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 125,
-						"type": "PrimalItemResource_ChitinOrKeratin_C"
-					},
-					{
-						"exact": false,
-						"qty": 35,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
 				"time": 5,
-				"resourceMult": 0.5
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 125, "type": "PrimalItemResource_ChitinOrKeratin_C" },
+					{ "qty": 35, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
 			}
 		},
 		{
 			"name": "Generic Consumable",
-			"bp": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemConsumableEatable_CI.PrimalItemConsumableEatable_CI_C"
+			"bp": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemConsumableEatable_CI.PrimalItemConsumableEatable_CI_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C"
 		},
 		{
 			"name": "Generic Consumable",
-			"bp": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemStructure_B_CI.PrimalItemStructure_B_CI_C"
+			"bp": "/Game/Mods/CI_Dinos/_BaseBps/PrimalItemStructure_B_CI.PrimalItemStructure_B_CI_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C"
 		},
 		{
 			"name": "Indominus Rex Saddle",
 			"description": "Equip a Indominus Rex with this to ride it.",
 			"bp": "/Game/Mods/CI_Dinos/_Saddles/PrimalItemArmor_CI_Generic.PrimalItemArmor_CI_Generic_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 303,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 680,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 120,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 680, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 120, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 303,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Crystal Deino Saddle",
 			"description": "Equip a Deinonychus with this to ride it.",
 			"bp": "/Game/Mods/CI_Dinos/_Saddles/PrimalItemArmor_CrystalDeino_Saddle.PrimalItemArmor_CrystalDeino_Saddle_C",
+			"parent": "/Game/Mods/CI_Dinos/_Saddles/PrimalItemArmor_CI_Generic.PrimalItemArmor_CI_Generic_C",
 			"icon": "/Game/Valguero/Icons/Saddles/HUD_DeinonychusSaddle_Icon_Colorize_MIC.HUD_DeinonychusSaddle_Icon_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 32,
+				"time": 10,
+				"levelReq": 32,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 110,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 65,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 110, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 65, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Embertross Saddle",
 			"description": "Equip a Embertross with this to ride it.",
 			"bp": "/Game/Mods/CI_Dinos/_Saddles/PrimalItemArmor_EmbertrossSaddle.PrimalItemArmor_EmbertrossSaddle_C",
+			"parent": "/Game/Mods/CI_Dinos/_Saddles/PrimalItemArmor_CI_Generic.PrimalItemArmor_CI_Generic_C",
 			"icon": "/Game/PrimalEarth/Dinos/Argentavis/Saddle/HUD_ArgentavisSaddle_Colorize_MIC.HUD_ArgentavisSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 72.4,
-				"bpCraftTime": 10,
-				"minLevelReq": 70,
+				"time": 10,
+				"levelReq": 70,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 185,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_ChitinOrKeratin_C"
-					}
+					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 185, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 150, "type": "PrimalItemResource_ChitinOrKeratin_C" }
 				]
-			},
-			"repair": {
-				"xp": 72.4,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Indominus Rex Saddle",
 			"description": "Equip a Indominus Rex with this to ride it.",
 			"bp": "/Game/Mods/CI_Dinos/_Saddles/PrimalItemArmor_Liq_IndomSaddle.PrimalItemArmor_Liq_IndomSaddle_C",
+			"parent": "/Game/Mods/CI_Dinos/_Saddles/PrimalItemArmor_CI_Generic.PrimalItemArmor_CI_Generic_C",
 			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 303,
-				"bpCraftTime": 10,
-				"minLevelReq": 97,
+				"time": 10,
+				"levelReq": 97,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 680,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 120,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 680, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 120, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 303,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		}
 	]

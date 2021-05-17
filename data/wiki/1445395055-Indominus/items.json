@@ -1,6 +1,7 @@
 {
-	"version": "312.29.1557285101",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1557285101",
+	"format": "4",
 	"mod": {
 		"id": "1445395055",
 		"tag": "Indominus",
@@ -11,574 +12,262 @@
 			"name": "Indominus Rex Saddle",
 			"description": "Equip an Indominus Rex with this to ride it.",
 			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemArmor_IndominusSaddle.PrimalItemArmor_IndominusSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Megalosaurus/Saddle/HUD_MegaloSaddle_Colorize_MIC.HUD_MegaloSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 400,
-				"bpCraftTime": 13,
-				"minLevelReq": 0,
+				"time": 13,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 680,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 120,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 680, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 120, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 400,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Domination Rex Egg",
 			"description": "The unsuccessful, engineered Egg of an Indominus Rex",
 			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex.PrimalItemConsumable_Egg_IndominusRex_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
 			"icon": "/Game/Mods/Indominus/Dino/Egg/HUD_IndomEgg_MIC.HUD_IndomEgg_MIC",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 35,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.6674, 0.71, 0.71, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.94, 1, 1, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Domination Rex Egg",
 			"description": "The engineered Egg of a Domination Rex...",
 			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized.PrimalItemConsumable_Egg_IndominusRex_Fertilized_C",
+			"parent": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex.PrimalItemConsumable_Egg_IndominusRex_C",
 			"icon": "/Game/Mods/Indominus/Dino/Egg/HUD_IndomEgg_MIC.HUD_IndomEgg_MIC",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 35,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 20,
-				"minLevelReq": 0,
+				"time": 20,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ApexDrop_AlphaRex_C"
-					},
-					{
-						"exact": false,
-						"qty": 3,
-						"type": "PrimalItemResource_ApexDrop_AlphaRaptor_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_11_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_12_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_01_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Element_C"
-					}
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_AlphaRex_C" },
+					{ "qty": 3, "type": "PrimalItemResource_ApexDrop_AlphaRaptor_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_11_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_12_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Element_C" }
 				]
 			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/Indominus/Dino/Indominus_Character_Dud_BP.Indominus_Character_Dud_BP_C",
-				"temperature": [ 43, 44 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.6674, 0.71, 0.71, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.94, 1, 1, 1 ]
-					}
-				}
+				"temperature": { "min": 43, "max": 44 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Domination Rex Egg",
 			"description": "The engineered Egg of a Domination Rex...",
 			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized_AB.PrimalItemConsumable_Egg_IndominusRex_Fertilized_AB_C",
+			"parent": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized.PrimalItemConsumable_Egg_IndominusRex_Fertilized_C",
 			"icon": "/Game/Mods/Indominus/Dino/Egg/HUD_IndomEgg_AB_MIC.HUD_IndomEgg_AB_MIC",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 35,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 20,
-				"minLevelReq": 0,
+				"time": 20,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ApexDrop_ReaperBarb_C"
-					},
-					{
-						"exact": false,
-						"qty": 3,
-						"type": "PrimalItemResource_ApexDrop_Basilisk_Alpha_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifactAB_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifactAB_2_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifactAB_3_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Element_C"
-					}
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_ReaperBarb_C" },
+					{ "qty": 3, "type": "PrimalItemResource_ApexDrop_Basilisk_Alpha_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactAB_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactAB_2_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactAB_3_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Element_C" }
 				]
 			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/Indominus/Dino/Indominus_Character_Dud_AB_BP.Indominus_Character_Dud_AB_BP_C",
-				"temperature": [ 43, 44 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.025, 0.025, 0.025, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0, 1, 1, 1 ]
-					}
-				}
+				"temperature": { "min": 43, "max": 44 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Domination Rex Egg",
 			"description": "The engineered Egg of a Domination Rex...",
 			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized_EXT.PrimalItemConsumable_Egg_IndominusRex_Fertilized_EXT_C",
+			"parent": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized.PrimalItemConsumable_Egg_IndominusRex_Fertilized_C",
 			"icon": "/Game/Mods/Indominus/Dino/Egg/HUD_IndomEgg_EXT_MIC.HUD_IndomEgg_EXT_MIC",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 35,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 20,
-				"minLevelReq": 0,
+				"time": 20,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ApexDrop_AlphaRex_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_RareDrop_CorruptHeart_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_Extinction_DesertKaiju_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_Extinction_ForestKaiju_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_Extinction_IceKaiju_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Element_C"
-					}
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_AlphaRex_C" },
+					{ "qty": 30, "type": "PrimalItemResource_RareDrop_CorruptHeart_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_Extinction_DesertKaiju_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_Extinction_ForestKaiju_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_Extinction_IceKaiju_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Element_C" }
 				]
 			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/Indominus/Dino/Indominus_Character_Dud_EXT_BP.Indominus_Character_Dud_EXT_BP_C",
-				"temperature": [ 43, 44 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.22, 0.152936, 0.0836, 1 ]
-					},
-					"cyan": {
-						"intensity": 3.525364,
-						"color": [ 0.142379, 0.80463, 0.845, 1 ]
-					}
-				}
+				"temperature": { "min": 43, "max": 44 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Domination Rex Egg",
 			"description": "The engineered Egg of a Domination Rex...",
 			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized_MegaDrop.PrimalItemConsumable_Egg_IndominusRex_Fertilized_MegaDrop_C",
+			"parent": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized.PrimalItemConsumable_Egg_IndominusRex_Fertilized_C",
 			"icon": "/Game/Mods/Indominus/Dino/Egg/HUD_IndomEgg_MIC.HUD_IndomEgg_MIC",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 35,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 20,
-				"minLevelReq": 0,
+				"time": 20,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ApexDrop_AlphaRex_C"
-					},
-					{
-						"exact": false,
-						"qty": 3,
-						"type": "PrimalItemResource_ApexDrop_AlphaRaptor_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_11_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_12_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifact_01_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Element_C"
-					}
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_AlphaRex_C" },
+					{ "qty": 3, "type": "PrimalItemResource_ApexDrop_AlphaRaptor_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_11_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_12_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Element_C" }
 				]
 			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/Indominus/Dino/Indominus_Character_Extinction_BP.Indominus_Character_Extinction_BP_C",
-				"temperature": [ 43, 44 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.6674, 0.71, 0.71, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.94, 1, 1, 1 ]
-					}
-				}
+				"temperature": { "min": 43, "max": 44 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Domination Rex Egg",
 			"description": "The engineered Egg of a Domination Rex...",
 			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized_SE.PrimalItemConsumable_Egg_IndominusRex_Fertilized_SE_C",
+			"parent": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized.PrimalItemConsumable_Egg_IndominusRex_Fertilized_C",
 			"icon": "/Game/Mods/Indominus/Dino/Egg/HUD_IndomEgg_SE_MIC.HUD_IndomEgg_SE_MIC",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 35,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 20,
-				"minLevelReq": 0,
+				"time": 20,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemTrophy_AlphaWorm_C"
-					},
-					{
-						"exact": false,
-						"qty": 3,
-						"type": "PrimalItemTrophy_AlphaWyvern_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifactSE_01_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifactSE_02_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemArtifactSE_03_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Element_C"
-					}
+					{ "qty": 1, "type": "PrimalItemTrophy_AlphaWorm_C" },
+					{ "qty": 3, "type": "PrimalItemTrophy_AlphaWyvern_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactSE_01_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactSE_02_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactSE_03_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Element_C" }
 				]
 			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/Indominus/Dino/Indominus_Character_Dud_SE_BP.Indominus_Character_Dud_SE_BP_C",
-				"temperature": [ 43, 44 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.58, 0.409837, 0.2436, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 1, 0.729393, 0, 1 ]
-					}
-				}
+				"temperature": { "min": 43, "max": 44 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		}
 	]

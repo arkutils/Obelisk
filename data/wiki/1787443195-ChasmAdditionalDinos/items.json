@@ -1,6 +1,7 @@
 {
-	"version": "312.29.1591695224",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1591695224",
+	"format": "4",
 	"mod": {
 		"id": "1787443195",
 		"tag": "ChasmAdditionalDinos",
@@ -11,190 +12,92 @@
 			"name": "Fertilized Aberrant Deinonychus Egg",
 			"description": "",
 			"bp": "/Game/Mods/ChasmAdditionalDinos/AberrantDeino/PrimalItemConsumable_Egg_Deinonychus_Fertilized_Aberrant.PrimalItemConsumable_Egg_Deinonychus_Fertilized_Aberrant_C",
+			"parent": "/Game/Valguero/Dinos/Deinonychus/PrimalItemConsumable_Egg_Deinonychus_Fertilized.PrimalItemConsumable_Egg_Deinonychus_Fertilized_C",
 			"icon": "/Game/Valguero/Dinos/Deinonychus/HUD_DinoEgg_MIC_Inst_Deinonychus.HUD_DinoEgg_MIC_Inst_Deinonychus",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 6,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/ChasmAdditionalDinos/AberrantDeino/Deinonychus_Character_BP_Aberrant.Deinonychus_Character_BP_Aberrant_C",
-				"temperature": [ -90, -80 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.2,
-						"color": [ 0.062807, 0.106698, 0.16, 1 ]
-					},
-					"cyan": {
-						"intensity": 3,
-						"color": [ 0.026099, 0.06, 0.008313, 1 ]
-					}
-				}
+				"temperature": { "min": -90, "max": -80 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Elementsaur Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/ChasmAdditionalDinos/ElementCherufe/PrimalItemConsumable_Egg_CherufeElement_Fertilized.PrimalItemConsumable_Egg_CherufeElement_Fertilized_C",
+			"parent": "/Game/Genesis/Dinos/Cherufe/PrimalItemConsumable_Egg_Cherufe.PrimalItemConsumable_Egg_Cherufe_C",
 			"icon": "/Game/Mods/ChasmAdditionalDinos/ElementCherufe/Item_CherufeEgg_Icon.Item_CherufeEgg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/ChasmAdditionalDinos/ElementCherufe/Cherufe_Character_BP_Element.Cherufe_Character_BP_Element_C",
-				"temperature": [ -90, -80 ]
+				"temperature": { "min": -90, "max": -80 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Placeholder Element",
 			"description": "A strange, highly advanced material humming with energy. It dissolves when transferred across ARKs.",
 			"bp": "/Game/Mods/ChasmAdditionalDinos/ElementCherufe/PrimalItemResource_ElementForge.PrimalItemResource_ElementForge_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TEKElement_Icon.TEKElement_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 0.01,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 20,
-				"minLevelReq": 0,
+				"time": 20,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 100,
-						"type": "PrimalItemResource_ElementShard_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 0,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 100, "type": "PrimalItemResource_ElementShard_C" } ]
 			}
 		},
 		{
 			"name": "Placeholder Element",
 			"description": "A strange, highly advanced material humming with energy. It dissolves when transferred across ARKs.",
 			"bp": "/Game/Mods/ChasmAdditionalDinos/ElementCherufe/PrimalItemResource_ElementForge2.PrimalItemResource_ElementForge2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TEKElement_Icon.TEKElement_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 0.01,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 20,
-				"minLevelReq": 0,
+				"time": 20,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 100,
-						"type": "PrimalItemResource_ElementOre_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 0,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 100, "type": "PrimalItemResource_ElementOre_C" } ]
 			}
 		}
 	]

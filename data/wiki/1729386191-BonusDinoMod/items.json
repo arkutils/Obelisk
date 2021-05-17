@@ -1,6 +1,7 @@
 {
-	"version": "322.15.1613774951",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1620852747",
+	"format": "4",
 	"mod": {
 		"id": "1729386191",
 		"tag": "BonusDinoMod",
@@ -11,1264 +12,589 @@
 			"name": "Fertilized Alamodactylus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alamodactylus/PrimalItemConsumable_Egg_Alamo_Fertilized.PrimalItemConsumable_Egg_Alamo_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carno.PrimalItemConsumable_Egg_Carno_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Alamodactylus/Alamodactylus_Character_BP.Alamodactylus_Character_BP_C",
-				"temperature": [ 26, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.08, 0.08, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.005, 0.005, 0.005, 1 ]
-					}
-				}
+				"temperature": { "min": 26, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Digested Clay",
 			"description": "Alamodactylus consumes sand and mixes it with cactus sap to create clay to build its nests. Useful for survivors in the desert...",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alamodactylus/PrimalItemResource_AlamoClay.PrimalItemResource_AlamoClay_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/ScorchedEarth/Icons/Resources/Clay_Icon.Clay_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 2,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 5,
-				"bpCraftTime": 3,
-				"minLevelReq": 0,
+				"time": 3,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Sand_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemConsumable_CactusSap_C"
-					}
+					{ "qty": 1, "type": "PrimalItemResource_Sand_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_CactusSap_C" }
 				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Carnoraptor Saddle",
 			"description": "Equip a Carnoraptor with this to ride it.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Carnoraptor/PrimalItemArmor_CarnoraptorSaddle.PrimalItemArmor_CarnoraptorSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Carno/Carno_Saddle/HUD_CarnoSaddle_Colorize_MIC.HUD_CarnoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 62.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 290,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 155,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 125,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 60,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 62.8,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Aberrant Carnoraptor Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Carnoraptor/PrimalItemConsumable_Egg_CarnoraptorAB_Fertilized.PrimalItemConsumable_Egg_CarnoraptorAB_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carno.PrimalItemConsumable_Egg_Carno_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Carnoraptor/Carnoraptor_Character_bp_Aberrant.Carnoraptor_Character_bp_Aberrant_C",
-				"temperature": [ 26, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.08, 0.08, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.005, 0.005, 0.005, 1 ]
-					}
-				}
+				"temperature": { "min": 26, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Carnoraptor Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Carnoraptor/PrimalItemConsumable_Egg_Carnoraptor_Fertilized.PrimalItemConsumable_Egg_Carnoraptor_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carno.PrimalItemConsumable_Egg_Carno_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Carnoraptor/Carnoraptor_Character_bp.Carnoraptor_Character_bp_C",
-				"temperature": [ 26, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.08, 0.08, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.005, 0.005, 0.005, 1 ]
-					}
-				}
+				"temperature": { "min": 26, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Chilantaisaurus Saddle",
 			"description": "Equip a Chilantaisaurus with this to ride it.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Chilantai/PrimalItemArmor_ChilantaiSaddle.PrimalItemArmor_ChilantaiSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 86,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 380,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 380, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 86,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Chilantai Egg",
 			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Chilantai/PrimalItemConsumable_Egg_Chilantai_Fertilized.PrimalItemConsumable_Egg_Chilantai_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Rex.PrimalItemConsumable_Egg_Rex_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Rex.HUD_DinoEgg_MIC_Inst_Rex",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 15,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Chilantai/Chilantaisaurus_Character_BP.Chilantaisaurus_Character_BP_C",
-				"temperature": [ 32, 34 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.355, 0.048384, 0.0355, 1 ]
-					},
-					"cyan": {
-						"intensity": 1.5,
-						"color": [ 0.986833, 1, 0.77, 1 ]
-					}
-				}
+				"temperature": { "min": 32, "max": 34 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Achillobator Egg",
 			"description": "",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Coelophysis/PrimalItemConsumable_Egg_Coel_Fertilized.PrimalItemConsumable_Egg_Coel_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Raptor.PrimalItemConsumable_Egg_Raptor_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Raptor.HUD_DinoEgg_MIC_Inst_Raptor",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Coelophysis/Coelophysis_Character_BP.Coelophysis_Character_BP_C",
-				"temperature": [ 20, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.01, 0.01, 1 ]
-					},
-					"cyan": {
-						"intensity": 0.5,
-						"color": [ 0.42, 0.049218, 0.042, 1 ]
-					}
-				}
+				"temperature": { "min": 20, "max": 28 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Edmontosaurus Saddle",
 			"description": "Equip a Edmontosaurus with this to ride it.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Edmonto/PrimalItemArmor_EdmontoSaddle.PrimalItemArmor_EdmontoSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 86,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 380,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 380, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 86,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Edmonto Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Edmonto/PrimalItemConsumable_Egg_Edmonto_Fertilized.PrimalItemConsumable_Egg_Edmonto_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Stego.PrimalItemConsumable_Egg_Stego_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego.HUD_DinoEgg_MIC_Inst_Stego",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Edmonto/Edmontosaurus_Character_BP.Edmontosaurus_Character_BP_C",
-				"temperature": [ 22, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.05, 0.011337, 1 ]
-					},
-					"cyan": {
-						"intensity": 3,
-						"color": [ 0.7, 0.7, 0.035, 1 ]
-					}
-				}
+				"temperature": { "min": 22, "max": 28 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized X-Edmonto Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Edmonto/PrimalItemConsumable_Egg_Edmonto_Fertilized_Snow.PrimalItemConsumable_Egg_Edmonto_Fertilized_Snow_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Edmonto/PrimalItemConsumable_Egg_Edmonto_Fertilized.PrimalItemConsumable_Egg_Edmonto_Fertilized_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego.HUD_DinoEgg_MIC_Inst_Stego",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Edmonto/Snow_Edmontosaurus_Character_BP.Snow_Edmontosaurus_Character_BP_C",
-				"temperature": [ 22, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.05, 0.011337, 1 ]
-					},
-					"cyan": {
-						"intensity": 3,
-						"color": [ 0.7, 0.7, 0.035, 1 ]
-					}
-				}
+				"temperature": { "min": 22, "max": 28 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Geosternbergia Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Geostern/PrimalItemConsumable_Egg_Geostern_Fertilized.PrimalItemConsumable_Egg_Geostern_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Ptero.PrimalItemConsumable_Egg_Ptero_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Ptero.HUD_DinoEgg_MIC_Inst_Ptero",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Geostern/Geostern_character_bp.Geostern_character_bp_C",
-				"temperature": [ 29, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 2,
-						"color": [ 0.1, 0.31, 0.3, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.952024, 0.99, 0.1386, 1 ]
-					}
-				}
+				"temperature": { "min": 29, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Kryptops Saddle",
 			"description": "Equip a Kryptops with this to ride it.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Kryptops/PrimalItemArmor_KryptopsSaddle.PrimalItemArmor_KryptopsSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 86,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 380,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 380, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 86,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Kryptops Egg",
 			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Kryptops/PrimalItemConsumable_Egg_Kryptops_Fertilized.PrimalItemConsumable_Egg_Kryptops_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Rex.PrimalItemConsumable_Egg_Rex_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Rex.HUD_DinoEgg_MIC_Inst_Rex",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 15,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Kryptops/Kryptops_Character_BP.Kryptops_Character_BP_C",
-				"temperature": [ 32, 34 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.355, 0.048384, 0.0355, 1 ]
-					},
-					"cyan": {
-						"intensity": 1.5,
-						"color": [ 0.986833, 1, 0.77, 1 ]
-					}
-				}
+				"temperature": { "min": 32, "max": 34 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Padillasaurus Saddle",
 			"description": "Equip a Padillasaurus with this to ride it.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Padilla/PrimalItemArmor_PadillaSaddle.PrimalItemArmor_PadillaSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 86,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 380,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 380, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 86,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Padilla Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Padilla/PrimalItemConsumable_Egg_Padilla_Fertilized.PrimalItemConsumable_Egg_Padilla_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Stego.PrimalItemConsumable_Egg_Stego_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego.HUD_DinoEgg_MIC_Inst_Stego",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Padilla/Padilla_Character_BP.Padilla_Character_BP_C",
-				"temperature": [ 22, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.05, 0.011337, 1 ]
-					},
-					"cyan": {
-						"intensity": 3,
-						"color": [ 0.7, 0.7, 0.035, 1 ]
-					}
-				}
+				"temperature": { "min": 22, "max": 28 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Skorpiovenator Saddle",
 			"description": "Equip a Skorpiovenator with this to ride it.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Skorpiovenator/PrimalItemArmor_SkorpioSaddle.PrimalItemArmor_SkorpioSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Baryonyx/Baryonyx_Saddle/HUD_BaryonyxSaddle_Colorize_MIC.HUD_BaryonyxSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Skorpiovenator Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Skorpiovenator/PrimalItemConsumable_Egg_Scorpiovenator_Fertilized.PrimalItemConsumable_Egg_Scorpiovenator_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carno.PrimalItemConsumable_Egg_Carno_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Skorpiovenator/Scorpiovenator_Character_BP.Scorpiovenator_Character_BP_C",
-				"temperature": [ 26, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.08, 0.08, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.005, 0.005, 0.005, 1 ]
-					}
-				}
+				"temperature": { "min": 26, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Digested Cementing Paste",
 			"description": "Scorpiovenator's diet is aided by a complex and powerful digestive system. This Digestive system breaks down chitin and keratin into a paste-like slush that the animal then excretes. It's the exact same as cementing paste!",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Skorpiovenator/PrimalItemResource_ScorpioPaste.PrimalItemResource_ScorpioPaste_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/CementPaste_Icon.CementPaste_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 2,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 5,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ChitinOrKeratin_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_ChitinOrKeratin_C" } ]
 			}
 		},
 		{
 			"name": "Fertilized Spinoraptor Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Spinoraptor/PrimalItemConsumable_Egg_Spinoraptor_Fertilized.PrimalItemConsumable_Egg_Spinoraptor_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carno.PrimalItemConsumable_Egg_Carno_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Spinoraptor/Spinoraptor_Character_bp.Spinoraptor_Character_bp_C",
-				"temperature": [ 26, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.08, 0.08, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.005, 0.005, 0.005, 1 ]
-					}
-				}
+				"temperature": { "min": 26, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Thalassodromeus Saddle",
 			"description": "Equip a Thalassodromeus with this to ride it.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Thallaso/PrimalItemArmor_ThalassoSaddle.PrimalItemArmor_ThalassoSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Carno/Carno_Saddle/HUD_CarnoSaddle_Colorize_MIC.HUD_CarnoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 62.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 290,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 155,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 125,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 60,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 62.8,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Thalassodromeus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BonusDinoMod/Dinos/Thallaso/PrimalItemConsumable_Egg_Thalasso_Fertilized.PrimalItemConsumable_Egg_Thalasso_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Ptero.PrimalItemConsumable_Egg_Ptero_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Ptero.HUD_DinoEgg_MIC_Inst_Ptero",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Thallaso/Thalasso_character_bp.Thalasso_character_bp_C",
-				"temperature": [ 29, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 2,
-						"color": [ 0.1, 0.31, 0.3, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.952024, 0.99, 0.1386, 1 ]
-					}
-				}
+				"temperature": { "min": 29, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Kami Implant",
 			"description": "Equip this implant onto any creature from Additional Creatures: Kami Creations. Provides armor similar to a saddle!",
 			"bp": "/Game/Mods/BonusDinoMod/PrimalItemArmor_BonusImplant.PrimalItemArmor_BonusImplant_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Implant_Icon_Alpha.Implant_Icon_Alpha",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		}
 	]

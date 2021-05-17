@@ -1,6 +1,7 @@
 {
-	"version": "312.29.1561175829",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1561175829",
+	"format": "4",
 	"mod": {
 		"id": "1681125667",
 		"tag": "Primal_Fear_EX",
@@ -11,887 +12,477 @@
 			"name": "Congealed Gas Ball",
 			"description": "Used for crafting, can be found within Gas Veins.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Extinction/CoreBlueprints/Resources/PrimalItemResource_GasRefined.PrimalItemResource_GasRefined_C",
+			"parent": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemResource_Gas.PrimalItemResource_Gas_C",
 			"icon": "/Game/Aberration/Icons/Resources/GasBall_Icon.GasBall_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 0.1,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 30,
-				"minLevelReq": 0,
+				"time": 30,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_CondensedGas_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_CondensedGas_C" } ]
 			}
 		},
 		{
 			"name": "Cryofridge",
 			"description": "Requires electricity to run.  Keeps Cryopods alive forever!",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItemStructure_CryoFridge_DE.PrimalItemStructure_CryoFridge_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Extinction/Icons/Structures/CryoFridge_Icon.CryoFridge_Icon",
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 4,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 73,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 60,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 15,
-						"type": "PrimalItemResource_Electronics_C"
-					}
+					{ "qty": 225, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Electronics_C" }
 				]
 			},
-			"repair": {
-				"xp": 73,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Extinction/Structures/Cryofridge/CryoFridge.CryoFridge_C"
+			"structure": "/Game/Extinction/Structures/Cryofridge/CryoFridge.CryoFridge_C"
 		},
 		{
 			"name": "Dino Leash",
 			"description": "Electronic leash to keep your dinos from wandering too far.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItemStructure_DinoLeash_DE.PrimalItemStructure_DinoLeash_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Extinction/Icons/Structures/DinoLeash_Icon.DinoLeash_Icon",
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 4,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 8,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 5,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Electronics_C"
-					}
+					{ "qty": 5, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Electronics_C" }
 				]
 			},
-			"repair": {
-				"xp": 8,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Extinction/Structures/DinoLeash/Structure_DinoLeash.Structure_DinoLeash_C"
+			"structure": "/Game/Extinction/Structures/DinoLeash/Structure_DinoLeash.Structure_DinoLeash_C"
 		},
 		{
 			"name": "Delivery Crate",
 			"description": "A box with a Gasbag attached that can be used to deliver items to another location.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItemStructure_StorageBox_Balloon_DE.PrimalItemStructure_StorageBox_Balloon_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Extinction/Icons/Structures/ItemBalloon_Icon.ItemBalloon_Icon",
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 4,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 3.7,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Thatch_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ApexDrop_GasBag_C"
-					}
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_GasBag_C" }
 				]
 			},
-			"repair": {
-				"xp": 3.7,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Extinction/Structures/ItemBalloon/StorageBox_Balloon.StorageBox_Balloon_C"
+			"structure": "/Game/Extinction/Structures/ItemBalloon/StorageBox_Balloon.StorageBox_Balloon_C"
 		},
 		{
 			"name": "Large Taxidermy Base",
 			"description": "Place a harvested dermis to show off your prowess!",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItemStructure_TaxidermyBase_Large_DE.PrimalItemStructure_TaxidermyBase_Large_DE_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItemStructure_TaxidermyBase.PrimalItemStructure_TaxidermyBase_C",
 			"icon": "/Game/Extinction/Icons/Structures/TaxidermyBaseLarge_Icon.TaxidermyBaseLarge_Icon",
 			"type": "Structure",
 			"folders": [ "Taxidermy" ],
 			"weight": 30,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 25,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 1000,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 1250,
-						"type": "PrimalItemResource_Thatch_C"
-					},
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_Stone_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 1000, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 1250, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
 				]
 			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Extinction/Structures/Structure_TaxidermyBase_Large.Structure_TaxidermyBase_Large_C"
+			"structure": "/Game/Extinction/Structures/Structure_TaxidermyBase_Large.Structure_TaxidermyBase_Large_C"
 		},
 		{
 			"name": "Medium Taxidermy Base",
 			"description": "Place a harvested dermis to show off your prowess!",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItemStructure_TaxidermyBase_Medium_DE.PrimalItemStructure_TaxidermyBase_Medium_DE_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItemStructure_TaxidermyBase.PrimalItemStructure_TaxidermyBase_C",
 			"icon": "/Game/Extinction/Icons/Structures/TaxidermyBaseMedium_Icon.TaxidermyBaseMedium_Icon",
 			"type": "Structure",
 			"folders": [ "Taxidermy" ],
 			"weight": 10,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 2.5,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 500,
-						"type": "PrimalItemResource_Thatch_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Stone_C"
-					}
+					{ "qty": 250, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Stone_C" }
 				]
 			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Extinction/Structures/Structure_TaxidermyBase_Medium.Structure_TaxidermyBase_Medium_C"
+			"structure": "/Game/Extinction/Structures/Structure_TaxidermyBase_Medium.Structure_TaxidermyBase_Medium_C"
 		},
 		{
 			"name": "Small Taxidermy Base",
 			"description": "Place a harvested dermis to show off your prowess!",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItemStructure_TaxidermyBase_Small_DE.PrimalItemStructure_TaxidermyBase_Small_DE_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItemStructure_TaxidermyBase.PrimalItemStructure_TaxidermyBase_C",
 			"icon": "/Game/Extinction/Icons/Structures/TaxidermyBaseSmall_Icon.TaxidermyBaseSmall_Icon",
 			"type": "Structure",
 			"folders": [ "Taxidermy" ],
 			"weight": 4,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Thatch_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_Stone_C"
-					}
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
 				]
 			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Extinction/Structures/Structure_TaxidermyBase_Small.Structure_TaxidermyBase_Small_C"
+			"structure": "/Game/Extinction/Structures/Structure_TaxidermyBase_Small.Structure_TaxidermyBase_Small_C"
 		},
 		{
 			"name": "Tek Bridge",
 			"description": "Extendable force bridge",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItemStructure_TekBridge_DE.PrimalItemStructure_TekBridge_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Extinction/Icons/Structures/TEKBridge_Icon.TEKBridge_Icon",
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 4,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 50,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 220,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemResource_Element_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 50,
 				"time": 5,
-				"resourceMult": 0.5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 110,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 75,
-						"type": "PrimalItemResource_Crystal_C"
-					}
+					{ "qty": 220, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Element_C" }
 				]
 			},
-			"structureTemplate": "/Game/Extinction/Structures/TekBridge/PrimalStructure_TekBridge.PrimalStructure_TekBridge_C"
+			"structure": "/Game/Extinction/Structures/TekBridge/PrimalStructure_TekBridge.PrimalStructure_TekBridge_C"
 		},
 		{
 			"name": "Empty Cryopod",
 			"description": "Hold up to a creature to capture it. Throw to deploy a captured creature.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItem_WeaponEmptyCryopod_DE.PrimalItem_WeaponEmptyCryopod_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmolessConsumeSelf.PrimalItemWeaponGenericAmmolessConsumeSelf_C",
 			"icon": "/Game/Extinction/Icons/Weapons/CryoPod_Icon.CryoPod_Icon",
 			"type": "Weapon",
 			"folders": [ "Weapons" ],
 			"weight": 0.5,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 11.35,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 4,
-						"type": "PrimalItemResource_Oil_C"
-					},
-					{
-						"exact": false,
-						"qty": 8,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 5,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 15,
-						"type": "PrimalItemResource_Fibers_C"
-					}
+					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 4, "type": "PrimalItemResource_Oil_C" },
+					{ "qty": 8, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" }
 				]
 			},
-			"weaponTemplate": "/Game/Extinction/CoreBlueprints/Weapons/WeapEmptyCryopod.WeapEmptyCryopod_C"
+			"weapon": "/Game/Extinction/CoreBlueprints/Weapons/WeapEmptyCryopod.WeapEmptyCryopod_C"
 		},
 		{
 			"name": "Taxidermy Tool",
 			"description": "Used to capture the Dermis of a dead creature.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItem_WeaponTaxidermyTool_DE.PrimalItem_WeaponTaxidermyTool_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericNoStats.PrimalItemWeaponGenericNoStats_C",
 			"icon": "/Game/Extinction/Icons/Weapons/TaxidermyTool_Icon.TaxidermyTool_Icon",
 			"type": "Weapon",
 			"folders": [ "Tools" ],
 			"weight": 0.5,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0.75,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemResource_Stone_C"
-					},
-					{
-						"exact": false,
-						"qty": 4,
-						"type": "PrimalItemResource_Flint_C"
-					}
+					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 4, "type": "PrimalItemResource_Flint_C" }
 				]
 			},
-			"repair": {
-				"xp": 0.75,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"weaponTemplate": "/Game/Extinction/CoreBlueprints/Weapons/WeapTaxidermyTool.WeapTaxidermyTool_C"
+			"weapon": "/Game/Extinction/CoreBlueprints/Weapons/WeapTaxidermyTool.WeapTaxidermyTool_C"
 		},
 		{
 			"name": "Tek Gravity Grenade",
 			"description": "Pulling the pin starts a 5 second timer to an explosion.  Make sure you've thrown it by then.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Items/PrimalItem_WeaponTekGravityGrenade_DE.PrimalItem_WeaponTekGravityGrenade_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmolessConsumeSelf.PrimalItemWeaponGenericAmmolessConsumeSelf_C",
 			"icon": "/Game/Extinction/Icons/Resources/GravityGrenade_Icon.GravityGrenade_Icon",
 			"type": "Weapon",
 			"folders": [ "Weapons" ],
 			"weight": 0.5,
-			"maxQuantity": 10,
+			"stackSize": 10,
 			"crafting": {
 				"xp": 11.35,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_ElementDust_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 60,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 60,
-						"type": "PrimalItemResource_Gunpowder_C"
-					}
+					{ "qty": 200, "type": "PrimalItemResource_ElementDust_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 30, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Gunpowder_C" }
 				]
 			},
-			"repair": {
-				"xp": 11.35,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"weaponTemplate": "/Game/Extinction/CoreBlueprints/Weapons/WeapTekGravityGrenade.WeapTekGravityGrenade_C"
+			"weapon": "/Game/Extinction/CoreBlueprints/Weapons/WeapTekGravityGrenade.WeapTekGravityGrenade_C"
 		},
 		{
 			"name": "Cannon Shell",
 			"description": "A large artillery shell. Used as ammunition for the Mek Siege Cannon Module.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Meks/PrimalItemAmmo_CannonShell_DE.PrimalItemAmmo_CannonShell_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
 			"icon": "/Game/Extinction/Icons/Weapons/MekCannonAmmo_Icon.MekCannonAmmo_Icon",
 			"type": "Ammo",
 			"folders": [ "Mek", "Ammo" ],
 			"weight": 15,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 3.6,
-				"bpCraftTime": 1,
-				"minLevelReq": 0,
+				"time": 1,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Gunpowder_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 40,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					},
-					{
-						"exact": false,
-						"qty": 120,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 160,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 200, "type": "PrimalItemResource_Gunpowder_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 40, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 160, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 3.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Rocket Pod",
 			"description": "A pod containing 16 swarm-fire rockets. Used as ammunition for the Mek Rocket Launcher Module.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Meks/PrimalItemAmmo_RocketPod_DE.PrimalItemAmmo_RocketPod_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
 			"icon": "/Game/Extinction/Icons/Weapons/MekMissilePackAmmo_Icon.MekMissilePackAmmo_Icon",
 			"type": "Ammo",
 			"folders": [ "Mek", "Ammo" ],
 			"weight": 10,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 3.6,
-				"bpCraftTime": 1,
-				"minLevelReq": 0,
+				"time": 1,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 180,
-						"type": "PrimalItemResource_Gunpowder_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 120,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 120,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 180, "type": "PrimalItemResource_Gunpowder_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 120, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 120, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 3.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "M.R.L.M.",
 			"description": "Mek Rocket Launcher Module. Equip a Mek with this module to arm it with a wide reaching swarm-fire rocket launcher. Unequipping reduces durability. Requires Rocket Pods to fire.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Meks/PrimalItemArmor_MekBackpack_MissilePod_DE.PrimalItemArmor_MekBackpack_MissilePod_DE_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/Saddle/PrimalItemArmor_MekBackpack_Base.PrimalItemArmor_MekBackpack_Base_C",
 			"icon": "/Game/Extinction/Icons/Saddles/MekMissilePack_Icon.MekMissilePack_Icon",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Mek", "Modules" ],
 			"weight": 200,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"durability": 5000,
 			"crafting": {
 				"xp": 26.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 450,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 125,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_Element_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_BlackPearl_C"
-					}
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 30, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			},
 			"repair": {
 				"xp": 26.8,
 				"time": 5,
-				"resourceMult": 0.5
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 62.5, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 15, "type": "PrimalItemResource_BlackPearl_C" }
+				]
 			}
 		},
 		{
 			"name": "M.D.S.M.",
 			"description": "Mek Deployable Shield Module. Equip a Mek with this module to arm it with a large deployable dome shield. Unequipping reduces durability.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Meks/PrimalItemArmor_MekBackpack_Shield_DE.PrimalItemArmor_MekBackpack_Shield_DE_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/Saddle/PrimalItemArmor_MekBackpack_Base.PrimalItemArmor_MekBackpack_Base_C",
 			"icon": "/Game/Extinction/Icons/Saddles/MekShield_Icon.MekShield_Icon",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Mek", "Modules" ],
 			"weight": 200,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"durability": 5000,
 			"crafting": {
 				"xp": 26.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 400,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 180,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 280,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_Element_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_BlackPearl_C"
-					}
+					{ "qty": 400, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 180, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 280, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 30, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			},
 			"repair": {
 				"xp": 26.8,
 				"time": 5,
-				"resourceMult": 0.5
+				"recipe": [
+					{ "qty": 200, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 90, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 140, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 15, "type": "PrimalItemResource_BlackPearl_C" }
+				]
 			}
 		},
 		{
 			"name": "M.S.C.M.",
 			"description": "Mek Siege Cannon Module. Equip a Mek with this module to arm it with a powerful long-range siege cannon. Unequipping reduces durability. Requires Cannon Shells to fire.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Meks/PrimalItemArmor_MekBackpack_SiegeCannon_DE.PrimalItemArmor_MekBackpack_SiegeCannon_DE_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/Saddle/PrimalItemArmor_MekBackpack_Base.PrimalItemArmor_MekBackpack_Base_C",
 			"icon": "/Game/Extinction/Icons/Saddles/MekCannon_Icon.MekCannon_Icon",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Mek", "Modules" ],
 			"weight": 200,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"durability": 5000,
 			"crafting": {
 				"xp": 26.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 400,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 180,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_Element_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_BlackPearl_C"
-					}
+					{ "qty": 400, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 180, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 30, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			},
 			"repair": {
 				"xp": 26.8,
 				"time": 5,
-				"resourceMult": 0.5
+				"recipe": [
+					{ "qty": 200, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 90, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 15, "type": "PrimalItemResource_BlackPearl_C" }
+				]
 			}
 		},
 		{
 			"name": "M.O.M.I.",
 			"description": "MegaMek Operational Materialization Interface. Drag this to a Mek Module slot to enable forming the MegaMek!\nRequires three additional nearby Meks to transform. Will fail to operate unless if not in range of the Alpha King Titan.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Meks/PrimalItemArmor_MekTransformer_DE.PrimalItemArmor_MekTransformer_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/Extinction/Icons/Saddles/MegaMekTransformModule_Icon.MegaMekTransformModule_Icon",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Mek", "Modules" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 26,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_Element_C"
-					},
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Electronics_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Crystal_C"
-					}
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Electronics_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_C" }
 				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Unassembled Mek",
 			"description": "Use this item to assemble a new Mek!",
 			"bp": "/Game/Mods/Primal_Fear_EX/Meks/PrimalItem_Spawner_Mek_DE.PrimalItem_Spawner_Mek_DE_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C",
 			"icon": "/Game/Extinction/Icons/Resources/MekUnassembled_Icon.MekUnassembled_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Mek" ],
 			"weight": 1000,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 2,
-				"minLevelReq": 0,
+				"time": 2,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 40,
-						"type": "PrimalItemResource_Element_C"
-					},
-					{
-						"exact": false,
-						"qty": 1000,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 550,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_BlackPearl_C"
-					}
+					{ "qty": 40, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 550, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 225, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			}
 		},
@@ -899,485 +490,284 @@
 			"name": "Blue Crystalized Sap (x5)",
 			"description": "This strange sap has unique properties that make it an ideal replacement for Blue Gems",
 			"bp": "/Game/Mods/Primal_Fear_EX/Resources/PrimalItemResource_BlueSap_DE.PrimalItemResource_BlueSap_DE_C",
+			"parent": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemResource_Gem_BioLum.PrimalItemResource_Gem_BioLum_C",
 			"icon": "/Game/Extinction/Icons/Resources/BlueCrystallizedSap_Icon.BlueCrystallizedSap_Icon",
 			"type": "Resource",
 			"folders": [ "Extinction Resources" ],
 			"weight": 0.5,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Sap_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
 				"time": 5,
-				"resourceMult": 0.5
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Sap_C" } ]
 			}
 		},
 		{
 			"name": "Condensed Gas",
 			"description": "A highly concentrated and hardened gas deposit. This could be refined back into it's gaseous form.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Resources/PrimalItemResource_CondensedGas_DE.PrimalItemResource_CondensedGas_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Extinction/Icons/Resources/CondensedGas_icon.CondensedGas_icon",
 			"type": "Resource",
 			"folders": [ "Extinction Resources" ],
 			"weight": 1,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 30,
-				"minLevelReq": 0,
+				"time": 30,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Oil_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Oil_C" } ]
 			}
 		},
 		{
 			"name": "Fungal Wood",
 			"description": "A thick, sturdy cutting from a corrupted tree. Has all of the properties of a chunk of wood!",
 			"bp": "/Game/Mods/Primal_Fear_EX/Resources/PrimalItemResource_CorruptedWood_DE.PrimalItemResource_CorruptedWood_DE_C",
+			"parent": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemResource_FungalWood.PrimalItemResource_FungalWood_C",
 			"icon": "/Game/Aberration/Icons/Resources/MushroomBark.MushroomBark",
 			"type": "Resource",
 			"folders": [ "Extinction Resources" ],
 			"weight": 0.5,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Wood_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
 				"time": 5,
-				"resourceMult": 0.5
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
 			}
 		},
 		{
 			"name": "Element Dust",
 			"description": "A small pile of Dust that could be refined into Element or Element Shards.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Resources/PrimalItemResource_ElementDust_DE.PrimalItemResource_ElementDust_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Extinction/Icons/Resources/ElementDust_Icon.ElementDust_Icon",
 			"type": "Resource",
 			"folders": [ "Extinction Resources" ],
 			"weight": 0.05,
-			"maxQuantity": 1000,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 1,
-						"type": "PrimalItemResource_Metal_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 0,
 				"time": 5,
-				"resourceMult": 0.5
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 1, "type": "PrimalItemResource_Metal_C" } ]
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.1,
 				"stamina": 0.1,
 				"food": 0.1,
-				"weight": 0.01
+				"weight": 0.01,
+				"water": 0.1
 			}
 		},
 		{
 			"name": "Unstable Element",
 			"description": "Refined Element Dust that is unstable. Over time it will stabilize and become element.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Resources/PrimalItemResource_ElementRefined_DE.PrimalItemResource_ElementRefined_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TEKElement_Icon.TEKElement_Icon",
 			"type": "Resource",
 			"folders": [ "Extinction Resources" ],
 			"weight": 0.05,
-			"maxQuantity": 1,
-			"spoilage": {
-				"time": 120,
-				"productBP": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Element.PrimalItemResource_Element_C"
-			},
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"spoilsIn": 120,
+			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Element.PrimalItemResource_Element_C",
 			"crafting": {
 				"xp": 0,
-				"bpCraftTime": 30,
-				"minLevelReq": 0,
+				"time": 30,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 1000,
-						"type": "PrimalItemResource_ElementDust_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 0,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 1000, "type": "PrimalItemResource_ElementDust_C" } ]
 			}
 		},
 		{
 			"name": "Red Crystalized Sap (x5)",
 			"description": "This strange sap has unique properties that make it an ideal replacement for Red Gems.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Resources/PrimalItemResource_RedSap_DE.PrimalItemResource_RedSap_DE_C",
+			"parent": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemResource_Gem_Element.PrimalItemResource_Gem_Element_C",
 			"icon": "/Game/Extinction/Icons/Resources/RedCrystallizedSap_Icon.RedCrystallizedSap_Icon",
 			"type": "Resource",
 			"folders": [ "Extinction Resources" ],
 			"weight": 0.5,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Sap_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 2,
 				"time": 5,
-				"resourceMult": 0.5
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Sap_C" } ]
 			}
 		},
 		{
 			"name": "Unstable Element Shard",
 			"description": "Refined Element Dust that is unstable. Over time it will stabilize and become an Element Shard.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Resources/PrimalItemResource_ShardRefined_DE.PrimalItemResource_ShardRefined_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TEKElementShard_Icon.TEKElementShard_Icon",
 			"type": "Resource",
 			"folders": [ "Extinction Resources" ],
 			"weight": 0.05,
-			"maxQuantity": 1,
-			"spoilage": {
-				"time": 30,
-				"productBP": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ElementShard.PrimalItemResource_ElementShard_C"
-			},
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
+			"spoilsIn": 30,
+			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ElementShard.PrimalItemResource_ElementShard_C",
 			"crafting": {
 				"xp": 5,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": true,
-						"qty": 10,
-						"type": "PrimalItemResource_ElementDust_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 0,
 				"time": 5,
-				"resourceMult": 0.5
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 10, "type": "PrimalItemResource_ElementDust_C" } ]
 			}
 		},
 		{
 			"name": "Gacha Saddle",
 			"description": "Equip a Gacha with this to ride it.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Saddles/PrimalItemArmor_GachaSaddle_DE.PrimalItemArmor_GachaSaddle_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/Extinction/Icons/Saddles/HUD_GachaSaddle_Icon_Colorize_MIC.HUD_GachaSaddle_Icon_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 72.4,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 185,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_ChitinOrKeratin_C"
-					}
+					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 185, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 150, "type": "PrimalItemResource_ChitinOrKeratin_C" }
 				]
-			},
-			"repair": {
-				"xp": 72.4,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Gasbags Saddle",
 			"description": "Equip a Gasbags with this to allow a passenger to hop on.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Saddles/PrimalItemArmor_GasBagsSaddle_DE.PrimalItemArmor_GasBagsSaddle_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/Extinction/Icons/Saddles/HUD_GasbagsSaddle_Icon_Colorize_MIC.HUD_GasbagsSaddle_Icon_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 72.4,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 185,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_ChitinOrKeratin_C"
-					}
+					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 185, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 150, "type": "PrimalItemResource_ChitinOrKeratin_C" }
 				]
-			},
-			"repair": {
-				"xp": 72.4,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Managarmr Saddle",
 			"description": "Equip a Managarmr with this to ride it.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Saddles/PrimalItemArmor_IceJumperSaddle_DE.PrimalItemArmor_IceJumperSaddle_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/Extinction/Icons/Saddles/HUD_IceJumperSaddle_Icon_Colorize_MIC.HUD_IceJumperSaddle_Icon_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 72.4,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 185,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_ChitinOrKeratin_C"
-					}
+					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 185, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 150, "type": "PrimalItemResource_ChitinOrKeratin_C" }
 				]
-			},
-			"repair": {
-				"xp": 72.4,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Snow Owl Saddle",
 			"description": "Equip an Snow Owl with this to ride it.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Saddles/PrimalItemArmor_OwlSaddle_DE.PrimalItemArmor_OwlSaddle_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/Extinction/Icons/Saddles/HUD_SnowOwlSaddle_Icon_Colorized_MIC.HUD_SnowOwlSaddle_Icon_Colorized_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 72.4,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 185,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_ChitinOrKeratin_C"
-					}
+					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 185, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 150, "type": "PrimalItemResource_ChitinOrKeratin_C" }
 				]
-			},
-			"repair": {
-				"xp": 72.4,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Velonasaur Saddle",
 			"description": "Equip a Velonasaur with this to ride it.",
 			"bp": "/Game/Mods/Primal_Fear_EX/Saddles/PrimalItemArmor_SpindlesSaddle_DE.PrimalItemArmor_SpindlesSaddle_DE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/Extinction/Icons/Saddles/HUD_SpindlesSaddle_Icon_Colorized_MIC.HUD_SpindlesSaddle_Icon_Colorized_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 72.4,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 185,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_ChitinOrKeratin_C"
-					}
+					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 185, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 150, "type": "PrimalItemResource_ChitinOrKeratin_C" }
 				]
-			},
-			"repair": {
-				"xp": 72.4,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Primal Extinction Bench",
 			"description": "Place materials along with blueprints in this to create Extinction items and resources",
 			"bp": "/Game/Mods/Primal_Fear_EX/Structures/PrimalItemStructure_PrimalExtinctionTable.PrimalItemStructure_PrimalExtinctionTable_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Mods/Primal_Fear_EX/Structures/DE_City_Terminal_Icon.DE_City_Terminal_Icon",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
 			"crafting": {
 				"xp": 6.25,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 5,
-						"type": "PrimalItemResource_Hide_C"
-					}
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Hide_C" }
 				]
 			},
-			"repair": {
-				"xp": 6.25,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"structureTemplate": "/Game/Mods/Primal_Fear_EX/Structures/StorageBox_ExtinctionTable.StorageBox_ExtinctionTable_C"
+			"structure": "/Game/Mods/Primal_Fear_EX/Structures/StorageBox_ExtinctionTable.StorageBox_ExtinctionTable_C"
 		}
 	]
 }

@@ -1,6 +1,7 @@
 {
-	"version": "312.29.1555557079",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1555557079",
+	"format": "4",
 	"mod": {
 		"id": "1300713111",
 		"tag": "RareSightings",
@@ -11,55 +12,27 @@
 			"name": "Rare Sightings Field Guide",
 			"description": "A book with which to record each Rare Sighting you hear about.",
 			"bp": "/Game/Mods/RareSightings/Items/FieldGuide/PrimalItem_RSFieldGuide.PrimalItem_RSFieldGuide_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
 			"icon": "/Game/Mods/RareSightings/Items/FieldGuide/RSFieldGuide_Icon.RSFieldGuide_Icon",
 			"type": "Weapon",
 			"folders": [ "Books" ],
 			"weight": 2,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 0.7,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
+				"time": 5,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0 ],
+				"skillQualityMult": { "min": 0, "max": 0 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 15,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 5,
-						"type": "PrimalItem_Note_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					}
+					{ "qty": 2, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 5, "type": "PrimalItem_Note_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
 			},
-			"repair": {
-				"xp": 0.7,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"weaponTemplate": "/Game/Mods/RareSightings/Items/FieldGuide/WeapRSFieldGuide.WeapRSFieldGuide_C"
+			"weapon": "/Game/Mods/RareSightings/Items/FieldGuide/WeapRSFieldGuide.WeapRSFieldGuide_C"
 		}
 	]
 }

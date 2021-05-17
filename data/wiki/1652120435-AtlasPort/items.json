@@ -1,6 +1,7 @@
 {
-	"version": "327.19.1620276269",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1620276269.1",
+	"format": "4",
 	"mod": {
 		"id": "1652120435",
 		"tag": "AtlasPort",
@@ -11,2754 +12,1336 @@
 			"name": "Fertilized Luminous Angler Egg",
 			"description": "Eat it to gain tremendous nourishment",
 			"bp": "/Game/Mods/AtlasPort/Critter/Angler/PrimalItemConsumable_UnderwaterEgg_AnglerA.PrimalItemConsumable_UnderwaterEgg_AnglerA_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_UnderwaterEgg.PrimalItemConsumable_UnderwaterEgg_C",
 			"icon": "/Game/PrimalEarth/Items/FishEgg/HUD_FishEgg_Colorize_MIC_Angler.HUD_FishEgg_Colorize_MIC_Angler",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 3,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				},
-				"health": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				},
-				"stamina": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "health", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "stamina", "value": 30, "useItemQuality": true, "duration": 7.5 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Angler/AAngler_Character_BP.AAngler_Character_BP_C",
-				"temperature": [ -75, 75 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.885, 0.310148, 0.252225, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 3, 3, 3, 20 ]
-					}
-				}
+				"temperature": { "min": -75, "max": 75 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Atlas Hydra Egg",
 			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/AtlasHydra/PrimalItemConsumable_Egg_AtlasHydra_Fertilized.PrimalItemConsumable_Egg_AtlasHydra_Fertilized_C",
+			"parent": "/Game/Genesis/Dinos/GiantTurtle/PrimalItemConsumable_Egg_GiantTurtle.PrimalItemConsumable_Egg_GiantTurtle_C",
 			"icon": "/Game/Genesis/Dinos/GiantTurtle/HUD_DinoEgg_MIC_Inst_GiantTurtle.HUD_DinoEgg_MIC_Inst_GiantTurtle",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 130,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 32.5
-				},
-				"health": {
-					"value": 160,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 40
-				},
-				"stamina": {
-					"value": 130,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 32.5
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 130, "useItemQuality": true, "duration": 32.5 },
+				{ "stat": "health", "value": 160, "useItemQuality": true, "duration": 40 },
+				{ "stat": "stamina", "value": 130, "useItemQuality": true, "duration": 32.5 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/AtlasHydra/AHydra_character_BP.AHydra_character_BP_C",
-				"temperature": [ -75, 75 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1.5,
-						"color": [ 0.048737, 0.065, 0.064379, 1 ]
-					},
-					"cyan": {
-						"intensity": 5,
-						"color": [ 0.356863, 0.176471, 0.168627, 1 ]
-					}
-				}
+				"temperature": { "min": -75, "max": 75 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Flying Fisherman Implant",
 			"description": "Equip this implant onto a Flying Fisherman. Provides armor similar to a saddle!",
 			"bp": "/Game/Mods/AtlasPort/Critter/Bat/PrimalItemArmor_BatImplant.PrimalItemArmor_BatImplant_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Implant_Icon_Gamma.Implant_Icon_Gamma",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Feral Boar Saddle",
 			"description": "Equip a Feral Boar with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Boar/PrimalItemArmor_BoarSaddle.PrimalItemArmor_BoarSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Daeodon/Saddle/HUD_DaeodonSaddle_Colorize_MIC.HUD_DaeodonSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 62.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 290,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 155,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 62.8,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Catfish Egg",
 			"description": "Eat it to gain tremendous nourishment",
 			"bp": "/Game/Mods/AtlasPort/Critter/Catfish/PrimalItemConsumable_UnderwaterEgg_Catfish.PrimalItemConsumable_UnderwaterEgg_Catfish_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_UnderwaterEgg.PrimalItemConsumable_UnderwaterEgg_C",
 			"icon": "/Game/PrimalEarth/Items/FishEgg/HUD_FishEgg_Colorize_MIC_Angler.HUD_FishEgg_Colorize_MIC_Angler",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 3,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				},
-				"health": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				},
-				"stamina": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "health", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "stamina", "value": 30, "useItemQuality": true, "duration": 7.5 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Catfish/Catfish_Character_BP.Catfish_Character_BP_C",
-				"temperature": [ -75, 75 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.885, 0.310148, 0.252225, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 3, 3, 3, 20 ]
-					}
-				}
+				"temperature": { "min": -75, "max": 75 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "GlacierKing Crab Saddle",
 			"description": "Equip a GlacierKing Crab with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Crab/PrimalItemArmor_ACrabSaddle.PrimalItemArmor_ACrabSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/Aberration/Dinos/Crab/cave_crab_saddle/HUD_Crab_Saddle_Colorize.HUD_Crab_Saddle_Colorize",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 26.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 170,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_Metal_C"
-					}
+					{ "qty": 170, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 225, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Metal_C" }
 				]
-			},
-			"repair": {
-				"xp": 26.8,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized GlacierKing Crab Egg",
 			"description": "Eat it to gain tremendous nourishment",
 			"bp": "/Game/Mods/AtlasPort/Critter/Crab/PrimalItemConsumable_UnderwaterEgg_Crab.PrimalItemConsumable_UnderwaterEgg_Crab_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_UnderwaterEgg.PrimalItemConsumable_UnderwaterEgg_C",
 			"icon": "/Game/PrimalEarth/Items/FishEgg/HUD_FishEgg_Colorize_MIC_Tuso.HUD_FishEgg_Colorize_MIC_Tuso",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 3,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				},
-				"health": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				},
-				"stamina": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "health", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "stamina", "value": 30, "useItemQuality": true, "duration": 7.5 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Crab/ACrab_Character_BP.ACrab_Character_BP_C",
-				"temperature": [ -75, 75 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.915, 0.764025, 0.905715, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.97, 0.391242, 0.772833, 20 ]
-					}
-				}
+				"temperature": { "min": -75, "max": 75 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Pelagic Crocodile Saddle",
 			"description": "Equip a Pelagic Crocodile with this to ride it. If you have a saddle mod for Sarcosuchus, Pelagc Crocodile can use those too!",
 			"bp": "/Game/Mods/AtlasPort/Critter/Crocodile/PrimalItemArmor_ACrocSaddle.PrimalItemArmor_ACrocSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Sarco/Saddle/HUD_SarcoSaddle_Colorize_MIC.HUD_SarcoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 36,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 230,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 75,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					}
+					{ "qty": 230, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 75, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
-			},
-			"repair": {
-				"xp": 36,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Pelagic Crocodile Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Crocodile/PrimalItemConsumable_Egg_ACroc_Fertilized.PrimalItemConsumable_Egg_ACroc_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Sarco.PrimalItemConsumable_Egg_Sarco_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Sarco.HUD_DinoEgg_MIC_Inst_Sarco",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 15,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Crocodile/ACroc_Character_BP.ACroc_Character_BP_C",
-				"temperature": [ 30, 34 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.93,
-						"color": [ 0.0115, 0.115, 0.012936, 1 ]
-					},
-					"cyan": {
-						"intensity": 150,
-						"color": [ 0.02, 0.003736, 0.002, 1 ]
-					}
-				}
+				"temperature": { "min": 30, "max": 34 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Atlas Drake Saddle",
 			"description": "Equip a species of Atlas Drake with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Drake/PrimalItemArmor_AtlasDrakeSaddle.PrimalItemArmor_AtlasDrakeSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Yutyrannus/Saddle/HUD_YutySaddle_Colorize_MIC.HUD_YutySaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 86,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 425,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 135,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 125,
-						"type": "PrimalItemResource_Silicon_C"
-					}
+					{ "qty": 425, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 135, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Silicon_C" }
 				]
-			},
-			"repair": {
-				"xp": 86,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Atlas Drake Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Drake/PrimalItemConsumable_Egg_Drake_Fertilized_Flame.PrimalItemConsumable_Egg_Drake_Fertilized_Flame_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Wyvern_Fertilized_Fire.PrimalItemConsumable_Egg_Wyvern_Fertilized_Fire_C",
 			"icon": "/Game/ScorchedEarth/Icons/Resources/WyvernEgg1_Icon.WyvernEgg1_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Drake/ADrake_Character_BP_Fire.ADrake_Character_BP_Fire_C",
-				"temperature": [ 80, 90 ]
+				"temperature": { "min": 80, "max": 90 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Atlas Drake Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Drake/PrimalItemConsumable_Egg_Drake_Fertilized_Storm.PrimalItemConsumable_Egg_Drake_Fertilized_Storm_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Wyvern_Fertilized_Lightning.PrimalItemConsumable_Egg_Wyvern_Fertilized_Lightning_C",
 			"icon": "/Game/ScorchedEarth/Icons/Resources/WyvernEgg3_Icon.WyvernEgg3_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 50,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Drake/ADrake_Character_BP_Storm.ADrake_Character_BP_Storm_C",
-				"temperature": [ 80, 90 ]
+				"temperature": { "min": 80, "max": 90 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Forest Elephant Saddle",
 			"description": "Equip a Forest Elephant with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Elephant/PrimalItemArmor_ElephantSaddle.PrimalItemArmor_ElephantSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/WoollyRhino/Saddle/HUD_WoollyRhinoSaddle_Colorize_MIC.HUD_WoollyRhinoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 22.2,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 130,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					},
-					{
-						"exact": false,
-						"qty": 60,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 250, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 130, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 60, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 22.2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Create Infernal",
 			"description": "Use this to bring your newly created Infernal to life!",
 			"bp": "/Game/Mods/AtlasPort/Critter/FireElemental/PrimalItemConsumable_CreaInf.PrimalItemConsumable_CreaInf_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Artifact6_Icon.Artifact6_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
-			"maxQuantity": 100,
-			"spoilage": { "time": 120000 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
+			"spoilsIn": 120000,
 			"crafting": {
 				"xp": 200,
-				"bpCraftTime": 40,
-				"minLevelReq": 0,
+				"time": 40,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Sulfur_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Stone_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Obsidian_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_BlackPearl_C"
-					},
-					{
-						"exact": false,
-						"qty": 500,
-						"type": "PrimalItemResource_Element_C"
-					}
+					{ "qty": 100, "type": "PrimalItemResource_Sulfur_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 50, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Element_C" }
 				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Atlas Giraffe Saddle",
 			"description": "Equip an Atlas Giraffe with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Giraffe/PrimalItemArmor_Giraffe_Saddle.PrimalItemArmor_Giraffe_Saddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Paraceratherium/Saddle/HUD_ParaceraSaddle_Colorize_MIC.HUD_ParaceraSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 74.4,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 110,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 10,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 200, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 110, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 74.4,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Lodestone Golem Saddle",
 			"description": "Equip a Lodestone Golem with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Golem/PrimalItemArmor_LodeGolemSaddle.PrimalItemArmor_LodeGolemSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/ScorchedEarth/Icons/Saddle/Materials/HUD_SaddleRockGolem_Colorize_MIC.HUD_SaddleRockGolem_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 70,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 270,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 35,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 270, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 35, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 70,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Activated Lodestone Golem Core",
 			"description": "Use this to bring your newly created Lodestone Golem to life!",
 			"bp": "/Game/Mods/AtlasPort/Critter/Golem/PrimalItemConsumable_CreaLode.PrimalItemConsumable_CreaLode_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Artifact9_Icon.Artifact9_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
-			"maxQuantity": 100,
-			"spoilage": { "time": 120000 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
+			"spoilsIn": 120000,
 			"crafting": {
 				"xp": 200,
-				"bpCraftTime": 40,
-				"minLevelReq": 0,
+				"time": 40,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 500,
-						"type": "PrimalItemResource_Stone_C"
-					},
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemResource_ApexDrop_Lodecore_C"
-					},
-					{
-						"exact": false,
-						"qty": 500,
-						"type": "PrimalItemResource_Element_C"
-					}
+					{ "qty": 500, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_Lodecore_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Element_C" }
 				]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Lodestone Golem Core",
 			"description": "This trophy proves your worth as a hunter.\nThe core of a Lodestone Golem, that once- and still does- hold it's life energy. Can be used to create a loyal Lodestone Golem of your own.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Golem/PrimalItemResource_ApexDrop_Lodecore.PrimalItemResource_ApexDrop_Lodecore_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Artifact9_Icon.Artifact9_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 2,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
+			"stackSize": 100
 		},
 		{
 			"name": "Aegis Implant",
 			"description": "Equip this implant onto an Aegis. Provides armor similar to a saddle!",
 			"bp": "/Game/Mods/AtlasPort/Critter/GoodWhale/PrimalItemArmor_AegislSaddle.PrimalItemArmor_AegislSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Implant_Icon_Gamma.Implant_Icon_Gamma",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 165,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_Fibers_C"
-					}
+					{ "qty": 165, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Fibers_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Savage Hammerhead Saddle",
 			"description": "Equip a Savage Hammerhead with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Hammerhead/PrimalItemArmor_AHammerlSaddle.PrimalItemArmor_AHammerlSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Megalodon/Saddle/HUD_MegalodonSaddle_Colorize_MIC.HUD_MegalodonSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 51.2,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 290,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 155,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					}
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
-			},
-			"repair": {
-				"xp": 51.2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Atlas Horse Saddle",
 			"description": "A saddle for your horse. Useful for crafting chemical supplies on the go!\n\nThis can be used with both the vanilla horse and the atlas horse.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Horse/PrimalItemArmor_HorseSaddle.PrimalItemArmor_HorseSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Equus/Saddle/HUD_EquusSaddle_Colorize_MIC.HUD_EquusSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 22.2,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 240,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 160,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 85,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_Stone_C"
-					}
+					{ "qty": 240, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 160, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 85, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Stone_C" }
 				]
-			},
-			"repair": {
-				"xp": 22.2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Atlas Kodiak Saddle",
 			"description": "Equip an Atlas Kodiak with this to ride it. A standard Direbear can also use this too.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Kodiak/PrimalItemArmor_KodiakSaddle.PrimalItemArmor_KodiakSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Direbear/Saddle/HUD_BearSaddle_Colorize_MIC.HUD_BearSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 22.2,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 300,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 130,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					}
+					{ "qty": 300, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 130, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
-			},
-			"repair": {
-				"xp": 22.2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Leatherwing Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Leatherwing/PrimalItemConsumable_Egg_LeatherWing_Fertilized.PrimalItemConsumable_Egg_LeatherWing_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Ptero.PrimalItemConsumable_Egg_Ptero_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Ptero.HUD_DinoEgg_MIC_Inst_Ptero",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Leatherwing/Leatherwing_character_bp.Leatherwing_character_bp_C",
-				"temperature": [ 29, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 2,
-						"color": [ 0.1, 0.31, 0.3, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.952024, 0.99, 0.1386, 1 ]
-					}
-				}
+				"temperature": { "min": 29, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Lion Saddle",
 			"description": "Equip a Lion with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Lion/PrimalItemArmor_LionSaddle.PrimalItemArmor_LionSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Saber/Saddle/HUD_SaberSaddle_Colorize_MIC.HUD_SaberSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 62.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 290,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 155,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 62.8,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Harbinger Saddle",
 			"description": "Equip a Harbinger with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/MeanWhale/PrimalItemArmor_HarbingerSaddle.PrimalItemArmor_HarbingerSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Mosasaurus/MosasaurusSaddle/HUD_Mosasaurus_Saddle_Colorize_MIC.HUD_Mosasaurus_Saddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 116,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 800,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 600,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 140,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Silicon_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 800, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 600, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 140, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Silicon_C" },
+					{ "qty": 200, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 116,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Naga Implant",
 			"description": "Equip this implant onto a Naga. Provides armor similar to a saddle!",
 			"bp": "/Game/Mods/AtlasPort/Critter/Naga/PrimalItemArmor_NagaImplant.PrimalItemArmor_NagaImplant_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Implant_Icon_Gamma.Implant_Icon_Gamma",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Naga Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Naga/PrimalItemConsumable_Egg_Naga_Fertilized.PrimalItemConsumable_Egg_Naga_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carno.PrimalItemConsumable_Egg_Carno_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Naga/Naga_Character_bp.Naga_Character_bp_C",
-				"temperature": [ 26, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.08, 0.08, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.005, 0.005, 0.005, 1 ]
-					}
-				}
+				"temperature": { "min": 26, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Aberrant Naga Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Naga/PrimalItemConsumable_Egg_Naga_Fertilized_Child.PrimalItemConsumable_Egg_Naga_Fertilized_Child_C",
+			"parent": "/Game/Mods/AtlasPort/Critter/Naga/PrimalItemConsumable_Egg_Naga_Fertilized.PrimalItemConsumable_Egg_Naga_Fertilized_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Naga/Naga_Character_bp_Aberrant.Naga_Character_bp_Aberrant_C",
-				"temperature": [ 26, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.08, 0.08, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.005, 0.005, 0.005, 1 ]
-					}
-				}
+				"temperature": { "min": 26, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Olfend Saddle",
 			"description": "Equip a Olfend with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Olfend/PrimalItemArmor_OlfendSaddle.PrimalItemArmor_OlfendSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/ScorchedEarth/Icons/Saddle/Materials/HUD_SaddleMorellatops_Colorize_MIC.HUD_SaddleMorellatops_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 20,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 140,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 30,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 140, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 70,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Ostrich Saddle",
 			"description": "Equip a Ostrich with this to ride it. Turns it into a helpful travel companion, too!",
 			"bp": "/Game/Mods/AtlasPort/Critter/Ostrich/PrimalItemArmor_OstrichSaddle.PrimalItemArmor_OstrichSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Para/Saddle_New/HUD_ParaSaddle_Colorize_MIC.HUD_ParaSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 13,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 15,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 80, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 13,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Ostrich Egg",
 			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Ostrich/PrimalItemConsumable_Egg_OST.PrimalItemConsumable_Egg_OST_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_XSmall.PrimalItemConsumable_Egg_XSmall_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Para.HUD_DinoEgg_MIC_Inst_Para",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"health": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"stamina": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.7,
-						"color": [ 0.781566, 0.8, 0.478006, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.18, 0.372203, 0.9, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Ostrich Egg",
 			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Ostrich/PrimalItemConsumable_Egg_Ost_Fertilized.PrimalItemConsumable_Egg_Ost_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Para.PrimalItemConsumable_Egg_Para_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Para.HUD_DinoEgg_MIC_Inst_Para",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 5,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"health": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				},
-				"stamina": {
-					"value": 25,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 6.25
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Ostrich/AOstrich_Character_BP.AOstrich_Character_BP_C",
-				"temperature": [ 24, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.7,
-						"color": [ 0.781566, 0.8, 0.478006, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.18, 0.372203, 0.9, 1 ]
-					}
-				}
+				"temperature": { "min": 24, "max": 28 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Heracles Implant",
 			"description": "Equip this implant onto a Heracles. Provides armor similar to a saddle!",
 			"bp": "/Game/Mods/AtlasPort/Critter/Parrot/PrimalItemArmor_ParrotImplant.PrimalItemArmor_ParrotImplant_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Implant_Icon_Gamma.Implant_Icon_Gamma",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Heracles Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Parrot/PrimalItemConsumable_Egg_Parrot_Fertilized.PrimalItemConsumable_Egg_Parrot_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Ptero.PrimalItemConsumable_Egg_Ptero_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Ptero.HUD_DinoEgg_MIC_Inst_Ptero",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 7,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"health": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				},
-				"stamina": {
-					"value": 35,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 8.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Parrot/AParrot_character_bp.AParrot_character_bp_C",
-				"temperature": [ 29, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 2,
-						"color": [ 0.1, 0.31, 0.3, 1 ]
-					},
-					"cyan": {
-						"intensity": 10,
-						"color": [ 0.952024, 0.99, 0.1386, 1 ]
-					}
-				}
+				"temperature": { "min": 29, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Apophis Rattler Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Rattlesnake/PrimalItemConsumable_Egg_Rattler_Fertilized.PrimalItemConsumable_Egg_Rattler_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carno.PrimalItemConsumable_Egg_Carno_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Rattlesnake/ARattler_Character_bp.ARattler_Character_bp_C",
-				"temperature": [ 26, 32 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.08, 0.08, 0.08, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.005, 0.005, 0.005, 1 ]
-					}
-				}
+				"temperature": { "min": 26, "max": 32 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Razortooth Saddle",
 			"description": "Equip a Razortooth with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/PrimalItemArmor_RazorSaddle.PrimalItemArmor_RazorSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Yutyrannus/Saddle/HUD_YutySaddle_Colorize_MIC.HUD_YutySaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 86,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 425,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 135,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 125,
-						"type": "PrimalItemResource_Silicon_C"
-					}
+					{ "qty": 425, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 135, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Silicon_C" }
 				]
-			},
-			"repair": {
-				"xp": 86,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Razortooth Egg",
 			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/PrimalItemConsumable_Egg_Razor.PrimalItemConsumable_Egg_Razor_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_XtraLarge.PrimalItemConsumable_Egg_XtraLarge_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Yuty.HUD_DinoEgg_MIC_Inst_Yuty",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 15,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.355, 0.274757, 0.120458, 1 ]
-					},
-					"cyan": {
-						"intensity": 1.5,
-						"color": [ 1, 0.351066, 0.168014, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Razortooth Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/PrimalItemConsumable_Egg_Razor_Fertilized.PrimalItemConsumable_Egg_Razor_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Yuty.PrimalItemConsumable_Egg_Yuty_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Yuty.HUD_DinoEgg_MIC_Inst_Yuty",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 15,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Razortooth/Razortooth_Character_BP.Razortooth_Character_BP_C",
-				"temperature": [ 32, 34 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.355, 0.274757, 0.120458, 1 ]
-					},
-					"cyan": {
-						"intensity": 1.5,
-						"color": [ 1, 0.351066, 0.168014, 1 ]
-					}
-				}
+				"temperature": { "min": 32, "max": 34 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Aberrant Razortooth Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/PrimalItemConsumable_Egg_Razor_Fertilized_Aberrant.PrimalItemConsumable_Egg_Razor_Fertilized_Aberrant_C",
+			"parent": "/Game/Mods/AtlasPort/Critter/Razortooth/PrimalItemConsumable_Egg_Razor_Fertilized.PrimalItemConsumable_Egg_Razor_Fertilized_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Yuty.HUD_DinoEgg_MIC_Inst_Yuty",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 15,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Razortooth/Razortooth_Character_BP_Aberrant.Razortooth_Character_BP_Aberrant_C",
-				"temperature": [ 32, 34 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.355, 0.274757, 0.120458, 1 ]
-					},
-					"cyan": {
-						"intensity": 1.5,
-						"color": [ 1, 0.351066, 0.168014, 1 ]
-					}
-				}
+				"temperature": { "min": 32, "max": 34 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Pangolin Rhinoceros Saddle",
 			"description": "Equip a Pangolin Rhinoceros with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Rhino/PrimalItemArmor_PagRhinoSaddle.PrimalItemArmor_PagRhinoSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/WoollyRhino/Saddle/HUD_WoollyRhinoSaddle_Colorize_MIC.HUD_WoollyRhinoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 22.2,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 130,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_ChitinPaste_C"
-					},
-					{
-						"exact": false,
-						"qty": 60,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 250, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 130, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 60, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 22.2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Tyrant Scorpion Saddle",
 			"description": "Equip a Tyrant Scorpion with this to ride it. ",
 			"bp": "/Game/Mods/AtlasPort/Critter/Scorpion/PrimalItemArmor_AtlasScorpSaddle.PrimalItemArmor_AtlasScorpSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Scorpion/Saddle/HUD_ScorpionSaddle_Colorize_MIC.HUD_ScorpionSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 22.2,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 140,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 140, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 22.2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Tyrant Scorpion Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Scorpion/PrimalItemConsumable_Egg_AScorp_Fertilized.PrimalItemConsumable_Egg_AScorp_Fertilized_C",
+			"parent": "/Game/Genesis/Dinos/BogSpider/PrimalItemConsumable_Egg_BogSpider.PrimalItemConsumable_Egg_BogSpider_C",
 			"icon": "/Game/Genesis/Icons/Items/Item_BogSpiderEgg_Icon.Item_BogSpiderEgg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 8,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 50,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 12.5
-				},
-				"health": {
-					"value": 50,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 12.5
-				},
-				"stamina": {
-					"value": 50,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 12.5
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 50, "useItemQuality": true, "duration": 12.5 },
+				{ "stat": "health", "value": 50, "useItemQuality": true, "duration": 12.5 },
+				{ "stat": "stamina", "value": 50, "useItemQuality": true, "duration": 12.5 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Scorpion/AScorpion_Character_BP.AScorpion_Character_BP_C",
-				"temperature": [ 27, 30 ]
+				"temperature": { "min": 27, "max": 30 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Hippocampus Saddle",
 			"description": "Equip a Hippocampus with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Seahorse/PrimalItemArmor_HippocampusSaddle.PrimalItemArmor_HippocampusSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Daeodon/Saddle/HUD_DaeodonSaddle_Colorize_MIC.HUD_DaeodonSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 62.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 290,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 155,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 62.8,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Shieldhorn Saddle",
 			"description": "Equip a Shieldhorn with this to ride it. Triceratops can also use this too!",
 			"bp": "/Game/Mods/AtlasPort/Critter/ShieldHorn/PrimalItemArmor_ShieldHornSaddle.PrimalItemArmor_ShieldHornSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Trike/Saddle/HUD_TrikeSaddle_Colorize_MIC.HUD_TrikeSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 22.2,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 140,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 80,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 140, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 22.2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Shieldhorn Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/ShieldHorn/PrimalItemConsumable_Egg_Shield.PrimalItemConsumable_Egg_Shield_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Small.PrimalItemConsumable_Egg_Small_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Trike.HUD_DinoEgg_MIC_Inst_Trike",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 9,
-			"maxQuantity": 100,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 45,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 11.25
-				},
-				"health": {
-					"value": 45,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 11.25
-				},
-				"stamina": {
-					"value": 45,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 11.25
-				}
-			},
-			"egg": {
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.265, 0.24907, 0.053, 1 ]
-					},
-					"cyan": {
-						"intensity": 1.5,
-						"color": [ 1, 1, 1, 1 ]
-					}
-				}
-			},
-			"cookingStats": {
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 45, "useItemQuality": true, "duration": 11.25 },
+				{ "stat": "health", "value": 45, "useItemQuality": true, "duration": 11.25 },
+				{ "stat": "stamina", "value": 45, "useItemQuality": true, "duration": 11.25 }
+			],
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Shieldhorn Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/ShieldHorn/PrimalItemConsumable_Egg_Shield_Fertilized.PrimalItemConsumable_Egg_Shield_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Trike.PrimalItemConsumable_Egg_Trike_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Trike.HUD_DinoEgg_MIC_Inst_Trike",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 9,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 45,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 11.25
-				},
-				"health": {
-					"value": 45,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 11.25
-				},
-				"stamina": {
-					"value": 45,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 11.25
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 45, "useItemQuality": true, "duration": 11.25 },
+				{ "stat": "health", "value": 45, "useItemQuality": true, "duration": 11.25 },
+				{ "stat": "stamina", "value": 45, "useItemQuality": true, "duration": 11.25 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/ShieldHorn/Shieldhorn_Character_BP.Shieldhorn_Character_bp_C",
-				"temperature": [ 22, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.265, 0.24907, 0.053, 1 ]
-					},
-					"cyan": {
-						"intensity": 1.5,
-						"color": [ 1, 1, 1, 1 ]
-					}
-				}
+				"temperature": { "min": 22, "max": 28 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized Allseer Squid Egg",
 			"description": "Eat it to gain tremendous nourishment",
 			"bp": "/Game/Mods/AtlasPort/Critter/Squid/PrimalItemConsumable_UnderwaterEgg_Allseer.PrimalItemConsumable_UnderwaterEgg_Allseer_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_UnderwaterEgg.PrimalItemConsumable_UnderwaterEgg_C",
 			"icon": "/Game/PrimalEarth/Items/FishEgg/HUD_FishEgg_Colorize_MIC_Tuso.HUD_FishEgg_Colorize_MIC_Tuso",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 3,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				},
-				"health": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				},
-				"stamina": {
-					"value": 30,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 7.5
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "health", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "stamina", "value": 30, "useItemQuality": true, "duration": 7.5 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Squid/AtlasSquid_Character_BP.AtlasSquid_Character_BP_C",
-				"temperature": [ -75, 75 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.915, 0.764025, 0.905715, 1 ]
-					},
-					"cyan": {
-						"intensity": 1,
-						"color": [ 0.97, 0.391242, 0.772833, 20 ]
-					}
-				}
+				"temperature": { "min": -75, "max": 75 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Atlas Tiger Saddle",
 			"description": "Equip an Atlas Tiger with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Tiger/PrimalItemArmor_TigerSaddle.PrimalItemArmor_TigerSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Saber/Saddle/HUD_SaberSaddle_Colorize_MIC.HUD_SaberSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 62.8,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 290,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 155,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 20,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 62.8,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Tortugar Saddle",
 			"description": "A saddle for your Tortugar. It allows for passengers! Bring lots of friends!",
 			"bp": "/Game/Mods/AtlasPort/Critter/Tortugar/PrimalItemArmor_TortugarSaddle.PrimalItemArmor_TortugarSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Diplodocus/SaddleNew/HUD_DiploSaddle10Seat_Colorize_MIC.HUD_DiploSaddle10Seat_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 22.2,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 500,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 15,
-						"type": "PrimalItemResource_Wood_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 250, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 22.2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Tortugar Egg",
 			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Tortugar/PrimalItemConsumable_Egg_Tortugar_Fertilized.PrimalItemConsumable_Egg_Tortugar_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Rex.PrimalItemConsumable_Egg_Rex_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Rex.HUD_DinoEgg_MIC_Inst_Rex",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 15,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"health": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				},
-				"stamina": {
-					"value": 80,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 20
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AtlasPort/Critter/Tortugar/Tortugar_Character_bp.Tortugar_Character_bp_C",
-				"temperature": [ 32, 34 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 0.8,
-						"color": [ 0.355, 0.048384, 0.0355, 1 ]
-					},
-					"cyan": {
-						"intensity": 1.5,
-						"color": [ 0.986833, 1, 0.77, 1 ]
-					}
-				}
+				"temperature": { "min": 32, "max": 34 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Yakalo Saddle",
 			"description": "Equip a Yakalo or Produce Cow with this to ride it.",
 			"bp": "/Game/Mods/AtlasPort/Critter/Yak/PrimalItemArmor_CowYaSaddle.PrimalItemArmor_CowYaSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/WoollyRhino/Saddle/HUD_WoollyRhinoSaddle_Colorize_MIC.HUD_WoollyRhinoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 22.2,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 130,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 250, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 130, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 22.2,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Mythos Kibble",
 			"description": "A blended kibble made using various ingredients and mythos. Will calm even the mightiest of supernatural creatures.",
 			"bp": "/Game/Mods/AtlasPort/Item/Mythos/PrimalItemConsumable_Kibble_Base_Mythos.PrimalItemConsumable_Kibble_Base_Mythos_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/AtlasPort/ItemIcons/Mythos_Apex_Kibble.Mythos_Apex_Kibble",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Crafted Foods" ],
 			"weight": 0.1,
-			"maxQuantity": 100,
-			"spoilage": { "time": 259200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 100,
+			"spoilsIn": 259200,
 			"crafting": {
 				"xp": 1,
-				"bpCraftTime": 2,
-				"minLevelReq": 0,
+				"time": 2,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 5,
-						"type": "PrimalItemConsumable_Egg_Shield_Fertilized_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemConsumable_Egg_Razor_Fertilized_C"
-					},
-					{
-						"exact": false,
-						"qty": 2,
-						"type": "PrimalItemConsumable_Egg_Tortugar_Fertilized_C"
-					},
-					{
-						"exact": false,
-						"qty": 3,
-						"type": "PrimalItemConsumable_Kibble_Base_Special_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Mythos_C"
-					}
+					{ "qty": 5, "type": "PrimalItemConsumable_Egg_Shield_Fertilized_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Egg_Razor_Fertilized_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Egg_Tortugar_Fertilized_C" },
+					{ "qty": 3, "type": "PrimalItemConsumable_Kibble_Base_Special_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Mythos_C" }
 				]
 			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 1,
-					"useItemQuality": true,
-					"descriptionIndex": 2,
-					"duration": 0.2
-				}
-			},
-			"cookingStats": {
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ],
+			"cooking": {
 				"health": 0.01,
 				"stamina": 3,
 				"food": 2.25,
-				"weight": 0.05
+				"weight": 0.05,
+				"water": -1
 			}
 		},
 		{
 			"name": "Mythos",
 			"description": "A strange material found on some creatures. Pulses with a strange energy...",
 			"bp": "/Game/Mods/AtlasPort/Item/Mythos/PrimalItemResource_Mythos.PrimalItemResource_Mythos_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/AtlasPort/ItemIcons/Item_MagicMarrow_Icon.Item_MagicMarrow_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 1,
-			"maxQuantity": 100,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
+			"stackSize": 100
 		},
 		{
 			"name": "Common Mushroom",
 			"description": "This mushroom can be found pretty much everywhere. It's tasty, and heals you slowly over time. Great in recipes!",
 			"bp": "/Game/Mods/AtlasPort/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_CommonMushroom.PrimalItemResource_CommonMushroom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
 			"icon": "/Game/PrimalEarth/Test_Craig/RareMushroom_Icon.RareMushroom_Icon",
 			"type": "MiscConsumable/Food",
-			"folders": [],
 			"weight": 0.2,
-			"maxQuantity": 100,
-			"spoilage": { "time": 25920 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 3,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
+			"stackSize": 100,
+			"spoilsIn": 25920,
+			"statEffects": [
+				{
+					"stat": "food", "value": 3, "useItemQuality": true,
 					"pctOf": "max",
-					"pctAbsRange": [ 0, 0 ],
+					"pctAbsRange": { "min": 0, "max": 0 },
 					"duration": 0.2
 				}
-			},
-			"cookingStats": {
+			],
+			"cooking": {
 				"health": 0.05,
 				"stamina": 0.2,
 				"food": 0.1,
@@ -2769,295 +1352,176 @@
 			"name": "Dragon Relic",
 			"description": "A rune that gives armor to the Atlas Hydra and Atlas Drake similar to a saddle.",
 			"bp": "/Game/Mods/AtlasPort/PrimalItemArmor_DragonRelic.PrimalItemArmor_DragonRelic_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Artifact6_Icon.Artifact6_Icon",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_Metal_C"
-					},
-					{
-						"exact": false,
-						"qty": 120,
-						"type": "PrimalItemResource_Obsidian_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_BlackPearl_C"
-					}
+					{ "qty": 100, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Submarine Crew Chairs",
 			"description": "Allows three additional passengers into your submarine.",
 			"bp": "/Game/Mods/AtlasPort/Submarine/Attachments/PrimalItemArmor_CompanyChairs.PrimalItemArmor_CompanyChairs_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Icon_WoodChair.Icon_WoodChair",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 10,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 3,
-						"type": "PrimalItemStructure_Furniture_WoodChair_C"
-					},
-					{
-						"exact": false,
-						"qty": 75,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 300,
-						"type": "PrimalItemResource_Hide_C"
-					}
+					{ "qty": 3, "type": "PrimalItemStructure_Furniture_WoodChair_C" },
+					{ "qty": 75, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 300, "type": "PrimalItemResource_Hide_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Improved Combat Module",
 			"description": "An improved AI component that allows combat and strength components to exert more power. In less technical terms, increasing overall strength (melee damage).\n\nGoes in your sub's Gloves slot.",
 			"bp": "/Game/Mods/AtlasPort/Submarine/Attachments/PrimalItemArmor_SubAttackModule.PrimalItemArmor_SubAttackModule_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKShieldGenerator_Icon.TEKShieldGenerator_Icon",
 			"type": "Equipment/Gloves",
 			"folders": [ "Saddles" ],
 			"weight": 5,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 150,
-						"type": "PrimalItemResource_Electronics_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_ElementDust_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 150, "type": "PrimalItemResource_Electronics_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ElementDust_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Improved Generator",
 			"description": "An improved generator which helps your sub by increasing energy maintenance and performance.\n\nGoes in the sub's Hat slot.",
 			"bp": "/Game/Mods/AtlasPort/Submarine/Attachments/PrimalItemArmor_SubGenerator.PrimalItemArmor_SubGenerator_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/Icons/Generator_Icon.Generator_Icon",
 			"type": "Equipment/Hat",
 			"folders": [ "Saddles" ],
 			"weight": 25,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemStructure_PowerGenerator_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemStructure_PowerGenerator_C" } ]
 			}
 		},
 		{
 			"name": "Strengthened Metal Hull",
 			"description": "Adds an additional armor value to your submarine, while increasing durability.\n\nGoes in the sub's Shield slot.",
 			"bp": "/Game/Mods/AtlasPort/Submarine/Attachments/PrimalItemArmor_SubHull.PrimalItemArmor_SubHull_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Metal/Icons/MetaWall_Icon.MetaWall_Icon",
 			"type": "Equipment/Shield",
 			"folders": [ "Saddles" ],
 			"weight": 350,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Polymer_C"
-					}
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Polymer_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Submarine AutoRepair Systems",
 			"description": "An extremely advanced onboard component that allows the submarine to repair itself over time at a slightly faster rate.\n\nGoes in your sub's Leggings slot.",
 			"bp": "/Game/Mods/AtlasPort/Submarine/Attachments/PrimalItemArmor_SubRepairModule.PrimalItemArmor_SubRepairModule_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKGenerator_Icon.TEKGenerator_Icon",
 			"type": "Equipment/Pants",
 			"folders": [ "Saddles" ],
 			"weight": 5,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 15,
-						"type": "PrimalItemResource_Element_C"
-					},
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_MetalIngot_C"
-					},
-					{
-						"exact": false,
-						"qty": 255,
-						"type": "PrimalItemResource_Electronics_C"
-					}
+					{ "qty": 15, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 100, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 255, "type": "PrimalItemResource_Electronics_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Submarine Vault",
 			"description": "An additional onboard vault for your submarine. Increases carry capacity and refrigeration.\n\nEquip it onto the Sub's chestpiece slot.",
 			"bp": "/Game/Mods/AtlasPort/Submarine/Attachments/PrimalItemArmor_SubVault.PrimalItemArmor_SubVault_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Vault_Icon.Vault_Icon",
 			"type": "Equipment/Shirt",
 			"folders": [ "Saddles" ],
 			"weight": 30,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItemStructure_StorageBox_Huge_C"
-					}
-				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemStructure_StorageBox_Huge_C" } ]
 			}
 		},
 		{
 			"name": "Submarine",
 			"description": "A marvelous, armored underwater vehicle! Use it to explore the deep sea and harvest its resources!\n\nNOTE: Must be placed underwater!",
 			"bp": "/Game/Mods/AtlasPort/Submarine/PrimalItemSubmarine.PrimalItemSubmarine_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
 			"icon": "/Game/Mods/AtlasPort/Submarine/Item_Submarine_Icon.Item_Submarine_Icon",
 			"type": "Structure",
 			"folders": [ "Misc" ],
 			"weight": 250,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 93.75,
-				"bpCraftTime": 15,
-				"minLevelReq": 0,
+				"time": 15,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_BlackPearl_C"
-					},
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_ElementDust_C"
-					},
-					{
-						"exact": false,
-						"qty": 185,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 450,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 555,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 100, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 250, "type": "PrimalItemResource_ElementDust_C" },
+					{ "qty": 185, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 450, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 555, "type": "PrimalItemResource_MetalIngot_C" }
 				]
 			}
 		},
@@ -3065,47 +1529,24 @@
 			"name": "Submarine Schematics",
 			"description": "A marvelous, armored underwater vehicle! Use it to explore the deep sea and harvest its resources!\n\nThese are Schematics. Put these in something like a storage box, smithy, or fabricator- (something that can hold the resouce cost), then craft this to obtain a Submarine.",
 			"bp": "/Game/Mods/AtlasPort/Submarine/PrimalItemSubmarine_Schematics.PrimalItemSubmarine_Schematics_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
 			"icon": "/Game/Mods/AtlasPort/Submarine/Item_Submarine_Icon.Item_Submarine_Icon",
 			"type": "Structure",
 			"folders": [ "Misc" ],
 			"weight": 0.05,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 93.75,
-				"bpCraftTime": 15,
-				"minLevelReq": 0,
+				"time": 15,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 100,
-						"type": "PrimalItemResource_BlackPearl_C"
-					},
-					{
-						"exact": false,
-						"qty": 250,
-						"type": "PrimalItemResource_ElementDust_C"
-					},
-					{
-						"exact": false,
-						"qty": 185,
-						"type": "PrimalItemResource_Crystal_C"
-					},
-					{
-						"exact": false,
-						"qty": 450,
-						"type": "PrimalItemResource_Polymer_C"
-					},
-					{
-						"exact": false,
-						"qty": 555,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 100, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 250, "type": "PrimalItemResource_ElementDust_C" },
+					{ "qty": 185, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 450, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 555, "type": "PrimalItemResource_MetalIngot_C" }
 				]
 			}
 		},
@@ -3113,28 +1554,19 @@
 			"name": "Submarine Schematics (Note)",
 			"description": "Step one in making a Submarine: write down your plans!\n\nCraft this to draft out your submarine schematics.",
 			"bp": "/Game/Mods/AtlasPort/Submarine/PrimalItemSubmarine_SchematicsCraft.PrimalItemSubmarine_SchematicsCraft_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Notes/Icons/Recipe_Icon.Recipe_Icon",
 			"type": "Structure",
 			"folders": [ "Misc" ],
 			"weight": 0.05,
-			"maxQuantity": 1,
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
+			"stackSize": 1,
 			"crafting": {
 				"xp": 93.75,
-				"bpCraftTime": 15,
-				"minLevelReq": 0,
+				"time": 15,
+				"levelReq": 0,
 				"productCount": 0,
-				"skillQualityMult": [ 0, 0.05 ],
-				"recipe": [
-					{
-						"exact": false,
-						"qty": 1,
-						"type": "PrimalItem_Note_C"
-					}
-				]
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItem_Note_C" } ]
 			}
 		}
 	]

@@ -1,6 +1,7 @@
 {
-	"version": "312.57.1588570866",
-	"format": "3",
+	"$schema": "../.schema/items.json",
+	"version": "327.19.1588570866",
+	"format": "4",
 	"mod": {
 		"id": "1908568783",
 		"tag": "BarbaryLion",
@@ -11,239 +12,113 @@
 			"name": "Cedarosaurus Saddle",
 			"description": "Equip a Cedarosaurus with this to ride it.",
 			"bp": "/Game/Mods/BarbaryLion/Cedarosaurus/PrimalItemArmor_CedaroSaddle.PrimalItemArmor_CedaroSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 86,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 380,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 200,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 50,
-						"type": "PrimalItemResource_MetalIngot_C"
-					}
+					{ "qty": 380, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
 				]
-			},
-			"repair": {
-				"xp": 86,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		},
 		{
 			"name": "Fertilized Cedarosaurus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BarbaryLion/Cedarosaurus/PrimalItemConsumable_Egg_Cedarosaur_Fertilized.PrimalItemConsumable_Egg_Cedarosaur_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Stego.PrimalItemConsumable_Egg_Stego_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego.HUD_DinoEgg_MIC_Inst_Stego",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BarbaryLion/Cedarosaurus/Cedarosaurus_Character_bp.Cedarosaurus_Character_bp_C",
-				"temperature": [ 22, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.05, 0.011337, 1 ]
-					},
-					"cyan": {
-						"intensity": 3,
-						"color": [ 0.7, 0.7, 0.035, 1 ]
-					}
-				}
+				"temperature": { "min": 22, "max": 28 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Fertilized X-Cedarosaurus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/BarbaryLion/Cedarosaurus/PrimalItemConsumable_Egg_Cedarosaur_FertilizedBog.PrimalItemConsumable_Egg_Cedarosaur_FertilizedBog_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Stego.PrimalItemConsumable_Egg_Stego_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego.HUD_DinoEgg_MIC_Inst_Stego",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 12,
-			"maxQuantity": 1,
-			"spoilage": { "time": 691200 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			},
-			"statEffects": {
-				"food": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"health": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				},
-				"stamina": {
-					"value": 55,
-					"useItemQuality": true,
-					"descriptionIndex": 0,
-					"duration": 13.75
-				}
-			},
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BarbaryLion/Cedarosaurus/Bog_Cedarosaurus_Character_bp.Bog_Cedarosaurus_Character_bp_C",
-				"temperature": [ 22, 28 ],
-				"hudColorisation": {
-					"red": {
-						"intensity": 1,
-						"color": [ 0.01, 0.05, 0.011337, 1 ]
-					},
-					"cyan": {
-						"intensity": 3,
-						"color": [ 0.7, 0.7, 0.035, 1 ]
-					}
-				}
+				"temperature": { "min": 22, "max": 28 }
 			},
-			"cookingStats": {
+			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
 				"food": 0.8,
-				"weight": 0.3
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
 			"name": "Dinosaur Bone",
 			"description": "A very ancient looking bone, must be usefull for something!",
 			"bp": "/Game/Mods/BarbaryLion/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ARKBone.PrimalItemResource_ARKBone_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/BarbaryLion/PrimalEarth/CoreBlueprints/Resources/Icons/ARKBone_Icon.ARKBone_Icon",
 			"type": "Resource",
-			"folders": [],
 			"weight": 2,
-			"maxQuantity": 200,
-			"spoilage": { "time": 2678400 },
-			"durability": {
-				"min": 0,
-				"ignoreInWater": false
-			},
-			"crafting": {
-				"xp": 1,
-				"bpCraftTime": 5,
-				"minLevelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": [ 0, 0.05 ]
-			},
-			"repair": {
-				"xp": 2,
-				"time": 5,
-				"resourceMult": 0.5
-			}
+			"stackSize": 200,
+			"spoilsIn": 2678400
 		},
 		{
 			"name": "Bonus Implant",
 			"description": "Equip this implant onto a creature of Bonus Content to provide armor to it, similar to a saddle",
 			"bp": "/Game/Mods/BarbaryLion/PrimalItemArmor_BarbaryImplant.PrimalItemArmor_BarbaryImplant_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Implant_Icon_Alpha.Implant_Icon_Alpha",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
-			"maxQuantity": 1,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
-				"bpCraftTime": 10,
-				"minLevelReq": 0,
+				"time": 10,
+				"levelReq": 0,
 				"productCount": 1,
-				"skillQualityMult": [ 0, 0.05 ],
+				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{
-						"exact": false,
-						"qty": 225,
-						"type": "PrimalItemResource_Hide_C"
-					},
-					{
-						"exact": false,
-						"qty": 350,
-						"type": "PrimalItemResource_Fibers_C"
-					},
-					{
-						"exact": false,
-						"qty": 25,
-						"type": "PrimalItemResource_Wood_C"
-					}
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" }
 				]
-			},
-			"repair": {
-				"xp": 17.6,
-				"time": 5,
-				"resourceMult": 0.5
 			}
 		}
 	]
