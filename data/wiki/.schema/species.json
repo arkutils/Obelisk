@@ -244,6 +244,68 @@
 			},
 			"additionalProperties": false
 		},
+		"ItemChancePair": {
+			"title": "ItemChancePair",
+			"type": "object",
+			"properties": {
+				"chance": {
+					"title": "Chance",
+					"description": "Chance this item will be selected, in an inclusive range from 0 to 1.",
+					"type": "number"
+				},
+				"item": {
+					"title": "Item",
+					"type": "string"
+				}
+			},
+			"required": [
+				"chance",
+				"item"
+			],
+			"additionalProperties": false
+		},
+		"DeathData": {
+			"title": "DeathData",
+			"type": "object",
+			"properties": {
+				"dossierId": {
+					"title": "Dossierid",
+					"default": -1,
+					"type": "integer"
+				},
+				"lootBagChance": {
+					"title": "Lootbagchance",
+					"description": "Chance for a loot bag to appear on death",
+					"default": 0,
+					"type": "number"
+				},
+				"lootBags": {
+					"title": "Lootbags",
+					"description": "Lists of possible loot bag drop sets (for cross-reference with drops.json files)",
+					"default": [],
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/ItemChancePair"
+					}
+				},
+				"engrams": {
+					"title": "Engrams",
+					"description": "Engrams player receives when this creature is defeated",
+					"default": [],
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"baseXP": {
+					"title": "Basexp",
+					"description": "XP awarded when level 1 creature is killed. Formula for specific level: baseXP * (1 + 0.1 * (level - 1))",
+					"default": 0,
+					"type": "number"
+				}
+			},
+			"additionalProperties": false
+		},
 		"Species": {
 			"title": "Species",
 			"type": "object",
@@ -335,6 +397,21 @@
 				},
 				"attack": {
 					"$ref": "#/definitions/AttackData"
+				},
+				"death": {
+					"title": "Death",
+					"default": {
+						"dossierId": -1,
+						"lootBagChance": 0,
+						"lootBags": [],
+						"engrams": [],
+						"baseXP": 0
+					},
+					"allOf": [
+						{
+							"$ref": "#/definitions/DeathData"
+						}
+					]
 				}
 			},
 			"required": [
