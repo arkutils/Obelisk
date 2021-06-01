@@ -61,29 +61,156 @@
 				"title"
 			]
 		},
+		"MinMaxChanceRange": {
+			"title": "MinMaxChanceRange",
+			"type": "object",
+			"properties": {
+				"chance": {
+					"title": "Chance",
+					"type": "number"
+				},
+				"min": {
+					"title": "Min",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"max": {
+					"title": "Max",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				}
+			},
+			"required": [
+				"chance",
+				"min",
+				"max"
+			],
+			"additionalProperties": false
+		},
 		"LevelData": {
 			"title": "LevelData",
 			"type": "object",
 			"properties": {
-				"ramp": {
-					"title": "Ramp",
+				"wildForcedLevel": {
+					"title": "Wildforcedlevel",
+					"description": "A value here means the spawns will not respect difficulty.",
+					"anyOf": [
+						{
+							"type": "integer"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"ignoresLevelModifiers": {
+					"title": "Ignoreslevelmodifiers",
+					"description": "Forced level will also not be influenced by spawner's level scaling or other settings on the species.",
+					"default": false,
+					"anyOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "boolean"
+						}
+					]
+				},
+				"wildLevelTable": {
+					"title": "Wildleveltable",
+					"default": [
+						{
+							"chance": 0.5405405,
+							"min": 1.0,
+							"max": 5.0
+						},
+						{
+							"chance": 0.2702703,
+							"min": 6.0,
+							"max": 12.0
+						},
+						{
+							"chance": 0.1351351,
+							"min": 13.0,
+							"max": 20.0
+						},
+						{
+							"chance": 0.05405405,
+							"min": 21.0,
+							"max": 30.0
+						}
+					],
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/MinMaxChanceRange"
+					}
+				},
+				"xpRamp": {
+					"title": "Xpramp",
 					"description": "Name of ramp that describes amount of experience needed to progress.",
 					"default": "DinoEasy",
 					"type": "string"
 				},
 				"maxExperience": {
 					"title": "Maxexperience",
-					"type": "number"
+					"default": 3550010,
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
 				},
-				"maxLevels": {
-					"title": "Max Level Ups",
+				"maxTameLevels": {
+					"title": "Maxtamelevels",
 					"description": "Max amount of level ups this species can have at default server settings.",
+					"default": 73,
 					"type": "integer"
 				},
-				"capOffset": {
-					"title": "Tame Level Cap Offset",
-					"description": "Number of extra levels (above normal cap) this species can gain when tamed without getting destroyed by validation",
-					"type": "integer"
+				"levelCapOffset": {
+					"title": "Levelcapoffset",
+					"description": "Extra levels this species can have before getting destroyed on servers with the DestroyTamesOverLevelClamp setting enabled.",
+					"default": 0,
+					"anyOf": [
+						{
+							"type": "integer"
+						},
+						{
+							"type": "integer"
+						}
+					]
 				}
 			},
 			"additionalProperties": false
@@ -361,8 +488,43 @@
 						"type": "string"
 					}
 				},
-				"levelCaps": {
-					"$ref": "#/definitions/LevelData"
+				"leveling": {
+					"title": "Leveling",
+					"default": {
+						"wildForcedLevel": null,
+						"ignoresLevelModifiers": false,
+						"wildLevelTable": [
+							{
+								"chance": 0.5405405,
+								"min": 1.0,
+								"max": 5.0
+							},
+							{
+								"chance": 0.2702703,
+								"min": 6.0,
+								"max": 12.0
+							},
+							{
+								"chance": 0.1351351,
+								"min": 13.0,
+								"max": 20.0
+							},
+							{
+								"chance": 0.05405405,
+								"min": 21.0,
+								"max": 30.0
+							}
+						],
+						"xpRamp": "DinoEasy",
+						"maxExperience": 3550010,
+						"maxTameLevels": 73,
+						"levelCapOffset": 0
+					},
+					"allOf": [
+						{
+							"$ref": "#/definitions/LevelData"
+						}
+					]
 				},
 				"cloning": {
 					"title": "Cloning",
