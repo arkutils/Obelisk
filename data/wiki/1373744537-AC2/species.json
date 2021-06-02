@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "327.21.1620716487.1",
+	"version": "327.21.1622587129",
 	"format": "3",
 	"mod": {
 		"id": "1373744537",
@@ -345,7 +345,7 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 35, "radius": 200, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 22, "radius": 200, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 60, "dmg": 35, "radius": 300, "stamina": 200 },
 					{ "name": "BiteNomFury", "interval": 60, "dmg": 0, "radius": 300, "stamina": 0 }
 				]
@@ -498,6 +498,110 @@
 			"death": { "baseXP": 30 }
 		},
 		{
+			"name": "Hadal Dragonfish",
+			"bp": "/Game/Mods/AC2/Dragonfish/Hadal_Character_bp.Hadal_Character_bp_C",
+			"dinoNameTag": "Angler",
+			"customTag": "Hadal",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 300,
+			"dragWeight": 150,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 55, "radius": 525, "stamina": 0 },
+					{ "name": "Grab", "interval": 10, "dmg": 55, "radius": 525, "stamina": 0 },
+					{ "name": "Consume", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 12 }
+		},
+		{
+			"name": "Ghost Hadal Dragonfish",
+			"bp": "/Game/Mods/AC2/Dragonfish/Hadal_Character_bp_Ghost.Hadal_Character_bp_Ghost_C",
+			"dinoNameTag": "Angler",
+			"customTag": "Hadal",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 300,
+			"dragWeight": 150,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 55, "radius": 525, "stamina": 0 },
+					{ "name": "Grab", "interval": 10, "dmg": 55, "radius": 525, "stamina": 0 },
+					{ "name": "Consume", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 12 }
+		},
+		{
 			"name": "Thorned Dreadweaver",
 			"bp": "/Game/Mods/AC2/Dreadweaver/Dreadweaver_Character_BP.Dreadweaver_Character_BP_C",
 			"dinoNameTag": "Spider",
@@ -553,6 +657,51 @@
 				]
 			},
 			"death": { "baseXP": 3 }
+		},
+		{
+			"name": "Eryops",
+			"bp": "/Game/Mods/AC2/Eryops/Eryops_Character_bp.Eryops_Character_bp_C",
+			"dinoNameTag": "Sarco",
+			"customTag": "Eryops",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 200,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 600 },
+				"swim": { "base": 600, "sprint": 1800 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 600 },
+				"swim": { "base": 600, "sprint": 1800 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 50, "radius": 250, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
 		},
 		{
 			"name": "Europasaurus",
@@ -1366,54 +1515,106 @@
 			"death": { "baseXP": 30 }
 		},
 		{
-			"name": "Skeletal Carnotaurus",
-			"bp": "/Game/Mods/AC2/PrimalEarth/Dinos/Carno/Bone_MegaCarno_Character_BP.Bone_MegaCarno_Character_BP_C",
-			"dinoNameTag": "Elite Carno",
-			"customTag": "Carno",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 222,
-			"dragWeight": 250,
-			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
-			"cloning": {
-				"costBase": 650,
-				"costLevel": 55,
-				"timeBase": 4550,
-				"timeLevel": 385
-			},
+			"name": "Phosphatodraco",
+			"bp": "/Game/Mods/AC2/Phosphato/Phosphato_Character_bp.Phosphato_Character_bp_C",
+			"dinoNameTag": "Tapejara",
+			"customTag": "Phosphato",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 550, "sprint": 1309 },
-				"swim": { "base": 400 }
+				"walk": { "base": 400, "sprint": 1200 },
+				"fly": { "base": 900, "sprint": 2700 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 550, "sprint": 1540 },
-				"swim": { "base": 400 }
+				"walk": { "base": 400, "sprint": 1200 },
+				"fly": { "base": 900, "sprint": 2700 },
+				"swim": { "base": 300 }
 			},
 			"staminaRates": {
 				"sprint": -15,
-				"swimOrFly": -3
+				"swimOrFly": -5
 			},
 			"attack": {
-				"defaultDmg": 80,
-				"defaultSwingRadius": 180,
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 80, "radius": 180, "stamina": 0 },
-					{ "name": "Gore", "interval": 0.5, "dmg": 80, "radius": 190, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 22, "radius": 250, "stamina": 0 },
+					{ "name": "Pecc", "interval": 3, "dmg": 22, "radius": 250, "stamina": 0 },
+					{ "name": "Snezz", "interval": 10, "dmg": 60, "radius": 600, "stamina": 0 },
+					{ "name": "Taunt", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/AC2/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_MegaCarno_Skel.DinoDropInventoryComponent_Carnivore_MegaCarno_Skel"
-					}
-				],
-				"baseXP": 460
-			}
+			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "X-Phosphatodraco",
+			"bp": "/Game/Mods/AC2/Phosphato/Volcano_Phosphato_Character_bp.Volcano_Phosphato_Character_bp_C",
+			"dinoNameTag": "Tapejara",
+			"customTag": "Phosphato",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1200 },
+				"fly": { "base": 900, "sprint": 2700 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1200 },
+				"fly": { "base": 900, "sprint": 2700 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -5
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 22, "radius": 250, "stamina": 0 },
+					{ "name": "Pecc", "interval": 3, "dmg": 22, "radius": 250, "stamina": 0 },
+					{ "name": "Snezz", "interval": 10, "dmg": 60, "radius": 600, "stamina": 0 },
+					{ "name": "Taunt", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
 		},
 		{
 			"name": "Skeletal Rex",
@@ -1956,6 +2157,44 @@
 				]
 			},
 			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Psittacosaurus",
+			"bp": "/Game/Mods/AC2/Taco/Taco_Character_bp.Taco_Character_bp_C",
+			"dinoNameTag": "Pegomastax",
+			"customTag": "",
+			"targetingTeamName": "Herbivores",
+			"mass": 165,
+			"dragWeight": 10,
+			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "canMountOnHumans" ],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 80, "sprint": 480 },
+				"swim": { "base": 100 }
+			},
+			"movementD": {
+				"walk": { "base": 80, "sprint": 480 },
+				"swim": { "base": 100 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [ { "name": "Melee", "interval": 0.04, "dmg": 12, "radius": 300, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 3 }
 		},
 		{
 			"name": "Torosaurus",
