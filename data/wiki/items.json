@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/items.json",
-	"version": "327.19.6653924",
+	"version": "329.3.6806323",
 	"format": "4",
 	"items": [
 		{
@@ -1178,6 +1178,30 @@
 			}
 		},
 		{
+			"name": "Carnivorous Plant Seed",
+			"description": "Plant this in a viable large crop plot to grow a carnivorous plant.",
+			"bp": "/Game/Aberration/Structures/CarnivorousPlant/PrimalItemConsumable_Seed_Carnivorous_Plant.PrimalItemConsumable_Seed_Carnivorous_Plant_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumableSeed.PrimalItemConsumableSeed_C",
+			"icon": "/Game/Aberration/Icons/Plants/Carnivorous_Plant_Seed_Icon.Carnivorous_Plant_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 100,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Carnivorous Plant Trap",
+			"description": "Immobilizes humans and small creatures.",
+			"bp": "/Game/Aberration/Structures/CarnivorousPlant/PrimalItemStructure_Carnivorous_Plant_Trap.PrimalItemStructure_Carnivorous_Plant_Trap_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Aberration/Icons/Plants/Carnivorous_Plant_Icon.Carnivorous_Plant_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Defenses" ],
+			"weight": 2,
+			"stackSize": 10,
+			"spoilsIn": 3600,
+			"structure": "/Game/Aberration/Structures/CarnivorousPlant/Structure_Carnivorous_Plant_Trap.Structure_Carnivorous_Plant_Trap_C"
+		},
+		{
 			"name": "Metal Cliff Platform",
 			"description": "A Cliff Platform is required to build structures extending from a cliff. This one is made from shiny metal.",
 			"bp": "/Game/Aberration/Structures/CliffPlatforms/Metal_CliffPlatform/PrimalItemStructure_Metal_CliffPlatform.PrimalItemStructure_Metal_CliffPlatform_C",
@@ -1542,6 +1566,29 @@
 				]
 			},
 			"weapon": "/Game/Aberration/WeaponTekSniper/WeapTekSniper.WeapTekSniper_C"
+		},
+		{
+			"name": "Tracer Rounds",
+			"description": "Flareboyant Ammo Placerholder description",
+			"bp": "/Game/Aberration/WeaponTracerRoundAmmo/PrimalItemAmmo_TracerRound.PrimalItemAmmo_TracerRound_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/Bullet6_Icon.Bullet6_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.5,
+				"time": 4.9,
+				"levelReq": 0,
+				"productCount": 2,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 9, "type": "PrimalItemResource_Gunpowder_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Gas_C" }
+				]
+			}
 		},
 		{
 			"name": "Artifact of Chaos",
@@ -1909,6 +1956,7 @@
 			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C",
 			"icon": "/Game/Extinction/Icons/Resources/EnforcerUnassembled_Icon.EnforcerUnassembled_Icon",
 			"type": "MiscConsumable/Food",
+			"folders": [ "Vehicles" ],
 			"weight": 200,
 			"stackSize": 1,
 			"crafting": {
@@ -1933,6 +1981,7 @@
 			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C",
 			"icon": "/Game/Extinction/Icons/Resources/MekUnassembled_Icon.MekUnassembled_Icon",
 			"type": "MiscConsumable/Food",
+			"folders": [ "Vehicles" ],
 			"weight": 1000,
 			"stackSize": 1,
 			"crafting": {
@@ -3110,6 +3159,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGeneric.PrimalItemWeaponGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/ScoutGrenade_Icon.ScoutGrenade_Icon",
 			"type": "Weapon",
+			"folders": [ "Vehicles", "Drone" ],
 			"weight": 0.5,
 			"stackSize": 1,
 			"durability": 1,
@@ -3187,6 +3237,7 @@
 			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_Spawner_Enforcer.PrimalItem_Spawner_Enforcer_C",
 			"icon": "/Game/Extinction/Icons/Resources/EnforcerUnassembled_Icon.EnforcerUnassembled_Icon",
 			"type": "MiscConsumable/Food",
+			"folders": [ "Vehicles" ],
 			"weight": 200,
 			"stackSize": 1,
 			"crafting": {
@@ -3211,6 +3262,7 @@
 			"parent": "/Game/Extinction/Dinos/Scout/PrimalItem_WeaponScoutRemote.PrimalItem_WeaponScoutRemote_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/ScoutGrenade_Icon.ScoutGrenade_Icon",
 			"type": "Weapon",
+			"folders": [ "Vehicles", "Drone" ],
 			"weight": 0.5,
 			"stackSize": 1,
 			"durability": 1,
@@ -3394,6 +3446,7 @@
 			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C",
 			"icon": "/Game/Genesis/UI/Icons/HUD_HoverSkiff_Icon.HUD_HoverSkiff_Icon",
 			"type": "MiscConsumable/Food",
+			"folders": [ "Vehicles" ],
 			"weight": 800,
 			"stackSize": 1,
 			"crafting": {
@@ -3559,6 +3612,33 @@
 			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapChainSaw_Gauntlet.WeapChainSaw_Gauntlet_C"
 		},
 		{
+			"name": "Tek Grenade",
+			"description": "Sticks to targets with a powerful Tek Explosion after 5 seconds. Equipping requires learning this Tekgram.",
+			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_TekGrenade_Gauntlet.PrimalItem_TekGrenade_Gauntlet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_TekGrenade.PrimalItem_TekGrenade_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/TEKGrenade_Icon.TEKGrenade_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Explosive" ],
+			"weight": 0.5,
+			"stackSize": 10,
+			"crafting": {
+				"xp": 11.35,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 3,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 40, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 30, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Gunpowder_C" }
+				]
+			},
+			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapTekGrenade_Gauntlet.WeapTekGrenade_Gauntlet_C"
+		},
+		{
 			"name": "Tek Rifle",
 			"description": "Shoots explosive plasma bolts, with an infrared zoomable scope.\nEquipping requires learning this Tekgram.",
 			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_TekRifle_Gauntlet.PrimalItem_TekRifle_Gauntlet_C",
@@ -3636,6 +3716,30 @@
 				]
 			},
 			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapFlamethrower_Gauntlet.WeapFlamethrower_Gauntlet_C"
+		},
+		{
+			"name": "Boomerang",
+			"description": "Your trusty ranged weapon.",
+			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponBoomerang_Gauntlet.PrimalItem_WeaponBoomerang_Gauntlet_C",
+			"parent": "/Game/ScorchedEarth/WeaponBoomerang/PrimalItem_WeaponBoomerang.PrimalItem_WeaponBoomerang_C",
+			"icon": "/Game/ScorchedEarth/Icons/Weapons/Materials/HUD_Boomerang_Colorize_MIC.HUD_Boomerang_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Primitive", "Melee" ],
+			"weight": 0.2,
+			"stackSize": 10,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Sand_C" }
+				]
+			},
+			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapBoomerang_Gauntlet.WeapBoomerang_Gauntlet_C"
 		},
 		{
 			"name": "Bow",
@@ -3757,6 +3861,30 @@
 				]
 			},
 			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapCrossbow_Flame_Gauntlet.WeapCrossbow_Flame_Gauntlet_C"
+		},
+		{
+			"name": "Crossbow",
+			"description": "Has signifantly more power than the Bow, but cannot fire rapidly.  Can fire underwater.",
+			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponCrossbow_Gauntlet.PrimalItem_WeaponCrossbow_Gauntlet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponCrossbow.PrimalItem_WeaponCrossbow_C",
+			"icon": "/Game/PrimalEarth/WeaponCrossbow/Materials/HUD_Crossbow_Colorize_MIC.HUD_Crossbow_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Ranged" ],
+			"weight": 10,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 9,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 7, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapCrossbow_Gauntlet.WeapCrossbow_Gauntlet_C"
 		},
 		{
 			"name": "Grenade",
@@ -3978,6 +4106,33 @@
 			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapPike_Gauntlet.WeapPike_Gauntlet_C"
 		},
 		{
+			"name": "Electric Prod",
+			"description": "Powerful stunning weapon, but can only be used for a single strike before recharge is needed.",
+			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponProd_Gauntlet.PrimalItem_WeaponProd_Gauntlet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponProd.PrimalItem_WeaponProd_C",
+			"icon": "/Game/PrimalEarth/WeaponElectricProd/Materials/HUD_ElectricProd_Colorize_MIC.HUD_ElectricProd_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Melee" ],
+			"weight": 6,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 6.6,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 130, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Electronics_C" },
+					{ "qty": 70, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_AnglerGel_C" }
+				]
+			},
+			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapElectricProd_Gauntlet.WeapElectricProd_Gauntlet_C"
+		},
+		{
 			"name": "Assault Rifle",
 			"description": "The fastest way to fill a target with holes.",
 			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponRifle_Gauntlet.PrimalItem_WeaponRifle_Gauntlet_C",
@@ -4026,6 +4181,54 @@
 			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapRocketLauncher_Gauntlet.WeapRocketLauncher_Gauntlet_C"
 		},
 		{
+			"name": "Shotgun",
+			"description": "Very powerful up close, but less reliable with range.",
+			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponShotgun_Gauntlet.PrimalItem_WeaponShotgun_Gauntlet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponShotgun.PrimalItem_WeaponShotgun_C",
+			"icon": "/Game/PrimalEarth/WeaponSawedOffShotgun/HUD_Shotgun_Colorize_MIC.HUD_Shotgun_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms" ],
+			"weight": 10,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 105.75,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 80, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Hide_C" }
+				]
+			},
+			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapSawedOffShotgun_Gauntlet.WeapSawedOffShotgun_Gauntlet_C"
+		},
+		{
+			"name": "Slingshot",
+			"description": "A simple ranged weapon that deals damage from afar.  Better for knocking out a target than killing it outright.  Requires stone to fire.",
+			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponSlingshot_Gauntlet.PrimalItem_WeaponSlingshot_Gauntlet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSlingshot.PrimalItem_WeaponSlingshot_C",
+			"icon": "/Game/PrimalEarth/WeaponSlingshot/Material/HUD_Slingshot_Colorize_MIC.HUD_Slingshot_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Primitive", "Ranged" ],
+			"weight": 3,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0.95,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Hide_C" }
+				]
+			},
+			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapSlingshot_Gauntlet.WeapSlingshot_Gauntlet_C"
+		},
+		{
 			"name": "Flaming Spear",
 			"description": "A easily made melee weapon that can also be thrown.  Has a chance to break when used.",
 			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponSpear_Flame_Gauntlet.PrimalItem_WeaponSpear_Flame_Gauntlet_C",
@@ -4072,6 +4275,53 @@
 				]
 			},
 			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapSpear_Gauntlet.WeapSpear_Gauntlet_C"
+		},
+		{
+			"name": "Wooden Club",
+			"description": "A easily made melee weapon that is excellent for knocking out targets. Only effective at short range.",
+			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponStoneClub_Gauntlet.PrimalItem_WeaponStoneClub_Gauntlet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponStoneClub.PrimalItem_WeaponStoneClub_C",
+			"icon": "/Game/PrimalEarth/WeaponWoodClub/HUD_Club_Colorize.HUD_Club_Colorize",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Primitive", "Melee" ],
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0.7,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 4, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapStoneClub_Gauntlet.WeapStoneClub_Gauntlet_C"
+		},
+		{
+			"name": "Stone Pick",
+			"description": "A large stone pick for harvesting primarily flint from rocks, thatch from trees, and meat from bodies.",
+			"bp": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponStonePick_Gauntlet.PrimalItem_WeaponStonePick_Gauntlet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponStonePick.PrimalItem_WeaponStonePick_C",
+			"icon": "/Game/PrimalEarth/WeaponStonePick/HUD_StonePick_Colorize_MIC.HUD_StonePick_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Primitive", "Melee" ],
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0.4,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Thatch_C" }
+				]
+			},
+			"weapon": "/Game/Genesis/CoreBlueprints/Weapons/Mission/WeapStonePick_Gauntlet.WeapStonePick_Gauntlet_C"
 		},
 		{
 			"name": "Sword",
@@ -4739,8 +4989,19 @@
 			}
 		},
 		{
+			"name": "Damage Boost",
 			"bp": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey.PrimalItem_GauntletDamageBuffKey_C",
 			"parent": "/Script/ShooterGame.PrimalItem"
+		},
+		{
+			"name": "Health Boost",
+			"bp": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_Health.PrimalItem_GauntletDamageBuffKey_Health_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey.PrimalItem_GauntletDamageBuffKey_C"
+		},
+		{
+			"name": "Creature Summon",
+			"bp": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey.PrimalItem_GauntletDamageBuffKey_C"
 		},
 		{
 			"name": "Golden Nugget",
@@ -5164,6 +5425,2419 @@
 				]
 			},
 			"weapon": "/Game/Genesis/Weapons/TekHandBlades/WeapTekClaws.WeapTekClaws_C"
+		},
+		{
+			"name": "Mutagel",
+			"description": "Can be crafted into a Mutagen at a Chemistry bench and can be used to tame Stryders. Stryder Mutagel requirements scale by it's level.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Environment/Mutagen/PrimalItemConsumable_Mutagel.PrimalItemConsumable_Mutagel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_Gen2_Mutagel_Icon.HUD_Gen2_Mutagel_Icon",
+			"type": "MiscConsumable/Other",
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Mutagen_C" } ]
+			}
+		},
+		{
+			"name": "Mutagen",
+			"description": "Can be used to improve the statistics of non-bred dinos",
+			"bp": "/Game/Genesis2/CoreBlueprints/Environment/Mutagen/PrimalItemConsumable_Mutagen.PrimalItemConsumable_Mutagen_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_GEN2_Mutagen_Icon.HUD_GEN2_Mutagen_Icon",
+			"type": "MiscConsumable/Other",
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 200, "type": "PrimalItemConsumable_Mutagel_C" } ]
+			}
+		},
+		{
+			"name": "Federation Exo Boots Skin",
+			"description": "Highly advanced boots capable of absorbing the impact of falling from high distances.\nEquipping requires learning this Tekgram.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekBoots_Gen2.PrimalItemArmor_TekBoots_Gen2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekBoots.PrimalItemArmor_TekBoots_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/TekGen2/Icons/HUD_TekSuitGen2_Shoes_Icon.HUD_TekSuitGen2_Shoes_Icon",
+			"type": "Equipment/Boots",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 3,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 3.58,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" }
+				]
+			}
+		},
+		{
+			"name": "Federation Exo-Gloves Skin",
+			"description": "Highly advanced gauntlets that allow the wearer to perform devastating punches.\nEquipping requires learning this Tekgram.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekGloves_Gen2.PrimalItemArmor_TekGloves_Gen2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekGloves.PrimalItemArmor_TekGloves_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/TekGen2/Icons/HUD_TekSuitGen2_Gloves_Icon.HUD_TekSuitGen2_Gloves_Icon",
+			"type": "Equipment/Gloves",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 3,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 2.69,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Federation Exo Helmet Skin",
+			"description": "Never get lost again with the Tek Helmets night vision. Also provides a targeting mode that reveals other characters' positions, and infinite oxygen while underwater.\nEquipping requires learning this Tekgram.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekHelmet_Gen2.PrimalItemArmor_TekHelmet_Gen2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekHelmet.PrimalItemArmor_TekHelmet_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/TekGen2/Icons/HUD_TekSuitGen2_Helmet_Icon.HUD_TekSuitGen2_Helmet_Icon",
+			"type": "Equipment/Hat",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0.8,
+				"time": 5,
+				"levelReq": 15,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Federation Exo-leggings Skin",
+			"description": "Highly advanced leggings that allow for powerful forward movement. Equipping requires learning this Tekgram.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekPants_Gen2.PrimalItemArmor_TekPants_Gen2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekPants.PrimalItemArmor_TekPants_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/TekGen2/Icons/HUD_TekSuitGen2_Pants_Icon.HUD_TekSuitGen2_Pants_Icon",
+			"type": "Equipment/Pants",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 6,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 7.1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Federation Exo-Chestpiece Skin",
+			"description": "Highly advanced chestpiece with an integrated jetpack.\nEquipping requires learning this Tekgram.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekShirt_Gen2.PrimalItemArmor_TekShirt_Gen2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekShirt.PrimalItemArmor_TekShirt_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/TekGen2/Icons/HUD_TekSuitGen2_Shirt_Icon.HUD_TekSuitGen2_Shirt_Icon",
+			"type": "Equipment/Shirt",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 6,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5.78,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Tek Canteen",
+			"description": "Holds three times the water of a standard canteen. Can cool the water for extra refreshment.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumableEatable_WaterContainer.PrimalItemConsumableEatable_WaterContainer_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_Gen2_TekWater_Item.HUD_Gen2_TekWater_Item",
+			"type": "MiscConsumable/Food",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
+			"folders": [ "Misc" ],
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 120,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 6, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"statEffects": [ { "stat": "water", "value": 100, "useItemQuality": true } ]
+		},
+		{
+			"name": "Tek Canteen",
+			"description": "Holds three times the water of a standard canteen. Can cool the water for extra refreshment.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/PrimalItemConsumable_TekCanteenRefill.PrimalItemConsumable_TekCanteenRefill_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/PrimalItemConsumable_TekCanteenCraftable.PrimalItemConsumable_TekCanteenCraftable_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_Gen2_TekWater_Item.HUD_Gen2_TekWater_Item",
+			"type": "MiscConsumable/Food",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
+			"folders": [ "Misc" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_TekCanteenCraftable_C" } ]
+			},
+			"statEffects": [ { "stat": "water", "value": 100, "useItemQuality": true } ]
+		},
+		{
+			"name": "Mutated Survivor Costume Skin",
+			"description": "This will override all other skins, acting as a full-body costume. Should always be set on Torso Armor.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/PrimalItemSkin_Costume_MutatedSurvivor.PrimalItemSkin_Costume_MutatedSurvivor_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_FullCostumeTest.PrimalItemSkin_FullCostumeTest_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_CorruptHuman_MIC.HUD_Gen2_CorruptHuman_MIC",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/PrimalItem_PurchasableEngram.PrimalItem_PurchasableEngram_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C"
+		},
+		{
+			"name": "Base Shirt Clothing",
+			"description": "Covers your torso.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderAttachment_Base.PrimalItemArmor_TekStriderAttachment_Base_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseShirt.PrimalItemArmor_BaseShirt_C",
+			"icon": "/Game/OldAssets/Effects/Textures/LensFlare/T_Lensflare_01.T_Lensflare_01",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Excavation Rig",
+			"description": "Stryders equipped with this rig can mine high-value resources like stone and metal.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderHarvester.PrimalItemArmor_TekStriderHarvester_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderAttachment_Base.PrimalItemArmor_TekStriderAttachment_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_MiningDrill_Item_BC.HUD_Gen2_MiningDrill_Item_BC",
+			"type": "Equipment/Hat",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Phase Cannon Rig",
+			"description": "Stryders equipped with this rig can fire highly-damaging plasma blasts.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderLargeCannon.PrimalItemArmor_TekStriderLargeCannon_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderAttachment_Base.PrimalItemArmor_TekStriderAttachment_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_Cannon_Icon_BC.HUD_Gen2_Cannon_Icon_BC",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Pulse Cannon Rig",
+			"description": "Stryders equipped with this rig can fire high-rate plasma bursts.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderMachinegun.PrimalItemArmor_TekStriderMachinegun_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderAttachment_Base.PrimalItemArmor_TekStriderAttachment_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_InstantHit_Icon_BC.HUD_Gen2_InstantHit_Icon_BC",
+			"type": "Equipment/Hat",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Shield Projector Rig",
+			"description": "Stryders equipped with this rig can project a directional force field.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderOnesidedShield.PrimalItemArmor_TekStriderOnesidedShield_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderAttachment_Base.PrimalItemArmor_TekStriderAttachment_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_DirectionalShield_MIC.HUD_Gen2_DirectionalShield_MIC",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Shield Projector Rig",
+			"description": "Stryders equipped with this rig can project a directional force field.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderOnesidedShield_Mission.PrimalItemArmor_TekStriderOnesidedShield_Mission_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderOnesidedShield.PrimalItemArmor_TekStriderOnesidedShield_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_DirectionalShield_MIC.HUD_Gen2_DirectionalShield_MIC",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Radar Rig",
+			"description": "Stryders equipped with this rig can detect creatures within radar range.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderRadar.PrimalItemArmor_TekStriderRadar_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderAttachment_Base.PrimalItemArmor_TekStriderAttachment_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_EnemyDetector_Icon_BC.HUD_Gen2_EnemyDetector_Icon_BC",
+			"type": "Equipment/Hat",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Stryder Riding Platform",
+			"description": "Stryders equipped with this platform can be piloted and used to transport passengers.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderSaddle_Platform.PrimalItemArmor_TekStriderSaddle_Platform_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Paraceratherium/Saddle/HUD_Paracera_PlatformSaddle_Colorize_MIC.HUD_Paracera_PlatformSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 133.8,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 320, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 70, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 45, "type": "PrimalItemResource_Silicon_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			}
+		},
+		{
+			"name": "Resource Attractor Rig",
+			"description": "Stryders equipped with this rig can gather mined resources with an attractor beam.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderSaddlebags.PrimalItemArmor_TekStriderSaddlebags_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderAttachment_Base.PrimalItemArmor_TekStriderAttachment_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_ResourceVacuum_Icon_BC.HUD_Gen2_ResourceVacuum_Icon_BC",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Shield Generator Rig",
+			"description": "Stryders equipped with this rig can project a force field bubble.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderShield.PrimalItemArmor_TekStriderShield_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderAttachment_Base.PrimalItemArmor_TekStriderAttachment_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_BubbleShield_Icon_BC.HUD_Gen2_BubbleShield_Icon_BC",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Silence Cannon Rig",
+			"description": "Stryders equipped with this rig can suppress enemies with a sonic attack. ",
+			"bp": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderSilenceCannon.PrimalItemArmor_TekStriderSilenceCannon_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderAttachment_Base.PrimalItemArmor_TekStriderAttachment_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_SilenceCannon_Item_BC.HUD_Gen2_SilenceCannon_Item_BC",
+			"type": "Equipment/Hat",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Tek Rifle",
+			"description": "Shoots explosive plasma bolts, with an infrared zoomable scope.\nEquipping requires learning this Tekgram.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Weapons/Mission/PrimalItem_TekRifle_Gauntlet_STA.PrimalItem_TekRifle_Gauntlet_STA_C",
+			"parent": "/Game/Genesis/CoreBlueprints/Weapons/Mission/PrimalItem_TekRifle_Gauntlet.PrimalItem_TekRifle_Gauntlet_C",
+			"icon": "/Game/PrimalEarth/WeaponTekRifle/HUD_TekRifle_Colorize_MIC.HUD_TekRifle_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms", "Tek" ],
+			"weight": 10,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 180,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/CoreBlueprints/Weapons/Mission/WeapTekRifle_Gauntlet_STA.WeapTekRifle_Gauntlet_STA_C"
+		},
+		{
+			"name": "Minigun",
+			"description": "Deployable rotary machine gun that needs to be manned to fire at a target. Provides increased firepower after winding up, but consumes bullets quickly while firing.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponMinigun_Gauntlet.PrimalItem_WeaponMinigun_Gauntlet_C",
+			"parent": "/Game/Genesis2/Weapons/MiniGun/PrimalItem_WeaponMinigun.PrimalItem_WeaponMinigun_C",
+			"icon": "/Game/Genesis2/Icons/Weapons/HUD_Gen2_MiniGun_M.HUD_Gen2_MiniGun_M",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 360,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 175, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 500, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/CoreBlueprints/Weapons/Mission/WeapMinigun_Gauntlet.WeapMinigun_Gauntlet_C"
+		},
+		{
+			"name": "Tek Bow",
+			"description": "When infused with Element Shards, will 3-D print high velocity explosive arrows at a cost of Element Shards. Can also fire other arrow types.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponTekBow_Gauntlet.PrimalItem_WeaponTekBow_Gauntlet_C",
+			"parent": "/Game/Genesis2/Weapons/TekBow/PrimalItem_WeaponTekBow.PrimalItem_WeaponTekBow_C",
+			"icon": "/Game/Genesis2/Icons/Weapons/HUD_Gen2_TekBow_MIC.HUD_Gen2_TekBow_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Tek" ],
+			"weight": 12,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 200, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 75, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/CoreBlueprints/Weapons/Mission/WeapTekBow_Gauntlet.WeapTekBow_Gauntlet_C"
+		},
+		{
+			"name": "Tek Phase Pistol",
+			"description": "Shoots plasma beams with varying intensity and effect, at a cost of Element.",
+			"bp": "/Game/Genesis2/CoreBlueprints/Weapons/Mission/PrimalItem_WeaponTekPistol_Gauntlet.PrimalItem_WeaponTekPistol_Gauntlet_C",
+			"parent": "/Game/Genesis2/Weapons/TekPistol/PrimalItem_WeaponTekPistol.PrimalItem_WeaponTekPistol_C",
+			"icon": "/Game/Genesis2/Icons/Weapons/HUD_Gen2_TekPistol_M.HUD_Gen2_TekPistol_M",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms", "Tek" ],
+			"weight": 2.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 100,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 70, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 300, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 70, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 35, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Gem_Element_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Gem_BioLum_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Gem_Fertile_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/CoreBlueprints/Weapons/Mission/WeapTekPistol_Gauntlet.WeapTekPistol_Gauntlet_C"
+		},
+		{
+			"name": "Gen2 Allosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Allo_Gen2.PrimalItemConsumable_Egg_Allo_Gen2_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Allo.PrimalItemConsumable_Egg_Allo_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Allosaurus.HUD_DinoEgg_MIC_Inst_Allosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Allosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Allo_Gen2_Fertilized.PrimalItemConsumable_Egg_Allo_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Allo_Gen2.PrimalItemConsumable_Egg_Allo_Gen2_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Allosaurus.HUD_DinoEgg_MIC_Inst_Allosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Allo_Character_BP_Rockwell.Allo_Character_BP_Rockwell_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gen2 Bronto Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Bronto_Gen2.PrimalItemConsumable_Egg_Bronto_Gen2_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Bronto.PrimalItemConsumable_Egg_Bronto_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Bronto.HUD_DinoEgg_MIC_Inst_Bronto",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 20,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Bronto Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Bronto_Gen2_Fertilized.PrimalItemConsumable_Egg_Bronto_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Bronto_Gen2.PrimalItemConsumable_Egg_Bronto_Gen2_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Bronto.HUD_DinoEgg_MIC_Inst_Bronto",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 20,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Sauropod_Character_BP_Rockwell.Sauropod_Character_BP_Rockwell_C",
+				"temperature": { "min": 28, "max": 31 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gen2 Carno Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Carno_Gen2.PrimalItemConsumable_Egg_Carno_Gen2_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carno.PrimalItemConsumable_Egg_Carno_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Carno Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Carno_Gen2_Fertilized.PrimalItemConsumable_Egg_Carno_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Carno_Gen2.PrimalItemConsumable_Egg_Carno_Gen2_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Carno_Character_BP_Rockwell.Carno_Character_BP_Rockwell_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gen2 Dilo Egg",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Dilo_Gen2.PrimalItemConsumable_Egg_Dilo_Gen2_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Dilo.PrimalItemConsumable_Egg_Dilo_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Dilo.HUD_DinoEgg_MIC_Inst_Dilo",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Dilo Egg",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Dilo_Gen2_Fertilized.PrimalItemConsumable_Egg_Dilo_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Dilo_Gen2.PrimalItemConsumable_Egg_Dilo_Gen2_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Dilo.HUD_DinoEgg_MIC_Inst_Dilo",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Dilo_Character_BP_Rockwell.Dilo_Character_BP_Rockwell_C",
+				"temperature": { "min": 28, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gen2 Giganotosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Gigant_Gen2.PrimalItemConsumable_Egg_Gigant_Gen2_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Gigant.PrimalItemConsumable_Egg_Gigant_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Gigant.HUD_DinoEgg_MIC_Inst_Gigant",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Giganotosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Gigant_Gen2_Fertilized.PrimalItemConsumable_Egg_Gigant_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Gigant_Gen2.PrimalItemConsumable_Egg_Gigant_Gen2_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Gigant.HUD_DinoEgg_MIC_Inst_Gigant",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Gigant_Character_BP_Rockwell.Gigant_Character_BP_Rockwell_C",
+				"temperature": { "min": 43, "max": 44 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gen2 Snow Owl Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Owl_Gen2.PrimalItemConsumable_Egg_Owl_Gen2_C",
+			"parent": "/Game/Extinction/Dinos/Owl/PrimalItemConsumable_Egg_Owl.PrimalItemConsumable_Egg_Owl_C",
+			"icon": "/Game/Extinction/Dinos/Owl/HUD_DinoEgg_MIC_Inst_Owl.HUD_DinoEgg_MIC_Inst_Owl",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Snow Owl Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Owl_Gen2_Fertilized.PrimalItemConsumable_Egg_Owl_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Owl_Gen2.PrimalItemConsumable_Egg_Owl_Gen2_C",
+			"icon": "/Game/Extinction/Dinos/Owl/HUD_DinoEgg_MIC_Inst_Owl.HUD_DinoEgg_MIC_Inst_Owl",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Owl_Character_BP_Eden.Owl_Character_BP_Eden_C",
+				"temperature": { "min": 12, "max": 13.5 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gen2 Parasaur Egg",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Para_Gen2.PrimalItemConsumable_Egg_Para_Gen2_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Para.PrimalItemConsumable_Egg_Para_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Para.HUD_DinoEgg_MIC_Inst_Para",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Parasaur Egg",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Para_Gen2_Fertilized.PrimalItemConsumable_Egg_Para_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Para_Gen2.PrimalItemConsumable_Egg_Para_Gen2_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Para.HUD_DinoEgg_MIC_Inst_Para",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Para_Character_BP_Eden.Para_Character_BP_Eden_C",
+				"temperature": { "min": 24, "max": 28 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gen2 Quetzal Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Quetz_Gen2.PrimalItemConsumable_Egg_Quetz_Gen2_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Quetz.PrimalItemConsumable_Egg_Quetz_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Quetz.HUD_DinoEgg_MIC_Inst_Quetz",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Quetzal Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Quetz_Gen2_Fertilized.PrimalItemConsumable_Egg_Quetz_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Quetz_Gen2.PrimalItemConsumable_Egg_Quetz_Gen2_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Quetz.HUD_DinoEgg_MIC_Inst_Quetz",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Quetz_Character_BP_Rockwell.Quetz_Character_BP_Rockwell_C",
+				"temperature": { "min": 5, "max": 6 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gen2 Velonasaur Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Spindles_Gen2.PrimalItemConsumable_Egg_Spindles_Gen2_C",
+			"parent": "/Game/Extinction/Dinos/Spindles/PrimalItemConsumable_Egg_Spindles.PrimalItemConsumable_Egg_Spindles_C",
+			"icon": "/Game/Extinction/Effects/Materials/Creatures/Spindles/HUD_DinoEgg_MIC_Inst_Spindles.HUD_DinoEgg_MIC_Inst_Spindles",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Velonasaur Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Spindles_Gen2_Fertilized.PrimalItemConsumable_Egg_Spindles_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Spindles_Gen2.PrimalItemConsumable_Egg_Spindles_Gen2_C",
+			"icon": "/Game/Extinction/Effects/Materials/Creatures/Spindles/HUD_DinoEgg_MIC_Inst_Spindles.HUD_DinoEgg_MIC_Inst_Spindles",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Spindles_Character_BP_Rockwell.Spindles_Character_BP_Rockwell_C",
+				"temperature": { "min": 28, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gen2 Turtle Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Turtle_Gen2.PrimalItemConsumable_Egg_Turtle_Gen2_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Turtle.PrimalItemConsumable_Egg_Turtle_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Turtle.HUD_DinoEgg_MIC_Inst_Turtle",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Gen2 Turtle Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Turtle_Gen2_Fertilized.PrimalItemConsumable_Egg_Turtle_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Turtle_Gen2.PrimalItemConsumable_Egg_Turtle_Gen2_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Turtle.HUD_DinoEgg_MIC_Inst_Turtle",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/BiomeVariants/Turtle_Character_BP_Rockwell.Turtle_Character_BP_Rockwell_C",
+				"temperature": { "min": 30, "max": 34 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Canoe",
+			"description": "Watercraft that can be paddled on water. Can accomodate up to 3 passengers. Its storage reduces spoil time!",
+			"bp": "/Game/Genesis2/Dinos/Canoe/PrimalItemCanoe.PrimalItemCanoe_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_Canoe_MIC.HUD_Gen2_Canoe_MIC",
+			"type": "Structure",
+			"folders": [ "Misc" ],
+			"weight": 15,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 93.75,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 75, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 75, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Thatch_C" }
+				]
+			}
+		},
+		{
+			"name": "Modern Canoe Costume",
+			"description": "This costume can be used to make your Canoe look different",
+			"bp": "/Game/Genesis2/Dinos/Canoe/PrimalItemCostume_Canoe_Modern.PrimalItemCostume_Canoe_Modern_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemCostumeGeneric.PrimalItemCostumeGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_CanoeModern_MIC.HUD_Gen2_CanoeModern_MIC",
+			"type": "Equipment/Costume",
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Tek Canoe Costume",
+			"description": "This costume can be used to make your Canoe look different",
+			"bp": "/Game/Genesis2/Dinos/Canoe/PrimalItemCostume_Canoe_Tek.PrimalItemCostume_Canoe_Tek_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemCostumeGeneric.PrimalItemCostumeGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_CanoeTek_MIC.HUD_Gen2_CanoeTek_MIC",
+			"type": "Equipment/Costume",
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Viking Canoe Costume",
+			"description": "This costume can be used to make your Canoe look different",
+			"bp": "/Game/Genesis2/Dinos/Canoe/PrimalItemCostume_Canoe_Viking.PrimalItemCostume_Canoe_Viking_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemCostumeGeneric.PrimalItemCostumeGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_CanoeViking_MIC.HUD_Gen2_CanoeViking_MIC",
+			"type": "Equipment/Costume",
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Unassembled Exo-Mek",
+			"description": "Craft this item to assemble a new Exo-Mek.",
+			"bp": "/Game/Genesis2/Dinos/Exosuit/PrimalItem_Spawner_Exosuit.PrimalItem_Spawner_Exosuit_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_DisassembledExosuit_Icon_BC.HUD_Gen2_DisassembledExosuit_Icon_BC",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Vehicles" ],
+			"weight": 500,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 60,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 850, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 300, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 35, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Natural Armor",
+			"description": "Shadowmane has natural armor.",
+			"bp": "/Game/Genesis2/Dinos/LionfishLion/PrimalItemArmor_ForLFL.PrimalItemArmor_ForLFL_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_Lionfish_Saddle_Item.HUD_Gen2_Lionfish_Saddle_Item",
+			"type": "Equipment/DinoSaddle",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 133.8,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Superior Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Large.PrimalItemConsumable_Egg_MilkGlider_Large_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Large.PrimalItemConsumable_Egg_Large_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Large.HUD_DinoEgg_MIC_Inst_MilkGlider_Large",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Superior Fertilized Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Large_Fertilized.PrimalItemConsumable_Egg_MilkGlider_Large_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Large.PrimalItemConsumable_Egg_MilkGlider_Large_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Large.HUD_DinoEgg_MIC_Inst_MilkGlider_Large",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/MilkGlider/MilkGlider_Character_BP.MilkGlider_Character_BP_C",
+				"temperature": { "min": 22, "max": 26 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Regular Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Medium.PrimalItemConsumable_Egg_MilkGlider_Medium_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Medium.PrimalItemConsumable_Egg_Medium_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Medium.HUD_DinoEgg_MIC_Inst_MilkGlider_Medium",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Regular Fertilized Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Medium_Fertilized.PrimalItemConsumable_Egg_MilkGlider_Medium_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Medium.PrimalItemConsumable_Egg_MilkGlider_Medium_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Medium.HUD_DinoEgg_MIC_Inst_MilkGlider_Medium",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/MilkGlider/MilkGlider_Character_BP.MilkGlider_Character_BP_C",
+				"temperature": { "min": 22, "max": 26 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Simple Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Small.PrimalItemConsumable_Egg_MilkGlider_Small_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Small.PrimalItemConsumable_Egg_Small_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Small.HUD_DinoEgg_MIC_Inst_MilkGlider_Small",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Simple Fertilized Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Small_Fertilized.PrimalItemConsumable_Egg_MilkGlider_Small_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Small.PrimalItemConsumable_Egg_MilkGlider_Small_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Small.HUD_DinoEgg_MIC_Inst_MilkGlider_Small",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/MilkGlider/MilkGlider_Character_BP.MilkGlider_Character_BP_C",
+				"temperature": { "min": 22, "max": 26 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Extraordinary Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Special.PrimalItemConsumable_Egg_MilkGlider_Special_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Special.PrimalItemConsumable_Egg_Special_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Special.HUD_DinoEgg_MIC_Inst_MilkGlider_Special",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Extraordinary Fertilized Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Special_Fertilized.PrimalItemConsumable_Egg_MilkGlider_Special_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Special.PrimalItemConsumable_Egg_MilkGlider_Special_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Special.HUD_DinoEgg_MIC_Inst_MilkGlider_Special",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/MilkGlider/MilkGlider_Character_BP.MilkGlider_Character_BP_C",
+				"temperature": { "min": 22, "max": 26 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Exceptional Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_XLarge.PrimalItemConsumable_Egg_MilkGlider_XLarge_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_XtraLarge.PrimalItemConsumable_Egg_XtraLarge_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_XLarge.HUD_DinoEgg_MIC_Inst_MilkGlider_XLarge",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Exceptional Fertilized Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_XLarge_Fertilized.PrimalItemConsumable_Egg_MilkGlider_XLarge_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_XLarge.PrimalItemConsumable_Egg_MilkGlider_XLarge_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_XLarge.HUD_DinoEgg_MIC_Inst_MilkGlider_XLarge",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/MilkGlider/MilkGlider_Character_BP.MilkGlider_Character_BP_C",
+				"temperature": { "min": 22, "max": 26 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Basic Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_XSmall.PrimalItemConsumable_Egg_MilkGlider_XSmall_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_XSmall.PrimalItemConsumable_Egg_XSmall_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_XSmall.HUD_DinoEgg_MIC_Inst_MilkGlider_XSmall",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Basic Fertilized Maewing Egg",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_XSmall_Fertilized.PrimalItemConsumable_Egg_MilkGlider_XSmall_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_XSmall.PrimalItemConsumable_Egg_MilkGlider_XSmall_C",
+			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_XSmall.HUD_DinoEgg_MIC_Inst_MilkGlider_XSmall",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/MilkGlider/MilkGlider_Character_BP.MilkGlider_Character_BP_C",
+				"temperature": { "min": 22, "max": 26 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Maewing Saddle",
+			"description": "Equip a Maewing with this to ride it.",
+			"bp": "/Game/Genesis2/Dinos/MilkGlider/PrimalItemArmor_MilkGliderSaddle.PrimalItemArmor_MilkGliderSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_MilkgliderSaddle_M.HUD_Gen2_MilkgliderSaddle_M",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 72.4,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 320, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 170, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Astrodelphis Starwing Saddle",
+			"description": "Equip an Astrodelphis with this to pilot it and fire plasma projectiles. Adapts to match creature's strength level. Using requires learning this Engram.",
+			"bp": "/Game/Genesis2/Dinos/SpaceDolphin/PrimalItemArmor_SpaceDolphinSaddle_Tek.PrimalItemArmor_SpaceDolphinSaddle_Tek_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_SaddleGeneric_Tek.PrimalItemArmor_SaddleGeneric_Tek_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_SpaceDolphinSaddle_MIC.HUD_Gen2_SpaceDolphinSaddle_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Tek" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 86,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 500, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 2500, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 370, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 55, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 140, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Tek Hoversail",
+			"description": "Swift personal transport for quickly traversing terrain via hover and flying modes, at a cost of Element. Can support an additional passenger.",
+			"bp": "/Game/Genesis2/Dinos/TekHoverSail/PrimalItem_Spawner_HoverSail_Main.PrimalItem_Spawner_HoverSail_Main_C",
+			"parent": "/Game/Genesis2/Dinos/TekHoverSail/PrimalItem_Spawner_HoverSail_Parent.PrimalItem_Spawner_HoverSail_Parent_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_TekHoverSail_MIC.HUD_Gen2_TekHoverSail_MIC",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Vehicles" ],
+			"weight": 800,
+			"stackSize": 1,
+			"durability": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Electronics_C" }
+				]
+			}
+		},
+		{
+			"name": "Tek Hoversail",
+			"description": "Swift personal transport for quickly traversing terrain via hover and flying modes, at a cost of Element. Can support an additional passenger.",
+			"bp": "/Game/Genesis2/Dinos/TekHoverSail/PrimalItem_Spawner_HoverSail_Parent.PrimalItem_Spawner_HoverSail_Parent_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C",
+			"icon": "/Game/PrimalEarth/UI/BaseBorderBroken.BaseBorderBroken",
+			"type": "MiscConsumable/Food",
+			"weight": 800,
+			"stackSize": 1,
+			"durability": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 168, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 4100, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 372, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 62, "type": "PrimalItemResource_Oil_C" },
+					{ "qty": 268, "type": "PrimalItemResource_Electronics_C" }
+				]
+			}
+		},
+		{
+			"name": "Net Projectile",
+			"description": "High-speed projectile that unfurls to ensnare creatures in netting. Can only be fired from a Harpoon Launcher.",
+			"bp": "/Game/Genesis2/Missions/Hunt/PrimalItemAmmo_ArrowNet_Hunt.PrimalItemAmmo_ArrowNet_Hunt_C",
+			"parent": "/Game/Genesis2/Weapons/NetAmmo/PrimalItemAmmo_ArrowNet.PrimalItemAmmo_ArrowNet_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_Gen2_NetAmmo_Icon.HUD_Gen2_NetAmmo_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 4, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 12, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 180, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Harpoon Launcher",
+			"description": "Has tremendous power and speed underwater, but ineffective range out of water. Uses Spear Bolts for ammunition.",
+			"bp": "/Game/Genesis2/Missions/Hunt/PrimalItem_WeaponHarpoon_Hunt.PrimalItem_WeaponHarpoon_Hunt_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
+			"icon": "/Game/PrimalEarth/WeaponHarpoon/HUD_Harpoon_Colorize_MIC.HUD_Harpoon_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Ranged" ],
+			"weight": 10,
+			"stackSize": 1,
+			"durability": 100,
+			"crafting": {
+				"xp": 9,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 120, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Polymer_C" }
+				]
+			},
+			"repair": {
+				"xp": 9,
+				"time": 5,
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 12.5, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 60, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 30, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Polymer_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/Missions/Hunt/WeapHarpoon_Net_Hunt.WeapHarpoon_Net_Hunt_C"
+		},
+		{
+			"name": "Phase Cannon Rig",
+			"description": "Stryders equipped with this rig can fire highly-damaging plasma blasts.",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Dinos/PrimalItemArmor_TekStriderLargeCannon_STA.PrimalItemArmor_TekStriderLargeCannon_STA_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Items/Saddle/PrimalItemArmor_TekStriderLargeCannon.PrimalItemArmor_TekStriderLargeCannon_C",
+			"icon": "/Game/Genesis2/Icons/Dinos/HUD_Gen2_Cannon_Icon_BC.HUD_Gen2_Cannon_Icon_BC",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "VR Allosaurus Pack Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Allo.PrimalItem_GauntletDamageBuffKey_TempTame_Allo_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Bloodstalker Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_BogSpider.PrimalItem_GauntletDamageBuffKey_TempTame_BogSpider_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Ravager Pack Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_CaveWolf.PrimalItem_GauntletDamageBuffKey_TempTame_CaveWolf_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Karkinos Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Crab.PrimalItem_GauntletDamageBuffKey_TempTame_Crab_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Dimorphodon Flock Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Dimorph.PrimalItem_GauntletDamageBuffKey_TempTame_Dimorph_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "Dragon Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Dragon.PrimalItem_GauntletDamageBuffKey_TempTame_Dragon_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Enforcer Pair Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Enforcer.PrimalItem_GauntletDamageBuffKey_TempTame_Enforcer_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "Summon Megapithecus",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Gorilla.PrimalItem_GauntletDamageBuffKey_TempTame_Gorilla_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Kaprosuchus Bask Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Kapro.PrimalItem_GauntletDamageBuffKey_TempTame_Kapro_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Shadowmane Pair Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_LionfishLion.PrimalItem_GauntletDamageBuffKey_TempTame_LionfishLion_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Mantis Pair Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Mantis.PrimalItem_GauntletDamageBuffKey_TempTame_Mantis_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Lymantria Pair Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Moth.PrimalItem_GauntletDamageBuffKey_TempTame_Moth_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Raptor Pack Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Raptor.PrimalItem_GauntletDamageBuffKey_TempTame_Raptor_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Ferox Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Shapeshifter.PrimalItem_GauntletDamageBuffKey_TempTame_Shapeshifter_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Astrodelphis Pair Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_SpaceDolphin.PrimalItem_GauntletDamageBuffKey_TempTame_SpaceDolphin_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "Broodmother Lysrix Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Spider.PrimalItem_GauntletDamageBuffKey_TempTame_Spider_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Velonasaur Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Spindles.PrimalItem_GauntletDamageBuffKey_TempTame_Spindles_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Stegosaurus Pair Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Stego.PrimalItem_GauntletDamageBuffKey_TempTame_Stego_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "VR Triceratops Pair Summon",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Gauntlet2/STA/Endless/Tames/PrimalItem_GauntletDamageBuffKey_TempTame_Trike.PrimalItem_GauntletDamageBuffKey_TempTame_Trike_C",
+			"parent": "/Game/Genesis/Missions/GauntletWaves/PrimalItem_GauntletDamageBuffKey_TempTame.PrimalItem_GauntletDamageBuffKey_TempTame_C"
+		},
+		{
+			"name": "Wooden Club",
+			"description": "A easily made melee weapon that is excellent for knocking out targets. Only effective at short range.",
+			"bp": "/Game/Genesis2/Missions/ModularMission/LifeSupport/PrimalItem_WeaponStoneClub_LifeSupport.PrimalItem_WeaponStoneClub_LifeSupport_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponStoneClub.PrimalItem_WeaponStoneClub_C",
+			"icon": "/Game/PrimalEarth/WeaponWoodClub/HUD_Club_Colorize.HUD_Club_Colorize",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Primitive", "Melee" ],
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0.7,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 4, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/Missions/ModularMission/LifeSupport/WeapStoneClub_LifeSupport.WeapStoneClub_LifeSupport_C"
+		},
+		{
+			"name": "Super Mining Drill",
+			"description": "An incredibly effective gasoline-powered harvesting tool that utilizes an energy beam to collect valuable resources at distance.",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Maze/ExampleActors/PrimalItem_WeaponMiningDrill_Maze.PrimalItem_WeaponMiningDrill_Maze_C",
+			"parent": "/Game/Genesis/Weapons/MiningDrill/PrimalItem_WeaponMiningDrill.PrimalItem_WeaponMiningDrill_C",
+			"icon": "/Game/Genesis/Weapons/MiningDrill/Icon/MIC_MiningDrill_Icon.MIC_MiningDrill_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Ranged" ],
+			"weight": 20,
+			"stackSize": 1,
+			"durability": 700,
+			"crafting": {
+				"xp": 180,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 132, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 482, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 180, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 120, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 36, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"repair": {
+				"xp": 180,
+				"time": 5,
+				"recipe": [
+					{ "qty": 66, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 241, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 90, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 60, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 18, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/Missions/ModularMission/Maze/ExampleActors/WeapMiningDrill_Maze.WeapMiningDrill_Maze_C"
+		},
+		{
+			"name": "Maze Key",
+			"description": "The color... What could it mean?",
+			"bp": "/Game/Genesis2/Missions/ModularMission/Maze/PrimalItem_EscapeRoomKey.PrimalItem_EscapeRoomKey_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Genesis2/Missions/ModularMission/Maze/Materials/HUD_MazeKey_Icon_Colorize_MIC.HUD_MazeKey_Icon_Colorize_MIC",
+			"type": "MiscConsumable/Food",
+			"weight": 1,
+			"stackSize": 1
+		},
+		{
+			"name": "Ammo Box",
+			"description": "Deployable device to supply ammunition to nearby turrets.",
+			"bp": "/Game/Genesis2/Structures/AmmoBox/PrimalItemStructure_AmmoContainer.PrimalItemStructure_AmmoContainer_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Gen2_AmmoPallet_M.HUD_Gen2_AmmoPallet_M",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 250, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Metal_C" }
+				]
+			},
+			"structure": "/Game/Genesis2/Structures/AmmoBox/StructureAmmoContainer.StructureAmmoContainer_C"
+		},
+		{
+			"name": "Tek Crop Plot",
+			"description": "Deployable device to promote plant growth using its own light source. Powered by Tek Generator.",
+			"bp": "/Game/Genesis2/Structures/CropPlotTek/PrimalItemStructure_CropPlot_Tek.PrimalItemStructure_CropPlot_Tek_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_GEN2_TekPlot_Item_MIC.HUD_GEN2_TekPlot_Item_MIC",
+			"type": "Structure",
+			"folders": [ "Structures", "Farming" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 21.4,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 55, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 75, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Sand_C" },
+					{ "qty": 4, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"structure": "/Game/Genesis2/Structures/CropPlotTek/Structure_CropPlot_Tek.Structure_CropPlot_Tek_C"
+		},
+		{
+			"name": "Egg Incubator",
+			"description": "Deployable device for warming and monitoring up to ten eggs at once. Requires electricity to run.",
+			"bp": "/Game/Genesis2/Structures/EggIncubator/PrimalItemStructure_EggIncubator.PrimalItemStructure_EggIncubator_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Gen2_EggIncubator_M.HUD_Gen2_EggIncubator_M",
+			"type": "Structure",
+			"folders": [ "Structures", "Electric" ],
+			"weight": 25,
+			"stackSize": 5,
+			"crafting": {
+				"xp": 100,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 500, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"structure": "/Game/Genesis2/Structures/EggIncubator/EggIncubator.EggIncubator_C"
+		},
+		{
+			"name": "Loadout Mannequin",
+			"description": "Deployable device to store and display Equipment and current damage state.",
+			"bp": "/Game/Genesis2/Structures/LoadoutMannequin/PrimalItemStructure_LoadoutDummy.PrimalItemStructure_LoadoutDummy_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Gen2_LoadoutMannequin_M.HUD_Gen2_LoadoutMannequin_M",
+			"type": "Structure",
+			"folders": [ "Structures", "Misc" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 500, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" }
+				]
+			},
+			"structure": "/Game/Genesis2/Structures/LoadoutMannequin/Structure_LoadoutDummy.Structure_LoadoutDummy_C"
+		},
+		{
+			"name": "Loadout Dummy Hotbar",
+			"description": "Loadout Dummy Hotbar",
+			"bp": "/Game/Genesis2/Structures/LoadoutMannequin/PrimalItemStructure_LoadoutDummyHotbar.PrimalItemStructure_LoadoutDummyHotbar_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TargetDummy_Icon.TargetDummy_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Misc" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 0, "type": "PrimalItemResource_Wood_C" } ]
+			},
+			"structure": "/Game/Genesis2/Structures/LoadoutMannequin/Structure_LoadoutDummy_Hotbar.Structure_LoadoutDummy_Hotbar_C"
+		},
+		{
+			"bp": "/Game/Genesis2/Structures/LoadoutMannequin/PrimalItem_LoadoutDummy_NullHotBarSlot.PrimalItem_LoadoutDummy_NullHotBarSlot_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C"
+		},
+		{
+			"name": "Plant Species R Seed",
+			"description": "Plant this in a viable tek crop plot to grow a tentacle plant, that can be harvested for cuts of meat!",
+			"bp": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR.PrimalItemConsumable_Seed_PlantSpeciesR_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumableSeed.PrimalItemConsumableSeed_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_GEN2_PlantSpeciesR_Seed_Icon.HUD_GEN2_PlantSpeciesR_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 100,
+			"statEffects": [ { "stat": "food", "value": -1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Plant Species R-5 Seed",
+			"description": "Plant this in a viable tek crop plot to grow a tentacle plant, that can be harvested for cuts of Raw Prime Fish Meat!",
+			"bp": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR_PrimeFish.PrimalItemConsumable_Seed_PlantSpeciesR_PrimeFish_C",
+			"parent": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR.PrimalItemConsumable_Seed_PlantSpeciesR_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_GEN2_PlantSpeciesR_Seed_Icon.HUD_GEN2_PlantSpeciesR_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 100,
+			"statEffects": [ { "stat": "food", "value": -1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Plant Species R-4 Seed",
+			"description": "Plant this in a viable tek crop plot to grow a tentacle plant, that can be harvested for cuts of Raw Prime Meat!",
+			"bp": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR_PrimeMeat.PrimalItemConsumable_Seed_PlantSpeciesR_PrimeMeat_C",
+			"parent": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR.PrimalItemConsumable_Seed_PlantSpeciesR_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_GEN2_PlantSpeciesR_Seed_Icon.HUD_GEN2_PlantSpeciesR_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 100,
+			"statEffects": [ { "stat": "food", "value": -1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Plant Species R-2 Seed",
+			"description": "Plant this in a viable tek crop plot to grow a tentacle plant, that can be harvested for cuts of Raw Fish Meat!",
+			"bp": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR_RawFish.PrimalItemConsumable_Seed_PlantSpeciesR_RawFish_C",
+			"parent": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR.PrimalItemConsumable_Seed_PlantSpeciesR_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_GEN2_PlantSpeciesR_Seed_Icon.HUD_GEN2_PlantSpeciesR_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 100,
+			"statEffects": [ { "stat": "food", "value": -1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Plant Species R-1 Seed",
+			"description": "Plant this in a viable tek crop plot to grow a tentacle plant, that can be harvested for cuts of Raw Meat!",
+			"bp": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR_RawMeat.PrimalItemConsumable_Seed_PlantSpeciesR_RawMeat_C",
+			"parent": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR.PrimalItemConsumable_Seed_PlantSpeciesR_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_GEN2_PlantSpeciesR_Seed_Icon.HUD_GEN2_PlantSpeciesR_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 100,
+			"statEffects": [ { "stat": "food", "value": -1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Plant Species R-3 Seed",
+			"description": "Plant this in a viable tek crop plot to grow a tentacle plant, that can be harvested for cuts of Spoiled Meat!",
+			"bp": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR_SpoiledMeat.PrimalItemConsumable_Seed_PlantSpeciesR_SpoiledMeat_C",
+			"parent": "/Game/Genesis2/Structures/PlantSpeciesR/PrimalItemConsumable_Seed_PlantSpeciesR.PrimalItemConsumable_Seed_PlantSpeciesR_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_GEN2_PlantSpeciesR_Seed_Icon.HUD_GEN2_PlantSpeciesR_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 100,
+			"statEffects": [ { "stat": "food", "value": -1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Tek Remote Camera",
+			"description": "Craft this item from Surveillance Console to assemble a new Remote Camera. Will transmit live imagery to nearby linked console.",
+			"bp": "/Game/Genesis2/Structures/RemoteCamera/PrimalItemStructure_SecurityCamera.PrimalItemStructure_SecurityCamera_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Gen2_SecurityCamera_MIC.HUD_Gen2_SecurityCamera_MIC",
+			"type": "Structure",
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 8,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 80, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Electronics_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"structure": "/Game/Genesis2/Structures/RemoteCamera/Structure_SecurityCamera.Structure_SecurityCamera_C"
+		},
+		{
+			"name": "Tek Surveillance Console",
+			"description": "Deployable device for crafting and viewing live footage from Remote Cameras. Powered by Tek Generator.",
+			"bp": "/Game/Genesis2/Structures/RemoteCamera/PrimalItemStructure_TekSecurityConsole.PrimalItemStructure_TekSecurityConsole_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Gen2_SecurityConsole_MIC.HUD_Gen2_SecurityConsole_MIC",
+			"type": "Structure",
+			"folders": [ "Structures", "Tek" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 16,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 250, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Electronics_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 50, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"structure": "/Game/Genesis2/Structures/RemoteCamera/StructureTekSecurityConsole.StructureTekSecurityConsole_C"
+		},
+		{
+			"name": "Rockwell Final Form Flag",
+			"description": "This flag is proof that you have defeated Rockwell in his final form.",
+			"bp": "/Game/Genesis2/Structures/RockwellEndbossFlag/PrimalItemStructure_Flag_RockwellGen2.PrimalItemStructure_Flag_RockwellGen2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Rockwell2Banner_Icon.HUD_Rockwell2Banner_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Misc" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Thatch_C" }
+				]
+			},
+			"structure": "/Game/Genesis2/Structures/RockwellEndbossFlag/Flag_SM_RockwellGen2.Flag_SM_RockwellGen2_C"
+		},
+		{
+			"name": "Rockwell Final Form Trophy",
+			"description": "Place it on a trophy wall-mount, and keep it safe to use as an invaluable token of your prowess...",
+			"bp": "/Game/Genesis2/Structures/TrophyHeads/RockwellGen2/PrimalItemTrophy_RockwellGen2.PrimalItemTrophy_RockwellGen2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophyGenericWall.PrimalItemTrophyGenericWall_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Gen2_TrophyHead_Item_BC.HUD_Gen2_TrophyHead_Item_BC",
+			"type": "Equipment/Trophy",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Alpha Rockwell Final Form Trophy ",
+			"description": "Place it on a trophy wall-mount, and keep it safe to use as an invaluable token of your prowess...",
+			"bp": "/Game/Genesis2/Structures/TrophyHeads/RockwellGen2/PrimalItemTrophy_RockwellGen2_Alpha.PrimalItemTrophy_RockwellGen2_Alpha_C",
+			"parent": "/Game/Genesis2/Structures/TrophyHeads/RockwellGen2/PrimalItemTrophy_RockwellGen2.PrimalItemTrophy_RockwellGen2_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Gen2_TrophyHead_Item_BC.HUD_Gen2_TrophyHead_Item_BC",
+			"type": "Equipment/Trophy",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Beta Rockwell Final Form Trophy",
+			"description": "Place it on a trophy wall-mount, and keep it safe to use as an invaluable token of your prowess...",
+			"bp": "/Game/Genesis2/Structures/TrophyHeads/RockwellGen2/PrimalItemTrophy_RockwellGen2_Beta.PrimalItemTrophy_RockwellGen2_Beta_C",
+			"parent": "/Game/Genesis2/Structures/TrophyHeads/RockwellGen2/PrimalItemTrophy_RockwellGen2.PrimalItemTrophy_RockwellGen2_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Gen2_TrophyHead_Item_BC.HUD_Gen2_TrophyHead_Item_BC",
+			"type": "Equipment/Trophy",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Gamma Rockwell Final Form Trophy",
+			"description": "Place it on a trophy wall-mount, and keep it safe to use as an invaluable token of your prowess...",
+			"bp": "/Game/Genesis2/Structures/TrophyHeads/RockwellGen2/PrimalItemTrophy_RockwellGen2_Gamma.PrimalItemTrophy_RockwellGen2_Gamma_C",
+			"parent": "/Game/Genesis2/Structures/TrophyHeads/RockwellGen2/PrimalItemTrophy_RockwellGen2.PrimalItemTrophy_RockwellGen2_C",
+			"icon": "/Game/Genesis2/Icons/Structures/HUD_Gen2_TrophyHead_Item_BC.HUD_Gen2_TrophyHead_Item_BC",
+			"type": "Equipment/Trophy",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Jar of Pitch",
+			"description": "Lights the target on fire, and can also light oil slicks. Can be fired from a Ballista Turret or Catapult.",
+			"bp": "/Game/Genesis2/Weapons/FireBoulder/PrimalItemAmmo_Boulder_Fire.PrimalItemAmmo_Boulder_Fire_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_Gen2_FlamingAmmo_Icon.HUD_Gen2_FlamingAmmo_Icon",
+			"type": "Ammo",
+			"folders": [ "Ammo" ],
+			"weight": 1.5,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "exact": true, "qty": 60, "type": "PrimalItemResource_Clay_C" },
+					{ "qty": 180, "type": "PrimalItemResource_Oil_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 85, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Minigun",
+			"description": "Deployable rotary machine gun that needs to be manned to fire at a target. Provides increased firepower after winding up, but consumes bullets quickly while firing.",
+			"bp": "/Game/Genesis2/Weapons/MiniGun/PrimalItem_WeaponMinigun.PrimalItem_WeaponMinigun_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
+			"icon": "/Game/Genesis2/Icons/Weapons/HUD_Gen2_MiniGun_M.HUD_Gen2_MiniGun_M",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms" ],
+			"weight": 20,
+			"stackSize": 1,
+			"durability": 200,
+			"crafting": {
+				"xp": 360,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 175, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 500, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"repair": {
+				"xp": 360,
+				"time": 5,
+				"recipe": [
+					{ "qty": 87.5, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 50, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/Weapons/MiniGun/WeapMinigun.WeapMinigun_C"
+		},
+		{
+			"name": "Net Projectile",
+			"description": "High-speed projectile that unfurls to ensnare creatures in netting. Can only be fired from a Harpoon Launcher.",
+			"bp": "/Game/Genesis2/Weapons/NetAmmo/PrimalItemAmmo_ArrowNet.PrimalItemAmmo_ArrowNet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_Gen2_NetAmmo_Icon.HUD_Gen2_NetAmmo_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 4, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 12, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 180, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Netgun",
+			"description": "A small but powerful explosive, primarily used with rocket launchers.",
+			"bp": "/Game/Genesis2/Weapons/NetGun/PrimalItemAmmo_NetGunGen.PrimalItemAmmo_NetGunGen_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/ScorchedEarth/Icons/Weapons/NetgunAmmo_Icon.NetgunAmmo_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 3.6,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Thatch_C" }
+				]
+			},
+			"weapon": "/Game/ScorchedEarth/WeaponNetGun/WeapNetGun.WeapNetGun_C"
+		},
+		{
+			"name": "Net Gun",
+			"description": "Mankind's ultimate portable killing device.",
+			"bp": "/Game/Genesis2/Weapons/NetGun/PrimalItem_WeaponNetGunGen.PrimalItem_WeaponNetGunGen_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
+			"icon": "/Game/ScorchedEarth/Icons/Weapons/Materials/HUD_NetGun_Colorize_MIC.HUD_NetGun_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms" ],
+			"weight": 20,
+			"stackSize": 1,
+			"durability": 50,
+			"crafting": {
+				"xp": 243,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 80, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"repair": {
+				"xp": 243,
+				"time": 5,
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 30, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/Weapons/NetGun/WeapNetGunGen.WeapNetGunGen_C"
+		},
+		{
+			"name": "Explosive Arrow",
+			"description": "Arrow that goes boom!",
+			"bp": "/Game/Genesis2/Weapons/TekBow/PrimalItemAmmo_ExplosiveArrow.PrimalItemAmmo_ExplosiveArrow_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_Gen2_ExplosiveArrow_Icon.HUD_Gen2_ExplosiveArrow_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.024,
+				"time": 0.5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Gunpowder_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 4, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Polymer_C" }
+				]
+			}
+		},
+		{
+			"name": "Tek Bow",
+			"description": "When infused with Element Shards, will 3-D print high velocity explosive arrows at a cost of Element Shards. Can also fire other arrow types.",
+			"bp": "/Game/Genesis2/Weapons/TekBow/PrimalItem_WeaponTekBow.PrimalItem_WeaponTekBow_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
+			"icon": "/Game/Genesis2/Icons/Weapons/HUD_Gen2_TekBow_MIC.HUD_Gen2_TekBow_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Tek" ],
+			"weight": 12,
+			"stackSize": 1,
+			"durability": 55,
+			"crafting": {
+				"xp": 5,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 200, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 75, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"repair": {
+				"xp": 5,
+				"time": 5,
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 200, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 75, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/Weapons/TekBow/WeapTekBow.WeapTekBow_C"
+		},
+		{
+			"name": "Tek Phase Pistol",
+			"description": "Shoots plasma beams with varying intensity and effect, at a cost of Element.",
+			"bp": "/Game/Genesis2/Weapons/TekPistol/PrimalItem_WeaponTekPistol.PrimalItem_WeaponTekPistol_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
+			"icon": "/Game/Genesis2/Icons/Weapons/HUD_Gen2_TekPistol_M.HUD_Gen2_TekPistol_M",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms", "Tek" ],
+			"weight": 2.5,
+			"stackSize": 1,
+			"durability": 120,
+			"crafting": {
+				"xp": 100,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 70, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 300, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 70, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 35, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Gem_Element_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Gem_BioLum_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Gem_Fertile_C" }
+				]
+			},
+			"repair": {
+				"xp": 100,
+				"time": 5,
+				"recipe": [
+					{ "qty": 70, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 300, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 70, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 35, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Gem_Element_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Gem_BioLum_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Gem_Fertile_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/Weapons/TekPistol/WeapTekPistol.WeapTekPistol_C"
 		},
 		{
 			"name": "Generate\nRagnarok (Easy)\nPortal",
@@ -6409,25 +9083,6 @@
 			}
 		},
 		{
-			"name": "Summon\nDodoRex",
-			"description": "More dangerous than delicious.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Cloth/PrimalItem_DodoRexTribute.PrimalItem_DodoRexTribute_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Cloth/PrimalItem_BossTributeGeneric.PrimalItem_BossTributeGeneric_C",
-			"icon": "/Game/PrimalEarth/UI/Empty_DodoRexHead_Icon.Empty_DodoRexHead_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Holiday" ],
-			"weight": 0.5,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 1,
-				"time": 0.01,
-				"levelReq": 1,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 400, "type": "PrimalItemResource_Wishbone_C" } ]
-			}
-		},
-		{
 			"name": "Access\nDungeon",
 			"description": "Open the dungeon with this.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Cloth/PrimalItem_DungeonEntrance_Base.PrimalItem_DungeonEntrance_Base_C",
@@ -7142,7 +9797,6 @@
 			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Easter/BunnyEars/HUD_BunnyEars_Colorize_MIC.HUD_BunnyEars_Colorize_MIC",
 			"type": "Skin",
-			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
 		},
@@ -9872,7 +12526,6 @@
 			"parent": "/Game/PrimalEarth/Test/PrimalItemCostumeGeneric.PrimalItemCostumeGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Procoptodon/Procoptodon_eastern_bunny/HUD_EasterBunny_Colorize_MIC.HUD_EasterBunny_Colorize_MIC",
 			"type": "Equipment/Costume",
-			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
 		},
@@ -10142,28 +12795,6 @@
 			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "Chibi-Basilisk",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Basilisk.PrimalItemSkin_ChibiDino_Basilisk_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "Chibi-Beelzebufo",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Beelzebufo.PrimalItemSkin_ChibiDino_Beelzebufo_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
 			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
@@ -10535,17 +13166,6 @@
 			"stackSize": 1
 		},
 		{
-			"name": "Chibi-Karkinos",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Karkinos.PrimalItemSkin_ChibiDino_Karkinos_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
 			"name": "Chibi-Kentrosaurus",
 			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Kentrosaurus.PrimalItemSkin_ChibiDino_Kentrosaurus_C",
@@ -10615,17 +13235,6 @@
 			"name": "Chibi-Megaloceros",
 			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Megaloceros.PrimalItemSkin_ChibiDino_Megaloceros_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "Chibi-Megalodon",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Megalodon.PrimalItemSkin_ChibiDino_Megalodon_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
 			"type": "Equipment/Shield",
@@ -10958,17 +13567,6 @@
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Sarco.PrimalItemSkin_ChibiDino_Sarco_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "Chibi-Seeker",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Seeker.PrimalItemSkin_ChibiDino_Seeker_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Rare.ChibiIconMaterial_Inst_Rare",
 			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
 			"weight": 0,
@@ -11646,7 +14244,6 @@
 			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Easter/Chickhat/HUD_ChickHat_Colorize_MIC.HUD_ChickHat_Colorize_MIC",
 			"type": "Skin",
-			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
 		},
@@ -11667,7 +14264,6 @@
 			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Easter/BrokenEgg/HUD_BrokenEgg_Colorize_MIC.HUD_BrokenEgg_Colorize_MIC",
 			"type": "Skin",
-			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
 		},
@@ -11678,7 +14274,6 @@
 			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Easter/Hat_Marshmallow/HUD_Hat_Marshmallow_Colorize_MIC.HUD_Hat_Marshmallow_Colorize_MIC",
 			"type": "Skin",
-			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
 		},
@@ -11727,25 +14322,12 @@
 			"stackSize": 1
 		},
 		{
-			"name": "E4 Remote Eggsplosives Skin",
-			"description": "You can use this to skin the appearance of C4 into an eggsplosive Easter basket. Nothing beats these eggs for poaching your enemies... it'll be over easy!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_EasterBasket_C4.PrimalItemSkin_EasterBasket_C4_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
-			"icon": "/Game/PrimalEarth/UI/EventIcons/HUD_C4Skin_EasterBasket_MIC.HUD_C4Skin_EasterBasket_MIC",
-			"type": "Skin",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1,
-			"weapon": "/Game/PrimalEarth/CoreBlueprints/Weapons/WeapC4_EasterBasket.WeapC4_EasterBasket_C"
-		},
-		{
 			"name": "Easter Chick Hat Skin",
 			"description": "You can use this skin to change the appearance of your headgear. Equip for an adorable look resembling a baby spring chick!",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_EasterChick.PrimalItemSkin_EasterChick_C",
 			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Easter/Chickhat/HUD_ChickHat_Colorize_MIC.HUD_ChickHat_Colorize_MIC",
 			"type": "Skin",
-			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
 		},
@@ -11756,18 +14338,6 @@
 			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Easter/BrokenEgg/HUD_BrokenEgg_Colorize_MIC.HUD_BrokenEgg_Colorize_MIC",
 			"type": "Skin",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "Easter Egghead Skin",
-			"description": "You can use this to skin the appearance of a helmet or hat into a eggstraordinary chocolate egg nest. This bird's nest on your head will be no yolk!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_EggNestHat.PrimalItemSkin_EggNestHat_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
-			"icon": "/Game/PrimalEarth/UI/EventIcons/HUD_HatSkin_ChocNestHat_MIC.HUD_HatSkin_ChocNestHat_MIC",
-			"type": "Skin",
-			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
 		},
@@ -11943,6 +14513,16 @@
 				"recipe": [ { "qty": 250, "type": "PrimalItemConsumable_CookedMeat_C" } ]
 			},
 			"weapon": "/Game/ScorchedEarth/WeaponFlamethrower/WeapFlamethrower_SuperSoaker.WeapFlamethrower_SuperSoaker_C"
+		},
+		{
+			"name": "Full Body Costume Test Skin",
+			"description": "This will override all other skins, acting as a full-body costume. Should always be set on Torso Armor.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_FullCostumeTest.PrimalItemSkin_FullCostumeTest_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/Icons/GhostRexCostume_Icon.GhostRexCostume_Icon",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1
 		},
 		{
 			"name": "Corrupted Avatar Gloves Skin",
@@ -12209,7 +14789,6 @@
 			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Easter/Hat_Marshmallow/HUD_Hat_Marshmallow_Colorize_MIC.HUD_Hat_Marshmallow_Colorize_MIC",
 			"type": "Skin",
-			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
 		},
@@ -14486,24 +17065,6 @@
 			]
 		},
 		{
-			"name": "Bunny Hop Dance Emote",
-			"description": "Consume this to permanently unlock the \"Bunny Hop Dance\" emote. You'll be a real hip hop dancer!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_UnlockEmote_BunnyHopDance.PrimalItemConsumable_UnlockEmote_BunnyHopDance_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Emotes/HUD_Easter_Emotes_BunnyHop_Icon.HUD_Easter_Emotes_BunnyHop_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Holiday" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"statEffects": [
-				{
-					"stat": "health",
-					"value": 1,
-					"duration": 0.5
-				}
-			]
-		},
-		{
 			"name": "Caroling Emote",
 			"description": "Consume this to permanently unlock the \"Caroling\" emote.\nSing for the season!",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_UnlockEmote_Caroling.PrimalItemConsumable_UnlockEmote_Caroling_C",
@@ -15788,44 +18349,6 @@
 			}
 		},
 		{
-			"name": "Summer Swirl Taffy",
-			"description": "Craft this to make random dino candy with a sugar rush and a festive look.\n\nIt looks like taffy, but it tastes like Summer.  ",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Craftable_FourthOfJulyDinoCandy.PrimalItemConsumable_Craftable_FourthOfJulyDinoCandy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/Structures/July4th/HUD_Event_July4th_DinoCandy_BC.HUD_Event_July4th_DinoCandy_BC",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Holiday" ],
-			"weight": 0.1,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 50, "type": "PrimalItemConsumable_CookedMeat_C" } ]
-			}
-		},
-		{
-			"name": "Summer Swirl Taffy",
-			"description": "Summer Swirl Taffy gives your dino a sugar rush and temporarily changes its appearance.\n",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Crafted_FourthOfJulyDinoCandy.PrimalItemConsumable_Crafted_FourthOfJulyDinoCandy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/Structures/July4th/HUD_July4th_Candy_Colorize.HUD_July4th_Candy_Colorize",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Holiday" ],
-			"weight": 0.1,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 50, "type": "PrimalItemConsumable_CookedMeat_C" } ]
-			}
-		},
-		{
 			"name": "Large Animal Feces",
 			"description": "Everyone poops.\nCan provide nitrogen to help crops grow in their plots.  Would be more efficient fertilizer if combined with thatch in a bin.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_DinoPoopLarge.PrimalItemConsumable_DinoPoopLarge_C",
@@ -15931,16 +18454,6 @@
 				"weight": 0.01,
 				"water": -0.05
 			}
-		},
-		{
-			"name": "Festive Dino Candy",
-			"description": "A unique candy with a curious effect that few dino's can passover.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_EasterDinoCandy.PrimalItemConsumable_EasterDinoCandy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/Environment/Seasonal/Easter/Egg/HUD_EasterEgg_Candy_Colorize_MIC.HUD_EasterEgg_Candy_Colorize_MIC",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
-			"stackSize": 1
 		},
 		{
 			"name": "Dinosaur Egg",
@@ -16111,50 +18624,6 @@
 			}
 		},
 		{
-			"name": "Dino Candy Corn",
-			"description": "Craft this to make random dino candy with a sugar rush and a festive look.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_FE_Craftable_CandyCorn.PrimalItemConsumable_FE_Craftable_CandyCorn_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/Environment/Seasonal/Halloween/CandyCorn/Icon/HUD_Event_Halloween_BC.HUD_Event_Halloween_BC",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Holiday" ],
-			"weight": 0.1,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 5,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 20, "type": "PrimalItemStructure_HW_Grave_C" },
-					{ "qty": 5, "type": "PrimalItemResource_ARKBone_C" }
-				]
-			}
-		},
-		{
-			"name": "Dino Candy Corn",
-			"description": "Has a curious effect when consumed by a dinosaur.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_FE_Crafted_CandyCorn.PrimalItemConsumable_FE_Crafted_CandyCorn_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/Structures/Halloween/Icon/HUD_Halloween_Colorize.HUD_Halloween_Colorize",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Holiday" ],
-			"weight": 0.1,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 10,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 20, "type": "PrimalItemStructure_Furniture_Gravestone_C" },
-					{ "qty": 5, "type": "PrimalItemResource_ARKBone_C" }
-				]
-			}
-		},
-		{
 			"name": "Fertilizer",
 			"description": "High nitrogen fertilizer that helps crops grow in their plots.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Fertilizer_Compost.PrimalItemConsumable_Fertilizer_Compost_C",
@@ -16175,16 +18644,6 @@
 					{ "qty": 3, "type": "PrimalItemConsumablePoop_C" }
 				]
 			}
-		},
-		{
-			"name": "Festive Dino Candy",
-			"description": "Has a curious effect when consumed by a dinosaur.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_FestiveDinoCandy.PrimalItemConsumable_FestiveDinoCandy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/HUD_ChristmasCandy_Colorize.HUD_ChristmasCandy_Colorize",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
-			"stackSize": 1
 		},
 		{
 			"name": "Medical Brew",
@@ -18148,44 +20607,6 @@
 			}
 		},
 		{
-			"name": "Thanksgiving Candy",
-			"description": "Craft this to make random dino candy with a sugar rush and a festive look.\n\nA cornucopia of flavors in each bite!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_TT_Craftable_ThanksgivingCandy.PrimalItemConsumable_TT_Craftable_ThanksgivingCandy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/Environment/Seasonal/Thanksgiving/Candy/Icon/HUD_Event_Thanksgiving_BC.HUD_Event_Thanksgiving_BC",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Holiday" ],
-			"weight": 0.1,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 5,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 2, "type": "PrimalItemResource_Wishbone_C" } ]
-			}
-		},
-		{
-			"name": "Thanksgiving Candy",
-			"description": "Has a curious effect when consumed by a dinosaur.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_TT_Crafted_ThanksgivingCandy.PrimalItemConsumable_TT_Crafted_ThanksgivingCandy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/Environment/Seasonal/Thanksgiving/Candy/Icon/HUD_ThanksgivingCandy_Icon_Colorize.HUD_ThanksgivingCandy_Icon_Colorize",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Holiday" ],
-			"weight": 0.1,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 10,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 2, "type": "PrimalItemResource_Wishbone_C" } ]
-			}
-		},
-		{
 			"name": "Broth of Enlightenment",
 			"description": "A single sip of this incredible broth will expand your mind and broaden your horizons, granting greatly increased experience gain for a brief time.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_TheHorn.PrimalItemConsumable_TheHorn_C",
@@ -18219,7 +20640,7 @@
 			"name": "Fish Egg",
 			"description": "Eat it to gain tremendous nourishment",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_UnderwaterEgg.PrimalItemConsumable_UnderwaterEgg_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/FishEgg_Icon.FishEgg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
@@ -18997,35 +21418,6 @@
 				"weight": 0.01,
 				"water": 0.01
 			}
-		},
-		{
-			"name": "Box o' Chocolates",
-			"description": "<RichColor Color=\"1, 0.5, 0.8, 1\">This chocolate's delicious, despite its origins. The Island's creatures LOVE it, as it fully heals them or advances their taming!</>",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/PrimalItemConsumable_ValentinesChocolate.PrimalItemConsumable_ValentinesChocolate_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/VDay_icon.VDay_icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Berries" ],
-			"weight": 2.14,
-			"stackSize": 1,
-			"spoilsIn": 21600,
-			"statEffects": [
-				{
-					"stat": "health", "value": 100, "useItemQuality": true,
-					"pctOf": "max",
-					"pctAbsRange": { "min": 0, "max": 0 }
-				}
-			]
-		},
-		{
-			"name": "Valentines Dino Candy",
-			"description": "Has a curious effect when consumed by a dinosaur.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/PrimalItemConsumable_ValentinesDinoCandy.PrimalItemConsumable_ValentinesDinoCandy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/HUD_ValentinesCandy_Colorize.HUD_ValentinesCandy_Colorize",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
-			"stackSize": 1
 		},
 		{
 			"name": "Note",
@@ -21024,7 +23416,7 @@
 			"type": "MiscConsumable/Food",
 			"weight": 15,
 			"stackSize": 1,
-			"spoilsIn": 300
+			"spoilsIn": 2400
 		},
 		{
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_GenericMisc.PrimalItem_GenericMisc_C",
@@ -21584,159 +23976,6 @@
 			"structure": "/Game/PrimalEarth/Structures/BuildingBases/Underwater_Base_SM_BottomEntry.Underwater_Base_SM_BottomEntry_C"
 		},
 		{
-			"name": "Holiday Tree",
-			"description": "This is the perfect tree to use when celebrating the winter solstace!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_ChristmasTree.PrimalItemStructure_ChristmasTree_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/ChristmasTree_Icon.ChristmasTree_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 12,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 80, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 80, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 40, "type": "PrimalItemResource_Thatch_C" }
-				]
-			},
-			"structure": "/Game/PrimalEarth/Structures/Christmas/Christmas_Tree/Furniture_ChristmasTree.Furniture_ChristmasTree_C"
-		},
-		{
-			"name": "Snowman",
-			"description": "Put a hat on it for extra fun!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Snowman.PrimalItemStructure_Snowman_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Snowman_Icon.Snowman_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 18,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 7, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 8, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" },
-					{ "qty": 5, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
-				]
-			},
-			"structure": "/Game/PrimalEarth/Structures/Christmas/Christmas_Tree/Furniture_Snowman.Furniture_Snowman_C"
-		},
-		{
-			"name": "Holiday Stocking",
-			"description": "An oversized sock that adds jolliness to any holiday. Requires attaching to a wall.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Stocking.PrimalItemStructure_Stocking_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Stocking_Icon.Stocking_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 4,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 8, "type": "PrimalItemResource_Hide_C" }
-				]
-			},
-			"structure": "/Game/PrimalEarth/Structures/Christmas/Stocking/Sign_Wall_Stocking.Sign_Wall_Stocking_C"
-		},
-		{
-			"name": "Gift Box",
-			"description": "Put items in this and inscribe a Tribemember's name, and only they will be able to open it, with a bang!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_StorageBox_ChristmasGift.PrimalItemStructure_StorageBox_ChristmasGift_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Present2_Icon.Present2_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 9,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 3, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Thatch_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
-				]
-			},
-			"structure": "/Game/PrimalEarth/Structures/Christmas/Christmas_Gift/StorageBox_ChristmasGift.StorageBox_ChristmasGift_C"
-		},
-		{
-			"name": "Wreath",
-			"description": "A decorative collection of leaves that make any room festive. Requires attaching to a wall.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Wreath.PrimalItemStructure_Wreath_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Wreath_Icon.Wreath_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 7,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 4, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 30, "type": "PrimalItemResource_Thatch_C" },
-					{ "qty": 30, "type": "PrimalItemResource_Fibers_C" }
-				]
-			},
-			"structure": "/Game/PrimalEarth/Structures/Christmas/Wreath/Furniture_Wall_Wreath.Furniture_Wall_Wreath_C"
-		},
-		{
-			"name": "Holiday Lights",
-			"description": "A decorative string of lights that make any room festive.  Requires attaching to a wall.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_XmasLights.PrimalItemStructure_XmasLights_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/ChristmasLight_Icon.ChristmasLight_Icon",
-			"type": "Structure",
-			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
-				]
-			},
-			"structure": "/Game/PrimalEarth/Structures/Christmas/lightCable/Furniture_WallChain_XmasLights.Furniture_WallChain_XmasLights_C"
-		},
-		{
 			"name": "Greenhouse Ceiling",
 			"description": "A metal-framed, glass ceiling that provides insulation, and doubles as a floor for higher levels.  Excellent for growing crops indoors.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseCeiling.PrimalItemStructure_GreenhouseCeiling_C",
@@ -21857,6 +24096,30 @@
 			"structure": "/Game/PrimalEarth/Structures/Greenhouse_Modular/Greenhouse_Doorframe.Greenhouse_Doorframe_C"
 		},
 		{
+			"name": "Greenhouse Windowframe",
+			"description": "A metal-framed, glass wall, with a hole for a window.  Excellent for growing crops indoors.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseWallWithWindow.PrimalItemStructure_GreenhouseWallWithWindow_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseWallWithWindow.PrimalItemStructure_BaseWallWithWindow_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Metal/Icons/MetalWallHole_Icon.MetalWallHole_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Greenhouse" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 11.04,
+				"time": 3,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 6, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 6, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"structure": "/Game/PrimalEarth/Structures/Greenhouse_Modular/Greenhouse_WindowWall.Greenhouse_WindowWall_C"
+		},
+		{
 			"name": "Sloped Greenhouse Wall Left",
 			"description": "A sturdy metal-framed, glass sloped wall that insulates the inside from the outside, separates rooms, and provides structural integrity. Used in conjunction with the roof.  Excellent for growing crops indoors.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseWall_Sloped_Left.PrimalItemStructure_GreenhouseWall_Sloped_Left_C",
@@ -21927,54 +24190,6 @@
 				]
 			},
 			"structure": "/Game/PrimalEarth/Structures/Greenhouse_Modular/Greenhouse_Window.Greenhouse_Window_C"
-		},
-		{
-			"name": "Bunny Egg",
-			"description": "Put it in a Cooking Pot to craft fun costumes or place on the ground as a festive decoration!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_EasterEgg.PrimalItemStructure_EasterEgg_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/EasterEgg_Icon.EasterEgg_Icon",
-			"type": "Resource",
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1209600,
-			"structure": "/Game/PrimalEarth/Structures/Halloween/Sign_EasterEgg.Sign_EasterEgg_C"
-		},
-		{
-			"name": "Stolen Headstone",
-			"description": "A headstone stolen from a graveyard.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_HW_Grave.PrimalItemStructure_HW_Grave_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/GraveStone2_Icon.GraveStone2_Icon",
-			"type": "Structure",
-			"folders": [ "Structures", "Furniture", "Stone" ],
-			"weight": 0.5,
-			"stackSize": 100,
-			"structure": "/Game/PrimalEarth/Structures/Halloween/StructureBP_Gravestone_HW.StructureBP_Gravestone_HW_C"
-		},
-		{
-			"name": "Pumpkin",
-			"description": "Decorate your base with this pumpkin. Can be \"carved\" with all manner of paints.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_Pumpkin.PrimalItemStructure_Pumpkin_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Pumpkin_Icon.Pumpkin_Icon",
-			"type": "Structure",
-			"folders": [ "Structures", "Halloween" ],
-			"weight": 0.5,
-			"stackSize": 100,
-			"structure": "/Game/PrimalEarth/Structures/Halloween/Sign_Pumpkin.Sign_Pumpkin_C"
-		},
-		{
-			"name": "Scarecrow",
-			"description": "Decorate your base with this scarecrow.  Guaranteed to scare the crows away.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_Scarecrow.PrimalItemStructure_Scarecrow_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Scarecrow_Icon.Scarecrow_Icon",
-			"type": "Structure",
-			"folders": [ "Structures", "Halloween" ],
-			"weight": 0.5,
-			"stackSize": 100,
-			"structure": "/Game/PrimalEarth/Structures/Halloween/Structure_Scarecrow.Structure_Scarecrow_C"
 		},
 		{
 			"name": "Training Dummy",
@@ -27246,17 +29461,6 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C"
 		},
 		{
-			"name": "Dinosaur Bone",
-			"description": "A very ancient looking bone, must be usefull for something!",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ARKBone.PrimalItemResource_ARKBone_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/ARKBone_Icon.ARKBone_Icon",
-			"type": "Resource",
-			"weight": 0.5,
-			"stackSize": 200,
-			"spoilsIn": 2678400
-		},
-		{
 			"name": "Ammonite Bile",
 			"description": "A congealed glob of Ammonite Bile. Can be used for medicinal purposes when carefully prepared.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_AmmoniteBlood.PrimalItemResource_AmmoniteBlood_C",
@@ -27697,6 +29901,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TEKElement_Icon.TEKElement_Icon",
 			"type": "Resource",
+			"folders": [ "Tek" ],
 			"weight": 0.01,
 			"stackSize": 100,
 			"crafting": {
@@ -27741,6 +29946,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TEKElementShard_Icon.TEKElementShard_Icon",
 			"type": "Resource",
+			"folders": [ "Tek" ],
 			"weight": 0.05,
 			"stackSize": 1000,
 			"crafting": {
@@ -28699,18 +30905,6 @@
 			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
-		},
-		{
-			"name": "Sweet Spear Carrot Skin",
-			"description": "You can use this to skin the appearance of a spear into a deliciously crunchy weapon. It may break, but you won't carrot all.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemSkin_Spear_Carrot.PrimalItemSkin_Spear_Carrot_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
-			"icon": "/Game/PrimalEarth/UI/EventIcons/HUD_SpearSkin_Carrot_MIC.HUD_SpearSkin_Carrot_MIC",
-			"type": "Skin",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1,
-			"weapon": "/Game/PrimalEarth/CoreBlueprints/Weapons/WeapSpear_Carrot.WeapSpear_Carrot_C"
 		},
 		{
 			"name": "Santiago's Spear Skin",
@@ -35504,6 +37698,34 @@
 			}
 		},
 		{
+			"name": "Fertilized Tek Wyvern Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Wyvern_Fertilized_Tek.PrimalItemConsumable_Egg_Wyvern_Fertilized_Tek_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Wyvern_Fertilized.PrimalItemConsumable_Egg_Wyvern_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Wyvern_Tek.HUD_DinoEgg_MIC_Inst_Wyvern_Tek",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 50,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Genesis2/Dinos/TekWyvern/TekWyvern_Character_BP.TekWyvern_Character_BP_C",
+				"temperature": { "min": 80, "max": 90 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Yutyrannus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Yuty.PrimalItemConsumable_Egg_Yuty_C",
@@ -36055,6 +38277,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKBuggy_Icon.TEKBuggy_Icon",
 			"type": "Structure",
+			"folders": [ "Vehicles" ],
 			"weight": 200,
 			"stackSize": 1,
 			"crafting": {
@@ -37879,6 +40102,32 @@
 					{ "qty": 5, "type": "PrimalItemResource_Electronics_C" }
 				]
 			}
+		},
+		{
+			"name": "Netgun",
+			"description": "A small but powerful explosive, primarily used with rocket launchers.",
+			"bp": "/Game/ScorchedEarth/WeaponNetGun/PrimalItemAmmo_NetGun.PrimalItemAmmo_NetGun_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/ScorchedEarth/Icons/Weapons/NetgunAmmo_Icon.NetgunAmmo_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 3.6,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Gunpowder_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 12, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"weapon": "/Game/ScorchedEarth/WeaponNetGun/WeapNetGun.WeapNetGun_C"
 		},
 		{
 			"name": "Oil Jar",
