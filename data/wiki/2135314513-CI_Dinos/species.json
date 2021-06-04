@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "329.3.1614996923",
+	"version": "329.3.1622813781",
 	"format": "4",
 	"mod": {
 		"id": "2135314513",
@@ -48,13 +48,13 @@
 			},
 			"movementW": {
 				"walk": { "base": 400, "sprint": 1000 },
-				"fly": { "base": 1500, "sprint": 3750 },
-				"swim": { "base": 1500, "sprint": 7500 }
+				"fly": { "base": 750, "sprint": 1875 },
+				"swim": { "base": 750, "sprint": 3750 }
 			},
 			"movementD": {
 				"walk": { "base": 400, "sprint": 1000 },
-				"fly": { "base": 1500, "sprint": 3750 },
-				"swim": { "base": 1500, "sprint": 7500 }
+				"fly": { "base": 750, "sprint": 1875 },
+				"swim": { "base": 750, "sprint": 3750 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -65,8 +65,11 @@
 				"defaultSwingRadius": 1200,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
-					{ "name": "Flame", "interval": 12, "dmg": 0, "radius": 0, "stamina": 20 },
-					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 }
+					{
+						"name": "Flame", "interval": 12, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					},
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 10 }
 				]
 			},
 			"death": {
@@ -452,11 +455,123 @@
 			}
 		},
 		{
+			"name": "Crystal Desert Elemental",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Elemental/CI_Elemental_Character_BP.CI_Elemental_Character_BP_C",
+			"dinoNameTag": "Carno",
+			"customTag": "Carno",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 425, "sprint": 1615 },
+				"fly": { "base": 600, "sprint": 2280 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 425, "sprint": 1615 },
+				"fly": { "base": 600, "sprint": 2280 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 1, "dmg": 120, "radius": 550, "stamina": 25 },
+					{ "name": "Summon Minions", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Elemental Vortex Minion",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Elemental/CI_Vortex_Character_BP.CI_Vortex_Character_BP_C",
+			"dinoNameTag": "Carno",
+			"customTag": "Carno",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 425, "sprint": 892.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 110,
+				"attacks": [ { "name": "Melee Attack", "interval": 1, "dmg": 120, "radius": 550, "stamina": 25 } ]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"baseXP": 18
+			}
+		},
+		{
 			"name": "Crystal Griffin",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Griffin/CrystalGriffin_Character_BP.CrystalGriffin_Character_BP_C",
 			"dinoNameTag": "Griffin",
 			"customTag": "Griffin",
-			"targetingTeamName": "Carnivores_Medium_Aggressive",
+			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
 			"dragWeight": 200,
 			"flags": [
@@ -504,6 +619,76 @@
 		{
 			"name": "Crystal Magmasaur",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/LavaLizard/CrystalLizard_Character_BP.CrystalLizard_Character_BP_C",
+			"dinoNameTag": "LavaLizard",
+			"customTag": "LavaLizard",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 550,
+			"dragWeight": 555,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 525 },
+				"swim": { "base": 600, "sprint": 525 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1575 },
+				"swim": { "base": 600, "sprint": 1575 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 92,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 140, "radius": 450, "stamina": 10 },
+					{
+						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					},
+					{ "name": "VentForge", "interval": 30, "dmg": 80, "radius": 2000, "stamina": 2 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 170, "radius": 350, "stamina": 10 },
+					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 20, "dmg": 170, "radius": 450, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge.DinoDropInventoryComponent_Carnivore_Huge"
+					}
+				],
+				"baseXP": 120
+			}
+		},
+		{
+			"name": "Crystal Magmasaur",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/LavaLizard/CrystalLizard_Character_BPtest.CrystalLizard_Character_BPtest_C",
 			"dinoNameTag": "LavaLizard",
 			"customTag": "LavaLizard",
 			"targetingTeamName": "Carnivores_High",
@@ -806,6 +991,62 @@
 			"death": { "baseXP": 12 }
 		},
 		{
+			"name": "RazorTooth",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Razortooth/CI_RazorTooth_Character_BP.CI_RazorTooth_Character_BP_C",
+			"dinoNameTag": "Yutyrannus",
+			"customTag": "Yutyrannus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 1610 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 1610 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 55, "radius": 500, "stamina": 10 },
+					{ "name": "Fear", "interval": 1, "dmg": 1, "radius": 1500, "stamina": 250 },
+					{ "name": "Courage", "interval": 1, "dmg": 1, "radius": 1500, "stamina": 250 },
+					{ "name": "CourageToFollowers", "interval": 25, "dmg": 1, "radius": 1500, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Yuty.DinoDropInventoryComponent_Carnivore_Huge_Yuty"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
 			"name": "Crystal Drake",
 			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/RockDrake/CrystalDrake_Character_BP.CrystalDrake_Character_BP_C",
 			"dinoNameTag": "RockDrake",
@@ -875,6 +1116,56 @@
 				],
 				"baseXP": 2
 			}
+		},
+		{
+			"name": "ShieldHorn",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/ShieldHorn/CI_ShieldHorn_Character_BP.CI_ShieldHorn_Character_BP_C",
+			"dinoNameTag": "Trike",
+			"customTag": "Trike",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 94.5, "sprint": 283.5 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 430, "stamina": 0 },
+					{ "name": "Ram", "interval": 30, "dmg": 32, "radius": 430, "stamina": 0 },
+					{ "name": "grow", "interval": 0, "dmg": 32, "radius": 430, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Crystal Basilisk",
@@ -2417,6 +2708,66 @@
 					}
 				],
 				"baseXP": 30
+			}
+		},
+		{
+			"name": "Night Shade Deino",
+			"bp": "/Game/Mods/CI_Dinos/NightShades/Night_S_Deino_Character_BP.Night_S_Deino_Character_BP_C",
+			"dinoNameTag": "C_Deinonychus",
+			"customTag": "C_Deinonychus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 1296 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1440 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 350, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 30, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
 			}
 		}
 	]
