@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "327.21.1622587129",
+	"version": "329.16.1623184507",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -610,6 +610,40 @@
 			}
 		},
 		{
+			"name": "Crop Blend",
+			"description": "A blend of crops and other resources.Due to the flavor and presentation, herbivores will go nuts over this.",
+			"bp": "/Game/Mods/AC2/Items/Blend/PrimalItemConsumable_CropBlend.PrimalItemConsumable_CropBlend_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Berry_Mejoberry.PrimalItemConsumable_Berry_Mejoberry_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Fist_of_Crop.Fist_of_Crop",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.02,
+			"stackSize": 1000,
+			"spoilsIn": 1600,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemConsumable_Berry_AC2Strawberry_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Veggie_Savoroot_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Veggie_Citronal_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 20, "useItemQuality": true, "duration": 6.666667 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
 			"name": "Transposition Anvil",
 			"description": "This structure is used by the C.A.A. to fabricate powerful weapons.",
 			"bp": "/Game/Mods/AC2/Items/Gunsmith/PrimalItemStructure_TranspositionAnvil.PrimalItemStructure_TranspositionAnvil_C",
@@ -675,6 +709,69 @@
 			"type": "Resource",
 			"weight": 0,
 			"stackSize": 1000
+		},
+		{
+			"name": "Strawberry",
+			"description": "A familiar red berry, known for its juiciness and sweet taste. Better than normal berries for food. Herbivores might perk up if you used this somehow...",
+			"bp": "/Game/Mods/AC2/Items/Resource/PrimalItemConsumable_Berry_AC2Strawberry.PrimalItemConsumable_Berry_AC2Strawberry_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Strawberry.Strawberry",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.02,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0375,
+				"weight": 0.01,
+				"water": 0.025
+			}
+		},
+		{
+			"name": "Strawberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Strawberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AC2/Items/Resource/PrimalItemConsumable_Seed_AC2Strawberry.PrimalItemConsumable_Seed_AC2Strawberry_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/TintoberrySeed_Icon.TintoberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 1000,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Anthracite",
+			"description": "A dense, compact form of coal.You could use this in place of charcoal. Normally, this mineral can be found with Obsidian.",
+			"bp": "/Game/Mods/AC2/Items/Resource/PrimalItemResource_AC2Anthracite.PrimalItemResource_AC2Anthracite_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Charcoal.PrimalItemResource_Charcoal_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Anthracite_Mineral.Anthracite_Mineral",
+			"type": "Resource",
+			"weight": 0.25,
+			"stackSize": 100
+		},
+		{
+			"name": "Coal",
+			"description": "A mineral known as a fuel source and highly valued. On the arks, Coal seems to often be found with Sulfur.You could use it in a similar manner as Sparkpowder",
+			"bp": "/Game/Mods/AC2/Items/Resource/PrimalItemResource_AC2Coal.PrimalItemResource_AC2Coal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Sparkpowder.PrimalItemResource_Sparkpowder_C",
+			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Coal.Coal",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 100
 		},
 		{
 			"name": "Mangrove Tree Wood",
@@ -844,7 +941,7 @@
 			"parent": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItem_WeaponSmithBase.PrimalItem_WeaponSmithBase_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/500/500Mag_Icon.500Mag_Icon",
 			"type": "Weapon",
-			"folders": [ "Weapons", "Military" ],
+			"folders": [ "Weapons" ],
 			"weight": 10,
 			"stackSize": 1,
 			"durability": 80,
@@ -925,7 +1022,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/500_Icon.500_Icon",
 			"type": "Ammo",
-			"folders": [ "Weapons", "Military", "Ammo" ],
+			"folders": [ "Weapons", "Ammo" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"crafting": {
