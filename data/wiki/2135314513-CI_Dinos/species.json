@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "329.14.1623012418",
+	"version": "329.26.1623359165",
 	"format": "4",
 	"mod": {
 		"id": "2135314513",
@@ -453,6 +453,55 @@
 				],
 				"baseXP": 3
 			}
+		},
+		{
+			"name": "Doedicurus",
+			"bp": "/Game/Mods/CI_Dinos/Dinos_Crystal/Doed/CrystalDoed_Character_BP.CrystalDoed_Character_BP_C",
+			"dinoNameTag": "Doed",
+			"customTag": "Doed",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 160,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 2075,
+				"costLevel": 55,
+				"timeBase": 14525,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 142,
+				"attacks": [
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 32, "radius": 142, "stamina": 0 },
+					{ "name": "None", "interval": 0.67, "dmg": 16, "radius": 142, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 32, "radius": 142, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 7 }
 		},
 		{
 			"name": "Crystal Desert Elemental",
