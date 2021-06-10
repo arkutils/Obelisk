@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "329.3.1618587036",
+	"version": "329.25.1623280184",
 	"format": "4",
 	"mod": {
 		"id": "1984129536",
@@ -370,6 +370,33 @@
 			"weapon": "/Game/Extinction/CoreBlueprints/Weapons/WeapEmptyCryopod.WeapEmptyCryopod_C"
 		},
 		{
+			"name": "Empty Cryopod",
+			"description": "Hold up to a creature to capture it. Throw to deploy a captured creature.\n\nMTS Cryopod Changes;\n- Craftable in player inventories.",
+			"bp": "/Game/Mods/MTSMod/Cryopod/PrimalItem_WeaponEmptyCryopod_MTS.PrimalItem_WeaponEmptyCryopod_MTS_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Weapons/PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C",
+			"icon": "/Game/Extinction/Icons/Weapons/CryoPod_Icon.CryoPod_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons" ],
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 11.35,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 4, "type": "PrimalItemResource_Oil_C" },
+					{ "qty": 8, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"weapon": "/Game/Extinction/CoreBlueprints/Weapons/WeapEmptyCryopod.WeapEmptyCryopod_C"
+		},
+		{
 			"name": "Element Dust",
 			"description": "MTS Element Dust Changes;\n- Craftable in player inventory\n- 1 Element = 500 Dust",
 			"bp": "/Game/Mods/MTSMod/ElementEngram/PrimalItem_ElementDust_Crafted_MTS.PrimalItem_ElementDust_Crafted_MTS_C",
@@ -608,6 +635,34 @@
 			}
 		},
 		{
+			"name": "Fertilized Tek Stego Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/MTSMod/Stego/PrimalItemConsumable_Egg_Stego_Fertilized_Bionic_MTS.PrimalItemConsumable_Egg_Stego_Fertilized_Bionic_MTS_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Stego_Fertilized_Bionic.PrimalItemConsumable_Egg_Stego_Fertilized_Bionic_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego_Bionic.HUD_DinoEgg_MIC_Inst_Stego_Bionic",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/MTSMod/Stego/BionicStego_Character_BP_MTS.BionicStego_Character_BP_MTS_C",
+				"temperature": { "min": 22, "max": 28 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Fertilized Stego Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/MTSMod/Stego/PrimalItemConsumable_Egg_Stego_Fertilized_MTS.PrimalItemConsumable_Egg_Stego_Fertilized_MTS_C",
@@ -660,6 +715,34 @@
 				]
 			},
 			"structure": "/Game/Mods/MTSMod/Teleporter/TekTeleporter_MTS.TekTeleporter_MTS_C"
+		},
+		{
+			"name": "Fertilized Tropeognathus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/MTSMod/Trope/PrimalItemConsumable_Egg_Tropeognathus_Fertilized_MTS.PrimalItemConsumable_Egg_Tropeognathus_Fertilized_MTS_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Tropeognathus_Fertilized.PrimalItemConsumable_Egg_Tropeognathus_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Tropeognathus.HUD_DinoEgg_MIC_Inst_Tropeognathus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 7,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/MTSMod/Trope/Tropeognathus_Character_BP_MTS.Tropeognathus_Character_BP_MTS_C",
+				"temperature": { "min": 29, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
 		},
 		{
 			"name": "Vault",
