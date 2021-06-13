@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "329.3.1620098647",
+	"version": "329.45.1623581392",
 	"format": "4",
 	"mod": {
 		"id": "1675895024",
@@ -1627,7 +1627,7 @@
 					{ "chance": 0.4, "min": 1, "max": 5 },
 					{ "chance": 0.2, "min": 6, "max": 12 },
 					{ "chance": 0.2, "min": 13, "max": 20 },
-					{ "chance": 0.2, "min": 21, "max": 36 }
+					{ "chance": 0.2, "min": 21, "max": 38 }
 				]
 			},
 			"cloning": {
@@ -1695,7 +1695,7 @@
 					{ "chance": 0.4, "min": 1, "max": 5 },
 					{ "chance": 0.2, "min": 6, "max": 12 },
 					{ "chance": 0.2, "min": 13, "max": 20 },
-					{ "chance": 0.2, "min": 21, "max": 36 }
+					{ "chance": 0.2, "min": 21, "max": 38 }
 				]
 			},
 			"cloning": {
@@ -1764,7 +1764,7 @@
 					{ "chance": 0.4, "min": 1, "max": 5 },
 					{ "chance": 0.2, "min": 6, "max": 12 },
 					{ "chance": 0.2, "min": 13, "max": 20 },
-					{ "chance": 0.2, "min": 21, "max": 36 }
+					{ "chance": 0.2, "min": 21, "max": 38 }
 				]
 			},
 			"cloning": {
@@ -1967,6 +1967,66 @@
 			}
 		},
 		{
+			"name": "R-Reaper Queen (Debug)",
+			"bp": "/Game/Mods/NoUntameables/NamelessQueen/DEBUG_Xenomorph_Character_BP_Female_Wild_Gen2.DEBUG_Xenomorph_Character_BP_Female_Wild_Gen2_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Female" ],
+			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1350, "sprint": 3240 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2880 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 105, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 65, "radius": 1400, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 10, "dmg": 10, "radius": 800, "stamina": 0 },
+					{ "name": "Roar", "interval": 60, "dmg": 5, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 100, "stamina": 5 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_ReaperQueen.DinoDropInventoryComponent_Carnivore_ReaperQueen"
+					}
+				],
+				"baseXP": 800
+			}
+		},
+		{
 			"name": "Reaper Queen Ghost",
 			"bp": "/Game/Mods/NoUntameables/NamelessQueen/Ghost_Xenomorph_Character_BP_Female_Wild.Ghost_Xenomorph_Character_BP_Female_Wild_C",
 			"dinoNameTag": "Xenomorph",
@@ -2094,6 +2154,81 @@
 			}
 		},
 		{
+			"name": "R-Reaper Queen",
+			"bp": "/Game/Mods/NoUntameables/NamelessQueen/Xenomorph_Character_BP_Female_Tamed_Gen2.Xenomorph_Character_BP_Female_Tamed_Gen2_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper Queen",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 550,
+			"dragWeight": 550,
+			"variants": [ "Female", "Tamed" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"preventNeuter",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 77,
+				"timeBase": 16275,
+				"timeLevel": 539
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 978, "sprint": 2347.2 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 652, "sprint": 2086.4 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 65,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 105, "radius": 600, "stamina": 5 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 65, "radius": 1400, "stamina": 15 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 10, "dmg": 10, "radius": 800, "stamina": 100 },
+					{ "name": "Roar", "interval": 70, "dmg": 5, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 7, "radius": 200, "stamina": 5 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_ReaperQueen.DinoDropInventoryComponent_Carnivore_ReaperQueen"
+					}
+				],
+				"baseXP": 800
+			}
+		},
+		{
 			"name": "Reaper Queen",
 			"bp": "/Game/Mods/NoUntameables/NamelessQueen/Xenomorph_Character_BP_Female_Wild.Xenomorph_Character_BP_Female_Wild_C",
 			"dinoNameTag": "Xenomorph",
@@ -2103,6 +2238,66 @@
 			"dragWeight": 525,
 			"variants": [ "Female" ],
 			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1350, "sprint": 3240 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2880 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 105, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 65, "radius": 1400, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 10, "dmg": 10, "radius": 800, "stamina": 0 },
+					{ "name": "Roar", "interval": 60, "dmg": 5, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 100, "stamina": 5 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_ReaperQueen.DinoDropInventoryComponent_Carnivore_ReaperQueen"
+					}
+				],
+				"baseXP": 800
+			}
+		},
+		{
+			"name": "R-Reaper Queen",
+			"bp": "/Game/Mods/NoUntameables/NamelessQueen/Xenomorph_Character_BP_Female_Wild_Gen2.Xenomorph_Character_BP_Female_Wild_Gen2_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Female" ],
+			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
