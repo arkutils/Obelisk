@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "329.16.1623274780",
+	"version": "330.8.1624053054",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -233,6 +233,85 @@
 				"food": 0.8,
 				"weight": 0.3,
 				"water": 0.01
+			}
+		},
+		{
+			"name": "Shot Put",
+			"description": "A dense ball of solid iron. An archaeoindris is capable of yeeting this.",
+			"bp": "/Game/Mods/AC2/Archaeoindris/PrimalItemAmmo_ShotPut.PrimalItemAmmo_ShotPut_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/Cannonball_Icon.Cannonball_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 15,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.4,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 80, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 20, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			}
+		},
+		{
+			"name": "Archaeoindris Saddle",
+			"description": "Equip a Archaeoindris with this to ride it.",
+			"bp": "/Game/Mods/AC2/Archaeoindris/PrimalItemArmor_ArchaeoindrisSaddle.PrimalItemArmor_ArchaeoindrisSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Baryonyx/Baryonyx_Saddle/HUD_BaryonyxSaddle_Colorize_MIC.HUD_BaryonyxSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 62.8,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Honey-Glazed Strawberry",
+			"description": "A strawberry, coated in sticky honey. A really sweet treat. Most critters eat it like a berry, but a certain creature of tropical locales might really like this...",
+			"bp": "/Game/Mods/AC2/Archaeoindris/PrimalItemConsumable_Berry_HoneyBerry.PrimalItemConsumable_Berry_HoneyBerry_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/AC2/Archaeoindris/Tex/Honeyberry.Honeyberry",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.02,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_Berry_AC2Strawberry_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Honey_C" }
+				]
+			},
+			"statEffects": [
+				{ "stat": "food", "value": 2, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0375,
+				"weight": 0.01,
+				"water": 0.025
 			}
 		},
 		{
@@ -941,7 +1020,7 @@
 			"parent": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItem_WeaponSmithBase.PrimalItem_WeaponSmithBase_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/500/500Mag_Icon.500Mag_Icon",
 			"type": "Weapon",
-			"folders": [ "Weapons" ],
+			"folders": [ "Weapons", "Firearms" ],
 			"weight": 10,
 			"stackSize": 1,
 			"durability": 80,
@@ -1128,6 +1207,29 @@
 			}
 		},
 		{
+			"name": "Assault Shotgun Ammo",
+			"description": "Legit just shotgun ammo used for the KSG",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/PrimalItemAmmo_CAAShotgunRounds.PrimalItemAmmo_CAAShotgunRounds_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/Bullet5_Icon.Bullet5_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.1,
+			"stackSize": 250,
+			"crafting": {
+				"xp": 0.25,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItemAmmo_SimpleBullet_C" },
+					{ "qty": 1, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Gunpowder_C" }
+				]
+			}
+		},
+		{
 			"name": "Co2 Cartridge",
 			"description": "Contains highly compressed carbon dioxide.",
 			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/PrimalItemAmmo_Co2.PrimalItemAmmo_Co2_C",
@@ -1170,9 +1272,51 @@
 			}
 		},
 		{
-			"name": "9mm Ammo",
-			"description": "A potent dart full of tranquilizer poisen. For use with a DI-Tranquilizer Rifle.",
-			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/PrimalItemAmmo_tranqDart_WS.PrimalItemAmmo_tranqDart_WS_C",
+			"name": "Dragonsbreath Shotgun Ammo",
+			"description": "Turned from a novelty into an effective ammo type by G.S.R. Wraith. Lights targets aflame with effective firepower.",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/PrimalItemAmmo_Dragonsbreath.PrimalItemAmmo_Dragonsbreath_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/Bullet5_Icon.Bullet5_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.1,
+			"stackSize": 250,
+			"crafting": {
+				"xp": 0.25,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItemResource_Propellant_C" },
+					{ "qty": 1, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Gunpowder_C" }
+				]
+			}
+		},
+		{
+			"name": "Modified Shocking Tranquilizer Dart",
+			"description": "A potent dart full of powerful tranquilizer toxin, cappable of stunning small targets.  For use with the C.A.A. Tranquilizer Rifle.",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/PrimalItemAmmo_shockingTranqDart_WS.PrimalItemAmmo_shockingTranqDart_WS_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/TranqDart_purple_Icon.TranqDart_purple_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Military", "Ammo" ],
+			"weight": 0.1,
+			"stackSize": 200,
+			"crafting": {
+				"xp": 1,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 4,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemAmmo_RefinedTranqDart_C" } ]
+			}
+		},
+		{
+			"name": "Modified Tranq Dart",
+			"description": "A potent dart full of tranquilizer poisen. For use with the C.A.A. Tranquilizer Rifle.",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/PrimalItemAmmo_tranqDart_ACDartRifle.PrimalItemAmmo_tranqDart_ACDartRifle_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/TranqDart_red_Icon.TranqDart_red_Icon",
 			"type": "Ammo",
@@ -1185,10 +1329,7 @@
 				"levelReq": 0,
 				"productCount": 4,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 4, "type": "PrimalItemResource_Gunpowder_C" }
-				]
+				"recipe": [ { "qty": 1, "type": "PrimalItemAmmo_TranqDart_C" } ]
 			}
 		},
 		{
@@ -1224,6 +1365,42 @@
 				]
 			},
 			"weapon": "/Game/Mods/AC2/Items/Weapons/Guns/Rifles/M4A1/WeapM4A1.WeapM4A1_C"
+		},
+		{
+			"name": "C.A.A. Dart Rifle",
+			"description": "A compressed dart rifle made by G.S.R. Wraith. Fires darts in spurts, and can fire underwater.Make sure you have Co2 canisters as well as ammo!",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/DartRifle/PrimalItem_WeaponTranqRifle.PrimalItem_WeaponTranqRifle_C",
+			"parent": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItem_WeaponSmithBase.PrimalItem_WeaponSmithBase_C",
+			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/DartRifle/TranqRifle_Icon.TranqRifle_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Tranq" ],
+			"weight": 10,
+			"stackSize": 1,
+			"durability": 80,
+			"crafting": {
+				"xp": 180,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_SteelIngot_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 1, "type": "PrimalItemAmmo_Co2_C" }
+				]
+			},
+			"repair": {
+				"xp": 180,
+				"time": 5,
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_SteelIngot_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 0.5, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 0.5, "type": "PrimalItemAmmo_Co2_C" }
+				]
+			},
+			"weapon": "/Game/Mods/AC2/Items/Weapons/Guns/DartRifle/WeapTranqRifle.WeapTranqRifle_C"
 		},
 		{
 			"name": "C.A.A Samurai Edge",
@@ -1434,7 +1611,7 @@
 			"parent": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItem_WeaponSmithBase.PrimalItem_WeaponSmithBase_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/Rifles/M4A1/M4A1_Icon.M4A1_Icon",
 			"type": "Weapon",
-			"folders": [ "Weapons", "Military" ],
+			"folders": [ "Weapons", "Firearms" ],
 			"weight": 10,
 			"stackSize": 1,
 			"durability": 80,
@@ -1460,6 +1637,40 @@
 				]
 			},
 			"weapon": "/Game/Mods/AC2/Items/Weapons/Guns/Rifles/M4A1/WeapM4A1.WeapM4A1_C"
+		},
+		{
+			"name": "KSG",
+			"description": "The KSG is a tactical bullpup shotgun. With significant ammo capcity and multiple types of ammunition, its only obvious downside is a longer reload time. ",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/Shotgun/KSG/PrimalItem_KSG.PrimalItem_KSG_C",
+			"parent": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItem_WeaponSmithBase.PrimalItem_WeaponSmithBase_C",
+			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/Shotgun/KSG/KSG_Icon.KSG_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Military" ],
+			"weight": 10,
+			"stackSize": 1,
+			"durability": 100,
+			"crafting": {
+				"xp": 180,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 60, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 50, "type": "PrimalItemResource_SteelIngot_C" },
+					{ "qty": 50, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"repair": {
+				"xp": 180,
+				"time": 5,
+				"recipe": [
+					{ "qty": 30, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 25, "type": "PrimalItemResource_SteelIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"weapon": "/Game/Mods/AC2/Items/Weapons/Guns/Shotgun/KSG/WeapKSG.WeapKSG_C"
 		},
 		{
 			"name": "C.A.A. Wraithsfinger",
@@ -2167,7 +2378,7 @@
 		{
 			"name": "Fertilized Oxa Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AC2/Oxa/PrimalItemConsumable_Egg_Spino_FertilizedOXa.PrimalItemConsumable_Egg_Spino_FertilizedOXa_C",
+			"bp": "/Game/Mods/AC2/Oxa/PrimalItemConsumable_Egg_Oxa_Fertilized.PrimalItemConsumable_Egg_Oxa_Fertilized_C",
 			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Spino.PrimalItemConsumable_Egg_Spino_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
 			"type": "MiscConsumable/Food",
@@ -2181,7 +2392,35 @@
 				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
 			],
 			"egg": {
-				"dinoClass": "/Game/Mods/AC2/Oxa/Ox_Character_bp.Ox_Character_bp_C",
+				"dinoClass": "/Game/Mods/AC2/Oxa/Ox_Character_BP.Ox_Character_BP_C",
+				"temperature": { "min": 30, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Aberrant Oxalaia Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Oxa/PrimalItemConsumable_Egg_Oxa_Fertilized_Aberrant.PrimalItemConsumable_Egg_Oxa_Fertilized_Aberrant_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Spino.PrimalItemConsumable_Egg_Spino_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Oxa/Ox_Character_BP_Aberrant.Ox_Character_BP_Aberrant_C",
 				"temperature": { "min": 30, "max": 32 }
 			},
 			"cooking": {

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "329.16.1623184507",
+	"version": "330.8.1624053054",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -407,6 +407,68 @@
 			"death": { "baseXP": 4 }
 		},
 		{
+			"name": "Archaeoindris",
+			"bp": "/Game/Mods/AC2/Archaeoindris/Archaeoindris_Character_BP.Archaeoindris_Character_BP_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Archaeoindris",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 330,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.8, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 105, "sprint": 900 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 900 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.1, "dmg": 20, "radius": 300, "stamina": 0 },
+					{ "name": "Pound", "interval": 3, "dmg": 40, "radius": 300, "stamina": 0 },
+					{ "name": "Taunt", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowSpear", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowBall", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowBola", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "No Spear", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "No Balls", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "No Bola", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
 			"name": "Brachauchenius",
 			"bp": "/Game/Mods/AC2/Brachau/Brachau_Character_BP.Brachau_Character_BP_C",
 			"dinoNameTag": "Mosa",
@@ -792,7 +854,7 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.2, "dmg": 52, "radius": 300, "stamina": 0 },
 					{ "name": "Headbutt", "interval": 15, "dmg": 62, "radius": 300, "stamina": 80 },
-					{ "name": "Roar", "interval": 15, "dmg": 62, "radius": 300, "stamina": 0 }
+					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 30 }
@@ -843,7 +905,7 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.2, "dmg": 52, "radius": 300, "stamina": 0 },
 					{ "name": "Headbutt", "interval": 15, "dmg": 62, "radius": 300, "stamina": 80 },
-					{ "name": "Roar", "interval": 15, "dmg": 62, "radius": 300, "stamina": 0 }
+					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 30 }
@@ -1470,11 +1532,11 @@
 		},
 		{
 			"name": "Oxalaia",
-			"bp": "/Game/Mods/AC2/Oxa/Ox_Character_bp.Ox_Character_bp_C",
+			"bp": "/Game/Mods/AC2/Oxa/Ox_Character_BP.Ox_Character_BP_C",
 			"dinoNameTag": "Spino",
 			"customTag": "Oxalaia",
-			"targetingTeamName": "Carnivores_Low",
-			"mass": 500,
+			"targetingTeamName": "Carnivores_High",
+			"mass": 330,
 			"dragWeight": 550,
 			"flags": [
 				"allowMountedWeaponry",
@@ -1482,34 +1544,90 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
 				"isTameable"
 			],
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 450, "sprint": 1530 },
-				"swim": { "base": 800 }
+				"walk": { "base": 280, "sprint": 1600 },
+				"swim": { "base": 350, "sprint": 1000 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 1530 },
-				"swim": { "base": 800 }
+				"walk": { "base": 400, "sprint": 1600 },
+				"swim": { "base": 500, "sprint": 1000 }
 			},
 			"staminaRates": {
 				"sprint": -10,
-				"swimOrFly": -3
+				"swimOrFly": 0
 			},
 			"attack": {
 				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
+				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.6, "dmg": 45, "radius": 400, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.6, "dmg": 40, "radius": 330, "stamina": 80 },
-					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.2, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "Claws", "interval": 5, "dmg": 30, "radius": 300, "stamina": 80 },
+					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Oxalaia",
+			"bp": "/Game/Mods/AC2/Oxa/Ox_Character_BP_Aberrant.Ox_Character_BP_Aberrant_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Oxalaia",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 280, "sprint": 1600 },
+				"swim": { "base": 350, "sprint": 1000 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1600 },
+				"swim": { "base": 500, "sprint": 1000 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "Claws", "interval": 5, "dmg": 30, "radius": 300, "stamina": 80 },
+					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 30 }
@@ -2592,11 +2710,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 450, "sprint": 2250 },
+				"walk": { "base": 450, "sprint": 1800 },
 				"swim": { "base": 422 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 2250 },
+				"walk": { "base": 450, "sprint": 1800 },
 				"swim": { "base": 422 }
 			},
 			"staminaRates": {
@@ -2607,7 +2725,7 @@
 				"defaultDmg": 35,
 				"defaultSwingRadius": 275,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 40, "radius": 500, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.8, "dmg": 35, "radius": 500, "stamina": 0 },
 					{ "name": "Bite", "interval": 3, "dmg": 25, "radius": 255, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -2730,11 +2848,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 900 },
+				"walk": { "base": 200, "sprint": 800 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 900 },
+				"walk": { "base": 200, "sprint": 800 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
