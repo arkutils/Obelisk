@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "330.8.1624053054",
+	"version": "330.8.1624081273",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -695,7 +695,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Berry_Mejoberry.PrimalItemConsumable_Berry_Mejoberry_C",
 			"icon": "/Game/Mods/AC2/Items/Resource/Icon/Fist_of_Crop.Fist_of_Crop",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Berries" ],
+			"folders": [ "Consumables", "Crafted Foods" ],
 			"weight": 0.02,
 			"stackSize": 1000,
 			"spoilsIn": 7200,
@@ -833,6 +833,40 @@
 			}
 		},
 		{
+			"name": "Aberrant Polyplant Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Polyplant.  Can be planted in Medium or Large Crop Plots.\n\nEngineer a polyplant seed: the type of strange plants found on Aberration which produce organic polymer. Might take a while to make. Genome stuff aint easy pal. it also takes roughly ten times as long to grow as some other plants.",
+			"bp": "/Game/Mods/AC2/Items/Resource/PrimalItemConsumable_Seed_Polyplant.PrimalItemConsumable_Seed_Polyplant_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AC2/Items/Icons/Sorghum_Seed_28Primitive_Plus29.Sorghum_Seed_28Primitive_Plus29",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genomics", "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 3600,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_Seed_BaseVeggie_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Gem_BioLum_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Gem_Element_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Gem_Fertile_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Element_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Anthracite",
 			"description": "A dense, compact form of coal.You could use this in place of charcoal. Normally, this mineral can be found with Obsidian.",
 			"bp": "/Game/Mods/AC2/Items/Resource/PrimalItemResource_AC2Anthracite.PrimalItemResource_AC2Anthracite_C",
@@ -851,6 +885,31 @@
 			"type": "Resource",
 			"weight": 1,
 			"stackSize": 100
+		},
+		{
+			"name": "Organic Polymer (Floral)",
+			"description": "These incredibly strong, lightweight plates are somehow naturally made in certain plant life. Incredibly hazardous to human health if consumed.",
+			"bp": "/Game/Mods/AC2/Items/Resource/PrimalItemResource_Polymer_Organic_Plant.PrimalItemResource_Polymer_Organic_Plant_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Polymer_Organic.PrimalItemResource_Polymer_Organic_C",
+			"icon": "/Game/Mods/AC2/Items/Icons/Polymer_Leaf.Polymer_Leaf",
+			"type": "Resource",
+			"folders": [ "Composites" ],
+			"weight": 0.05,
+			"stackSize": 1000,
+			"spoilsIn": 18000,
+			"statEffects": [
+				{
+					"stat": "health",
+					"value": -500
+				}
+			],
+			"cooking": {
+				"health": -0.5,
+				"stamina": -0.5,
+				"food": 0.1,
+				"weight": 0.01,
+				"water": -0.5
+			}
 		},
 		{
 			"name": "Mangrove Tree Wood",
@@ -1056,7 +1115,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/408_Icon.408_Icon",
 			"type": "Ammo",
-			"folders": [ "Weapons", "Military", "Ammo" ],
+			"folders": [ "Weapons", "Ammo" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"crafting": {
@@ -1236,7 +1295,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
 			"icon": "/Game/Mods/AC2/Items/Icons/Co2Cartridge_Icon.Co2Cartridge_Icon",
 			"type": "Ammo",
-			"folders": [ "Weapons", "Tranq" ],
+			"folders": [ "Weapons", "Ammo" ],
 			"weight": 1,
 			"stackSize": 1,
 			"crafting": {
@@ -1259,7 +1318,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
 			"icon": "/Game/Mods/AC2/Items/Icons/Co2Cartridge_Empty_Icon.Co2Cartridge_Empty_Icon",
 			"type": "Ammo",
-			"folders": [ "Weapons", "Tranq" ],
+			"folders": [ "Weapons", "Ammo" ],
 			"weight": 1,
 			"stackSize": 1,
 			"crafting": {
@@ -1301,7 +1360,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/TranqDart_purple_Icon.TranqDart_purple_Icon",
 			"type": "Ammo",
-			"folders": [ "Weapons", "Military", "Ammo" ],
+			"folders": [ "Weapons", "Ammo" ],
 			"weight": 0.1,
 			"stackSize": 200,
 			"crafting": {
@@ -1310,7 +1369,7 @@
 				"levelReq": 0,
 				"productCount": 4,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemAmmo_RefinedTranqDart_C" } ]
+				"recipe": [ { "qty": 4, "type": "PrimalItemAmmo_RefinedTranqDart_C" } ]
 			}
 		},
 		{
@@ -1320,7 +1379,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/Ammo/TranqDart_red_Icon.TranqDart_red_Icon",
 			"type": "Ammo",
-			"folders": [ "Weapons", "Military", "Ammo" ],
+			"folders": [ "Weapons", "Ammo" ],
 			"weight": 0.1,
 			"stackSize": 200,
 			"crafting": {
@@ -1329,7 +1388,77 @@
 				"levelReq": 0,
 				"productCount": 4,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemAmmo_TranqDart_C" } ]
+				"recipe": [ { "qty": 4, "type": "PrimalItemAmmo_TranqDart_C" } ]
+			}
+		},
+		{
+			"name": "Acog Scope",
+			"description": "This medium range scope is great for taking accurate shots, but not to cumbersome in close quarters.\nAttach this to a supporting weapon to gain more accurate aiming.\n<RichColor Color=\"0,1,1,1\">Supports: M4A1, MP5k</>",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItemWeaponAttachment_Acog.PrimalItemWeaponAttachment_Acog_C",
+			"parent": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItemWeaponAttachment_Base.PrimalItemWeaponAttachment_Base_C",
+			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/Acog_Icon.Acog_Icon",
+			"type": "WeaponAttachment",
+			"folders": [ "Weapons", "Military", "Attachments" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 100,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Electronics_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Polymer_C" }
+				]
+			}
+		},
+		{
+			"name": "Holo-Scope Attachment",
+			"description": "This advanced scope can tell friends from strangers.\nAttach this to a supporting weapon to gain more accurate aiming.\n<RichColor Color=\"0,1,1,1\">Supports: Machine Pistol, Assault Rifle, and Machined Shotgun.</>",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItemWeaponAttachment_Base.PrimalItemWeaponAttachment_Base_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/WeaponAttachments/PrimalItemWeaponAttachmentGeneric.PrimalItemWeaponAttachmentGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/HoloSight_Icon.HoloSight_Icon",
+			"type": "WeaponAttachment",
+			"folders": [ "Weapons", "Attachments" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 100,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 40, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Electronics_C" }
+				]
+			}
+		},
+		{
+			"name": "Red Dot Sight",
+			"description": "This advanced scope can tell friends from strangers.\nAttach this to a supporting weapon to gain more accurate aiming.\n<RichColor Color=\"0,1,1,1\">Supports: M4A1, MP5k</>",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItemWeaponAttachment_RedDotSight.PrimalItemWeaponAttachment_RedDotSight_C",
+			"parent": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItemWeaponAttachment_Base.PrimalItemWeaponAttachment_Base_C",
+			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/RDS_Icon.RDS_Icon",
+			"type": "WeaponAttachment",
+			"folders": [ "Weapons", "Military", "Attachments" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 100,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 40, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Electronics_C" }
+				]
 			}
 		},
 		{
@@ -1369,7 +1498,7 @@
 		{
 			"name": "C.A.A. Dart Rifle",
 			"description": "A compressed dart rifle made by G.S.R. Wraith. Fires darts in spurts, and can fire underwater.Make sure you have Co2 canisters as well as ammo!",
-			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/DartRifle/PrimalItem_WeaponTranqRifle.PrimalItem_WeaponTranqRifle_C",
+			"bp": "/Game/Mods/AC2/Items/Weapons/Guns/DartRifle/PrimalItem_WeaponTranqRifleAC.PrimalItem_WeaponTranqRifleAC_C",
 			"parent": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItem_WeaponSmithBase.PrimalItem_WeaponSmithBase_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/DartRifle/TranqRifle_Icon.TranqRifle_Icon",
 			"type": "Weapon",
@@ -1384,9 +1513,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 40, "type": "PrimalItemResource_SteelIngot_C" },
-					{ "qty": 100, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 55, "type": "PrimalItemResource_SteelIngot_C" },
+					{ "qty": 55, "type": "PrimalItemResource_Tungsten_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Crystal_C" },
 					{ "qty": 1, "type": "PrimalItemAmmo_Co2_C" }
 				]
 			},
@@ -1394,9 +1524,10 @@
 				"xp": 180,
 				"time": 5,
 				"recipe": [
-					{ "qty": 20, "type": "PrimalItemResource_SteelIngot_C" },
-					{ "qty": 50, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 0.5, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 27.5, "type": "PrimalItemResource_SteelIngot_C" },
+					{ "qty": 27.5, "type": "PrimalItemResource_Tungsten_C" },
+					{ "qty": 62.5, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 2.5, "type": "PrimalItemResource_Crystal_C" },
 					{ "qty": 0.5, "type": "PrimalItemAmmo_Co2_C" }
 				]
 			},
@@ -1645,7 +1776,7 @@
 			"parent": "/Game/Mods/AC2/Items/Weapons/Guns/BaseStuff/PrimalItem_WeaponSmithBase.PrimalItem_WeaponSmithBase_C",
 			"icon": "/Game/Mods/AC2/Items/Weapons/Guns/Shotgun/KSG/KSG_Icon.KSG_Icon",
 			"type": "Weapon",
-			"folders": [ "Weapons", "Military" ],
+			"folders": [ "Weapons", "Firearms" ],
 			"weight": 10,
 			"stackSize": 1,
 			"durability": 100,
