@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "330.8.1624081273",
+	"version": "331.5.1624301551",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -2176,6 +2176,55 @@
 		{
 			"name": "Suchomimus",
 			"bp": "/Game/Mods/AC2/Suchomimus/Suchomimus_Character_bp.Suchomimus_Character_bp_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Succ",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 400,
+			"dragWeight": 450,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 2000 },
+				"swim": { "base": 1000, "sprint": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 2000 },
+				"swim": { "base": 1000, "sprint": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.05, "dmg": 35, "radius": 265, "stamina": 0 },
+					{ "name": "Claws", "interval": 3, "dmg": 42, "radius": 300, "stamina": 0 },
+					{ "name": "HipCheck", "interval": 8, "dmg": 65, "radius": 300, "stamina": 150 },
+					{ "name": "TailSpin", "interval": 5, "dmg": 50, "radius": 300, "stamina": 85 },
+					{ "name": "TailWhip", "interval": 0.05, "dmg": 46, "radius": 300, "stamina": 25 },
+					{ "name": "Roar", "interval": 0.05, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Aberrant Suchomimus",
+			"bp": "/Game/Mods/AC2/Suchomimus/Suchomimus_Character_bp_Aberrant.Suchomimus_Character_bp_Aberrant_C",
 			"dinoNameTag": "Spino",
 			"customTag": "Succ",
 			"targetingTeamName": "Carnivores_Low",
