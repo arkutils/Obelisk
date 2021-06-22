@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "329.26.1623382805",
+	"version": "331.7.1624352865",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -38742,7 +38742,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -45079,6 +45079,56 @@
 			}
 		},
 		{
+			"name": "Cnidaria",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Cnidaria_Character_BP_AE.Cnidaria_Character_BP_AE_C",
+			"dinoNameTag": "Cnidaria_AE",
+			"customTag": "",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 100,
+			"dragWeight": 21,
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater"
+			],
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"movementD": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 1
+			}
+		},
+		{
 			"name": "Compy",
 			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Compy_Character_BP_AE.Compy_Character_BP_AE_C",
 			"dinoNameTag": "Compy_AE",
@@ -45249,6 +45299,65 @@
 			}
 		},
 		{
+			"name": "Dire Bear",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Direbear_Character_BP_AE.Direbear_Character_BP_AE_C",
+			"dinoNameTag": "Direbear_AE",
+			"customTag": "Direbear",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 330,
+			"dragWeight": 295,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 142.5, "sprint": 961.9 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 104.5, "sprint": 1149.5 },
+				"swim": { "base": 198 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 55,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "None", "interval": 0.22, "dmg": 50, "radius": 260, "stamina": 0 },
+					{ "name": "None", "interval": 0.22, "dmg": 65, "radius": 260, "stamina": 0 },
+					{ "name": "None", "interval": 0.22, "dmg": 0, "radius": 260, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 4
+			}
+		},
+		{
 			"name": "Dodo",
 			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Dodo_Character_BP_AE.Dodo_Character_BP_AE_C",
 			"dinoNameTag": "Dodo",
@@ -45355,6 +45464,128 @@
 			}
 		},
 		{
+			"name": "Electrophorus",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Eel_Character_BP_AE.Eel_Character_BP_AE_C",
+			"dinoNameTag": "Eel_AE",
+			"customTag": "Eel",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 325,
+				"costLevel": 55,
+				"timeBase": 2275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 920 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 1840 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 35,
+				"defaultSwingRadius": 145,
+				"attacks": [
+					{ "name": "Bite - Tamed", "interval": 1, "dmg": 3, "radius": 200, "stamina": 0 },
+					{ "name": "Bite - UnTamed", "interval": 1, "dmg": 15, "radius": 200, "stamina": 0 },
+					{ "name": "Shock - UnTamed", "interval": 10, "dmg": 35, "radius": 1000, "stamina": 0 },
+					{ "name": "Shock - Tamed", "interval": 3, "dmg": 5, "radius": 1000, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 8
+			}
+		},
+		{
+			"name": "Equus",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Equus_Character_BP_AE.Equus_Character_BP_AE_C",
+			"dinoNameTag": "Equus_AE",
+			"customTag": "Equus",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 175,
+			"dragWeight": 125,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"swim": { "base": 390 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 965.2 },
+				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.4, "dmg": 9, "radius": 220, "stamina": 10 },
+					{ "name": "BuckKick", "interval": 0.4, "dmg": 11, "radius": 220, "stamina": 100 },
+					{ "name": "Whinney", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 1
+			}
+		},
+		{
 			"name": "Titanomyrma Soldier",
 			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/FlyingAnt_Character_BP_AE.FlyingAnt_Character_BP_AE_C",
 			"dinoNameTag": "Ant_AE_Flying",
@@ -45444,6 +45675,51 @@
 				]
 			},
 			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Gallimimus",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Galli_Character_BP_AE.Galli_Character_BP_AE_C",
+			"dinoNameTag": "Galli_AE",
+			"customTag": "Galli",
+			"targetingTeamName": "Herbivores",
+			"mass": 200,
+			"dragWeight": 410,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 825, "sprint": 2305 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 825, "sprint": 2189.8 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 170,
+				"attacks": [ { "name": "Melee", "interval": 0.4, "dmg": 8, "radius": 170, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Gasbags",
@@ -45628,62 +45904,6 @@
 				],
 				"baseXP": 3
 			}
-		},
-		{
-			"name": "Ichthyornis",
-			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Ichthyornis_Character_BP_AE.Ichthyornis_Character_BP_AE_C",
-			"dinoNameTag": "Ichthyornis",
-			"customTag": "Ichthyornis",
-			"targetingTeamName": "Carnivores_Low",
-			"mass": 190,
-			"dragWeight": 120,
-			"flags": [
-				"allowFlyerLandedRider",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"canMountOnHumans",
-				"isCarnivore",
-				"isFlyerDino",
-				"isTameable"
-			],
-			"cloning": {
-				"costBase": 2.5,
-				"costLevel": 5.5,
-				"timeBase": 17.5,
-				"timeLevel": 38.5
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 75, "sprint": 97.5 },
-				"fly": { "base": 600, "sprint": 780 },
-				"swim": { "base": 330, "sprint": 429 }
-			},
-			"movementD": {
-				"walk": { "base": 75, "sprint": 97.5 },
-				"fly": { "base": 600, "sprint": 780 },
-				"swim": { "base": 330, "sprint": 429 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -0.275
-			},
-			"attack": {
-				"defaultDmg": 16,
-				"defaultSwingRadius": 170,
-				"attacks": [
-					{ "name": "Grab", "interval": 0.1, "dmg": 1, "radius": 250, "stamina": 0 },
-					{ "name": "Bite", "interval": 2, "dmg": 5, "radius": 250, "stamina": 0 },
-					{ "name": "Steal", "interval": 0.1, "dmg": 10, "radius": 250, "stamina": 0 },
-					{ "name": "Chew", "interval": 2, "dmg": 24, "radius": 100, "stamina": 0 },
-					{ "name": "Attack Dive", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Wild Dive", "interval": 90, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 3 }
 		},
 		{
 			"name": "Kairuku",
@@ -46109,6 +46329,66 @@
 					}
 				],
 				"baseXP": 2
+			}
+		},
+		{
+			"name": "Megalodon",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Megalodon_Character_BP_AE.Megalodon_Character_BP_AE_C",
+			"dinoNameTag": "Mega_AE",
+			"customTag": "Megalodon",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 570.4 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2070 },
+				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 190,
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 190, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Mega.DinoDropInventoryComponent_Carnivore_Huge_Mega"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 12
 			}
 		},
 		{
@@ -46898,6 +47178,70 @@
 			"death": { "baseXP": 18 }
 		},
 		{
+			"name": "Raptor",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Raptor_Character_BP_AE.Raptor_Character_BP_AE_C",
+			"dinoNameTag": "Raptor_AE",
+			"customTag": "Raptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 993.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1104 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 20, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
 			"name": "Rex",
 			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Rex_Character_BP_AE.Rex_Character_BP_AE_C",
 			"dinoNameTag": "Rex",
@@ -47015,6 +47359,65 @@
 					}
 				],
 				"baseXP": 4
+			}
+		},
+		{
+			"name": "Sabertooth",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Saber_Character_BP_AE.Saber_Character_BP_AE_C",
+			"dinoNameTag": "Sabertooth _AE",
+			"customTag": "Sabertooth",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1850
+			},
+			"movementW": {
+				"walk": { "base": 230, "sprint": 920 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 1150 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 29,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 29, "radius": 160, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 5
 			}
 		},
 		{
@@ -47137,6 +47540,60 @@
 					}
 				],
 				"baseXP": 6
+			}
+		},
+		{
+			"name": "Megaloceros",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Stag_Character_BP_AE.Stag_Character_BP_AE_C",
+			"dinoNameTag": "Stag_AE",
+			"customTag": "Stag",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 900,
+				"costLevel": 55,
+				"timeBase": 6300,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 900 },
+				"swim": { "base": 225 }
+			},
+			"movementD": {
+				"walk": { "base": 170, "sprint": 1020 },
+				"swim": { "base": 255 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 250,
+				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 30, "radius": 250, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 4
 			}
 		},
 		{
@@ -47320,6 +47777,65 @@
 			}
 		},
 		{
+			"name": "Terror Bird",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/TerrorBird_Character_BP_AE.TerrorBird_Character_BP_AE_C",
+			"dinoNameTag": "TerrorBird_AE",
+			"customTag": "TerrorBird",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 900,
+				"costLevel": 55,
+				"timeBase": 6300,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 229.8, "sprint": 1080.2 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 255.4, "sprint": 1200.2 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 18,
+				"defaultSwingRadius": 110,
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 18, "radius": 110, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 4
+			}
+		},
+		{
 			"name": "Thylacoleo",
 			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Thylacoleo_Character_BP_AE.Thylacoleo_Character_BP_AE_C",
 			"dinoNameTag": "Thylacoleo_AE",
@@ -47379,6 +47895,64 @@
 					}
 				],
 				"baseXP": 5
+			}
+		},
+		{
+			"name": "Beelzebufo",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Toad_Character_BP_AE.Toad_Character_BP_AE_C",
+			"dinoNameTag": "Toad_AE",
+			"customTag": "Toad",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 120,
+			"dragWeight": 110,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 1425,
+				"costLevel": 55,
+				"timeBase": 9975,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1770
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 800 },
+				"swim": { "base": 700 }
+			},
+			"movementD": {
+				"walk": { "base": 340, "sprint": 680 },
+				"swim": { "base": 595 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 144,
+				"attacks": [
+					{ "name": "None", "interval": 0.1, "dmg": 12, "radius": 144, "stamina": 0 },
+					{ "name": "None", "interval": 0.1, "dmg": 20, "radius": 144, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 2
 			}
 		},
 		{
