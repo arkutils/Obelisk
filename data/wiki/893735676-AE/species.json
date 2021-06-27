@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "331.7.1624352865",
+	"version": "331.19.1624786613",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -20701,23 +20701,25 @@
 			}
 		},
 		{
-			"name": "Bionic Magmasaur",
-			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_Boss_Lvl1.Robot_Cherufe_Character_BP_Boss_Lvl1_C",
-			"dinoNameTag": "LavaLizard_Base_AE2",
+			"name": "Magmasaur",
+			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_BossLvl1.Robot_Cherufe_Character_BP_BossLvl1_C",
+			"dinoNameTag": "LavaLizard_EasyModeBoss",
 			"customTag": "LavaLizard",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 10000,
-			"dragWeight": 4000,
+			"dragWeight": 555,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
 				"isBigDino",
-				"isCarnivore"
+				"isCarnivore",
+				"isTameable"
 			],
 			"leveling": {
-				"wildForcedLevel": 1200,
 				"maxExperience": 22213960,
 				"levelCapOffset": 50
 			},
@@ -20744,18 +20746,18 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 280000,
+				"defaultDmg": 82,
 				"defaultSwingRadius": 1200,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 320000, "radius": 450, "stamina": 10 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 120, "radius": 450, "stamina": 10 },
 					{
 						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
 						"isProjectile": true
 					},
-					{ "name": "VentForge", "interval": 30, "dmg": 270000, "radius": 2000, "stamina": 2 },
-					{ "name": "Claw", "interval": 0.5, "dmg": 320000, "radius": 350, "stamina": 10 },
+					{ "name": "VentForge", "interval": 30, "dmg": 70, "radius": 2000, "stamina": 2 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 120, "radius": 350, "stamina": 10 },
 					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Taunt", "interval": 20, "dmg": 320000, "radius": 450, "stamina": 10 }
+					{ "name": "Taunt", "interval": 20, "dmg": 120, "radius": 450, "stamina": 10 }
 				]
 			},
 			"death": {
@@ -20763,17 +20765,16 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBoss.DinoDropInventoryComponent_EndBoss"
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge.DinoDropInventoryComponent_Carnivore_Huge"
 					}
 				],
-				"engrams": [ "PrimalItemStructure_EmpowermentStation_C", "PrimalItemEmpowermentArtifact_01_C" ],
 				"baseXP": 120
 			}
 		},
 		{
 			"name": "Magmasaur",
-			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_Boss_Lvl2.Robot_Cherufe_Character_BP_Boss_Lvl2_C",
-			"dinoNameTag": "LavaLizard_Base_AE2",
+			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_BossLvl2.Robot_Cherufe_Character_BP_BossLvl2_C",
+			"dinoNameTag": "LavaLizard_HardModeBoss",
 			"customTag": "LavaLizard",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 10000,
@@ -20851,25 +20852,23 @@
 			}
 		},
 		{
-			"name": "Magmasaur",
-			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_Boss_Lvl3.Robot_Cherufe_Character_BP_Boss_Lvl3_C",
+			"name": "Bionic Magmasaur",
+			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_BossLvl3.Robot_Cherufe_Character_BP_BossLvl3_C",
 			"dinoNameTag": "LavaLizard_GodModeBoss",
 			"customTag": "LavaLizard",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 10000,
-			"dragWeight": 555,
+			"dragWeight": 4000,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
 				"isBigDino",
-				"isCarnivore",
-				"isTameable"
+				"isCarnivore"
 			],
 			"leveling": {
+				"wildForcedLevel": 1200,
 				"maxExperience": 22213960,
 				"levelCapOffset": 50
 			},
@@ -20896,7 +20895,153 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 560000,
+				"defaultDmg": 840000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 960000, "radius": 450, "stamina": 10 },
+					{
+						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					},
+					{ "name": "VentForge", "interval": 30, "dmg": 810000, "radius": 2000, "stamina": 2 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 960000, "radius": 350, "stamina": 10 },
+					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 20, "dmg": 960000, "radius": 450, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.25,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					},
+					{
+						"chance": 0.25,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					},
+					{
+						"chance": 0.25,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					},
+					{
+						"chance": 0.25,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					}
+				],
+				"engrams": [ "PrimalItemStructure_EmpowermentStation_C", "PrimalItemEmpowermentArtifact_03_C" ],
+				"baseXP": 120
+			}
+		},
+		{
+			"name": "Bionic Magmasaur",
+			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_Boss_Lvl1LK.Robot_Cherufe_Character_BP_Boss_Lvl1LK_C",
+			"dinoNameTag": "LavaLizard_Boss_Normal",
+			"customTag": "LavaLizard",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 10000,
+			"dragWeight": 4000,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"cloning": {
+				"costBase": 0,
+				"costLevel": 0.01,
+				"timeBase": 0,
+				"timeLevel": 0.04
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 656.2 },
+				"swim": { "base": 600, "sprint": 525 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2296.9 },
+				"swim": { "base": 720, "sprint": 1837.5 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 280000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 320000, "radius": 450, "stamina": 10 },
+					{
+						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					},
+					{ "name": "VentForge", "interval": 30, "dmg": 270000, "radius": 2000, "stamina": 2 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 320000, "radius": 350, "stamina": 10 },
+					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 20, "dmg": 320000, "radius": 450, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBoss.DinoDropInventoryComponent_EndBoss"
+					}
+				],
+				"engrams": [ "PrimalItemStructure_EmpowermentStation_C", "PrimalItemEmpowermentArtifact_01_C" ],
+				"baseXP": 120
+			}
+		},
+		{
+			"name": "Bionic Magmasaur",
+			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_Boss_Lvl2LK.Robot_Cherufe_Character_BP_Boss_Lvl2LK_C",
+			"dinoNameTag": "LavaLizard_Boss_Hard",
+			"customTag": "LavaLizard",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 10000,
+			"dragWeight": 4000,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"cloning": {
+				"costBase": 0,
+				"costLevel": 0.01,
+				"timeBase": 0,
+				"timeLevel": 0.04
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 656.2 },
+				"swim": { "base": 600, "sprint": 525 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2296.9 },
+				"swim": { "base": 720, "sprint": 1837.5 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 540000,
 				"defaultSwingRadius": 1200,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.5, "dmg": 640000, "radius": 450, "stamina": 10 },
@@ -20904,7 +21049,7 @@
 						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
 						"isProjectile": true
 					},
-					{ "name": "VentForge", "interval": 30, "dmg": 540000, "radius": 2000, "stamina": 2 },
+					{ "name": "VentForge", "interval": 30, "dmg": 640000, "radius": 2000, "stamina": 2 },
 					{ "name": "Claw", "interval": 0.5, "dmg": 640000, "radius": 350, "stamina": 10 },
 					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Taunt", "interval": 20, "dmg": 640000, "radius": 450, "stamina": 10 }
@@ -20914,27 +21059,81 @@
 				"lootBagChance": 1,
 				"lootBags": [
 					{
-						"chance": 0.243902439,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
-					},
-					{
-						"chance": 0.0243902443,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
-					},
-					{
-						"chance": 0.243902439,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
-					},
-					{
-						"chance": 0.243902439,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
-					},
-					{
-						"chance": 0.243902439,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossHard.DinoDropInventoryComponent_EndBossHard"
 					}
 				],
-				"engrams": [ "PrimalItemStructure_EmpowermentStation_C", "PrimalItemEmpowermentArtifact_03_C" ],
+				"engrams": [ "PrimalItemStructure_EmpowermentStation_C", "PrimalItemEmpowermentArtifact_02_C" ],
+				"baseXP": 120
+			}
+		},
+		{
+			"name": "Bionic Magmasaur",
+			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_Boss_base.Robot_Cherufe_Character_BP_Boss_base_C",
+			"dinoNameTag": "LavaLizard_Base_AE2",
+			"customTag": "LavaLizard",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 10000,
+			"dragWeight": 4000,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildForcedLevel": 1200,
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 0,
+				"costLevel": 0.01,
+				"timeBase": 0,
+				"timeLevel": 0.04
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 656.2 },
+				"swim": { "base": 600, "sprint": 525 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2296.9 },
+				"swim": { "base": 720, "sprint": 1837.5 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 280000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 320000, "radius": 450, "stamina": 10 },
+					{
+						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					},
+					{ "name": "VentForge", "interval": 30, "dmg": 270000, "radius": 2000, "stamina": 2 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 320000, "radius": 350, "stamina": 10 },
+					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Taunt", "interval": 20, "dmg": 320000, "radius": 450, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBoss.DinoDropInventoryComponent_EndBoss"
+					}
+				],
+				"engrams": [ "PrimalItemStructure_EmpowermentStation_C", "PrimalItemEmpowermentArtifact_01_C" ],
 				"baseXP": 120
 			}
 		},
@@ -32272,12 +32471,12 @@
 			"movementW": {
 				"walk": { "base": 390, "sprint": 1072.5 },
 				"fly": { "base": 900, "sprint": 2475 },
-				"swim": { "base": 900 }
+				"swim": { "base": 900, "sprint": 2475 }
 			},
 			"movementD": {
 				"walk": { "base": 390, "sprint": 1233.4 },
 				"fly": { "base": 900, "sprint": 2846.2 },
-				"swim": { "base": 900 }
+				"swim": { "base": 900, "sprint": 2846.2 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -32340,12 +32539,12 @@
 			"movementW": {
 				"walk": { "base": 390, "sprint": 1072.5 },
 				"fly": { "base": 900, "sprint": 2475 },
-				"swim": { "base": 900 }
+				"swim": { "base": 900, "sprint": 2475 }
 			},
 			"movementD": {
 				"walk": { "base": 390, "sprint": 1233.4 },
 				"fly": { "base": 900, "sprint": 2846.2 },
-				"swim": { "base": 900 }
+				"swim": { "base": 900, "sprint": 2846.2 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -32408,12 +32607,12 @@
 			"movementW": {
 				"walk": { "base": 390, "sprint": 1072.5 },
 				"fly": { "base": 900, "sprint": 2475 },
-				"swim": { "base": 900 }
+				"swim": { "base": 900, "sprint": 2475 }
 			},
 			"movementD": {
 				"walk": { "base": 390, "sprint": 1233.4 },
 				"fly": { "base": 900, "sprint": 2846.2 },
-				"swim": { "base": 900 }
+				"swim": { "base": 900, "sprint": 2846.2 }
 			},
 			"staminaRates": {
 				"sprint": -6,
