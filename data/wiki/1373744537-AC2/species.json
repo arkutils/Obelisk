@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "332.8.1625364742",
+	"version": "332.8.1625709725",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -970,6 +970,64 @@
 				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
 				"baseXP": 950
 			}
+		},
+		{
+			"name": "Spinosaurus",
+			"bp": "/Game/Mods/AC2/GenomicSpino/GenomicSpino_Character_BP.GenomicSpino_Character_BP_C",
+			"dinoNameTag": "Spino",
+			"customTag": "GenomeSpinosaurus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ]
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 380, "sprint": 1140 },
+				"swim": { "base": 500, "sprint": 1200 }
+			},
+			"movementD": {
+				"walk": { "base": 380, "sprint": 1140 },
+				"swim": { "base": 500, "sprint": 1200 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "Claws", "interval": 0.2, "dmg": 60, "radius": 300, "stamina": 80 },
+					{ "name": "Roar", "interval": 0.2, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "HeadbuttStationary", "interval": 10, "dmg": 35, "radius": 300, "stamina": 100 },
+					{ "name": "HeadbuttMobile", "interval": 0.2, "dmg": 35, "radius": 300, "stamina": 100 },
+					{ "name": "TailLeft", "interval": 0.2, "dmg": 50, "radius": 500, "stamina": 100 },
+					{ "name": "TailLRight", "interval": 0.2, "dmg": 50, "radius": 500, "stamina": 100 }
+				]
+			},
+			"death": { "baseXP": 30 }
 		},
 		{
 			"name": "Gigatitan",
