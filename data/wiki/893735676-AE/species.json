@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "331.19.1624786613",
+	"version": "332.8.1626243720",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -2325,6 +2325,113 @@
 				],
 				"baseXP": 4800
 			}
+		},
+		{
+			"name": "Dino Flyer",
+			"bp": "/Game/Mods/AE/Dinos/Alpha/Griffin/AEDino_Character_BP_DivingFlyer.AEDino_Character_BP_DivingFlyer_C",
+			"dinoNameTag": "Diving Flyer",
+			"customTag": "",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"xpRamp": "Player",
+				"maxExperience": 100000,
+				"maxTameLevels": 74
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 900 },
+				"fly": { "base": 600, "sprint": 900 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 900 },
+				"fly": { "base": 600, "sprint": 900 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -0.3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Griffin",
+			"bp": "/Game/Mods/AE/Dinos/Alpha/Griffin/AEGriffin_Character_BP.AEGriffin_Character_BP_C",
+			"dinoNameTag": "Griffin",
+			"customTag": "Griffin",
+			"targetingTeamName": "Carnivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 200,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 240, "sprint": 750 },
+				"fly": { "base": 600, "sprint": 1500 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 240, "sprint": 750 },
+				"fly": { "base": 600, "sprint": 1500 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 18,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Claw", "interval": 1, "dmg": 27, "radius": 750, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 12, "radius": 500, "stamina": 60 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 188, "radius": 1500, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 115, "radius": 2000, "stamina": 30 }
+				]
+			},
+			"death": { "baseXP": 3 }
 		},
 		{
 			"name": "Eternal Alpha Lightning Griffin",
@@ -52516,6 +52623,72 @@
 			}
 		},
 		{
+			"name": "Coelacanth",
+			"bp": "/Game/Mods/AE/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP_Rare.Coel_Character_BP_Rare_C",
+			"dinoNameTag": "RareCoel",
+			"customTag": "",
+			"targetingTeamName": "Herbivore_Water",
+			"mass": 100,
+			"dragWeight": 25,
+			"variants": [ "Rare" ],
+			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 252 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 252 }
+			},
+			"staminaRates": { "sprint": -4 },
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 67,
+				"attacks": [ { "name": "None", "interval": 1, "dmg": 5, "radius": 67, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
+		},
+		{
+			"name": "Bunny Dodo",
+			"bp": "/Game/Mods/AE/PrimalEarth/Dinos/Dodo/Dodo_Character_BP_Bunny.Dodo_Character_BP_Bunny_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "Dodo",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65, "sprint": 136.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5, "sprint": 95.5 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
+		},
+		{
 			"name": "Tek Mosasaurus",
 			"bp": "/Game/Mods/AE/PrimalEarth/Dinos/Mosasaurus/BionicMosa_Character_BP.BionicMosa_Character_BP_C",
 			"dinoNameTag": "Mosasaur",
@@ -52577,6 +52750,53 @@
 					}
 				],
 				"baseXP": 15
+			}
+		},
+		{
+			"name": "Bunny Oviraptor",
+			"bp": "/Game/Mods/AE/PrimalEarth/Dinos/Oviraptor/BunnyOviraptor_Character_BP.BunnyOviraptor_Character_BP_C",
+			"dinoNameTag": "Ovi",
+			"customTag": "Ovi",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 90,
+			"dragWeight": 40,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"cloning": {
+				"costBase": 1500,
+				"costLevel": 55,
+				"timeBase": 10500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 320, "sprint": 902.4 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 208, "sprint": 674.5 },
+				"swim": { "base": 195 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 115,
+				"attacks": [ { "name": "None", "interval": 0.1, "dmg": 12, "radius": 115, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.01,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small_Dilo.DinoDropInventoryComponent_Carnivore_Small_Dilo"
+					}
+				],
+				"baseXP": 2
 			}
 		},
 		{
