@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "332.8.1625791277",
+	"version": "332.13.1626850815",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -262,7 +262,7 @@
 			"description": "Equip a Archaeoindris with this to ride it.",
 			"bp": "/Game/Mods/AC2/Archaeoindris/PrimalItemArmor_ArchaeoindrisSaddle.PrimalItemArmor_ArchaeoindrisSaddle_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/PrimalEarth/Dinos/Baryonyx/Baryonyx_Saddle/HUD_BaryonyxSaddle_Colorize_MIC.HUD_BaryonyxSaddle_Colorize_MIC",
+			"icon": "/Game/PrimalEarth/Dinos/Chalicotherium/Saddle/HUD_Chalico_Saddle_Colorize_MIC.HUD_Chalico_Saddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
@@ -3131,6 +3131,85 @@
 			"egg": {
 				"dinoClass": "/Game/Mods/AC2/Torosaurus/Torosaur_Character_BP.Torosaur_Character_BP_C",
 				"temperature": { "min": 22, "max": 28 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Torvosaurus Saddle",
+			"description": "Equip a Torvosaurus with this to ride it.",
+			"bp": "/Game/Mods/AC2/Torvo/PrimalItemArmor_TorvoSaddle.PrimalItemArmor_TorvoSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Megalosaurus/Saddle/HUD_MegaloSaddle_Colorize_MIC.HUD_MegaloSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 72.4,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 320, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 170, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Torvosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Torvo/PrimalItemConsumable_Egg_Torvo_Fertilized.PrimalItemConsumable_Egg_Torvo_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Allo.PrimalItemConsumable_Egg_Allo_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Allosaurus.HUD_DinoEgg_MIC_Inst_Allosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Torvo/Ac2Torvo_Character_bp.Ac2Torvo_Character_bp_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Aberrant Torvosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Torvo/PrimalItemConsumable_Egg_Torvo_Fertilized_Aberrant.PrimalItemConsumable_Egg_Torvo_Fertilized_Aberrant_C",
+			"parent": "/Game/Mods/AC2/Torvo/PrimalItemConsumable_Egg_Torvo_Fertilized.PrimalItemConsumable_Egg_Torvo_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Allosaurus.HUD_DinoEgg_MIC_Inst_Allosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Torvo/Ac2Torvo_Character_bp_Aberrant.Ac2Torvo_Character_bp_Aberrant_C",
+				"temperature": { "min": 26, "max": 32 }
 			},
 			"cooking": {
 				"health": 0.8,

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "332.8.1625791277",
+	"version": "332.13.1626850815",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -464,7 +464,8 @@
 					{ "name": "ThrowBola", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "No Spear", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "No Balls", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "No Bola", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "No Bola", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Yeet Pitch", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 4 }
@@ -2027,7 +2028,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge.DinoDropInventoryComponent_Carnivore_Huge"
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_FearEvolved.DinoDropInventoryComponent_Carnivore_Huge_FearEvolved"
 					}
 				],
 				"baseXP": 120
@@ -2172,10 +2173,10 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 250, "sprint": 1375 }
+				"walk": { "base": 250, "sprint": 1000 }
 			},
 			"movementD": {
-				"walk": { "base": 250, "sprint": 1375 }
+				"walk": { "base": 250, "sprint": 1000 }
 			},
 			"staminaRates": { "sprint": -6 },
 			"attack": {
@@ -2532,6 +2533,94 @@
 				]
 			},
 			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Torvosaurus",
+			"bp": "/Game/Mods/AC2/Torvo/Ac2Torvo_Character_bp.Ac2Torvo_Character_bp_C",
+			"dinoNameTag": "Megalosaurus",
+			"customTag": "TorvosaurAC2",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 450,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 325, "sprint": 1462.5 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 325, "sprint": 1462.5 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 50, "radius": 450, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Torvosaurus",
+			"bp": "/Game/Mods/AC2/Torvo/Ac2Torvo_Character_bp_Aberrant.Ac2Torvo_Character_bp_Aberrant_C",
+			"dinoNameTag": "Megalosaurus",
+			"customTag": "TorvosaurAC2",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 450,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 325, "sprint": 1462.5 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 325, "sprint": 1462.5 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 50, "radius": 450, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
 		},
 		{
 			"name": "Arizonasaurus",
@@ -3657,9 +3746,6 @@
 				"isCarnivore",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 36 } ]
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3706,9 +3792,6 @@
 				"isCarnivore",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 36 } ]
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4029,12 +4112,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 422.4, "sprint": 1267.2 },
-				"swim": { "base": 325.6 }
+				"walk": { "base": 480, "sprint": 1440 },
+				"swim": { "base": 370 }
 			},
 			"movementD": {
-				"walk": { "base": 422.4, "sprint": 1267.2 },
-				"swim": { "base": 325.6 }
+				"walk": { "base": 480, "sprint": 1440 },
+				"swim": { "base": 370 }
 			},
 			"staminaRates": {
 				"sprint": -9,
@@ -4089,12 +4172,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 422.4, "sprint": 1267.2 },
-				"swim": { "base": 325.6 }
+				"walk": { "base": 480, "sprint": 1440 },
+				"swim": { "base": 370 }
 			},
 			"movementD": {
-				"walk": { "base": 422.4, "sprint": 1267.2 },
-				"swim": { "base": 325.6 }
+				"walk": { "base": 480, "sprint": 1440 },
+				"swim": { "base": 370 }
 			},
 			"staminaRates": {
 				"sprint": -9,
@@ -4104,7 +4187,7 @@
 				"defaultDmg": 10,
 				"defaultSwingRadius": 90,
 				"attacks": [
-					{ "name": "Attack With Debuff", "interval": 0.33, "dmg": 30, "radius": 240, "stamina": 0 },
+					{ "name": "Attack With Debuff", "interval": 0.33, "dmg": 18, "radius": 240, "stamina": 0 },
 					{ "name": "Jump", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Jump", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
