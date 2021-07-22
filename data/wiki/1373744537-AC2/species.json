@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "332.13.1626850815",
+	"version": "332.13.1626934726",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -554,8 +554,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 380, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 5, "dmg": 50, "radius": 400, "stamina": 0 },
+					{ "name": "Claws", "interval": 0.4, "dmg": 40, "radius": 380, "stamina": 0 },
+					{ "name": "Sting", "interval": 5, "dmg": 50, "radius": 400, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 200, "stamina": 0 }
 				]
 			},
@@ -2388,7 +2388,13 @@
 			"targetingTeamName": "Herbivores",
 			"mass": 165,
 			"dragWeight": 10,
-			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "canMountOnHumans" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canDrag",
+				"canMountOnHumans",
+				"isTameable"
+			],
 			"cloning": {
 				"costBase": 575,
 				"costLevel": 55,
@@ -2414,7 +2420,10 @@
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.04, "dmg": 12, "radius": 300, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.04, "dmg": 12, "radius": 300, "stamina": 0 },
+					{ "name": "Taunt", "interval": 0.04, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
 			},
 			"death": { "baseXP": 3 }
 		},
@@ -2579,7 +2588,7 @@
 			"death": { "baseXP": 30 }
 		},
 		{
-			"name": "Torvosaurus",
+			"name": "Aberrant Torvosaurus",
 			"bp": "/Game/Mods/AC2/Torvo/Ac2Torvo_Character_bp_Aberrant.Ac2Torvo_Character_bp_Aberrant_C",
 			"dinoNameTag": "Megalosaurus",
 			"customTag": "TorvosaurAC2",
@@ -3103,7 +3112,7 @@
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -35,
+				"sprint": -15,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -3113,7 +3122,7 @@
 					{ "name": "TailDirectional", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
 					{ "name": "TailSlam", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.2, "dmg": 38, "radius": 450, "stamina": 0 },
-					{ "name": "TailSpecial", "interval": 10, "dmg": 65, "radius": 450, "stamina": 150 },
+					{ "name": "TailSpecial", "interval": 10, "dmg": 65, "radius": 450, "stamina": 50 },
 					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -5319,8 +5328,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 38, "radius": 200, "stamina": 0 },
-					{ "name": "Claw", "interval": 3, "dmg": 28, "radius": 200, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Claw", "interval": 3, "dmg": 22, "radius": 200, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 30 }

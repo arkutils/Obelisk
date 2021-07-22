@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "332.13.1626850815",
+	"version": "332.13.1626934726",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -3087,6 +3087,38 @@
 				"food": 0.8,
 				"weight": 0.3,
 				"water": 0.01
+			}
+		},
+		{
+			"name": "Psittacosaurus Spines",
+			"description": "Quill-feathers of Psittacosaurus. Venomous, so handle with care. You can use this to make venom arrows.",
+			"bp": "/Game/Mods/AC2/Taco/PrimalItemResource_TacoSpines.PrimalItemResource_TacoSpines_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/AC2/balaur/Deinonychus_Feather_Atlas_3x2_D.Deinonychus_Feather_Atlas_3x2_D",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 100
+		},
+		{
+			"name": "Taco-Venom Arrow",
+			"description": "An arrow with the quill-feather of a Psittacosaurus attached. Inflicting Low-Tier Venom, this arrow is better for when you need to shoot arrows quickly, rather than charge them.",
+			"bp": "/Game/Mods/AC2/Taco/VArrow/PrimalItemAmmo_ArrowAC2Venom.PrimalItemAmmo_ArrowAC2Venom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/AC2/Taco/VArrow/VenomArrow.VenomArrow",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.05,
+			"stackSize": 250,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
+					{ "qty": 2, "type": "PrimalItemResource_TacoSpines_C" }
+				]
 			}
 		},
 		{
