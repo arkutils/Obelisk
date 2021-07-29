@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "333.4.1625155712",
+	"version": "333.13.1627581745",
 	"format": "4",
 	"mod": {
 		"id": "1083349027",
@@ -8,6 +8,44 @@
 		"title": "Najs Speedy Flyers"
 	},
 	"species": [
+		{
+			"name": "SpeedyFlyers Admin Skiff",
+			"bp": "/Game/Mods/SpeedyFlyers/Admin/TekHoverSkiff_Character_BP_Admin.TekHoverSkiff_Character_BP_Admin_C",
+			"dinoNameTag": "HoverSkiff",
+			"customTag": "HoverSkiff",
+			"targetingTeamName": "",
+			"mass": 1000,
+			"dragWeight": 2000,
+			"variants": [ "Vehicle" ],
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"isBigDino",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 0 },
+				"fly": { "base": 7500, "sprint": 75000 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 0 },
+				"fly": { "base": 7500, "sprint": 75000 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": { "swimOrFly": 0 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90
+			},
+			"death": { "baseXP": 2 }
+		},
 		{
 			"name": "Ice Wyvern",
 			"bp": "/Game/Mods/SpeedyFlyers/Custom_Assets/Dinos/Wyvern/Ice_Wyvern/Ragnarok_Wyvern_Override_Ice.Ragnarok_Wyvern_Override_Ice_C",
@@ -2934,6 +2972,100 @@
 				],
 				"baseXP": 2
 			}
+		},
+		{
+			"name": "Astrocetus",
+			"bp": "/Game/Mods/SpeedyFlyers/Dinos_NoOverspawn/SpaceWhale/SpaceWhale_Character_BP_SF.SpaceWhale_Character_BP_SF_C",
+			"dinoNameTag": "Space Whale",
+			"customTag": "Space Whale",
+			"targetingTeamName": "",
+			"mass": 2000,
+			"dragWeight": 4000,
+			"variants": [ "NoOverspawn" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"fly": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"fly": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": { "swimOrFly": -0.185 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 29, "radius": 750, "stamina": 84 },
+					{ "name": "None", "interval": 0, "dmg": 75, "radius": 1000, "stamina": 150 },
+					{ "name": "Hyperdrive", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Hover Skiff",
+			"bp": "/Game/Mods/SpeedyFlyers/Dinos_NoOverspawn/TEKHoverSkiff/TekHoverSkiff_Character_BP_SF.TekHoverSkiff_Character_BP_SF_C",
+			"dinoNameTag": "HoverSkiff",
+			"customTag": "HoverSkiff",
+			"targetingTeamName": "",
+			"mass": 1000,
+			"dragWeight": 2000,
+			"variants": [ "NoOverspawn", "Vehicle" ],
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"isBigDino",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildForcedLevel": 1,
+				"ignoresLevelModifiers": true,
+				"maxExperience": 3550010,
+				"maxTameLevels": 73
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 0 },
+				"fly": { "base": 2000, "sprint": 10000 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 0 },
+				"fly": { "base": 2000, "sprint": 10000 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": { "swimOrFly": 0 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90
+			},
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Tapejara",
