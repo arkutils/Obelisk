@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "332.13.1626934726",
+	"version": "333.13.1627663374",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -628,6 +628,57 @@
 			"egg": {
 				"dinoClass": "/Game/Mods/AC2/Fasola/Fasola_Character_BP.Fasola_Character_BP_C",
 				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gargoyleosaurus Saddle",
+			"description": "Equip a Gargoyleosaurus with this to ride it.",
+			"bp": "/Game/Mods/AC2/Gargoyle/PrimalItemArmor_GoyleSaddle.PrimalItemArmor_GoyleSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Ankylo/Saddle/HUD_AnkyloSaddle_Colorize_MIC.HUD_AnkyloSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 240, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 270, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 120, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Goyle Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Gargoyle/PrimalItemConsumable_Egg_Goyle_Fertilized.PrimalItemConsumable_Egg_Goyle_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Ankylo.PrimalItemConsumable_Egg_Ankylo_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Ankylo.HUD_DinoEgg_MIC_Inst_Ankylo",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Gargoyle/Goyle_Character_BP.Goyle_Character_BP_C",
+				"temperature": { "min": 16, "max": 20 }
 			},
 			"cooking": {
 				"health": 0.8,

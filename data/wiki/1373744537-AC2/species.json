@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "332.13.1626934726",
+	"version": "333.13.1627663374",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -971,6 +971,64 @@
 				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
 				"baseXP": 950
 			}
+		},
+		{
+			"name": "Gargoyleosaurus",
+			"bp": "/Game/Mods/AC2/Gargoyle/Goyle_Character_BP.Goyle_Character_BP_C",
+			"dinoNameTag": "Anky",
+			"customTag": "Goyle",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 330,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.8, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 126, "sprint": 1440 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 180, "sprint": 1440 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Tail Attaccs", "interval": 0.1, "dmg": 15, "radius": 300, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.1, "dmg": 18, "radius": 300, "stamina": 0 },
+					{ "name": "Taunt", "interval": 0.1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Tail Spin", "interval": 5, "dmg": 15, "radius": 300, "stamina": 100 },
+					{ "name": "Tail Spin Slide", "interval": 15, "dmg": 15, "radius": 300, "stamina": 200 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Spinosaurus",
@@ -2212,11 +2270,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1440 },
+				"walk": { "base": 300, "sprint": 1500 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1800 },
+				"walk": { "base": 300, "sprint": 1500 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -3775,7 +3833,7 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.05, "dmg": 45, "radius": 400, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.05, "dmg": 30, "radius": 400, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.4, "dmg": 50, "radius": 340, "stamina": 0 }
 				]
@@ -3821,7 +3879,7 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.05, "dmg": 45, "radius": 400, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.05, "dmg": 30, "radius": 400, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.4, "dmg": 50, "radius": 340, "stamina": 0 }
 				]
@@ -4237,11 +4295,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 141, "sprint": 740.2 },
+				"walk": { "base": 141, "sprint": 846 },
 				"swim": { "base": 423 }
 			},
 			"movementD": {
-				"walk": { "base": 135, "sprint": 708.7 },
+				"walk": { "base": 135, "sprint": 810 },
 				"swim": { "base": 405 }
 			},
 			"staminaRates": {
