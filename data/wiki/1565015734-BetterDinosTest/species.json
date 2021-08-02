@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "333.4.1623619691",
+	"version": "333.13.1627924720",
 	"format": "4",
 	"mod": {
 		"id": "1565015734",
@@ -2187,6 +2187,72 @@
 			}
 		},
 		{
+			"name": "R-Brontosaurus",
+			"bp": "/Game/Mods/BetterDinosTest/Bronto/Sauropod_Character_BP_Rockwell.Sauropod_Character_BP_Rockwell_C",
+			"dinoNameTag": "Bronto",
+			"customTag": "Bronto",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 3000,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 180, "sprint": 405 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 1000,
+				"attacks": [
+					{ "name": "tailswing", "interval": 1.2, "dmg": 60, "radius": 700, "stamina": 0 },
+					{ "name": "footstomp1foot", "interval": 0, "dmg": 60, "radius": 500, "stamina": 0 },
+					{ "name": "footstompRearup", "interval": 2, "dmg": 69, "radius": 1000, "stamina": 10 },
+					{ "name": "meleeWild", "interval": 1.2, "dmg": 60, "radius": 1000, "stamina": 0 },
+					{ "name": "meleeAI", "interval": 1.2, "dmg": 60, "radius": 900, "stamina": 0 },
+					{ "name": "footstompRearup", "interval": 2, "dmg": 69, "radius": 1000, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Sauro.DinoDropInventoryComponent_Carnivore_Huge_Sauro"
+					}
+				],
+				"baseXP": 22
+			}
+		},
+		{
 			"name": "Compy Friend",
 			"bp": "/Game/Mods/BetterDinosTest/Compy/CompyFriend_Minion_BP.CompyFriend_Minion_BP_C",
 			"dinoNameTag": "Compy",
@@ -3040,22 +3106,23 @@
 			"mass": 50,
 			"dragWeight": 80,
 			"flags": [ "allowRiding", "isCarnivore", "isWaterDino", "dieIfLeftWater" ],
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 90, "sprint": 324 },
-				"swim": { "base": 90 }
+				"walk": { "base": 90, "sprint": 324 }
 			},
 			"movementD": {
-				"walk": { "base": 135, "sprint": 607.5 },
-				"swim": { "base": 135 }
+				"walk": { "base": 135, "sprint": 607.5 }
 			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": 0
-			},
+			"staminaRates": { "sprint": -6 },
 			"attack": {
 				"defaultDmg": 8,
 				"defaultSwingRadius": 175,
@@ -3076,22 +3143,23 @@
 			"mass": 50,
 			"dragWeight": 80,
 			"flags": [ "allowRiding", "isCarnivore", "isWaterDino", "dieIfLeftWater" ],
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 90, "sprint": 324 },
-				"swim": { "base": 90 }
+				"walk": { "base": 90, "sprint": 324 }
 			},
 			"movementD": {
-				"walk": { "base": 135, "sprint": 607.5 },
-				"swim": { "base": 135 }
+				"walk": { "base": 135, "sprint": 607.5 }
 			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": 0
-			},
+			"staminaRates": { "sprint": -6 },
 			"attack": {
 				"defaultDmg": 8,
 				"defaultSwingRadius": 175,
@@ -3312,6 +3380,12 @@
 			"mass": 50,
 			"dragWeight": 30,
 			"flags": [ "canBeDragged", "canMountOnHumans", "isFlyerDino" ],
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3349,6 +3423,12 @@
 			"mass": 50,
 			"dragWeight": 30,
 			"flags": [ "canBeDragged", "canMountOnHumans", "isFlyerDino" ],
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3964,6 +4044,12 @@
 				"isWaterDino",
 				"dieIfLeftWater"
 			],
+			"cloning": {
+				"costBase": 1350,
+				"costLevel": 55,
+				"timeBase": 9450,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3999,6 +4085,12 @@
 				"isWaterDino",
 				"dieIfLeftWater"
 			],
+			"cloning": {
+				"costBase": 1350,
+				"costLevel": 55,
+				"timeBase": 9450,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4160,7 +4252,7 @@
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -2,
+				"sprint": -3,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -5603,6 +5695,12 @@
 			"mass": 50,
 			"dragWeight": 80,
 			"flags": [ "canBeDragged", "canMountOnHumans", "isAmphibious" ],
+			"cloning": {
+				"costBase": 1050,
+				"costLevel": 55,
+				"timeBase": 7350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5629,6 +5727,12 @@
 			"mass": 50,
 			"dragWeight": 80,
 			"flags": [ "canBeDragged", "canMountOnHumans", "isAmphibious" ],
+			"cloning": {
+				"costBase": 1050,
+				"costLevel": 55,
+				"timeBase": 7350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
