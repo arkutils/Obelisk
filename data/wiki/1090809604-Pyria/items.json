@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "329.25.1621640700",
+	"version": "335.8.1629113399",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -13,7 +13,7 @@
 			"description": "Climbing Picks made and infused with Earth Element for stability.\n\nThese things will LAST!",
 			"bp": "/Game/Mods/Pyria/Alchemy/Alchitect/Climb/PrimalItem_WeaponClimbPickPyria.PrimalItem_WeaponClimbPickPyria_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmoless.PrimalItemWeaponGenericAmmoless_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/PyrianClimbingPick.PyrianClimbingPick",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/PyrianClimbingPick.PyrianClimbingPick",
 			"type": "Weapon",
 			"folders": [ "Alchitect", "Tools" ],
 			"weight": 2,
@@ -29,7 +29,8 @@
 					{ "qty": 150, "type": "PrimalItemResource_EarthElement_C" },
 					{ "qty": 2, "type": "PrimalItemResource_Wood_C" },
 					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 8, "type": "PrimalItemResource_MetalIngot_C" }
+					{ "qty": 8, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 8, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			},
 			"repair": {
@@ -39,17 +40,272 @@
 					{ "qty": 75, "type": "PrimalItemResource_EarthElement_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Wood_C" },
 					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 4, "type": "PrimalItemResource_MetalIngot_C" }
+					{ "qty": 4, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 4, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			},
 			"weapon": "/Game/Aberration/CoreBlueprints/Weapons/WeapClimbPick.WeapClimbPick_C"
+		},
+		{
+			"name": "Assasin Arrow",
+			"description": "An arrow drenched in an extremely fatal concoction of poisons. Kills any human in seconds: perfect for assasinations. Requiring a steady hand, it can only be used with traditional wooden bows.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowAssasin.PrimalItemAmmo_ArrowAssasin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AssassinArrow.AssassinArrow",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
+					{ "qty": 500, "type": "PrimalItemConsumable_JellyVenom_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ApexDrop_Boa_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ApexDrop_Megalania_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ApexDrop_PoisonWyvern_C" },
+					{ "qty": 300, "type": "PrimalItemResource_TriceVenom_C" },
+					{ "qty": 300, "type": "PrimalItemResource_SectVenom_C" },
+					{ "qty": 500, "type": "PrimalItemResource_LeechBlood_C" },
+					{ "qty": 500, "type": "PrimalItemResource_AmmoniteBlood_C" }
+				]
+			}
+		},
+		{
+			"name": "Bazelnade Fire Arrow",
+			"description": "An arrow embued with Fire elemental magic and Bazel Crystals. Can only be used from a crossbow. When fired, the element re-forms the explosive Bazel crystals midflight. This takes away the fire debuff, but causes the projectile to launch and detonate violently with sheer pinpoint explosive power. Heavy, but Excellent for concussion tames.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowBazel.PrimalItemAmmo_ArrowBazel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BazelnadeFireArrow.BazelnadeFireArrow",
+			"type": "Ammo",
+			"folders": [ "Alchitect", "Weapons", "Ammo" ],
+			"weight": 3,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 250, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Bazelcrystal_C" }
+				]
+			}
+		},
+		{
+			"name": "Earth Arrow",
+			"description": "An arrow embued with Earth elemental magic. Can only be used from a crossbow. When fired, the magic within quickly pulls in earth (stone, dirt, rocks) from the surrounding area, and impacts as a solid mass into the target. Good for buildings or \"concussion-tames\".",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowEarth.PrimalItemAmmo_ArrowEarth_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/EarthArrow.EarthArrow",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
+					{ "qty": 60, "type": "PrimalItemResource_EarthElement_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
+				]
+			}
+		},
+		{
+			"name": "Ilias Arrow",
+			"description": "An Arrow said to be given by the Goddess of Light to those who perform great deeds on rare occasion as a reward. Although it can only be used with a standard wooden bow, it will knock out ANY normal KO-tame creature in 5 minutes with a single shot.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowIlias.PrimalItemAmmo_ArrowIlias_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/IliasArrow.IliasArrow",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.2,
+			"stackSize": 100
+		},
+		{
+			"name": "Lighted Arrow",
+			"description": "An arrow infused with Mana. Mildly stronger than a normal arrow, and deals slightly increased damage to undeads and evil foes.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowLighted.PrimalItemAmmo_ArrowLighted_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/LightedArrow.LightedArrow",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Mana_C" }
+				]
+			}
+		},
+		{
+			"name": "Aura Arrow",
+			"description": "An arrow created with Light Mana: it's not even technically a physical object! Just as strong as those wielded by Divine Archers: smiting dark foes with ease.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowMana.PrimalItemAmmo_ArrowMana_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AuraArrow.AuraArrow",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 10, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
+				]
+			}
+		},
+		{
+			"name": "Mithril Arrow",
+			"description": "A Pyrian arrow tipped in Mithril. The fine mithril blade practically slices the air itself, leading to a ferocious arrow unlike any other: even aura arrows. The arrow has practically no falloff and is terifyingly fast. While it can be used from a crossbow, its results if used from a proper bow or compound bow lead to a terrifying projectile with speed and power unmatched: even underwater.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowMithril.PrimalItemAmmo_ArrowMithril_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CrystalArrow_SamKO_Icon.CrystalArrow_SamKO_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Soothing Arrow",
+			"description": "An arrow created with Light Mana: it's not even technically a physical object! Though this one lacks damage. It uses the natural properties of Light Mana to calm raging wild animals, and allowing them to form bonds again. Useful for subduing creatures a bit too violent in the moment.\n\nNOTE: Focus on raw DPS over power. A high-quality bow does nothing different than a primitve one!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowPacify.PrimalItemAmmo_ArrowPacify_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AuraArrow.AuraArrow",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 30, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
+				]
+			}
+		},
+		{
+			"name": "Venom Arrow",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowTriceVenom.PrimalItemAmmo_ArrowTriceVenom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C"
+		},
+		{
+			"name": "Bazel Crystal Spear Bolt",
+			"description": "A fearsome spear bolt, with a Bazel Crystal carefully attached at the head. Fired from a Boom Cannon, it is devastatingly powerful.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_BallistaArrowBazel.PrimalItemAmmo_BallistaArrowBazel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BazelSpearBolt.BazelSpearBolt",
+			"type": "Ammo",
+			"folders": [ "Alchitect", "Weapons", "Ammo" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 9.3,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 35, "type": "PrimalItemResource_Bazelcrystal_C" },
+					{ "qty": 500, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" }
+				]
+			}
+		},
+		{
+			"name": "Boom Cannon",
+			"description": "Said to be developed by a alchitect who arrived from an advanced time. Uses fire element and pressure to launch explosive Bazel Crystal-tipped bolts with extreme effectiveness",
+			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItem_WeaponHarpoonBazel.PrimalItem_WeaponHarpoonBazel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BoomCannon.BoomCannon",
+			"type": "Weapon",
+			"folders": [ "Alchitect", "Weapons", "Ranged" ],
+			"weight": 15,
+			"stackSize": 1,
+			"durability": 100,
+			"crafting": {
+				"xp": 9,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 30, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 40, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 150, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 70, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 600, "type": "PrimalItemResource_FireElement_C" }
+				]
+			},
+			"repair": {
+				"xp": 9,
+				"time": 5,
+				"recipe": [
+					{ "qty": 15, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 75, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 300, "type": "PrimalItemResource_FireElement_C" }
+				]
+			},
+			"weapon": "/Game/Mods/Pyria/Alchemy/Ammo/Weap/WeapHarpoonBazel.WeapHarpoonBazel_C"
 		},
 		{
 			"name": "Unleash Chosen Aura",
 			"description": "This special potion unleashes your aura, causing it to grow in power to your own strength, from overcoming challenges. Certain aura-sensitve creatures may take notice....\n\n\"May you and your aura continue to grow in strength, young one.\"",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/CHOSEN_ONE/PrimalItemConsumable_ChosenOne.PrimalItemConsumable_ChosenOne_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UnleashChosenAuraDefaultRecipe.UnleashChosenAuraDefaultRecipe",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UnleashChosenAuraDefaultRecipe.UnleashChosenAuraDefaultRecipe",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Drugs" ],
 			"weight": 0.1,
@@ -63,9 +319,10 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemTrophy_Dragon_Alpha_C" },
 					{ "qty": 1, "type": "PrimalItemArtifact_09_C" },
-					{ "qty": 5000, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 10000, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_PearlDust_C" }
+					{ "qty": 5000, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 12000, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -74,7 +331,7 @@
 			"description": "This special potion unleashes your aura, causing it to grow in power to your own strength, from overcoming challenges. Certain aura-sensitve creatures may take notice....\n\n\"May you and your aura continue to grow in strength, young one.\"\n(This version is compatible for Aberration!)",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/CHOSEN_ONE/PrimalItemConsumable_ChosenOneAberration.PrimalItemConsumable_ChosenOneAberration_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UnleashChosenAuraAberrationRecipe.UnleashChosenAuraAberrationRecipe",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UnleashChosenAuraAberrationRecipe.UnleashChosenAuraAberrationRecipe",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Drugs" ],
 			"weight": 0.1,
@@ -90,9 +347,10 @@
 					{ "qty": 1, "type": "PrimalItemArtifactAB_C" },
 					{ "qty": 1, "type": "PrimalItemArtifactAB_2_C" },
 					{ "qty": 1, "type": "PrimalItemArtifactAB_4_C" },
-					{ "qty": 5000, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 10000, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_PearlDust_C" }
+					{ "qty": 5000, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 12000, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -101,7 +359,7 @@
 			"description": "This special potion unleashes your aura, causing it to grow in power to your own strength, from overcoming challenges. Certain aura-sensitve creatures may take notice....\n\n\"May you and your aura continue to grow in strength, young one.\"\n(This version is compatible for The Center!)",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/CHOSEN_ONE/PrimalItemConsumable_ChosenOneCenter.PrimalItemConsumable_ChosenOneCenter_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UnleashChosenAuraCenterRecipe.UnleashChosenAuraCenterRecipe",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UnleashChosenAuraCenterRecipe.UnleashChosenAuraCenterRecipe",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Drugs" ],
 			"weight": 0.1,
@@ -116,9 +374,10 @@
 					{ "qty": 1, "type": "PrimalItemTrophy_Gorilla_Alpha_C" },
 					{ "qty": 1, "type": "PrimalItemTrophy_Broodmother_Alpha_C" },
 					{ "qty": 1, "type": "PrimalItemArtifact_04_C" },
-					{ "qty": 5000, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 10000, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_PearlDust_C" }
+					{ "qty": 5000, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 12000, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -127,7 +386,7 @@
 			"description": "This special potion unleashes your aura, causing it to grow in power to your own strength, from overcoming challenges. Certain aura-sensitve creatures may take notice....\n\n\"May you and your aura continue to grow in strength, young one.\"\n(This version is compatible for Extinction!)",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/CHOSEN_ONE/PrimalItemConsumable_ChosenOneExtinction.PrimalItemConsumable_ChosenOneExtinction_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UnleashChosenAuraExtinctionRecipe.UnleashChosenAuraExtinctionRecipe",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UnleashChosenAuraExtinctionRecipe.UnleashChosenAuraExtinctionRecipe",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Drugs" ],
 			"weight": 0.1,
@@ -142,9 +401,10 @@
 					{ "qty": 1, "type": "PrimalItemTrophy_Kaiju_Desert_C" },
 					{ "qty": 1, "type": "PrimalItemTrophy_Kaiju_Forest_C" },
 					{ "qty": 1, "type": "PrimalItemTrophy_Kaiju_Ice_C" },
-					{ "qty": 5000, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 10000, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_PearlDust_C" }
+					{ "qty": 5000, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 12000, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -153,7 +413,7 @@
 			"description": "This special potion unleashes your aura, causing it to grow in power to your own strength, from overcoming challenges. Certain aura-sensitve creatures may take notice....\n\n\"May you and your aura continue to grow in strength, young one.\"\n(This version is compatible for Scorched Earth!)",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/CHOSEN_ONE/PrimalItemConsumable_ChosenOneScorched.PrimalItemConsumable_ChosenOneScorched_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UnleashChosenAuraScorchedRecipe.UnleashChosenAuraScorchedRecipe",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UnleashChosenAuraScorchedRecipe.UnleashChosenAuraScorchedRecipe",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Drugs" ],
 			"weight": 0.1,
@@ -169,9 +429,10 @@
 					{ "qty": 1, "type": "PrimalItemArtifactSE_01_C" },
 					{ "qty": 1, "type": "PrimalItemArtifactSE_02_C" },
 					{ "qty": 1, "type": "PrimalItemArtifactSE_03_C" },
-					{ "qty": 5000, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 10000, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_PearlDust_C" }
+					{ "qty": 5000, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 12000, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -182,7 +443,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/ConditionGroggy_Icon.ConditionGroggy_Icon",
 			"type": "Resource",
-			"folders": [ "Elements" ],
+			"folders": [ "Mana Manipulation", "Elements" ],
 			"weight": 0,
 			"stackSize": 3000,
 			"crafting": {
@@ -191,7 +452,10 @@
 				"levelReq": 0,
 				"productCount": 15,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 10, "type": "PrimalItemResource_Fibers_C" } ]
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Mana_C" }
+				]
 			}
 		},
 		{
@@ -199,7 +463,7 @@
 			"description": "The immensely powerful, archaic Dragon Element is shrouded in mystery. Only the Dragon Kings know of its true power and use, but they refuse to speak to non-dragons about it. Used in spells and magic within Pyria.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_DragonElement.PrimalItemResource_DragonElement_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DragonElement.DragonElement",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DragonElement.DragonElement",
 			"type": "Resource",
 			"folders": [ "Elements" ],
 			"weight": 0,
@@ -212,26 +476,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Boulder_Icon.Boulder_Icon",
 			"type": "Resource",
-			"folders": [ "Elements" ],
-			"weight": 0,
-			"stackSize": 3000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 15,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 15, "type": "PrimalItemResource_Stone_C" } ]
-			}
-		},
-		{
-			"name": "Fire Element",
-			"description": "The Element of Fire is associated with passion and anger, as well as power or willpower. Used in spells and magic within Pyria.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_FireElement.PrimalItemResource_FireElement_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Condition_Enflamed_Icon.Condition_Enflamed_Icon",
-			"type": "Resource",
-			"folders": [ "Elements" ],
+			"folders": [ "Mana Manipulation", "Elements" ],
 			"weight": 0,
 			"stackSize": 3000,
 			"crafting": {
@@ -241,8 +486,30 @@
 				"productCount": 15,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 5, "type": "PrimalItemResource_Sulfur_C" },
-					{ "qty": 5, "type": "PrimalItemResource_Sparkpowder_C" }
+					{ "qty": 100, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Mana_C" }
+				]
+			}
+		},
+		{
+			"name": "Fire Element",
+			"description": "The Element of Fire is associated with passion and anger, as well as power or willpower. Used in spells and magic within Pyria.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_FireElement.PrimalItemResource_FireElement_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Condition_Enflamed_Icon.Condition_Enflamed_Icon",
+			"type": "Resource",
+			"folders": [ "Mana Manipulation", "Elements" ],
+			"weight": 0,
+			"stackSize": 3000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Sulfur_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
@@ -253,7 +520,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/ConditionUnderwaterBreathing_Icon.ConditionUnderwaterBreathing_Icon",
 			"type": "Resource",
-			"folders": [ "Elements" ],
+			"folders": [ "Mana Manipulation", "Elements" ],
 			"weight": 0,
 			"stackSize": 3000,
 			"crafting": {
@@ -262,7 +529,10 @@
 				"levelReq": 0,
 				"productCount": 15,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" } ]
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Mana_C" }
+				]
 			}
 		},
 		{
@@ -270,9 +540,9 @@
 			"description": "Grants any tame an incredible amount of stamina by GREATLY multiplying it's maximum stamina for 15 minutes before returning to normal. Has a hefty cooldown, and as penalty, instantly starves a tame on use. Defeat an ArchDemon to unlock this.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_90sPotion.PrimalItemConsumable_90sPotion_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/MegaDashPotion.MegaDashPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/MegaDashPotion.MegaDashPotion",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -285,10 +555,10 @@
 				"recipe": [
 					{ "qty": 1000, "type": "PrimalItemResource_RareFlower_C" },
 					{ "qty": 1000, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 1000, "type": "PrimalItemConsumable_Berry_Tintoberry_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_AirElement_C" },
 					{ "qty": 1000, "type": "PrimalItemConsumable_Berry_Stimberry_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_ApexDrop_Mana_C" }
+					{ "qty": 500, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Mana_C" }
 				]
 			},
 			"statEffects": [
@@ -304,9 +574,9 @@
 			"description": "A potion that blocks out all external cold for 15 minutes. Cannot be used with Heatblock potion: will completely cancel effects.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_ColdBlock.PrimalItemConsumable_ColdBlock_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/ColdblockPotion.ColdblockPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ColdblockPotion.ColdblockPotion",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -317,21 +587,44 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 10, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 10, "type": "PrimalItemResource_WaterElement_C" },
-					{ "qty": 10, "type": "PrimalItemResource_BlackPearl_C" }
+					{ "qty": 300, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 100, "type": "PrimalItemResource_WaterElement_C" },
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Self-Blizzard Potion",
+			"description": "A potion that blocks out all external cold for 15 minutes. Cannot be used with Heatblock potion: will completely cancel effects. This potion will even prevent against freezing. Defeat a Diorex to unlock this.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_ColdBlockUltra.PrimalItemConsumable_ColdBlockUltra_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ColdblockPotion.ColdblockPotion",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 725, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_WaterElement_C" },
+					{ "qty": 75, "type": "PrimalItemResource_BlackPearlDust_C" }
 				]
 			}
 		},
 		{
 			"name": "Divine Aura Potion",
-			"description": "An extremely rare potion. Ingesting it casts the \"Divine Aura\" Spell: making your aura similar to theirs temporarily. It makes you immune to all manner of environmental hazzards! Defeat a Dark Insidious Eminence to unlock this engram. Defeat a Dark Insidious Eminence to unlock this.",
+			"description": "An extremely rare potion. Ingesting it casts the \"Divine Aura\" Spell: making your aura similar to theirs temporarily. It makes you immune to all manner of environmental hazzards! Defeat a Dark Insidious Eminence to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_DivineAura.PrimalItemConsumable_DivineAura_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DivineAuraPotion.DivineAuraPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DivineAuraPotion.DivineAuraPotion",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -345,32 +638,10 @@
 					{ "qty": 200, "type": "PrimalItemResource_RareFlower_C" },
 					{ "qty": 200, "type": "PrimalItemResource_RareMushroom_C" },
 					{ "qty": 420, "type": "PrimalItemResource_Silicon_C" },
-					{ "qty": 400, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 200, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 200, "type": "PrimalItemResource_ApexDrop_Mana_C" }
-				]
-			}
-		},
-		{
-			"name": "Golem Booster",
-			"description": "A harnessed Shattered Colossus core. This should be able to supercharge any type of golem...",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GolemBooster.PrimalItemConsumable_GolemBooster_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/GolemBooster.GolemBooster",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemResource_ColossusCore_C" },
-					{ "qty": 2500, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 2500, "type": "PrimalItemResource_EarthElement_C" }
+					{ "qty": 600, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 200, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 600, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
@@ -379,9 +650,9 @@
 			"description": "Heals 250 HP per second for 10 seconds. Recovers 100 food per sec to compensate.Not for player consumption.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GrandElixir.PrimalItemConsumable_GrandElixir_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/GreatElixir.GreatElixir",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/GreatElixir.GreatElixir",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -393,7 +664,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 30, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 20, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 30, "type": "PrimalItemResource_RareMushroom_C" },
 					{ "qty": 160, "type": "PrimalItemConsumable_Berry_Tintoberry_C" }
 				]
 			},
@@ -404,9 +675,9 @@
 			"description": "Heals 80 HP pers second for 10 seconds. Recovers 20 food per sec to compensate.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GreatElixir.PrimalItemConsumable_GreatElixir_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/GreatElixir.GreatElixir",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/GreatElixir.GreatElixir",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -418,7 +689,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 15, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 10, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 15, "type": "PrimalItemResource_RareMushroom_C" },
 					{ "qty": 80, "type": "PrimalItemConsumable_Berry_Tintoberry_C" }
 				]
 			},
@@ -429,9 +700,9 @@
 			"description": "A potion that blocks out all external heat for 15 minutes. Cannot be used with Coldblock potion: will completely cancel effects.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_HeatBlock.PrimalItemConsumable_HeatBlock_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/HeatblockPotion.HeatblockPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/HeatblockPotion.HeatblockPotion",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -442,10 +713,9 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 10, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 10, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 10, "type": "PrimalItemResource_BlackPearl_C" }
+					{ "qty": 300, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 100, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			}
 		},
@@ -454,9 +724,9 @@
 			"description": "A rare, extremely upgraded version of the Heatblock potion. Though its effect does not last as long, it prevents the user from being set aflame in almost any way! DISCLAIMER: will not prevent against lava, and wont work with Heat or Coldblock potions. Defeat a Diorex to unlock this engram. ",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_HeatBlockUltra.PrimalItemConsumable_HeatBlockUltra_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/SelfInfernoPotion.SelfInfernoPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SelfInfernoPotion.SelfInfernoPotion",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -467,10 +737,9 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 10, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 200, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 50, "type": "PrimalItemResource_BlackPearl_C" }
+					{ "qty": 1000, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 75, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 725, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
@@ -479,9 +748,9 @@
 			"description": "Made with light mana, this item is a special spell. When used on a creature, it makes them permanently immune to charge light. Excellent for tamed Reaper Kings: if you are lucky enough to have one...",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_LightBlessing.PrimalItemConsumable_LightBlessing_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/LightsBlessing.LightsBlessing",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/LightsBlessing.LightsBlessing",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -493,7 +762,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 2000, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 450, "type": "PrimalItemResource_PearlDust_C" }
+					{ "qty": 1000, "type": "PrimalItemResource_BlackPearlDust_C" }
 				]
 			}
 		},
@@ -502,9 +771,9 @@
 			"description": "Heals 200 health in 10 seconds. A good item to use for players with lower health caps.Slightly regenerates food to compensate.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_LightElixir.PrimalItemConsumable_LightElixir_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/LightElixir.LightElixir",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/LightElixir.LightElixir",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -516,7 +785,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 5, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 1, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 5, "type": "PrimalItemResource_RareMushroom_C" },
 					{ "qty": 40, "type": "PrimalItemConsumable_Berry_Tintoberry_C" }
 				]
 			}
@@ -526,9 +795,9 @@
 			"description": "Heals 25% of health over 60 seconds. A must-have for prolonged combat. Defeat an Ogre, or any sort of Pyrian \"alpha\" creature to unlock this.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_MaxElixir.PrimalItemConsumable_MaxElixir_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/HighElixir.HighElixir",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/HighElixir.HighElixir",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -539,8 +808,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 30, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 20, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 40, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 40, "type": "PrimalItemResource_RareMushroom_C" },
 					{ "qty": 80, "type": "PrimalItemConsumable_Berry_Tintoberry_C" },
 					{ "qty": 80, "type": "PrimalItemConsumable_Berry_Mejoberry_C" }
 				]
@@ -551,9 +820,9 @@
 			"description": "A super-tasty cut of meat wrapped in meat with the right seasonings. The only meat an herbivore will WANT to eat. Can only be used on tames, but it'll restore a large amount of their hunger. Good for ravenous critters like Giganotosaurus or Daeodon, in the right situations!",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_NomSteak.PrimalItemConsumable_NomSteak_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/NumNumSteak.NumNumSteak",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NumNumSteak.NumNumSteak",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Consumables", "Frafted Foods" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -587,9 +856,9 @@
 			"description": "Consuming this potion drastically increases one's oxygen. It also increases your base swimming speed. This effect lasts roughly 30 minutes. Perfect prepping for underwater dives on primitive servers.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_OxyLast.PrimalItemConsumable_OxyLast_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/OxylastPotion.OxylastPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/OxylastPotion.OxylastPotion",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -602,7 +871,7 @@
 				"recipe": [
 					{ "qty": 15, "type": "PrimalItemResource_RareFlower_C" },
 					{ "qty": 10, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 80, "type": "PrimalItemResource_WaterElement_C" }
+					{ "qty": 250, "type": "PrimalItemResource_WaterElement_C" }
 				]
 			},
 			"statEffects": [ { "stat": "health", "value": 500, "useItemQuality": true, "duration": 20 } ]
@@ -612,9 +881,9 @@
 			"description": "This potion puts one into a focused, metatative state for a decent amount of time. In this state, survivors find their efficiency in doing skills increase, as well as heightened focus across survivors and creatures as well. Prevents even the angriest of creatures from raging.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_SereneMind.PrimalItemConsumable_SereneMind_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/SereneMindPotion.SereneMindPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SereneMindPotion.SereneMindPotion",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -625,10 +894,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 500, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 450, "type": "PrimalItemResource_PearlDust_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_WaterElement_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_ApexDrop_Mana_C" }
+					{ "qty": 250, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 450, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 500, "type": "PrimalItemResource_WaterElement_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
@@ -637,7 +906,7 @@
 			"description": "A potion that temporarily makes all skittish creatures oblivious to your presence unless you get right up to them. Might be useful for some passive tames...",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_SkittishSneak.PrimalItemConsumable_SkittishSneak_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/HiddenPotion.HiddenPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/HiddenPotion.HiddenPotion",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Drugs" ],
 			"weight": 0.1,
@@ -650,10 +919,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 60, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 60, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 60, "type": "PrimalItemResource_WaterElement_C" },
-					{ "qty": 60, "type": "PrimalItemResource_BlackPearl_C" }
+					{ "qty": 125, "type": "PrimalItemResource_EarthElement_C" },
+					{ "qty": 125, "type": "PrimalItemResource_WaterElement_C" },
+					{ "qty": 25, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 25, "type": "PrimalItemResource_RareMushroom_C" }
 				]
 			}
 		},
@@ -662,9 +931,9 @@
 			"description": "Reduces the food of a KO'd creature a set amount. Helps assist taming.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_TamLixir.PrimalItemConsumable_TamLixir_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/TamingElixir.TamingElixir",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/TamingElixir.TamingElixir",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Apothecary" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
@@ -676,9 +945,9 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 20, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Sparkpowder_C" },
-					{ "qty": 150, "type": "PrimalItemConsumable_Berry_Tintoberry_C" },
-					{ "qty": 150, "type": "PrimalItemConsumable_Berry_Stimberry_C" }
+					{ "qty": 120, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
+					{ "qty": 30, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 30, "type": "PrimalItemResource_RareMushroom_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": -4, "useItemQuality": true, "duration": 3 } ]
@@ -686,9 +955,9 @@
 		{
 			"name": "Cadaver Brain",
 			"description": "Usually obtained from undeads, such as Withered, or even from graves, or..... well, you're not that much of a monster, right?",
-			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_ApexDrop_CadaverBrain.PrimalItemResource_ApexDrop_CadaverBrain_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_CadaverBrain.PrimalItemResource_CadaverBrain_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CadaverBrain.CadaverBrain",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CadaverBrain.CadaverBrain",
 			"type": "Resource",
 			"weight": 0.5,
 			"stackSize": 1000
@@ -696,9 +965,9 @@
 		{
 			"name": "Cadaver Eye",
 			"description": "Usually obtained from undeads, such as Withered, or even from graves, or..... well, you're not that much of a monster, right?",
-			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_ApexDrop_CadaverEye.PrimalItemResource_ApexDrop_CadaverEye_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_CadaverEye.PrimalItemResource_CadaverEye_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CadaverEye.CadaverEye",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CadaverEye.CadaverEye",
 			"type": "Resource",
 			"weight": 0.5,
 			"stackSize": 1000
@@ -706,9 +975,9 @@
 		{
 			"name": "Cadaver Flesh",
 			"description": "Usually obtained from undeads, such as Withered, or even from graves, or..... well, you're not that much of a monster, right?",
-			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_ApexDrop_CadaverFlesh.PrimalItemResource_ApexDrop_CadaverFlesh_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_CadaverFlesh.PrimalItemResource_CadaverFlesh_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CadaverFlesh.CadaverFlesh",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CadaverFlesh.CadaverFlesh",
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 1000
@@ -716,9 +985,9 @@
 		{
 			"name": "Cadaver Heart",
 			"description": "Usually obtained from undeads, such as Withered, or even from graves, or..... well, you're not that much of a monster, right?",
-			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_ApexDrop_CadaverHeart.PrimalItemResource_ApexDrop_CadaverHeart_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_CadaverHeart.PrimalItemResource_CadaverHeart_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CadaverHeart.CadaverHeart",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CadaverHeart.CadaverHeart",
 			"type": "Resource",
 			"weight": 0.5,
 			"stackSize": 1000
@@ -726,9 +995,9 @@
 		{
 			"name": "Cadaver Lungs",
 			"description": "Usually obtained from undeads, such as Withered, or even from graves, or..... well, you're not that much of a monster, right?",
-			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_ApexDrop_CadaverLungs.PrimalItemResource_ApexDrop_CadaverLungs_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_CadaverLungs.PrimalItemResource_CadaverLungs_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CadaverLung.CadaverLung",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CadaverLung.CadaverLung",
 			"type": "Resource",
 			"weight": 0.5,
 			"stackSize": 1000
@@ -736,9 +1005,9 @@
 		{
 			"name": "Cadaver Muscle",
 			"description": "Usually obtained from undeads, such as Withered, or even from graves, or..... well, you're not that much of a monster, right?",
-			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_ApexDrop_CadaverMuscle.PrimalItemResource_ApexDrop_CadaverMuscle_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_CadaverMuscle.PrimalItemResource_CadaverMuscle_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CadaverMuscle.CadaverMuscle",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CadaverMuscle.CadaverMuscle",
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 1000
@@ -746,9 +1015,9 @@
 		{
 			"name": "Subcutaneous Cadaver Tissue",
 			"description": "Usually obtained from undeads, such as Withered, or even from graves, or..... well, you're not that much of a monster, right?",
-			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_ApexDrop_CadaverTissue.PrimalItemResource_ApexDrop_CadaverTissue_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/CadaverParts/PrimalItemResource_CadaverTissue.PrimalItemResource_CadaverTissue_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CadaverTissue.CadaverTissue",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CadaverTissue.CadaverTissue",
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 1000
@@ -781,7 +1050,7 @@
 			"description": "Use some magic and some metal to sculpt an Automaton: A heartless, iron guard-warrior.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaAutomaton.PrimalItemConsumable_CreaAutomaton_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateAutomaton.CreateAutomaton",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateAutomaton.CreateAutomaton",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Alchitect" ],
 			"weight": 0.1,
@@ -794,11 +1063,11 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 2, "type": "PrimalItem_WeaponSword_C" },
-					{ "qty": 320, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 40, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 500, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 40, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
 					{ "qty": 210, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 320, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 3, "type": "PrimalItemResource_BlackPearl_C" }
+					{ "qty": 320, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 150, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			}
 		},
@@ -807,13 +1076,13 @@
 			"description": "Use this to bring your newly created Balrog to life!",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaBalrog.PrimalItemConsumable_CreaBalrog_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/ActivatedBalrogCore.ActivatedBalrogCore",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ActivatedBalrogCore.ActivatedBalrogCore",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
-			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C",
+			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
 			"crafting": {
 				"xp": 200,
 				"time": 40,
@@ -823,9 +1092,10 @@
 				"recipe": [
 					{ "qty": 1000, "type": "PrimalItemResource_Metal_C" },
 					{ "qty": 1000, "type": "PrimalItemResource_Sulfur_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_Balrog_C" },
-					{ "qty": 350, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 500, "type": "PrimalItemResource_ApexDrop_Mana_C" }
+					{ "qty": 1, "type": "PrimalItemResource_BalrogCore_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 5000, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 10000, "type": "PrimalItemResource_FireElement_C" }
 				]
 			}
 		},
@@ -834,7 +1104,7 @@
 			"description": "Use this to corrupt the soul of a Divine Paladin into a Dark Paladin: one of the front-runners of darkness.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaDarkPaladin.PrimalItemConsumable_CreaDarkPaladin_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CorruptPaladin.CorruptPaladin",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CorruptPaladin.CorruptPaladin",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Demonology" ],
 			"weight": 0.1,
@@ -851,15 +1121,15 @@
 					{ "qty": 1, "type": "PrimalItemArtifact_11_C" },
 					{ "qty": 1, "type": "PrimalItemArtifact_07_C" },
 					{ "qty": 1, "type": "PrimalItemArtifact_09_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_CadaverHeart_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_CadaverLungs_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_CadaverBrain_C" },
-					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_CadaverEye_C" },
-					{ "qty": 100, "type": "PrimalItemResource_ApexDrop_CadaverTissue_C" },
+					{ "qty": 1, "type": "PrimalItemResource_CadaverHeart_C" },
+					{ "qty": 1, "type": "PrimalItemResource_CadaverLungs_C" },
+					{ "qty": 1, "type": "PrimalItemResource_CadaverBrain_C" },
+					{ "qty": 2, "type": "PrimalItemResource_CadaverEye_C" },
+					{ "qty": 100, "type": "PrimalItemResource_CadaverTissue_C" },
 					{ "qty": 120, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 50, "type": "PrimalItemResource_ApexDrop_CadaverMuscle_C" },
+					{ "qty": 50, "type": "PrimalItemResource_CadaverMuscle_C" },
 					{ "qty": 100, "type": "PrimalItemResource_Keratin_C" },
-					{ "qty": 300, "type": "PrimalItemResource_ApexDrop_CadaverFlesh_C" },
+					{ "qty": 300, "type": "PrimalItemResource_CadaverFlesh_C" },
 					{ "qty": 300, "type": "PrimalItemResource_MetalIngot_C" }
 				]
 			}
@@ -869,7 +1139,7 @@
 			"description": "Use an extensive dark magic spell to conjure up a loyal, permanent Dark Mana Reaper Drone. Takes a lot to craft, since you 're trying to make it permanent, and arent a dark paladin or etc....but, that doesn't mean you can't use it for good either! Kill one in the wild to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaDarkReap.PrimalItemConsumable_CreaDarkReap_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateDMRD.CreateDMRD",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateDMRD.CreateDMRD",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Demonology" ],
 			"weight": 0.1,
@@ -881,11 +1151,12 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 500, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 300, "type": "PrimalItemResource_PearlDust_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_ManaDark_C" },
+					{ "qty": 300, "type": "PrimalItemResource_BlackPearlDust_C" },
 					{ "qty": 10, "type": "PrimalItemResource_DarkReapTail_C" },
 					{ "qty": 1, "type": "PrimalItemResource_DarkReapSkull_C" },
-					{ "qty": 600, "type": "PrimalItemResource_DarkReapScale_C" }
+					{ "qty": 600, "type": "PrimalItemResource_DarkReapScale_C" },
+					{ "qty": 600, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -894,7 +1165,7 @@
 			"description": "Use unfathomable black magic, as well as the agony of your enemies, to summon in a Dark Mana Reaper Empress to assist you for ten minutes. Defeat a wild Dark Mana Reaper Empress to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaDarkReapEmpr.PrimalItemConsumable_CreaDarkReapEmpr_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateDMRD.CreateDMRD",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateDMRD.CreateDMRD",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Demonology" ],
 			"weight": 0.1,
@@ -907,12 +1178,13 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 100000, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 52600, "type": "PrimalItemResource_PearlDust_C" },
-					{ "qty": 15250, "type": "PrimalItemResource_DarkReapBlood_Empress_C" },
-					{ "qty": 15050, "type": "PrimalItemResource_DarkReapScale_Empress_C" },
+					{ "qty": 52600, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 5000, "type": "PrimalItemResource_DarkReapBlood_Empress_C" },
+					{ "qty": 5000, "type": "PrimalItemResource_DarkReapScale_Empress_C" },
 					{ "qty": 500, "type": "PrimalItemResource_BerserkerSoul_C" },
 					{ "qty": 500, "type": "PrimalItemResource_ArtemisSoul_C" },
-					{ "qty": 500, "type": "PrimalItemResource_PaladinSoul_C" }
+					{ "qty": 500, "type": "PrimalItemResource_PaladinSoul_C" },
+					{ "qty": 52600, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -921,7 +1193,7 @@
 			"description": "Use Dark Magic to conjure up a Dark Mana Seeker, a tainted variant of an Aura Seeker. Defeat a Dark Mana Reaper Empress to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaDarkSeek.PrimalItemConsumable_CreaDarkSeek_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateDarkManaSeeker.CreateDarkManaSeeker",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateDarkManaSeeker.CreateDarkManaSeeker",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Demonology" ],
 			"weight": 0.1,
@@ -933,9 +1205,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 860, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 650, "type": "PrimalItemResource_PearlDust_C" },
-					{ "qty": 500, "type": "PrimalItemResource_Gem_Element_C" }
+					{ "qty": 1150, "type": "PrimalItemResource_ManaDark_C" },
+					{ "qty": 650, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Gem_Element_C" }
 				]
 			}
 		},
@@ -944,13 +1217,13 @@
 			"description": "Use this to not also purify and \"tame\" an Everlast Drallion, but also enhance it: by crudely graphing metal weapons into it's body. Strangely enough, it doesn't mind at all...",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaDeadDrall.PrimalItemConsumable_CreaDeadDrall_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/ResuurectAugmentEverlast.ResuurectAugmentEverlast",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ResuurectAugmentEverlast.ResuurectAugmentEverlast",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
-			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C",
+			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
 			"crafting": {
 				"xp": 200,
 				"time": 40,
@@ -960,9 +1233,10 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemResource_DrallGemRed_C" },
 					{ "qty": 1000, "type": "PrimalItemResource_Keratin_C" },
-					{ "qty": 600, "type": "PrimalItemResource_PearlDust_C" },
+					{ "qty": 600, "type": "PrimalItemResource_BlackPearlDust_C" },
 					{ "qty": 30, "type": "PrimalItem_WeaponSword_C" },
-					{ "qty": 14, "type": "PrimalItemArmor_MetalShield_C" }
+					{ "qty": 14, "type": "PrimalItemArmor_MetalShield_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -971,7 +1245,7 @@
 			"description": "Use this to impower and send the soul of a worthy Divine Berserker up to the holy power she worships, to become a powerful Divine Eminence.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaEminence.PrimalItemConsumable_CreaEminence_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AscendDivineBerserker.AscendDivineBerserker",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AscendDivineBerserker.AscendDivineBerserker",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Ascending" ],
 			"weight": 0.1,
@@ -991,10 +1265,10 @@
 					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
 					{ "qty": 1, "type": "PrimalItemArtifact_09_C" },
 					{ "qty": 1400, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 650, "type": "PrimalItemResource_ApexDrop_Mana_C" },
+					{ "qty": 650, "type": "PrimalItemResource_Mana_C" },
 					{ "qty": 2300, "type": "PrimalItemResource_Silicon_C" },
 					{ "qty": 120, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 130, "type": "PrimalItemResource_PearlDust_C" }
+					{ "qty": 130, "type": "PrimalItemResource_BlackPearlDust_C" }
 				]
 			}
 		},
@@ -1003,9 +1277,9 @@
 			"description": "Use a bit of necromancy and conjure up a Fallen: a basic type of autonomous undead. This one brandishes a large two-handed sword.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaFallen1.PrimalItemConsumable_CreaFallen1_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateFallenBroadsword.CreateFallenBroadsword",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateFallenBroadsword.CreateFallenBroadsword",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Summons", "Nercromancy" ],
+			"folders": [ "Summons", "Necromancy" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"crafting": {
@@ -1015,10 +1289,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 6, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 3, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Keratin_C" },
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ManaDark_C" },
+					{ "qty": 100, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 1, "type": "PrimalItem_WeaponSword_C" }
 				]
 			}
@@ -1028,9 +1302,9 @@
 			"description": "Use a bit of necromancy and conjure up a Fallen: a basic type of autonomous undead. This one brandishes a sword and shield.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaFallen2.PrimalItemConsumable_CreaFallen2_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateFallenSwordAndShield.CreateFallenSwordAndShield",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateFallenSwordAndShield.CreateFallenSwordAndShield",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Summons", "Nercromancy" ],
+			"folders": [ "Summons", "Necromancy" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"crafting": {
@@ -1040,10 +1314,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 6, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 3, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Keratin_C" },
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ManaDark_C" },
+					{ "qty": 100, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 1, "type": "PrimalItem_WeaponSword_C" },
 					{ "qty": 1, "type": "PrimalItemArmor_MetalShield_C" }
 				]
@@ -1054,7 +1328,7 @@
 			"description": "Use this to purify the soul of a Dark Insidious Eminence back to the side of light, to become a Divine Fatewalker Eminence: an unstoppable pinnacle of close combat. Defeat a Dark Mana Reaper Empress to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaFate.PrimalItemConsumable_CreaFate_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AscendFatewalker.AscendFatewalker",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AscendFatewalker.AscendFatewalker",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Ascending" ],
 			"weight": 0.1,
@@ -1075,10 +1349,10 @@
 					{ "qty": 5, "type": "PrimalItemArtifact_09_C" },
 					{ "qty": 5600, "type": "PrimalItemResource_ManaLight_C" },
 					{ "qty": 5600, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 5600, "type": "PrimalItemResource_ApexDrop_Mana_C" },
+					{ "qty": 5600, "type": "PrimalItemResource_Mana_C" },
 					{ "qty": 2300, "type": "PrimalItemResource_Silicon_C" },
 					{ "qty": 560, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 4200, "type": "PrimalItemResource_PearlDust_C" }
+					{ "qty": 4200, "type": "PrimalItemResource_BlackPearlDust_C" }
 				]
 			}
 		},
@@ -1087,13 +1361,13 @@
 			"description": "Use this to bring your newly created Fire Elemental to life!",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaFireBurb.PrimalItemConsumable_CreaFireBurb_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/ActivatedFireElementalCore.ActivatedFireElementalCore",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ActivatedFireElementalCore.ActivatedFireElementalCore",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
-			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C",
+			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
 			"crafting": {
 				"xp": 200,
 				"time": 40,
@@ -1103,9 +1377,9 @@
 				"recipe": [
 					{ "qty": 5000, "type": "PrimalItemResource_FireElement_C" },
 					{ "qty": 5000, "type": "PrimalItemResource_Sulfur_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_FireBurb_C" },
-					{ "qty": 3000, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 5000, "type": "PrimalItemResource_ApexDrop_Mana_C" }
+					{ "qty": 1, "type": "PrimalItemResource_FireBurbCore_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 5000, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
@@ -1114,7 +1388,7 @@
 			"description": "Use this to resurrect an Alpha Carnotaurus killed from it's Spited state into an Alpha Fulgur Carnotaurus",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaFulgur.PrimalItemConsumable_CreaFulgur_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateAlphaFulgurCarno.CreateAlphaFulgurCarno",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateAlphaFulgurCarno.CreateAlphaFulgurCarno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
@@ -1128,7 +1402,7 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemResource_AlphaCarnoCorpse_C" },
 					{ "qty": 1, "type": "PrimalItemResource_AlphaCarnoSoul_C" },
-					{ "qty": 2000, "type": "PrimalItemResource_ApexDrop_Mana_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Mana_C" },
 					{ "qty": 2000, "type": "PrimalItemResource_AirElement_C" },
 					{ "qty": 1000, "type": "PrimalItemResource_Fulgurcrystal_C" }
 				]
@@ -1139,7 +1413,7 @@
 			"description": "Use this to create a Gargoyle: a living statue protector!",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaGargoyle.PrimalItemConsumable_CreaGargoyle_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateGargoyle.CreateGargoyle",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateGargoyle.CreateGargoyle",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Alchitect" ],
 			"weight": 0.1,
@@ -1151,9 +1425,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 450, "type": "PrimalItemResource_Stone_C" },
-					{ "qty": 85, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 500, "type": "PrimalItemResource_ApexDrop_Mana_C" }
+					{ "qty": 800, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 200, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -1162,13 +1437,13 @@
 			"description": "Use this to bring your newly created Glacier Golem to life!",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaGlacier.PrimalItemConsumable_CreaGlacier_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/ActivatedGlacierGolemCore.ActivatedGlacierGolemCore",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ActivatedGlacierGolemCore.ActivatedGlacierGolemCore",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"spoilsIn": 120000,
-			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C",
+			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
 			"crafting": {
 				"xp": 200,
 				"time": 40,
@@ -1176,10 +1451,11 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1000, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_IceGolem_C" },
-					{ "qty": 350, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 500, "type": "PrimalItemResource_ApexDrop_Mana_C" }
+					{ "qty": 10000, "type": "PrimalItemResource_WaterElement_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 1, "type": "PrimalItemResource_IceGolemCore_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 3000, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
@@ -1188,9 +1464,9 @@
 			"description": "Use this to create a Hellhound. A loyal spectral hound.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaHellhound.PrimalItemConsumable_CreaHellhound_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateHellhound.CreateHellhound",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateHellhound.CreateHellhound",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Alchitect" ],
+			"folders": [ "Summons", "Demonology" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"crafting": {
@@ -1200,9 +1476,9 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 50, "type": "PrimalItemResource_PearlDust_C" },
-					{ "qty": 85, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 500, "type": "PrimalItemResource_ManaDark_C" }
+					{ "qty": 250, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_ManaDark_C" }
 				]
 			}
 		},
@@ -1211,7 +1487,7 @@
 			"description": "Use this to resurrect an Alpha Tyrannosaurus killed from it's Spited state into an Alpha Infernal Tyrannosaurus",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaInfernal.PrimalItemConsumable_CreaInfernal_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateAlphaInfernalRex.CreateAlphaInfernalRex",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateAlphaInfernalRex.CreateAlphaInfernalRex",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
@@ -1225,7 +1501,7 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemResource_AlphaRexCorpse_C" },
 					{ "qty": 1, "type": "PrimalItemResource_AlphaRexSoul_C" },
-					{ "qty": 2000, "type": "PrimalItemResource_ApexDrop_Mana_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Mana_C" },
 					{ "qty": 2000, "type": "PrimalItemResource_FireElement_C" },
 					{ "qty": 1000, "type": "PrimalItemResource_Bazelcrystal_C" }
 				]
@@ -1236,9 +1512,9 @@
 			"description": "Use this to temporarily summon a loyal Sentinel to your side.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaSentinel.PrimalItemConsumable_CreaSentinel_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/SummonSentinel.SummonSentinel",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SummonSentinel.SummonSentinel",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Summons", "Elementals" ],
+			"folders": [ "Summons", "Necromancy" ],
 			"weight": 0.001,
 			"stackSize": 100,
 			"crafting": {
@@ -1247,7 +1523,7 @@
 				"levelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 100, "type": "PrimalItemResource_ApexDrop_Mana_C" } ]
+				"recipe": [ { "qty": 100, "type": "PrimalItemResource_Mana_C" } ]
 			}
 		},
 		{
@@ -1255,9 +1531,9 @@
 			"description": "Use a bit of necromancy and conjure up a Withered: a basic type of autonomous undead.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaWither.PrimalItemConsumable_CreaWither_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CreateWithered.CreateWithered",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateWithered.CreateWithered",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Summons", "Nercromancy" ],
+			"folders": [ "Summons", "Necromancy" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"crafting": {
@@ -1267,14 +1543,14 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_CadaverBrain_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_CadaverHeart_C" },
-					{ "qty": 20, "type": "PrimalItemResource_ApexDrop_CadaverFlesh_C" },
-					{ "qty": 30, "type": "PrimalItemResource_ApexDrop_CadaverTissue_C" },
-					{ "qty": 6, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 6, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 6, "type": "PrimalItemResource_ApexDrop_CadaverMuscle_C" },
-					{ "qty": 60, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 1, "type": "PrimalItemResource_CadaverBrain_C" },
+					{ "qty": 1, "type": "PrimalItemResource_CadaverHeart_C" },
+					{ "qty": 50, "type": "PrimalItemResource_CadaverFlesh_C" },
+					{ "qty": 30, "type": "PrimalItemResource_CadaverTissue_C" },
+					{ "qty": 20, "type": "PrimalItemResource_ManaDark_C" },
+					{ "qty": 15, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 15, "type": "PrimalItemResource_CadaverMuscle_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Keratin_C" },
 					{ "qty": 250, "type": "PrimalItemConsumable_SpoiledMeat_C" },
 					{ "qty": 400, "type": "PrimalItemResource_Fibers_C" }
 				]
@@ -1285,7 +1561,7 @@
 			"description": "Use this to impower and send the soul of a worthy Divine Artemis up to the holy power she worships, to become a powerful Divine Zenith.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaZenith.PrimalItemConsumable_CreaZenith_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AscendDivineArcher.AscendDivineArcher",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AscendDivineArcher.AscendDivineArcher",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Ascending" ],
 			"weight": 0.1,
@@ -1305,9 +1581,33 @@
 					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
 					{ "qty": 1, "type": "PrimalItemArtifact_09_C" },
 					{ "qty": 1200, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 500, "type": "PrimalItemResource_ApexDrop_Mana_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Mana_C" },
 					{ "qty": 2300, "type": "PrimalItemResource_Silicon_C" },
 					{ "qty": 100, "type": "PrimalItemResource_Element_C" }
+				]
+			}
+		},
+		{
+			"name": "Golem Booster",
+			"description": "A harnessed Shattered Colossus core. This should be able to supercharge any type of golem...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_GolemBooster.PrimalItemConsumable_GolemBooster_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/GolemBooster.GolemBooster",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Alchitect" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemResource_ColossusCore_C" },
+					{ "qty": 2500, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 2500, "type": "PrimalItemResource_EarthElement_C" }
 				]
 			}
 		},
@@ -1316,7 +1616,7 @@
 			"description": "The skeletal remains of an Alpha Carnotaurus, the Dark Mana bindings and their corruption having corroded away. As impressive as the creature in real life was.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_AlphaCarnoCorpse.PrimalItemResource_AlphaCarnoCorpse_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlphaCarnoRemains.AlphaCarnoRemains",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlphaCarnoRemains.AlphaCarnoRemains",
 			"type": "Resource",
 			"weight": 0,
 			"stackSize": 3000
@@ -1326,7 +1626,7 @@
 			"description": "The lonely soul of an Alpha Carnotaurus, now at peace after its Dark, Spited form has been slain. Perhaps you can resurrect it?",
 			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_AlphaCarnoSoul.PrimalItemResource_AlphaCarnoSoul_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlphaSoul.AlphaSoul",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlphaSoul.AlphaSoul",
 			"type": "Resource",
 			"weight": 0,
 			"stackSize": 3000
@@ -1336,7 +1636,7 @@
 			"description": "The skeletal remains of an Alpha Tyrannosaurus, the Dark Mana bindings and their corruption having corroded away. As impressive as the creature in real life was.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_AlphaRexCorpse.PrimalItemResource_AlphaRexCorpse_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlphaRexRemains.AlphaRexRemains",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlphaRexRemains.AlphaRexRemains",
 			"type": "Resource",
 			"weight": 0,
 			"stackSize": 3000
@@ -1346,18 +1646,109 @@
 			"description": "The lonely soul of an Alpha Tyrannosaurus, now at peace after its Dark, Spited form has been slain. Perhaps you can resurrect it?",
 			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_AlphaRexSoul.PrimalItemResource_AlphaRexSoul_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlphaSoul.AlphaSoul",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlphaSoul.AlphaSoul",
 			"type": "Resource",
 			"weight": 0,
 			"stackSize": 3000
 		},
 		{
+			"name": "Divine Archer Soul",
+			"description": "The soul of a Divine Archer. It trembles in your grasp with nervous anticipation. Perhaps she feels she isn't worthy of becoming a Zenith?",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_ArtemisSoul.PrimalItemResource_ArtemisSoul_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DivineSoul.DivineSoul",
+			"type": "Resource",
+			"weight": 0,
+			"stackSize": 3000
+		},
+		{
+			"name": "Divine Berserker Soul",
+			"description": "The soul of a Divine Berserker. It doesnt react, as if she's staring at you silently...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_BerserkerSoul.PrimalItemResource_BerserkerSoul_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DivineSoul.DivineSoul",
+			"type": "Resource",
+			"weight": 0,
+			"stackSize": 3000
+		},
+		{
+			"name": "Shattered Colossus Core",
+			"description": "The old, shattered core of a colossus that once gave it life and energy. The mysterious tech is a bit too far your comprehension to make a colossus of your own, but these parts still seem of use...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_ColossusCore.PrimalItemResource_ColossusCore_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ShatteredColossusCore.ShatteredColossusCore",
+			"type": "Resource",
+			"weight": 5,
+			"stackSize": 3000
+		},
+		{
+			"name": "Dark Insidious Eminence Soul",
+			"description": "The soul of a Dark Insidious Eminence. It struggles violently in your grasp, screams of rage can almost be heard coming from it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkEmSoul.PrimalItemResource_DarkEmSoul_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DarkSoul.DarkSoul",
+			"type": "Resource",
+			"weight": 0,
+			"stackSize": 3000
+		},
+		{
+			"name": "Dark Mana Reaper Empress Blood",
+			"description": "The vile blood of a Dark Mana Reaper Empress: Proof of your heroic triumph over a true goddess of darkness. And yet.....",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapBlood_Empress.PrimalItemResource_DarkReapBlood_Empress_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DMREBlood.DMREBlood",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 3000
+		},
+		{
+			"name": "Dark Mana Reaper Scales",
+			"description": "The tail scales of a Dark Mana Reaper, the loyal pet of the Dark Paladins. Heroes use these as trophies of their feats, but you could also use it to create Dark Mana Reapers of your own....",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapScale.PrimalItemResource_DarkReapScale_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DMRScales.DMRScales",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 3000
+		},
+		{
+			"name": "Dark Mana Reaper Empress Scale",
+			"description": "The scales of a Dark Mana Reaper Empress: Proof of your heroic triumph over a true goddess of darkness. And yet.....",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapScale_Empress.PrimalItemResource_DarkReapScale_Empress_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DMREScales.DMREScales",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 3000
+		},
+		{
+			"name": "Dark Mana Reaper Head",
+			"description": "The whole head of a Dark Mana Reaper, the loyal pet of the Dark Paladins. Heroes use these as trophies of their feats, but you could also use it to create Dark Mana Reapers of your own....",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapSkull.PrimalItemResource_DarkReapSkull_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DMRHead.DMRHead",
+			"type": "Resource",
+			"weight": 5,
+			"stackSize": 3000
+		},
+		{
+			"name": "Dark Mana Reaper Tailspike",
+			"description": "The tail spines of a Dark Mana Reaper, the loyal pet of the Dark Paladins. Heroes use these as trophies of their feats, but you could also use it to create Dark Mana Reapers of your own....",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapTail.PrimalItemResource_DarkReapTail_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DMRTail.DMRTail",
+			"type": "Resource",
+			"weight": 0.2,
+			"stackSize": 3000
+		},
+		{
 			"name": "Mana",
 			"description": "An ethereal energy created by one's very life energy. It connects all living things, and is a major source of magical energy. When crafted with pure ingredients, can be transformed into Light Mana.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_ApexDrop_Mana.PrimalItemResource_ApexDrop_Mana_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_Mana.PrimalItemResource_Mana_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/Mana.Mana",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Mana.Mana",
 			"type": "Resource",
+			"folders": [ "Mana Manipulation" ],
 			"weight": 0,
 			"stackSize": 3000,
 			"crafting": {
@@ -1370,102 +1761,13 @@
 			}
 		},
 		{
-			"name": "Divine Archer Soul",
-			"description": "The soul of a Divine Archer. It trembles in your grasp with nervous anticipation. Perhaps she feels she isn't worthy of becoming a Zenith?",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_ArtemisSoul.PrimalItemResource_ArtemisSoul_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DivineSoul.DivineSoul",
-			"type": "Resource",
-			"weight": 0,
-			"stackSize": 3000
-		},
-		{
-			"name": "Divine Berserker Soul",
-			"description": "The soul of a Divine Berserker. It doesnt react, as if she's staring at you silently...",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_BerserkerSoul.PrimalItemResource_BerserkerSoul_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DivineSoul.DivineSoul",
-			"type": "Resource",
-			"weight": 0,
-			"stackSize": 3000
-		},
-		{
-			"name": "Shattered Colossus Core",
-			"description": "The old, shattered core of a colossus that once gave it life and energy. The mysterious tech is a bit too far your comprehension to make a colossus of your own, but these parts still seem of use...",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_ColossusCore.PrimalItemResource_ColossusCore_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/ShatteredColossusCore.ShatteredColossusCore",
-			"type": "Resource",
-			"weight": 5,
-			"stackSize": 3000
-		},
-		{
-			"name": "Dark Insidious Eminence Soul",
-			"description": "The soul of a Dark Insidious Eminence. It struggles violently in your grasp, screams of rage can almost be heard coming from it.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkEmSoul.PrimalItemResource_DarkEmSoul_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DarkSoul.DarkSoul",
-			"type": "Resource",
-			"weight": 0,
-			"stackSize": 3000
-		},
-		{
-			"name": "Dark Mana Reaper Empress Blood",
-			"description": "The vile blood of a Dark Mana Reaper Empress: Proof of your heroic triumph over a true goddess of darkness. And yet.....",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapBlood_Empress.PrimalItemResource_DarkReapBlood_Empress_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DMREBlood.DMREBlood",
-			"type": "Resource",
-			"weight": 0.01,
-			"stackSize": 3000
-		},
-		{
-			"name": "Dark Mana Reaper Scales",
-			"description": "The tail scales of a Dark Mana Reaper, the loyal pet of the Dark Paladins. Heroes use these as trophies of their feats, but you could also use it to create Dark Mana Reapers of your own....",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapScale.PrimalItemResource_DarkReapScale_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DMRScales.DMRScales",
-			"type": "Resource",
-			"weight": 0.01,
-			"stackSize": 3000
-		},
-		{
-			"name": "Dark Mana Reaper Empress Scale",
-			"description": "The scales of a Dark Mana Reaper Empress: Proof of your heroic triumph over a true goddess of darkness. And yet.....",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapScale_Empress.PrimalItemResource_DarkReapScale_Empress_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DMREScales.DMREScales",
-			"type": "Resource",
-			"weight": 0.01,
-			"stackSize": 3000
-		},
-		{
-			"name": "Dark Mana Reaper Head",
-			"description": "The whole head of a Dark Mana Reaper, the loyal pet of the Dark Paladins. Heroes use these as trophies of their feats, but you could also use it to create Dark Mana Reapers of your own....",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapSkull.PrimalItemResource_DarkReapSkull_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DMRHead.DMRHead",
-			"type": "Resource",
-			"weight": 5,
-			"stackSize": 3000
-		},
-		{
-			"name": "Dark Mana Reaper Tailspike",
-			"description": "The tail spines of a Dark Mana Reaper, the loyal pet of the Dark Paladins. Heroes use these as trophies of their feats, but you could also use it to create Dark Mana Reapers of your own....",
-			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_DarkReapTail.PrimalItemResource_DarkReapTail_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DMRTail.DMRTail",
-			"type": "Resource",
-			"weight": 0.2,
-			"stackSize": 3000
-		},
-		{
 			"name": "Dark Mana",
 			"description": "Mana embued with demonic energy, dark thoughts and morals. Vile in every way, the source of energy for many, many evil things... can be purified into large amounts of standard mana.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_ManaDark.PrimalItemResource_ManaDark_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DarkMana.DarkMana",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DarkMana.DarkMana",
 			"type": "Resource",
+			"folders": [ "Mana Manipulation" ],
 			"weight": 0,
 			"stackSize": 3000,
 			"crafting": {
@@ -1485,8 +1787,9 @@
 			"description": "Mana embued with positive morals, benevolent thoughts and beliefs.A powerful source of magic and power for the side of light. If you dare, can be corrupted and converted into Dark Mana.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_ManaLight.PrimalItemResource_ManaLight_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/LightMana.LightMana",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/LightMana.LightMana",
 			"type": "Resource",
+			"folders": [ "Mana Manipulation" ],
 			"weight": 0,
 			"stackSize": 3000,
 			"crafting": {
@@ -1496,7 +1799,7 @@
 				"productCount": 15,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 100, "type": "PrimalItemResource_ApexDrop_Mana_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Mana_C" },
 					{ "qty": 20, "type": "PrimalItemResource_Silicon_C" }
 				]
 			}
@@ -1506,7 +1809,7 @@
 			"description": "Light Mana obtained through the act of murder committed on a Divine. The act of murder has tainted this mana with innocent spilled blood: making it useless. ",
 			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_ManaLight_Murdered.PrimalItemResource_ManaLight_Murdered_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DilutedLightMana.DilutedLightMana",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DilutedLightMana.DilutedLightMana",
 			"type": "Resource",
 			"weight": 0,
 			"stackSize": 3000
@@ -1516,223 +1819,17 @@
 			"description": "The soul of a Divine Paladin, captured after death. It struggles violently against you, fearing corruption.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Mana/PrimalItemResource_PaladinSoul.PrimalItemResource_PaladinSoul_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DivineSoul.DivineSoul",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DivineSoul.DivineSoul",
 			"type": "Resource",
 			"weight": 0,
 			"stackSize": 3000
-		},
-		{
-			"name": "Assasin Arrow",
-			"description": "An arrow drenched in an extremely fatal concoction of poisons. Kills any human in seconds: perfect for assasinations. Requiring a steady hand, it can only be used with traditional wooden bows.",
-			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemAmmo_ArrowAssasin.PrimalItemAmmo_ArrowAssasin_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AssassinArrow.AssassinArrow",
-			"type": "Ammo",
-			"folders": [ "Weapons", "Ammo" ],
-			"weight": 0.2,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
-					{ "qty": 300, "type": "PrimalItemConsumable_JellyVenom_C" },
-					{ "qty": 300, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 300, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 300, "type": "PrimalItemResource_ApexDrop_Boa_C" },
-					{ "qty": 300, "type": "PrimalItemResource_ApexDrop_Megalania_C" },
-					{ "qty": 20, "type": "PrimalItemResource_ApexDrop_PoisonWyvern_C" },
-					{ "qty": 300, "type": "PrimalItemResource_ApexDrop_TriceVenom_C" },
-					{ "qty": 300, "type": "PrimalItemResource_ApexDrop_SectVenom_C" },
-					{ "qty": 300, "type": "PrimalItemResource_LeechBlood_C" },
-					{ "qty": 300, "type": "PrimalItemResource_AmmoniteBlood_C" }
-				]
-			}
-		},
-		{
-			"name": "Bazelnade Fire Arrow",
-			"description": "An arrow embued with Fire elemental magic and Bazel Crystals. Can only be used from a crossbow. When fired, the element re-forms the explosive Bazel crystals midflight. This takes away the fire debuff, but causes the projectile to launch and detonate violently with sheer pinpoint explosive power. Heavy, but Excellent for concussion tames.",
-			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemAmmo_ArrowBazel.PrimalItemAmmo_ArrowBazel_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/BazelnadeFireArrow.BazelnadeFireArrow",
-			"type": "Ammo",
-			"folders": [ "Alchitect", "Weapons", "Ammo" ],
-			"weight": 3,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
-					{ "qty": 100, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 40, "type": "PrimalItemResource_Bazelcrystal_C" }
-				]
-			}
-		},
-		{
-			"name": "Earth Arrow",
-			"description": "An arrow embued with Earth elemental magic. Can only be used from a crossbow. When fired, the magic within quickly pulls in earth (stone, dirt, rocks) from the surrounding area, and impacts as a solid mass into the target. Good for buildings or \"concussion-tames\".",
-			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemAmmo_ArrowEarth.PrimalItemAmmo_ArrowEarth_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/EarthArrow.EarthArrow",
-			"type": "Ammo",
-			"folders": [ "Weapons", "Ammo" ],
-			"weight": 0.2,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
-					{ "qty": 60, "type": "PrimalItemResource_EarthElement_C" }
-				]
-			}
-		},
-		{
-			"name": "Ilias Arrow",
-			"description": "An Arrow said to be given by the Goddess of Light to those who perform great deeds on rare occasion as a reward. Although it can only be used with a standard wooden bow, it will knock out ANY normal KO-tame creature in 5 minutes with a single shot.",
-			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemAmmo_ArrowIlias.PrimalItemAmmo_ArrowIlias_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/IliasArrow.IliasArrow",
-			"type": "Ammo",
-			"folders": [ "Weapons", "Ammo" ],
-			"weight": 0.2,
-			"stackSize": 100
-		},
-		{
-			"name": "Lighted Arrow",
-			"description": "An arrow infused with Mana. Mildly stronger than a normal arrow, and deals slightly increased damage to undeads and evil foes.",
-			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemAmmo_ArrowLighted.PrimalItemAmmo_ArrowLighted_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/LightedArrow.LightedArrow",
-			"type": "Ammo",
-			"folders": [ "Weapons", "Ammo" ],
-			"weight": 0.2,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
-					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_Mana_C" }
-				]
-			}
-		},
-		{
-			"name": "Aura Arrow",
-			"description": "An arrow created with Light Mana: it's not even technically a physical object! Just as strong as those wielded by Divine Archers: smiting dark foes with ease.",
-			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemAmmo_ArrowMana.PrimalItemAmmo_ArrowMana_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AuraArrow.AuraArrow",
-			"type": "Ammo",
-			"folders": [ "Weapons", "Ammo" ],
-			"weight": 0,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 5, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 100, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 10, "type": "PrimalItemResource_PearlDust_C" }
-				]
-			}
-		},
-		{
-			"name": "Venom Arrow",
-			"description": "An arrow drenched in cockatrice venom. Inflicts the Venom stats on a target.",
-			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemAmmo_ArrowTriceVenom.PrimalItemAmmo_ArrowTriceVenom_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/VenomArrow.VenomArrow",
-			"type": "Ammo",
-			"folders": [ "Weapons", "Ammo" ],
-			"weight": 0.2,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
-					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_TriceVenom_C" }
-				]
-			}
-		},
-		{
-			"name": "Pyrian Basilisk Saddle",
-			"description": "A Basilisk saddle made from materials that can be easily assembled in Pyria, without Abberation. Used for both normal Basilisk as well as Glacial Basilisk",
-			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemArmor_BasiliskSaddlePyria.PrimalItemArmor_BasiliskSaddlePyria_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Aberration/Icons/Armor/Saddles/BasiliskSaddle_Icon.BasiliskSaddle_Icon",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 55,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 270, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 150, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 425, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 85, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 45, "type": "PrimalItemResource_BlackPearl_C" }
-				]
-			}
-		},
-		{
-			"name": "Upgraded Pyrian Basilisk Saddle",
-			"description": "A Pyrian Basilisk Saddle upgraded with mana and a Drallion Gem. Defeat an ArchDemon to unlock this.",
-			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemArmor_BasiliskSaddlePyria_UG.PrimalItemArmor_BasiliskSaddlePyria_UG_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UpgradedBasiliskSaddle.UpgradedBasiliskSaddle",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 55,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 270, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 150, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 425, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 425, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 85, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 45, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" }
-				]
-			}
 		},
 		{
 			"name": "Recruiter's Badge",
 			"description": "Use this to let your chosen delegate attempt to recruit the other races of Pyria.",
 			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemConsumable_RecruiterBadge.PrimalItemConsumable_RecruiterBadge_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/RecruiterBadge.RecruiterBadge",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/RecruiterBadge.RecruiterBadge",
 			"type": "MiscConsumable/Food",
 			"weight": 0.1,
 			"stackSize": 1,
@@ -1750,7 +1847,7 @@
 			"description": "Give it to a Gelragarian and they will be able to upgrade weapons sold at their shop! Can also be refined if you give a Gelragarian smithy enough metal.",
 			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemResource_GelraIngot.PrimalItemResource_GelraIngot_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_MetalIngot.PrimalItemResource_MetalIngot_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/GelragarianIngot.GelragarianIngot",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/GelragarianIngot.GelragarianIngot",
 			"type": "Resource",
 			"folders": [ "Special Order" ],
 			"weight": 1,
@@ -1769,7 +1866,7 @@
 			"description": "Give it to a Gelragarian and they will be able to upgrade weapons bought from a Mermaid shop! Can also be refined if you give a Gelragarian smithy enough metal.",
 			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemResource_MermaIngot.PrimalItemResource_MermaIngot_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_MetalIngot.PrimalItemResource_MetalIngot_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/MermaidIngot.MermaidIngot",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/MermaidIngot.MermaidIngot",
 			"type": "Resource",
 			"folders": [ "Special Order" ],
 			"weight": 1,
@@ -1788,7 +1885,7 @@
 			"description": "Give it to a Orc and they will be able to upgrade weapons sold at their shop! Can also be refined if you give a Orc smithy enough metal.",
 			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemResource_OrcIngot.PrimalItemResource_OrcIngot_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_MetalIngot.PrimalItemResource_MetalIngot_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/OrcIngot.OrcIngot",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/OrcIngot.OrcIngot",
 			"type": "Resource",
 			"folders": [ "Special Order" ],
 			"weight": 1,
@@ -1807,7 +1904,7 @@
 			"description": "Place ingredients and resources in here to create various mystical items!",
 			"bp": "/Game/Mods/Pyria/Alchemy/PrimalItemStructure_AlchemyStation.PrimalItemStructure_AlchemyStation_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlchemyTable.AlchemyTable",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
@@ -2006,11 +2103,401 @@
 			}
 		},
 		{
+			"name": "Black Pearl Dust",
+			"description": "Only a Balrog is capable of generating enough heat to burn down black pearls into this dust. Strangely enough, in this state Black Pearls seem to have even higher magic power... Can also be reformed into it's original state, but only by a Balrog.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/BlackPearlDust/PrimalItemResource_BlackPearlDust.PrimalItemResource_BlackPearlDust_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BlackPearlDust.BlackPearlDust",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 3000,
+			"crafting": {
+				"xp": 1,
+				"time": 4,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_BlackPearl_C" } ]
+			}
+		},
+		{
+			"name": "Mithril Ingot",
+			"description": "Created by refining Mithril ore in a forge of a Pyrian race. This metal is phenomenally durable, yet light.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Mithril/PrimalItemResource_MithrilIngot.PrimalItemResource_MithrilIngot_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_SilverIngot.Icon_SilverIngot",
+			"type": "Resource",
+			"folders": [ "Special Order" ],
+			"weight": 0.25,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemResource_MithrilOre_C" } ]
+			}
+		},
+		{
+			"name": "Mithril Ore",
+			"description": "A metal from Pyria, seeming to be a natural composite of titanium and silver. Used with Magicrystal for powerful, fine craft in gear. A Pyrian smith should be able to work with this.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Mithril/PrimalItemResource_MithrilOre.PrimalItemResource_MithrilOre_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Silver.Icon_Silver",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 1000
+		},
+		{
+			"name": "Fulgur Crystal",
+			"description": "A crystal rarely found in nature, though commonly found growing on the elder HC Diorex. These strange, blue crystals are highly conductive by nature; and can easily store, conduct, and generate massive electrical charges. A prized resource!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/PrimalItemResource_Fulgurcrystal.PrimalItemResource_Fulgurcrystal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/FulgurCrystal.FulgurCrystal",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 3000
+		},
+		{
+			"name": "Pyrian Basilisk Saddle",
+			"description": "A Basilisk saddle made from materials that can be easily assembled in Pyria, without Abberation. Used for both normal Basilisk as well as Glacial Basilisk",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_BasiliskSaddlePyria.PrimalItemArmor_BasiliskSaddlePyria_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Aberration/Icons/Armor/Saddles/BasiliskSaddle_Icon.BasiliskSaddle_Icon",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 55,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 270, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 425, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 85, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 45, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Upgraded Pyrian Basilisk Saddle",
+			"description": "A Pyrian Basilisk Saddle upgraded with mana and a Drallion Gem. Defeat an ArchDemon to unlock this.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_BasiliskSaddlePyria_UG.PrimalItemArmor_BasiliskSaddlePyria_UG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UpgradedBasiliskSaddle.UpgradedBasiliskSaddle",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 55,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 270, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 425, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 425, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 425, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 85, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 45, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Ravager Saddle",
+			"description": "Equip a Ravager with this to ride it. It's made from materials easily accessible in Pyria.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_CavewolfSaddlePyria.PrimalItemArmor_CavewolfSaddlePyria_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Aberration/Dinos/CaveWolf/Saddle/HUD_CaveWolf_Saddle_Colorize.HUD_CaveWolf_Saddle_Colorize",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 30,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 285, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 110, "type": "PrimalItemResource_Wood_C" }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Ravager Combat Saddle",
+			"description": "Ravagers are a respected and frequently used mount in Pyria. Equip a Ravager with this to not also ride it, but provide more armor to it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_CavewolfSaddlePyriaBattle.PrimalItemArmor_CavewolfSaddlePyriaBattle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Aberration/Dinos/CaveWolf/Saddle/HUD_CaveWolf_Saddle_Promo_Colorize.HUD_CaveWolf_Saddle_Promo_Colorize",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 30,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 285, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 110, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 55, "type": "PrimalItemResource_GelraIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Upgraded Pyrian Ravager Combat Saddle",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_CavewolfSaddlePyriaBattle_UG.PrimalItemArmor_CavewolfSaddlePyriaBattle_UG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C"
+		},
+		{
+			"name": "Dragonkin Kinship Rune",
+			"description": "A kinship rune specifically designed for all forms of dragonkin, and some other beasts. Harder to craft, but provides more protection. Compatible with Classic Flyers Wyverns and Griffins.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_DragonKinship.PrimalItemArmor_DragonKinship_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DragonkinKinshipRune.DragonkinKinshipRune",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Upgraded Dragonkin Kinship Rune",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_DragonKinship_UG.PrimalItemArmor_DragonKinship_UG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C"
+		},
+		{
+			"name": "Kinship Rune",
+			"description": "An enchanted rune that strengthens your mount, by strengthening the bond you have with it. Acts similar to a saddle, and is universally compatible with many of Pyria's creatures.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_Kinship.PrimalItemArmor_Kinship_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/KinshipRune.KinshipRune",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Silicon_C" }
+				]
+			}
+		},
+		{
+			"name": "Upgraded Kinship Rune",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_Kinship_UG.PrimalItemArmor_Kinship_UG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C"
+		},
+		{
+			"name": "Pyrian Rock Drake Saddle",
+			"description": "Equip a Rock Drake with this to ride it. It is made from materials easily accessible in Pyria.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_RockDrakeSaddlePyria.PrimalItemArmor_RockDrakeSaddlePyria_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Aberration/Dinos/RockDrake/saddle/HUD_MIC_RockDrakeSaddle.HUD_MIC_RockDrakeSaddle",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 70,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 225, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 85, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Upgraded Pyrian Rock Drake Saddle",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_RockDrakeSaddlePyriaUG.PrimalItemArmor_RockDrakeSaddlePyriaUG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C"
+		},
+		{
+			"name": "Offhand Metal Shield",
+			"description": "An offhand Metal shield for sentient beings, provides some armor.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/Shield/PrimalItemArmor_OffhandMetal.PrimalItemArmor_OffhandMetal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/WeaponShieldMetal/HUD_MetalShield_Colorize_MIC.HUD_MetalShield_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Shields for Races" ],
+			"weight": 45,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 80, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 20, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Hide_C" }
+				]
+			}
+		},
+		{
+			"name": "Offhand Riot Shield",
+			"description": "An offhand Riot shield for sentient beings, provides some  armor.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/Shield/PrimalItemArmor_OffhandRiot.PrimalItemArmor_OffhandRiot_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/WeaponRiotShieldTransparent/HUD_TransparentRiotShield_Colorize_MIC.HUD_TransparentRiotShield_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Shields for Races" ],
+			"weight": 30,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Silicon_C" },
+					{ "qty": 40, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Offhand Royal Shield",
+			"description": "An offhand shield for sentient beings, provides some armor. Augmented with a drallion gem and mana, given a rather royal and extravagant look. Defeat an Ogre to unlock this.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/Shield/PrimalItemArmor_OffhandSpecial.PrimalItemArmor_OffhandSpecial_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/ScorchedEarth/WeaponManticoreShield/HUD_ManticoreShield_Colorize_MIC.HUD_ManticoreShield_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Shields for Races" ],
+			"weight": 30,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 250, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
+					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Silicon_C" }
+				]
+			}
+		},
+		{
+			"name": "Offhand Wooden Shield",
+			"description": "An offhand wooden shield for sentient beings, provides some slight armor.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/Shield/PrimalItemArmor_OffhandWood.PrimalItemArmor_OffhandWood_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/WeaponWoodShield/HUD_Shield_Colorize_MIC.HUD_Shield_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Shields for Races" ],
+			"weight": 15,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 12, "type": "PrimalItemResource_Hide_C" }
+				]
+			}
+		},
+		{
+			"name": "Magicrystal Pike",
+			"description": "Crafting from raw magicrystal in such a manner is a lost art. Where'd you find this?...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Weapon/Magicrystal/Pike/PrimalItem_WeaponMagicrystalPike.PrimalItem_WeaponMagicrystalPike_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmoless.PrimalItemWeaponGenericAmmoless_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Weapon/Magicrystal/Pike/Art/HUD_CrystalPike_SamKOColorize_MIC.HUD_CrystalPike_SamKOColorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Melee" ],
+			"weight": 5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 10,
+				"time": 20,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Silicon_C" }
+				]
+			},
+			"weapon": "/Game/Mods/Pyria/Alchemy/Weapon/Magicrystal/Pike/WeapCrystalPike.WeapCrystalPike_C"
+		},
+		{
+			"name": "Magicrystal Long Sword",
+			"description": "Crafting from raw magicrystal in such a manner is a lost art. Where'd you find this?...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Weapon/Magicrystal/Sword/PrimalItem_WeaponMagicrystalSword.PrimalItem_WeaponMagicrystalSword_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Weapon/Magicrystal/Sword/Art/HUD_CrystalSword_SamKO_Colorize_MIC.HUD_CrystalSword_SamKO_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Pyrian" ],
+			"weight": 3,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 10,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 80, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Silicon_C" }
+				]
+			},
+			"weapon": "/Game/Mods/Pyria/Alchemy/Weapon/Magicrystal/Sword/WeapCrystalSword.WeapCrystalSword_C"
+		},
+		{
 			"name": "Dragon King's Feast",
 			"description": "An extremely succulent, expertly-prepared serving of meat fit for a king of dragons. Offer it to one to gain its interest, and strike up a respectful conversation.\n\nYou may be rewarded for doing so, if your aura is impressive enough for them to allow you near them...",
 			"bp": "/Game/Mods/Pyria/Creatures/DragonKing/PrimalItemConsumable_DragonFeast.PrimalItemConsumable_DragonFeast_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DragonKingsFeast.DragonKingsFeast",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DragonKingsFeast.DragonKingsFeast",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Meat" ],
 			"weight": 7,
@@ -2152,7 +2639,7 @@
 			"description": "This seed, produced by a dead Yggdrasil, is used to reincarnate it. Thus, the creature never truly dies...",
 			"bp": "/Game/Mods/Pyria/Creatures/DragonKing/Yggdrasil/PrimalItemConsumable_YggSeed.PrimalItemConsumable_YggSeed_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/ImmortalSeed.ImmortalSeed",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ImmortalSeed.ImmortalSeed",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Summons", "Demonology" ],
 			"weight": 0.1,
@@ -2165,22 +2652,12 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 500, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 300, "type": "PrimalItemResource_PearlDust_C" },
+					{ "qty": 300, "type": "PrimalItemResource_BlackPearlDust_C" },
 					{ "qty": 10, "type": "PrimalItemResource_DarkReapTail_C" },
 					{ "qty": 1, "type": "PrimalItemResource_DarkReapSkull_C" },
 					{ "qty": 600, "type": "PrimalItemResource_DarkReapScale_C" }
 				]
 			}
-		},
-		{
-			"name": "Balrog Core",
-			"description": "This trophy proves your worth as a hunter.\nThe core of a Balrog, that once- and still does- hold it's life energy. Can be used to create a loyal Balrog of your own.",
-			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_ApexDrop_Balrog.PrimalItemResource_ApexDrop_Balrog_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/BalrogCore.BalrogCore",
-			"type": "Resource",
-			"weight": 2,
-			"stackSize": 100
 		},
 		{
 			"name": "Balrog Black Pearl",
@@ -2197,12 +2674,22 @@
 				"levelReq": 0,
 				"productCount": 0,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemResource_PearlDust_C" } ]
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_BlackPearlDust_C" } ]
 			}
 		},
 		{
+			"name": "Balrog Core",
+			"description": "This trophy proves your worth as a hunter.\nThe core of a Balrog, that once- and still does- hold it's life energy. Can be used to create a loyal Balrog of your own.",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogCore.PrimalItemResource_BalrogCore_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BalrogCore.BalrogCore",
+			"type": "Resource",
+			"weight": 2,
+			"stackSize": 100
+		},
+		{
 			"name": "Balrog Meat Jerky",
-			"description": "Meat Jerky created by your Balrog quick-cooking raw meat! Mmmm~",
+			"description": "Meat Jerky created by your Balrog quick-drying cooked meat! Mmmm~",
 			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogJerky.PrimalItemResource_BalrogJerky_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Jerky_Icon.Jerky_Icon",
@@ -2211,16 +2698,16 @@
 			"stackSize": 3000,
 			"crafting": {
 				"xp": 1,
-				"time": 5,
+				"time": 50,
 				"levelReq": 0,
 				"productCount": 0,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_RawMeat_C" } ]
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_CookedMeat_C" } ]
 			}
 		},
 		{
 			"name": "Balrog Prime Meat Jerky",
-			"description": "Prime Meat Jerky created by your Balrog quick-cooking raw prime meat! Mmmm~",
+			"description": "Prime Meat Jerky created by your Balrog quick-cooking cooked prime meat! Mmmm~",
 			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogJerkyPrime.PrimalItemResource_BalrogJerkyPrime_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/PrimeJerky_Icon.PrimeJerky_Icon",
@@ -2229,11 +2716,11 @@
 			"stackSize": 3000,
 			"crafting": {
 				"xp": 1,
-				"time": 5,
+				"time": 50,
 				"levelReq": 0,
 				"productCount": 0,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_RawPrimeMeat_C" } ]
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_CookedPrimeMeat_C" } ]
 			}
 		},
 		{
@@ -2309,39 +2796,11 @@
 			}
 		},
 		{
-			"name": "Black Pearl Dust",
-			"description": "Only a Balrog is capable of generating enough heat to burn down black pearls into this dust. Strangely enough, in this state Black Pearls seem to have even higher magic power... Can also be reformed into it's original state, but only by a Balrog.",
-			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_PearlDust.PrimalItemResource_PearlDust_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/BlackPearlDust.BlackPearlDust",
-			"type": "Resource",
-			"weight": 0.01,
-			"stackSize": 3000,
-			"crafting": {
-				"xp": 1,
-				"time": 4,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemResource_BlackPearl_C" } ]
-			}
-		},
-		{
 			"name": "Fire Elemental Core",
 			"description": "This trophy proves your worth as a hunter.\nThe core of a Fire Elemental, that once- and still does- hold it's life energy. Can be used to create a loyal Fire Elemental of your own.",
-			"bp": "/Game/Mods/Pyria/Creatures/Elemental/FireElemental/PrimalItemResource_ApexDrop_FireBurb.PrimalItemResource_ApexDrop_FireBurb_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/FireElemental/PrimalItemResource_FireBurbCore.PrimalItemResource_FireBurbCore_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/FireElementalCore.FireElementalCore",
-			"type": "Resource",
-			"weight": 2,
-			"stackSize": 100
-		},
-		{
-			"name": "Glacier Golem Core",
-			"description": "This trophy proves your worth as a hunter.\nThe core of a Glacier Golem, that once- and still does- hold it's life energy. Can be used to create a loyal Glacier Golem of your own.",
-			"bp": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_ApexDrop_IceGolem.PrimalItemResource_ApexDrop_IceGolem_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/GlacierGolemCore.GlacierGolemCore",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/FireElementalCore.FireElementalCore",
 			"type": "Resource",
 			"weight": 2,
 			"stackSize": 100
@@ -2390,11 +2849,21 @@
 			}
 		},
 		{
+			"name": "Glacier Golem Core",
+			"description": "This trophy proves your worth as a hunter.\nThe core of a Glacier Golem, that once- and still does- hold it's life energy. Can be used to create a loyal Glacier Golem of your own.",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/GlacierGolemCore.GlacierGolemCore",
+			"type": "Resource",
+			"weight": 2,
+			"stackSize": 100
+		},
+		{
 			"name": "Gelragarian's Shop",
 			"description": "Everything you need to set up a shop for a Gelragarian! Place it down and they'll handle the rest!",
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/PrimalItemStructure_GelragarianSmithy.PrimalItemStructure_GelragarianSmithy_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlchemyTable.AlchemyTable",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
@@ -2558,6 +3027,29 @@
 			"weapon": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/Weapons/SpikedHammer/WeapSpikedHammer.WeapSpikedHammer_C"
 		},
 		{
+			"name": "Magicrystal",
+			"description": "Crystals worked with Pyrian techniques that turn them into powerful conductors, amplifiers, or storage for energy. While mostly used for magical energy and crafting; this strange crystalline material can be shaped into lenses, used as an electronics component, or mixed into powerful explosives.",
+			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Artemis/PrimalItemResource_Crystal_Magicrystal.PrimalItemResource_Crystal_Magicrystal_C",
+			"parent": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalResources/Primal/PrimalItemResource_Crystal_IslesPrimal.PrimalItemResource_Crystal_IslesPrimal_C",
+			"icon": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalResources/Primal/PrimalCrystal_Icon.PrimalCrystal_Icon",
+			"type": "Resource",
+			"folders": [ "Alchitect" ],
+			"weight": 0.01,
+			"stackSize": 1000,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 60,
+				"levelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Crystal_C" }
+				]
+			}
+		},
+		{
 			"name": "Cultivated Bio Toxin",
 			"description": "Powerful toxin harvested from an organism. This particular version was cultivated by mermaids![Gives 5]",
 			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/PrimalItemConsumable_JellyVenom_Merm.PrimalItemConsumable_JellyVenom_Merm_C",
@@ -2697,7 +3189,7 @@
 			"description": "Everything you need to set up a shop for a mermaid! Make sure it's in water and she'll be right at home!",
 			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Mermaid/PrimalItemStructure_MermaidRock.PrimalItemStructure_MermaidRock_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlchemyTable.AlchemyTable",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
@@ -2722,8 +3214,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MithrilIngot_C" },
 					{ "qty": 15, "type": "PrimalItemResource_Hide_C" }
 				]
 			},
@@ -2731,8 +3223,8 @@
 				"xp": 6.6,
 				"time": 5,
 				"recipe": [
-					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 0.5, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 12.5, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MithrilIngot_C" },
 					{ "qty": 7.5, "type": "PrimalItemResource_Hide_C" }
 				]
 			},
@@ -2756,8 +3248,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 15, "type": "PrimalItemResource_Hide_C" }
 				]
 			},
@@ -2765,8 +3257,8 @@
 				"xp": 6.6,
 				"time": 5,
 				"recipe": [
-					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 0.5, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 12.5, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 7.5, "type": "PrimalItemResource_Hide_C" }
 				]
 			},
@@ -2790,7 +3282,7 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 10, "type": "PrimalItemResource_MithrilIngot_C" },
 					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 20, "type": "PrimalItemResource_Hide_C" }
 				]
@@ -2799,7 +3291,7 @@
 				"xp": 6,
 				"time": 5,
 				"recipe": [
-					{ "qty": 5, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 5, "type": "PrimalItemResource_MithrilIngot_C" },
 					{ "qty": 5, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 10, "type": "PrimalItemResource_Hide_C" }
 				]
@@ -2824,7 +3316,7 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 10, "type": "PrimalItemResource_MithrilIngot_C" },
 					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 20, "type": "PrimalItemResource_Hide_C" }
 				]
@@ -2833,7 +3325,7 @@
 				"xp": 6,
 				"time": 5,
 				"recipe": [
-					{ "qty": 5, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 5, "type": "PrimalItemResource_MithrilIngot_C" },
 					{ "qty": 5, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 10, "type": "PrimalItemResource_Hide_C" }
 				]
@@ -3014,7 +3506,7 @@
 			"description": "Everything you need to set up a shop for a Centaur! Make sure it's not in water and they'll be right at home!",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemStructure_CentaurMarket.PrimalItemStructure_CentaurMarket_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlchemyTable.AlchemyTable",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
@@ -3026,7 +3518,7 @@
 			"description": "Everything you need to set up a shop for a Centaur! Make sure it's not in water and they'll be right at home!",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemStructure_CentaurMarket2.PrimalItemStructure_CentaurMarket2_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlchemyTable.AlchemyTable",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
@@ -3038,7 +3530,7 @@
 			"description": "Everything you need to set up a shop for an Orc! Place it down and they'll handle the rest!",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Orc/PrimalItemStructure_OrcSmithy.PrimalItemStructure_OrcSmithy_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AlchemyTable.AlchemyTable",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AlchemyTable.AlchemyTable",
 			"type": "Structure",
 			"folders": [ "Structures", "Crafting" ],
 			"weight": 4,
@@ -3176,19 +3668,145 @@
 			"weapon": "/Game/Mods/Pyria/Creatures/NearKin/Orc/Weapons/Skeletal/SavageGreatAxe/WeapSavageGreatAxe.WeapSavageGreatAxe_C"
 		},
 		{
-			"name": "Fulgur Crystal",
-			"description": "A crystal rarely found in nature, though commonly found growing on the elder HC Diorex. These strange, blue crystals are highly conductive by nature; and can easily store, conduct, and generate massive electrical charges. A prized resource!",
-			"bp": "/Game/Mods/Pyria/Creatures/Undead/UberCarno/PrimalItemResource_Fulgurcrystal.PrimalItemResource_Fulgurcrystal_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/FulgurCrystal.FulgurCrystal",
-			"type": "Resource",
-			"weight": 0.5,
-			"stackSize": 3000
+			"name": "Fertilized Aberrant Sarco Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/ArcaneVariants/Sarco/PrimalItemConsumable_Egg_Sarco_Fertilized_Arcane.PrimalItemConsumable_Egg_Sarco_Fertilized_Arcane_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Sarco_Fertilized.PrimalItemConsumable_Egg_Sarco_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Sarco.HUD_DinoEgg_MIC_Inst_Sarco",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 15,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/ArcaneVariants/Sarco/Sarco_Character_BP_Arcane.Sarco_Character_BP_Arcane_C",
+				"temperature": { "min": 30, "max": 34 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Arcane Stego Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/ArcaneVariants/Stego/PrimalItemConsumable_Egg_Stego_Fertilized_Arcane.PrimalItemConsumable_Egg_Stego_Fertilized_Arcane_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Stego_Fertilized.PrimalItemConsumable_Egg_Stego_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego.HUD_DinoEgg_MIC_Inst_Stego",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/ArcaneVariants/Stego/Stego_Character_BP_Arcane.Stego_Character_BP_Arcane_C",
+				"temperature": { "min": 22, "max": 28 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Ash Plume Rock Drake Egg",
+			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/AshPlume/PrimalItemConsumable_Egg_RockDrakeAsh.PrimalItemConsumable_Egg_RockDrakeAsh_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
+			"icon": "/Game/ScorchedEarth/Icons/Resources/RockDrakeEgg_Icon.RockDrakeEgg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 50,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Ash Plume Rock Drake Egg",
+			"description": "",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/AshPlume/PrimalItemConsumable_Egg_RockDrakeAsh_Fertilized.PrimalItemConsumable_Egg_RockDrakeAsh_Fertilized_C",
+			"parent": "/Game/Aberration/Dinos/RockDrake/PrimalItemConsumable_Egg_RockDrake.PrimalItemConsumable_Egg_RockDrake_C",
+			"icon": "/Game/ScorchedEarth/Icons/Resources/RockDrakeEgg_Icon.RockDrakeEgg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 50,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/AshPlume/RockDrake_Character_BP_Ashen.RockDrake_Character_BP_Ashen_C",
+				"temperature": { "min": -90, "max": -80 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Aura Seeker Bait Kibble",
+			"description": "Kibble specifically designed for Aura Seekers for taming. They love this stuff!",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/AuraSeeker/PrimalItemConsumable_Kibble_SeekerBait.PrimalItemConsumable_Kibble_SeekerBait_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AuraSeekerKibble.AuraSeekerKibble",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 259200,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
+					{ "qty": 30, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 50, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Mana_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ]
 		},
 		{
 			"name": "Fertilized Bantu Egg",
 			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Basilisk/PrimalItemConsumable_Egg_Bantu_Fertilized.PrimalItemConsumable_Egg_Bantu_Fertilized_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Bantu/PrimalItemConsumable_Egg_Bantu_Fertilized.PrimalItemConsumable_Egg_Bantu_Fertilized_C",
 			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Raptor.PrimalItemConsumable_Egg_Raptor_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Raptor.HUD_DinoEgg_MIC_Inst_Raptor",
 			"type": "MiscConsumable/Food",
@@ -3202,7 +3820,7 @@
 				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
 			],
 			"egg": {
-				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/Basilisk/Bantu_Character_BP.Bantu_Character_BP_C",
+				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/Bantu/Bantu_Character_BP.Bantu_Character_BP_C",
 				"temperature": { "min": 20, "max": 28 }
 			},
 			"cooking": {
@@ -3320,9 +3938,9 @@
 		{
 			"name": "Cockatrice Venom",
 			"description": "Potent venom from a Cockatrice! Can be used to coat arrows and make Venom Arrows.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Cockatrice/PrimalItemResource_ApexDrop_TriceVenom.PrimalItemResource_ApexDrop_TriceVenom_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Cockatrice/PrimalItemResource_TriceVenom.PrimalItemResource_TriceVenom_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/CockatriceVenom.CockatriceVenom",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CockatriceVenom.CockatriceVenom",
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 100
@@ -3464,7 +4082,7 @@
 			"description": "The Drallion Gem of an Everlast Drallion. It burns angrily with a strange power....",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/PrimalItemResource_DrallGemRed.PrimalItemResource_DrallGemRed_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/EverlastDrallionGem.EverlastDrallionGem",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/EverlastDrallionGem.EverlastDrallionGem",
 			"type": "Resource",
 			"weight": 0.2,
 			"stackSize": 3000
@@ -3474,7 +4092,7 @@
 			"description": "A gem formed inside the body of a Drallion, formed from various impurities. It holds a strange power within. Highly sought after in magic.",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/PrimalItemResource_DrallionGem.PrimalItemResource_DrallionGem_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DrallionGem.DrallionGem",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DrallionGem.DrallionGem",
 			"type": "Resource",
 			"weight": 0.2,
 			"stackSize": 3000
@@ -3642,9 +4260,9 @@
 		{
 			"name": "Soldier Bug Venom",
 			"description": "Potent venom from a Soldier Bug. A potent substance used in a nefarious recipie for one of the deadliest tools in assasination....",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Gigasect/PrimalItemResource_ApexDrop_SectVenom.PrimalItemResource_ApexDrop_SectVenom_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Gigasect/PrimalItemResource_SectVenom.PrimalItemResource_SectVenom_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/SoldierBugVenom.SoldierBugVenom",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SoldierBugVenom.SoldierBugVenom",
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 100
@@ -3706,6 +4324,87 @@
 			}
 		},
 		{
+			"name": "Eldritch Hailfire Wyvern Egg",
+			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hailfire/PrimalItemConsumable_Egg_Hailfire.PrimalItemConsumable_Egg_Hailfire_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
+			"icon": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Eldritch Hailfire Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hailfire/PrimalItemConsumable_Egg_Hailfire_Fertilized.PrimalItemConsumable_Egg_Hailfire_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Gigant.PrimalItemConsumable_Egg_Gigant_C",
+			"icon": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/Hailfire/Wyvern_Character_bp_Bazel.Wyvern_Character_bp_Bazel_C",
+				"temperature": { "min": 43, "max": 44 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Bazel Crystal",
+			"description": "The crystals that grow on the underside of Eldritch Hailfire Wyverns, and are dislodged as projectiles by the mighty wyvern. Explosive: handle with care. A Powerful source of fire element, it can also be weaponized. Named after a species of wyvern said to behave similar to the Eldritch....",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hailfire/PrimalItemResource_Bazelcrystal.PrimalItemResource_Bazelcrystal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BazelCrystal.BazelCrystal",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 3000
+		},
+		{
+			"name": "Break Down Bazel Crystal",
+			"description": "Take a singular Bazel Crystal and carefully break it down for all of it's valuable resources.",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hailfire/PrimalItemResource_Bazelcrystal_breakdown.PrimalItemResource_Bazelcrystal_breakdown_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BazelCrystal.BazelCrystal",
+			"type": "Resource",
+			"folders": [ "Apothecary", "Element Extraction" ],
+			"weight": 5,
+			"stackSize": 3000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Bazelcrystal_C" } ]
+			}
+		},
+		{
 			"name": "Fertilized Horoku Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Horoku/PrimalItemConsumable_Egg_Horoku_Fertilized.PrimalItemConsumable_Egg_Horoku_Fertilized_C",
@@ -3752,108 +4451,6 @@
 			"egg": {
 				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/KaiserBug/KaiserBug_Character_bp.KaiserBug_Character_bp_C",
 				"temperature": { "min": 27, "max": 30 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Pyrian Rock Drake Saddle",
-			"description": "Equip a Rock Drake with this to ride it. It is made from materials easily accessible in Pyria.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/MegaRockDrake/PrimalItemArmor_RockDrakeSaddlePyria.PrimalItemArmor_RockDrakeSaddlePyria_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Aberration/Dinos/RockDrake/saddle/HUD_MIC_RockDrakeSaddle.HUD_MIC_RockDrakeSaddle",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 70,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 225, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 85, "type": "PrimalItemResource_BlackPearl_C" }
-				]
-			}
-		},
-		{
-			"name": "Upgraded Pyrian Rock Drake Saddle",
-			"description": "A Pyrian Rock Drake saddle, upgraded with Mana and a Drallion Gem. Defeat a Diorex to unlock this engram.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/MegaRockDrake/PrimalItemArmor_RockDrakeSaddlePyriaUG.PrimalItemArmor_RockDrakeSaddlePyriaUG_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UpgradedRockDrakeSaddle.UpgradedRockDrakeSaddle",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 70,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 350, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 225, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 85, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" }
-				]
-			}
-		},
-		{
-			"name": "Ash Plume Rock Drake Egg",
-			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/MegaRockDrake/PrimalItemConsumable_Egg_RockDrakeAsh.PrimalItemConsumable_Egg_RockDrakeAsh_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
-			"icon": "/Game/ScorchedEarth/Icons/Resources/RockDrakeEgg_Icon.RockDrakeEgg_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 50,
-			"stackSize": 100,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
-				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
-				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
-			],
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Fertilized Ash Plume Rock Drake Egg",
-			"description": "",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/MegaRockDrake/PrimalItemConsumable_Egg_RockDrakeAsh_Fertilized.PrimalItemConsumable_Egg_RockDrakeAsh_Fertilized_C",
-			"parent": "/Game/Aberration/Dinos/RockDrake/PrimalItemConsumable_Egg_RockDrake.PrimalItemConsumable_Egg_RockDrake_C",
-			"icon": "/Game/ScorchedEarth/Icons/Resources/RockDrakeEgg_Icon.RockDrakeEgg_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 50,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
-				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
-				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/MegaRockDrake/RockDrake_Character_BP_Ashen.RockDrake_Character_BP_Ashen_C",
-				"temperature": { "min": -90, "max": -80 }
 			},
 			"cooking": {
 				"health": 0.8,
@@ -3914,151 +4511,6 @@
 				"weight": 0.3,
 				"water": 0.01
 			}
-		},
-		{
-			"name": "Bazel Crystal Spear Bolt",
-			"description": "A fearsome spear bolt, with a Bazel Crystal carefully attached at the head. Fired from a Boom Cannon, it is devastatingly powerful.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/PrimalItemAmmo_BallistaArrowBazel.PrimalItemAmmo_BallistaArrowBazel_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/BazelSpearBolt.BazelSpearBolt",
-			"type": "Ammo",
-			"folders": [ "Alchitect", "Weapons", "Ammo" ],
-			"weight": 0.5,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 9.3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_Bazelcrystal_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" }
-				]
-			}
-		},
-		{
-			"name": "Eldritch Hailfire Wyvern Egg",
-			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/PrimalItemConsumable_Egg_Hailfire.PrimalItemConsumable_Egg_Hailfire_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
-			"icon": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 40,
-			"stackSize": 100,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
-				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
-				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
-			],
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Eldritch Hailfire Egg",
-			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/PrimalItemConsumable_Egg_Hailfire_Fertilized.PrimalItemConsumable_Egg_Hailfire_Fertilized_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Gigant.PrimalItemConsumable_Egg_Gigant_C",
-			"icon": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 40,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
-				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
-				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/Wyvern_Character_bp_Bazel.Wyvern_Character_bp_Bazel_C",
-				"temperature": { "min": 43, "max": 44 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Bazel Crystal",
-			"description": "The crystals that grow on the underside of Eldritch Hailfire Wyverns, and are dislodged as projectiles by the mighty wyvern. Explosive: handle with care. A Powerful source of fire element, it can also be weaponized. Named after a species of wyvern said to behave similar to the Eldritch....",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/PrimalItemResource_Bazelcrystal.PrimalItemResource_Bazelcrystal_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/BazelCrystal.BazelCrystal",
-			"type": "Resource",
-			"weight": 1,
-			"stackSize": 3000
-		},
-		{
-			"name": "Break Down Bazel Crystal",
-			"description": "Take a singular Bazel Crystal and carefully break it down for all of it's valuable resources.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/PrimalItemResource_Bazelcrystal_breakdown.PrimalItemResource_Bazelcrystal_breakdown_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/BazelCrystal.BazelCrystal",
-			"type": "Resource",
-			"folders": [ "Apothecary" ],
-			"weight": 5,
-			"stackSize": 3000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Bazelcrystal_C" } ]
-			}
-		},
-		{
-			"name": "Boom Cannon",
-			"description": "Said to be developed by a alchitect who arrived from an advanced time. Uses fire element and pressure to launch explosive Bazel Crystal-tipped bolts with extreme effectiveness",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/PrimalItem_WeaponHarpoonBazel.PrimalItem_WeaponHarpoonBazel_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/BoomCannon.BoomCannon",
-			"type": "Weapon",
-			"folders": [ "Alchitect", "Weapons", "Ranged" ],
-			"weight": 15,
-			"stackSize": 1,
-			"durability": 100,
-			"crafting": {
-				"xp": 9,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 30, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 40, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 150, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 100, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 70, "type": "PrimalItemResource_Polymer_C" }
-				]
-			},
-			"repair": {
-				"xp": 9,
-				"time": 5,
-				"recipe": [
-					{ "qty": 15, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 75, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 50, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 35, "type": "PrimalItemResource_Polymer_C" }
-				]
-			},
-			"weapon": "/Game/Mods/Pyria/Creatures/Wildlife/Permafrost/WeapHarpoonBazel.WeapHarpoonBazel_C"
 		},
 		{
 			"name": "Miralis Yutyrannus Egg",
@@ -4273,34 +4725,6 @@
 			}
 		},
 		{
-			"name": "Aura Seeker Bait Kibble",
-			"description": "Kibble specifically designed for Aura Seekers for taming. They love this stuff!",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Voltwraith/PrimalItemConsumable_Kibble_SeekerBait.PrimalItemConsumable_Kibble_SeekerBait_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/AuraSeekerKibble.AuraSeekerKibble",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Crafted Foods" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 259200,
-			"crafting": {
-				"xp": 1,
-				"time": 30,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
-					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 30, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
-					{ "qty": 30, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 50, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 30, "type": "PrimalItemResource_ApexDrop_Mana_C" }
-				]
-			},
-			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ]
-		},
-		{
 			"name": "Water Wyvern Egg",
 			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/WaterWyvern/PrimalItemConsumable_Egg_WaterWyvern.PrimalItemConsumable_Egg_WaterWyvern_C",
@@ -4411,256 +4835,6 @@
 				]
 			},
 			"weapon": "/Game/PrimalEarth/CoreBlueprints/Weapons/WeapBaseClub.WeapBaseClub_C"
-		},
-		{
-			"name": "Pyrian Ravager Saddle",
-			"description": "Equip a Ravager with this to ride it. It's made from materials easily accessible in Pyria.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_CavewolfSaddlePyria.PrimalItemArmor_CavewolfSaddlePyria_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Aberration/Dinos/CaveWolf/Saddle/HUD_CaveWolf_Saddle_Colorize.HUD_CaveWolf_Saddle_Colorize",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 30,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 285, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 125, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 110, "type": "PrimalItemResource_Wood_C" }
-				]
-			}
-		},
-		{
-			"name": "Pyrian Ravager Combat Saddle",
-			"description": "Ravagers are a respected and frequently used mount in Pyria. Equip a Ravager with this to not also ride it, but provide more armor to it.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_CavewolfSaddlePyriaBattle.PrimalItemArmor_CavewolfSaddlePyriaBattle_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Aberration/Dinos/CaveWolf/Saddle/HUD_CaveWolf_Saddle_Promo_Colorize.HUD_CaveWolf_Saddle_Promo_Colorize",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 30,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 285, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 125, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 110, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
-				]
-			}
-		},
-		{
-			"name": "Upgraded Pyrian Ravager Combat Saddle",
-			"description": "A Pyrian Ravager Combat Saddle, upgraded by enchanting it using mana and a Drallion Gem. Defeat an Ogre to unlock this engram.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_CavewolfSaddlePyriaBattle_UG.PrimalItemArmor_CavewolfSaddlePyriaBattle_UG_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UpgradedRavagerCombatSaddle.UpgradedRavagerCombatSaddle",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 30,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 285, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 125, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 110, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
-					{ "qty": 120, "type": "PrimalItemResource_ApexDrop_Mana_C" }
-				]
-			}
-		},
-		{
-			"name": "Dragonkin Kinship Rune",
-			"description": "A kinship rune specifically designed for all forms of dragonkin, and some other beasts. Harder to craft, but provides more protection. Compatible with Classic Flyers Wyverns and Griffins.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_DragonKinship.PrimalItemArmor_DragonKinship_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/DragonkinKinshipRune.DragonkinKinshipRune",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 17.6,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 100, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
-				]
-			}
-		},
-		{
-			"name": "Upgraded Dragonkin Kinship Rune",
-			"description": "A Dragonkin Kinship Rune upgraded with a Drallion Gem and Mana.\nDefeat an ArchDemon to unlock this engram.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_DragonKinship_UG.PrimalItemArmor_DragonKinship_UG_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UpgradedDragonkinKinshipRune.UpgradedDragonkinKinshipRune",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 17.6,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 100, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
-					{ "qty": 120, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
-				]
-			}
-		},
-		{
-			"name": "Kinship Rune",
-			"description": "An enchanted rune that strengthens your mount, by strengthening the bond you have with it. Acts similar to a saddle, and is universally compatible with many of Pyria's creatures.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_Kinship.PrimalItemArmor_Kinship_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/KinshipRune.KinshipRune",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 17.6,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 40, "type": "PrimalItemResource_Stone_C" },
-					{ "qty": 50, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Silicon_C" }
-				]
-			}
-		},
-		{
-			"name": "Upgraded Kinship Rune",
-			"description": "An upgraded Kinship Rune, empowered by Mana and a Drallion Gem. Defeat an Ogre to unlock this engram.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_Kinship_UG.PrimalItemArmor_Kinship_UG_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/CustomIcons/UpgradedKinshipRune.UpgradedKinshipRune",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 17.6,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 40, "type": "PrimalItemResource_Stone_C" },
-					{ "qty": 50, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 50, "type": "PrimalItemResource_ApexDrop_Mana_C" },
-					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Silicon_C" }
-				]
-			}
-		},
-		{
-			"name": "Offhand Metal Shield",
-			"description": "An offhand Metal shield for sentient beings, provides some armor.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_OffhandMetal.PrimalItemArmor_OffhandMetal_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/PrimalEarth/WeaponShieldMetal/HUD_MetalShield_Colorize_MIC.HUD_MetalShield_Colorize_MIC",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 45,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 17.6,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemArmor_MetalShield_C" } ]
-			}
-		},
-		{
-			"name": "Offhand Riot Shield",
-			"description": "An offhand Riot shield for sentient beings, provides some  armor.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_OffhandRiot.PrimalItemArmor_OffhandRiot_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/PrimalEarth/WeaponRiotShieldTransparent/HUD_TransparentRiotShield_Colorize_MIC.HUD_TransparentRiotShield_Colorize_MIC",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 30,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 17.6,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemArmor_TransparentRiotShield_C" } ]
-			}
-		},
-		{
-			"name": "Offhand Royal Shield",
-			"description": "An offhand shield for sentient beings, provides some armor. Augmented with a drallion gem and mana, given a rather royal and extravagant look. Defeat an Ogre to unlock this.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_OffhandSpecial.PrimalItemArmor_OffhandSpecial_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/ScorchedEarth/WeaponManticoreShield/HUD_ManticoreShield_Colorize_MIC.HUD_ManticoreShield_Colorize_MIC",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 30,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 17.6,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemArmor_MetalShield_C" },
-					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Silicon_C" },
-					{ "qty": 100, "type": "PrimalItemResource_ApexDrop_Mana_C" }
-				]
-			}
-		},
-		{
-			"name": "Offhand Wooden Shield",
-			"description": "An offhand wooden shield for sentient beings, provides some slight armor.",
-			"bp": "/Game/Mods/Pyria/SaddleStuff/PrimalItemArmor_OffhandWood.PrimalItemArmor_OffhandWood_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/PrimalEarth/WeaponWoodShield/HUD_Shield_Colorize_MIC.HUD_Shield_Colorize_MIC",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 15,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 17.6,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemArmor_WoodShield_C" } ]
-			}
 		}
 	]
 }

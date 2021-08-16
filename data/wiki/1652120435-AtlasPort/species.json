@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "332.8.1625364888",
+	"version": "335.8.1629112547",
 	"format": "4",
 	"mod": {
 		"id": "1652120435",
@@ -450,6 +450,72 @@
 			}
 		},
 		{
+			"name": "Arcane Pelagic Crocodile",
+			"bp": "/Game/Mods/AtlasPort/Critter/Crocodile/ACroc_Character_BP_Arcane.ACroc_Character_BP_Arcane_C",
+			"dinoNameTag": "Sarco",
+			"customTag": "Sarco",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 220,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 550,
+				"costLevel": 55,
+				"timeBase": 3850,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 825 },
+				"swim": { "base": 750, "sprint": 2062.5 }
+			},
+			"movementD": {
+				"walk": { "base": 165, "sprint": 907.5 },
+				"swim": { "base": 825, "sprint": 2268.8 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 35,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.1, "dmg": 45, "radius": 240, "stamina": 0 },
+					{ "name": "Roll", "interval": 10, "dmg": 55, "radius": 240, "stamina": 200 },
+					{ "name": "Lunge", "interval": 5, "dmg": 55, "radius": 210, "stamina": 125 },
+					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 45, "radius": 240, "stamina": 0 },
+					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 45, "radius": 250, "stamina": 0 },
+					{ "name": "Snarl", "interval": 0.1, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Sarco.DinoDropInventoryComponent_Carnivore_Large_Sarco"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
 			"name": "Mongrel Cyclops",
 			"bp": "/Game/Mods/AtlasPort/Critter/Cyclops/ACyclops_Character_bp.ACyclops_Character_bp_C",
 			"dinoNameTag": "Monkey",
@@ -751,6 +817,7 @@
 			"mass": 300,
 			"dragWeight": 125,
 			"flags": [
+				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -770,21 +837,20 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 300, "sprint": 1050 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 300, "sprint": 1050 }
 			},
-			"staminaRates": {
-				"sprint": -8,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 170,
-				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 25, "radius": 220, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "None", "interval": 0.2, "dmg": 25, "radius": 220, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 25, "radius": 220, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
 			},
 			"death": { "baseXP": 12 }
 		},
@@ -1275,7 +1341,7 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 30, "radius": 400, "stamina": 0 },
-					{ "name": "Spittle", "interval": 10, "dmg": 45, "radius": 240, "stamina": 180 },
+					{ "name": "Spittle", "interval": 10, "dmg": 0, "radius": 240, "stamina": 180 },
 					{ "name": "Tails", "interval": 10, "dmg": 20, "radius": 450, "stamina": 50 },
 					{ "name": "Rawr", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -1552,12 +1618,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 223.2, "sprint": 1116 },
-				"swim": { "base": 240 }
+				"walk": { "base": 279, "sprint": 1674 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 223.2, "sprint": 1116 },
-				"swim": { "base": 240 }
+				"walk": { "base": 279, "sprint": 1674 },
+				"swim": { "base": 300 }
 			},
 			"staminaRates": {
 				"sprint": -7,
@@ -1858,7 +1924,7 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 30, "radius": 400, "stamina": 0 },
-					{ "name": "Spittle", "interval": 10, "dmg": 45, "radius": 240, "stamina": 180 },
+					{ "name": "Spittle", "interval": 10, "dmg": 0, "radius": 240, "stamina": 180 },
 					{ "name": "Tails", "interval": 10, "dmg": 20, "radius": 450, "stamina": 50 },
 					{ "name": "Rawr", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -1905,7 +1971,7 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 30, "radius": 400, "stamina": 0 },
-					{ "name": "Spittle", "interval": 10, "dmg": 45, "radius": 240, "stamina": 180 },
+					{ "name": "Spittle", "interval": 10, "dmg": 0, "radius": 240, "stamina": 180 },
 					{ "name": "Tails", "interval": 10, "dmg": 20, "radius": 450, "stamina": 50 },
 					{ "name": "Rawr", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -2280,6 +2346,62 @@
 		{
 			"name": "Aberrant Razortooth",
 			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/Razortooth_Character_BP_Aberrant.Razortooth_Character_BP_Aberrant_C",
+			"dinoNameTag": "Yutyrannus",
+			"customTag": "Razortooth",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 2450 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 2450 }
+			},
+			"staminaRates": { "sprint": -35 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 58, "radius": 500, "stamina": 10 },
+					{ "name": "Fear", "interval": 8, "dmg": 1, "radius": 1500, "stamina": 325 },
+					{ "name": "Courage", "interval": 8, "dmg": 1, "radius": 1500, "stamina": 325 },
+					{ "name": "None", "interval": 5, "dmg": 80, "radius": 500, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Yuty.DinoDropInventoryComponent_Carnivore_Huge_Yuty"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Arcane Razortooth",
+			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/Razortooth_Character_BP_Arcane.Razortooth_Character_BP_Arcane_C",
 			"dinoNameTag": "Yutyrannus",
 			"customTag": "Razortooth",
 			"targetingTeamName": "Carnivores_High",
@@ -2735,11 +2857,11 @@
 			},
 			"movementW": {
 				"walk": { "base": 400, "sprint": 1000 },
-				"swim": { "base": 600, "sprint": 1500 }
+				"swim": { "base": 1000, "sprint": 2500 }
 			},
 			"movementD": {
 				"walk": { "base": 400, "sprint": 1000 },
-				"swim": { "base": 600, "sprint": 1500 }
+				"swim": { "base": 1000, "sprint": 2500 }
 			},
 			"staminaRates": {
 				"sprint": -14,
