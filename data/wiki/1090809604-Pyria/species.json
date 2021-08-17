@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "335.8.1629113399",
+	"version": "335.8.1629200368",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -1635,13 +1635,13 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1600 }
 			},
-			"staminaRates": { "sprint": -100 },
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 60, "radius": 250, "stamina": 0 },
-					{ "name": "Bite", "interval": 10, "dmg": 280, "radius": 800, "stamina": 900 }
+					{ "name": "Bite", "interval": 10, "dmg": 280, "radius": 800, "stamina": 200 }
 				]
 			},
 			"death": {
@@ -1688,13 +1688,13 @@
 			"movementD": {
 				"walk": { "base": 200, "sprint": 1600 }
 			},
-			"staminaRates": { "sprint": -100 },
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 60, "radius": 250, "stamina": 0 },
-					{ "name": "Bite", "interval": 10, "dmg": 280, "radius": 800, "stamina": 900 }
+					{ "name": "Bite", "interval": 10, "dmg": 280, "radius": 800, "stamina": 200 }
 				]
 			},
 			"death": {
@@ -1982,7 +1982,7 @@
 			"movementD": {
 				"walk": { "base": 300, "sprint": 900 }
 			},
-			"staminaRates": { "sprint": -90 },
+			"staminaRates": { "sprint": -25 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -1990,7 +1990,7 @@
 					{ "name": "Punch", "interval": 0.4, "dmg": 100, "radius": 400, "stamina": 0 },
 					{ "name": "Smash", "interval": 5, "dmg": 150, "radius": 300, "stamina": 0 },
 					{ "name": "CrushGrip", "interval": 15, "dmg": 180, "radius": 1000, "stamina": 0 },
-					{ "name": "Bite", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 7, "dmg": 0, "radius": 0, "stamina": 200 }
 				]
 			},
 			"death": {
@@ -2037,7 +2037,7 @@
 			"movementD": {
 				"walk": { "base": 300, "sprint": 900 }
 			},
-			"staminaRates": { "sprint": -90 },
+			"staminaRates": { "sprint": -25 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -2045,7 +2045,7 @@
 					{ "name": "Punch", "interval": 0.4, "dmg": 100, "radius": 400, "stamina": 0 },
 					{ "name": "Smash", "interval": 5, "dmg": 150, "radius": 300, "stamina": 0 },
 					{ "name": "CrushGrip", "interval": 15, "dmg": 180, "radius": 1000, "stamina": 0 },
-					{ "name": "Bite", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 7, "dmg": 0, "radius": 0, "stamina": 200 }
 				]
 			},
 			"death": {
@@ -4643,8 +4643,8 @@
 				"defaultSwingRadius": 180,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.6, "dmg": 80, "radius": 250, "stamina": 0 },
-					{ "name": "Beam", "interval": 40, "dmg": 80, "radius": 180, "stamina": 0 },
-					{ "name": "Thundercall", "interval": 40, "dmg": 0, "radius": 180, "stamina": 0 }
+					{ "name": "Beam", "interval": 40, "dmg": 80, "radius": 180, "stamina": 150 },
+					{ "name": "Thundercall", "interval": 40, "dmg": 0, "radius": 180, "stamina": 300 }
 				]
 			},
 			"death": {
@@ -4711,9 +4711,10 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_MegaCarno.DinoDropInventoryComponent_Carnivore_MegaCarno"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_SpitedCarno.DinoDropInventoryComponent_Pyria_Boss_SpitedCarno"
 					}
 				],
+				"engrams": [ "PrimalItemConsumable_CreaFulgur_C" ],
 				"baseXP": 460
 			}
 		},
@@ -4763,7 +4764,7 @@
 				"defaultSwingRadius": 450,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.3, "dmg": 135, "radius": 600, "stamina": 0 },
-					{ "name": "Breath", "interval": 40, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Breath", "interval": 40, "dmg": 0, "radius": 0, "stamina": 200 },
 					{ "name": "AoE", "interval": 0.3, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -4786,17 +4787,16 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 1000,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"doStepDamage",
 				"isBigDino",
+				"isBossDino",
 				"isCarnivore"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ]
-			},
 			"cloning": {
 				"costBase": 2175,
 				"costLevel": 55,
@@ -8684,7 +8684,7 @@
 			"name": "Centaur Terror Bird",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/TaurBird/TerrorBird_Character_BP_Centaur.TerrorBird_Character_BP_Centaur_C",
 			"dinoNameTag": "TerrorBird",
-			"customTag": "TerrorBird",
+			"customTag": "CentaurTerrorBird",
 			"targetingTeamName": "Herbivores_Medium",
 			"mass": 195,
 			"dragWeight": 120,
@@ -8727,16 +8727,7 @@
 					{ "name": "Ree", "interval": 0.08, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
-			"death": {
-				"lootBagChance": 0.3,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
-					}
-				],
-				"baseXP": 6
-			}
+			"death": { "baseXP": 6 }
 		},
 		{
 			"name": "Water Wyvern",

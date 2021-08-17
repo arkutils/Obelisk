@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "335.8.1629113399",
+	"version": "335.8.1629200368",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -598,7 +598,7 @@
 			"description": "A potion that blocks out all external cold for 15 minutes. Cannot be used with Heatblock potion: will completely cancel effects. This potion will even prevent against freezing. Defeat a Diorex to unlock this.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_ColdBlockUltra.PrimalItemConsumable_ColdBlockUltra_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ColdblockPotion.ColdblockPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/HeatblockPotion.HeatblockPotion",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -2261,8 +2261,53 @@
 		},
 		{
 			"name": "Upgraded Pyrian Ravager Combat Saddle",
+			"description": "A Pyrian Ravager Combat Saddle, upgraded by enchanting it using mana and a Drallion Gem. Defeat an Ogre to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_CavewolfSaddlePyriaBattle_UG.PrimalItemArmor_CavewolfSaddlePyriaBattle_UG_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C"
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UpgradedRavagerCombatSaddle.UpgradedRavagerCombatSaddle",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 30,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 285, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 110, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 55, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
+				]
+			}
+		},
+		{
+			"name": "Centaur Terror Bird Saddle",
+			"description": "Equip a Centaur Terror Bird with this to ride it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_CentaurTerrorBirdSaddle.PrimalItemArmor_CentaurTerrorBirdSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/TerrorBird/Saddle/HUD_TerrorBird_Saddle_Colorize_MIC.HUD_TerrorBird_Saddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 110, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 65, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Wood_C" }
+				]
+			}
 		},
 		{
 			"name": "Dragonkin Kinship Rune",
@@ -2289,8 +2334,29 @@
 		},
 		{
 			"name": "Upgraded Dragonkin Kinship Rune",
+			"description": "A Dragonkin Kinship Rune upgraded with a Drallion Gem and Mana.\nDefeat an ArchDemon to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_DragonKinship_UG.PrimalItemArmor_DragonKinship_UG_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C"
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UpgradedDragonkinKinshipRune.UpgradedDragonkinKinshipRune",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 120, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 120, "type": "PrimalItemResource_MithrilIngot_C" }
+				]
+			}
 		},
 		{
 			"name": "Kinship Rune",
@@ -2317,8 +2383,29 @@
 		},
 		{
 			"name": "Upgraded Kinship Rune",
+			"description": "An upgraded Kinship Rune, empowered by Mana and a Drallion Gem. Defeat an Ogre to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_Kinship_UG.PrimalItemArmor_Kinship_UG_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C"
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UpgradedKinshipRune.UpgradedKinshipRune",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Silicon_C" }
+				]
+			}
 		},
 		{
 			"name": "Pyrian Rock Drake Saddle",
@@ -2346,8 +2433,30 @@
 		},
 		{
 			"name": "Upgraded Pyrian Rock Drake Saddle",
+			"description": "A Pyrian Rock Drake saddle, upgraded with Mana and a Drallion Gem. Defeat a Diorex to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_RockDrakeSaddlePyriaUG.PrimalItemArmor_RockDrakeSaddlePyriaUG_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C"
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UpgradedRockDrakeSaddle.UpgradedRockDrakeSaddle",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 70,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 350, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 225, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 85, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
+				]
+			}
 		},
 		{
 			"name": "Offhand Metal Shield",
