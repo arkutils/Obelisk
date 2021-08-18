@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "335.8.1629200368",
+	"version": "336.3.1629317447",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -229,8 +229,25 @@
 		},
 		{
 			"name": "Venom Arrow",
+			"description": "An arrow drenched in cockatrice venom. Inflicts the Venom stats on a target.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowTriceVenom.PrimalItemAmmo_ArrowTriceVenom_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C"
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/VenomArrow.VenomArrow",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
+					{ "qty": 5, "type": "PrimalItemResource_TriceVenom_C" }
+				]
+			}
 		},
 		{
 			"name": "Bazel Crystal Spear Bolt",
@@ -2811,7 +2828,11 @@
 				"levelReq": 0,
 				"productCount": 0,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_CookedMeat_C" } ]
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_RawMeat_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Oil_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Sparkpowder_C" }
+				]
 			}
 		},
 		{
@@ -2829,7 +2850,11 @@
 				"levelReq": 0,
 				"productCount": 0,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_CookedPrimeMeat_C" } ]
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_RawPrimeMeat_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Oil_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Sparkpowder_C" }
+				]
 			}
 		},
 		{
@@ -3833,6 +3858,34 @@
 			}
 		},
 		{
+			"name": "Fertilized Tusoteuthis Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/ArcaneVariants/Tuso/PrimalItemConsumable_UnderwaterEgg_Tuso_Arcane.PrimalItemConsumable_UnderwaterEgg_Tuso_Arcane_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_UnderwaterEgg_Tuso.PrimalItemConsumable_UnderwaterEgg_Tuso_C",
+			"icon": "/Game/PrimalEarth/Items/FishEgg/HUD_FishEgg_Colorize_MIC_Tuso.HUD_FishEgg_Colorize_MIC_Tuso",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "health", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "stamina", "value": 30, "useItemQuality": true, "duration": 7.5 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/ArcaneVariants/Tuso/Tusoteuthis_Character_BP_Arcane.Tusoteuthis_Character_BP_Arcane_C",
+				"temperature": { "min": -75, "max": 75 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Ash Plume Rock Drake Egg",
 			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/AshPlume/PrimalItemConsumable_Egg_RockDrakeAsh.PrimalItemConsumable_Egg_RockDrakeAsh_C",
@@ -4336,6 +4389,29 @@
 				"food": 0.8,
 				"weight": 0.3,
 				"water": 0.01
+			}
+		},
+		{
+			"name": "Gelragarian Direwolf Saddle",
+			"description": "Equip a Gelragarian Direwolf with this to ride it. You can't help but feel it's a bit uhh...big for a survivor like you.",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/GelraWoof/PrimalItemArmor_GelraWolfSaddle.PrimalItemArmor_GelraWolfSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Aberration/Dinos/CaveWolf/Saddle/HUD_CaveWolf_Saddle_Colorize.HUD_CaveWolf_Saddle_Colorize",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 30,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 285, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 110, "type": "PrimalItemResource_Wood_C" }
+				]
 			}
 		},
 		{

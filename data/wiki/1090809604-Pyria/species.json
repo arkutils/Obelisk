@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "335.8.1629200368",
+	"version": "336.3.1629317447",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -5215,6 +5215,67 @@
 				]
 			},
 			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "Arcane Tusoteuthis",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/ArcaneVariants/Tuso/Tusoteuthis_Character_BP_Arcane.Tusoteuthis_Character_BP_Arcane_C",
+			"dinoNameTag": "Tusoteuthis",
+			"customTag": "Tusoteuthis",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 1500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 5000, "sprint": 7500 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 5000, "sprint": 7500 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Tentaslap", "interval": 0, "dmg": 65, "radius": 1200, "stamina": 10 },
+					{ "name": "Grab Prey", "interval": 1.5, "dmg": 2, "radius": 1200, "stamina": 25 },
+					{ "name": "Ink", "interval": 60, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Crush Prey", "interval": 0, "dmg": 100, "radius": 0, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/Dinos/Tusoteuthis/DinoDropInventoryComponent_Carnivore_Tusoteuthis.DinoDropInventoryComponent_Carnivore_Tusoteuthis"
+					}
+				],
+				"baseXP": 100
+			}
 		},
 		{
 			"name": "Ash Plume Rock Drake",
