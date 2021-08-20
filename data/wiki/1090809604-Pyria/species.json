@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "336.3.1629317447",
+	"version": "336.3.1629483739",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -135,7 +135,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Avatars/Berserker_Character_BP_Avatar.Berserker_Character_BP_Avatar_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"targetingTeamName": "Herbivores_Medium",
 			"mass": 100,
 			"dragWeight": 120,
 			"flags": [
@@ -3612,7 +3612,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Devine/Female/Berserker_Character_BP.Berserker_Character_BP_C",
 			"dinoNameTag": "Berserker",
 			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"targetingTeamName": "Herbivores_Medium",
 			"mass": 100,
 			"dragWeight": 120,
 			"flags": [
@@ -4179,7 +4179,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_Greatsword.Fallen_Character_BP_Greatsword_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
-			"targetingTeamName": "Carnivores_Medium",
+			"targetingTeamName": "Carnivore_Water",
 			"mass": 195,
 			"dragWeight": 250,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
@@ -4197,12 +4197,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 112, "sprint": 560 },
-				"swim": { "base": 240 }
+				"walk": { "base": 200, "sprint": 680 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 112, "sprint": 560 },
-				"swim": { "base": 240 }
+				"walk": { "base": 200, "sprint": 680 },
+				"swim": { "base": 300 }
 			},
 			"staminaRates": {
 				"sprint": -10,
@@ -4211,7 +4211,60 @@
 			"attack": {
 				"defaultDmg": 33,
 				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "None", "interval": 0.08, "dmg": 30, "radius": 160, "stamina": 5 } ]
+				"attacks": [ { "name": "None", "interval": 0.4, "dmg": 30, "radius": 160, "stamina": 5 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
+					}
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Heightened Fallen",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_Smarter.Fallen_Character_BP_Smarter_C",
+			"dinoNameTag": "Unded",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 125,
+			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.8333333, "min": 13, "max": 20 },
+					{ "chance": 0.1666667, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 2000
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 680 },
+				"swim": { "base": 175 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 680 },
+				"swim": { "base": 175 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [ { "name": "None", "interval": 0.4, "dmg": 5, "radius": 160, "stamina": 5 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -4229,7 +4282,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_Sword.Fallen_Character_BP_Sword_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
-			"targetingTeamName": "Carnivores_Medium",
+			"targetingTeamName": "Carnivore_Water",
 			"mass": 195,
 			"dragWeight": 250,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
@@ -4247,12 +4300,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 112, "sprint": 560 },
-				"swim": { "base": 240 }
+				"walk": { "base": 200, "sprint": 680 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 112, "sprint": 560 },
-				"swim": { "base": 240 }
+				"walk": { "base": 200, "sprint": 680 },
+				"swim": { "base": 300 }
 			},
 			"staminaRates": {
 				"sprint": -10,
@@ -4261,7 +4314,7 @@
 			"attack": {
 				"defaultDmg": 33,
 				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "None", "interval": 0.08, "dmg": 22, "radius": 160, "stamina": 5 } ]
+				"attacks": [ { "name": "None", "interval": 0.4, "dmg": 22, "radius": 160, "stamina": 5 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -4276,10 +4329,10 @@
 		},
 		{
 			"name": "Shambling Fallen",
-			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_wild.Fallen_Character_BP_wild_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_wild.Fallen_Character_BP_Wild_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Orc",
-			"targetingTeamName": "Carnivores_Medium",
+			"targetingTeamName": "Carnivore_Water",
 			"mass": 195,
 			"dragWeight": 250,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
@@ -4294,12 +4347,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 112, "sprint": 560 },
-				"swim": { "base": 240 }
+				"walk": { "base": 200, "sprint": 680 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 112, "sprint": 560 },
-				"swim": { "base": 240 }
+				"walk": { "base": 200, "sprint": 680 },
+				"swim": { "base": 300 }
 			},
 			"staminaRates": {
 				"sprint": -10,
@@ -4308,7 +4361,7 @@
 			"attack": {
 				"defaultDmg": 33,
 				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "None", "interval": 0.08, "dmg": 15, "radius": 160, "stamina": 5 } ]
+				"attacks": [ { "name": "None", "interval": 0.4, "dmg": 15, "radius": 160, "stamina": 5 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -4326,7 +4379,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Krasue/Krasue_Character_BP.Krasue_Character_BP_C",
 			"dinoNameTag": "Krasue",
 			"customTag": "Krasue",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"targetingTeamName": "Carnivore_Water",
 			"mass": 165,
 			"dragWeight": 85,
 			"flags": [
@@ -4385,7 +4438,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Krasue/Krasue_Character_BP_Minion.Krasue_Character_BP_Minion_C",
 			"dinoNameTag": "KrasueMinion",
 			"customTag": "KrasueMinion",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"targetingTeamName": "Carnivore_Water",
 			"mass": 165,
 			"dragWeight": 85,
 			"variants": [ "Minion" ],
@@ -4445,7 +4498,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Lich/Lich_Character_bp.Lich_Character_bp_C",
 			"dinoNameTag": "Lich",
 			"customTag": "Lich",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"targetingTeamName": "Carnivore_Water",
 			"mass": 400,
 			"dragWeight": 550,
 			"variants": [ "Boss" ],
@@ -4846,7 +4899,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP.Withered_Character_BP_C",
 			"dinoNameTag": "Withered",
 			"customTag": "Wiithered",
-			"targetingTeamName": "Carnivores_High",
+			"targetingTeamName": "Carnivore_Water",
 			"mass": 165,
 			"dragWeight": 85,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
@@ -4861,11 +4914,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 50, "sprint": 103.5 },
+				"walk": { "base": 100, "sprint": 230 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 50, "sprint": 115 },
+				"walk": { "base": 100, "sprint": 230 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -4875,7 +4928,7 @@
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 20, "radius": 120, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 120, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -4909,7 +4962,7 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 100, "sprint": 207 },
+				"walk": { "base": 100, "sprint": 230 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
@@ -4923,7 +4976,7 @@
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 20, "radius": 120, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 120, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -4941,7 +4994,7 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_created.Withered_Character_BP_created_C",
 			"dinoNameTag": "Withered",
 			"customTag": "Wiithered",
-			"targetingTeamName": "Carnivores_High",
+			"targetingTeamName": "Carnivores_Medium",
 			"mass": 165,
 			"dragWeight": 85,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
@@ -4959,11 +5012,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 50, "sprint": 103.5 },
+				"walk": { "base": 100, "sprint": 230 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 50, "sprint": 115 },
+				"walk": { "base": 100, "sprint": 230 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -4973,7 +5026,7 @@
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 20, "radius": 120, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 120, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -5332,9 +5385,9 @@
 					{ "name": "Bite", "interval": 0.5, "dmg": 60, "radius": 600, "stamina": 20 },
 					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 270, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_AOE", "interval": 0, "dmg": 170, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 75, "radius": 900, "stamina": 20 },
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 240, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 150, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 60, "radius": 900, "stamina": 20 },
 					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 50, "radius": 650, "stamina": 20 }
 				]
 			},
@@ -6605,13 +6658,13 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 1200 },
-				"fly": { "base": 1300, "sprint": 3120 },
+				"walk": { "base": 450, "sprint": 1125 },
+				"fly": { "base": 1600, "sprint": 4000 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 1200 },
-				"fly": { "base": 1300, "sprint": 3120 },
+				"walk": { "base": 450, "sprint": 1125 },
+				"fly": { "base": 1600, "sprint": 4000 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -6622,9 +6675,9 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 85, "radius": 220, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 400, "stamina": 0 },
 					{
-						"name": "BiteNomFury", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0,
+						"name": "Breath", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
 					}
 				]
@@ -8196,59 +8249,6 @@
 					}
 				],
 				"baseXP": 3
-			}
-		},
-		{
-			"name": "Alpha Orthros",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Orthros/MegaOrthros_Character_bp.MegaOrthros_Character_bp_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 2310 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 350, "sprint": 1155 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 400, "stamina": 0 },
-					{ "name": "BiteFury", "interval": 7, "dmg": 78, "radius": 320, "stamina": 45 },
-					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
-					}
-				],
-				"engrams": [ "PrimalItemConsumable_MaxElixir_C" ],
-				"baseXP": 995
 			}
 		},
 		{
