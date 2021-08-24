@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "333.13.1627924720",
+	"version": "336.12.1629793077",
 	"format": "4",
 	"mod": {
 		"id": "1565015734",
@@ -1487,6 +1487,77 @@
 			"death": { "baseXP": 3 }
 		},
 		{
+			"name": "Voidwyrm (BD Speed)",
+			"bp": "/Game/Mods/BetterDinosTest/BDSpeedFlyers/TekWyvern_Character_BP_BDSpeed.TekWyvern_Character_BP_BDSpeed_C",
+			"dinoNameTag": "TekWyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				],
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Flame", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI) Tamed", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 },
+					{ "name": "BarrelRoll(Taming)", "interval": 0, "dmg": 2000, "radius": 2000, "stamina": 5 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "Flame", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (AI) UnTamed", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			},
+			"death": { "baseXP": 120 }
+		},
+		{
 			"name": "Fire Wyvern (BD Speed)",
 			"bp": "/Game/Mods/BetterDinosTest/BDSpeedFlyers/Wyvern_Character_BP_Fire_BDSpeed.Wyvern_Character_BP_Fire_BDSpeed_C",
 			"dinoNameTag": "Wyvern",
@@ -2715,6 +2786,14 @@
 				"canDrag",
 				"isCarnivore"
 			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				]
+			},
 			"cloning": {
 				"costBase": 575,
 				"costLevel": 55,
@@ -2775,6 +2854,14 @@
 				"isCarnivore",
 				"isTameable"
 			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				]
+			},
 			"cloning": {
 				"costBase": 575,
 				"costLevel": 55,
@@ -3284,6 +3371,12 @@
 			"mass": 100,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
+			"cloning": {
+				"costBase": 1125,
+				"costLevel": 55,
+				"timeBase": 7875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3316,6 +3409,12 @@
 			"mass": 100,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
+			"cloning": {
+				"costBase": 1125,
+				"costLevel": 55,
+				"timeBase": 7875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3348,6 +3447,12 @@
 			"mass": 100,
 			"dragWeight": 25,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
+			"cloning": {
+				"costBase": 1125,
+				"costLevel": 55,
+				"timeBase": 7875,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3472,6 +3577,12 @@
 				"isWaterDino",
 				"dieIfLeftWater"
 			],
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3510,6 +3621,12 @@
 				"isWaterDino",
 				"dieIfLeftWater"
 			],
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3542,6 +3659,12 @@
 			"mass": 100,
 			"dragWeight": 32.5,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
+			"cloning": {
+				"costBase": 1225,
+				"costLevel": 55,
+				"timeBase": 8575,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3574,6 +3697,12 @@
 			"mass": 100,
 			"dragWeight": 32.5,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
+			"cloning": {
+				"costBase": 1225,
+				"costLevel": 55,
+				"timeBase": 8575,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3606,6 +3735,12 @@
 			"mass": 100,
 			"dragWeight": 32.5,
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
+			"cloning": {
+				"costBase": 1225,
+				"costLevel": 55,
+				"timeBase": 8575,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -3639,6 +3774,12 @@
 			"dragWeight": 32.5,
 			"variants": [ "Rare" ],
 			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
+			"cloning": {
+				"costBase": 1225,
+				"costLevel": 55,
+				"timeBase": 8575,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
