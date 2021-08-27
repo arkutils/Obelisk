@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "336.3.1629483814",
+	"version": "336.12.1629483814",
 	"format": "4",
 	"mod": {
 		"id": "1734595558",
@@ -694,7 +694,7 @@
 			"targetingTeamName": "Herbivores_Large_Aggressive",
 			"mass": 222,
 			"dragWeight": 450,
-			"flags": [ "allowRiding", "canBeDragged", "canDrag" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "canDrag" ],
 			"leveling": {
 				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ]
 			},
@@ -709,20 +709,20 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 550, "sprint": 1925 },
-				"swim": { "base": 400 }
+				"walk": { "base": 500, "sprint": 1750 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 550, "sprint": 1925 },
-				"swim": { "base": 400 }
+				"walk": { "base": 500, "sprint": 1750 },
+				"swim": { "base": 300 }
 			},
 			"staminaRates": {
 				"sprint": -15,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 80,
-				"defaultSwingRadius": 180,
+				"defaultDmg": 42,
+				"defaultSwingRadius": 110,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.6, "dmg": 50, "radius": 180, "stamina": 0 },
 					{ "name": "Gore", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
@@ -730,11 +730,11 @@
 				]
 			},
 			"death": {
-				"lootBagChance": 1,
+				"lootBagChance": 0.3,
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_MegaCarno.DinoDropInventoryComponent_Carnivore_MegaCarno"
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
 					}
 				],
 				"baseXP": 660

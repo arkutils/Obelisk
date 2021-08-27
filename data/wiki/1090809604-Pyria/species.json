@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "336.3.1629638395",
+	"version": "336.12.1630091065",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -76,7 +76,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 125,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -198,7 +198,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 125,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -259,7 +259,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Large",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -310,7 +310,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_MurderedLight.DinoDropInventoryComponent_Pyria_Race_MurderedLight"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Convalesce.DinoDropInventoryComponent_Pyria_Race_Convalesce"
 					}
 				],
 				"baseXP": 3
@@ -374,7 +374,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_MurderedLight.DinoDropInventoryComponent_Pyria_Race_MurderedLight"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Eminence.DinoDropInventoryComponent_Pyria_Race_Eminence"
 					}
 				],
 				"baseXP": 3
@@ -387,7 +387,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 2000,
-			"dragWeight": 180,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -439,7 +439,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_UnusedDarkEminence.DinoDropInventoryComponent_Pyria_Boss_UnusedDarkEminence"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkEminence.DinoDropInventoryComponent_Pyria_Race_DarkEminence"
 					}
 				],
 				"baseXP": 2000
@@ -452,7 +452,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Large",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -517,7 +517,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 125,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -570,7 +570,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkLoot.DinoDropInventoryComponent_Pyria_Race_DarkLoot"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkFortitudo.DinoDropInventoryComponent_Pyria_Race_DarkFortitudo"
 					}
 				],
 				"baseXP": 3
@@ -647,7 +647,6 @@
 			"mass": 400,
 			"dragWeight": 250,
 			"flags": [
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
@@ -755,15 +754,125 @@
 			}
 		},
 		{
+			"name": "Ogre",
+			"bp": "/Game/Mods/Pyria/Creatures/Avatars/Ogre_Character_BP_Avatar.Ogre_Character_BP_Avatar_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 700 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 700 }
+			},
+			"staminaRates": { "sprint": -15 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "ClubSlam", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 },
+					{ "name": "ClubSwing", "interval": 1, "dmg": 110, "radius": 400, "stamina": 0 },
+					{ "name": "Roar", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_Ogre.DinoDropInventoryComponent_Pyria_Boss_Ogre"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_Kinship_UG_C",
+					"PrimalItemArmor_CavewolfSaddlePyriaBattle_UG_C",
+					"PrimalItemConsumable_MaxElixir_C",
+					"PrimalItemArmor_OffhandSpecial_C"
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "HC Ogre",
+			"bp": "/Game/Mods/Pyria/Creatures/Avatars/Ogre_Character_BP_HC_Avatar.Ogre_Character_BP_HC_Avatar_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 700 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 700 }
+			},
+			"staminaRates": { "sprint": -15 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "ClubSlam", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 },
+					{ "name": "ClubSwing", "interval": 1, "dmg": 110, "radius": 400, "stamina": 0 },
+					{ "name": "Roar", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "StaffBlast", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spit", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_Ogre.DinoDropInventoryComponent_Pyria_Boss_Ogre"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_Kinship_UG_C",
+					"PrimalItemArmor_CavewolfSaddlePyriaBattle_UG_C",
+					"PrimalItemConsumable_MaxElixir_C"
+				],
+				"baseXP": 1200
+			}
+		},
+		{
 			"name": "Orc Fighter",
 			"bp": "/Game/Mods/Pyria/Creatures/Avatars/Orc_Character_BP_Avatar.Orc_Character_BP_Avatar_C",
 			"dinoNameTag": "Orc",
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 300,
-			"dragWeight": 250,
+			"dragWeight": 150,
 			"flags": [
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
@@ -800,10 +909,10 @@
 					{ "name": "FighterGapCloser", "interval": 9, "dmg": 82, "radius": 400, "stamina": 5 },
 					{ "name": "FighterPalmStrike", "interval": 10, "dmg": 110, "radius": 650, "stamina": 5 },
 					{ "name": "FighterStomp", "interval": 15, "dmg": 95, "radius": 500, "stamina": 5 },
-					{ "name": "SoldierBasicAttacks", "interval": 0.08, "dmg": 56, "radius": 200, "stamina": 5 },
-					{ "name": "SoldierGapCloser", "interval": 3.5, "dmg": 95, "radius": 300, "stamina": 5 },
-					{ "name": "SoldierGroundChaser", "interval": 7, "dmg": 122, "radius": 450, "stamina": 5 },
-					{ "name": "TendonStrike", "interval": 7, "dmg": 67, "radius": 150, "stamina": 5 },
+					{ "name": "SoldierBasicAttacks", "interval": 0.5, "dmg": 56, "radius": 250, "stamina": 5 },
+					{ "name": "SoldierGapCloser", "interval": 6, "dmg": 95, "radius": 300, "stamina": 5 },
+					{ "name": "SoldierGroundChaser", "interval": 8, "dmg": 122, "radius": 450, "stamina": 5 },
+					{ "name": "TendonStrike", "interval": 7, "dmg": 67, "radius": 250, "stamina": 5 },
 					{ "name": "FighterRunningAttack", "interval": 3.5, "dmg": 82, "radius": 400, "stamina": 5 }
 				]
 			},
@@ -825,7 +934,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -886,7 +995,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
-			"dragWeight": 120,
+			"dragWeight": 125,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -1059,7 +1168,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_MurderedLight.DinoDropInventoryComponent_Pyria_Race_MurderedLight"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Zenith.DinoDropInventoryComponent_Pyria_Race_Zenith"
 					}
 				],
 				"baseXP": 75
@@ -1072,7 +1181,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
-			"dragWeight": 580,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -1126,7 +1235,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkLoot.DinoDropInventoryComponent_Pyria_Race_DarkLoot"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkZenith.DinoDropInventoryComponent_Pyria_Race_DarkZenith"
 					}
 				],
 				"baseXP": 3
@@ -1283,8 +1392,8 @@
 					{ "name": "Bite", "interval": 0.4, "dmg": 380, "radius": 400, "stamina": 0 },
 					{ "name": "SplosionofBOOM", "interval": 30, "dmg": 900, "radius": 700, "stamina": 0 },
 					{ "name": "SparkRoar", "interval": 20, "dmg": 150, "radius": 400, "stamina": 0 },
-					{ "name": "SparkRoar", "interval": 10, "dmg": 180, "radius": 600, "stamina": 0 },
-					{ "name": "SparkRoar", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "BodyShock", "interval": 10, "dmg": 50, "radius": 600, "stamina": 0 },
+					{ "name": "Manashot", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 30 }
@@ -1776,7 +1885,7 @@
 			"name": "Fire Elemental",
 			"bp": "/Game/Mods/Pyria/Creatures/Elemental/FireElemental/Fireburb_Character_BP.Fireburb_Character_BP_C",
 			"dinoNameTag": "Phoenix",
-			"customTag": "Wyvern",
+			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 165,
 			"dragWeight": 85,
@@ -1837,7 +1946,7 @@
 			"name": "Fire Elemental",
 			"bp": "/Game/Mods/Pyria/Creatures/Elemental/FireElemental/Fireburb_Character_BP_created.Fireburb_Character_BP_created_C",
 			"dinoNameTag": "Phoenix",
-			"customTag": "Wyvern",
+			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 165,
 			"dragWeight": 85,
@@ -1900,8 +2009,8 @@
 		{
 			"name": "Gargoyle",
 			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Gargoyle/Gargoyle_Character_bp.Gargoyle_Character_bp_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
+			"dinoNameTag": "Rockwell",
+			"customTag": "Pyria",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 400,
 			"dragWeight": 550,
@@ -2162,7 +2271,6 @@
 			"mass": 100,
 			"dragWeight": 250,
 			"flags": [
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
@@ -2568,7 +2676,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_MurderedLight.DinoDropInventoryComponent_Pyria_Race_MurderedLight"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Eminence.DinoDropInventoryComponent_Pyria_Race_Eminence"
 					}
 				],
 				"baseXP": 3
@@ -2581,7 +2689,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 2000,
-			"dragWeight": 180,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -2632,7 +2740,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_UnusedDarkEminence.DinoDropInventoryComponent_Pyria_Boss_UnusedDarkEminence"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkEminence.DinoDropInventoryComponent_Pyria_Race_DarkEminence"
 					}
 				],
 				"baseXP": 2000
@@ -2695,7 +2803,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_UnusedDarkEminence.DinoDropInventoryComponent_Pyria_Boss_UnusedDarkEminence"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkEminence.DinoDropInventoryComponent_Pyria_Race_DarkEminence"
 					}
 				],
 				"engrams": [ "PrimalItemConsumable_DivineAura_C", "PrimalItemConsumable_CreaDarkSeek_C" ],
@@ -2940,7 +3048,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_MurderedLight.DinoDropInventoryComponent_Pyria_Race_MurderedLight"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Zenith.DinoDropInventoryComponent_Pyria_Race_Zenith"
 					}
 				],
 				"baseXP": 75
@@ -3126,7 +3234,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 125,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -3185,7 +3293,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 125,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -3244,7 +3352,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 125,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -3295,7 +3403,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkLoot.DinoDropInventoryComponent_Pyria_Race_DarkLoot"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkFortitudo.DinoDropInventoryComponent_Pyria_Race_DarkFortitudo"
 					}
 				],
 				"baseXP": 3
@@ -3308,7 +3416,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
-			"dragWeight": 120,
+			"dragWeight": 125,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -3486,7 +3594,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
-			"dragWeight": 580,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -3538,7 +3646,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkLoot.DinoDropInventoryComponent_Pyria_Race_DarkLoot"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkZenith.DinoDropInventoryComponent_Pyria_Race_DarkZenith"
 					}
 				],
 				"baseXP": 3
@@ -3551,7 +3659,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Large",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -3601,7 +3709,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_MurderedLight.DinoDropInventoryComponent_Pyria_Race_MurderedLight"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Convalesce.DinoDropInventoryComponent_Pyria_Race_Convalesce"
 					}
 				],
 				"baseXP": 3
@@ -3673,7 +3781,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Large",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -3737,7 +3845,7 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Herbivores_Medium",
 			"mass": 100,
-			"dragWeight": 120,
+			"dragWeight": 150,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
@@ -3854,7 +3962,6 @@
 			"mass": 400,
 			"dragWeight": 250,
 			"flags": [
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
@@ -3983,19 +4090,19 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 350 }
+				"walk": { "base": 350, "sprint": 700 }
 			},
 			"movementD": {
-				"walk": { "base": 350 }
+				"walk": { "base": 350, "sprint": 700 }
 			},
-			"staminaRates": {},
+			"staminaRates": { "sprint": -15 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.4, "dmg": 110, "radius": 300, "stamina": 0 },
-					{ "name": "Bite", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "ClubSlam", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 },
+					{ "name": "ClubSwing", "interval": 1, "dmg": 110, "radius": 400, "stamina": 0 },
+					{ "name": "Roar", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -4038,20 +4145,21 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 350 }
+				"walk": { "base": 350, "sprint": 700 }
 			},
 			"movementD": {
-				"walk": { "base": 350 }
+				"walk": { "base": 350, "sprint": 700 }
 			},
-			"staminaRates": {},
+			"staminaRates": { "sprint": -15 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0, "dmg": 215, "radius": 600, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.5, "dmg": 160, "radius": 300, "stamina": 0 },
-					{ "name": "Bite", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Bite", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "ClubSlam", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 },
+					{ "name": "ClubSwing", "interval": 1, "dmg": 110, "radius": 400, "stamina": 0 },
+					{ "name": "Roar", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "StaffBlast", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spit", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -4117,9 +4225,8 @@
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 300,
-			"dragWeight": 250,
+			"dragWeight": 150,
 			"flags": [
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
@@ -4156,10 +4263,10 @@
 					{ "name": "FighterGapCloser", "interval": 9, "dmg": 82, "radius": 400, "stamina": 5 },
 					{ "name": "FighterPalmStrike", "interval": 10, "dmg": 110, "radius": 650, "stamina": 5 },
 					{ "name": "FighterStomp", "interval": 15, "dmg": 95, "radius": 500, "stamina": 5 },
-					{ "name": "SoldierBasicAttacks", "interval": 0.08, "dmg": 56, "radius": 200, "stamina": 5 },
-					{ "name": "SoldierGapCloser", "interval": 3.5, "dmg": 95, "radius": 300, "stamina": 5 },
-					{ "name": "SoldierGroundChaser", "interval": 7, "dmg": 122, "radius": 450, "stamina": 5 },
-					{ "name": "TendonStrike", "interval": 7, "dmg": 67, "radius": 150, "stamina": 5 },
+					{ "name": "SoldierBasicAttacks", "interval": 0.5, "dmg": 56, "radius": 250, "stamina": 5 },
+					{ "name": "SoldierGapCloser", "interval": 6, "dmg": 95, "radius": 300, "stamina": 5 },
+					{ "name": "SoldierGroundChaser", "interval": 8, "dmg": 122, "radius": 450, "stamina": 5 },
+					{ "name": "TendonStrike", "interval": 7, "dmg": 67, "radius": 250, "stamina": 5 },
 					{ "name": "FighterRunningAttack", "interval": 3.5, "dmg": 82, "radius": 400, "stamina": 5 }
 				]
 			},
@@ -4234,10 +4341,7 @@
 			"dragWeight": 125,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
 			"leveling": {
-				"wildLevelTable": [
-					{ "chance": 0.8333333, "min": 13, "max": 20 },
-					{ "chance": 0.1666667, "min": 21, "max": 30 }
-				]
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ]
 			},
 			"cloning": {
 				"costBase": 1975,
@@ -4664,8 +4768,15 @@
 			"customTag": "Carno",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 222,
-			"dragWeight": 600,
-			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
 			"leveling": {
 				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ]
 			},
@@ -4680,20 +4791,20 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 550, "sprint": 1309 },
-				"swim": { "base": 400 }
+				"walk": { "base": 500, "sprint": 2500 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 550, "sprint": 1540 },
-				"swim": { "base": 400 }
+				"walk": { "base": 500, "sprint": 2500 },
+				"swim": { "base": 300 }
 			},
 			"staminaRates": {
 				"sprint": -15,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 80,
-				"defaultSwingRadius": 180,
+				"defaultDmg": 42,
+				"defaultSwingRadius": 110,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.6, "dmg": 80, "radius": 250, "stamina": 0 },
 					{ "name": "Beam", "interval": 40, "dmg": 80, "radius": 180, "stamina": 150 },
@@ -4701,14 +4812,14 @@
 				]
 			},
 			"death": {
-				"lootBagChance": 1,
+				"lootBagChance": 0.3,
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_MegaCarno.DinoDropInventoryComponent_Carnivore_MegaCarno"
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
 					}
 				],
-				"baseXP": 460
+				"baseXP": 18
 			}
 		},
 		{
@@ -4818,7 +4929,7 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.3, "dmg": 135, "radius": 600, "stamina": 0 },
 					{ "name": "Breath", "interval": 40, "dmg": 0, "radius": 0, "stamina": 200 },
-					{ "name": "AoE", "interval": 0.3, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "AoE", "interval": 40, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -8106,6 +8217,12 @@
 				"isCarnivore",
 				"isTameable"
 			],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
