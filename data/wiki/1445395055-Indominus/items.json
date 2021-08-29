@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "327.19.1557285101",
+	"version": "336.12.1630202090",
 	"format": "4",
 	"mod": {
 		"id": "1445395055",
@@ -9,8 +9,8 @@
 	},
 	"items": [
 		{
-			"name": "Indominus Rex Saddle",
-			"description": "Equip an Indominus Rex with this to ride it.",
+			"name": "Domination Rex Saddle",
+			"description": "Equip an Domination Rex with this to ride it.",
 			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemArmor_IndominusSaddle.PrimalItemArmor_IndominusSaddle_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Megalosaurus/Saddle/HUD_MegaloSaddle_Colorize_MIC.HUD_MegaloSaddle_Colorize_MIC",
@@ -185,11 +185,11 @@
 			}
 		},
 		{
-			"name": "Fertilized Domination Rex Egg",
+			"name": "Fertilized TEK Domination Rex Egg",
 			"description": "The engineered Egg of a Domination Rex...",
-			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized_MegaDrop.PrimalItemConsumable_Egg_IndominusRex_Fertilized_MegaDrop_C",
+			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized_GEN.PrimalItemConsumable_Egg_IndominusRex_Fertilized_GEN_C",
 			"parent": "/Game/Mods/Indominus/Blueprints/PrimalItemConsumable_Egg_IndominusRex_Fertilized.PrimalItemConsumable_Egg_IndominusRex_Fertilized_C",
-			"icon": "/Game/Mods/Indominus/Dino/Egg/HUD_IndomEgg_MIC.HUD_IndomEgg_MIC",
+			"icon": "/Game/Mods/Indominus/Dino/Egg/HUD_IndomEgg_GEN_MIC.HUD_IndomEgg_GEN_MIC",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 35,
@@ -202,12 +202,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_AlphaRex_C" },
-					{ "qty": 3, "type": "PrimalItemResource_ApexDrop_AlphaRaptor_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_11_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_12_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
-					{ "qty": 50, "type": "PrimalItemResource_Element_C" }
+					{ "qty": 5000, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Element_C" }
 				]
 			},
 			"statEffects": [
@@ -216,7 +212,7 @@
 				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
 			],
 			"egg": {
-				"dinoClass": "/Game/Mods/Indominus/Dino/Indominus_Character_Extinction_BP.Indominus_Character_Extinction_BP_C",
+				"dinoClass": "/Game/Mods/Indominus/Dino/Indominus_Character_Dud_GEN_BP.Indominus_Character_Dud_GEN_BP_C",
 				"temperature": { "min": 43, "max": 44 }
 			},
 			"cooking": {
@@ -268,6 +264,60 @@
 				"food": 0.8,
 				"weight": 0.3,
 				"water": 0.01
+			}
+		},
+		{
+			"name": "Bog Domination Costume",
+			"description": "This Costume can be used to make your Domination Rex look straight out of the Bog!",
+			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemCostume_BogIndominus.PrimalItemCostume_BogIndominus_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemCostumeGeneric.PrimalItemCostumeGeneric_C",
+			"icon": "/Game/Mods/Indominus/Dino/SkinIcons/MIC_HUD_Colorized_BogIndom_Costume.MIC_HUD_Colorized_BogIndom_Costume",
+			"type": "Equipment/Costume",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 5, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Snowy Domination Costume",
+			"description": "This Costume can be used to make your Domination Rex look straight out of the Tundra!",
+			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemCostume_SnowIndominus.PrimalItemCostume_SnowIndominus_C",
+			"parent": "/Game/Mods/Indominus/Blueprints/PrimalItemCostume_BogIndominus.PrimalItemCostume_BogIndominus_C",
+			"icon": "/Game/Mods/Indominus/Dino/SkinIcons/MIC_HUD_Colorized_SnowIndom_Costume.MIC_HUD_Colorized_SnowIndom_Costume",
+			"type": "Equipment/Costume",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 5, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Volcanic Domination Costume",
+			"description": "This Costume can be used to make your Domination Rex look straight out of the Volcano!",
+			"bp": "/Game/Mods/Indominus/Blueprints/PrimalItemCostume_VolcanicIndominus.PrimalItemCostume_VolcanicIndominus_C",
+			"parent": "/Game/Mods/Indominus/Blueprints/PrimalItemCostume_BogIndominus.PrimalItemCostume_BogIndominus_C",
+			"icon": "/Game/Mods/Indominus/Dino/SkinIcons/MIC_HUD_Colorized_VolcanicIndom_Costume.MIC_HUD_Colorized_VolcanicIndom_Costume",
+			"type": "Equipment/Costume",
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 5, "type": "PrimalItemResource_Element_C" } ]
 			}
 		}
 	]
