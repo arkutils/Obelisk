@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "336.12.1630091065",
+	"version": "336.12.1630256689",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -93,7 +93,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
-					{ "qty": 100, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
 					{ "qty": 250, "type": "PrimalItemResource_FireElement_C" },
 					{ "qty": 50, "type": "PrimalItemResource_Bazelcrystal_C" }
 				]
@@ -118,7 +118,7 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
 					{ "qty": 60, "type": "PrimalItemResource_EarthElement_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
+					{ "qty": 15, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -151,7 +151,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Mana_C" }
+					{ "qty": 5, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
@@ -175,7 +175,7 @@
 					{ "qty": 25, "type": "PrimalItemResource_ManaLight_C" },
 					{ "qty": 100, "type": "PrimalItemResource_Mana_C" },
 					{ "qty": 10, "type": "PrimalItemResource_BlackPearlDust_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
+					{ "qty": 5, "type": "PrimalItemResource_Crystal_Magicrystal_C" }
 				]
 			}
 		},
@@ -196,9 +196,9 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 2, "type": "PrimalItemResource_MithrilIngot_C" },
 					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 2, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
 					{ "qty": 2, "type": "PrimalItemResource_Fibers_C" }
 				]
 			}
@@ -268,7 +268,7 @@
 				"recipe": [
 					{ "qty": 35, "type": "PrimalItemResource_Bazelcrystal_C" },
 					{ "qty": 500, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 100, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Crystal_Magicrystal_C" },
 					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" }
 				]
 			}
@@ -2937,14 +2937,53 @@
 			}
 		},
 		{
+			"name": "Balrog Charcoal",
+			"description": "Charcoal created by your Balrog incinerating wood into charcoal. Useful!",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogCharcoal.PrimalItemResource_BalrogCharcoal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Charcoal_Icon.Charcoal_Icon",
+			"type": "Resource",
+			"weight": 0,
+			"stackSize": 3000,
+			"crafting": {
+				"xp": 1,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
+			}
+		},
+		{
 			"name": "Balrog Core",
-			"description": "This trophy proves your worth as a hunter.\nThe core of a Balrog, that once- and still does- hold it's life energy. Can be used to create a loyal Balrog of your own.",
+			"description": "This trophy proves your worth as a hunter.\nThe core of a Balrog, that once- and still does- hold it's life energy. Can be used to create a loyal Balrog of your own.\n\n\"With Fire, there is power, force, and will. With Earth, an immense physical power and unmoving steadfastness. What cannot be moved willingly, must be moved by force. These elements alone, have just that.\n\nCombined, the two form power absolute, in nature's most raw form. The earth explodes, and the Balrog is born. As ferocious- yet gentle- as the earth it is born from.\"",
 			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogCore.PrimalItemResource_BalrogCore_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BalrogCore.BalrogCore",
 			"type": "Resource",
 			"weight": 2,
 			"stackSize": 100
+		},
+		{
+			"name": "Balrog Gunpowder",
+			"description": "Charcoal created by your Balrog mixing volatile resources into gunpowder. Useful!",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/Balrog/PrimalItemResource_BalrogGunpowder.PrimalItemResource_BalrogGunpowder_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Gunpowder_Icon.Gunpowder_Icon",
+			"type": "Resource",
+			"weight": 0,
+			"stackSize": 3000,
+			"crafting": {
+				"xp": 1,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 5, "type": "PrimalItemResource_FireElement_C" }
+				]
+			}
 		},
 		{
 			"name": "Balrog Meat Jerky",
@@ -3064,7 +3103,7 @@
 		},
 		{
 			"name": "Fire Elemental Core",
-			"description": "This trophy proves your worth as a hunter.\nThe core of a Fire Elemental, that once- and still does- hold it's life energy. Can be used to create a loyal Fire Elemental of your own.",
+			"description": "This trophy proves your worth as a hunter.\nThe core of a Fire Elemental, that once- and still does- hold it's life energy. Can be used to create a loyal Fire Elemental of your own.\n\n\"A will to live, a will to thrive, a will of life. What remains wishes for life once more, and when blessed by fire, becomes new life, and takes flight.\"",
 			"bp": "/Game/Mods/Pyria/Creatures/Elemental/FireElemental/PrimalItemResource_FireBurbCore.PrimalItemResource_FireBurbCore_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/FireElementalCore.FireElementalCore",
@@ -3117,7 +3156,7 @@
 		},
 		{
 			"name": "Glacier Golem Core",
-			"description": "This trophy proves your worth as a hunter.\nThe core of a Glacier Golem, that once- and still does- hold it's life energy. Can be used to create a loyal Glacier Golem of your own.",
+			"description": "This trophy proves your worth as a hunter.\nThe core of a Glacier Golem, that once- and still does- hold it's life energy. Can be used to create a loyal Glacier Golem of your own.\n\n\"Slow is the glacier, but its force absolute. The mountain crumbles, and life is crushed an consumed. None survive, unless their force is stronger than it, or they outrun it.\n\nWhen life pools, and mixes with Ice and Earth, does the Glacier grow anew, with refined power to crush and consume.\"",
 			"bp": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/GlacierGolemCore.GlacierGolemCore",
@@ -3366,12 +3405,12 @@
 			"spoilsIn": 0,
 			"crafting": {
 				"xp": 1,
-				"time": 60,
+				"time": 15,
 				"levelReq": 0,
 				"productCount": 15,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 100, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Mana_C" },
 					{ "qty": 15, "type": "PrimalItemResource_Crystal_C" }
 				]
 			}
@@ -4484,7 +4523,7 @@
 		},
 		{
 			"name": "Everlast Drallion Gem",
-			"description": "The Drallion Gem of an Everlast Drallion. It burns angrily with a strange power....",
+			"description": "The Drallion Gem of an Everlast Drallion. It burns angrily with a strange power...\n\n\"A dragon's hate and wrath are undying. Do you feel my hate for the undragon?\n\nOnce, I had it, until I met the Aramy Queen. What grants thee spite? \n\nAre you remembering, now? Are you becoming more attuned to my gifts? Is that why, now, in undeath, you persist past such normal mortal bounds?\n\nThou art remembering and progressing similar to thy dragon and undragon kin, but are becoming attuned to the dark and light. Walk the path carefully, my kin...\"",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/PrimalItemResource_DrallGemRed.PrimalItemResource_DrallGemRed_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/EverlastDrallionGem.EverlastDrallionGem",
@@ -4494,7 +4533,7 @@
 		},
 		{
 			"name": "Drallion Gem",
-			"description": "A gem formed inside the body of a Drallion, formed from various impurities. It holds a strange power within. Highly sought after in magic.",
+			"description": "A gem formed inside the body of a Drallion, formed from various impurities. It holds a strange power within. Highly sought after in magic.\n\n\"And so does my lineage progress down to even thee, my most distant of kin. Thou art not just an animal, but by my bloodline, royal in lineage. Thou cans't simply, by thy will, command nature and the elements, no different than the undragon. One does not need, as thy Great Kin prove, a body like the undragon to gain free will, and power.\n\nSo go forth unto the world my children, and evolve. Take our primal breath- the fire- as your tool, and learn. One day, perhaps ascending to a throne of your own amongst your Great Kin. Let my divine voice howl within your own, and show the world belongs to dragon as much as man.\"",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/PrimalItemResource_DrallionGem.PrimalItemResource_DrallionGem_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DrallionGem.DrallionGem",
