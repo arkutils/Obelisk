@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "327.19.1620852576.1",
+	"version": "336.23.1630375257",
 	"format": "4",
 	"mod": {
 		"id": "1676159020",
@@ -699,6 +699,57 @@
 			"egg": {
 				"dinoClass": "/Game/Mods/Aquaria/FIsh/Sailfish/TitanSailfish_Character_BP.TitanSailfish_Character_BP_C",
 				"temperature": { "min": -75, "max": 75 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Saltwater Crocodile Saddle",
+			"description": "Equip a Saltwater Crocodile with this to ride it",
+			"bp": "/Game/Mods/Aquaria/FIsh/Saltie/PrimalItemArmor_SaltieDileSaddle.PrimalItemArmor_SaltieDileSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Saber/Saddle/HUD_SaberSaddle_Colorize_MIC.HUD_SaberSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 30,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Saltwater Crocodile Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Aquaria/FIsh/Saltie/PrimalItemConsumable_Egg_Saltie_Fertilized.PrimalItemConsumable_Egg_Saltie_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Sarco.PrimalItemConsumable_Egg_Sarco_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Sarco.HUD_DinoEgg_MIC_Inst_Sarco",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 15,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Aquaria/FIsh/Saltie/Saltie_Character_BP.Saltie_Character_BP_C",
+				"temperature": { "min": 30, "max": 34 }
 			},
 			"cooking": {
 				"health": 0.8,

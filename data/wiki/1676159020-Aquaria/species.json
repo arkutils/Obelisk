@@ -1,7 +1,7 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "327.21.1621639372.1",
-	"format": "3",
+	"version": "336.23.1630375257",
+	"format": "4",
 	"mod": {
 		"id": "1676159020",
 		"tag": "Aquaria",
@@ -1506,6 +1506,67 @@
 				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 20, "radius": 190, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 12 }
+		},
+		{
+			"name": "Saltwater Crocodile",
+			"bp": "/Game/Mods/Aquaria/FIsh/Saltie/Saltie_Character_BP.Saltie_Character_BP_C",
+			"dinoNameTag": "Sarco",
+			"customTag": "Saltie",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 330,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.8, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 175, "sprint": 875 },
+				"swim": { "base": 630, "sprint": 1890 }
+			},
+			"movementD": {
+				"walk": { "base": 250, "sprint": 1750 },
+				"swim": { "base": 900, "sprint": 3780 }
+			},
+			"staminaRates": {
+				"sprint": -25,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.04, "dmg": 40, "radius": 300, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.04, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "LandTailSlaps", "interval": 0.04, "dmg": 35, "radius": 300, "stamina": 100 },
+					{ "name": "Dart", "interval": 0.04, "dmg": 45, "radius": 300, "stamina": 125 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Shonisaurus",
