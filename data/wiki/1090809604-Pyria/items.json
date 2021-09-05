@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "336.23.1630375480",
+	"version": "678.13.1630834376",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -8,6 +8,37 @@
 		"title": "Pyria: Mythos Evolved"
 	},
 	"items": [
+		{
+			"name": "Adventurer's Canteen",
+			"description": "Safely carries a large amount of water, and is reasonably lightweight. When you're a world as adventure-heavy as Pyria, knowing how to carry resources as effeciently as possible is a must.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Alchitect/Canteen/PrimalItemConsumable_CanteenCraftablePyria.PrimalItemConsumable_CanteenCraftablePyria_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumableEatable_WaterContainer.PrimalItemConsumableEatable_WaterContainer_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/CanteenFilled_Icon.CanteenFilled_Icon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "durabilityRequirementIgnoredInWater" ],
+			"folders": [ "Misc" ],
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 3.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Polymer_Organic_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 4, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 1, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"statEffects": [
+				{
+					"stat": "water", "value": 100, "useItemQuality": true,
+					"allowWhenFull": false
+				}
+			]
+		},
 		{
 			"name": "Pyrian Climbing Pick",
 			"description": "Climbing Picks made and infused with Earth Element for stability.\n\nThese things will LAST!",
@@ -184,7 +215,7 @@
 			"description": "An arrow created with Dark Mana: it's not even technically a physical object! Just as strong as those wielded by Dark Archers: smiting light foes with ease. These shots have the power to inflict blood curse.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowManaDark.PrimalItemAmmo_ArrowManaDark_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/PassiveArrow.PassiveArrow",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DarkArrow.DarkArrow",
 			"type": "Ammo",
 			"folders": [ "Weapons", "Ammo" ],
 			"weight": 0,
@@ -595,7 +626,7 @@
 			"description": "A potion that blocks out all external cold for 15 minutes. Cannot be used with Heatblock potion: will completely cancel effects. This potion will even prevent against freezing. Defeat a Diorex to unlock this.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_ColdBlockUltra.PrimalItemConsumable_ColdBlockUltra_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/HeatblockPotion.HeatblockPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SelfBlizzard.SelfBlizzard",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -1078,8 +1109,6 @@
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
 			"stackSize": 100,
-			"spoilsIn": 120000,
-			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
 			"crafting": {
 				"xp": 200,
 				"time": 40,
@@ -1217,8 +1246,6 @@
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
 			"stackSize": 100,
-			"spoilsIn": 120000,
-			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
 			"crafting": {
 				"xp": 200,
 				"time": 40,
@@ -1301,8 +1328,6 @@
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
 			"stackSize": 100,
-			"spoilsIn": 120000,
-			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
 			"crafting": {
 				"xp": 200,
 				"time": 40,
@@ -1377,8 +1402,6 @@
 			"folders": [ "Summons", "Elementals" ],
 			"weight": 0.1,
 			"stackSize": 100,
-			"spoilsIn": 120000,
-			"spoilsTo": "/Game/Mods/Pyria/Creatures/Elemental/GlacierGolem/PrimalItemResource_IceGolemCore.PrimalItemResource_IceGolemCore_C",
 			"crafting": {
 				"xp": 200,
 				"time": 40,
@@ -1532,7 +1555,6 @@
 			"folders": [ "Alchitect" ],
 			"weight": 0.1,
 			"stackSize": 100,
-			"spoilsIn": 120000,
 			"crafting": {
 				"xp": 1,
 				"time": 5,
@@ -1540,9 +1562,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 2, "type": "PrimalItemResource_ColossusCore_C" },
+					{ "qty": 6, "type": "PrimalItemResource_ColossusCore_C" },
 					{ "qty": 2500, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 2500, "type": "PrimalItemResource_EarthElement_C" }
+					{ "qty": 2500, "type": "PrimalItemResource_EarthElement_C" },
+					{ "qty": 5000, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
@@ -3782,7 +3805,7 @@
 		},
 		{
 			"name": "Narcotic",
-			"description": "Increases your health, but puts you to sleep.[Gives 60]",
+			"description": "Increases your health, but puts you to sleep.[Gives 120]",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemConsumable_Narcotic_cent.PrimalItemConsumable_Narcotic_Cent_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Narcotic.PrimalItemConsumable_Narcotic_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Narcotic_Icon.Narcotic_Icon",
@@ -3805,7 +3828,7 @@
 		},
 		{
 			"name": "Stimulant",
-			"description": "Keeps you awake, but dehydrates you.[Gives 60]",
+			"description": "Keeps you awake, but dehydrates you.[Gives 120]",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemConsumable_Stimulant_Cent.PrimalItemConsumable_Stimulant_Cent_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Stimulant.PrimalItemConsumable_Stimulant_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Stimulant_Icon.Stimulant_Icon",
@@ -3828,7 +3851,7 @@
 		},
 		{
 			"name": "Cementing Paste",
-			"description": "This thick, waterproof paste could be used as mortar, or to thicken another substance.[Gives 40]",
+			"description": "This thick, waterproof paste could be used as mortar, or to thicken another substance.[Gives 100]",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemResource_ChitinPaste_Cent.PrimalItemResource_ChitinPaste_Cent_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ChitinPaste.PrimalItemResource_ChitinPaste_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/CementPaste_Icon.CementPaste_Icon",
@@ -3847,7 +3870,7 @@
 		},
 		{
 			"name": "Gunpowder",
-			"description": "An powerful propellant. Necessary for any firearm or explosive.[Gives 30]",
+			"description": "An powerful propellant. Necessary for any firearm or explosive.[Gives 225]",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemResource_Gunpowder_Cent.PrimalItemResource_Gunpowder_Cent_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Gunpowder.PrimalItemResource_Gunpowder_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Gunpowder_Icon.Gunpowder_Icon",
@@ -3866,7 +3889,7 @@
 		},
 		{
 			"name": "Propellant",
-			"description": "Used to manufacture highly flammable substances. [Gives 40]",
+			"description": "Used to manufacture highly flammable substances. [Gives 80]",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemResource_Propellant_Cent.PrimalItemResource_Propellant_Cent_C",
 			"parent": "/Game/ScorchedEarth/CoreBlueprints/Resources/PrimalItemResource_Propellant.PrimalItemResource_Propellant_C",
 			"icon": "/Game/ScorchedEarth/Icons/Resources/Propellant_Icon.Propellant_Icon",
@@ -3885,7 +3908,7 @@
 		},
 		{
 			"name": "Sparkpowder",
-			"description": "Created by grinding flint with stone in a Mortar and Pestle or Chemistry Table.[Gives 60]",
+			"description": "Created by grinding flint with stone in a Mortar and Pestle or Chemistry Table.[Gives 260]",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/PrimalItemResource_Sparkpowder_Cent.PrimalItemResource_Sparkpowder_Cent_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Sparkpowder.PrimalItemResource_Sparkpowder_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Sparkpowder_Icon.Sparkpowder_Icon",
@@ -4505,48 +4528,24 @@
 			}
 		},
 		{
-			"name": "Stygian Drachenthorn Egg",
-			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/DrachenThorne/PrimalItemConsumable_Egg_Thorne.PrimalItemConsumable_Egg_Thorne_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
-			"icon": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
+			"name": "Fertilized Drachenthorne Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/DrachenThorne/PrimalItemConsumable_Egg_Wyvern_Fertilized_Drachenthorne.PrimalItemConsumable_Egg_Wyvern_Fertilized_Drachenthorne_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Wyvern_Fertilized.PrimalItemConsumable_Egg_Wyvern_Fertilized_C",
+			"icon": "/Game/ScorchedEarth/Icons/Resources/RockDrakeEgg_Icon.RockDrakeEgg_Icon",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
-			"weight": 40,
-			"stackSize": 100,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
-				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
-				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
-			],
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Fertilized Stygian Drachenthorn Egg",
-			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/DrachenThorne/PrimalItemConsumable_Egg_Thorne_Fertilized.PrimalItemConsumable_Egg_Thorne_Fertilized_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Gigant.PrimalItemConsumable_Egg_Gigant_C",
-			"icon": "/Game/Mods/Pyria/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 40,
+			"weight": 50,
 			"stackSize": 1,
 			"spoilsIn": 691200,
 			"statEffects": [
-				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
-				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
-				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
 			],
 			"egg": {
-				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/DrachenThorne/DrachenThorn_Character_bp.DrachenThorn_Character_bp_C",
-				"temperature": { "min": 43, "max": 44 }
+				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/DrachenThorne/Wyvern_Character_BP_Drachenthorne.Wyvern_Character_BP_Drachenthorne_C",
+				"temperature": { "min": 80, "max": 90 }
 			},
 			"cooking": {
 				"health": 0.8,

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "329.25.1623280184",
+	"version": "678.13.1630865698",
 	"format": "4",
 	"mod": {
 		"id": "1984129536",
@@ -503,6 +503,30 @@
 			}
 		},
 		{
+			"name": "Metal Cliff Platform",
+			"description": "A Cliff Platform is required to build structures extending from a cliff. This one is made from shiny metal.",
+			"bp": "/Game/Mods/MTSMod/MetalCliffPlatform/PrimalItemStructure_Metal_CliffPlatform_MTS.PrimalItemStructure_Metal_CliffPlatform_MTS_C",
+			"parent": "/Game/Aberration/Structures/CliffPlatforms/Metal_CliffPlatform/PrimalItemStructure_Metal_CliffPlatform.PrimalItemStructure_Metal_CliffPlatform_C",
+			"icon": "/Game/Aberration/Icons/Structures/CliffMetal_Icon.CliffMetal_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Cliff" ],
+			"weight": 90,
+			"stackSize": 3,
+			"crafting": {
+				"xp": 65,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1200, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 800, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Gem_BioLum_C" }
+				]
+			},
+			"structure": "/Game/Mods/MTSMod/MetalCliffPlatform/Metal_Platform_BP_MTS.Metal_Platform_BP_MTS_C"
+		},
+		{
 			"name": "Plant Species X Seed",
 			"description": "Plant this in a viable large crop plot to grow a frightening-looking defensive plant, which will shoot poisonous spores at any interlopers!",
 			"bp": "/Game/Mods/MTSMod/PlantX/PrimalItemConsumable_Seed_DefensePlant_MTS.PrimalItemConsumable_Seed_DefensePlant_MTS_C",
@@ -513,6 +537,16 @@
 			"weight": 0.01,
 			"stackSize": 100,
 			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ]
+		},
+		{
+			"name": "Festive Dino Candy",
+			"description": "A unique candy with a curious effect that few dino's can passover.",
+			"bp": "/Game/Mods/MTSMod/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_EasterDinoCandy.PrimalItemConsumable_EasterDinoCandy_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/MTSMod/PrimalEarth/Environment/Seasonal/Easter/Egg/HUD_EasterEgg_Candy_Colorize_MIC.HUD_EasterEgg_Candy_Colorize_MIC",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1
 		},
 		{
 			"name": "Festive Dino Candy",
@@ -768,6 +802,62 @@
 				]
 			},
 			"structure": "/Game/Mods/MTSMod/Vault/StorageBox_Huge_MTS.StorageBox_Huge_MTS_C"
+		},
+		{
+			"name": "Fertilized Velonasaur Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/MTSMod/Velo/PrimalItemConsumable_Egg_Spindles_Fertilized_MTS.PrimalItemConsumable_Egg_Spindles_Fertilized_MTS_C",
+			"parent": "/Game/Extinction/Dinos/Spindles/PrimalItemConsumable_Egg_Spindles_Fertilized.PrimalItemConsumable_Egg_Spindles_Fertilized_C",
+			"icon": "/Game/Extinction/Effects/Materials/Creatures/Spindles/HUD_DinoEgg_MIC_Inst_Spindles.HUD_DinoEgg_MIC_Inst_Spindles",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/MTSMod/Velo/Spindles_Character_BP_MTS.Spindles_Character_BP_MTS_C",
+				"temperature": { "min": 28, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized R-Velonasaur Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/MTSMod/Velo/PrimalItemConsumable_Egg_Spindles_Gen2_Fertilized_MTS.PrimalItemConsumable_Egg_Spindles_Gen2_Fertilized_MTS_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Spindles_Gen2_Fertilized.PrimalItemConsumable_Egg_Spindles_Gen2_Fertilized_C",
+			"icon": "/Game/Extinction/Effects/Materials/Creatures/Spindles/HUD_DinoEgg_MIC_Inst_Spindles.HUD_DinoEgg_MIC_Inst_Spindles",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/MTSMod/Velo/Spindles_Character_BP_Rockwell_MTS.Spindles_Character_BP_Rockwell_MTS_C",
+				"temperature": { "min": 28, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
 		}
 	]
 }

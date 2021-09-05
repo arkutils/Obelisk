@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "678.10.1630375480",
+	"version": "678.13.1630834376",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -8,6 +8,60 @@
 		"title": "Pyria: Mythos Evolved"
 	},
 	"species": [
+		{
+			"name": "Archdemon",
+			"bp": "/Game/Mods/Pyria/Creatures/Avatars/ArchDemon_Character_BP_Avatar.ArchDemon_Character_BP_Avatar_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 1400 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 1400 }
+			},
+			"staminaRates": { "sprint": -15 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 140, "radius": 600, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 110, "radius": 600, "stamina": 0 },
+					{ "name": "Bite", "interval": 15, "dmg": 200, "radius": 400, "stamina": 0 },
+					{ "name": "Bite", "interval": 40, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite", "interval": 40, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_ArchDemon.DinoDropInventoryComponent_Pyria_Boss_ArchDemon"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_BasiliskSaddlePyria_UG_C",
+					"PrimalItemArmor_DragonKinship_UG_C",
+					"PrimalItemConsumable_90sPotion_C"
+				],
+				"baseXP": 30
+			}
+		},
 		{
 			"name": "Divine Archer",
 			"bp": "/Game/Mods/Pyria/Creatures/Avatars/Artemis_Character_BP_Avatar.Artemis_Character_BP_Avatar_C",
@@ -697,6 +751,63 @@
 			}
 		},
 		{
+			"name": "Lich",
+			"bp": "/Game/Mods/Pyria/Creatures/Avatars/Lich_Character_bp_Avatar.Lich_Character_bp_Avatar_C",
+			"dinoNameTag": "LichFriendly",
+			"customTag": "LichFriendly",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 462 },
+				"fly": { "base": 600, "sprint": 792 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 1155 },
+				"fly": { "base": 600, "sprint": 1980 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -5
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 240, "radius": 340, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 13, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 13, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_Lich.DinoDropInventoryComponent_Pyria_Boss_Lich"
+					}
+				],
+				"baseXP": 40000
+			}
+		},
+		{
 			"name": "Medusa",
 			"bp": "/Game/Mods/Pyria/Creatures/Avatars/Medusa_Character_bp_Orphan_Avatar.Medusa_Character_bp_Orphan_Avatar_C",
 			"dinoNameTag": "Medusa",
@@ -761,14 +872,12 @@
 			"targetingTeamName": "Herbivores_Large_Aggressive",
 			"mass": 1000,
 			"dragWeight": 1200,
-			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"doStepDamage",
 				"isBigDino",
-				"isBossDino",
 				"isCarnivore"
 			],
 			"falling": {
@@ -816,14 +925,12 @@
 			"targetingTeamName": "Herbivores_Large_Aggressive",
 			"mass": 1000,
 			"dragWeight": 1200,
-			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"doStepDamage",
 				"isBigDino",
-				"isBossDino",
 				"isCarnivore"
 			],
 			"falling": {
@@ -906,7 +1013,7 @@
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "FighterBasicAttacks", "interval": 0.08, "dmg": 48, "radius": 200, "stamina": 5 },
-					{ "name": "FighterGapCloser", "interval": 9, "dmg": 82, "radius": 400, "stamina": 5 },
+					{ "name": "FighterGapCloser", "interval": 12, "dmg": 82, "radius": 400, "stamina": 5 },
 					{ "name": "FighterPalmStrike", "interval": 10, "dmg": 110, "radius": 650, "stamina": 5 },
 					{ "name": "FighterStomp", "interval": 15, "dmg": 95, "radius": 500, "stamina": 5 },
 					{ "name": "SoldierBasicAttacks", "interval": 0.5, "dmg": 56, "radius": 250, "stamina": 5 },
@@ -3123,62 +3230,6 @@
 			}
 		},
 		{
-			"name": "Archdemon (Admin Avatar)",
-			"bp": "/Game/Mods/Pyria/Creatures/NearKin/ArchDemon/ArchDemon_Character_BP_Admin.ArchDemon_Character_BP_Admin_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 1000,
-			"dragWeight": 1200,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isBossDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 1400 }
-			},
-			"movementD": {
-				"walk": { "base": 350, "sprint": 1400 }
-			},
-			"staminaRates": { "sprint": -15 },
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 140, "radius": 600, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.4, "dmg": 110, "radius": 600, "stamina": 0 },
-					{ "name": "Bite", "interval": 15, "dmg": 200, "radius": 400, "stamina": 0 },
-					{ "name": "Bite", "interval": 40, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Bite", "interval": 40, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_ArchDemon.DinoDropInventoryComponent_Pyria_Boss_ArchDemon"
-					}
-				],
-				"engrams": [
-					"PrimalItemArmor_BasiliskSaddlePyria_UG_C",
-					"PrimalItemArmor_DragonKinship_UG_C",
-					"PrimalItemConsumable_90sPotion_C"
-				],
-				"baseXP": 30
-			}
-		},
-		{
 			"name": "Centaur",
 			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Centaur/Female/Centaur_Character_BP.Centaur_Character_BP_C",
 			"dinoNameTag": "LadyCentaur",
@@ -4272,7 +4323,7 @@
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "FighterBasicAttacks", "interval": 0.08, "dmg": 48, "radius": 200, "stamina": 5 },
-					{ "name": "FighterGapCloser", "interval": 9, "dmg": 82, "radius": 400, "stamina": 5 },
+					{ "name": "FighterGapCloser", "interval": 12, "dmg": 82, "radius": 400, "stamina": 5 },
 					{ "name": "FighterPalmStrike", "interval": 10, "dmg": 110, "radius": 650, "stamina": 5 },
 					{ "name": "FighterStomp", "interval": 15, "dmg": 95, "radius": 500, "stamina": 5 },
 					{ "name": "SoldierBasicAttacks", "interval": 0.5, "dmg": 56, "radius": 250, "stamina": 5 },
@@ -4663,57 +4714,6 @@
 				],
 				"baseXP": 40000
 			}
-		},
-		{
-			"name": "Benevolent Lich",
-			"bp": "/Game/Mods/Pyria/Creatures/Undead/Lich/Lich_Character_bp_friendly.Lich_Character_bp_friendly_C",
-			"dinoNameTag": "LichFriendly",
-			"customTag": "LichFriendly",
-			"targetingTeamName": "Herbivores_Large",
-			"mass": 400,
-			"dragWeight": 550,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"flyerAllowRidingInCaves",
-				"isBigDino",
-				"isBossDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 462 },
-				"fly": { "base": 600, "sprint": 792 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 350, "sprint": 1155 },
-				"fly": { "base": 600, "sprint": 1980 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -5
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 95, "radius": 340, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 10, "dmg": 340, "radius": 700, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 14, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 14, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 40000 }
 		},
 		{
 			"name": "Sentinel",
@@ -6757,8 +6757,8 @@
 			}
 		},
 		{
-			"name": "Stygian Drachenthorn",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/DrachenThorne/DrachenThorn_Character_bp.DrachenThorn_Character_bp_C",
+			"name": "Stygian Drachenthorne",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/DrachenThorne/Wyvern_Character_BP_Drachenthorne.Wyvern_Character_BP_Drachenthorne_C",
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -6766,44 +6766,67 @@
 			"dragWeight": 555,
 			"flags": [
 				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"flyerAllowRidingInCaves",
+				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
 				"isFlyerDino",
 				"isTameable"
 			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				]
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 450, "sprint": 1125 },
-				"fly": { "base": 1600, "sprint": 4000 },
-				"swim": { "base": 300 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 1125 },
-				"fly": { "base": 1600, "sprint": 4000 },
-				"swim": { "base": 300 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementR": {
+				"walk": { "base": 572.7, "sprint": 1157.5 },
+				"fly": { "base": 2490, "sprint": 3355.3 },
+				"swim": { "base": 2490 }
 			},
 			"staminaRates": {
-				"sprint": -15,
-				"swimOrFly": -5
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 400, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
 					{
-						"name": "Breath", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0,
+						"name": "Lightning", "interval": 6.5, "dmg": 0, "radius": 0, "stamina": 160,
 						"isProjectile": true
-					}
+					},
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 },
+					{ "name": "Roar", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roll", "interval": 15, "dmg": 0, "radius": 0, "stamina": 260 }
 				]
 			},
 			"death": {
@@ -6811,10 +6834,10 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_LightningWyvern.DinoDropInventoryComponent_Carnivore_Huge_LightningWyvern"
 					}
 				],
-				"baseXP": 30
+				"baseXP": 120
 			}
 		},
 		{
@@ -8026,15 +8049,21 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 350, "sprint": 1001 }
+				"walk": { "base": 350, "sprint": 1001 },
+				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"walk": { "base": 350, "sprint": 1001 }
+				"walk": { "base": 350, "sprint": 1001 },
+				"swim": { "base": 600 }
 			},
 			"movementR": {
-				"walk": { "base": 350, "sprint": 2282.3 }
+				"walk": { "base": 350, "sprint": 2282.3 },
+				"swim": { "base": 600 }
 			},
-			"staminaRates": { "sprint": -20 },
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -9039,6 +9068,57 @@
 					{
 						"chance": 1,
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Werewolf",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Werewolf/PyriaWerewolf_Character_bp.PyriaWerewolf_Character_bp_C",
+			"dinoNameTag": "Direwolf",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 2000 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 2000 }
+			},
+			"staminaRates": { "sprint": -20 },
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Claws", "interval": 0.4, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WolfPunch", "interval": 8, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "GearAttacks", "interval": 0.4, "dmg": 50, "radius": 250, "stamina": 0 },
+					{ "name": "Guard", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
 					}
 				],
 				"baseXP": 30
