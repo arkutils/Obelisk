@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "678.13.1630834376",
+	"version": "678.13.1630942340",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -5472,7 +5472,6 @@
 				"canBeTorpid",
 				"doStepDamage",
 				"isCarnivore",
-				"preventNeuter",
 				"isTameable"
 			],
 			"leveling": {
@@ -6925,15 +6924,15 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 250, "sprint": 1500 },
+				"walk": { "base": 250, "sprint": 1900 },
 				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"walk": { "base": 250, "sprint": 1500 },
+				"walk": { "base": 250, "sprint": 1900 },
 				"swim": { "base": 600 }
 			},
 			"staminaRates": {
-				"sprint": 0,
+				"sprint": 10,
 				"swimOrFly": -24
 			},
 			"attack": {
@@ -6941,11 +6940,11 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "BiteNomFury", "interval": 0, "dmg": 45, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 3, "dmg": 35, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0, "dmg": 35, "radius": 270, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 12, "dmg": 40, "radius": 250, "stamina": 100 },
-					{ "name": "BiteNomFury", "interval": 10, "dmg": 30, "radius": 600, "stamina": 0 }
+					{ "name": "Fire", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Tail", "interval": 3, "dmg": 45, "radius": 200, "stamina": 0 },
+					{ "name": "Claw", "interval": 0, "dmg": 35, "radius": 270, "stamina": 0 },
+					{ "name": "BleedClaw", "interval": 12, "dmg": 40, "radius": 250, "stamina": 100 },
+					{ "name": "Screm", "interval": 10, "dmg": 30, "radius": 600, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -9075,7 +9074,7 @@
 		},
 		{
 			"name": "Werewolf",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Werewolf/PyriaWerewolf_Character_bp.PyriaWerewolf_Character_bp_C",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Werewolf/PyrWerewolf_Character_bp.PyrWerewolf_Character_bp_C",
 			"dinoNameTag": "Direwolf",
 			"customTag": "Offhand",
 			"targetingTeamName": "Carnivores_Medium",
@@ -9088,8 +9087,7 @@
 				"canBeTorpid",
 				"canDrag",
 				"isBigDino",
-				"isCarnivore",
-				"isTameable"
+				"isCarnivore"
 			],
 			"falling": {
 				"dmgMult": 0,
