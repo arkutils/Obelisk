@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "678.10.1630044081",
+	"version": "678.37.1631239171",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -5885,6 +5885,76 @@
 					}
 				],
 				"baseXP": 60
+			}
+		},
+		{
+			"name": "Eternal Alpha Stego",
+			"bp": "/Game/Mods/AE/Dinos/Alpha/Stego/Stego_Character_BP_Alpha.Stego_Character_BP_Alpha_C",
+			"dinoNameTag": "Stego_Alpha_TLC",
+			"customTag": "Stego",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 260,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 725,
+				"costLevel": 55,
+				"timeBase": 5075,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1430 },
+				"swim": { "base": 500, "sprint": 3575 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 2200 },
+				"swim": { "base": 1000, "sprint": 5500 }
+			},
+			"movementR": {
+				"walk": { "base": 1600, "sprint": 4400 },
+				"swim": { "base": 2000, "sprint": 11000 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 1200,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 1200, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 1200, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 5
 			}
 		},
 		{
@@ -32856,6 +32926,69 @@
 			}
 		},
 		{
+			"name": "Eternal Prime Mammoth",
+			"bp": "/Game/Mods/AE/Dinos/Prime/Mammoth/Mammoth_Character_BP_Prime.Mammoth_Character_BP_Prime_C",
+			"dinoNameTag": "Mammoth_Prime",
+			"customTag": "Mammoth",
+			"targetingTeamName": "Herbivores",
+			"mass": 340,
+			"dragWeight": 400,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 960 },
+				"swim": { "base": 400, "sprint": 1920 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 960 },
+				"swim": { "base": 400, "sprint": 1920 }
+			},
+			"movementR": {
+				"walk": { "base": 1600, "sprint": 7680 },
+				"swim": { "base": 1600, "sprint": 15360 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 6300,
+				"defaultSwingRadius": 500,
+				"attacks": [
+					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 3200, "radius": 500, "stamina": 20 },
+					{ "name": "Trunk Grab", "interval": 1.5, "dmg": 0, "radius": 500, "stamina": 0 },
+					{ "name": "Trumpet", "interval": 60, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "Swimming Attack", "interval": 1, "dmg": 3300, "radius": 500, "stamina": 20 },
+					{ "name": "Stomp", "interval": 1.5, "dmg": 4000, "radius": 800, "stamina": 40 },
+					{ "name": "Carried Tusk Swipe", "interval": 0.5, "dmg": 5000, "radius": 500, "stamina": 20 }
+				]
+			},
+			"death": { "baseXP": 8 }
+		},
+		{
 			"name": "Prime Mantis",
 			"bp": "/Game/Mods/AE/Dinos/Prime/Mantis/Prime_Mantis_Character_BP.Prime_Mantis_Character_BP_C",
 			"dinoNameTag": "Prime_Mantis",
@@ -34016,6 +34149,96 @@
 					}
 				],
 				"baseXP": 120
+			}
+		},
+		{
+			"name": "Eternal Prime Shadowmane",
+			"bp": "/Game/Mods/AE/Dinos/Prime/Shadowmane/LionfishLion_Character_BP_Prime_AE.LionfishLion_Character_BP_Prime_AE_C",
+			"dinoNameTag": "Lionfish Lion_Prime",
+			"customTag": "LionfishLion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 350,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 2375,
+				"costLevel": 55,
+				"timeBase": 16625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 375, "sprint": 1500 },
+				"swim": { "base": 500, "sprint": 1400 }
+			},
+			"movementD": {
+				"walk": { "base": 375, "sprint": 1875 },
+				"swim": { "base": 500, "sprint": 1750 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "RightClickMeleeComboAdjustIndex", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Female Activate Stealth", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Male Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 2500, "radius": 0, "stamina": 0 },
+					{ "name": "TriggerSoloCloak", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildTeleport", "interval": 1.2, "dmg": 2500, "radius": 400, "stamina": 25 },
+					{ "name": "Bite", "interval": 1.2, "dmg": 2500, "radius": 400, "stamina": 25 },
+					{ "name": "BiteFinisher", "interval": 1.2, "dmg": 2500, "radius": 400, "stamina": 25 },
+					{ "name": "Teleport", "interval": 0, "dmg": 2600, "radius": 0, "stamina": 0 },
+					{ "name": "MeleeCombo1", "interval": 0.2, "dmg": 2700, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo2", "interval": 0.2, "dmg": 2650, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo3", "interval": 0.2, "dmg": 2650, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo4", "interval": 0.2, "dmg": 2650, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo5", "interval": 0.2, "dmg": 2650, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo6", "interval": 0.2, "dmg": 2700, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Genesis2/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_LionfishLion.DinoDropInventoryComponent_Carnivore_Medium_LionfishLion"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 5
 			}
 		},
 		{
@@ -42364,421 +42587,6 @@
 				]
 			},
 			"death": { "baseXP": 2 }
-		},
-		{
-			"name": "Kunimasu Salmon",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/KunimasuSalmon/Kunimasu_Salmon1_Character_BP.Kunimasu_Salmon1_Character_BP_C",
-			"dinoNameTag": "KunimasuSalmon1",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 32.5,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
-			"cloning": {
-				"costBase": 2.5,
-				"costLevel": 5.5,
-				"timeBase": 17.5,
-				"timeLevel": 38.5
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 190, "sprint": 399 },
-				"swim": { "base": 190 }
-			},
-			"movementD": {
-				"walk": { "base": 190, "sprint": 399 },
-				"swim": { "base": 190 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 4,
-				"defaultSwingRadius": 78,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 4, "radius": 78, "stamina": 0 } ]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
-					}
-				],
-				"baseXP": 0.5
-			}
-		},
-		{
-			"name": "Kunimasu Salmon",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/KunimasuSalmon/Kunimasu_Salmon2_Character_BP.Kunimasu_Salmon2_Character_BP_C",
-			"dinoNameTag": "KunimasuSalmon2",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 32.5,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 190, "sprint": 399 },
-				"swim": { "base": 190 }
-			},
-			"movementD": {
-				"walk": { "base": 190, "sprint": 399 },
-				"swim": { "base": 190 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 4,
-				"defaultSwingRadius": 78,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 4, "radius": 78, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 0.5 }
-		},
-		{
-			"name": "Kunimasu Salmon",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/KunimasuSalmon/Kunimasu_Salmon3_Character_BP.Kunimasu_Salmon3_Character_BP_C",
-			"dinoNameTag": "KunimasuSalmon3",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 32.5,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 190, "sprint": 399 },
-				"swim": { "base": 190 }
-			},
-			"movementD": {
-				"walk": { "base": 190, "sprint": 399 },
-				"swim": { "base": 190 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 4,
-				"defaultSwingRadius": 78,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 4, "radius": 78, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 0.5 }
-		},
-		{
-			"name": "Latimeriidae",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/Latimeriidae/Latimeriidae1_Character_BP.Latimeriidae1_Character_BP_C",
-			"dinoNameTag": "Latimeriidae1",
-			"customTag": "",
-			"targetingTeamName": "Herbivore_Water",
-			"mass": 100,
-			"dragWeight": 25,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
-			"cloning": {
-				"costBase": 2.5,
-				"costLevel": 5.5,
-				"timeBase": 17.5,
-				"timeLevel": 38.5
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"movementD": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 5,
-				"defaultSwingRadius": 67,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 5, "radius": 67, "stamina": 0 } ]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
-					}
-				],
-				"baseXP": 0.5
-			}
-		},
-		{
-			"name": "Latimeriidae",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/Latimeriidae/Latimeriidae2_Character_BP.Latimeriidae2_Character_BP_C",
-			"dinoNameTag": "Latimeriidae2",
-			"customTag": "",
-			"targetingTeamName": "Herbivore_Water",
-			"mass": 100,
-			"dragWeight": 25,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"movementD": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 5,
-				"defaultSwingRadius": 67,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 5, "radius": 67, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 0.5 }
-		},
-		{
-			"name": "Latimeriidae",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/Latimeriidae/Latimeriidae3_Character_BP.Latimeriidae3_Character_BP_C",
-			"dinoNameTag": "Latimeriidae3",
-			"customTag": "",
-			"targetingTeamName": "Herbivore_Water",
-			"mass": 100,
-			"dragWeight": 25,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"movementD": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 5,
-				"defaultSwingRadius": 67,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 5, "radius": 67, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 0.5 }
-		},
-		{
-			"name": "Latimeriidae",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/Latimeriidae/Latimeriidae4_Character_BP.Latimeriidae4_Character_BP_C",
-			"dinoNameTag": "Latimeriidae4",
-			"customTag": "",
-			"targetingTeamName": "Herbivore_Water",
-			"mass": 100,
-			"dragWeight": 25,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"movementD": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 5,
-				"defaultSwingRadius": 67,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 5, "radius": 67, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 0.5 }
-		},
-		{
-			"name": "Latimeriidae",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/Latimeriidae/Latimeriidae5_Character_BP.Latimeriidae5_Character_BP_C",
-			"dinoNameTag": "Latimeriidae5",
-			"customTag": "",
-			"targetingTeamName": "Herbivore_Water",
-			"mass": 100,
-			"dragWeight": 25,
-			"flags": [ "canBeDragged", "canDrag", "isWaterDino", "dieIfLeftWater" ],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"movementD": {
-				"walk": { "base": 120, "sprint": 252 },
-				"swim": { "base": 150 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 5,
-				"defaultSwingRadius": 67,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 5, "radius": 67, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 0.5 }
-		},
-		{
-			"name": "Megapiranha Paranensis",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/Megapiranha_Paranensis/Megapiranha_Paranensis1_Character_BP.Megapiranha_Paranensis1_Character_BP_C",
-			"dinoNameTag": "Megapiranha_Paranensis1",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 21,
-			"flags": [
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore",
-				"isWaterDino",
-				"dieIfLeftWater"
-			],
-			"cloning": {
-				"costBase": 2.5,
-				"costLevel": 5.5,
-				"timeBase": 17.5,
-				"timeLevel": 38.5
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 250, "sprint": 1000 },
-				"swim": { "base": 150 }
-			},
-			"movementD": {
-				"walk": { "base": 250, "sprint": 1000 },
-				"swim": { "base": 150 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 22,
-				"defaultSwingRadius": 80,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 22, "radius": 80, "stamina": 0 } ]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
-					}
-				],
-				"baseXP": 1
-			}
-		},
-		{
-			"name": "Megapiranha Paranensis",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/Megapiranha_Paranensis/Megapiranha_Paranensis2_Character_BP.Megapiranha_Paranensis2_Character_BP_C",
-			"dinoNameTag": "Megapiranha_Paranensis2",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 21,
-			"flags": [
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore",
-				"isWaterDino",
-				"dieIfLeftWater"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 250, "sprint": 1000 },
-				"swim": { "base": 150 }
-			},
-			"movementD": {
-				"walk": { "base": 250, "sprint": 1000 },
-				"swim": { "base": 150 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 22,
-				"defaultSwingRadius": 80,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 22, "radius": 80, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 1 }
-		},
-		{
-			"name": "Megapiranha Paranensis",
-			"bp": "/Game/Mods/AE/Dinos/Special/TropicalOcean/Megapiranha_Paranensis/Megapiranha_Paranensis3_Character_BP.Megapiranha_Paranensis3_Character_BP_C",
-			"dinoNameTag": "Megapiranha_Paranensis3",
-			"customTag": "",
-			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
-			"mass": 100,
-			"dragWeight": 21,
-			"flags": [
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore",
-				"isWaterDino",
-				"dieIfLeftWater"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 250, "sprint": 1000 },
-				"swim": { "base": 150 }
-			},
-			"movementD": {
-				"walk": { "base": 250, "sprint": 1000 },
-				"swim": { "base": 150 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 22,
-				"defaultSwingRadius": 80,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 22, "radius": 80, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Promes Treasure Turkey",
