@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "678.13.1630942340",
+	"version": "678.46.1631784808",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -8,6 +8,17 @@
 		"title": "Pyria: Mythos Evolved"
 	},
 	"items": [
+		{
+			"name": "Eternal Blaze",
+			"description": "For characters immune to fire",
+			"bp": "/Game/Mods/Pyria/Admin/Buffs/PrimalItemConsumable_DragonFlame.PrimalItemConsumable_DragonFlame_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TrophyApexDragon_Alpha.TrophyApexDragon_Alpha",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0.1,
+			"stackSize": 100
+		},
 		{
 			"name": "Adventurer's Canteen",
 			"description": "Safely carries a large amount of water, and is reasonably lightweight. When you're a world as adventure-heavy as Pyria, knowing how to carry resources as effeciently as possible is a must.",
@@ -2631,6 +2642,31 @@
 					{ "qty": 12, "type": "PrimalItemResource_Hide_C" }
 				]
 			}
+		},
+		{
+			"name": "Necromancy Totem",
+			"description": "Place this down and fuel with mana to create a large AoE for undeads, buffing them and making them more powerful. Be warned, as even enemy undeads will be buffed.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Structures/Necromancy/BoneTotem/PrimalItemStructure_PyriaNecromancyTotem.PrimalItemStructure_PyriaNecromancyTotem_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Structures/Necromancy/BoneTotem/Text/SkeletalTotem_Icon.SkeletalTotem_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 100,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 6.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 500, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_ManaDark_C" },
+					{ "qty": 300, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 300, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"structure": "/Game/Mods/Pyria/Alchemy/Structures/Necromancy/BoneTotem/ST_SkeletalTotem.ST_SkeletalTotem_C"
 		},
 		{
 			"name": "Boom Cannon",
