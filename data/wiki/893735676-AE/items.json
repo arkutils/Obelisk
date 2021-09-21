@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "336.12.1630044081",
+	"version": "337.15.1632202755",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -8584,7 +8584,7 @@
 			"description": "A elemental crystal. Use unknown..",
 			"bp": "/Game/Mods/AE/Items/Crystals/PrimalItemConsumable_Crystal_Orange.PrimalItemConsumable_Crystal_Orange_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/AE/Core/Icons/CrystalPink.CrystalPink",
+			"icon": "/Game/Mods/AE/Core/Icons/Mod_Ark_Eternal_CrystalOrange.Mod_Ark_Eternal_CrystalOrange",
 			"type": "MiscConsumable/Medicine",
 			"weight": 0.1,
 			"stackSize": 10000,
@@ -14369,6 +14369,18 @@
 			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ]
 		},
 		{
+			"name": "Resurrected Essence",
+			"description": "Essence needed for Summoning Rituals.",
+			"bp": "/Game/Mods/AE/Items/Essences/PrimalItem_Generic_EssenceResurrected.PrimalItem_Generic_EssenceResurrected_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/Mods/AE/Core/Icons/EternalToken5.EternalToken5",
+			"type": "MiscConsumable/Medicine",
+			"weight": 0.005,
+			"stackSize": 10000,
+			"spoilsIn": 0,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ]
+		},
+		{
 			"name": "Eternal Alpha Kibble",
 			"description": "Nom nom.... Used as a crafting ingredient  NOT as a Taming Food.",
 			"bp": "/Game/Mods/AE/Items/EternalDinoFood/AlphaKibble/PrimalItemConsumable_AlphaKibble.PrimalItemConsumable_AlphaKibble_C",
@@ -19980,6 +19992,136 @@
 			}
 		},
 		{
+			"name": "Resurrected Arms",
+			"description": "Part of the skeletal frame of a golem. Aquire parts from other resurrected tames to build the final thing. ",
+			"bp": "/Game/Mods/AE/Items/ResurrectedCrafting/PrimalItemResource_ResurrectedArms.PrimalItemResource_ResurrectedArms_C",
+			"parent": "/Game/ScorchedEarth/CoreBlueprints/Resources/PrimalItemResource_Sulfur.PrimalItemResource_Sulfur_C",
+			"icon": "/Game/Mods/AE/Items/ResurrectedCrafting/ARKBone_Icon.ARKBone_Icon",
+			"type": "Resource",
+			"weight": 0.05,
+			"stackSize": 10000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItem_SummonReagent_C" },
+					{ "qty": 1, "type": "PrimalItem_Generic_EssenceResurrected_C" },
+					{ "qty": 150, "type": "PrimalItemConsumable_DinoBlood_C" },
+					{ "qty": 50, "type": "PrimalItem_EternalDinoDNA_C" },
+					{ "qty": 50, "type": "PrimalItem_DinoHeart_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 20, "type": "PrimalItemConsumable_AncientOrb_C" }
+				]
+			}
+		},
+		{
+			"name": "Resurrected Body",
+			"description": "Part of the skeletal frame of a golem. Aquire parts from other resurrected tames to build the final thing. ",
+			"bp": "/Game/Mods/AE/Items/ResurrectedCrafting/PrimalItemResource_ResurrectedBody.PrimalItemResource_ResurrectedBody_C",
+			"parent": "/Game/ScorchedEarth/CoreBlueprints/Resources/PrimalItemResource_Sulfur.PrimalItemResource_Sulfur_C",
+			"icon": "/Game/Mods/AE/Items/ResurrectedCrafting/ARKBone_Icon.ARKBone_Icon",
+			"type": "Resource",
+			"weight": 0.05,
+			"stackSize": 10000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItem_SummonReagent_C" },
+					{ "qty": 1, "type": "PrimalItem_Generic_EssenceResurrected_C" },
+					{ "qty": 150, "type": "PrimalItemConsumable_DinoBlood_C" },
+					{ "qty": 50, "type": "PrimalItem_EternalDinoDNA_C" },
+					{ "qty": 50, "type": "PrimalItem_DinoHeart_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 20, "type": "PrimalItemConsumable_AncientOrb_C" }
+				]
+			}
+		},
+		{
+			"name": "Resurrected Core",
+			"description": "Part of the skeletal frame of a golem. Aquire parts from other resurrected tames to build the final thing. ",
+			"bp": "/Game/Mods/AE/Items/ResurrectedCrafting/PrimalItemResource_ResurrectedCore.PrimalItemResource_ResurrectedCore_C",
+			"parent": "/Game/ScorchedEarth/CoreBlueprints/Resources/PrimalItemResource_Sulfur.PrimalItemResource_Sulfur_C",
+			"icon": "/Game/Mods/AE/Items/ResurrectedCrafting/ARKBone_Icon.ARKBone_Icon",
+			"type": "Resource",
+			"weight": 0.05,
+			"stackSize": 10000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItem_SummonReagent_C" },
+					{ "qty": 1, "type": "PrimalItem_Generic_EssenceResurrected_C" },
+					{ "qty": 150, "type": "PrimalItemConsumable_DinoBlood_C" },
+					{ "qty": 50, "type": "PrimalItem_EternalDinoDNA_C" },
+					{ "qty": 50, "type": "PrimalItem_DinoHeart_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 20, "type": "PrimalItemConsumable_AncientOrb_C" }
+				]
+			}
+		},
+		{
+			"name": "Resurrected Head",
+			"description": "Part of the skeletal frame of a golem. Aquire parts from other resurrected tames to build the final thing. ",
+			"bp": "/Game/Mods/AE/Items/ResurrectedCrafting/PrimalItemResource_ResurrectedHead.PrimalItemResource_ResurrectedHead_C",
+			"parent": "/Game/ScorchedEarth/CoreBlueprints/Resources/PrimalItemResource_Sulfur.PrimalItemResource_Sulfur_C",
+			"icon": "/Game/Mods/AE/Items/ResurrectedCrafting/ARKBone_Icon.ARKBone_Icon",
+			"type": "Resource",
+			"weight": 0.05,
+			"stackSize": 10000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItem_SummonReagent_C" },
+					{ "qty": 1, "type": "PrimalItem_Generic_EssenceResurrected_C" },
+					{ "qty": 150, "type": "PrimalItemConsumable_DinoBlood_C" },
+					{ "qty": 50, "type": "PrimalItem_EternalDinoDNA_C" },
+					{ "qty": 50, "type": "PrimalItem_DinoHeart_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 20, "type": "PrimalItemConsumable_AncientOrb_C" }
+				]
+			}
+		},
+		{
+			"name": "Resurrected Legs",
+			"description": "Part of the skeletal frame of a golem. Aquire parts from other resurrected tames to build the final thing. ",
+			"bp": "/Game/Mods/AE/Items/ResurrectedCrafting/PrimalItemResource_ResurrectedLegs.PrimalItemResource_ResurrectedLegs_C",
+			"parent": "/Game/ScorchedEarth/CoreBlueprints/Resources/PrimalItemResource_Sulfur.PrimalItemResource_Sulfur_C",
+			"icon": "/Game/Mods/AE/Items/ResurrectedCrafting/ARKBone_Icon.ARKBone_Icon",
+			"type": "Resource",
+			"weight": 0.05,
+			"stackSize": 10000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItem_SummonReagent_C" },
+					{ "qty": 1, "type": "PrimalItem_Generic_EssenceResurrected_C" },
+					{ "qty": 150, "type": "PrimalItemConsumable_DinoBlood_C" },
+					{ "qty": 50, "type": "PrimalItem_EternalDinoDNA_C" },
+					{ "qty": 50, "type": "PrimalItem_DinoHeart_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 20, "type": "PrimalItemConsumable_AncientOrb_C" }
+				]
+			}
+		},
+		{
 			"name": "Eternal Resurrection Stone",
 			"description": "Transfer it to creatures inventory, ride it, hit Ctrl+X and after that, creature will be resurrected upon death Must Reapply for dino that is Resurrected as it only works once then must be reapplied. Engram Learned by killing Immortals or Ghost Saber. Thanks Prome!!!!!. Keep in mind the Resurrected dino will be the level it was when you applied the stone",
 			"bp": "/Game/Mods/AE/Items/RezStone/PrimalItemResource_Eternal_RezStone.PrimalItemResource_Eternal_RezStone_C",
@@ -22751,6 +22893,34 @@
 			"statEffects": []
 		},
 		{
+			"name": "Resurrected Golem God Mode",
+			"description": "Summons a God Mode Resurrected Golem. Be Careful. ",
+			"bp": "/Game/Mods/AE/Items/SummonReagents/EndBoss/PrimalItemConsumable_Summon_ResurrectedGolem.PrimalItemConsumable_Summon_ResurrectedGolem_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/Mods/AE/Core/Icons/MatrixBlack.MatrixBlack",
+			"type": "MiscConsumable/Medicine",
+			"folders": [ "Summons", "Endboss" ],
+			"weight": 2,
+			"stackSize": 1000,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 10,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItem_DinoHeart_C" },
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_PrimeBlood_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Electronics_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 10, "type": "PrimalItem_SummonReagent_C" }
+				]
+			},
+			"statEffects": []
+		},
+		{
 			"name": "Ursa Major Hard Mode",
 			"description": "Will summon the strongest creatures ingame.\nThis  summons Ursa Major!\nBe ready! Hard Mode",
 			"bp": "/Game/Mods/AE/Items/SummonReagents/EndBoss/PrimalItemConsumable_Summon_UrsaMajor_Hard.PrimalItemConsumable_Summon_UrsaMajor_Hard_C",
@@ -23339,7 +23509,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/AE/Core/Icons/MatrixBlue.MatrixBlue",
 			"type": "MiscConsumable/Medicine",
-			"folders": [ "Summons", "Other" ],
+			"folders": [ "Summons", "Endboss" ],
 			"weight": 2,
 			"stackSize": 1000,
 			"spoilsIn": 0,
@@ -23395,7 +23565,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/AE/Core/Icons/MatrixPurple.MatrixPurple",
 			"type": "MiscConsumable/Medicine",
-			"folders": [ "Summons", "Other" ],
+			"folders": [ "Summons", "Endboss" ],
 			"weight": 2,
 			"stackSize": 1000,
 			"spoilsIn": 0,
@@ -23438,6 +23608,33 @@
 					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 100, "type": "PrimalItemResource_Electronics_C" },
 					{ "qty": 100, "type": "PrimalItemResource_Polymer_C" }
+				]
+			},
+			"statEffects": []
+		},
+		{
+			"name": "Resurrected Golem Summon Reagent",
+			"description": "Will summon a tamed Resurrected Golem",
+			"bp": "/Game/Mods/AE/Items/SummonReagents/Other/PrimalItemConsumable_Summon_ResurrectedGolemTame.PrimalItemConsumable_Summon_ResurrectedGolemTame_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/Mods/AE/Core/Icons/MatrixGreen.MatrixGreen",
+			"type": "MiscConsumable/Medicine",
+			"folders": [ "Summons", "Other" ],
+			"weight": 2,
+			"stackSize": 1000,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 10,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedBody_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedArms_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedCore_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedHead_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedLegs_C" }
 				]
 			},
 			"statEffects": []
@@ -24985,6 +25182,31 @@
 				]
 			},
 			"weapon": "/Game/Mods/AE/Items/Tools/PoisonPike/PrimePoisonPike/WeapPoisonPikePrime.WeapPoisonPikePrime_C"
+		},
+		{
+			"name": "Resurrected Metal Arrow",
+			"description": "Shoot a Wild Resurrected to tame it.Cannot be used on Spectrals or Bosses",
+			"bp": "/Game/Mods/AE/Items/Tools/ResurrectedArrow/PrimalItemAmmo_CompoundBowArrow_Resurrected.PrimalItemAmmo_CompoundBowArrow_Resurrected_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/AE/Items/Tools/ResurrectedArrow/MetalArrow_Icon_resurrected.MetalArrow_Icon_resurrected",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.024,
+				"time": 0.5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 3, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Polymer_C" }
+				]
+			}
 		},
 		{
 			"name": "TekRifle-Elemental Ammo-Fire",

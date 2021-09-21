@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "678.37.1631239171",
+	"version": "337.15.1632202755",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -7050,7 +7050,8 @@
 						"name": "ThrowRock", "interval": 11, "dmg": 0, "radius": 1200, "stamina": 100,
 						"isProjectile": true
 					},
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin", "interval": 1, "dmg": 4800, "radius": 600, "stamina": 30 }
 				]
 			},
 			"death": {
@@ -7120,7 +7121,8 @@
 						"name": "ThrowRock", "interval": 11, "dmg": 0, "radius": 1200, "stamina": 100,
 						"isProjectile": true
 					},
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin", "interval": 1, "dmg": 400, "radius": 600, "stamina": 30 }
 				]
 			},
 			"death": {
@@ -22309,7 +22311,8 @@
 						"name": "ThrowRock", "interval": 11, "dmg": 540000, "radius": 1200, "stamina": 100,
 						"isProjectile": true
 					},
-					{ "name": "None", "interval": 35, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "None", "interval": 35, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin", "interval": 1, "dmg": 540000, "radius": 600, "stamina": 30 }
 				]
 			},
 			"death": {
@@ -22399,7 +22402,8 @@
 						"isProjectile": true
 					},
 					{ "name": "None", "interval": 35, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "None", "interval": 45, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "None", "interval": 45, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin", "interval": 1, "dmg": 675000, "radius": 600, "stamina": 30 }
 				]
 			},
 			"death": {
@@ -22851,6 +22855,80 @@
 				]
 			},
 			"death": { "baseXP": 7 }
+		},
+		{
+			"name": "Resurrected God",
+			"bp": "/Game/Mods/AE/Dinos/EndBoss/ResurrectedBoss/ResurrectedGolem_Character_BP_Boss.ResurrectedGolem_Character_BP_Boss_C",
+			"dinoNameTag": "Resurrected_God",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 1920 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 1920 }
+			},
+			"staminaRates": { "sprint": -25 },
+			"attack": {
+				"defaultDmg": 1940000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 0.5, "dmg": 2500000, "radius": 550, "stamina": 25 },
+					{
+						"name": "ThrowRock", "interval": 3, "dmg": 2500000, "radius": 1200, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "Swipe", "interval": 2, "dmg": 2540000, "radius": 600, "stamina": 25 },
+					{ "name": "Summon Minions", "interval": 2, "dmg": 0, "radius": 0, "stamina": 250 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.227272729,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					},
+					{
+						"chance": 0.227272729,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					},
+					{
+						"chance": 0.20454545,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					},
+					{
+						"chance": 0.181818186,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					},
+					{
+						"chance": 0.159090907,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					}
+				],
+				"baseXP": 50
+			}
 		},
 		{
 			"name": "Ursa Major(Hard Mode)",
@@ -24960,12 +25038,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 150,
+				"defaultDmg": 350,
 				"defaultSwingRadius": 140,
 				"attacks": [
-					{ "name": "None", "interval": 0.55, "dmg": 150, "radius": 140, "stamina": 0 },
-					{ "name": "Sonar", "interval": 0.55, "dmg": 150, "radius": 140, "stamina": 0 },
-					{ "name": "Frighten", "interval": 120, "dmg": 150, "radius": 140, "stamina": 0 }
+					{ "name": "None", "interval": 0.55, "dmg": 350, "radius": 140, "stamina": 0 },
+					{ "name": "Sonar", "interval": 0.55, "dmg": 350, "radius": 140, "stamina": 0 },
+					{ "name": "Frighten", "interval": 120, "dmg": 350, "radius": 140, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -26507,6 +26585,82 @@
 			}
 		},
 		{
+			"name": "Ghost JellyFish",
+			"bp": "/Game/Mods/AE/Dinos/Ghost/JellyFish/Ghost_JellyFish_Character_BP.Ghost_JellyFish_Character_BP_C",
+			"dinoNameTag": "Ghost_JellyFish",
+			"customTag": "Alpha_Wyvern",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 15, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 570.4 },
+				"fly": { "base": 400, "sprint": 570.4 },
+				"swim": { "base": 400, "sprint": 570.4 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2070 },
+				"fly": { "base": 900, "sprint": 2070 },
+				"swim": { "base": 900, "sprint": 2070 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 4500,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "None", "interval": 0.15, "dmg": 4500, "radius": 200, "stamina": 0 },
+					{ "name": "None", "interval": 15, "dmg": 4500, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.333333333,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Mega.DinoDropInventoryComponent_Carnivore_Huge_Mega"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 12
+			}
+		},
+		{
 			"name": "Ghost Raptor",
 			"bp": "/Game/Mods/AE/Dinos/Ghost/Raptor/Ghost_Raptor_Character_BP.Ghost_Raptor_Character_BP_C",
 			"dinoNameTag": "Ghost_Raptor",
@@ -27870,7 +28024,8 @@
 						"name": "ThrowRock", "interval": 11, "dmg": 50000, "radius": 1200, "stamina": 100,
 						"isProjectile": true
 					},
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin", "interval": 1, "dmg": 4200, "radius": 600, "stamina": 30 }
 				]
 			},
 			"death": {
@@ -35236,7 +35391,10 @@
 						"name": "Breathe_Lightning", "interval": 6.5, "dmg": 0, "radius": 0, "stamina": 125,
 						"isProjectile": true
 					},
-					{ "name": "Breathe_Fire", "interval": 5, "dmg": 0, "radius": 0, "stamina": 125 }
+					{
+						"name": "Breath Poison", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					}
 				]
 			},
 			"death": {
@@ -35410,6 +35568,7 @@
 			"dragWeight": 1000,
 			"flags": [
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"doStepDamage",
@@ -35423,7 +35582,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 5,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -35524,7 +35683,13 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 222,
 			"dragWeight": 250,
-			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
 			"leveling": { "wildForcedLevel": 600 },
 			"cloning": {
 				"costBase": 2.5,
@@ -35533,7 +35698,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 3,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -35850,7 +36015,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 3,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -35943,6 +36108,55 @@
 			}
 		},
 		{
+			"name": "Resurrected Golem",
+			"bp": "/Game/Mods/AE/Dinos/Resurrected/Golem/ResurrectedGolem_Character_BP.ResurrectedGolem_Character_BP_C",
+			"dinoNameTag": "ResurrectedGolem",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "wildForcedLevel": 600 },
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 1920 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 1920 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 100000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 0.5, "dmg": 100000, "radius": 550, "stamina": 25 },
+					{
+						"name": "ThrowRock", "interval": 4, "dmg": 100000, "radius": 1200, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "Swipe", "interval": 1.5, "dmg": 100000, "radius": 600, "stamina": 25 }
+				]
+			},
+			"death": { "baseXP": 50 }
+		},
+		{
 			"name": "Resurrected Quetzal",
 			"bp": "/Game/Mods/AE/Dinos/Resurrected/Quetz/Resurrected_Quetz_Character_BP.Resurrected_Quetz_Character_BP_C",
 			"dinoNameTag": "Resurrected_Quetz",
@@ -35953,6 +36167,7 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"isBigDino",
@@ -35966,7 +36181,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 5,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -36014,7 +36229,13 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
-			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
 			"leveling": { "wildForcedLevel": 600 },
 			"cloning": {
 				"costBase": 2.5,
@@ -36023,7 +36244,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 3,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -36120,6 +36341,65 @@
 			"dragWeight": 550,
 			"flags": [
 				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": { "wildForcedLevel": 600 },
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 772.5, "sprint": 1104.7 }
+			},
+			"movementD": {
+				"walk": { "base": 772.5, "sprint": 2209.3 }
+			},
+			"staminaRates": { "sprint": -20 },
+			"attack": {
+				"defaultDmg": 4500,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "None", "interval": 0.4, "dmg": 4500, "radius": 300, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 4500, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.4, "dmg": 4500, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					}
+				],
+				"baseXP": 720
+			}
+		},
+		{
+			"name": "Spectral Resurrected Rex",
+			"bp": "/Game/Mods/AE/Dinos/Resurrected/Rex/SpectralResurrected_Rex_Character_BP.SpectralResurrected_Rex_Character_BP_C",
+			"dinoNameTag": "Resurrected_Rex",
+			"customTag": "Alpha_Rex",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
 				"canBeDragged",
 				"canDrag",
 				"doStepDamage",
@@ -36171,6 +36451,78 @@
 		{
 			"name": "Resurrected Rock Drake",
 			"bp": "/Game/Mods/AE/Dinos/Resurrected/RockDrake/Resurrected_RockDrake_Character_BP.Resurrected_RockDrake_Character_BP_C",
+			"dinoNameTag": "Resurrected_RockDrake",
+			"customTag": "RockDrake",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 10000,
+			"dragWeight": 425,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"doStepDamage",
+				"isCarnivore",
+				"preventNeuter"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 20, "max": 30 } ]
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 55,
+				"timeBase": 17.5,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 650, "sprint": 1820 },
+				"swim": { "base": 600, "sprint": 840 }
+			},
+			"movementD": {
+				"walk": { "base": 650, "sprint": 2047.5 },
+				"swim": { "base": 600, "sprint": 945 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 600,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 4400, "radius": 600, "stamina": 20 },
+					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 4400, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 4400, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 4400, "radius": 900, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_RockDrake.DinoDropInventoryComponent_Carnivore_Large_RockDrake"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					}
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Spectral Resurrected Rock Drake",
+			"bp": "/Game/Mods/AE/Dinos/Resurrected/RockDrake/SpectralResurrected_RockDrake_Character_BP.SpectralResurrected_RockDrake_Character_BP_C",
 			"dinoNameTag": "Resurrected_RockDrake",
 			"customTag": "RockDrake",
 			"targetingTeamName": "Carnivores_High",
@@ -36313,8 +36665,138 @@
 			}
 		},
 		{
+			"name": "Spectral Resurrected Spino",
+			"bp": "/Game/Mods/AE/Dinos/Resurrected/Spino/SpectralResurrected_Spino_Character_BP.SpectralResurrected_Spino_Character_BP_C",
+			"dinoNameTag": "Resurrected_Spino",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 20, "max": 30 } ]
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100, "sprint": 4180 }
+			},
+			"movementD": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100, "sprint": 4180 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 4500,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 4500, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 4500, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 4500, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 4500, "radius": 420, "stamina": 12 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.333333333,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Spino.DinoDropInventoryComponent_Carnivore_Huge_Spino"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					}
+				],
+				"baseXP": 60
+			}
+		},
+		{
 			"name": "Resurrected Stego",
 			"bp": "/Game/Mods/AE/Dinos/Resurrected/Stego/Resurrected_Stego_Character_BP.Resurrected_Stego_Character_BP_C",
+			"dinoNameTag": "Resurrected_Stego",
+			"customTag": "Stego",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 260,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino"
+			],
+			"leveling": { "wildForcedLevel": 600 },
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 170.2, "sprint": 599 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 76.6, "sprint": 210.6 },
+				"swim": { "base": 135 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 3000,
+				"defaultSwingRadius": 450,
+				"attacks": [ { "name": "Melee", "interval": 0.5, "dmg": 3000, "radius": 460, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Spectral Resurrected Stego",
+			"bp": "/Game/Mods/AE/Dinos/Resurrected/Stego/SpectralResurrected_Stego_Character_BP.SpectralResurrected_Stego_Character_BP_C",
 			"dinoNameTag": "Resurrected_Stego",
 			"customTag": "Stego",
 			"targetingTeamName": "Carnivores_High",
@@ -36366,10 +36848,10 @@
 		},
 		{
 			"name": "Resurrected Therizinosaurus",
-			"bp": "/Game/Mods/AE/Dinos/Resurrected/Therizino/Ressurected_Therizino_Character_BP.Ressurected_Therizino_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Resurrected/Therizino/Resurrected_Therizino_Character_BP.Resurrected_Therizino_Character_BP_C",
 			"dinoNameTag": "Resurrected_Therizinosaurus",
 			"customTag": "Alpha_Therizinosaurus",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"targetingTeamName": "Carnivores_High",
 			"mass": 222,
 			"dragWeight": 250,
 			"flags": [ "allowRiding", "canBeDragged", "canDrag", "doStepDamage" ],
@@ -36381,7 +36863,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -36427,6 +36909,67 @@
 		{
 			"name": "Resurrected Trike",
 			"bp": "/Game/Mods/AE/Dinos/Resurrected/Trike/Resurrected_Trike_Character_BP.Resurrected_Trike_Character_BP_C",
+			"dinoNameTag": "Resurrected_Trike",
+			"customTag": "Trike",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino"
+			],
+			"leveling": { "wildForcedLevel": 600 },
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 195.2, "sprint": 790.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 123, "sprint": 368.9 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 3000,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "None", "interval": 0.63, "dmg": 3000, "radius": 430, "stamina": 0 },
+					{ "name": "None", "interval": 35, "dmg": 3000, "radius": 430, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					}
+				],
+				"baseXP": 24
+			}
+		},
+		{
+			"name": "Spectral Resurrected Trike",
+			"bp": "/Game/Mods/AE/Dinos/Resurrected/Trike/SpectralResurrected_Trike_Character_BP.SpectralResurrected_Trike_Character_BP_C",
 			"dinoNameTag": "Resurrected_Trike",
 			"customTag": "Trike",
 			"targetingTeamName": "Carnivores_High",
@@ -36482,6 +37025,82 @@
 		{
 			"name": "Resurrected Wyvern",
 			"bp": "/Game/Mods/AE/Dinos/Resurrected/Wyvern/Resurrected_Wyvern_Character_BP.Resurrected_Wyvern_Character_BP_C",
+			"dinoNameTag": "Resurrected_Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": { "wildForcedLevel": 600 },
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1035, "sprint": 1195.4 },
+				"fly": { "base": 4500, "sprint": 3465 },
+				"swim": { "base": 4500 }
+			},
+			"movementD": {
+				"walk": { "base": 1035, "sprint": 1195.4 },
+				"fly": { "base": 4500, "sprint": 3465 },
+				"swim": { "base": 4500 }
+			},
+			"movementR": {
+				"walk": { "base": 1035, "sprint": 2390.8 },
+				"fly": { "base": 4500, "sprint": 6930 },
+				"swim": { "base": 4500 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 4000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 4000, "radius": 495, "stamina": 10 },
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 125 },
+					{ "name": "Grab", "interval": 1, "dmg": 4000, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 4000, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 4000, "radius": 614, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					}
+				],
+				"engrams": [ "PrimalItemConsumable_DinoMindWipe_C" ],
+				"baseXP": 2880
+			}
+		},
+		{
+			"name": "Spectral Resurrected Wyvern",
+			"bp": "/Game/Mods/AE/Dinos/Resurrected/Wyvern/SpectralResurrected_Wyvern_Character_BP.SpectralResurrected_Wyvern_Character_BP_C",
 			"dinoNameTag": "Resurrected_Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -39815,6 +40434,108 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Boss Summoner one",
+			"bp": "/Game/Mods/AE/Dinos/Special/Summoner/Summoner_Character_BP_BossN.Summoner_Character_BP_BossN_C",
+			"dinoNameTag": "Summoner_Boss1",
+			"customTag": "Summoner",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 100,
+			"dragWeight": 1000,
+			"flags": [ "allowRiding", "canBeDragged", "isFlyerDino" ],
+			"leveling": { "wildForcedLevel": 600 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600 },
+				"fly": { "base": 425 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600 },
+				"fly": { "base": 425 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Scream", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "Projectile", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{
+						"name": "TumorProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "KnockBack", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "EyeballProjectile", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Resurrected/DinoDropInventoryComponent_Resurrected.DinoDropInventoryComponent_Resurrected"
+					}
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Elemental Alpha Summoner",
+			"bp": "/Game/Mods/AE/Dinos/Special/Summoner/Summoner_Character_BP_ElNAl.Summoner_Character_BP_ElNAl_C",
+			"dinoNameTag": "Summoner_ELAL",
+			"customTag": "Summoner",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 100,
+			"dragWeight": 1000,
+			"flags": [ "allowRiding", "canBeDragged", "isFlyerDino" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600 },
+				"fly": { "base": 425 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600 },
+				"fly": { "base": 425 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Scream", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "Projectile", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{
+						"name": "TumorProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "KnockBack", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "EyeballProjectile", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Tiger",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tiger/AE_Tiger_Character_BP.AE_Tiger_Character_BP_C",
 			"dinoNameTag": "Tiger_AE",
@@ -41737,7 +42458,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 20,
+				"dmgMult": 0,
 				"maxSpeed": 1900
 			},
 			"movementW": {
@@ -43891,7 +44612,8 @@
 						"name": "ThrowRock", "interval": 11, "dmg": 6356, "radius": 1200, "stamina": 100,
 						"isProjectile": true
 					},
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin", "interval": 1, "dmg": 6156, "radius": 600, "stamina": 30 }
 				]
 			},
 			"death": { "baseXP": 3000 }
@@ -43945,7 +44667,8 @@
 						"name": "ThrowRock", "interval": 11, "dmg": 3480, "radius": 1200, "stamina": 100,
 						"isProjectile": true
 					},
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin", "interval": 1, "dmg": 3420, "radius": 600, "stamina": 30 }
 				]
 			},
 			"death": { "baseXP": 3000 }
@@ -43999,7 +44722,8 @@
 						"name": "ThrowRock", "interval": 11, "dmg": 580, "radius": 1200, "stamina": 100,
 						"isProjectile": true
 					},
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin", "interval": 1, "dmg": 570, "radius": 600, "stamina": 30 }
 				]
 			},
 			"death": { "baseXP": 3000 }
