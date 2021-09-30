@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "337.15.1632982177",
+	"version": "337.15.1633021480",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -2932,60 +2932,6 @@
 		},
 		{
 			"name": "Medusa",
-			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Medusa/Medusa_Character_bp.Medusa_Character_bp_C",
-			"dinoNameTag": "Medusa",
-			"customTag": "Medusa",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 400,
-			"dragWeight": 550,
-			"variants": [ "Beta" ],
-			"flags": [
-				"allowMountedWeaponry",
-				"canBeDragged",
-				"canDrag",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 660 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 660 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Claws", "interval": 0.4, "dmg": 25, "radius": 200, "stamina": 0 },
-					{ "name": "Arrow", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Arrow", "interval": 8, "dmg": 80, "radius": 320, "stamina": 0 },
-					{ "name": "Arrow", "interval": 15, "dmg": 1, "radius": 600, "stamina": 0 },
-					{ "name": "Arrow", "interval": 0.4, "dmg": 42, "radius": 600, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_NeutralCorpse.DinoDropInventoryComponent_Pyria_Race_NeutralCorpse"
-					}
-				],
-				"baseXP": 30
-			}
-		},
-		{
-			"name": "Medusa",
 			"bp": "/Game/Mods/Pyria/Creatures/Mamono/Medusa/Medusa_Character_bp_Orphan.Medusa_Character_bp_Orphan_C",
 			"dinoNameTag": "Medusa",
 			"customTag": "Medusa",
@@ -4074,62 +4020,6 @@
 					}
 				],
 				"baseXP": 3
-			}
-		},
-		{
-			"name": "Kobold",
-			"bp": "/Game/Mods/Pyria/Creatures/NearKin/Kobold/Kobold_Character_BP.Kobold_Character_BP_C",
-			"dinoNameTag": "Orc",
-			"customTag": "Orc",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 195,
-			"dragWeight": 120,
-			"flags": [
-				"allowMountedWeaponry",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore"
-			],
-			"cloning": {
-				"costBase": 1450,
-				"costLevel": 55,
-				"timeBase": 10150,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 150, "sprint": 1050 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 150, "sprint": 1050 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 33,
-				"defaultSwingRadius": 160,
-				"attacks": [
-					{ "name": "None", "interval": 0.08, "dmg": 16, "radius": 250, "stamina": 5 },
-					{ "name": "None", "interval": 4, "dmg": 8, "radius": 250, "stamina": 5 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_NeutralCorpse.DinoDropInventoryComponent_Pyria_Race_NeutralCorpse"
-					}
-				],
-				"baseXP": 6
 			}
 		},
 		{
@@ -6774,7 +6664,8 @@
 				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino"
+				"isFlyerDino",
+				"isTameable"
 			],
 			"leveling": {
 				"wildLevelTable": [
@@ -7210,12 +7101,12 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0, "dmg": 40, "radius": 200, "stamina": 0 },
-					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "Flame", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Tail", "interval": 3, "dmg": 45, "radius": 200, "stamina": 0 },
-					{ "name": "Claw", "interval": 0, "dmg": 35, "radius": 270, "stamina": 0 },
+					{ "name": "Claw", "interval": 6, "dmg": 35, "radius": 270, "stamina": 0 },
 					{ "name": "BleedClaw", "interval": 12, "dmg": 40, "radius": 250, "stamina": 100 },
-					{ "name": "Screm", "interval": 10, "dmg": 30, "radius": 600, "stamina": 0 }
+					{ "name": "Screm", "interval": 15, "dmg": 30, "radius": 600, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -7282,52 +7173,6 @@
 				],
 				"baseXP": 30
 			}
-		},
-		{
-			"name": "Golden Eagle",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Eagle/Eagle_Character_BP.Eagle_Character_BP_C",
-			"dinoNameTag": "Eagle",
-			"customTag": "Eagle",
-			"targetingTeamName": "Carnivores_Low",
-			"mass": 70,
-			"dragWeight": 70,
-			"flags": [
-				"canBeDragged",
-				"canBeTorpid",
-				"canMountOnHumans",
-				"isFlyerDino",
-				"isTameable"
-			],
-			"cloning": {
-				"costBase": 700,
-				"costLevel": 55,
-				"timeBase": 4900,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 80, "sprint": 184 },
-				"fly": { "base": 800, "sprint": 1840 },
-				"swim": { "base": 800 }
-			},
-			"movementD": {
-				"walk": { "base": 80, "sprint": 184 },
-				"fly": { "base": 800, "sprint": 1840 },
-				"swim": { "base": 800 }
-			},
-			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 23,
-				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 28, "radius": 200, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Embercloak Deinonychus",
@@ -8737,52 +8582,6 @@
 			}
 		},
 		{
-			"name": "Great Horned Owl",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Owl/PyriaOwl_Character_BP.PyriaOwl_Character_BP_C",
-			"dinoNameTag": "Owl",
-			"customTag": "Owl",
-			"targetingTeamName": "Carnivores_Low",
-			"mass": 70,
-			"dragWeight": 70,
-			"flags": [
-				"canBeDragged",
-				"canBeTorpid",
-				"canMountOnHumans",
-				"isFlyerDino",
-				"isTameable"
-			],
-			"cloning": {
-				"costBase": 700,
-				"costLevel": 55,
-				"timeBase": 4900,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 600, "sprint": 1080 },
-				"swim": { "base": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 600, "sprint": 1080 },
-				"swim": { "base": 600 }
-			},
-			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 23,
-				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 27, "radius": 200, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 2 }
-		},
-		{
 			"name": "Miralis Yutyrannus",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/PyroYutie/PyroYutie_Character_bp.PyroYutie_Character_bp_C",
 			"dinoNameTag": "Yutyrannus",
@@ -9109,66 +8908,6 @@
 					}
 				],
 				"baseXP": 30
-			}
-		},
-		{
-			"name": "Tarrasque",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Tarrasque/Tarra_Character_BP.Tarra_Character_BP_C",
-			"dinoNameTag": "Tarra",
-			"customTag": "Pyria",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 165,
-			"dragWeight": 250,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore",
-				"isTameable"
-			],
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 180, "sprint": 540 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 180, "sprint": 540 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -35,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 120, "stamina": 0 },
-					{ "name": "Melee", "interval": 3, "dmg": 0, "radius": 0, "stamina": 25 },
-					{ "name": "Melee", "interval": 2, "dmg": 20, "radius": 200, "stamina": 50 },
-					{ "name": "Melee", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
-					}
-				],
-				"baseXP": 3
 			}
 		},
 		{
