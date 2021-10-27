@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/items.json",
-	"version": "339.5.7600693",
+	"version": "339.5.7605607",
 	"format": "4",
 	"items": [
 		{
@@ -1176,6 +1176,30 @@
 				"weight": 0.3,
 				"water": 0.01
 			}
+		},
+		{
+			"name": "Carnivorous Plant Seed",
+			"description": "Plant this in a viable large crop plot to grow a carnivorous plant.",
+			"bp": "/Game/Aberration/Structures/CarnivorousPlant/PrimalItemConsumable_Seed_Carnivorous_Plant.PrimalItemConsumable_Seed_Carnivorous_Plant_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumableSeed.PrimalItemConsumableSeed_C",
+			"icon": "/Game/Aberration/Icons/Plants/Carnivorous_Plant_Seed_Icon.Carnivorous_Plant_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 100,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Carnivorous Plant Trap",
+			"description": "Immobilizes humans and small creatures.",
+			"bp": "/Game/Aberration/Structures/CarnivorousPlant/PrimalItemStructure_Carnivorous_Plant_Trap.PrimalItemStructure_Carnivorous_Plant_Trap_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Aberration/Icons/Plants/Carnivorous_Plant_Icon.Carnivorous_Plant_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Defenses" ],
+			"weight": 2,
+			"stackSize": 10,
+			"spoilsIn": 3600,
+			"structure": "/Game/Aberration/Structures/CarnivorousPlant/Structure_Carnivorous_Plant_Trap.Structure_Carnivorous_Plant_Trap_C"
 		},
 		{
 			"name": "Metal Cliff Platform",
@@ -7719,6 +7743,64 @@
 			}
 		},
 		{
+			"name": "Netgun",
+			"description": "A small but powerful explosive, primarily used with rocket launchers.",
+			"bp": "/Game/Genesis2/Weapons/NetGun/PrimalItemAmmo_NetGunGen.PrimalItemAmmo_NetGunGen_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/ScorchedEarth/Icons/Weapons/NetgunAmmo_Icon.NetgunAmmo_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 3.6,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Thatch_C" }
+				]
+			},
+			"weapon": "/Game/ScorchedEarth/WeaponNetGun/WeapNetGun.WeapNetGun_C"
+		},
+		{
+			"name": "Net Gun",
+			"description": "Mankind's ultimate portable killing device.",
+			"bp": "/Game/Genesis2/Weapons/NetGun/PrimalItem_WeaponNetGunGen.PrimalItem_WeaponNetGunGen_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
+			"icon": "/Game/ScorchedEarth/Icons/Weapons/Materials/HUD_NetGun_Colorize_MIC.HUD_NetGun_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms" ],
+			"weight": 20,
+			"stackSize": 1,
+			"durability": 50,
+			"crafting": {
+				"xp": 243,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 80, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"repair": {
+				"xp": 243,
+				"time": 5,
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 30, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"weapon": "/Game/Genesis2/Weapons/NetGun/WeapNetGunGen.WeapNetGunGen_C"
+		},
+		{
 			"name": "Explosive Arrow",
 			"description": "Arrow that goes boom!",
 			"bp": "/Game/Genesis2/Weapons/TekBow/PrimalItemAmmo_ExplosiveArrow.PrimalItemAmmo_ExplosiveArrow_C",
@@ -11053,6 +11135,29 @@
 					{ "qty": 165, "type": "PrimalItemResource_Hide_C" },
 					{ "qty": 120, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 65, "type": "PrimalItemResource_ChitinOrKeratin_C" }
+				]
+			}
+		},
+		{
+			"name": "Liopleurodon Saddle",
+			"description": "Equip a Megalodon with this to ride it.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_LiopleurodonSaddle.PrimalItemArmor_LiopleurodonSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Megalodon/Saddle/HUD_MegalodonSaddle_Colorize_MIC.HUD_MegalodonSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 51.2,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
 			}
 		},
@@ -41070,6 +41175,32 @@
 					{ "qty": 5, "type": "PrimalItemResource_Electronics_C" }
 				]
 			}
+		},
+		{
+			"name": "Netgun",
+			"description": "A small but powerful explosive, primarily used with rocket launchers.",
+			"bp": "/Game/ScorchedEarth/WeaponNetGun/PrimalItemAmmo_NetGun.PrimalItemAmmo_NetGun_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
+			"icon": "/Game/ScorchedEarth/Icons/Weapons/NetgunAmmo_Icon.NetgunAmmo_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 3.6,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Gunpowder_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 12, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"weapon": "/Game/ScorchedEarth/WeaponNetGun/WeapNetGun.WeapNetGun_C"
 		},
 		{
 			"name": "Oil Jar",
