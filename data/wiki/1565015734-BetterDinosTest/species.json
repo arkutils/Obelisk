@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "339.14.1629793077",
+	"version": "339.14.1635604601",
 	"format": "4",
 	"mod": {
 		"id": "1565015734",
@@ -4360,7 +4360,10 @@
 			"attack": {
 				"defaultDmg": 30,
 				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee Wild", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Melee Tamed", "interval": 0.15, "dmg": 30, "radius": 400, "stamina": 0 }
+				]
 			},
 			"death": { "baseXP": 1 }
 		},
@@ -4401,7 +4404,10 @@
 			"attack": {
 				"defaultDmg": 30,
 				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee Wild", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 },
+					{ "name": "Melee Tamed", "interval": 0.15, "dmg": 30, "radius": 400, "stamina": 0 }
+				]
 			},
 			"death": { "baseXP": 1 }
 		},
@@ -5125,6 +5131,114 @@
 				]
 			},
 			"death": { "baseXP": 0.5 }
+		},
+		{
+			"name": "Skeletal Bronto",
+			"bp": "/Game/Mods/BetterDinosTest/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
+			"dinoNameTag": "Bronto",
+			"customTag": "Bronto",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 500,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 180, "sprint": 405 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 90,
+				"defaultSwingRadius": 1000,
+				"attacks": [ { "name": "melee", "interval": 1.2, "dmg": 90, "radius": 1000, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/BetterDinosTest/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Sauro_Bone.DinoDropInventoryComponent_Carnivore_Huge_Sauro_Bone"
+					}
+				],
+				"baseXP": 22
+			}
+		},
+		{
+			"name": "Skeletal Trike",
+			"bp": "/Game/Mods/BetterDinosTest/PrimalEarth/Dinos/Trike/Bone_Trike_Character_BP.Bone_Trike_Character_BP_C",
+			"dinoNameTag": "Trike",
+			"customTag": "Trike",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino"
+			],
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 94.5, "sprint": 283.5 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 48,
+				"defaultSwingRadius": 430,
+				"attacks": [ { "name": "None", "interval": 0.63, "dmg": 48, "radius": 430, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/BetterDinosTest/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Trike_Skel.DinoDropInventoryComponent_Trike_Skel"
+					}
+				],
+				"baseXP": 4
+			}
 		},
 		{
 			"name": "Purlovia",
@@ -6240,6 +6354,66 @@
 				"isFlyerDino",
 				"isTameable"
 			],
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"fly": { "base": 455, "sprint": 1801.8 },
+				"swim": { "base": 390 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 965.2 },
+				"fly": { "base": 455, "sprint": 1501.5 },
+				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.4, "dmg": 9, "radius": 220, "stamina": 5 },
+					{ "name": "BuckKick", "interval": 0.4, "dmg": 11, "radius": 220, "stamina": 100 },
+					{ "name": "Whinney", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "Flying", "interval": 0.4, "dmg": 15, "radius": 300, "stamina": 0 },
+					{ "name": "Trigger", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 1 }
+		},
+		{
+			"name": "R-Unicorn",
+			"bp": "/Game/Mods/BetterDinosTest/Unicorn/Equus_Character_BP_Unicorn_Eden.Equus_Character_BP_Unicorn_Eden_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Equus",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 175,
+			"dragWeight": 125,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
 			"cloning": {
 				"costBase": 1100,
 				"costLevel": 55,

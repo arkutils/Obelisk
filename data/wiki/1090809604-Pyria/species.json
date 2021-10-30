@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "338.35.1635033751",
+	"version": "339.14.1635624232",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -1007,7 +1007,7 @@
 				"swim": { "base": 240 }
 			},
 			"staminaRates": {
-				"sprint": -30,
+				"sprint": -15,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -2269,6 +2269,116 @@
 					{ "name": "Smash", "interval": 5, "dmg": 150, "radius": 300, "stamina": 0 },
 					{ "name": "CrushGrip", "interval": 15, "dmg": 180, "radius": 1000, "stamina": 0 },
 					{ "name": "Bite", "interval": 7, "dmg": 0, "radius": 0, "stamina": 200 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Elemental_GlacierGolem.DinoDropInventoryComponent_Pyria_Elemental_GlacierGolem"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Lava Elemental",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/LavaElemental/LavaElemental_Character_BP.LavaElemental_Character_BP_C",
+			"dinoNameTag": "Golem",
+			"customTag": "Pyria",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 900 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 900 }
+			},
+			"staminaRates": { "sprint": -10 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Punch", "interval": 0.4, "dmg": 80, "radius": 400, "stamina": 0 },
+					{ "name": "Slap", "interval": 3, "dmg": 50, "radius": 400, "stamina": 0 },
+					{ "name": "Meteor Punch", "interval": 20, "dmg": 200, "radius": 400, "stamina": 150 },
+					{ "name": "FarReach", "interval": 5, "dmg": 80, "radius": 400, "stamina": 0 },
+					{ "name": "LavaSweep", "interval": 5, "dmg": 80, "radius": 400, "stamina": 45 },
+					{ "name": "Block", "interval": 30, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Erupting", "interval": 30, "dmg": 0, "radius": 0, "stamina": 125 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Elemental_GlacierGolem.DinoDropInventoryComponent_Pyria_Elemental_GlacierGolem"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Lava Elemental",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/LavaElemental/LavaElemental_Character_BP_Created.LavaElemental_Character_BP_Created_C",
+			"dinoNameTag": "Golem",
+			"customTag": "Pyria",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 900 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 900 }
+			},
+			"staminaRates": { "sprint": -10 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Punch", "interval": 0.4, "dmg": 80, "radius": 400, "stamina": 0 },
+					{ "name": "Slap", "interval": 3, "dmg": 50, "radius": 400, "stamina": 0 },
+					{ "name": "Meteor Punch", "interval": 20, "dmg": 200, "radius": 400, "stamina": 150 },
+					{ "name": "FarReach", "interval": 5, "dmg": 80, "radius": 400, "stamina": 0 },
+					{ "name": "LavaSweep", "interval": 5, "dmg": 80, "radius": 400, "stamina": 45 },
+					{ "name": "Block", "interval": 30, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Erupting", "interval": 30, "dmg": 0, "radius": 0, "stamina": 125 }
 				]
 			},
 			"death": {
@@ -4200,7 +4310,7 @@
 				"swim": { "base": 240 }
 			},
 			"staminaRates": {
-				"sprint": -30,
+				"sprint": -15,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -5399,7 +5509,7 @@
 					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 240, "radius": 0, "stamina": 0 },
 					{ "name": "Pounce_AOE", "interval": 0, "dmg": 150, "radius": 0, "stamina": 0 },
 					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 55, "radius": 900, "stamina": 20 },
-					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 45, "radius": 650, "stamina": 20 }
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 45, "radius": 650, "stamina": 50 }
 				]
 			},
 			"death": {
@@ -5442,26 +5552,26 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 525 },
-				"fly": { "base": 800, "sprint": 1540 },
+				"walk": { "base": 700 },
+				"fly": { "base": 1000, "sprint": 1500 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1050 },
-				"fly": { "base": 800, "sprint": 3080 },
+				"walk": { "base": 700, "sprint": 1400 },
+				"fly": { "base": 1000, "sprint": 3000 },
 				"swim": { "base": 300 }
 			},
-			"staminaRates": {
-				"sprint": -15,
-				"swimOrFly": -14
-			},
+			"staminaRates": { "swimOrFly": -14 },
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 32, "radius": 260, "stamina": 0 },
-					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 10, "dmg": 0, "radius": 200, "stamina": 120 }
+					{ "name": "Bite", "interval": 0.5, "dmg": 32, "radius": 260, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
+					{
+						"name": "FuckoffShotgun", "interval": 10, "dmg": 0, "radius": 200, "stamina": 120,
+						"isProjectile": true
+					}
 				]
 			},
 			"death": {
@@ -5508,26 +5618,26 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 525 },
-				"fly": { "base": 1150, "sprint": 2213.8 },
+				"walk": { "base": 700 },
+				"fly": { "base": 1150, "sprint": 1725 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1050 },
-				"fly": { "base": 1150, "sprint": 4427.5 },
+				"walk": { "base": 700, "sprint": 1400 },
+				"fly": { "base": 1150, "sprint": 3450 },
 				"swim": { "base": 300 }
 			},
-			"staminaRates": {
-				"sprint": -15,
-				"swimOrFly": -14
-			},
+			"staminaRates": { "swimOrFly": -14 },
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 350, "stamina": 0 },
-					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 4, "dmg": 0, "radius": 200, "stamina": 120 }
+					{ "name": "Bite", "interval": 0.5, "dmg": 42, "radius": 350, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
+					{
+						"name": "FuckoffShotgun", "interval": 4, "dmg": 0, "radius": 200, "stamina": 120,
+						"isProjectile": true
+					}
 				]
 			},
 			"death": {
@@ -5575,26 +5685,26 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 525 },
-				"fly": { "base": 800, "sprint": 1540 },
+				"walk": { "base": 700 },
+				"fly": { "base": 1000, "sprint": 1500 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1050 },
-				"fly": { "base": 800, "sprint": 3080 },
+				"walk": { "base": 700, "sprint": 1400 },
+				"fly": { "base": 1000, "sprint": 3000 },
 				"swim": { "base": 300 }
 			},
-			"staminaRates": {
-				"sprint": -15,
-				"swimOrFly": -14
-			},
+			"staminaRates": { "swimOrFly": -14 },
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 32, "radius": 350, "stamina": 0 },
-					{ "name": "Melee", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
-					{ "name": "Melee", "interval": 10, "dmg": 0, "radius": 200, "stamina": 120 }
+					{ "name": "Bite", "interval": 0.5, "dmg": 32, "radius": 350, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
+					{
+						"name": "FuckoffShotgun", "interval": 10, "dmg": 0, "radius": 200, "stamina": 120,
+						"isProjectile": true
+					}
 				]
 			},
 			"death": {
@@ -6624,7 +6734,19 @@
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.5, "dmg": 50, "radius": 320, "stamina": 5 },
-					{ "name": "Roar", "interval": 10, "dmg": 0, "radius": 0, "stamina": 150 }
+					{ "name": "WaterSword", "interval": 10, "dmg": 100, "radius": 400, "stamina": 150 },
+					{
+						"name": "WaterBomb", "interval": 65, "dmg": 0, "radius": 0, "stamina": 200,
+						"isProjectile": true
+					},
+					{
+						"name": "ElectricTrap", "interval": 20, "dmg": 0, "radius": 0, "stamina": 225,
+						"isProjectile": true
+					},
+					{
+						"name": "ElectricThorns", "interval": 20, "dmg": 0, "radius": 0, "stamina": 150,
+						"isProjectile": true
+					}
 				]
 			},
 			"death": {

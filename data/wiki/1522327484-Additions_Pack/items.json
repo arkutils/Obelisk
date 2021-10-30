@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "327.19.1611298465",
+	"version": "339.14.1635611589",
 	"format": "4",
 	"mod": {
 		"id": "1522327484",
@@ -29,6 +29,57 @@
 					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
 				]
+			}
+		},
+		{
+			"name": "Natural Armor",
+			"description": "The Savage Acro has natural armor.",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Blueprints/PrimalItemArmor_SavageAcro_NaturalDefense.PrimalItemArmor_SavageAcro_NaturalDefense_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmorGeneric.PrimalItemArmorGeneric_C",
+			"icon": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/DinoEntry_Acro_MIC.DinoEntry_Acro_MIC",
+			"type": "Equipment/Hat",
+			"weight": 0,
+			"stackSize": 1,
+			"durability": 50,
+			"crafting": {
+				"xp": 133.8,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Stone_C" }
+				]
+			},
+			"repair": {
+				"xp": 133.8,
+				"time": 5,
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Stone_C" }
+				]
+			}
+		},
+		{
+			"name": "Summon Savage Acro",
+			"description": "Summon the terrifying Savage Acro and attempt to Conquer it in Battle!",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Blueprints/PrimalItemConsumable_BossSummon_SavageAcro.PrimalItemConsumable_BossSummon_SavageAcro_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/SavageTextures/SavageAcro_Trophy_icon.SavageAcro_Trophy_icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Misc" ],
+			"weight": 0.25,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 50, "type": "PrimalItemResource_ApexDrop_Acro_C" } ]
 			}
 		},
 		{
@@ -73,6 +124,34 @@
 			],
 			"egg": {
 				"dinoClass": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/Acrocanthosaurus_Character_BP.Acrocanthosaurus_Character_BP_C",
+				"temperature": { "min": 43, "max": 44 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized R-Acrocanthosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Blueprints/PrimalItemConsumable_Egg_Acro_Fertilized_Gen2.PrimalItemConsumable_Egg_Acro_Fertilized_Gen2_C",
+			"parent": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Blueprints/PrimalItemConsumable_Egg_Acro_Fertilized.PrimalItemConsumable_Egg_Acro_Fertilized_C",
+			"icon": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/Acro_Egg_HUD_MIC.Acro_Egg_HUD_MIC",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 25,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/Acrocanthosaurus_Character_BP_Eden.Acrocanthosaurus_Character_BP_Eden_C",
 				"temperature": { "min": 43, "max": 44 }
 			},
 			"cooking": {
@@ -140,9 +219,74 @@
 			}
 		},
 		{
+			"name": "Ghost Acro Costume",
+			"description": "Make your Acro look like a Spoopy Ghost!",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Blueprints/PrimalItemCostume_GhostAcro.PrimalItemCostume_GhostAcro_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemCostumeGeneric.PrimalItemCostumeGeneric_C",
+			"icon": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/SavageTextures/Acro_Ghost_Icon.Acro_Ghost_Icon",
+			"type": "Equipment/Costume",
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Savage Acro Costume",
+			"description": "Makes your Acro look especially Savage!",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Blueprints/PrimalItemCostume_SavageAcro.PrimalItemCostume_SavageAcro_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemCostumeGeneric.PrimalItemCostumeGeneric_C",
+			"icon": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/SavageTextures/SavageAcro_Trophy_icon.SavageAcro_Trophy_icon",
+			"type": "Equipment/Costume",
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Acro Adrenal Gland",
+			"description": "The source of adrenaline in an Acro. Still pumping with energy, maybe it can be used for something...",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Blueprints/PrimalItemResource_ApexDrop_Acro.PrimalItemResource_ApexDrop_Acro_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/SavageTextures/AdrenalineGland.AdrenalineGland",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 100
+		},
+		{
+			"name": "Savage Acro Trophy",
+			"description": "A Trophy of the terrifying Savage Acro... Place it on a Trophy Wall-Mount!",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Blueprints/PrimalItemTrophy_SavageAcro.PrimalItemTrophy_SavageAcro_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophyGenericWall.PrimalItemTrophyGenericWall_C",
+			"icon": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/SavageTextures/SavageAcro_Trophy_icon.SavageAcro_Trophy_icon",
+			"type": "Equipment/Trophy",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Savage Acro Flag",
+			"description": "This flag is proof that you have defeated the Savage Acro!",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/SavageTextures/PrimalItemStructure_Flag_SavageAcro.PrimalItemStructure_Flag_SavageAcro_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/SavageTextures/SavageAcro_Flag_Diffuse_Icon.SavageAcro_Flag_Diffuse_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Misc" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Thatch_C" }
+				]
+			},
+			"structure": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/SavageTextures/Flag_SM_SavageAcro.Flag_SM_SavageAcro_C"
+		},
+		{
 			"name": "Archelon Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/Additions_Pack/Archelon/Dinos/PrimalItemConsumable_Egg_Archelon.PrimalItemConsumable_Egg_Archelon_C",
+			"bp": "/Game/Mods/Additions_Pack/Archelon/Blueprints/PrimalItemConsumable_Egg_Archelon.PrimalItemConsumable_Egg_Archelon_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Medium.PrimalItemConsumable_Egg_Medium_C",
 			"icon": "/Game/Mods/Additions_Pack/Archelon/Dinos/HUD_DinoEgg_Colorize_MIC_Inst_Archelon.HUD_DinoEgg_Colorize_MIC_Inst_Archelon",
 			"type": "MiscConsumable/Food",
@@ -166,7 +310,7 @@
 		{
 			"name": "Fertilized Archelon Egg",
 			"description": "",
-			"bp": "/Game/Mods/Additions_Pack/Archelon/Dinos/PrimalItemConsumable_Egg_Archelon_Fertilized.PrimalItemConsumable_Egg_Archelon_Fertilized_C",
+			"bp": "/Game/Mods/Additions_Pack/Archelon/Blueprints/PrimalItemConsumable_Egg_Archelon_Fertilized.PrimalItemConsumable_Egg_Archelon_Fertilized_C",
 			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Diplo_Fertilized.PrimalItemConsumable_Egg_Diplo_Fertilized_C",
 			"icon": "/Game/Mods/Additions_Pack/Archelon/Dinos/HUD_DinoEgg_Colorize_MIC_Inst_Archelon.HUD_DinoEgg_Colorize_MIC_Inst_Archelon",
 			"type": "MiscConsumable/Food",
@@ -192,9 +336,37 @@
 			}
 		},
 		{
+			"name": "Fertilized X-Archelon Egg",
+			"description": "",
+			"bp": "/Game/Mods/Additions_Pack/Archelon/Blueprints/PrimalItemConsumable_Egg_Archelon_Fertilized_Ocean.PrimalItemConsumable_Egg_Archelon_Fertilized_Ocean_C",
+			"parent": "/Game/Mods/Additions_Pack/Archelon/Blueprints/PrimalItemConsumable_Egg_Archelon_Fertilized.PrimalItemConsumable_Egg_Archelon_Fertilized_C",
+			"icon": "/Game/Mods/Additions_Pack/Archelon/Dinos/HUD_DinoEgg_Colorize_MIC_Inst_Archelon.HUD_DinoEgg_Colorize_MIC_Inst_Archelon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 15,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Additions_Pack/Archelon/Dinos/OceanArchelon_Character_BP.OceanArchelon_Character_BP_C",
+				"temperature": { "min": 26, "max": 29 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Archelon Saddle",
 			"description": "A saddle for your Archelon. Can seat multiple survivors!",
-			"bp": "/Game/Mods/Additions_Pack/Archelon/Dinos/PrimalItem_Armor_Archelon_Saddle.PrimalItem_Armor_Archelon_Saddle_C",
+			"bp": "/Game/Mods/Additions_Pack/Archelon/Blueprints/PrimalItem_Armor_Archelon_Saddle.PrimalItem_Armor_Archelon_Saddle_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DiplodocusSaddle.PrimalItemArmor_DiplodocusSaddle_C",
 			"icon": "/Game/PrimalEarth/Dinos/Diplodocus/SaddleNew/HUD_DiploSaddle10Seat_Colorize_MIC.HUD_DiploSaddle10Seat_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
@@ -319,6 +491,34 @@
 			}
 		},
 		{
+			"name": "Fertilized R-Brachio Egg",
+			"description": "",
+			"bp": "/Game/Mods/Additions_Pack/Brachiosaurus/Blueprints/PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_Gen2.PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_Gen2_C",
+			"parent": "/Game/Mods/Additions_Pack/Brachiosaurus/Blueprints/PrimalItemConsumable_Egg_Brachiosaurus_Fertilized.PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_C",
+			"icon": "/Game/Mods/Additions_Pack/Brachiosaurus/Dinos/brachiosaurus_Egg_HUD_MIC.brachiosaurus_Egg_HUD_MIC",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 25,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Additions_Pack/Brachiosaurus/Dinos/Brachiosaurus_Character_BP_Eden.Brachiosaurus_Character_BP_Eden_C",
+				"temperature": { "min": 28, "max": 31 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Fertilized X-Brachio Egg",
 			"description": "",
 			"bp": "/Game/Mods/Additions_Pack/Brachiosaurus/Blueprints/PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_Genesis.PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_Genesis_C",
@@ -345,6 +545,100 @@
 				"weight": 0.3,
 				"water": 0.01
 			}
+		},
+		{
+			"name": "Fertilized Woolly Brachio Egg",
+			"description": "",
+			"bp": "/Game/Mods/Additions_Pack/Brachiosaurus/Blueprints/PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_Woolly.PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_Woolly_C",
+			"parent": "/Game/Mods/Additions_Pack/Brachiosaurus/Blueprints/PrimalItemConsumable_Egg_Brachiosaurus_Fertilized.PrimalItemConsumable_Egg_Brachiosaurus_Fertilized_C",
+			"icon": "/Game/Mods/Additions_Pack/Brachiosaurus/Dinos/brachiosaurus_Egg_HUD_MIC.brachiosaurus_Egg_HUD_MIC",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 25,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Additions_Pack/Brachiosaurus/Dinos/Brachiosaurus_Character_BP_Woolly.Brachiosaurus_Character_BP_Woolly_C",
+				"temperature": { "min": 28, "max": 31 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Chibi-Acro",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_Acro.PrimalItemSkin_ChibiDino_Acro_C",
+			"parent": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_ArkAddition.PrimalItemSkin_ChibiDino_ArkAddition_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-X-Acro",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_Acro_Gen1.PrimalItemSkin_ChibiDino_Acro_Gen1_C",
+			"parent": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_Acro.PrimalItemSkin_ChibiDino_Acro_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Rare.ChibiIconMaterial_Inst_Rare",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-R-Acro",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_Acro_Gen2.PrimalItemSkin_ChibiDino_Acro_Gen2_C",
+			"parent": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_Acro.PrimalItemSkin_ChibiDino_Acro_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Rare.ChibiIconMaterial_Inst_Rare",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Savage Acro",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_Acro_Savage.PrimalItemSkin_ChibiDino_Acro_Savage_C",
+			"parent": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_Acro.PrimalItemSkin_ChibiDino_Acro_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Scorched Acro",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_Acro_Scorched.PrimalItemSkin_ChibiDino_Acro_Scorched_C",
+			"parent": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_Acro.PrimalItemSkin_ChibiDino_Acro_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Dino",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/Additions_Pack/Chibis/PrimalItemSkin_ChibiDino_ArkAddition.PrimalItemSkin_ChibiDino_ArkAddition_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
 		},
 		{
 			"name": "Concavenator Saddle",
@@ -554,6 +848,34 @@
 			}
 		},
 		{
+			"name": "Fertilized R-Cryolophosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Additions_Pack/Cryolophosaurus/Blueprints/PrimalItemConsumable_CryolophosaurusEgg_Fertilized_Gen2.PrimalItemConsumable_CryolophosaurusEgg_Fertilized_Gen2_C",
+			"parent": "/Game/Mods/Additions_Pack/Cryolophosaurus/Blueprints/PrimalItemConsumable_CryolophosaurusEgg_Fertilized.PrimalItemConsumable_CryolophosaurusEgg_Fertilized_C",
+			"icon": "/Game/Mods/Additions_Pack/Cryolophosaurus/Dinos/HUD_Cryolophosaurus_Egg_MIC.HUD_Cryolophosaurus_Egg_MIC",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 10,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 65, "useItemQuality": true, "duration": 16.25 },
+				{ "stat": "health", "value": 65, "useItemQuality": true, "duration": 16.25 },
+				{ "stat": "stamina", "value": 65, "useItemQuality": true, "duration": 16.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Additions_Pack/Cryolophosaurus/Dinos/Cryolophosaurus_Character_BP_Rockwell.Cryolophosaurus_Character_BP_Rockwell_C",
+				"temperature": { "min": 12, "max": 16 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Deinosuchus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/Additions_Pack/Deinosuchus/Blueprints/PrimalItemConsumable_Egg_Deino.PrimalItemConsumable_Egg_Deino_C",
@@ -683,6 +1005,17 @@
 					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
 				]
 			}
+		},
+		{
+			"name": "Chibi-Depths",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/Additions_Pack/Depths_Stuff/Blueprints/PrimalItemBase_ChibiDino_Depths.PrimalItemBase_ChibiDino_Depths_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
 		},
 		{
 			"name": "Xiphactinus Saddle",
