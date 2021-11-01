@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "678.10.1610061006",
+	"version": "339.14.1635796213",
 	"format": "4",
 	"mod": {
 		"id": "1587391872",
@@ -266,7 +266,7 @@
 			"bp": "/Game/Mods/FasterFlyers/Owl/Owl_Character_BP.Owl_Character_BP_C",
 			"dinoNameTag": "FFOwl",
 			"customTag": "Owl",
-			"targetingTeamName": "",
+			"targetingTeamName": "Carnivores_Medium",
 			"mass": 250,
 			"dragWeight": 250,
 			"flags": [
@@ -278,6 +278,67 @@
 				"isFlyerDino",
 				"isTameable"
 			],
+			"cloning": {
+				"costBase": 1125,
+				"costLevel": 55,
+				"timeBase": 7875,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 260, "sprint": 728 },
+				"fly": { "base": 600, "sprint": 1680 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 728 },
+				"fly": { "base": 600, "sprint": 1680 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 273, "sprint": 764.4 },
+				"fly": { "base": 630, "sprint": 1764 },
+				"swim": { "base": 315 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.6, "dmg": 25, "radius": 240, "stamina": 0 },
+					{ "name": "Encapsulate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "PredatorVision", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "R-Snow Owl",
+			"bp": "/Game/Mods/FasterFlyers/Owl/Owl_Character_BP_Eden_Child.Owl_Character_BP_Eden_Child_C",
+			"dinoNameTag": "FFOwl",
+			"customTag": "Owl",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 250,
+			"dragWeight": 250,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
 			"cloning": {
 				"costBase": 1125,
 				"costLevel": 55,
@@ -497,6 +558,71 @@
 			"death": { "baseXP": 3 }
 		},
 		{
+			"name": "Tek Quetzal",
+			"bp": "/Game/Mods/FasterFlyers/Quetz/BionicQuetz/BionicQuetz_Character_BP.BionicQuetz_Character_BP_C",
+			"dinoNameTag": "FFQuetz",
+			"customTag": "Quetz",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				]
+			},
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 478.8, "sprint": 1149.1 },
+				"fly": { "base": 665, "sprint": 1596 },
+				"swim": { "base": 665 }
+			},
+			"movementD": {
+				"walk": { "base": 360, "sprint": 684 },
+				"fly": { "base": 500, "sprint": 950 },
+				"swim": { "base": 500 }
+			},
+			"movementR": {
+				"walk": { "base": 320.4, "sprint": 578.3 },
+				"fly": { "base": 445, "sprint": 803.2 },
+				"swim": { "base": 445 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.185
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 32, "radius": 720, "stamina": 16 },
+					{ "name": "None", "interval": 1, "dmg": 32, "radius": 370, "stamina": 80 }
+				]
+			},
+			"death": { "baseXP": 18 }
+		},
+		{
 			"name": "Quetzal",
 			"bp": "/Game/Mods/FasterFlyers/Quetz/Quetz_Character_BP.Quetz_Character_BP_C",
 			"dinoNameTag": "FFQuetz",
@@ -552,6 +678,118 @@
 				]
 			},
 			"death": { "baseXP": 18 }
+		},
+		{
+			"name": "R-Quetzal",
+			"bp": "/Game/Mods/FasterFlyers/Quetz/Quetz_Character_BP_Rockwell_Child.Quetz_Character_BP_Rockwell_Child_C",
+			"dinoNameTag": "FFQuetz",
+			"customTag": "Quetz",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 478.8, "sprint": 1149.1 },
+				"fly": { "base": 665, "sprint": 1596 },
+				"swim": { "base": 665 }
+			},
+			"movementD": {
+				"walk": { "base": 360, "sprint": 684 },
+				"fly": { "base": 500, "sprint": 950 },
+				"swim": { "base": 500 }
+			},
+			"movementR": {
+				"walk": { "base": 320.4, "sprint": 578.3 },
+				"fly": { "base": 445, "sprint": 803.2 },
+				"swim": { "base": 445 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.185
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 32, "radius": 720, "stamina": 16 },
+					{ "name": "None", "interval": 1, "dmg": 32, "radius": 370, "stamina": 80 }
+				]
+			},
+			"death": { "baseXP": 18 }
+		},
+		{
+			"name": "Astrodelphis",
+			"bp": "/Game/Mods/FasterFlyers/SpaceDolphin/SpaceDolphin_Character_BP_Child.SpaceDolphin_Character_BP_Child_C",
+			"dinoNameTag": "FFAstrodelphis",
+			"customTag": "SpaceDolphin",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 190,
+			"dragWeight": 220,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"leveling": { "levelCapOffset": 50 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"fly": { "base": 700, "sprint": 1540 },
+				"swim": { "base": 700 }
+			},
+			"movementD": {
+				"fly": { "base": 2975, "sprint": 700 },
+				"swim": { "base": 2975 }
+			},
+			"movementR": {
+				"fly": { "base": 3346.9, "sprint": 787.5 },
+				"swim": { "base": 3346.9 }
+			},
+			"staminaRates": { "swimOrFly": -0.325 },
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 24, "radius": 200, "stamina": 0 },
+					{ "name": "Nudge", "interval": 0, "dmg": 1, "radius": 200, "stamina": 0 },
+					{ "name": "BlowHole", "interval": 7, "dmg": 100, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 3 }
 		},
 		{
 			"name": "X-Tapejara",
