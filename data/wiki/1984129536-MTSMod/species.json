@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "338.23.1632876340",
+	"version": "339.28.1636664445",
 	"format": "4",
 	"mod": {
 		"id": "1984129536",
@@ -169,65 +169,54 @@
 			"death": { "baseXP": 5 }
 		},
 		{
-			"name": "Managarmr",
-			"bp": "/Game/Mods/MTSMod/Managarmr/IceJumper_Character_BP_MTS.IceJumper_Character_BP_MTS_C",
-			"dinoNameTag": "Managarmr",
-			"customTag": "Managarmr",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 222,
-			"dragWeight": 250,
+			"name": "Megachelon",
+			"bp": "/Game/Mods/MTSMod/Megachelon/GiantTurtle_Character_BP_MTS.GiantTurtle_Character_BP_MTS_C",
+			"dinoNameTag": "GiantTurtle",
+			"customTag": "GiantTurtle",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 800,
+			"dragWeight": 3000,
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
-				"canDrag",
-				"isCarnivore",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
 				"isTameable"
 			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
 			"cloning": {
-				"costBase": 2350,
+				"costBase": 1850,
 				"costLevel": 55,
-				"timeBase": 16450,
+				"timeBase": 12950,
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 40,
+				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1250, "sprint": 2500 },
-				"swim": { "base": 1050, "sprint": 2415 }
+				"walk": { "base": 235, "sprint": 352.5 },
+				"swim": { "base": 650 }
 			},
 			"movementD": {
-				"walk": { "base": 1250, "sprint": 2500 },
-				"swim": { "base": 1050, "sprint": 2415 }
+				"walk": { "base": 235, "sprint": 352.5 },
+				"swim": { "base": 650 }
 			},
 			"staminaRates": {
-				"sprint": -15,
+				"sprint": -4,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 42,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "DashFwd", "interval": 1, "dmg": 10, "radius": 0, "stamina": 0 },
-					{
-						"name": "IceBreath", "interval": 10, "dmg": 15, "radius": 0, "stamina": 15,
-						"isProjectile": true
-					},
-					{ "name": "Bite", "interval": 1, "dmg": 35, "radius": 300, "stamina": 0 }
-				]
+				"defaultDmg": 80,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Bite", "interval": 0.25, "dmg": 125, "radius": 750, "stamina": 0 } ]
 			},
-			"death": {
-				"lootBagChance": 0.3,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
-					}
-				],
-				"baseXP": 18
-			}
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "X-Paraceratherium",
@@ -370,6 +359,62 @@
 				"attacks": [ { "name": "melee", "interval": 0.375, "dmg": 45, "radius": 550, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 12 }
+		},
+		{
+			"name": "Plesiosaur",
+			"bp": "/Game/Mods/MTSMod/Plesiosaur/Plesiosaur_Character_BP_MTS.Plesiosaur_Character_BP_MTS_C",
+			"dinoNameTag": "Plesiosaur",
+			"customTag": "Plesiosaur",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 1500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 1050,
+				"costLevel": 55,
+				"timeBase": 7350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 1200 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 1800, "sprint": 3600 },
+				"swim": { "base": 1800 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 250,
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 75, "radius": 250, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Fireworks.DinoDropInventoryComponent_Fireworks"
+					}
+				],
+				"baseXP": 15
+			}
 		},
 		{
 			"name": "Bunny Dodo",
@@ -1052,6 +1097,136 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "X-Spino",
+			"bp": "/Game/Mods/MTSMod/Spino/Bog_Spino_Character_BP_MTS.Bog_Spino_Character_BP_MTS_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 40, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Spino.DinoDropInventoryComponent_Carnivore_Huge_Spino"
+					}
+				],
+				"baseXP": 60
+			}
+		},
+		{
+			"name": "Aberrant Spino",
+			"bp": "/Game/Mods/MTSMod/Spino/Spino_Character_BP_Aberrant_MTS.Spino_Character_BP_Aberrant_MTS_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 40, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Spino.DinoDropInventoryComponent_Carnivore_Huge_Spino"
+					}
+				],
+				"baseXP": 60
+			}
+		},
+		{
 			"name": "Spino",
 			"bp": "/Game/Mods/MTSMod/Spino/Spino_Character_BP_MTS.Spino_Character_BP_MTS_C",
 			"dinoNameTag": "Spino",
@@ -1274,6 +1449,124 @@
 				]
 			},
 			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "X-Tapejara",
+			"bp": "/Game/Mods/MTSMod/Tapejara/Bog_Tapejara_Character_BP_MTS.Bog_Tapejara_Character_BP_MTS_C",
+			"dinoNameTag": "Tapejara",
+			"customTag": "Tapejara",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 862.4 },
+				"fly": { "base": 700, "sprint": 2464 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 245, "sprint": 392 },
+				"fly": { "base": 700, "sprint": 1120 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 275.6, "sprint": 441 },
+				"fly": { "base": 787.5, "sprint": 1260 },
+				"swim": { "base": 337.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 3 }
+		},
+		{
+			"name": "Tapejara",
+			"bp": "/Game/Mods/MTSMod/Tapejara/Tapejara_Character_BP_MTS.Tapejara_Character_BP_MTS_C",
+			"dinoNameTag": "Tapejara",
+			"customTag": "Tapejara",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 862.4 },
+				"fly": { "base": 700, "sprint": 2464 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 245, "sprint": 392 },
+				"fly": { "base": 700, "sprint": 1120 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 275.6, "sprint": 441 },
+				"fly": { "base": 787.5, "sprint": 1260 },
+				"swim": { "base": 337.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 3 }
 		},
 		{
 			"name": "Tropeognathus",
