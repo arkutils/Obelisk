@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "339.14.1635781818",
+	"version": "339.28.1636588175",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -397,6 +397,17 @@
 			"stackSize": 100
 		},
 		{
+			"name": "Lvl 3 Buff (Hope)",
+			"description": "For a very badass Nephilim.",
+			"bp": "/Game/Mods/Pyria/Admin/Buffs/PrimalItemConsumable_Lvl3Hope.PrimalItemConsumable_Lvl3Hope_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TrophyApexDragon_Alpha.TrophyApexDragon_Alpha",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0.1,
+			"stackSize": 100
+		},
+		{
 			"name": "Player Nerf",
 			"description": "Removes avatar buffs from pyria",
 			"bp": "/Game/Mods/Pyria/Admin/Buffs/PrimalItemConsumable_PlayerNerf.PrimalItemConsumable_PlayerNerf_C",
@@ -446,6 +457,17 @@
 			"bp": "/Game/Mods/Pyria/Admin/Buffs/PrimalItemConsumable_ScholarlyBuff.PrimalItemConsumable_ScholarlyBuff_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
 			"icon": "/Game/PrimalEarth/Test/SkullIcon.SkullIcon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0.1,
+			"stackSize": 100
+		},
+		{
+			"name": "Torpor Immunity",
+			"description": "Tf is sleep? You're too tired from your existential depression already.",
+			"bp": "/Game/Mods/Pyria/Admin/Buffs/PrimalItemConsumable_TorpImmunity.PrimalItemConsumable_TorpImmunity_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TrophyApexDragon_Alpha.TrophyApexDragon_Alpha",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Drugs" ],
 			"weight": 0.1,
@@ -938,7 +960,7 @@
 			"description": "The Element of Air is associated with speed, as well as agility, and even carefree or airheaded behavior. Used in spells and magic within Pyria.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_AirElement.PrimalItemResource_AirElement_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/ConditionGroggy_Icon.ConditionGroggy_Icon",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_HurricaneEssence.Icon_HurricaneEssence",
 			"type": "Resource",
 			"folders": [ "Mana Manipulation", "Elements" ],
 			"weight": 0,
@@ -971,7 +993,7 @@
 			"description": "The Element of Earth is associated pure physical strength and unyielding endurance.  Used in spells and magic within Pyria.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_EarthElement.PrimalItemResource_EarthElement_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Boulder_Icon.Boulder_Icon",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Element_Earth.Icon_Element_Earth",
 			"type": "Resource",
 			"folders": [ "Mana Manipulation", "Elements" ],
 			"weight": 0,
@@ -993,7 +1015,7 @@
 			"description": "The Element of Fire is associated with passion and anger, as well as power or willpower. Used in spells and magic within Pyria.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_FireElement.PrimalItemResource_FireElement_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Condition_Enflamed_Icon.Condition_Enflamed_Icon",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Element_Fire.Icon_Element_Fire",
 			"type": "Resource",
 			"folders": [ "Mana Manipulation", "Elements" ],
 			"weight": 0,
@@ -1015,7 +1037,7 @@
 			"description": "Ice is an element that is a sub-element or subset of Water element, with its own resistances and advantages. It is often associated with a strange mix of things: beauty, cruelty, and an impassive nature to all.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_IceElement.PrimalItemResource_IceElement_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Condition_Cold_Icon.Condition_Cold_Icon",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_ItemResource_SpiritWater.Icon_ItemResource_SpiritWater",
 			"type": "Resource",
 			"folders": [ "Mana Manipulation", "Elements" ],
 			"weight": 0,
@@ -1030,11 +1052,33 @@
 			}
 		},
 		{
+			"name": "Nature Element",
+			"description": "The Element of Nature is normally associated with aspects like beauty, growth, and maternal instict. \n\nAs such, it ranks among the best of elements for healing magic, alongside Light and Water.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_NatureElement.PrimalItemResource_NatureElement_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Element_Wind.Icon_Element_Wind",
+			"type": "Resource",
+			"folders": [ "Mana Manipulation", "Elements" ],
+			"weight": 0,
+			"stackSize": 3000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Mana_C" }
+				]
+			}
+		},
+		{
 			"name": "Water Element",
 			"description": "The Element of Water is associated with serenity, as well as calmness of mind and fluidity. Used in spells and magic within Pyria.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_WaterElement.PrimalItemResource_WaterElement_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/ConditionUnderwaterBreathing_Icon.ConditionUnderwaterBreathing_Icon",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Element_Water.Icon_Element_Water",
 			"type": "Resource",
 			"folders": [ "Mana Manipulation", "Elements" ],
 			"weight": 0,
@@ -1255,29 +1299,6 @@
 					{ "qty": 1000, "type": "PrimalItemResource_FireElement_C" },
 					{ "qty": 75, "type": "PrimalItemResource_BlackPearlDust_C" },
 					{ "qty": 725, "type": "PrimalItemResource_Mana_C" }
-				]
-			}
-		},
-		{
-			"name": "Light's Blessing",
-			"description": "Made with light mana, this item is a special spell. When used on a creature, it makes them permanently immune to charge light. Excellent for tamed Reaper Kings: if you are lucky enough to have one...",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_LightBlessing.PrimalItemConsumable_LightBlessing_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/LightsBlessing.LightsBlessing",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2000, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_BlackPearlDust_C" }
 				]
 			}
 		},
@@ -1613,41 +1634,6 @@
 			}
 		},
 		{
-			"name": "Corrupt Divine Paladin",
-			"description": "Use this to corrupt the soul of a Divine Paladin into a Dark Paladin: one of the front-runners of darkness.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaDarkPaladin.PrimalItemConsumable_CreaDarkPaladin_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CorruptPaladin.CorruptPaladin",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Summons", "Demonology" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 200,
-				"time": 40,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_PyriaSoul_Light_Paladin_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_12_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_11_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_07_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_09_C" },
-					{ "qty": 1, "type": "PrimalItemResource_CadaverHeart_C" },
-					{ "qty": 1, "type": "PrimalItemResource_CadaverLungs_C" },
-					{ "qty": 1, "type": "PrimalItemResource_CadaverBrain_C" },
-					{ "qty": 2, "type": "PrimalItemResource_CadaverEye_C" },
-					{ "qty": 100, "type": "PrimalItemResource_CadaverTissue_C" },
-					{ "qty": 120, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 50, "type": "PrimalItemResource_CadaverMuscle_C" },
-					{ "qty": 100, "type": "PrimalItemResource_Keratin_C" },
-					{ "qty": 300, "type": "PrimalItemResource_CadaverFlesh_C" },
-					{ "qty": 300, "type": "PrimalItemResource_MetalIngot_C" }
-				]
-			}
-		},
-		{
 			"name": "Create Dark Mana Reaper Drone",
 			"description": "Use an extensive dark magic spell to conjure up a loyal, permanent Dark Mana Reaper Drone. Takes a lot to craft, since you 're trying to make it permanent, and arent a dark paladin or etc....but, that doesn't mean you can't use it for good either! Kill one in the wild to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaDarkReap.PrimalItemConsumable_CreaDarkReap_C",
@@ -1796,38 +1782,6 @@
 					{ "qty": 600, "type": "PrimalItemResource_BlackPearlDust_C" },
 					{ "qty": 7500, "type": "PrimalItemResource_IceElement_C" },
 					{ "qty": 1000, "type": "PrimalItemResource_Magicrystal_C" }
-				]
-			}
-		},
-		{
-			"name": "Ascend Divine Berserker",
-			"description": "Use this to impower and send the soul of a worthy Divine Berserker up to the holy power she worships, to become a powerful Divine Eminence.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaEminence.PrimalItemConsumable_CreaEminence_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AscendDivineBerserker.AscendDivineBerserker",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Summons", "Ascending" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 200,
-				"time": 40,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_PyriaSoul_Light_Berserker_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_05_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_11_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_08_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_06_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_09_C" },
-					{ "qty": 1400, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 650, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 2300, "type": "PrimalItemResource_Silicon_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 130, "type": "PrimalItemResource_BlackPearlDust_C" }
 				]
 			}
 		},
@@ -2048,37 +2002,6 @@
 					{ "qty": 5, "type": "PrimalItemResource_Keratin_C" },
 					{ "qty": 250, "type": "PrimalItemConsumable_SpoiledMeat_C" },
 					{ "qty": 400, "type": "PrimalItemResource_Fibers_C" }
-				]
-			}
-		},
-		{
-			"name": "Ascend Divine Archer",
-			"description": "Use this to impower and send the soul of a worthy Divine Artemis up to the holy power she worships, to become a powerful Divine Zenith.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaZenith.PrimalItemConsumable_CreaZenith_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/AscendDivineArcher.AscendDivineArcher",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Summons", "Ascending" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 200,
-				"time": 40,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_PyriaSoul_Light_Archer_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_05_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_11_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_08_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_06_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
-					{ "qty": 1, "type": "PrimalItemArtifact_09_C" },
-					{ "qty": 1200, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 500, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 2300, "type": "PrimalItemResource_Silicon_C" },
-					{ "qty": 100, "type": "PrimalItemResource_Element_C" }
 				]
 			}
 		},
@@ -2776,6 +2699,29 @@
 			"stackSize": 3000
 		},
 		{
+			"name": "Ignistone",
+			"description": "A volcanic stone, embued with a mixture of fire and earth elements in a natural blend, forged within volcanic crucible.\n\nA stable form of Fire Element.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/PrimalItemResource_Ignistone.PrimalItemResource_Ignistone_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_material_DarkFlame_0001.Icon_material_DarkFlame_0001",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 600,
+				"levelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 30, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 60, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Sulfur_C" }
+				]
+			}
+		},
+		{
 			"name": "Magicrystal",
 			"description": "Crystal enchanted with arcane energy and mana, becoming a powerful conductor for it. It's normally fabricated, but can be very rarely formed naturally in nature. \n\nIt can be made into lenses, used as an electronics component, or mixed into powerful explosives",
 			"bp": "/Game/Mods/Pyria/Alchemy/Resource/PrimalItemResource_Magicrystal.PrimalItemResource_Magicrystal_C",
@@ -2784,8 +2730,7 @@
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 1000,
-			"spoilsIn": 2700,
-			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Crystal.PrimalItemResource_Crystal_C",
+			"spoilsIn": 0,
 			"crafting": {
 				"xp": 1,
 				"time": 5,
@@ -3232,6 +3177,91 @@
 					{ "qty": 7.5, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 6, "type": "PrimalItemResource_Hide_C" }
 				]
+			}
+		},
+		{
+			"name": "Spell: Grand Radia",
+			"description": "A potent light-and-nature elemental spell that radiates healing energy to the auras of all nearby. The amount scales based on your Fortitude stat, to a max.\n\nStatistics:\n-Upkeep: -1 Stam per sec + (Fortitude stat x 0.25) = Stamina Cost per Sec (max 100)\n-Potency: 20 HP per sec + (Fortitude stat x2.0)= HP regen per sec to allies (max 550)\n-Range: 6400 Units",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Healing/PrimalItemConsumable_GrandRadia.PrimalItemConsumable_GrandRadia_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Fertilizer_Huge.Icon_Fertilizer_Huge",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2000, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_NatureElement_C" }
+				]
+			}
+		},
+		{
+			"name": "Spell: Radia",
+			"description": "A light-and-nature elemental spell that radiates healing energy to the auras of all nearby. The amount scales based on your Fortitude stat, to a max.\n\nStatistics:\n-Upkeep: -1 Stam per sec + (Fortitude stat x 0.15) = Stamina Cost per Sec (max 50)\n-Potency: 10 HP per sec + (Fortitude stat x1.45)= HP regen per sec to allies (max 250)\n-Range: 3200 Units",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Healing/PrimalItemConsumable_Radia.PrimalItemConsumable_Radia_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Fertilizer_Huge.Icon_Fertilizer_Huge",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1000, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_NatureElement_C" }
+				]
+			}
+		},
+		{
+			"name": "Spell: Transfusion Touch",
+			"description": "A light-and-nature elemental spell that radiates healing energy to the mount you ride, via tendrils. It roots you in place: preventing you from dismounting, but increasing your defense in the process\n\nStatistics:\n-Upkeep: -1 Stam per sec + (Fortitude stat x 0.15) = Stamina Cost per Sec (max 50)\n-Potency: 20 HP per sec + (Fortitude stat x2)= HP regen per sec to Mount (max 550)",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Healing/PrimalItemConsumable_TransfusionTouch.PrimalItemConsumable_TransfusionTouch_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Fertilizer_Huge.Icon_Fertilizer_Huge",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1500, "type": "PrimalItemResource_ManaLight_C" },
+					{ "qty": 1500, "type": "PrimalItemResource_NatureElement_C" }
+				]
+			}
+		},
+		{
+			"name": "Spell: Self-Upkeep",
+			"description": "A maintenance spell that can only be cast as you're using other spells. It helps offset the exertion of casting.\n\nStatistics:\n-5% of Fortitude stat is converted into Stamina Regen",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/PrimalItemConsumable_Self-Upkeep.PrimalItemConsumable_Self-Upkeep_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/PrimalEarth/Effects/Test/Textures/T_arrow_up.T_arrow_up",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1000, "type": "PrimalItemResource_Mana_C" } ]
 			}
 		},
 		{

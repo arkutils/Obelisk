@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "337.15.1633292449",
+	"version": "339.28.1636588007",
 	"format": "4",
 	"mod": {
 		"id": "1734595558",
@@ -8,381 +8,6 @@
 		"title": "Pyria: The Second Chapter"
 	},
 	"species": [
-		{
-			"name": "Xolotl",
-			"bp": "/Game/Mods/Pyria2/Creatures/DragonKing/Xolotl/Xolotl_Character_BP.Xolotl_Character_BP_C",
-			"dinoNameTag": "Ryu",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 3000,
-			"dragWeight": 1000,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isAmphibious",
-				"isBigDino",
-				"isCarnivore",
-				"isWaterDino",
-				"isTameable"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 42 } ]
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 500, "sprint": 2000 },
-				"swim": { "base": 1600, "sprint": 2560 }
-			},
-			"movementD": {
-				"walk": { "base": 500, "sprint": 2000 },
-				"swim": { "base": 1600, "sprint": 2560 }
-			},
-			"staminaRates": {
-				"sprint": -60,
-				"swimOrFly": 0
-			},
-			"attack": {
-				"defaultDmg": 115,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 435, "radius": 500, "stamina": 0 },
-					{
-						"name": "BoulderThrow", "interval": 15, "dmg": 0, "radius": 0, "stamina": 830,
-						"isProjectile": true
-					},
-					{ "name": "NeccSwing", "interval": 5, "dmg": 480, "radius": 600, "stamina": 0 },
-					{ "name": "TailAttack", "interval": 0.4, "dmg": 120, "radius": 400, "stamina": 0 },
-					{ "name": "Breath", "interval": 30, "dmg": 0, "radius": 0, "stamina": 1200 },
-					{ "name": "Roar/Instruct", "interval": 0.4, "dmg": 480, "radius": 400, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 30 }
-		},
-		{
-			"name": "Fae Warrior",
-			"bp": "/Game/Mods/Pyria2/Creatures/Mamono/FaeWarrior/FaeWarrior_Character_BP.FaeWarrior_Character_BP_C",
-			"dinoNameTag": "Berserker",
-			"customTag": "Berserker",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 165,
-			"dragWeight": 120,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isTameable"
-			],
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 720 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 120, "sprint": 720 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 280, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 3 }
-		},
-		{
-			"name": "Dimorphodon",
-			"bp": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Titania.Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Titania_C",
-			"dinoNameTag": "Dimorph",
-			"customTag": "Dimorph",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 70,
-			"dragWeight": 70,
-			"variants": [ "Alpha", "Boss", "Minion" ],
-			"flags": [
-				"canBeDragged",
-				"canBeTorpid",
-				"canMountOnHumans",
-				"isBossDino",
-				"isFlyerDino",
-				"isTameable"
-			],
-			"cloning": {
-				"costBase": 700,
-				"costLevel": 55,
-				"timeBase": 4900,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 1000, "sprint": 1800 },
-				"swim": { "base": 1000 }
-			},
-			"movementD": {
-				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 1000, "sprint": 1800 },
-				"swim": { "base": 1000 }
-			},
-			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 23,
-				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 23, "radius": 200, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 2 }
-		},
-		{
-			"name": "Alpha Fulgur Carnotaurus",
-			"bp": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/MegaCarno_Character_BP_Fulgur_Titania.MegaCarno_Character_BP_Fulgur_Titania_C",
-			"dinoNameTag": "Carno",
-			"customTag": "Carno",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 222,
-			"dragWeight": 450,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "canDrag" ],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ]
-			},
-			"cloning": {
-				"costBase": 650,
-				"costLevel": 55,
-				"timeBase": 4550,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 500, "sprint": 1750 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 500, "sprint": 1750 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -15,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 42,
-				"defaultSwingRadius": 110,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 50, "radius": 180, "stamina": 0 },
-					{ "name": "Gore", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Gore", "interval": 15, "dmg": 60, "radius": 700, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 0.3,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
-					}
-				],
-				"baseXP": 660
-			}
-		},
-		{
-			"name": "Alpha Infernal Tyrannosaurus",
-			"bp": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/MegaRex_Character_BP_Infernal_Titania.MegaRex_Character_BP_Infernal_Titania_C",
-			"dinoNameTag": "Rex",
-			"customTag": "Rex",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 400,
-			"dragWeight": 1000,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ]
-			},
-			"cloning": {
-				"costBase": 2175,
-				"costLevel": 55,
-				"timeBase": 15225,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 700, "sprint": 1750 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 700, "sprint": 1750 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 170,
-				"defaultSwingRadius": 450,
-				"attacks": [
-					{ "name": "None", "interval": 0.3, "dmg": 100, "radius": 450, "stamina": 0 },
-					{ "name": "None", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "None", "interval": 0.5, "dmg": 1, "radius": 2600, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Mega_Rex.DinoDropInventoryComponent_Carnivore_Mega_Rex"
-					}
-				],
-				"baseXP": 1020
-			}
-		},
-		{
-			"name": "Orthros",
-			"bp": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/Orthros_Character_bp_Titania.Orthros_Character_bp_Titania_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 400,
-			"dragWeight": 250,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isCarnivore",
-				"isTameable"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ]
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 250, "sprint": 1500 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 250, "sprint": 1500 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 250, "stamina": 0 },
-					{ "name": "BiteFury", "interval": 7, "dmg": 43, "radius": 250, "stamina": 45 },
-					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
-					}
-				],
-				"baseXP": 30
-			}
-		},
-		{
-			"name": "Titania",
-			"bp": "/Game/Mods/Pyria2/Creatures/Mamono/Titania/Titania_Character_BP.Titania_Character_BP_C",
-			"dinoNameTag": "Zenith",
-			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 165,
-			"dragWeight": 580,
-			"flags": [
-				"allowMountedWeaponry",
-				"canBeDragged",
-				"canDrag",
-				"isBigDino",
-				"isTameable"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ]
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 120, "sprint": 720 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 120, "sprint": 720 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "MeleeSpin", "interval": 0.3, "dmg": 70, "radius": 450, "stamina": 0 },
-					{ "name": "Hallucinate", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "RangedBlast", "interval": 4, "dmg": 70, "radius": 450, "stamina": 0 },
-					{ "name": "SummonDimos", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "SummonOrthros", "interval": 120, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "SummonElement", "interval": 400, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "BigHeal", "interval": 120, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 3 }
-		},
 		{
 			"name": "Lycan Bastion",
 			"bp": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Bastion/Bastion_Character_BP.Bastion_Character_BP_C",
@@ -796,64 +421,6 @@
 			}
 		},
 		{
-			"name": "Alicorn",
-			"bp": "/Game/Mods/Pyria2/Creatures/Wildlife/Alicorn/Alicorn_Character_bp.Alicorn_Character_bp_C",
-			"dinoNameTag": "Equus",
-			"customTag": "Pyria",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 400,
-			"dragWeight": 125,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"flyerAllowRidingInCaves",
-				"isBigDino",
-				"isFlyerDino",
-				"isTameable"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 2100 },
-				"fly": { "base": 800, "sprint": 2880 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 350, "sprint": 2100 },
-				"fly": { "base": 800, "sprint": 2880 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -24
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0, "dmg": 35, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 15, "dmg": 0, "radius": 0, "stamina": 370 },
-					{ "name": "BiteNomFury", "interval": 0, "dmg": 40, "radius": 200, "stamina": 40 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
-					}
-				],
-				"baseXP": 30
-			}
-		},
-		{
 			"name": "Arduros",
 			"bp": "/Game/Mods/Pyria2/Creatures/Wildlife/Arduros/Arduros_character_bp.Arduros_character_bp_C",
 			"dinoNameTag": "Wyvern",
@@ -945,11 +512,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 450, "sprint": 2700 },
+				"walk": { "base": 550, "sprint": 2200 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 2700 },
+				"walk": { "base": 550, "sprint": 2200 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -961,7 +528,6 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 250, "stamina": 0 },
-					{ "name": "HeadSlam", "interval": 5, "dmg": 55, "radius": 280, "stamina": 0 },
 					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
 				]
 			},
@@ -998,9 +564,6 @@
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ]
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1064,9 +627,6 @@
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ]
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1130,9 +690,6 @@
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ]
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1196,9 +753,6 @@
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ]
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1263,9 +817,6 @@
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ]
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1329,9 +880,6 @@
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ]
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -1395,9 +943,6 @@
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ]
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
