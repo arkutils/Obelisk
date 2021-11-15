@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "329.14.1623019981",
+	"version": "339.28.1636977089",
 	"format": "4",
 	"mod": {
 		"id": "1576299694",
@@ -3832,6 +3832,26 @@
 			}
 		},
 		{
+			"name": "Elemental shadowmane cologne",
+			"description": "Made from fresh (ish) elemental shadowmane pheromone.  It smells horrible, but should allow you to get closer to elemental shadowmanes.  ",
+			"bp": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_LFLCologne_BP.PrimalItemConsumable_LFLCologne_BP_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/ElementalDinos/Crafting/Consumables/T_LFLCologne_Icon.T_LFLCologne_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 1800,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 5, "type": "PrimalItemResource_LFL_Pheromone_BP_C" } ]
+			}
+		},
+		{
 			"name": "Large experience potion",
 			"description": "Drinking this will cause its imbiber to gain a large about of wisdom.",
 			"bp": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_LargeExperience.PrimalItemConsumable_LargeExperience_C",
@@ -6638,7 +6658,6 @@
 					{ "qty": 100, "type": "PrimalItemResource_Wood_C" },
 					{ "qty": 20, "type": "PrimalItemResource_ElementalAirCrystal_C" },
 					{ "qty": 20, "type": "PrimalItemResource_ElementalIceCrystal_C" },
-					{ "qty": 200, "type": "PrimalItemResource_BlackPearl_C" },
 					{ "qty": 20, "type": "PrimalItemResource_ElementalWaterCrystal_C" }
 				]
 			},
@@ -8554,6 +8573,16 @@
 			"stackSize": 100
 		},
 		{
+			"name": "Elemental shadowmane pheromone",
+			"description": "The smell is so abhorrent that you can only actually smell it for a moment.  After that, you can no longer smell it, but your eyes constantly stream water.\n\nThis may be useful in creating something to blend in with elemental shadowmanes.",
+			"bp": "/Game/Mods/ElementalDinos/Crafting/Resources/PrimalItemResource_LFL_Pheromone_BP.PrimalItemResource_LFL_Pheromone_BP_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/ElementalDinos/Crafting/Resources/T_ShadowmanePheromone_Icon.T_ShadowmanePheromone_Icon",
+			"type": "Resource",
+			"weight": 0.05,
+			"stackSize": 100
+		},
+		{
 			"name": "Lantern goat light",
 			"description": "The light from a lantern goat.  It can be infused to create elemental lantern goats.",
 			"bp": "/Game/Mods/ElementalDinos/Crafting/Resources/PrimalItemResource_LanternGoatLight.PrimalItemResource_LanternGoatLight_C",
@@ -9780,6 +9809,54 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
 			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Fenmane",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Chibis/PrimalItemSkin_ChibiDino_Shadowmane_Fen.PrimalItemSkin_ChibiDino_Shadowmane_Fen_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Chibis/IconMats/ChibiIconMaterial_Inst_Fen.ChibiIconMaterial_Inst_Fen",
+			"type": "Equipment/Shield",
+			"flags": [ "preventCheatGive" ],
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Glacialmane",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Chibis/PrimalItemSkin_ChibiDino_Shadowmane_Glacial.PrimalItemSkin_ChibiDino_Shadowmane_Glacial_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Chibis/IconMats/ChibiIconMaterial_Inst_Glacial.ChibiIconMaterial_Inst_Glacial",
+			"type": "Equipment/Shield",
+			"flags": [ "preventCheatGive" ],
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Stormmane",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Chibis/PrimalItemSkin_ChibiDino_Shadowmane_Storm.PrimalItemSkin_ChibiDino_Shadowmane_Storm_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Chibis/IconMats/ChibiIconMaterial_Inst_Storm.ChibiIconMaterial_Inst_Storm",
+			"type": "Equipment/Shield",
+			"flags": [ "preventCheatGive" ],
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Vapormane",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Chibis/PrimalItemSkin_ChibiDino_Shadowmane_Vapor.PrimalItemSkin_ChibiDino_Shadowmane_Vapor_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Chibis/IconMats/ChibiIconMaterial_Inst_Vapor.ChibiIconMaterial_Inst_Vapor",
+			"type": "Equipment/Shield",
+			"flags": [ "preventCheatGive" ],
 			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
