@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "339.28.1636588175",
+	"version": "339.28.1637193682",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -5896,15 +5896,14 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 20, "dmg": 190, "radius": 700, "stamina": 250 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 145, "radius": 620, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 3, "dmg": 90, "radius": 600, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 20, "dmg": 190, "radius": 700, "stamina": 250 },
+					{ "name": "Smack", "interval": 0.4, "dmg": 145, "radius": 620, "stamina": 0 },
 					{
-						"name": "BiteNomFury", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0,
+						"name": "RockSlide", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
 					},
-					{ "name": "BiteNomFury", "interval": 30, "dmg": 230, "radius": 2500, "stamina": 0 }
+					{ "name": "ElectricAoE", "interval": 30, "dmg": 230, "radius": 2500, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -5964,14 +5963,11 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 260, "radius": 600, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 20, "dmg": 280, "radius": 1200, "stamina": 250 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 180, "radius": 620, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 3, "dmg": 120, "radius": 600, "stamina": 0 },
-					{
-						"name": "BiteNomFury", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					},
+					{ "name": "Bite", "interval": 0.4, "dmg": 260, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 20, "dmg": 190, "radius": 700, "stamina": 250 },
+					{ "name": "Smack", "interval": 0.4, "dmg": 180, "radius": 620, "stamina": 0 },
+					{ "name": "RockSlide", "interval": 3, "dmg": 120, "radius": 600, "stamina": 0 },
+					{ "name": "ElectricAoE", "interval": 30, "dmg": 320, "radius": 2500, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 30, "dmg": 460, "radius": 2500, "stamina": 0 }
 				]
 			},
@@ -6005,7 +6001,6 @@
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
 				"isBigDino",
@@ -6016,7 +6011,7 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 1200 },
+				"walk": { "base": 200, "sprint": 2400 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
@@ -6031,15 +6026,14 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 145, "radius": 500, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 20, "dmg": 135, "radius": 700, "stamina": 250 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 105, "radius": 600, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 3, "dmg": 90, "radius": 500, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 135, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 20, "dmg": 150, "radius": 700, "stamina": 250 },
+					{ "name": "Smack", "interval": 0.4, "dmg": 95, "radius": 620, "stamina": 0 },
 					{
-						"name": "BiteNomFury", "interval": 5, "dmg": 0, "radius": 0, "stamina": 420,
+						"name": "RockSlide", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
 					},
-					{ "name": "BiteNomFury", "interval": 60, "dmg": 150, "radius": 2500, "stamina": 860 }
+					{ "name": "ElectricAoE", "interval": 30, "dmg": 180, "radius": 2500, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -6050,13 +6044,19 @@
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MassiveMana.DinoDropInventoryComponent_Pyria_Creature_MassiveMana"
 					}
 				],
+				"engrams": [
+					"PrimalItemConsumable_HeatBlockUltra_C",
+					"PrimalItemConsumable_MaxElixir_C",
+					"PrimalItemArmor_RockDrakeSaddlePyriaUG_C",
+					"PrimalItemConsumable_ColdBlockUltra_C"
+				],
 				"baseXP": 7000
 			}
 		},
 		{
 			"name": "Gem Crabbeetle",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/BuggoCrabs/Crabbeetle_Character_BP_Gem.Crabbeetle_Character_BP_Gem_C",
-			"dinoNameTag": "Trilobite",
+			"dinoNameTag": "Crab",
 			"customTag": "Trilobite",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 50,
@@ -6095,7 +6095,7 @@
 		{
 			"name": "Leaf Crabbeetle",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/BuggoCrabs/Crabbeetle_Character_BP_Leaf.Crabbeetle_Character_BP_Leaf_C",
-			"dinoNameTag": "Trilobite",
+			"dinoNameTag": "Crab",
 			"customTag": "Trilobite",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 50,
@@ -6134,7 +6134,7 @@
 		{
 			"name": "Shell Crabbeetle",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/BuggoCrabs/Crabbeetle_Character_BP_Shell.Crabbeetle_Character_BP_Shell_C",
-			"dinoNameTag": "Trilobite",
+			"dinoNameTag": "Crab",
 			"customTag": "Trilobite",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 50,
@@ -6170,7 +6170,7 @@
 		{
 			"name": "Giant Shell Crabbeetle",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/BuggoCrabs/Crabbeetle_Character_BP_Shell_Big.Crabbeetle_Character_BP_Shell_Big_C",
-			"dinoNameTag": "Trilobite",
+			"dinoNameTag": "Crab",
 			"customTag": "Pyria",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
 			"mass": 300,
@@ -6206,7 +6206,7 @@
 		{
 			"name": "CRABBO",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/BuggoCrabs/Crabbo_Character_BP.Crabbo_Character_BP_C",
-			"dinoNameTag": "Trilobite",
+			"dinoNameTag": "Crab",
 			"customTag": "Trilobite",
 			"targetingTeamName": "Herbivore_Water",
 			"mass": 50,
@@ -8554,7 +8554,7 @@
 			"name": "Death Striker",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/NewDeath/Deathworm_Character_BP_Pyria.Deathworm_Character_BP_Pyria_C",
 			"dinoNameTag": "Deathworm",
-			"customTag": "Deathworm",
+			"customTag": "Pyria",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 600,
 			"dragWeight": 650,
@@ -8580,8 +8580,8 @@
 				"defaultDmg": 210,
 				"defaultSwingRadius": 1200,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 78, "radius": 900, "stamina": 0 },
-					{ "name": "Claw", "interval": 0.75, "dmg": 78, "radius": 900, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 900, "stamina": 0 },
+					{ "name": "Claw", "interval": 5, "dmg": 68, "radius": 900, "stamina": 0 }
 				]
 			},
 			"death": {

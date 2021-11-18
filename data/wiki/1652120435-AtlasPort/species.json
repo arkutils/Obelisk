@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "337.15.1633711307",
+	"version": "339.28.1637193449",
 	"format": "4",
 	"mod": {
 		"id": "1652120435",
@@ -623,7 +623,7 @@
 			"death": { "baseXP": 4 }
 		},
 		{
-			"name": "Atlas Drake",
+			"name": "{TEMPLATE} Atlas Drake",
 			"bp": "/Game/Mods/AtlasPort/Critter/Drake/ADrake_Character_BP.ADrake_Character_BP_C",
 			"dinoNameTag": "Dragon",
 			"customTag": "AtlasDrake",
@@ -644,6 +644,14 @@
 				"isFlyerDino",
 				"isTameable"
 			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				]
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -666,7 +674,7 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 600, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 600, "stamina": 0 },
 					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
 					{ "name": "Claws", "interval": 8, "dmg": 62, "radius": 450, "stamina": 0 },
 					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
@@ -706,6 +714,14 @@
 				"isFlyerDino",
 				"isTameable"
 			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				]
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -728,7 +744,7 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 600, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 600, "stamina": 0 },
 					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
 					{ "name": "Claws", "interval": 8, "dmg": 62, "radius": 450, "stamina": 0 },
 					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
@@ -768,6 +784,14 @@
 				"isFlyerDino",
 				"isTameable"
 			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				]
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -790,8 +814,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 85, "radius": 600, "stamina": 0 },
-					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 300 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 600, "stamina": 0 },
+					{ "name": "Projectile", "interval": 15, "dmg": 0, "radius": 0, "stamina": 300 },
 					{ "name": "Claws", "interval": 8, "dmg": 62, "radius": 450, "stamina": 0 },
 					{ "name": "Roar", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "WindBreath", "interval": 10, "dmg": 0, "radius": 0, "stamina": 180 }
@@ -1875,6 +1899,53 @@
 			"death": { "baseXP": 30 }
 		},
 		{
+			"name": "Arcane Naga",
+			"bp": "/Game/Mods/AtlasPort/Critter/Naga/Naga_Character_bp_Arcane.Naga_Character_bp_Arcane_C",
+			"dinoNameTag": "Titanboa",
+			"customTag": "Naga",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 900, "sprint": 5400 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1800 },
+				"swim": { "base": 900, "sprint": 5400 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 30, "radius": 400, "stamina": 0 },
+					{ "name": "Spittle", "interval": 10, "dmg": 0, "radius": 240, "stamina": 180 },
+					{ "name": "Tails", "interval": 10, "dmg": 20, "radius": 450, "stamina": 50 },
+					{ "name": "Rawr", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
 			"name": "Olfend",
 			"bp": "/Game/Mods/AtlasPort/Critter/Olfend/Olfend_Character_BP.Olfend_Character_BP_C",
 			"dinoNameTag": "Camelsaurus",
@@ -2137,6 +2208,60 @@
 		{
 			"name": "Alpha Aberrant Razortooth",
 			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/MegaRazortooth_Character_BP_Aberrant.MegaRazortooth_Character_BP_Aberrant_C",
+			"dinoNameTag": "Yutyrannus",
+			"customTag": "Razortooth",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 2450 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 2450 }
+			},
+			"staminaRates": { "sprint": -35 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 150, "radius": 500, "stamina": 10 },
+					{ "name": "Fear", "interval": 8, "dmg": 1, "radius": 1500, "stamina": 325 },
+					{ "name": "Courage", "interval": 8, "dmg": 1, "radius": 1500, "stamina": 325 },
+					{ "name": "None", "interval": 5, "dmg": 180, "radius": 500, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Mega_Rex.DinoDropInventoryComponent_Carnivore_Mega_Rex"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Alpha Arcane Razortooth",
+			"bp": "/Game/Mods/AtlasPort/Critter/Razortooth/MegaRazortooth_Character_BP_Arcane.MegaRazortooth_Character_BP_Arcane_C",
 			"dinoNameTag": "Yutyrannus",
 			"customTag": "Razortooth",
 			"targetingTeamName": "Carnivores_High",
@@ -2690,6 +2815,65 @@
 		{
 			"name": "Atlas Tiger",
 			"bp": "/Game/Mods/AtlasPort/Critter/Tiger/ATiger_Character_BP.ATiger_Character_BP_C",
+			"dinoNameTag": "Thylacoleo",
+			"customTag": "ATiger",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 330,
+			"dragWeight": 200,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.8, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 2100 },
+				"swim": { "base": 420 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 2100 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.1, "dmg": 40, "radius": 430, "stamina": 0 },
+					{ "name": "Claw", "interval": 5, "dmg": 34, "radius": 430, "stamina": 0 },
+					{ "name": "Pounce", "interval": 10, "dmg": 34, "radius": 430, "stamina": 150 },
+					{ "name": "Maul", "interval": 10, "dmg": 34, "radius": 430, "stamina": 0 },
+					{ "name": "Maul", "interval": 10, "dmg": 9, "radius": 9, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Arcane Atlas Tiger",
+			"bp": "/Game/Mods/AtlasPort/Critter/Tiger/ATiger_Character_BP_Arcane.ATiger_Character_BP_Arcane_C",
 			"dinoNameTag": "Thylacoleo",
 			"customTag": "ATiger",
 			"targetingTeamName": "Carnivores_Medium",
