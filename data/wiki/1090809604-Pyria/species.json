@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "339.28.1637193682",
+	"version": "339.28.1637624032",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -24,6 +24,9 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 38 } ]
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -60,7 +63,7 @@
 					"PrimalItemArmor_DragonKinship_UG_C",
 					"PrimalItemConsumable_90sPotion_C"
 				],
-				"baseXP": 30
+				"baseXP": 885
 			}
 		},
 		{
@@ -770,6 +773,9 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 24, "max": 38 } ]
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
@@ -806,7 +812,7 @@
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_Lich.DinoDropInventoryComponent_Pyria_Boss_Lich"
 					}
 				],
-				"baseXP": 40000
+				"baseXP": 8850
 			}
 		},
 		{
@@ -882,6 +888,9 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 38 } ]
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -916,7 +925,7 @@
 					"PrimalItemConsumable_MaxElixir_C",
 					"PrimalItemArmor_OffhandSpecial_C"
 				],
-				"baseXP": 30
+				"baseXP": 885
 			}
 		},
 		{
@@ -935,6 +944,9 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 38 } ]
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -970,7 +982,7 @@
 					"PrimalItemArmor_CavewolfSaddlePyriaBattle_UG_C",
 					"PrimalItemConsumable_MaxElixir_C"
 				],
-				"baseXP": 1200
+				"baseXP": 1170
 			}
 		},
 		{
@@ -2001,7 +2013,7 @@
 					"PrimalItemConsumable_ChosenOneAberration_C",
 					"PrimalItemConsumable_ChosenOneExtinction_C"
 				],
-				"baseXP": 90000
+				"baseXP": 150000
 			}
 		},
 		{
@@ -2294,6 +2306,108 @@
 				],
 				"baseXP": 30
 			}
+		},
+		{
+			"name": "Iron Golem",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/IronGolem/IronGolem_Character_BP.IronGolem_Character_BP_C",
+			"dinoNameTag": "Mek",
+			"customTag": "Pyria",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 330,
+			"dragWeight": 350,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.8, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 1000 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 1000 }
+			},
+			"staminaRates": { "sprint": -20 },
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Swords", "interval": 0.1, "dmg": 80, "radius": 300, "stamina": 0 },
+					{ "name": "SwordsLeap", "interval": 5, "dmg": 100, "radius": 300, "stamina": 150 },
+					{ "name": "N/A", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Jump", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Mithril Golem",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/IronGolem/MithrilGolem_Character_BP.MithrilGolem_Character_BP_C",
+			"dinoNameTag": "Mek",
+			"customTag": "Pyria",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 330,
+			"dragWeight": 350,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.8, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 30 }
+				]
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 1000 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 1000 }
+			},
+			"staminaRates": { "sprint": -20 },
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Swords", "interval": 0.1, "dmg": 65, "radius": 300, "stamina": 0 },
+					{ "name": "SwordsLeap", "interval": 5, "dmg": 85, "radius": 300, "stamina": 150 },
+					{ "name": "N/A", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Jump", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Lava Elemental",
@@ -3294,7 +3408,7 @@
 					"PrimalItemArmor_DragonKinship_UG_C",
 					"PrimalItemConsumable_90sPotion_C"
 				],
-				"baseXP": 30
+				"baseXP": 885
 			}
 		},
 		{
@@ -4195,7 +4309,7 @@
 					"PrimalItemConsumable_MaxElixir_C",
 					"PrimalItemArmor_OffhandSpecial_C"
 				],
-				"baseXP": 30
+				"baseXP": 885
 			}
 		},
 		{
@@ -4251,7 +4365,7 @@
 					"PrimalItemArmor_CavewolfSaddlePyriaBattle_UG_C",
 					"PrimalItemConsumable_MaxElixir_C"
 				],
-				"baseXP": 1200
+				"baseXP": 1170
 			}
 		},
 		{
@@ -4725,7 +4839,244 @@
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Boss_Lich.DinoDropInventoryComponent_Pyria_Boss_Lich"
 					}
 				],
-				"baseXP": 40000
+				"baseXP": 8850
+			}
+		},
+		{
+			"name": "Zombie Fire Wyvern",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Lich/WyvernMinions/Wyvern_Character_BP_ZombieFire_Lich.Wyvern_Character_BP_ZombieFire_Lich_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 800,
+			"dragWeight": 416,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				]
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementR": {
+				"walk": { "base": 572.7, "sprint": 1157.5 },
+				"fly": { "base": 2490, "sprint": 3355.3 },
+				"swim": { "base": 2490 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 160 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_FireWyvern.DinoDropInventoryComponent_Carnivore_Huge_FireWyvern"
+					}
+				],
+				"baseXP": 120
+			}
+		},
+		{
+			"name": "Zombie Lightning Wyvern",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Lich/WyvernMinions/Wyvern_Character_BP_ZombieLightning_Lich.Wyvern_Character_BP_ZombieLightning_Lich_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 800,
+			"dragWeight": 416,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				]
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementR": {
+				"walk": { "base": 572.7, "sprint": 1157.5 },
+				"fly": { "base": 2490, "sprint": 3355.3 },
+				"swim": { "base": 2490 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{
+						"name": "Lightning", "interval": 6.5, "dmg": 0, "radius": 0, "stamina": 160,
+						"isProjectile": true
+					},
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_LightningWyvern.DinoDropInventoryComponent_Carnivore_Huge_LightningWyvern"
+					}
+				],
+				"baseXP": 120
+			}
+		},
+		{
+			"name": "Zombie Poison Wyvern",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Lich/WyvernMinions/Wyvern_Character_BP_ZombiePoison_Lich.Wyvern_Character_BP_ZombiePoison_Lich_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 800,
+			"dragWeight": 416,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				]
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementR": {
+				"walk": { "base": 572.7, "sprint": 1157.5 },
+				"fly": { "base": 2490, "sprint": 3355.3 },
+				"swim": { "base": 2490 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{
+						"name": "Poison (Rider)", "interval": 4, "dmg": 0, "radius": 0, "stamina": 85,
+						"isProjectile": true
+					},
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_PoisonWyvern.DinoDropInventoryComponent_Carnivore_Huge_PoisonWyvern"
+					}
+				],
+				"baseXP": 120
 			}
 		},
 		{
@@ -5920,7 +6271,7 @@
 					"PrimalItemArmor_RockDrakeSaddlePyriaUG_C",
 					"PrimalItemConsumable_ColdBlockUltra_C"
 				],
-				"baseXP": 7000
+				"baseXP": 885
 			}
 		},
 		{
@@ -5985,7 +6336,7 @@
 					"PrimalItemArmor_RockDrakeSaddlePyriaUG_C",
 					"PrimalItemConsumable_ColdBlockUltra_C"
 				],
-				"baseXP": 14000
+				"baseXP": 15000
 			}
 		},
 		{
@@ -6006,6 +6357,9 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 38 } ]
+			},
 			"falling": {
 				"dmgMult": 0,
 				"maxSpeed": 1550
@@ -6050,7 +6404,7 @@
 					"PrimalItemArmor_RockDrakeSaddlePyriaUG_C",
 					"PrimalItemConsumable_ColdBlockUltra_C"
 				],
-				"baseXP": 7000
+				"baseXP": 885
 			}
 		},
 		{
@@ -6463,7 +6817,7 @@
 					"PrimalItemConsumable_ChosenOneAberration_C",
 					"PrimalItemConsumable_ChosenOneExtinction_C"
 				],
-				"baseXP": 180000
+				"baseXP": 150000
 			}
 		},
 		{
@@ -6529,7 +6883,7 @@
 					"PrimalItemConsumable_ChosenOneAberration_C",
 					"PrimalItemConsumable_ChosenOneExtinction_C"
 				],
-				"baseXP": 180000
+				"baseXP": 150000
 			}
 		},
 		{
@@ -6595,7 +6949,7 @@
 					"PrimalItemConsumable_ChosenOneAberration_C",
 					"PrimalItemConsumable_ChosenOneExtinction_C"
 				],
-				"baseXP": 180000
+				"baseXP": 150000
 			}
 		},
 		{
@@ -7968,66 +8322,6 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 55, "radius": 200, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 6, "dmg": 18, "radius": 500, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 8, "dmg": 18, "radius": 500, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
-					}
-				],
-				"baseXP": 30
-			}
-		},
-		{
-			"name": "Summoned Hellkite",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/HellKite/Hellkite_Character_bp_Minion.Hellkite_Character_bp_Minion_C",
-			"dinoNameTag": "WyvernMinion",
-			"customTag": "WyvernMinion",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 400,
-			"dragWeight": 550,
-			"variants": [ "Minion" ],
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"flyerAllowRidingInCaves",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 140, "sprint": 420 },
-				"fly": { "base": 800, "sprint": 1200 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 140, "sprint": 420 },
-				"fly": { "base": 800, "sprint": 1200 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -5
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 200, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 6, "dmg": 18, "radius": 500, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 8, "dmg": 18, "radius": 500, "stamina": 0 }
