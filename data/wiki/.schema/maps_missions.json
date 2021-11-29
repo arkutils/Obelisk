@@ -72,7 +72,7 @@
 			"properties": {
 				"type": {
 					"title": "Type",
-					"description": "Friendly mission type name, or internal ID if unknown.",
+					"description": "Friendly mission type name, or internal ID if unknown, if the dispatcher is restricted to a single type (like on Genesis 1)",
 					"anyOf": [
 						{
 							"type": "string"
@@ -84,10 +84,17 @@
 				},
 				"missions": {
 					"title": "Missions",
+					"description": "List of missions that can be activated at this dispatcher. If null, any mission can be activated (like on Genesis 2).",
 					"type": "array",
 					"items": {
 						"type": "string"
 					}
+				},
+				"isRockwellBattle": {
+					"title": "Isrockwellbattle",
+					"description": "Whether the dispatcher is used to activate the Rockwell Prime boss battle of Genesis 2.",
+					"default": false,
+					"type": "boolean"
 				},
 				"x": {
 					"title": "X",
@@ -111,8 +118,6 @@
 				}
 			},
 			"required": [
-				"type",
-				"missions",
 				"x",
 				"y",
 				"z"

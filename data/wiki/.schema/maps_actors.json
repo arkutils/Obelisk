@@ -139,17 +139,33 @@
 		},
 		"poisonTrees": {
 			"title": "Poisontrees",
+			"default": [],
 			"type": "array",
 			"items": {
 				"$ref": "#/definitions/PoisonTree"
+			}
+		},
+		"mutagenBulbs": {
+			"title": "Mutagenbulbs",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/MutagenBulb"
+			}
+		},
+		"carniflora": {
+			"title": "Carniflora",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Carniflora"
 			}
 		}
 	},
 	"required": [
 		"version",
 		"format",
-		"persistentLevel",
-		"poisonTrees"
+		"persistentLevel"
 	],
 	"additionalProperties": false,
 	"$schema": "http://json-schema.org/draft-07/schema#",
@@ -1187,6 +1203,158 @@
 		},
 		"PoisonTree": {
 			"title": "PoisonTree",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"MutagenBulb": {
+			"title": "MutagenBulb",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"Carniflora": {
+			"title": "Carniflora",
 			"type": "object",
 			"properties": {
 				"hidden": {
