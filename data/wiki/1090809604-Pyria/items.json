@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "340.3.1638315078",
+	"version": "340.3.1638347339",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -3231,6 +3231,28 @@
 				"recipe": [
 					{ "qty": 2000, "type": "PrimalItemResource_ManaLight_C" },
 					{ "qty": 2000, "type": "PrimalItemResource_NatureElement_C" }
+				]
+			}
+		},
+		{
+			"name": "Spell: Quench",
+			"description": "A water spell that requires advanced skill to cast and maintain. Formulate large amounts of your own mana into water element, which slowly is absorbed into your body over a long period of time, providing nourishment. However, if you jump in water or it rains, the spell breaks.\n\nStatistics:\n+10 Water per Sec\n-Deactivates in rain or underwater",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Healing/PrimalItemConsumable_Quenched.PrimalItemConsumable_Quenched_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/PrimalEarth/Effects/Textures/Water/WaterSplash.WaterSplash",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Spells", "Healing" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10000, "type": "PrimalItemResource_WaterElement_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
