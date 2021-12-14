@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/items.json",
-	"version": "340.3.7761957.1",
+	"version": "341.19.7882499",
 	"format": "4",
 	"items": [
 		{
@@ -665,8 +665,21 @@
 		},
 		{
 			"name": "Wooden Platform",
+			"description": "A Cliff foundation is required to build structures in an area.  This one is made from sturdy wood.",
 			"bp": "/Game/Aberration/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseCliffPlatform.PrimalItemStructure_BaseCliffPlatform_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseCeiling.PrimalItemStructure_BaseCeiling_C"
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseCeiling.PrimalItemStructure_BaseCeiling_C",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Wreath_Icon.Wreath_Icon",
+			"type": "Structure",
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 5, "type": "PrimalItemResource_Wood_C" } ]
+			}
 		},
 		{
 			"name": "Shag Rug",
@@ -1176,30 +1189,6 @@
 				"weight": 0.3,
 				"water": 0.01
 			}
-		},
-		{
-			"name": "Carnivorous Plant Seed",
-			"description": "Plant this in a viable large crop plot to grow a carnivorous plant.",
-			"bp": "/Game/Aberration/Structures/CarnivorousPlant/PrimalItemConsumable_Seed_Carnivorous_Plant.PrimalItemConsumable_Seed_Carnivorous_Plant_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumableSeed.PrimalItemConsumableSeed_C",
-			"icon": "/Game/Aberration/Icons/Plants/Carnivorous_Plant_Seed_Icon.Carnivorous_Plant_Seed_Icon",
-			"type": "MiscConsumable/Food",
-			"weight": 0.01,
-			"stackSize": 100,
-			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 5 } ]
-		},
-		{
-			"name": "Carnivorous Plant Trap",
-			"description": "Immobilizes humans and small creatures.",
-			"bp": "/Game/Aberration/Structures/CarnivorousPlant/PrimalItemStructure_Carnivorous_Plant_Trap.PrimalItemStructure_Carnivorous_Plant_Trap_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Aberration/Icons/Plants/Carnivorous_Plant_Icon.Carnivorous_Plant_Icon",
-			"type": "Structure",
-			"folders": [ "Structures", "Defenses" ],
-			"weight": 2,
-			"stackSize": 10,
-			"spoilsIn": 3600,
-			"structure": "/Game/Aberration/Structures/CarnivorousPlant/Structure_Carnivorous_Plant_Trap.Structure_Carnivorous_Plant_Trap_C"
 		},
 		{
 			"name": "Metal Cliff Platform",
@@ -2002,6 +1991,10 @@
 		{
 			"bp": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_TaxidermyDermis.PrimalItem_TaxidermyDermis_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C"
+		},
+		{
+			"bp": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_TaxidermyDermis_NoUpload.PrimalItem_TaxidermyDermis_NoUpload_C",
+			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_TaxidermyDermis.PrimalItem_TaxidermyDermis_C"
 		},
 		{
 			"name": "Desert Titan Saddle",
@@ -7743,64 +7736,6 @@
 			}
 		},
 		{
-			"name": "Netgun",
-			"description": "A small but powerful explosive, primarily used with rocket launchers.",
-			"bp": "/Game/Genesis2/Weapons/NetGun/PrimalItemAmmo_NetGunGen.PrimalItemAmmo_NetGunGen_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/ScorchedEarth/Icons/Weapons/NetgunAmmo_Icon.NetgunAmmo_Icon",
-			"type": "Ammo",
-			"folders": [ "Weapons", "Ammo" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 3.6,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 60, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Thatch_C" }
-				]
-			},
-			"weapon": "/Game/ScorchedEarth/WeaponNetGun/WeapNetGun.WeapNetGun_C"
-		},
-		{
-			"name": "Net Gun",
-			"description": "Mankind's ultimate portable killing device.",
-			"bp": "/Game/Genesis2/Weapons/NetGun/PrimalItem_WeaponNetGunGen.PrimalItem_WeaponNetGunGen_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
-			"icon": "/Game/ScorchedEarth/Icons/Weapons/Materials/HUD_NetGun_Colorize_MIC.HUD_NetGun_Colorize_MIC",
-			"type": "Weapon",
-			"folders": [ "Weapons", "Firearms" ],
-			"weight": 20,
-			"stackSize": 1,
-			"durability": 50,
-			"crafting": {
-				"xp": 243,
-				"time": 15,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 80, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 60, "type": "PrimalItemResource_ChitinPaste_C" }
-				]
-			},
-			"repair": {
-				"xp": 243,
-				"time": 5,
-				"recipe": [
-					{ "qty": 40, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 30, "type": "PrimalItemResource_ChitinPaste_C" }
-				]
-			},
-			"weapon": "/Game/Genesis2/Weapons/NetGun/WeapNetGunGen.WeapNetGunGen_C"
-		},
-		{
 			"name": "Explosive Arrow",
 			"description": "Arrow that goes boom!",
 			"bp": "/Game/Genesis2/Weapons/TekBow/PrimalItemAmmo_ExplosiveArrow.PrimalItemAmmo_ExplosiveArrow_C",
@@ -7904,6 +7839,329 @@
 				]
 			},
 			"weapon": "/Game/Genesis2/Weapons/TekPistol/WeapTekPistol.WeapTekPistol_C"
+		},
+		{
+			"name": "Generate\nDinopithecus King\nPortal",
+			"description": "Use this to generate a portal to the Dinopithecus King.",
+			"bp": "/Game/LostIsland/Boss/Arena/PrimalItem_BossTribute_LostIsland.PrimalItem_BossTribute_LostIsland_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Cloth/PrimalItem_BossTributeGeneric.PrimalItem_BossTributeGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Misc/Icons/PortalBlue_Icon.PortalBlue_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 0.01,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 4, "type": "PrimalItemResource_Hide_C" }
+				]
+			}
+		},
+		{
+			"name": "Generate\nDinopithecus\nKing (Gamma)\nPortal",
+			"description": "Use this to generate a portal to the Dinopithecus King (Easy).",
+			"bp": "/Game/LostIsland/Boss/Arena/PrimalItem_BossTribute_LostIsland_Easy.PrimalItem_BossTribute_LostIsland_Easy_C",
+			"parent": "/Game/LostIsland/Boss/Arena/PrimalItem_BossTribute_LostIsland.PrimalItem_BossTribute_LostIsland_C",
+			"icon": "/Game/LostIsland/Dinos/Dinopithecus/HUD_LostIsland_Dinopithecus_BossSummon_Icon_Easy.HUD_LostIsland_Dinopithecus_BossSummon_Icon_Easy",
+			"type": "MiscConsumable/Food",
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 0.01,
+				"levelReq": 55,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_Boa_C" },
+					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_Argentavis_C" },
+					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_Sarco_C" },
+					{ "qty": 3, "type": "PrimalItemResource_ApexDrop_Theriz_C" },
+					{ "qty": 3, "type": "PrimalItemResource_ApexDrop_Allo_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_06_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_02_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_11_C" }
+				]
+			}
+		},
+		{
+			"name": "Generate\nDinopithecus\nKing (Alpha)\nPortal",
+			"description": "Use this to generate a portal to the Dinopithecus King (Hard).",
+			"bp": "/Game/LostIsland/Boss/Arena/PrimalItem_BossTribute_LostIsland_Hard.PrimalItem_BossTribute_LostIsland_Hard_C",
+			"parent": "/Game/LostIsland/Boss/Arena/PrimalItem_BossTribute_LostIsland.PrimalItem_BossTribute_LostIsland_C",
+			"icon": "/Game/LostIsland/Dinos/Dinopithecus/HUD_LostIsland_Dinopithecus_BossSummon_Icon_Hard.HUD_LostIsland_Dinopithecus_BossSummon_Icon_Hard",
+			"type": "MiscConsumable/Food",
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 0.01,
+				"levelReq": 100,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_Theriz_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_Megalodon_C" },
+					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_Spino_C" },
+					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_Basilisk_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_Megalania_C" },
+					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_Rex_C" },
+					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_Yuty_C" },
+					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_Tuso_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_Giga_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_07_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_03_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_04_C" }
+				]
+			}
+		},
+		{
+			"name": "Generate\nDinopithecus\nKing (Beta)\nPortal",
+			"description": "Use this to generate a portal to the Dinopithecus King (Medium).",
+			"bp": "/Game/LostIsland/Boss/Arena/PrimalItem_BossTribute_LostIsland_Medium.PrimalItem_BossTribute_LostIsland_Medium_C",
+			"parent": "/Game/LostIsland/Boss/Arena/PrimalItem_BossTribute_LostIsland.PrimalItem_BossTribute_LostIsland_C",
+			"icon": "/Game/LostIsland/Dinos/Dinopithecus/HUD_LostIsland_Dinopithecus_BossSummon_Icon_Medium.HUD_LostIsland_Dinopithecus_BossSummon_Icon_Medium",
+			"type": "MiscConsumable/Food",
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 0.01,
+				"levelReq": 75,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_Sauro_C" },
+					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_Megalodon_C" },
+					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_Thylaco_C" },
+					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_Spino_C" },
+					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_Basilisk_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_01_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_12_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_08_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_09_C" }
+				]
+			}
+		},
+		{
+			"name": "Dinopithecus Costume Skin",
+			"description": "This will override all other skins, acting as a full-body costume. Should always be set on Torso Armor.",
+			"bp": "/Game/LostIsland/Boss/PrimalItemSkin_Costume_Dinopithecus.PrimalItemSkin_Costume_Dinopithecus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_FullCostumeTest.PrimalItemSkin_FullCostumeTest_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/DinopithecusCostume/MIC_DinopithecusCostume_Icon_MIC.MIC_DinopithecusCostume_Icon_MIC",
+			"type": "Equipment/Shirt",
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Dinopithecus King Flag",
+			"description": "This flag is proof that you have defeated the Dinopithecus King.",
+			"bp": "/Game/LostIsland/Boss/PrimalItemStructure_Flag_BossDinopithecus.PrimalItemStructure_Flag_BossDinopithecus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/LostIsland/Structures/DinopithecusBossFlag/Textures/HUD_LostIsland_Dinopithecus_BossFlag_BC.HUD_LostIsland_Dinopithecus_BossFlag_BC",
+			"type": "Structure",
+			"folders": [ "Structures", "Misc" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Thatch_C" }
+				]
+			},
+			"structure": "/Game/LostIsland/Boss/Flag_SM_BossDinopithecus.Flag_SM_BossDinopithecus_C"
+		},
+		{
+			"name": "Dinopithecus King Trophy",
+			"description": "Place it on a trophy wall-mount, and keep it safe to use as an invaluable token of your prowess...",
+			"bp": "/Game/LostIsland/Boss/PrimalItemTrophy_BossDinopithecus.PrimalItemTrophy_BossDinopithecus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophyGenericWall.PrimalItemTrophyGenericWall_C",
+			"icon": "/Game/LostIsland/Structures/TrophyHeads/HUD_LostIsland_Dinopithecus_TrophyHead_BC.HUD_LostIsland_Dinopithecus_TrophyHead_BC",
+			"type": "Equipment/Trophy",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Gamma Dinopithecus King Trophy",
+			"description": "Place it on a trophy wall-mount, and keep it safe to use as an invaluable token of your prowess...",
+			"bp": "/Game/LostIsland/Boss/PrimalItemTrophy_BossDinopithecus_Easy.PrimalItemTrophy_BossDinopithecus_Easy_C",
+			"parent": "/Game/LostIsland/Boss/PrimalItemTrophy_BossDinopithecus.PrimalItemTrophy_BossDinopithecus_C",
+			"icon": "/Game/LostIsland/Structures/TrophyHeads/HUD_LostIsland_Dinopithecus_TrophyHead_BC_Gamma.HUD_LostIsland_Dinopithecus_TrophyHead_BC_Gamma",
+			"type": "Equipment/Trophy",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Alpha Dinopithecus King Trophy",
+			"description": "Place it on a trophy wall-mount, and keep it safe to use as an invaluable token of your prowess...",
+			"bp": "/Game/LostIsland/Boss/PrimalItemTrophy_BossDinopithecus_Hard.PrimalItemTrophy_BossDinopithecus_Hard_C",
+			"parent": "/Game/LostIsland/Boss/PrimalItemTrophy_BossDinopithecus.PrimalItemTrophy_BossDinopithecus_C",
+			"icon": "/Game/LostIsland/Structures/TrophyHeads/HUD_LostIsland_Dinopithecus_TrophyHead_BC_Alpha.HUD_LostIsland_Dinopithecus_TrophyHead_BC_Alpha",
+			"type": "Equipment/Trophy",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Beta Dinopithecus King Trophy",
+			"description": "Place it on a trophy wall-mount, and keep it safe to use as an invaluable token of your prowess...",
+			"bp": "/Game/LostIsland/Boss/PrimalItemTrophy_BossDinopithecus_Medium.PrimalItemTrophy_BossDinopithecus_Medium_C",
+			"parent": "/Game/LostIsland/Boss/PrimalItemTrophy_BossDinopithecus.PrimalItemTrophy_BossDinopithecus_C",
+			"icon": "/Game/LostIsland/Structures/TrophyHeads/HUD_LostIsland_Dinopithecus_TrophyHead_BC_Beta.HUD_LostIsland_Dinopithecus_TrophyHead_BC_Beta",
+			"type": "Equipment/Trophy",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Amargasaurus Saddle",
+			"description": "Equip an Amargasaurus with this to ride it.",
+			"bp": "/Game/LostIsland/Dinos/Amargasaurus/PrimalItemArmor_AmargaSaddle.PrimalItemArmor_AmargaSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/LostIsland/Icons/Dinos/HUD_LostIsland_AmargasaurusSaddle_M.HUD_LostIsland_AmargasaurusSaddle_M",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 40,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 140, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 6, "type": "PrimalItemResource_AmargaSpike_C" }
+				]
+			}
+		},
+		{
+			"name": "Amargasaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/LostIsland/Dinos/Amargasaurus/PrimalItemConsumable_Egg_Amargasaurus.PrimalItemConsumable_Egg_Amargasaurus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Large.PrimalItemConsumable_Egg_Large_C",
+			"icon": "/Game/LostIsland/Dinos/Amargasaurus/HUD_DinoEgg_MIC_Inst_Amarga.HUD_DinoEgg_MIC_Inst_Amarga",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 13,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Amargasaurus Egg",
+			"description": "",
+			"bp": "/Game/LostIsland/Dinos/Amargasaurus/PrimalItemConsumable_Egg_Amargasaurus_Fertilized.PrimalItemConsumable_Egg_Amargasaurus_Fertilized_C",
+			"parent": "/Game/LostIsland/Dinos/Amargasaurus/PrimalItemConsumable_Egg_Amargasaurus.PrimalItemConsumable_Egg_Amargasaurus_C",
+			"icon": "/Game/LostIsland/Dinos/Amargasaurus/HUD_DinoEgg_MIC_Inst_Amarga.HUD_DinoEgg_MIC_Inst_Amarga",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 13,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/LostIsland/Dinos/Amargasaurus/Amargasaurus_Character_BP.Amargasaurus_Character_BP_C",
+				"temperature": { "min": 26, "max": 29 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Amargasaurus Spike",
+			"description": "An incredibly sharp keratin spike extracted from an Amargasaurus. Armor reducing abilities are nullified after removal, but the core of the spike still contains some thermal activity. Can be placed in a Sap Tap to increase production speed and quantity.",
+			"bp": "/Game/LostIsland/Dinos/Amargasaurus/PrimalItemResource_AmargaSpike.PrimalItemResource_AmargaSpike_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/LostIsland/Dinos/Amargasaurus/ArkG_TGAItems_AmargaHorn.ArkG_TGAItems_AmargaHorn",
+			"type": "Resource",
+			"weight": 0.05,
+			"stackSize": 1,
+			"spoilsIn": 1800
+		},
+		{
+			"name": "Sinomacrops Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/LostIsland/Dinos/Sinomacrops/PrimalItemConsumable_Egg_Sinomacrops.PrimalItemConsumable_Egg_Sinomacrops_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Small.PrimalItemConsumable_Egg_Small_C",
+			"icon": "/Game/LostIsland/Dinos/Sinomacrops/HUD_DinoEgg_MIC_Inst_Sino.HUD_DinoEgg_MIC_Inst_Sino",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Sinomacrops Egg",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/LostIsland/Dinos/Sinomacrops/PrimalItemConsumable_Egg_Sinomacrops_Fertilized.PrimalItemConsumable_Egg_Sinomacrops_Fertilized_C",
+			"parent": "/Game/LostIsland/Dinos/Sinomacrops/PrimalItemConsumable_Egg_Sinomacrops.PrimalItemConsumable_Egg_Sinomacrops_C",
+			"icon": "/Game/LostIsland/Dinos/Sinomacrops/HUD_DinoEgg_MIC_Inst_Sino.HUD_DinoEgg_MIC_Inst_Sino",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 5,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/LostIsland/Dinos/Sinomacrops/Sinomacrops_Character_BP.Sinomacrops_Character_BP_C",
+				"temperature": { "min": 38, "max": 40 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
 		},
 		{
 			"name": "Generate\nRagnarok (Easy)\nPortal",
@@ -11158,29 +11416,6 @@
 			}
 		},
 		{
-			"name": "Liopleurodon Saddle",
-			"description": "Equip a Megalodon with this to ride it.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_LiopleurodonSaddle.PrimalItemArmor_LiopleurodonSaddle_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/PrimalEarth/Dinos/Megalodon/Saddle/HUD_MegalodonSaddle_Colorize_MIC.HUD_MegalodonSaddle_Colorize_MIC",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 51.2,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 30, "type": "PrimalItemResource_ChitinPaste_C" }
-				]
-			}
-		},
-		{
 			"name": "Mammoth Saddle",
 			"description": "Equip a Mammoth with this to ride it.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MammothSaddle.PrimalItemArmor_MammothSaddle_C",
@@ -12340,6 +12575,16 @@
 			}
 		},
 		{
+			"name": "Parasaur 'ARK: The Animated Series' Costume",
+			"description": "This costume can be used to make your parasaur look like the ones in 'ARK: The Animated Series'!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_AnimeParasaur.PrimalItemCostume_AnimeParasaur_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemCostumeGeneric.PrimalItemCostumeGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Para/Para_Anime/HUD_Para_Anime_Icon_MIC.HUD_Para_Anime_Icon_MIC",
+			"type": "Equipment/Costume",
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
 			"name": "Raptor 'ARK: The Animated Series' Costume",
 			"description": "This costume can be used to make your Raptor look like those in 'ARK: The Animated Series'!",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_AnimeRaptor.PrimalItemCostume_AnimeRaptor_C",
@@ -12821,6 +13066,17 @@
 			"stackSize": 1
 		},
 		{
+			"name": "Chibi-Amargasaurus",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Amarga.PrimalItemSkin_ChibiDino_Amarga_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
 			"name": "Chibi-Ammonite",
 			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Ammonite.PrimalItemSkin_ChibiDino_Ammonite_C",
@@ -12949,6 +13205,17 @@
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
 			"type": "Equipment/Shield",
 			"flags": [ "preventCheatGive" ],
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Festive Noglin",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_BrainSlugXmas.PrimalItemSkin_ChibiDino_BrainSlugXmas_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Legendary.ChibiIconMaterial_Inst_Legendary",
+			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
 			"weight": 0,
 			"stackSize": 1
@@ -13091,6 +13358,17 @@
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Deinonychus.PrimalItemSkin_ChibiDino_Deinonychus_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Dinopithecus",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Dinopithecus.PrimalItemSkin_ChibiDino_Dinopithecus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_VeryRare.ChibiIconMaterial_Inst_VeryRare",
 			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
 			"weight": 0,
@@ -13713,6 +13991,17 @@
 			"stackSize": 1
 		},
 		{
+			"name": "Chibi-Animated Series Raptor",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_RaptorAnimatedSeries.PrimalItemSkin_ChibiDino_RaptorAnimatedSeries_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
 			"name": "Chibi-Skeletal Raptor",
 			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Raptor_Bone.PrimalItemSkin_ChibiDino_Raptor_Bone_C",
@@ -13895,6 +14184,17 @@
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Shinehorn.PrimalItemSkin_ChibiDino_Shinehorn_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Sinomacrops",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Sinomacrops.PrimalItemSkin_ChibiDino_Sinomacrops_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Rare.ChibiIconMaterial_Inst_Rare",
 			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
 			"weight": 0,
@@ -14545,6 +14845,29 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [ { "qty": 150, "type": "PrimalItemConsumable_CookedPrimeMeat_C" } ]
+			}
+		},
+		{
+			"name": "Santa Costume Skin",
+			"description": "This will override your shirt, pants, glove, and boot skins, acting as a full-body costume to dress you as a jolly old elf. \n\n(You're on your own for a hat and/or beard). Should always be set on Torso Armor.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Costume_Santa.PrimalItemSkin_Costume_Santa_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_FullCostumeTest.PrimalItemSkin_FullCostumeTest_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Santa/HUD_WinterWonderland21_SantaCostume_MIC.HUD_WinterWonderland21_SantaCostume_MIC",
+			"type": "Equipment/Shirt",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 30, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Coal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Pelt_C" }
+				]
 			}
 		},
 		{
@@ -15508,7 +15831,7 @@
 		},
 		{
 			"name": "Crab Fest Swim Bottom Skin",
-			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women. \n\nWarningâ€”might pinch a little.",
+			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women. \n\nWarning—might pinch a little.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants_CrabParty.PrimalItemSkin_SummerSwimPants_CrabParty_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
 			"icon": "/Game/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Panty/HUD_HF_July4th2020_Pants_CrabParty_Colorized_MIC.HUD_HF_July4th2020_Pants_CrabParty_Colorized_MIC",
@@ -15709,7 +16032,7 @@
 		},
 		{
 			"name": "Crab Fest Swim Top Skin",
-			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women. \n\nWarningâ€”might pinch a little.",
+			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women. \n\nWarning—might pinch a little.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_CrabParty.PrimalItemSkin_SummerSwimShirt_CrabParty_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
 			"icon": "/Game/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_HF_July4th2020_Bra_CrabParty_Colorized_MIC.HUD_HF_July4th2020_Bra_CrabParty_Colorized_MIC",
@@ -15910,7 +16233,7 @@
 		},
 		{
 			"name": "Ugly Dodo's Revenge Sweater Skin",
-			"description": "Revenge is a dish best served hotâ€”with extra gravy! \n\nYou can use this to skin the appearance of a shirt into an ugly holiday sweater. ",
+			"description": "Revenge is a dish best served hot—with extra gravy! \n\nYou can use this to skin the appearance of a shirt into an ugly holiday sweater. ",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Sweater_DodosRevenge.PrimalItemSkin_Sweater_DodosRevenge_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Thanksgiving/Sweater/Icon/HUD_Human_Male_XmasSweater_DodosRevenge_Icon.HUD_Human_Male_XmasSweater_DodosRevenge_Icon",
@@ -16885,6 +17208,98 @@
 			}
 		},
 		{
+			"name": "Snowy Winter Beanie Skin",
+			"description": "You can use this to skin the appearance of a helmet or hat. It doesn't show signs of stopping. Better gather some wood for chopping...",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_WinterHatG.PrimalItemSkin_WW_WinterHatG_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Hats/Icons/HUD_WinterHat_HatG_Icon.HUD_WinterHat_HatG_Icon",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 30,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Coal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Raptor Sleighing Winter Beanie Skin",
+			"description": "You can use this to skin the appearance of a helmet or hat. Slashing through the snow, shrieking all the way...",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_WinterHatH.PrimalItemSkin_WW_WinterHatH_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Hats/Icons/HUD_WinterHat_HatH_Icon.HUD_WinterHat_HatH_Icon",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 30,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Coal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Noglin Regift Winter Beanie Skin",
+			"description": "You can use this to skin the appearance of a helmet or hat. Keep your brain warm and tasty!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_WinterHatI.PrimalItemSkin_WW_WinterHatI_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Hats/Icons/HUD_WinterHat_HatI_Icon.HUD_WinterHat_HatI_Icon",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 30,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Coal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "HLN-A Winter Beanie Skin",
+			"description": "You can use this to skin the appearance of a helmet or hat. Keep your favorite holo-companion close by in those snowy biomes!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_WinterHatJ.PrimalItemSkin_WW_WinterHatJ_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Hats/Icons/HUD_WinterHat_HatJ_Icon.HUD_WinterHat_HatJ_Icon",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 30,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Coal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
 			"name": "Ugly Bronto Sweater Skin",
 			"description": "You can use this to skin the appearance of a shirt into an ugly holiday sweater. \n\nBrontos are good for hanging lights in high places.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_XmasSweaterBronto.PrimalItemSkin_WW_XmasSweaterBronto_C",
@@ -16932,7 +17347,7 @@
 		},
 		{
 			"name": "Ugly Chibi Sweater Skin",
-			"description": "You can use this to skin the appearance of a shirt into an ugly holiday sweater. \n\nDinos make great gifts â€” when they're chibi-sized.",
+			"description": "You can use this to skin the appearance of a shirt into an ugly holiday sweater. \n\nDinos make great gifts when they're chibi-sized.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_XmasSweaterChibi.PrimalItemSkin_WW_XmasSweaterChibi_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Sweaters/Materials/HUD_XmasSweaterChibi_Male_Colorize_MIC.HUD_XmasSweaterChibi_Male_Colorize_MIC",
@@ -17000,11 +17415,80 @@
 			}
 		},
 		{
+			"name": "Ugly Noglin Regift Sweater Skin",
+			"description": "You can use this to skin the appearance of a shirt into an ugly holiday sweater. Careful, HLN-A might be trying to re-gift that little noggin-goblin...",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_XmasSweater_Noglin.PrimalItemSkin_WW_XmasSweater_Noglin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Sweaters/Materials/HUD_XmasSweater_Nogglin_Colorize_MIC.HUD_XmasSweater_Nogglin_Colorize_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Coal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Ugly Raptor Claws Sweater Skin",
+			"description": "You can use this to skin the appearance of a shirt into an ugly holiday sweater. Here comes Raptor Claws! Hear those slay-bells?",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_XmasSweater_RaptorClaws.PrimalItemSkin_WW_XmasSweater_RaptorClaws_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Sweaters/Materials/HUD_XmasSweater_RaptorClaws_Colorize_MIC.HUD_XmasSweater_RaptorClaws_Colorize_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Coal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
 			"name": "Ugly T-Rex Sweater Skin",
 			"description": "You can use this to skin the appearance of a shirt into an ugly holiday sweater. \n\nIt's not the size of your arms, it's what you've got in the sack.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_XmasSweater_Rex.PrimalItemSkin_WW_XmasSweater_Rex_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Sweaters/Materials/HUD_XmasSweaterSantaRex_Male_Colorize_MIC.HUD_XmasSweaterSantaRex_Male_Colorize_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Coal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Ugly Rockwell Sweater Skin",
+			"description": "You can use this to skin the appearance of a shirt into an ugly holiday sweater. Behold! The Ghost of Genesis Past!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WW_XmasSweater_Rockwell.PrimalItemSkin_WW_XmasSweater_Rockwell_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/WinterWonderland/Sweaters/Materials/HUD_XmasSweater_Rockwell_Colorize_MIC.HUD_XmasSweater_Rockwell_Colorize_MIC",
 			"type": "Skin",
 			"folders": [ "Holiday" ],
 			"weight": 0,
@@ -17555,7 +18039,7 @@
 			"description": "Everyone poops.\nCan provide nitrogen to help crops grow in their plots.  Would be more efficient fertilizer if combined with thatch in a bin.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumablePoop.PrimalItemConsumablePoop_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Fertilizer_Base.PrimalItemConsumable_Fertilizer_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/FertilizerIcon.FertilizerIcon",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/DinoPoop_Icon.DinoPoop_Icon",
 			"type": "MiscConsumable/Other",
 			"weight": 0.1,
 			"stackSize": 1,
@@ -17857,6 +18341,24 @@
 					{ "qty": 5, "type": "PrimalItemResource_Coal_C" }
 				]
 			},
+			"statEffects": [
+				{
+					"stat": "health",
+					"value": 1,
+					"duration": 0.5
+				}
+			]
+		},
+		{
+			"name": "\"Chest Beat\" Emote",
+			"description": "Consume this to permanently unlock the \"Chest Beat\" emote.\n\nShow everyone else who is the ultimate Alpha. ",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_UnlockEmote_ChestBeat.PrimalItemConsumable_UnlockEmote_ChestBeat_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Emotes/ArkG_Emotes_ChestPoundingV2.ArkG_Emotes_ChestPoundingV2",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Emote" ],
+			"weight": 0.1,
+			"stackSize": 100,
 			"statEffects": [
 				{
 					"stat": "health",
@@ -18196,6 +18698,35 @@
 			"folders": [ "Holiday" ],
 			"weight": 0.1,
 			"stackSize": 100,
+			"statEffects": [
+				{
+					"stat": "health",
+					"value": 1,
+					"duration": 0.5
+				}
+			]
+		},
+		{
+			"name": "Santa Emote",
+			"description": "Consume this to permanently unlock the \"Santa Laugh\" emote. You'll laugh when you do this, in spite of yourself!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_UnlockEmote_Santa.PrimalItemConsumable_UnlockEmote_Santa_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Emotes/ArkG_Emotes_HoHoHo.ArkG_Emotes_HoHoHo",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Holiday" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 50,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Coal_C" }
+				]
+			},
 			"statEffects": [
 				{
 					"stat": "health",
@@ -19486,6 +20017,16 @@
 					{ "qty": 3, "type": "PrimalItemConsumablePoop_C" }
 				]
 			}
+		},
+		{
+			"name": "Festive Dino Candy",
+			"description": "Has a curious effect when consumed by a dinosaur.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_FestiveDinoCandy.PrimalItemConsumable_FestiveDinoCandy_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/HUD_ChristmasCandy_Colorize.HUD_ChristmasCandy_Colorize",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1
 		},
 		{
 			"name": "Medical Brew",
@@ -24856,6 +25397,159 @@
 			"structure": "/Game/PrimalEarth/Structures/BuildingBases/Underwater_Base_SM_BottomEntry.Underwater_Base_SM_BottomEntry_C"
 		},
 		{
+			"name": "Holiday Tree",
+			"description": "This is the perfect tree to use when celebrating the winter solstace!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_ChristmasTree.PrimalItemStructure_ChristmasTree_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/ChristmasTree_Icon.ChristmasTree_Icon",
+			"type": "Structure",
+			"folders": [ "Holiday" ],
+			"weight": 4,
+			"stackSize": 100,
+			"spoilsIn": 1814400,
+			"crafting": {
+				"xp": 12,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 40, "type": "PrimalItemResource_Thatch_C" }
+				]
+			},
+			"structure": "/Game/PrimalEarth/Structures/Christmas/Christmas_Tree/Furniture_ChristmasTree.Furniture_ChristmasTree_C"
+		},
+		{
+			"name": "Snowman",
+			"description": "Put a hat on it for extra fun!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Snowman.PrimalItemStructure_Snowman_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Snowman_Icon.Snowman_Icon",
+			"type": "Structure",
+			"folders": [ "Holiday" ],
+			"weight": 4,
+			"stackSize": 100,
+			"spoilsIn": 1814400,
+			"crafting": {
+				"xp": 18,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 7, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 8, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/PrimalEarth/Structures/Christmas/Christmas_Tree/Furniture_Snowman.Furniture_Snowman_C"
+		},
+		{
+			"name": "Holiday Stocking",
+			"description": "An oversized sock that adds jolliness to any holiday. Requires attaching to a wall.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Stocking.PrimalItemStructure_Stocking_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Stocking_Icon.Stocking_Icon",
+			"type": "Structure",
+			"folders": [ "Holiday" ],
+			"weight": 4,
+			"stackSize": 100,
+			"spoilsIn": 1814400,
+			"crafting": {
+				"xp": 4,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 8, "type": "PrimalItemResource_Hide_C" }
+				]
+			},
+			"structure": "/Game/PrimalEarth/Structures/Christmas/Stocking/Sign_Wall_Stocking.Sign_Wall_Stocking_C"
+		},
+		{
+			"name": "Gift Box",
+			"description": "Put items in this and inscribe a Tribemember's name, and only they will be able to open it, with a bang!",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_StorageBox_ChristmasGift.PrimalItemStructure_StorageBox_ChristmasGift_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Present2_Icon.Present2_Icon",
+			"type": "Structure",
+			"folders": [ "Holiday" ],
+			"weight": 4,
+			"stackSize": 100,
+			"spoilsIn": 1814400,
+			"crafting": {
+				"xp": 9,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/PrimalEarth/Structures/Christmas/Christmas_Gift/StorageBox_ChristmasGift.StorageBox_ChristmasGift_C"
+		},
+		{
+			"name": "Wreath",
+			"description": "A decorative collection of leaves that make any room festive. Requires attaching to a wall.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Wreath.PrimalItemStructure_Wreath_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Wreath_Icon.Wreath_Icon",
+			"type": "Structure",
+			"folders": [ "Holiday" ],
+			"weight": 4,
+			"stackSize": 100,
+			"spoilsIn": 1814400,
+			"crafting": {
+				"xp": 7,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 4, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/PrimalEarth/Structures/Christmas/Wreath/Furniture_Wall_Wreath.Furniture_Wall_Wreath_C"
+		},
+		{
+			"name": "Holiday Lights",
+			"description": "A decorative string of lights that make any room festive.  Requires attaching to a wall.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_XmasLights.PrimalItemStructure_XmasLights_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/ChristmasLight_Icon.ChristmasLight_Icon",
+			"type": "Structure",
+			"folders": [ "Holiday" ],
+			"weight": 4,
+			"stackSize": 100,
+			"spoilsIn": 1814400,
+			"crafting": {
+				"xp": 3,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_MistleToe_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"structure": "/Game/PrimalEarth/Structures/Christmas/lightCable/Furniture_WallChain_XmasLights.Furniture_WallChain_XmasLights_C"
+		},
+		{
 			"name": "Greenhouse Ceiling",
 			"description": "A metal-framed, glass ceiling that provides insulation, and doubles as a floor for higher levels.  Excellent for growing crops indoors.",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseCeiling.PrimalItemStructure_GreenhouseCeiling_C",
@@ -24974,30 +25668,6 @@
 				]
 			},
 			"structure": "/Game/PrimalEarth/Structures/Greenhouse_Modular/Greenhouse_Doorframe.Greenhouse_Doorframe_C"
-		},
-		{
-			"name": "Greenhouse Windowframe",
-			"description": "A metal-framed, glass wall, with a hole for a window.  Excellent for growing crops indoors.",
-			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseWallWithWindow.PrimalItemStructure_GreenhouseWallWithWindow_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseWallWithWindow.PrimalItemStructure_BaseWallWithWindow_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Metal/Icons/MetalWallHole_Icon.MetalWallHole_Icon",
-			"type": "Structure",
-			"folders": [ "Structures", "Greenhouse" ],
-			"weight": 4,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 11.04,
-				"time": 3,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 6, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 6, "type": "PrimalItemResource_ChitinPaste_C" }
-				]
-			},
-			"structure": "/Game/PrimalEarth/Structures/Greenhouse_Modular/Greenhouse_WindowWall.Greenhouse_WindowWall_C"
 		},
 		{
 			"name": "Sloped Greenhouse Wall Left",
@@ -41042,32 +41712,6 @@
 					{ "qty": 5, "type": "PrimalItemResource_Electronics_C" }
 				]
 			}
-		},
-		{
-			"name": "Netgun",
-			"description": "A small but powerful explosive, primarily used with rocket launchers.",
-			"bp": "/Game/ScorchedEarth/WeaponNetGun/PrimalItemAmmo_NetGun.PrimalItemAmmo_NetGun_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/ScorchedEarth/Icons/Weapons/NetgunAmmo_Icon.NetgunAmmo_Icon",
-			"type": "Ammo",
-			"folders": [ "Weapons", "Ammo" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 3.6,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 40, "type": "PrimalItemResource_Gunpowder_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 20, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 12, "type": "PrimalItemResource_MetalIngot_C" }
-				]
-			},
-			"weapon": "/Game/ScorchedEarth/WeaponNetGun/WeapNetGun.WeapNetGun_C"
 		},
 		{
 			"name": "Oil Jar",
