@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "340.3.1637193449",
+	"version": "340.3.1639467452",
 	"format": "4",
 	"mod": {
 		"id": "1652120435",
@@ -631,12 +631,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600, "sprint": 720 },
-				"swim": { "base": 600 }
+				"walk": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 1500 }
 			},
 			"movementD": {
-				"walk": { "base": 1350, "sprint": 2376 },
-				"swim": { "base": 1350 }
+				"walk": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 1500 }
 			},
 			"staminaRates": {
 				"sprint": -10,
@@ -645,7 +645,10 @@
 			"attack": {
 				"defaultDmg": 20,
 				"defaultSwingRadius": 140,
-				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 15, "radius": 240, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "None", "interval": 0.55, "dmg": 15, "radius": 240, "stamina": 0 },
+					{ "name": "Jump", "interval": 0.55, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
 			},
 			"death": { "baseXP": 4 }
 		},
@@ -1054,8 +1057,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 550,
 				"attacks": [
-					{ "name": "melee", "interval": 0.375, "dmg": 35, "radius": 550, "stamina": 0 },
-					{ "name": "melee", "interval": 4, "dmg": 45, "radius": 550, "stamina": 0 }
+					{ "name": "Footstomp", "interval": 0.375, "dmg": 35, "radius": 550, "stamina": 0 },
+					{ "name": "HeadSwing", "interval": 4, "dmg": 45, "radius": 550, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 12 }
@@ -1104,8 +1107,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 550,
 				"attacks": [
-					{ "name": "melee", "interval": 0.375, "dmg": 35, "radius": 550, "stamina": 0 },
-					{ "name": "melee", "interval": 4, "dmg": 45, "radius": 550, "stamina": 0 }
+					{ "name": "Footstomp", "interval": 0.375, "dmg": 35, "radius": 550, "stamina": 0 },
+					{ "name": "HeadSwing", "interval": 4, "dmg": 45, "radius": 550, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 12 }
@@ -2578,16 +2581,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 138.8, "sprint": 1665 },
-				"swim": { "base": 225 }
+				"walk": { "base": 150, "sprint": 1500 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 101.8, "sprint": 1221 },
-				"swim": { "base": 165 }
-			},
-			"movementR": {
-				"walk": { "base": 101.8, "sprint": 2442 },
-				"swim": { "base": 165 }
+				"walk": { "base": 150, "sprint": 1500 },
+				"swim": { "base": 300 }
 			},
 			"staminaRates": {
 				"sprint": -14,
@@ -2596,7 +2595,10 @@
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 430,
-				"attacks": [ { "name": "None", "interval": 0.22, "dmg": 45, "radius": 430, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Horn", "interval": 0.22, "dmg": 35, "radius": 430, "stamina": 0 },
+					{ "name": "Bite", "interval": 5, "dmg": 25, "radius": 430, "stamina": 0 }
+				]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -2811,8 +2813,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 400, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 5, "dmg": 50, "radius": 240, "stamina": 0 },
+					{ "name": "Horns", "interval": 0.4, "dmg": 40, "radius": 400, "stamina": 0 },
+					{ "name": "Stomp", "interval": 5, "dmg": 50, "radius": 240, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},

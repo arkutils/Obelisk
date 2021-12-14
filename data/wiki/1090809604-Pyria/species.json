@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "340.3.1638347339",
+	"version": "340.3.1639468742",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -5902,6 +5902,72 @@
 				"attacks": [ { "name": "None", "interval": 0.33, "dmg": 60, "radius": 350, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 12 }
+		},
+		{
+			"name": "Ravager",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/ArcaneVariants/Ravager/CaveWolf_Character_BP_Arcane.CaveWolf_Character_BP_Arcane_C",
+			"dinoNameTag": "CaveWolf",
+			"customTag": "CaveWolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 26 },
+			"cloning": {
+				"costBase": 625,
+				"costLevel": 55,
+				"timeBase": 4375,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1950
+			},
+			"movementW": {
+				"walk": { "base": 240, "sprint": 924 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 240, "sprint": 924 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 33,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 5 },
+					{ "name": "Claw", "interval": 0.22, "dmg": 25, "radius": 200, "stamina": 0 },
+					{ "name": "Howl", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 0 },
+					{ "name": "BiteBelow", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 5 },
+					{ "name": "Bite Above", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 5 },
+					{ "name": "ClawBelow", "interval": 0.22, "dmg": 33, "radius": 200, "stamina": 0 },
+					{ "name": "ClawAbove", "interval": 0.22, "dmg": 33, "radius": 200, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 5 },
+					{ "name": "Bite Jump", "interval": 3, "dmg": 25, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 6
+			}
 		},
 		{
 			"name": "Arcane Sarco",
