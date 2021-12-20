@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "340.3.1637623516",
+	"version": "341.33.1639976335",
 	"format": "4",
 	"mod": {
 		"id": "1676159020",
@@ -1073,6 +1073,61 @@
 				"defaultDmg": 40,
 				"defaultSwingRadius": 170,
 				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 5, "radius": 220, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 12 }
+		},
+		{
+			"name": "Broadtooth Mako Shark",
+			"bp": "/Game/Mods/Aquaria/FIsh/Mako/Broadtooth_Character_bp.Broadtooth_Character_bp_C",
+			"dinoNameTag": "Mega",
+			"customTag": "Broadtooth",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 38 },
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 900, "sprint": 2925 },
+				"swim": { "base": 900 }
+			},
+			"movementD": {
+				"walk": { "base": 1800, "sprint": 5850 },
+				"swim": { "base": 1800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Monch", "interval": 0.2, "dmg": 40, "radius": 480, "stamina": 0 },
+					{ "name": "Thrash", "interval": 30, "dmg": 45, "radius": 480, "stamina": 100 },
+					{ "name": "Taunt", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "DodgeLeft", "interval": 15, "dmg": 40, "radius": 480, "stamina": 225 },
+					{ "name": "DodgeRight", "interval": 15, "dmg": 40, "radius": 480, "stamina": 225 }
+				]
 			},
 			"death": { "baseXP": 12 }
 		},
