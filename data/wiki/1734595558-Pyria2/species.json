@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "340.3.1636588007",
+	"version": "341.56.1640371557",
 	"format": "4",
 	"mod": {
 		"id": "1734595558",
@@ -534,6 +534,65 @@
 				"attacks": [
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 250, "stamina": 0 },
 					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Magnaclava",
+			"bp": "/Game/Mods/Pyria2/Creatures/Wildlife/Magnaclava/Magnaclava_Character_bp.Magnaclava_Character_bp_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 1225 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 1225 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Claws", "interval": 0.4, "dmg": 100, "radius": 320, "stamina": 0 },
+					{ "name": "ClawsPin", "interval": 10, "dmg": 160, "radius": 320, "stamina": 100 },
+					{ "name": "Tail", "interval": 15, "dmg": 160, "radius": 320, "stamina": 120 },
+					{ "name": "Maul", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BreathAttack", "interval": 30, "dmg": 0, "radius": 0, "stamina": 250 },
+					{ "name": "Big Windup", "interval": 65, "dmg": 0, "radius": 0, "stamina": 300 },
+					{ "name": "Yeet", "interval": 65, "dmg": 0, "radius": 0, "stamina": 275 }
 				]
 			},
 			"death": {
