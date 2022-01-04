@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "339.28.1636664445",
+	"version": "341.56.1641263675",
 	"format": "4",
 	"mod": {
 		"id": "1984129536",
@@ -475,6 +475,29 @@
 			"weapon": "/Game/Mods/MTSMod/Flamethrower/WeapFlamethrower_MTS.WeapFlamethrower_MTS_C"
 		},
 		{
+			"name": "Net Projectile",
+			"description": "High-speed projectile that unfurls to ensnare creatures in netting. Can only be fired from a Harpoon Launcher.",
+			"bp": "/Game/Mods/MTSMod/HarpoonLauncher/PrimalItemAmmo_ArrowNet_MTS.PrimalItemAmmo_ArrowNet_MTS_C",
+			"parent": "/Game/Genesis2/Weapons/NetAmmo/PrimalItemAmmo_ArrowNet.PrimalItemAmmo_ArrowNet_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_Gen2_NetAmmo_Icon.HUD_Gen2_NetAmmo_Icon",
+			"type": "Ammo",
+			"folders": [ "Weapons", "Ammo" ],
+			"weight": 2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 4, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 12, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 180, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
 			"name": "Fertilized Kentro Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/MTSMod/Kentro/PrimalItemConsumable_Egg_Kentro_Fertilized_MTS.PrimalItemConsumable_Egg_Kentro_Fertilized_MTS_C",
@@ -585,32 +608,6 @@
 			"type": "MiscConsumable/Food",
 			"weight": 0.1,
 			"stackSize": 1
-		},
-		{
-			"name": "Unassembled TEK Hover Skiff",
-			"description": "Craft this item to assemble a new TEK Hover Skiff.\n\nMTS TEK Hover Skiff Changes;\n- Cannot pick Reapers, Rock Elementals or Wyverns (wild & tamed) using tractor beam.\n- Increased crafting cost from 168 to 200 Element.\n- Requires Player Level 105 and completion of Beta Master Controller to unlock.",
-			"bp": "/Game/Mods/MTSMod/Skiff/PrimalItem_Spawner_HoverSkiff_MTS.PrimalItem_Spawner_HoverSkiff_MTS_C",
-			"parent": "/Game/Genesis/CoreBlueprints/Items/PrimalItem_Spawner_HoverSkiff.PrimalItem_Spawner_HoverSkiff_C",
-			"icon": "/Game/Genesis/UI/Icons/HUD_HoverSkiff_Icon.HUD_HoverSkiff_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Vehicles" ],
-			"weight": 800,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 200, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 4100, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 372, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 60, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 62, "type": "PrimalItemResource_Oil_C" },
-					{ "qty": 268, "type": "PrimalItemResource_Electronics_C" }
-				]
-			}
 		},
 		{
 			"name": "Fertilized Snow Owl Egg",
