@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "342.13.1642329894",
+	"version": "342.13.1642492066",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -4298,7 +4298,7 @@
 				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
 			],
 			"egg": {
-				"dinoClass": "/Game/Mods/Trex/Dinos/Argentavis/Fire/FireArgent_Character_BP_ADO.FireArgent_Character_BP_ADO_C",
+				"dinoClass": "/Game/Mods/Trex/Dinos/Argentavis/Fire/FireArgent_Character_BP_Tamed.FireArgent_Character_BP_Tamed_C",
 				"temperature": { "min": 12, "max": 13.5 }
 			},
 			"cooking": {
@@ -4326,7 +4326,7 @@
 				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
 			],
 			"egg": {
-				"dinoClass": "/Game/Mods/Trex/Dinos/Argentavis/Ice/IceArgent_Character_BP_ADO.IceArgent_Character_BP_ADO_C",
+				"dinoClass": "/Game/Mods/Trex/Dinos/Argentavis/Ice/IceArgent_Character_BP_Tamed.IceArgent_Character_BP_Tamed_C",
 				"temperature": { "min": 12, "max": 13.5 }
 			},
 			"cooking": {
@@ -4354,7 +4354,7 @@
 				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
 			],
 			"egg": {
-				"dinoClass": "/Game/Mods/Trex/Dinos/Argentavis/Poison/PoisonArgent_Character_BP_ADO.PoisonArgent_Character_BP_ADO_C",
+				"dinoClass": "/Game/Mods/Trex/Dinos/Argentavis/Poison/PoisonArgent_Character_BP_tamed.PoisonArgent_Character_BP_tamed_C",
 				"temperature": { "min": 12, "max": 13.5 }
 			},
 			"cooking": {
@@ -4456,7 +4456,7 @@
 				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
 			],
 			"egg": {
-				"dinoClass": "/Game/Mods/Trex/Dinos/Argentavis/Shock/ShockArgent_Character_BP_ADO.ShockArgent_Character_BP_ADO_C",
+				"dinoClass": "/Game/Mods/Trex/Dinos/Argentavis/Shock/ShockArgent_Character_BP_Tamed.ShockArgent_Character_BP_Tamed_C",
 				"temperature": { "min": 12, "max": 13.5 }
 			},
 			"cooking": {
@@ -10020,31 +10020,6 @@
 			"stackSize": 1
 		},
 		{
-			"name": "Wyvern Tek Saddle",
-			"description": "Equip a Wyvern with this to ride it.",
-			"bp": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/Saddle/Items/PrimalItemArmor_WyvernTekSaddle_ADO.PrimalItemArmor_WyvernTekSaddle_ADO_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Trex/PrimalEarth/TekTier/Tek_Wyvern_saddle/HUD_TekWyvernSaddle_Colorize_MIC.HUD_TekWyvernSaddle_Colorize_MIC",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 17.6,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 900, "type": "PrimalItemResource_APolymer_ADO_C" },
-					{ "qty": 2000, "type": "PrimalItemResource_Steel_ADO_C" },
-					{ "qty": 500, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 250, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 750, "type": "PrimalItemResource_BlackPearl_C" }
-				]
-			}
-		},
-		{
 			"name": "Wyvern Saddle",
 			"description": "Equip a Wyverm with this to ride it. Works on all Wyverns",
 			"bp": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/Saddle/PrimalItemArmor_Saddle_Wyvern_ADO.PrimalItemArmor_Saddle_Wyvern_ADO_C",
@@ -10069,6 +10044,32 @@
 					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_LightningWyvern_C" },
 					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_ForestWyvern_ADO_C" },
 					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_IceWyvern_ADO_C" }
+				]
+			}
+		},
+		{
+			"name": "Wyverns Saddle",
+			"description": "Universal Saddle for all Wyverns",
+			"bp": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/Saddle/PrimalItemArmor_WyvernSaddle_ADO.PrimalItemArmor_WyvernSaddle_ADO_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/Trex/PrimalEarth/TekTier/Tek_Wyvern_saddle/HUD_TekWyvernSaddle_Colorize_MIC.HUD_TekWyvernSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Scorched Earth", "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 70,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 750, "type": "PrimalItemResource_AHide_ADO_C" },
+					{ "qty": 1500, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Steel_ADO_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_FireWyvern_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_LightningWyvern_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_PoisonWyvern_C" }
 				]
 			}
 		},

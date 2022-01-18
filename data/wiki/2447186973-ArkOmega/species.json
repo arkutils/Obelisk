@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "342.13.1641689593",
+	"version": "342.13.1642510593",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -1146,9 +1146,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 5,
+				"defaultDmg": 9,
 				"defaultSwingRadius": 180,
-				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 180, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 9, "radius": 180, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 0.5 }
 		},
@@ -4958,7 +4958,10 @@
 			"attack": {
 				"defaultDmg": 10,
 				"defaultSwingRadius": 348,
-				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 10, "radius": 348, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.3, "dmg": 10, "radius": 348, "stamina": 0 },
+					{ "name": "Gatling", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5 }
+				]
 			},
 			"death": { "baseXP": 3 }
 		},
@@ -5895,7 +5898,7 @@
 				]
 			},
 			"death": {
-				"lootBagChance": 0.4,
+				"lootBagChance": 1,
 				"lootBags": [
 					{
 						"chance": 1,
@@ -6731,6 +6734,7 @@
 			"dragWeight": 25,
 			"variants": [ "Child" ],
 			"flags": [
+				"allowMountedWeaponry",
 				"allowRiding",
 				"allowRidingInWater",
 				"canBeDragged",
@@ -7326,7 +7330,7 @@
 			"death": { "baseXP": 2 }
 		},
 		{
-			"name": "Onyc",
+			"name": "Familiar",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Minions/Bat_Character_BP_Familiar.Bat_Character_BP_Familiar_C",
 			"dinoNameTag": "Bat",
 			"customTag": "Onyc",
@@ -7381,6 +7385,103 @@
 				],
 				"baseXP": 3
 			}
+		},
+		{
+			"name": "Cnidiarrhea",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Minions/Cnidaria_Character_BP_Diarrhea.Cnidaria_Character_BP_Diarrhea_C",
+			"dinoNameTag": "Cnidaria",
+			"customTag": "Jelly",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 100,
+			"dragWeight": 21,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"movementD": {
+				"walk": { "base": 250, "sprint": 500 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 45, "radius": 200, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 1 }
+		},
+		{
+			"name": "Turdanodon",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Minions/Ptero_Character_BP_Turdanodon.Ptero_Character_BP_Turdanodon_C",
+			"dinoNameTag": "Ptera",
+			"customTag": "Ptera",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 79 },
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 260, "sprint": 715 },
+				"fly": { "base": 600, "sprint": 1650 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 822.2 },
+				"fly": { "base": 600, "sprint": 1897.5 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 273, "sprint": 781.3 },
+				"fly": { "base": 630, "sprint": 1803.1 },
+				"swim": { "base": 630 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 22,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 27, "radius": 200, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 27, "radius": 200, "stamina": 40 },
+					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 75, "radius": 260, "stamina": 90 }
+				]
+			},
+			"death": { "baseXP": 3 }
 		},
 		{
 			"name": "Craptor",
@@ -8164,7 +8265,7 @@
 				]
 			},
 			"death": {
-				"lootBagChance": 0.4,
+				"lootBagChance": 1,
 				"lootBags": [
 					{
 						"chance": 1,
@@ -11499,49 +11600,6 @@
 			"death": { "baseXP": 2 }
 		},
 		{
-			"name": "GachaClaus",
-			"bp": "/Game/Mods/ArkOmega/Extinction/Dinos/Gacha/Gacha_Claus_Character_BP.Gacha_Claus_Character_BP_C",
-			"dinoNameTag": "Gacha",
-			"customTag": "Gacha",
-			"targetingTeamName": "Herbivores",
-			"mass": 400,
-			"dragWeight": 350,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
-			"leveling": { "mutagenCost": 62 },
-			"cloning": {
-				"costBase": 1550,
-				"costLevel": 55,
-				"timeBase": 10850,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 750 },
-				"swim": { "base": 200 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 750 },
-				"swim": { "base": 200 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 150,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.67, "dmg": 32, "radius": 200, "stamina": 0 },
-					{ "name": "MeleeSmash", "interval": 0.7, "dmg": 30, "radius": 150, "stamina": 0 },
-					{ "name": "Gather", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 2 }
-		},
-		{
 			"name": "Super Turkey",
 			"bp": "/Game/Mods/ArkOmega/PrimalEarth/Dinos/Dodo/Turkey_Character_BP.Turkey_Character_BP_C",
 			"dinoNameTag": "",
@@ -11647,52 +11705,6 @@
 				],
 				"baseXP": 15
 			}
-		},
-		{
-			"name": "Reindeer",
-			"bp": "/Game/Mods/ArkOmega/PrimalEarth/Dinos/Stag/Reindeer_Character_BP.Reindeer_Character_BP_C",
-			"dinoNameTag": "Stag",
-			"customTag": "Stag",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 195,
-			"dragWeight": 120,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 37 },
-			"cloning": {
-				"costBase": 900,
-				"costLevel": 55,
-				"timeBase": 6300,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 150, "sprint": 900 },
-				"swim": { "base": 225 }
-			},
-			"movementD": {
-				"walk": { "base": 170, "sprint": 1020 },
-				"swim": { "base": 255 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 30,
-				"defaultSwingRadius": 250,
-				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 30, "radius": 250, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 4 }
 		}
 	]
 }

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "342.13.1642329894",
+	"version": "342.13.1642492066",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -1340,7 +1340,7 @@
 			"name": "FluffDragon, the Mega DodoReaper",
 			"bp": "/Game/Mods/Trex/Aberrant/Dinos/Nameless/Dodoreaper/DodoXenomorph_Character_BP_Male_ADO.DodoXenomorph_Character_BP_Male_ADO_C",
 			"dinoNameTag": "Elite Xenomorph",
-			"customTag": "Reaper King",
+			"customTag": "Reaper",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 385,
 			"dragWeight": 525,
@@ -1353,29 +1353,22 @@
 				"preventNeuter"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 60 } ],
-				"mutagenCost": 93
-			},
-			"cloning": {
-				"costBase": 2325,
-				"costLevel": 55,
-				"timeBase": 16275,
-				"timeLevel": 385
+				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 20,
-				"maxSpeed": 2800
+				"dmgMult": 80,
+				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1912.5, "sprint": 3251.3 },
+				"walk": { "base": 1912.5, "sprint": 2677.5 },
 				"swim": { "base": 1687.5 }
 			},
 			"movementD": {
-				"walk": { "base": 1275, "sprint": 3612.5 },
+				"walk": { "base": 1275, "sprint": 2975 },
 				"swim": { "base": 1125 }
 			},
 			"movementR": {
-				"walk": { "base": 1275, "sprint": 3070.6 },
+				"walk": { "base": 1275, "sprint": 2528.8 },
 				"swim": { "base": 1125 }
 			},
 			"staminaRates": {
@@ -1824,80 +1817,9 @@
 				"engrams": [
 					"PrimalItemConsumable_Reaper_DNA_C",
 					"PrimalItem_Transform_AlphaReaperKing_C",
-					"PrimalItemSpawner_DodoReaper_ADO_C"
+					"PrimalItem_Transform_CelestReaperKing_C"
 				],
 				"baseXP": 1500
-			}
-		},
-		{
-			"name": "Ryan's Dodo Reaper",
-			"bp": "/Game/Mods/Trex/Aberrant/Dinos/Nameless/Ryans_Tribute/CelestialDodoreaper_Character_BP_ADO.CelestialDodoreaper_Character_BP_ADO_C",
-			"dinoNameTag": "Xenomorph",
-			"customTag": "Reaper King",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 385,
-			"dragWeight": 1000,
-			"flags": [
-				"allowRiding",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"preventNeuter",
-				"isTameable"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
-				"mutagenCost": 990001
-			},
-			"cloning": {
-				"costBase": 25000000,
-				"costLevel": 137500,
-				"timeBase": 175000000,
-				"timeLevel": 962500
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 2800
-			},
-			"movementW": {
-				"walk": { "base": 1912.5, "sprint": 3251.3 },
-				"swim": { "base": 2025 }
-			},
-			"movementD": {
-				"walk": { "base": 1020, "sprint": 3612.5 },
-				"swim": { "base": 1080 }
-			},
-			"movementR": {
-				"walk": { "base": 1020, "sprint": 3070.6 },
-				"swim": { "base": 1080 }
-			},
-			"staminaRates": {
-				"sprint": -14,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 1500,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteAttack", "interval": 0.35, "dmg": 2685, "radius": 600, "stamina": 5 },
-					{
-						"name": "Fireballs", "interval": 7, "dmg": 500, "radius": 600, "stamina": 50,
-						"isProjectile": true
-					},
-					{ "name": "Tail swipe", "interval": 6, "dmg": 4500, "radius": 2600, "stamina": 30 },
-					{ "name": "AOE Attack", "interval": 60, "dmg": 1500, "radius": 5000, "stamina": 250 },
-					{
-						"name": "Fireball Attack", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
-						"isProjectile": true
-					},
-					{ "name": "FlameBeath Attack", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50 },
-					{ "name": "Projectile", "interval": 2.5, "dmg": 0, "radius": 430, "stamina": 0 },
-					{ "name": "Lock Roar", "interval": 0, "dmg": 0, "radius": 1200, "stamina": 100 }
-				]
-			},
-			"death": {
-				"engrams": [ "PrimalItemConsumable_AlphaReaper_Spore_C" ],
-				"baseXP": 1250
 			}
 		},
 		{
@@ -2687,7 +2609,7 @@
 						"item": "/Game/PrimalEarth/Dinos/CrystalWyvern/Mega/DinoDropInventoryComponent_Carnivore_Huge_MegaCrystalWyvern.DinoDropInventoryComponent_Carnivore_Huge_MegaCrystalWyvern"
 					}
 				],
-				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_WyvernTekSaddle_ADO_C" ],
+				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C" ],
 				"baseXP": 375
 			}
 		},
@@ -3602,12 +3524,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 75,
+				"defaultDmg": 100,
 				"defaultSwingRadius": 370,
 				"attacks": [
-					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 75, "radius": 370, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.67, "dmg": 75, "radius": 250, "stamina": 0 },
-					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 75, "radius": 370, "stamina": 0 }
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 100, "radius": 370, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 60, "radius": 250, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 100, "radius": 370, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 25 }
@@ -3660,12 +3582,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 250,
+				"defaultDmg": 450,
 				"defaultSwingRadius": 370,
 				"attacks": [
-					{ "name": "WalkingAndSwimmingTail", "interval": 0.35, "dmg": 250, "radius": 900, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.35, "dmg": 250, "radius": 900, "stamina": 0 },
-					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 250, "radius": 900, "stamina": 0 }
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.35, "dmg": 450, "radius": 900, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.35, "dmg": 300, "radius": 900, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 450, "radius": 900, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 250 }
@@ -3718,12 +3640,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 100,
+				"defaultDmg": 125,
 				"defaultSwingRadius": 370,
 				"attacks": [
-					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 100, "radius": 370, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.67, "dmg": 100, "radius": 250, "stamina": 0 },
-					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 100, "radius": 370, "stamina": 0 }
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 125, "radius": 370, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 75, "radius": 250, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 125, "radius": 370, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 250 }
@@ -3776,12 +3698,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 50,
+				"defaultDmg": 100,
 				"defaultSwingRadius": 370,
 				"attacks": [
-					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 },
-					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 }
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 100, "radius": 370, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 60, "radius": 370, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 100, "radius": 370, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 250 }
@@ -3834,12 +3756,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 150,
+				"defaultDmg": 200,
 				"defaultSwingRadius": 370,
 				"attacks": [
-					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 150, "radius": 500, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.67, "dmg": 150, "radius": 350, "stamina": 0 },
-					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 150, "radius": 370, "stamina": 0 }
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 200, "radius": 500, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 200, "radius": 350, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 200, "radius": 370, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 250 }
@@ -4369,10 +4291,10 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 90,
+				"defaultDmg": 50,
 				"defaultSwingRadius": 210,
 				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 90, "radius": 240, "stamina": 0 },
+					{ "name": "None", "interval": 0.6, "dmg": 50, "radius": 240, "stamina": 0 },
 					{ "name": "GrabClaws", "interval": 4, "dmg": 25, "radius": 400, "stamina": 120 },
 					{ "name": "GrabBeak", "interval": 4, "dmg": 25, "radius": 300, "stamina": 120 }
 				]
@@ -4507,12 +4429,83 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 225,
+				"defaultDmg": 250,
 				"defaultSwingRadius": 210,
 				"attacks": [
-					{ "name": "None", "interval": 0.3, "dmg": 225, "radius": 240, "stamina": 0 },
-					{ "name": "GrabClaws", "interval": 2.5, "dmg": 125, "radius": 400, "stamina": 120 },
-					{ "name": "GrabBeak", "interval": 2.5, "dmg": 300, "radius": 300, "stamina": 120 }
+					{ "name": "None", "interval": 0.3, "dmg": 250, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 2.5, "dmg": 200, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 2.5, "dmg": 200, "radius": 300, "stamina": 120 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Argentavis.DinoDropInventoryComponent_Carnivore_Large_Argentavis"
+					}
+				],
+				"baseXP": 50
+			}
+		},
+		{
+			"name": "Flame Argentavis",
+			"bp": "/Game/Mods/Trex/Dinos/Argentavis/Fire/FireArgent_Character_BP_Tamed.FireArgent_Character_BP_Tamed_C",
+			"dinoNameTag": "AlphaArgentavis",
+			"customTag": "Argent",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 190,
+			"dragWeight": 450,
+			"variants": [ "Tamed" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
+				"mutagenCost": 68
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 424.4 },
+				"fly": { "base": 600, "sprint": 727.5 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 787.5 },
+				"fly": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 382.4, "sprint": 860.3 },
+				"fly": { "base": 655.5, "sprint": 1474.9 },
+				"swim": { "base": 655.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 250,
+				"defaultSwingRadius": 210,
+				"attacks": [
+					{ "name": "None", "interval": 0.3, "dmg": 250, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 2.5, "dmg": 200, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 2.5, "dmg": 200, "radius": 300, "stamina": 120 }
 				]
 			},
 			"death": {
@@ -4577,12 +4570,83 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 70,
+				"defaultDmg": 75,
 				"defaultSwingRadius": 210,
 				"attacks": [
-					{ "name": "None", "interval": 0.3, "dmg": 70, "radius": 240, "stamina": 0 },
+					{ "name": "None", "interval": 0.3, "dmg": 75, "radius": 240, "stamina": 0 },
 					{ "name": "GrabClaws", "interval": 2.5, "dmg": 35, "radius": 400, "stamina": 120 },
-					{ "name": "GrabBeak", "interval": 2.5, "dmg": 100, "radius": 300, "stamina": 120 }
+					{ "name": "GrabBeak", "interval": 2.5, "dmg": 75, "radius": 300, "stamina": 120 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Argentavis.DinoDropInventoryComponent_Carnivore_Large_Argentavis"
+					}
+				],
+				"baseXP": 50
+			}
+		},
+		{
+			"name": "SnowArgentavis",
+			"bp": "/Game/Mods/Trex/Dinos/Argentavis/Ice/IceArgent_Character_BP_Tamed.IceArgent_Character_BP_Tamed_C",
+			"dinoNameTag": "IceArgentavis",
+			"customTag": "Argent",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 190,
+			"dragWeight": 450,
+			"variants": [ "Tamed" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
+				"mutagenCost": 68
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 424.4 },
+				"fly": { "base": 600, "sprint": 727.5 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 787.5 },
+				"fly": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 382.4, "sprint": 860.3 },
+				"fly": { "base": 655.5, "sprint": 1474.9 },
+				"swim": { "base": 655.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 75,
+				"defaultSwingRadius": 210,
+				"attacks": [
+					{ "name": "None", "interval": 0.3, "dmg": 75, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 2.5, "dmg": 35, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 2.5, "dmg": 75, "radius": 300, "stamina": 120 }
 				]
 			},
 			"death": {
@@ -4647,12 +4711,82 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 45,
+				"defaultDmg": 50,
 				"defaultSwingRadius": 210,
 				"attacks": [
-					{ "name": "None", "interval": 0.3, "dmg": 45, "radius": 240, "stamina": 0 },
+					{ "name": "None", "interval": 0.3, "dmg": 50, "radius": 240, "stamina": 0 },
 					{ "name": "GrabClaws", "interval": 2.5, "dmg": 25, "radius": 400, "stamina": 120 },
-					{ "name": "GrabBeak", "interval": 2.5, "dmg": 60, "radius": 300, "stamina": 120 }
+					{ "name": "GrabBeak", "interval": 2.5, "dmg": 25, "radius": 300, "stamina": 120 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Argentavis.DinoDropInventoryComponent_Carnivore_Large_Argentavis"
+					}
+				],
+				"baseXP": 50
+			}
+		},
+		{
+			"name": "Poison Argentavis",
+			"bp": "/Game/Mods/Trex/Dinos/Argentavis/Poison/PoisonArgent_Character_BP_tamed.PoisonArgent_Character_BP_tamed_C",
+			"dinoNameTag": "GammaArgentavis",
+			"customTag": "Argent",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 190,
+			"dragWeight": 450,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
+				"mutagenCost": 68
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 424.4 },
+				"fly": { "base": 600, "sprint": 727.5 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 787.5 },
+				"fly": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 382.4, "sprint": 860.3 },
+				"fly": { "base": 655.5, "sprint": 1474.9 },
+				"swim": { "base": 655.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 210,
+				"attacks": [
+					{ "name": "None", "interval": 0.3, "dmg": 50, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 2.5, "dmg": 25, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 2.5, "dmg": 25, "radius": 300, "stamina": 120 }
 				]
 			},
 			"death": {
@@ -4717,12 +4851,83 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 135,
+				"defaultDmg": 100,
 				"defaultSwingRadius": 210,
 				"attacks": [
-					{ "name": "None", "interval": 0.3, "dmg": 135, "radius": 240, "stamina": 0 },
-					{ "name": "GrabClaws", "interval": 2.5, "dmg": 75, "radius": 400, "stamina": 120 },
-					{ "name": "GrabBeak", "interval": 2.5, "dmg": 180, "radius": 300, "stamina": 120 }
+					{ "name": "None", "interval": 0.3, "dmg": 100, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 2.5, "dmg": 50, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 2.5, "dmg": 75, "radius": 300, "stamina": 120 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Argentavis.DinoDropInventoryComponent_Carnivore_Large_Argentavis"
+					}
+				],
+				"baseXP": 50
+			}
+		},
+		{
+			"name": "Shock Argentavis",
+			"bp": "/Game/Mods/Trex/Dinos/Argentavis/Shock/ShockArgent_Character_BP_Tamed.ShockArgent_Character_BP_Tamed_C",
+			"dinoNameTag": "BetaArgentavis",
+			"customTag": "Argent",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 190,
+			"dragWeight": 450,
+			"variants": [ "Tamed" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
+				"mutagenCost": 68
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 424.4 },
+				"fly": { "base": 600, "sprint": 727.5 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 787.5 },
+				"fly": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 382.4, "sprint": 860.3 },
+				"fly": { "base": 655.5, "sprint": 1474.9 },
+				"swim": { "base": 655.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 100,
+				"defaultSwingRadius": 210,
+				"attacks": [
+					{ "name": "None", "interval": 0.3, "dmg": 100, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 2.5, "dmg": 50, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 2.5, "dmg": 75, "radius": 300, "stamina": 120 }
 				]
 			},
 			"death": {
@@ -5161,9 +5366,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 35,
+				"defaultDmg": 70,
 				"defaultSwingRadius": 185,
-				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 35, "radius": 185, "stamina": 0 } ]
+				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 70, "radius": 185, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -5220,9 +5425,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 65,
+				"defaultDmg": 210,
 				"defaultSwingRadius": 185,
-				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 65, "radius": 185, "stamina": 0 } ]
+				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 210, "radius": 185, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -5279,9 +5484,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 25,
+				"defaultDmg": 100,
 				"defaultSwingRadius": 185,
-				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 25, "radius": 185, "stamina": 0 } ]
+				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 100, "radius": 185, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -5338,9 +5543,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 15,
+				"defaultDmg": 70,
 				"defaultSwingRadius": 185,
-				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 15, "radius": 185, "stamina": 0 } ]
+				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 70, "radius": 185, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -5824,9 +6029,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 28,
+				"defaultDmg": 55,
 				"defaultSwingRadius": 240,
-				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 28, "radius": 240, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 55, "radius": 240, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 4 }
 		},
@@ -5874,9 +6079,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 140,
+				"defaultDmg": 165,
 				"defaultSwingRadius": 240,
-				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 140, "radius": 270, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 165, "radius": 270, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 40 }
 		},
@@ -5924,9 +6129,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 40,
+				"defaultDmg": 75,
 				"defaultSwingRadius": 240,
-				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 40, "radius": 270, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 75, "radius": 270, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 40 }
 		},
@@ -5974,9 +6179,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 28,
+				"defaultDmg": 55,
 				"defaultSwingRadius": 240,
-				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 28, "radius": 270, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 55, "radius": 270, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 40 }
 		},
@@ -6024,9 +6229,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 85,
+				"defaultDmg": 110,
 				"defaultSwingRadius": 240,
-				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 85, "radius": 270, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 110, "radius": 270, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 40 }
 		},
@@ -6424,15 +6629,15 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 200,
+				"defaultDmg": 400,
 				"defaultSwingRadius": 110,
 				"attacks": [
-					{ "name": "Punch", "interval": 0.15, "dmg": 200, "radius": 110, "stamina": 0 },
-					{ "name": "Throw", "interval": 0.1, "dmg": 300, "radius": 110, "stamina": 0 },
-					{ "name": "Harvest", "interval": 3.5, "dmg": 200, "radius": 130, "stamina": 0 },
-					{ "name": "Grab Dino", "interval": 3.5, "dmg": 200, "radius": 130, "stamina": 0 },
-					{ "name": "Throw Dino", "interval": 0.1, "dmg": 300, "radius": 110, "stamina": 0 },
-					{ "name": "JumpPunch", "interval": 0.15, "dmg": 200, "radius": 110, "stamina": 0 }
+					{ "name": "Punch", "interval": 0.15, "dmg": 400, "radius": 110, "stamina": 0 },
+					{ "name": "Throw", "interval": 0.1, "dmg": 600, "radius": 110, "stamina": 0 },
+					{ "name": "Harvest", "interval": 3.5, "dmg": 400, "radius": 130, "stamina": 0 },
+					{ "name": "Grab Dino", "interval": 3.5, "dmg": 400, "radius": 130, "stamina": 0 },
+					{ "name": "Throw Dino", "interval": 0.1, "dmg": 600, "radius": 110, "stamina": 0 },
+					{ "name": "JumpPunch", "interval": 0.15, "dmg": 400, "radius": 110, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 20 }
@@ -6440,120 +6645,6 @@
 		{
 			"name": "Snow Gigantopithecus",
 			"bp": "/Game/Mods/Trex/Dinos/Bigfoot/Ice/Bigfoot_Character_BP_Ice.Bigfoot_Character_BP_Ice_C",
-			"dinoNameTag": "Bigfoot",
-			"customTag": "Bigfoot",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 198,
-			"dragWeight": 150,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isTameable"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
-				"mutagenCost": 36
-			},
-			"cloning": {
-				"costBase": 875,
-				"costLevel": 55,
-				"timeBase": 6125,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 195, "sprint": 682.5 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 292.5, "sprint": 1023.8 },
-				"swim": { "base": 450 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 60,
-				"defaultSwingRadius": 110,
-				"attacks": [
-					{ "name": "Punch", "interval": 0.15, "dmg": 60, "radius": 110, "stamina": 0 },
-					{ "name": "Throw", "interval": 0.1, "dmg": 120, "radius": 110, "stamina": 0 },
-					{ "name": "Harvest", "interval": 3.5, "dmg": 60, "radius": 130, "stamina": 0 },
-					{ "name": "Grab Dino", "interval": 3.5, "dmg": 60, "radius": 130, "stamina": 0 },
-					{ "name": "Throw Dino", "interval": 0.1, "dmg": 120, "radius": 110, "stamina": 0 },
-					{ "name": "JumpPunch", "interval": 0.15, "dmg": 60, "radius": 110, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 20 }
-		},
-		{
-			"name": "Poison Gigantopithecus",
-			"bp": "/Game/Mods/Trex/Dinos/Bigfoot/Poison/Bigfoot_Character_BP_Poison.Bigfoot_Character_BP_Poison_C",
-			"dinoNameTag": "Bigfoot",
-			"customTag": "Bigfoot",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 198,
-			"dragWeight": 150,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isTameable"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
-				"mutagenCost": 36
-			},
-			"cloning": {
-				"costBase": 875,
-				"costLevel": 55,
-				"timeBase": 6125,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 195, "sprint": 682.5 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 292.5, "sprint": 1023.8 },
-				"swim": { "base": 450 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 110,
-				"attacks": [
-					{ "name": "Punch", "interval": 0.15, "dmg": 40, "radius": 110, "stamina": 0 },
-					{ "name": "Throw", "interval": 0.1, "dmg": 60, "radius": 110, "stamina": 0 },
-					{ "name": "Harvest", "interval": 3.5, "dmg": 40, "radius": 130, "stamina": 0 },
-					{ "name": "Grab Dino", "interval": 3.5, "dmg": 40, "radius": 130, "stamina": 0 },
-					{ "name": "Throw Dino", "interval": 0.1, "dmg": 60, "radius": 110, "stamina": 0 },
-					{ "name": "JumpPunch", "interval": 0.15, "dmg": 40, "radius": 110, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 20 }
-		},
-		{
-			"name": "Shock Gigantopithecus",
-			"bp": "/Game/Mods/Trex/Dinos/Bigfoot/Shock/Bigfoot_Character_BP_Shock.Bigfoot_Character_BP_Shock_C",
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Bigfoot",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -6604,6 +6695,120 @@
 					{ "name": "Grab Dino", "interval": 3.5, "dmg": 120, "radius": 130, "stamina": 0 },
 					{ "name": "Throw Dino", "interval": 0.1, "dmg": 180, "radius": 110, "stamina": 0 },
 					{ "name": "JumpPunch", "interval": 0.15, "dmg": 120, "radius": 110, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 20 }
+		},
+		{
+			"name": "Poison Gigantopithecus",
+			"bp": "/Game/Mods/Trex/Dinos/Bigfoot/Poison/Bigfoot_Character_BP_Poison.Bigfoot_Character_BP_Poison_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Bigfoot",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 198,
+			"dragWeight": 150,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
+				"mutagenCost": 36
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 195, "sprint": 682.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 1023.8 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 80,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Punch", "interval": 0.15, "dmg": 80, "radius": 110, "stamina": 0 },
+					{ "name": "Throw", "interval": 0.1, "dmg": 120, "radius": 110, "stamina": 0 },
+					{ "name": "Harvest", "interval": 3.5, "dmg": 80, "radius": 130, "stamina": 0 },
+					{ "name": "Grab Dino", "interval": 3.5, "dmg": 80, "radius": 130, "stamina": 0 },
+					{ "name": "Throw Dino", "interval": 0.1, "dmg": 120, "radius": 110, "stamina": 0 },
+					{ "name": "JumpPunch", "interval": 0.15, "dmg": 80, "radius": 110, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 20 }
+		},
+		{
+			"name": "Shock Gigantopithecus",
+			"bp": "/Game/Mods/Trex/Dinos/Bigfoot/Shock/Bigfoot_Character_BP_Shock.Bigfoot_Character_BP_Shock_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Bigfoot",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 198,
+			"dragWeight": 150,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
+				"mutagenCost": 36
+			},
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 195, "sprint": 682.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 1023.8 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Punch", "interval": 0.15, "dmg": 160, "radius": 110, "stamina": 0 },
+					{ "name": "Throw", "interval": 0.1, "dmg": 200, "radius": 110, "stamina": 0 },
+					{ "name": "Harvest", "interval": 3.5, "dmg": 160, "radius": 130, "stamina": 0 },
+					{ "name": "Grab Dino", "interval": 3.5, "dmg": 160, "radius": 130, "stamina": 0 },
+					{ "name": "Throw Dino", "interval": 0.1, "dmg": 200, "radius": 110, "stamina": 0 },
+					{ "name": "JumpPunch", "interval": 0.15, "dmg": 160, "radius": 110, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 20 }
@@ -8813,10 +9018,10 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 425,
+				"defaultDmg": 600,
 				"defaultSwingRadius": 110,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 325, "radius": 150, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.6, "dmg": 400, "radius": 150, "stamina": 0 },
 					{ "name": "Gore", "interval": 0.5, "dmg": 500, "radius": 120, "stamina": 0 }
 				]
 			},
@@ -8878,7 +9083,7 @@
 				"defaultSwingRadius": 110,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.6, "dmg": 95, "radius": 150, "stamina": 0 },
-					{ "name": "Gore", "interval": 0.5, "dmg": 150, "radius": 120, "stamina": 0 }
+					{ "name": "Gore", "interval": 0.5, "dmg": 120, "radius": 120, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -8935,10 +9140,10 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 85,
+				"defaultDmg": 110,
 				"defaultSwingRadius": 110,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 65, "radius": 150, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.6, "dmg": 85, "radius": 150, "stamina": 0 },
 					{ "name": "Gore", "interval": 0.5, "dmg": 100, "radius": 120, "stamina": 0 }
 				]
 			},
@@ -9058,11 +9263,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 255,
+				"defaultDmg": 250,
 				"defaultSwingRadius": 110,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 195, "radius": 150, "stamina": 0 },
-					{ "name": "Gore", "interval": 0.5, "dmg": 300, "radius": 120, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.6, "dmg": 200, "radius": 150, "stamina": 0 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 250, "radius": 120, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -11476,12 +11681,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 195,
+				"defaultDmg": 150,
 				"defaultSwingRadius": 142,
 				"attacks": [
-					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 195, "radius": 142, "stamina": 0 },
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 150, "radius": 142, "stamina": 0 },
 					{ "name": "None", "interval": 0.67, "dmg": 90, "radius": 142, "stamina": 0 },
-					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 195, "radius": 142, "stamina": 0 }
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 150, "radius": 142, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 50 }
@@ -13037,12 +13242,12 @@
 			},
 			"staminaRates": { "sprint": -20 },
 			"attack": {
-				"defaultDmg": 4000,
+				"defaultDmg": 3250,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 4000, "radius": 850, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 3250, "radius": 850, "stamina": 0 },
 					{ "name": "None", "interval": 25, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 4000, "radius": 850, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 3250, "radius": 850, "stamina": 0 },
 					{ "name": "Fireball", "interval": 30, "dmg": 10, "radius": 850, "stamina": 0 }
 				]
 			},
@@ -13281,12 +13486,12 @@
 			},
 			"staminaRates": { "sprint": -6 },
 			"attack": {
-				"defaultDmg": 900,
+				"defaultDmg": 650,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 900, "radius": 850, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 650, "radius": 850, "stamina": 0 },
 					{ "name": "None", "interval": 25, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 900, "radius": 850, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 650, "radius": 850, "stamina": 0 },
 					{ "name": "Fireball", "interval": 30, "dmg": 10, "radius": 850, "stamina": 0 }
 				]
 			},
@@ -13404,12 +13609,12 @@
 			},
 			"staminaRates": { "sprint": -6 },
 			"attack": {
-				"defaultDmg": 900,
+				"defaultDmg": 325,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 900, "radius": 850, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 325, "radius": 850, "stamina": 0 },
 					{ "name": "None", "interval": 25, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 900, "radius": 850, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 325, "radius": 850, "stamina": 0 },
 					{ "name": "Fireball", "interval": 30, "dmg": 10, "radius": 850, "stamina": 0 }
 				]
 			},
@@ -13593,12 +13798,12 @@
 			},
 			"staminaRates": { "sprint": -20 },
 			"attack": {
-				"defaultDmg": 1800,
+				"defaultDmg": 1000,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 1800, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 25, "dmg": 1800, "radius": 1250, "stamina": 50 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 1800, "radius": 850, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 },
+					{ "name": "None", "interval": 25, "dmg": 1000, "radius": 1250, "stamina": 50 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 },
 					{ "name": "Fireball", "interval": 30, "dmg": 10, "radius": 850, "stamina": 0 }
 				]
 			},
@@ -14338,13 +14543,13 @@
 				"swimOrFly": -0.325
 			},
 			"attack": {
-				"defaultDmg": 425,
+				"defaultDmg": 460,
 				"defaultSwingRadius": 400,
 				"attacks": [
-					{ "name": "Claw", "interval": 1, "dmg": 425, "radius": 750, "stamina": 0 },
-					{ "name": "Grab", "interval": 1, "dmg": 700, "radius": 500, "stamina": 60 },
-					{ "name": "DivingSwipe", "interval": 3, "dmg": 750, "radius": 1500, "stamina": 25 },
-					{ "name": "DiveBomb", "interval": 2, "dmg": 1000, "radius": 2000, "stamina": 30 }
+					{ "name": "Claw", "interval": 1, "dmg": 275, "radius": 750, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 125, "radius": 500, "stamina": 60 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 1325, "radius": 1500, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 1150, "radius": 2000, "stamina": 30 }
 				]
 			},
 			"death": { "baseXP": 100 }
@@ -14396,13 +14601,13 @@
 				"swimOrFly": -0.325
 			},
 			"attack": {
-				"defaultDmg": 85,
+				"defaultDmg": 120,
 				"defaultSwingRadius": 400,
 				"attacks": [
-					{ "name": "Claw", "interval": 1, "dmg": 85, "radius": 750, "stamina": 0 },
-					{ "name": "Grab", "interval": 1, "dmg": 350, "radius": 500, "stamina": 60 },
-					{ "name": "DivingSwipe", "interval": 3, "dmg": 375, "radius": 1500, "stamina": 25 },
-					{ "name": "DiveBomb", "interval": 2, "dmg": 400, "radius": 2000, "stamina": 30 }
+					{ "name": "Claw", "interval": 1, "dmg": 55, "radius": 750, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 25, "radius": 500, "stamina": 60 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 275, "radius": 1500, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 230, "radius": 2000, "stamina": 30 }
 				]
 			},
 			"death": { "baseXP": 3 }
@@ -14454,13 +14659,13 @@
 				"swimOrFly": -0.325
 			},
 			"attack": {
-				"defaultDmg": 120,
+				"defaultDmg": 150,
 				"defaultSwingRadius": 400,
 				"attacks": [
-					{ "name": "Claw", "interval": 1, "dmg": 125, "radius": 750, "stamina": 0 },
-					{ "name": "Grab", "interval": 1, "dmg": 300, "radius": 500, "stamina": 60 },
+					{ "name": "Claw", "interval": 1, "dmg": 80, "radius": 750, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 40, "radius": 500, "stamina": 60 },
 					{ "name": "DivingSwipe", "interval": 3, "dmg": 350, "radius": 1500, "stamina": 25 },
-					{ "name": "DiveBomb", "interval": 2, "dmg": 400, "radius": 2000, "stamina": 30 }
+					{ "name": "DiveBomb", "interval": 2, "dmg": 300, "radius": 2000, "stamina": 30 }
 				]
 			},
 			"death": { "baseXP": 100 }
@@ -14512,13 +14717,13 @@
 				"swimOrFly": -0.325
 			},
 			"attack": {
-				"defaultDmg": 85,
+				"defaultDmg": 120,
 				"defaultSwingRadius": 400,
 				"attacks": [
-					{ "name": "Claw", "interval": 1, "dmg": 85, "radius": 750, "stamina": 0 },
-					{ "name": "Grab", "interval": 1, "dmg": 150, "radius": 500, "stamina": 60 },
-					{ "name": "DivingSwipe", "interval": 3, "dmg": 175, "radius": 1500, "stamina": 25 },
-					{ "name": "DiveBomb", "interval": 2, "dmg": 200, "radius": 2000, "stamina": 30 }
+					{ "name": "Claw", "interval": 1, "dmg": 55, "radius": 750, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 25, "radius": 500, "stamina": 60 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 275, "radius": 1500, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 230, "radius": 2000, "stamina": 30 }
 				]
 			},
 			"death": { "baseXP": 100 }
@@ -14570,13 +14775,13 @@
 				"swimOrFly": -0.325
 			},
 			"attack": {
-				"defaultDmg": 255,
+				"defaultDmg": 240,
 				"defaultSwingRadius": 400,
 				"attacks": [
-					{ "name": "Claw", "interval": 1, "dmg": 255, "radius": 750, "stamina": 0 },
-					{ "name": "Grab", "interval": 1, "dmg": 450, "radius": 500, "stamina": 60 },
-					{ "name": "DivingSwipe", "interval": 3, "dmg": 700, "radius": 1500, "stamina": 25 },
-					{ "name": "DiveBomb", "interval": 2, "dmg": 750, "radius": 2000, "stamina": 30 }
+					{ "name": "Claw", "interval": 1, "dmg": 110, "radius": 750, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 50, "radius": 500, "stamina": 60 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 550, "radius": 1500, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 450, "radius": 2000, "stamina": 30 }
 				]
 			},
 			"death": { "baseXP": 100 }
@@ -16123,10 +16328,10 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 35,
+				"defaultDmg": 50,
 				"defaultSwingRadius": 50,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 35, "radius": 150, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 50, "radius": 150, "stamina": 0 },
 					{
 						"name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
@@ -16177,10 +16382,10 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 100,
+				"defaultDmg": 110,
 				"defaultSwingRadius": 50,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 75, "radius": 120, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 100, "radius": 120, "stamina": 0 },
 					{
 						"name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
@@ -16234,7 +16439,7 @@
 				"defaultDmg": 30,
 				"defaultSwingRadius": 50,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 25, "radius": 120, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 40, "radius": 120, "stamina": 0 },
 					{
 						"name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
@@ -16285,10 +16490,10 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 10,
+				"defaultDmg": 20,
 				"defaultSwingRadius": 50,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 12, "radius": 95, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 24, "radius": 95, "stamina": 0 },
 					{
 						"name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
@@ -16342,7 +16547,7 @@
 				"defaultDmg": 20,
 				"defaultSwingRadius": 50,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 15, "radius": 120, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 24, "radius": 120, "stamina": 0 },
 					{
 						"name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
@@ -16393,10 +16598,10 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 60,
+				"defaultDmg": 40,
 				"defaultSwingRadius": 50,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 45, "radius": 120, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 50, "radius": 120, "stamina": 0 },
 					{
 						"name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
@@ -16992,7 +17197,7 @@
 		},
 		{
 			"name": "Aberrant Otter",
-			"bp": "/Game/Mods/Trex/Dinos/Other/AB/AB_Otter_Character_BP_ADO.AB_Otter_Character_BP_ADO_C",
+			"bp": "/Game/Mods/Trex/Dinos/Otter/AB/AB_Otter_Character_BP_ADO.AB_Otter_Character_BP_ADO_C",
 			"dinoNameTag": "Otter",
 			"customTag": "Otter",
 			"targetingTeamName": "Carnivores_Low",
@@ -17303,9 +17508,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 45,
+				"defaultDmg": 30,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 65, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 65, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 10 }
 		},
@@ -17450,9 +17655,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 75,
+				"defaultDmg": 50,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 60, "radius": 65, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 65, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 10 }
 		},
@@ -18261,12 +18466,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 50,
+				"defaultDmg": 80,
 				"defaultSwingRadius": 190,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.01, "dmg": 50, "radius": 190, "stamina": 0 },
-					{ "name": "Kick", "interval": 0.01, "dmg": 50, "radius": 360, "stamina": 0 },
-					{ "name": "PickUp", "interval": 0.01, "dmg": 50, "radius": 250, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.01, "dmg": 80, "radius": 190, "stamina": 0 },
+					{ "name": "Kick", "interval": 0.01, "dmg": 80, "radius": 360, "stamina": 0 },
+					{ "name": "PickUp", "interval": 0.01, "dmg": 80, "radius": 250, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 2 }
@@ -18315,12 +18520,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 125,
+				"defaultDmg": 200,
 				"defaultSwingRadius": 190,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.01, "dmg": 25, "radius": 190, "stamina": 0 },
-					{ "name": "Kick", "interval": 0.01, "dmg": 125, "radius": 360, "stamina": 0 },
-					{ "name": "PickUp", "interval": 0.01, "dmg": 125, "radius": 250, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.01, "dmg": 200, "radius": 190, "stamina": 0 },
+					{ "name": "Kick", "interval": 0.01, "dmg": 200, "radius": 360, "stamina": 0 },
+					{ "name": "PickUp", "interval": 0.01, "dmg": 200, "radius": 250, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 25 }
@@ -18328,6 +18533,60 @@
 		{
 			"name": "Snow Procoptodon",
 			"bp": "/Game/Mods/Trex/Dinos/Procoptodon/ICE/IceProcoptodon_Character_BP.IceProcoptodon_Character_BP_C",
+			"dinoNameTag": "Kangaroo",
+			"customTag": "Kangaroo",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 300,
+			"dragWeight": 110,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
+				"mutagenCost": 32
+			},
+			"cloning": {
+				"costBase": 775,
+				"costLevel": 55,
+				"timeBase": 5425,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2600
+			},
+			"movementW": {
+				"walk": { "base": 850, "sprint": 1785 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 850, "sprint": 1785 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 190,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.01, "dmg": 60, "radius": 190, "stamina": 0 },
+					{ "name": "Kick", "interval": 0.01, "dmg": 60, "radius": 360, "stamina": 0 },
+					{ "name": "PickUp", "interval": 0.01, "dmg": 60, "radius": 250, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 25 }
+		},
+		{
+			"name": "Poison Procoptodon",
+			"bp": "/Game/Mods/Trex/Dinos/Procoptodon/Poison/PoisonProcoptodon_Character_BP.PoisonProcoptodon_Character_BP_C",
 			"dinoNameTag": "Kangaroo",
 			"customTag": "Kangaroo",
 			"targetingTeamName": "Herbivores_Medium",
@@ -18380,60 +18639,6 @@
 			"death": { "baseXP": 25 }
 		},
 		{
-			"name": "Poison Procoptodon",
-			"bp": "/Game/Mods/Trex/Dinos/Procoptodon/Poison/PoisonProcoptodon_Character_BP.PoisonProcoptodon_Character_BP_C",
-			"dinoNameTag": "Kangaroo",
-			"customTag": "Kangaroo",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 300,
-			"dragWeight": 110,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isTameable"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
-				"mutagenCost": 32
-			},
-			"cloning": {
-				"costBase": 775,
-				"costLevel": 55,
-				"timeBase": 5425,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 20,
-				"maxSpeed": 2600
-			},
-			"movementW": {
-				"walk": { "base": 850, "sprint": 1785 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 850, "sprint": 1785 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -20,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 25,
-				"defaultSwingRadius": 190,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.01, "dmg": 25, "radius": 190, "stamina": 0 },
-					{ "name": "Kick", "interval": 0.01, "dmg": 25, "radius": 360, "stamina": 0 },
-					{ "name": "PickUp", "interval": 0.01, "dmg": 25, "radius": 250, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 25 }
-		},
-		{
 			"name": "Procoptodon",
 			"bp": "/Game/Mods/Trex/Dinos/Procoptodon/Procoptodon_Character_BP_ADO.Procoptodon_Character_BP_ADO_C",
 			"dinoNameTag": "Kangaroo",
@@ -18477,12 +18682,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 20,
+				"defaultDmg": 40,
 				"defaultSwingRadius": 190,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.01, "dmg": 20, "radius": 190, "stamina": 0 },
-					{ "name": "Kick", "interval": 0.01, "dmg": 20, "radius": 360, "stamina": 0 },
-					{ "name": "PickUp", "interval": 0.01, "dmg": 20, "radius": 250, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.01, "dmg": 40, "radius": 190, "stamina": 0 },
+					{ "name": "Kick", "interval": 0.01, "dmg": 40, "radius": 360, "stamina": 0 },
+					{ "name": "PickUp", "interval": 0.01, "dmg": 40, "radius": 250, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 2 }
@@ -18531,12 +18736,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 75,
+				"defaultDmg": 150,
 				"defaultSwingRadius": 190,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.01, "dmg": 75, "radius": 190, "stamina": 0 },
-					{ "name": "Kick", "interval": 0.01, "dmg": 75, "radius": 360, "stamina": 0 },
-					{ "name": "PickUp", "interval": 0.01, "dmg": 75, "radius": 250, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.01, "dmg": 150, "radius": 190, "stamina": 0 },
+					{ "name": "Kick", "interval": 0.01, "dmg": 150, "radius": 360, "stamina": 0 },
+					{ "name": "PickUp", "interval": 0.01, "dmg": 150, "radius": 250, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 25 }
@@ -18655,12 +18860,12 @@
 				"swimOrFly": -0.325
 			},
 			"attack": {
-				"defaultDmg": 175,
+				"defaultDmg": 75,
 				"defaultSwingRadius": 200,
 				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 175, "radius": 300, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 175, "radius": 300, "stamina": 40 },
-					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 500, "radius": 450, "stamina": 90 }
+					{ "name": "None", "interval": 0.6, "dmg": 100, "radius": 300, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 100, "radius": 300, "stamina": 40 },
+					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 250, "radius": 450, "stamina": 90 }
 				]
 			},
 			"death": { "baseXP": 20 }
@@ -18716,12 +18921,12 @@
 				"swimOrFly": -0.325
 			},
 			"attack": {
-				"defaultDmg": 50,
+				"defaultDmg": 40,
 				"defaultSwingRadius": 200,
 				"attacks": [
 					{ "name": "None", "interval": 0.6, "dmg": 50, "radius": 300, "stamina": 0 },
 					{ "name": "None", "interval": 1, "dmg": 50, "radius": 300, "stamina": 40 },
-					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 150, "radius": 450, "stamina": 90 }
+					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 120, "radius": 450, "stamina": 90 }
 				]
 			},
 			"death": { "baseXP": 20 }
@@ -18777,11 +18982,11 @@
 				"swimOrFly": -0.325
 			},
 			"attack": {
-				"defaultDmg": 35,
+				"defaultDmg": 30,
 				"defaultSwingRadius": 200,
 				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 35, "radius": 300, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 35, "radius": 300, "stamina": 40 },
+					{ "name": "None", "interval": 0.6, "dmg": 36, "radius": 300, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 36, "radius": 300, "stamina": 40 },
 					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 100, "radius": 450, "stamina": 90 }
 				]
 			},
@@ -18899,12 +19104,12 @@
 				"swimOrFly": -0.325
 			},
 			"attack": {
-				"defaultDmg": 105,
+				"defaultDmg": 60,
 				"defaultSwingRadius": 200,
 				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 105, "radius": 300, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 105, "radius": 300, "stamina": 40 },
-					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 300, "radius": 450, "stamina": 90 }
+					{ "name": "None", "interval": 0.6, "dmg": 75, "radius": 300, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 75, "radius": 300, "stamina": 40 },
+					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 200, "radius": 450, "stamina": 90 }
 				]
 			},
 			"death": { "baseXP": 20 }
@@ -20648,11 +20853,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 200,
+				"defaultDmg": 500,
 				"defaultSwingRadius": 185,
 				"attacks": [
-					{ "name": "None", "interval": 0.63, "dmg": 200, "radius": 280, "stamina": 0 },
-					{ "name": "None", "interval": 0.63, "dmg": 200, "radius": 280, "stamina": 0 }
+					{ "name": "None", "interval": 0.63, "dmg": 325, "radius": 280, "stamina": 0 },
+					{ "name": "None", "interval": 0.63, "dmg": 325, "radius": 280, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 50 }
@@ -20700,11 +20905,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 60,
+				"defaultDmg": 200,
 				"defaultSwingRadius": 185,
 				"attacks": [
-					{ "name": "None", "interval": 0.63, "dmg": 60, "radius": 280, "stamina": 0 },
-					{ "name": "None", "interval": 0.63, "dmg": 60, "radius": 280, "stamina": 0 }
+					{ "name": "None", "interval": 0.63, "dmg": 100, "radius": 280, "stamina": 0 },
+					{ "name": "None", "interval": 0.63, "dmg": 100, "radius": 280, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 50 }
@@ -20752,11 +20957,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 40,
+				"defaultDmg": 100,
 				"defaultSwingRadius": 185,
 				"attacks": [
-					{ "name": "None", "interval": 0.63, "dmg": 40, "radius": 280, "stamina": 0 },
-					{ "name": "None", "interval": 0.63, "dmg": 40, "radius": 280, "stamina": 0 }
+					{ "name": "None", "interval": 0.63, "dmg": 65, "radius": 280, "stamina": 0 },
+					{ "name": "None", "interval": 0.63, "dmg": 65, "radius": 280, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 50 }
@@ -20804,11 +21009,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 125,
+				"defaultDmg": 200,
 				"defaultSwingRadius": 185,
 				"attacks": [
-					{ "name": "None", "interval": 0.63, "dmg": 125, "radius": 280, "stamina": 0 },
-					{ "name": "None", "interval": 0.63, "dmg": 125, "radius": 280, "stamina": 0 }
+					{ "name": "None", "interval": 0.63, "dmg": 130, "radius": 280, "stamina": 0 },
+					{ "name": "None", "interval": 0.63, "dmg": 130, "radius": 280, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 50 }
@@ -21079,7 +21284,7 @@
 			"death": { "baseXP": 1 }
 		},
 		{
-			"name": "Biotoxin Jug Bug",
+			"name": "Obsidian Jug Bug",
 			"bp": "/Game/Mods/Trex/Dinos/SE_creatures/JugBug/Jugbug_jelly_Character_BP_ADO.Jugbug_jelly_Character_BP_ADO_C",
 			"dinoNameTag": "Jugbug",
 			"customTag": "Jugbug",
@@ -21799,7 +22004,7 @@
 						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_FireWyvern.DinoDropInventoryComponent_Carnivore_Huge_FireWyvern"
 					}
 				],
-				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_WyvernTekSaddle_ADO_C" ],
+				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_WyvernSaddle_ADO_C" ],
 				"baseXP": 1000
 			}
 		},
@@ -21874,7 +22079,7 @@
 						"item": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/Forest/DinoDropInventoryComponent_Carnivore_Huge_ForestWyvern.DinoDropInventoryComponent_Carnivore_Huge_ForestWyvern"
 					}
 				],
-				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_WyvernTekSaddle_ADO_C" ],
+				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_WyvernSaddle_ADO_C" ],
 				"baseXP": 1000
 			}
 		},
@@ -21949,7 +22154,7 @@
 						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoTamedInventoryComponent_Spino.DinoTamedInventoryComponent_Spino"
 					}
 				],
-				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_WyvernTekSaddle_ADO_C" ],
+				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_WyvernSaddle_ADO_C" ],
 				"baseXP": 1000
 			}
 		},
@@ -22027,7 +22232,7 @@
 						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_LightningWyvern.DinoDropInventoryComponent_Carnivore_Huge_LightningWyvern"
 					}
 				],
-				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_Saddle_Wyvern_ADO_C" ],
+				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_WyvernSaddle_ADO_C" ],
 				"baseXP": 1000
 			}
 		},
@@ -22109,7 +22314,7 @@
 						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_PoisonWyvern.DinoDropInventoryComponent_Carnivore_Huge_PoisonWyvern"
 					}
 				],
-				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_Saddle_Wyvern_ADO_C" ],
+				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_WyvernSaddle_ADO_C" ],
 				"baseXP": 1000
 			}
 		},
@@ -22724,7 +22929,7 @@
 						"item": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/Fire/DinoDropInventoryComponent_Carnivore_Huge_MegaFireWyvern_Bone_ADO.DinoDropInventoryComponent_Carnivore_Huge_MegaFireWyvern_Bone_ADO"
 					}
 				],
-				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C", "PrimalItemArmor_Saddle_Wyvern_ADO_C" ],
+				"engrams": [ "PrimalItemConsumable_WyvernMilk_Alpha_C" ],
 				"baseXP": 1000
 			}
 		},
@@ -24135,7 +24340,7 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 150,
+				"defaultDmg": 200,
 				"defaultSwingRadius": 160,
 				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 80, "radius": 160, "stamina": 0 } ]
 			},
@@ -24200,7 +24405,7 @@
 			"attack": {
 				"defaultDmg": 150,
 				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 55, "radius": 160, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 60, "radius": 160, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -24324,11 +24529,11 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 450,
+				"defaultDmg": 300,
 				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 165, "radius": 160, "stamina": 0 },
-					{ "name": "Shock Claw attack", "interval": 0.2, "dmg": 165, "radius": 160, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.2, "dmg": 120, "radius": 160, "stamina": 0 },
+					{ "name": "Shock Claw attack", "interval": 0.2, "dmg": 120, "radius": 160, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -25090,11 +25295,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 100,
+				"defaultDmg": 200,
 				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "None", "interval": 0.1, "dmg": 75, "radius": 160, "stamina": 0 },
-					{ "name": "Tail Attack", "interval": 0.1, "dmg": 75, "radius": 160, "stamina": 0 }
+					{ "name": "None", "interval": 0.1, "dmg": 150, "radius": 160, "stamina": 0 },
+					{ "name": "Tail Attack", "interval": 0.1, "dmg": 150, "radius": 160, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -25152,7 +25357,7 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 50,
+				"defaultDmg": 60,
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "None", "interval": 0.1, "dmg": 40, "radius": 160, "stamina": 0 },
@@ -25214,11 +25419,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 20,
+				"defaultDmg": 40,
 				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "None", "interval": 0.1, "dmg": 15, "radius": 160, "stamina": 0 },
-					{ "name": "Tail Attack", "interval": 0.1, "dmg": 15, "radius": 160, "stamina": 0 }
+					{ "name": "None", "interval": 0.1, "dmg": 30, "radius": 160, "stamina": 0 },
+					{ "name": "Tail Attack", "interval": 0.1, "dmg": 30, "radius": 160, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -25338,11 +25543,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 60,
+				"defaultDmg": 100,
 				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "None", "interval": 0.1, "dmg": 45, "radius": 160, "stamina": 0 },
-					{ "name": "Tail Attack", "interval": 0.1, "dmg": 45, "radius": 160, "stamina": 0 }
+					{ "name": "None", "interval": 0.1, "dmg": 60, "radius": 160, "stamina": 0 },
+					{ "name": "Tail Attack", "interval": 0.1, "dmg": 60, "radius": 160, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -25850,9 +26055,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 240,
+				"defaultDmg": 200,
 				"defaultSwingRadius": 190,
-				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 240, "radius": 190, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 200, "radius": 190, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -26952,14 +27157,14 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 850,
+				"defaultDmg": 600,
 				"defaultSwingRadius": 420,
 				"attacks": [
-					{ "name": "Spino Bite", "interval": 0.75, "dmg": 850, "radius": 420, "stamina": 10 },
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 600, "radius": 420, "stamina": 10 },
 					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
 					{ "name": "Roar", "interval": 30, "dmg": 0, "radius": 1200, "stamina": 150 },
-					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 850, "radius": 420, "stamina": 12 },
-					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 850, "radius": 420, "stamina": 12 }
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 650, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 650, "radius": 420, "stamina": 12 }
 				]
 			},
 			"death": {
@@ -28114,9 +28319,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 125,
+				"defaultDmg": 150,
 				"defaultSwingRadius": 110,
-				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 125, "radius": 110, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 150, "radius": 110, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -28173,9 +28378,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 40,
+				"defaultDmg": 50,
 				"defaultSwingRadius": 110,
-				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 40, "radius": 110, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 50, "radius": 110, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -28232,9 +28437,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 25,
+				"defaultDmg": 35,
 				"defaultSwingRadius": 110,
-				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 25, "radius": 110, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 35, "radius": 110, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -28291,9 +28496,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 75,
+				"defaultDmg": 100,
 				"defaultSwingRadius": 110,
-				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 75, "radius": 110, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 100, "radius": 110, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -28350,9 +28555,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 25,
+				"defaultDmg": 35,
 				"defaultSwingRadius": 110,
-				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 25, "radius": 110, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 35, "radius": 110, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -28789,11 +28994,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 100,
+				"defaultDmg": 200,
 				"defaultSwingRadius": 144,
 				"attacks": [
-					{ "name": "None", "interval": 0.1, "dmg": 60, "radius": 180, "stamina": 0 },
-					{ "name": "None", "interval": 0.1, "dmg": 100, "radius": 180, "stamina": 0 }
+					{ "name": "None", "interval": 0.1, "dmg": 125, "radius": 180, "stamina": 0 },
+					{ "name": "None", "interval": 0.1, "dmg": 200, "radius": 180, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 10 }
@@ -28842,11 +29047,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 30,
+				"defaultDmg": 60,
 				"defaultSwingRadius": 144,
 				"attacks": [
-					{ "name": "None", "interval": 0.1, "dmg": 15, "radius": 180, "stamina": 0 },
-					{ "name": "None", "interval": 0.1, "dmg": 30, "radius": 180, "stamina": 0 }
+					{ "name": "None", "interval": 0.1, "dmg": 30, "radius": 180, "stamina": 0 },
+					{ "name": "None", "interval": 0.1, "dmg": 60, "radius": 180, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 10 }
@@ -28895,11 +29100,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 20,
+				"defaultDmg": 40,
 				"defaultSwingRadius": 144,
 				"attacks": [
-					{ "name": "None", "interval": 0.1, "dmg": 12, "radius": 180, "stamina": 0 },
-					{ "name": "None", "interval": 0.1, "dmg": 20, "radius": 180, "stamina": 0 }
+					{ "name": "None", "interval": 0.1, "dmg": 25, "radius": 180, "stamina": 0 },
+					{ "name": "None", "interval": 0.1, "dmg": 40, "radius": 180, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 10 }
@@ -28948,11 +29153,11 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 60,
+				"defaultDmg": 120,
 				"defaultSwingRadius": 144,
 				"attacks": [
-					{ "name": "None", "interval": 0.1, "dmg": 36, "radius": 180, "stamina": 0 },
-					{ "name": "None", "interval": 0.1, "dmg": 60, "radius": 180, "stamina": 0 }
+					{ "name": "None", "interval": 0.1, "dmg": 60, "radius": 180, "stamina": 0 },
+					{ "name": "None", "interval": 0.1, "dmg": 120, "radius": 180, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 10 }
@@ -29944,7 +30149,7 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 65,
+				"defaultDmg": 130,
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "None", "interval": 0.08, "dmg": 65, "radius": 160, "stamina": 5 },
@@ -30072,8 +30277,8 @@
 				"defaultDmg": 250,
 				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "None", "interval": 0.08, "dmg": 100, "radius": 160, "stamina": 5 },
-					{ "name": "None", "interval": 0.08, "dmg": 100, "radius": 160, "stamina": 0 }
+					{ "name": "None", "interval": 0.08, "dmg": 90, "radius": 160, "stamina": 5 },
+					{ "name": "None", "interval": 0.08, "dmg": 90, "radius": 160, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -30131,7 +30336,7 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 150,
+				"defaultDmg": 130,
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "None", "interval": 0.08, "dmg": 65, "radius": 160, "stamina": 5 },
@@ -30193,7 +30398,7 @@
 				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 450,
+				"defaultDmg": 260,
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "None", "interval": 0.08, "dmg": 135, "radius": 160, "stamina": 5 },
@@ -35404,6 +35609,176 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Flame Shadowmane",
+			"bp": "/Game/Mods/Trex/Gen2/Dinos/LionfishLion/Fire/LionfishLion_Character_BP_Fire.LionfishLion_Character_BP_Fire_C",
+			"dinoNameTag": "Lionfish Lion",
+			"customTag": "LionfishLion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 350,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 5, "max": 10 },
+					{ "chance": 0.2702703, "min": 12, "max": 24 },
+					{ "chance": 0.1351351, "min": 26, "max": 40 },
+					{ "chance": 0.05405405, "min": 42, "max": 60 }
+				],
+				"levelCapOffset": 50,
+				"mutagenCost": 95
+			},
+			"cloning": {
+				"costBase": 2375,
+				"costLevel": 55,
+				"timeBase": 16625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 375, "sprint": 1500 },
+				"swim": { "base": 500, "sprint": 1400 }
+			},
+			"movementD": {
+				"walk": { "base": 375, "sprint": 1875 },
+				"swim": { "base": 500, "sprint": 1750 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "RightClickMeleeComboAdjustIndex", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Female Activate Stealth", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Male Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 800, "radius": 0, "stamina": 0 },
+					{ "name": "TriggerSoloCloak", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildTeleport", "interval": 1.2, "dmg": 350, "radius": 400, "stamina": 25 },
+					{ "name": "Bite", "interval": 1.2, "dmg": 350, "radius": 400, "stamina": 25 },
+					{ "name": "BiteFinisher", "interval": 1.2, "dmg": 350, "radius": 400, "stamina": 25 },
+					{ "name": "Teleport", "interval": 0, "dmg": 500, "radius": 0, "stamina": 0 },
+					{ "name": "MeleeCombo1", "interval": 0.2, "dmg": 450, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo2", "interval": 0.2, "dmg": 460, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo3", "interval": 0.2, "dmg": 450, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo4", "interval": 0.2, "dmg": 460, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo5", "interval": 0.2, "dmg": 450, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo6", "interval": 0.2, "dmg": 96, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Genesis2/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_LionfishLion.DinoDropInventoryComponent_Carnivore_Medium_LionfishLion"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Snow Shadowmane",
+			"bp": "/Game/Mods/Trex/Gen2/Dinos/LionfishLion/Ice/LionfishLion_Character_BP_Ice.LionfishLion_Character_BP_Ice_C",
+			"dinoNameTag": "Lionfish Lion",
+			"customTag": "LionfishLion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 350,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 5, "max": 10 },
+					{ "chance": 0.2702703, "min": 12, "max": 24 },
+					{ "chance": 0.1351351, "min": 26, "max": 40 },
+					{ "chance": 0.05405405, "min": 42, "max": 60 }
+				],
+				"levelCapOffset": 50,
+				"mutagenCost": 95
+			},
+			"cloning": {
+				"costBase": 2375,
+				"costLevel": 55,
+				"timeBase": 16625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 375, "sprint": 1500 },
+				"swim": { "base": 500, "sprint": 1400 }
+			},
+			"movementD": {
+				"walk": { "base": 375, "sprint": 1875 },
+				"swim": { "base": 500, "sprint": 1750 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "RightClickMeleeComboAdjustIndex", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Female Activate Stealth", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Male Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 200, "radius": 0, "stamina": 0 },
+					{ "name": "TriggerSoloCloak", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildTeleport", "interval": 1.2, "dmg": 90, "radius": 400, "stamina": 25 },
+					{ "name": "Bite", "interval": 1.2, "dmg": 90, "radius": 400, "stamina": 25 },
+					{ "name": "BiteFinisher", "interval": 1.2, "dmg": 90, "radius": 400, "stamina": 25 },
+					{ "name": "Teleport", "interval": 0, "dmg": 125, "radius": 0, "stamina": 0 },
+					{ "name": "MeleeCombo1", "interval": 0.2, "dmg": 120, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo2", "interval": 0.2, "dmg": 120, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo3", "interval": 0.2, "dmg": 125, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo4", "interval": 0.2, "dmg": 125, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo5", "interval": 0.2, "dmg": 120, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo6", "interval": 0.2, "dmg": 130, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Genesis2/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_LionfishLion.DinoDropInventoryComponent_Carnivore_Medium_LionfishLion"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
 			"name": "Shadowmane",
 			"bp": "/Game/Mods/Trex/Gen2/Dinos/LionfishLion/LionfishLion_Character_BP_ADO.LionfishLion_Character_BP_ADO_C",
 			"dinoNameTag": "Lionfish Lion",
@@ -35475,6 +35850,176 @@
 					{ "name": "MeleeCombo4", "interval": 0.2, "dmg": 92, "radius": 400, "stamina": 0 },
 					{ "name": "MeleeCombo5", "interval": 0.2, "dmg": 90, "radius": 400, "stamina": 0 },
 					{ "name": "MeleeCombo6", "interval": 0.2, "dmg": 96, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Genesis2/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_LionfishLion.DinoDropInventoryComponent_Carnivore_Medium_LionfishLion"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Poison Shadowmane",
+			"bp": "/Game/Mods/Trex/Gen2/Dinos/LionfishLion/Poison/LionfishLion_Character_BP_Poison.LionfishLion_Character_BP_Poison_C",
+			"dinoNameTag": "Lionfish Lion",
+			"customTag": "LionfishLion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 350,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 5, "max": 10 },
+					{ "chance": 0.2702703, "min": 12, "max": 24 },
+					{ "chance": 0.1351351, "min": 26, "max": 40 },
+					{ "chance": 0.05405405, "min": 42, "max": 60 }
+				],
+				"levelCapOffset": 50,
+				"mutagenCost": 95
+			},
+			"cloning": {
+				"costBase": 2375,
+				"costLevel": 55,
+				"timeBase": 16625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 375, "sprint": 1500 },
+				"swim": { "base": 500, "sprint": 1400 }
+			},
+			"movementD": {
+				"walk": { "base": 375, "sprint": 1875 },
+				"swim": { "base": 500, "sprint": 1750 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "RightClickMeleeComboAdjustIndex", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Female Activate Stealth", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Male Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 160, "radius": 0, "stamina": 0 },
+					{ "name": "TriggerSoloCloak", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildTeleport", "interval": 1.2, "dmg": 70, "radius": 400, "stamina": 25 },
+					{ "name": "Bite", "interval": 1.2, "dmg": 70, "radius": 400, "stamina": 25 },
+					{ "name": "BiteFinisher", "interval": 1.2, "dmg": 70, "radius": 400, "stamina": 25 },
+					{ "name": "Teleport", "interval": 0, "dmg": 100, "radius": 0, "stamina": 0 },
+					{ "name": "MeleeCombo1", "interval": 0.2, "dmg": 95, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo2", "interval": 0.2, "dmg": 92, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo3", "interval": 0.2, "dmg": 90, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo4", "interval": 0.2, "dmg": 92, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo5", "interval": 0.2, "dmg": 90, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo6", "interval": 0.2, "dmg": 96, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Genesis2/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_LionfishLion.DinoDropInventoryComponent_Carnivore_Medium_LionfishLion"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Shock Shadowmane",
+			"bp": "/Game/Mods/Trex/Gen2/Dinos/LionfishLion/shock/LionfishLion_Character_BP_Shock.LionfishLion_Character_BP_Shock_C",
+			"dinoNameTag": "Lionfish Lion",
+			"customTag": "LionfishLion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 350,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 5, "max": 10 },
+					{ "chance": 0.2702703, "min": 12, "max": 24 },
+					{ "chance": 0.1351351, "min": 26, "max": 40 },
+					{ "chance": 0.05405405, "min": 42, "max": 60 }
+				],
+				"levelCapOffset": 50,
+				"mutagenCost": 95
+			},
+			"cloning": {
+				"costBase": 2375,
+				"costLevel": 55,
+				"timeBase": 16625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 375, "sprint": 1500 },
+				"swim": { "base": 500, "sprint": 1400 }
+			},
+			"movementD": {
+				"walk": { "base": 375, "sprint": 1875 },
+				"swim": { "base": 500, "sprint": 1750 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "RightClickMeleeComboAdjustIndex", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Female Activate Stealth", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Male Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 320, "radius": 0, "stamina": 0 },
+					{ "name": "TriggerSoloCloak", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildTeleport", "interval": 1.2, "dmg": 150, "radius": 400, "stamina": 25 },
+					{ "name": "Bite", "interval": 1.2, "dmg": 150, "radius": 400, "stamina": 25 },
+					{ "name": "BiteFinisher", "interval": 1.2, "dmg": 150, "radius": 400, "stamina": 25 },
+					{ "name": "Teleport", "interval": 0, "dmg": 200, "radius": 0, "stamina": 0 },
+					{ "name": "MeleeCombo1", "interval": 0.2, "dmg": 190, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo2", "interval": 0.2, "dmg": 190, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo3", "interval": 0.2, "dmg": 180, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo4", "interval": 0.2, "dmg": 195, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo5", "interval": 0.2, "dmg": 180, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo6", "interval": 0.2, "dmg": 200, "radius": 400, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -38886,12 +39431,12 @@
 			},
 			"staminaRates": { "sprint": -40 },
 			"attack": {
-				"defaultDmg": 1100,
+				"defaultDmg": 800,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 1100, "radius": 850, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 800, "radius": 850, "stamina": 0 },
 					{ "name": "Roar", "interval": 20, "dmg": 0, "radius": 850, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 1100, "radius": 850, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 800, "radius": 850, "stamina": 0 },
 					{ "name": "invisible", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Snow Ball", "interval": 20, "dmg": 0, "radius": 0, "stamina": 150 }
 				]
@@ -39116,9 +39661,9 @@
 				"defaultDmg": 450,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 450, "radius": 850, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 400, "radius": 850, "stamina": 0 },
 					{ "name": "Roar", "interval": 20, "dmg": 0, "radius": 850, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 450, "radius": 850, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 400, "radius": 850, "stamina": 0 },
 					{ "name": "invisible", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -39226,12 +39771,12 @@
 			},
 			"staminaRates": { "sprint": -40 },
 			"attack": {
-				"defaultDmg": 2250,
+				"defaultDmg": 2000,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 2250, "radius": 850, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 2000, "radius": 850, "stamina": 0 },
 					{ "name": "Roar", "interval": 20, "dmg": 0, "radius": 850, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 2250, "radius": 850, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 2000, "radius": 850, "stamina": 0 },
 					{ "name": "invisible", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Fireball", "interval": 20, "dmg": 0, "radius": 0, "stamina": 150 }
 				]
