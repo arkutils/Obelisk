@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "342.13.1642510593",
+	"version": "342.13.1642741498",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -2791,6 +2791,46 @@
 				]
 			},
 			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Chestworm",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Deathworm_Character_BP_Chestworm.Deathworm_Character_BP_Chestworm_C",
+			"dinoNameTag": "Deathworm",
+			"customTag": "Deathworm",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 1000,
+			"flags": [ "isBigDino", "isCarnivore" ],
+			"leveling": { "wildForcedLevel": 1 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 0 }
+			},
+			"movementD": {
+				"walk": { "base": 0 }
+			},
+			"staminaRates": {},
+			"attack": {
+				"defaultDmg": 225,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.75, "dmg": 225, "radius": 1200, "stamina": 0 },
+					{ "name": "Claw", "interval": 0.75, "dmg": 225, "radius": 1200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/ScorchedEarth/Dinos/Deathworm/DinoDropInventoryComponent_Carnivore_Deathworm.DinoDropInventoryComponent_Carnivore_Deathworm"
+					}
+				],
+				"baseXP": 3000
+			}
 		},
 		{
 			"name": "Guardian",
@@ -7645,6 +7685,7 @@
 			"variants": [ "Child" ],
 			"flags": [
 				"allowRiding",
+				"allowRidingInWater",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
