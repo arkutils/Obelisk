@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "342.13.1642929546",
+	"version": "342.17.1643209096",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -3865,6 +3865,31 @@
 			}
 		},
 		{
+			"name": "Random Elemental Evolution",
+			"description": "This item allow you to transform your Dino to elemental one - it is a random chance",
+			"bp": "/Game/Mods/Trex/Dinos/Allo/PrimalItem_Transform_RandomAllo.PrimalItem_Transform_RandomAllo_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/Trex/Icons/Evolve_icon.Evolve_icon",
+			"type": "MiscConsumable/Food",
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 100,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 15, "type": "PrimalItemConsumable_Potion_Evolve_ADO_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Evo_Tribute_C" },
+					{ "qty": 4, "type": "PrimalItemConsumable_PoisonMagicPotion_ADO_C" },
+					{ "qty": 4, "type": "PrimalItemConsumable_IceMagicPotion_ADO_C" },
+					{ "qty": 4, "type": "PrimalItemConsumable_ShockMagicPotion_ADO_C" },
+					{ "qty": 4, "type": "PrimalItemConsumable_FlameMagicPotion_ADO_C" }
+				]
+			}
+		},
+		{
 			"name": "Fertilized Angler Egg",
 			"description": "Eat it to gain tremendous nourishment",
 			"bp": "/Game/Mods/Trex/Dinos/Angler/Aberrant/PrimalItemConsumable_Underwater_AB_Egg_Angler_ADO.PrimalItemConsumable_Underwater_AB_Egg_Angler_ADO_C",
@@ -4204,6 +4229,31 @@
 			"type": "Equipment/Costume",
 			"weight": 0,
 			"stackSize": 1
+		},
+		{
+			"name": "Base Egg Kibble",
+			"description": "Universal food. Some dino will REALLY like it",
+			"bp": "/Game/Mods/Trex/Dinos/Apex/Indominus/PrimalItemConsumable_ElementalPotions.PrimalItemConsumable_ElementalPotions_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/Mods/Trex/PrimalEarth/Structures/Christmas/Icons/Present2_Icon.Present2_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 50,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 25,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Berry_Mejoberry_C" }
+				]
+			},
+			"statEffects": []
 		},
 		{
 			"name": "Utahaptor Apex Costume",
@@ -10047,9 +10097,9 @@
 		{
 			"name": "Wyvern Saddle",
 			"description": "Equip a Wyverm with this to ride it. Works on all Wyverns",
-			"bp": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/Saddle/PrimalItemArmor_Saddle_Wyvern_ADO.PrimalItemArmor_Saddle_Wyvern_ADO_C",
+			"bp": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/Saddle/PrimalItemArmor_WyvernSaddle_ADO.PrimalItemArmor_WyvernSaddle_ADO_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/HUD_DodowyvernrSaddle_Sit_Colorize_MIC.HUD_DodowyvernrSaddle_Sit_Colorize_MIC",
+			"icon": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/Saddle/HUD_wyvernrSaddle_Sit_Colorize_MIC.HUD_wyvernrSaddle_Sit_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 12,
@@ -10069,32 +10119,6 @@
 					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_LightningWyvern_C" },
 					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_ForestWyvern_ADO_C" },
 					{ "qty": 2, "type": "PrimalItemResource_ApexDrop_IceWyvern_ADO_C" }
-				]
-			}
-		},
-		{
-			"name": "Wyverns Saddle",
-			"description": "Universal Saddle for all Wyverns",
-			"bp": "/Game/Mods/Trex/Dinos/SE_creatures/Wyverns/Saddle/PrimalItemArmor_WyvernSaddle_ADO.PrimalItemArmor_WyvernSaddle_ADO_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Trex/PrimalEarth/TekTier/Tek_Wyvern_saddle/HUD_TekWyvernSaddle_Colorize_MIC.HUD_TekWyvernSaddle_Colorize_MIC",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Scorched Earth", "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 70,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 750, "type": "PrimalItemResource_AHide_ADO_C" },
-					{ "qty": 1500, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 100, "type": "PrimalItemResource_Steel_ADO_C" },
-					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_FireWyvern_C" },
-					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_LightningWyvern_C" },
-					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_PoisonWyvern_C" }
 				]
 			}
 		},
