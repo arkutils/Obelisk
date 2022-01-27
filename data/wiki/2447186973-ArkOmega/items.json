@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "342.13.1642774635",
+	"version": "342.17.1643261436",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -75,8 +75,7 @@
 					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Hide_C" }
 				]
-			},
-			"structure": "/Game/Mods/ArkOmega/Structures/OmegaWorkbench/StorageBox_OmegaWorkBench.StorageBox_OmegaWorkBench_C"
+			}
 		},
 		{
 			"name": "Thieves Pendant Skin",
@@ -5706,8 +5705,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "PrimalItem_RageSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_BasicEssence_C" },
+					{ "qty": 10, "type": "PrimalItem_RageSoul_C" },
+					{ "qty": 10, "type": "PrimalItem_AlphaEssence_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
 				]
 			}
@@ -5729,7 +5728,7 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 3, "type": "PrimalItem_MythicalSoul_C" },
+					{ "qty": 10, "type": "PrimalItem_MythicalSoul_C" },
 					{ "qty": 10, "type": "PrimalItem_AlphaEssence_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
 				]
@@ -6023,8 +6022,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "PrimalItem_NightmareSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_BasicEssence_C" },
+					{ "qty": 10, "type": "PrimalItem_NightmareSoul_C" },
+					{ "qty": 10, "type": "PrimalItem_AlphaEssence_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
 				]
 			}
@@ -6278,6 +6277,17 @@
 			"stackSize": 1
 		},
 		{
+			"name": "Paragon Breaker",
+			"description": "Dragging a Paragon Soul onto this item will create a Paragon Breaker for that species.\n\nYou can feed a Paragon Breaker to a creature that is Paragon level 30 or higher to continue increasing its Paragon Level.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_ParagonBreaker.PrimalItem_ParagonBreaker_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/TroodonWildDino_Icon.TroodonWildDino_Icon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
 			"name": "Paragon Soul",
 			"description": "Place this in the trophy slot of the Omega Beacon to guarantee that your next wild dino summon is a Paragon variant.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_ParagonToken.PrimalItem_ParagonToken_C",
@@ -6350,6 +6360,17 @@
 			"flags": [ "preventCheatGive" ],
 			"weight": 0.5,
 			"stackSize": 1
+		},
+		{
+			"name": "Chest Shard",
+			"description": "A reward inside of each loot chest. Collect these to prove your chest finding prowess.\n\nCan be used to craft a Golden Chest as a trophy.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_ChestShard.PrimalItem_ChestShard_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/Items/Souls/ChestShardIcon.ChestShardIcon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.1,
+			"stackSize": 5000
 		},
 		{
 			"name": "Cosmic Soul",
@@ -7162,6 +7183,41 @@
 				"recipe": [
 					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
 					{ "qty": 4, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Tek Shield",
+			"description": "Highly advanced shield made of pure energy",
+			"bp": "/Game/Mods/ArkOmega/PrimalEarth/CoreBlueprints/Items/Armor/Shields/PrimalItemArmor_TekShield.PrimalItemArmor_TekShield_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Shields/PrimalItemArmor_Shield.PrimalItemArmor_Shield_C",
+			"icon": "/Game/PrimalEarth/WeaponRiotShieldTransparent/HUD_TransparentRiotShield_Colorize_MIC.HUD_TransparentRiotShield_Colorize_MIC",
+			"type": "Equipment/Shield",
+			"folders": [ "Armor", "Shields" ],
+			"weight": 30,
+			"stackSize": 1,
+			"durability": 2300,
+			"crafting": {
+				"xp": 78,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Silicon_C" },
+					{ "qty": 40, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"repair": {
+				"xp": 78,
+				"time": 5,
+				"recipe": [
+					{ "qty": 60, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Silicon_C" },
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" }
 				]
 			}
 		},
