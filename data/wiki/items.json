@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/items.json",
-	"version": "341.22.7885939",
+	"version": "342.20.8106520",
 	"format": "4",
 	"items": [
 		{
@@ -18764,6 +18764,35 @@
 			]
 		},
 		{
+			"name": "\"Self Hug\" Emote",
+			"description": "Consume this to permanently unlock the \"Self Hug\" emote.\n\nRemember, your survival depends on loving yourself.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_UnlockEmote_SelfHug.PrimalItemConsumable_UnlockEmote_SelfHug_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Emotes/HUD_VDay22_Emote_SelfHug_Icon.HUD_VDay22_Emote_SelfHug_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Holiday" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			},
+			"statEffects": [
+				{
+					"stat": "health",
+					"value": 1,
+					"duration": 0.5
+				}
+			]
+		},
+		{
 			"name": "\"Snowball\" Emote",
 			"description": "Consume this to permanently unlock the \"Snowball\" Emote!",
 			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_UnlockEmote_Snowball.PrimalItemConsumable_UnlockEmote_Snowball_C",
@@ -22867,6 +22896,35 @@
 				"weight": 0.01,
 				"water": 0.01
 			}
+		},
+		{
+			"name": "Box o' Chocolates",
+			"description": "<RichColor Color=\"1, 0.5, 0.8, 1\">This chocolate's delicious, despite its origins. The Island's creatures LOVE it, as it fully heals them or advances their taming!</>",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/PrimalItemConsumable_ValentinesChocolate.PrimalItemConsumable_ValentinesChocolate_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/VDay_icon.VDay_icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 2.14,
+			"stackSize": 1,
+			"spoilsIn": 21600,
+			"statEffects": [
+				{
+					"stat": "health", "value": 100, "useItemQuality": true,
+					"pctOf": "max",
+					"pctAbsRange": { "min": 0, "max": 0 }
+				}
+			]
+		},
+		{
+			"name": "Valentines Dino Candy",
+			"description": "Has a curious effect when consumed by a dinosaur.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/PrimalItemConsumable_ValentinesDinoCandy.PrimalItemConsumable_ValentinesDinoCandy_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/HUD_ValentinesCandy_Colorize.HUD_ValentinesCandy_Colorize",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1
 		},
 		{
 			"name": "Note",
