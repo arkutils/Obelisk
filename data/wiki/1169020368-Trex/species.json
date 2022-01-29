@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "342.17.1643209096",
+	"version": "342.20.1643471252",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -1337,7 +1337,7 @@
 			}
 		},
 		{
-			"name": "FluffDragon, the Mega DodoReaper",
+			"name": "FluffDragon, the Supreme DodoReaper",
 			"bp": "/Game/Mods/Trex/Aberrant/Dinos/Nameless/Dodoreaper/DodoXenomorph_Character_BP_Male_ADO.DodoXenomorph_Character_BP_Male_ADO_C",
 			"dinoNameTag": "DodoReaper",
 			"customTag": "Reaper",
@@ -1817,7 +1817,7 @@
 				"engrams": [
 					"PrimalItemConsumable_Reaper_DNA_C",
 					"PrimalItem_Transform_AlphaReaperKing_C",
-					"PrimalItem_Transform_CelestReaperKing_C"
+					"PrimalItemSpawner_DodoReaper_ADO_C"
 				],
 				"baseXP": 1500
 			}
@@ -24463,6 +24463,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"doStepDamage",
 				"isCarnivore",
 				"isTameable"
 			],
@@ -24503,6 +24504,7 @@
 					{ "name": "None", "interval": 0.2, "dmg": 7500, "radius": 220, "stamina": 0 },
 					{ "name": "None", "interval": 30, "dmg": 7500, "radius": 1000, "stamina": 250 },
 					{ "name": "None", "interval": 60, "dmg": 7500, "radius": 1200, "stamina": 200 },
+					{ "name": "None", "interval": 0.2, "dmg": 20000, "radius": 220, "stamina": 0 },
 					{ "name": "None", "interval": 0.2, "dmg": 20000, "radius": 220, "stamina": 0 }
 				]
 			},
@@ -28259,6 +28261,75 @@
 			"death": { "baseXP": 4 }
 		},
 		{
+			"name": "Supreme Tiger",
+			"bp": "/Game/Mods/Trex/Dinos/SuperTiger/Super_Saber_Character_BP_Boss.Super_Saber_Character_BP_Boss_C",
+			"dinoNameTag": "Sabertooth",
+			"customTag": "Alphasaber",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 750,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 10, "max": 60 } ],
+				"mutagenCost": 49
+			},
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1850
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 3375 },
+				"swim": { "base": 1250 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 3375 },
+				"swim": { "base": 1250 }
+			},
+			"movementR": {
+				"walk": { "base": 450, "sprint": 3037.5 },
+				"swim": { "base": 1125 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50000,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "None", "interval": 0.2, "dmg": 50000, "radius": 220, "stamina": 0 },
+					{ "name": "None", "interval": 30, "dmg": 50000, "radius": 1000, "stamina": 250 },
+					{ "name": "None", "interval": 60, "dmg": 50000, "radius": 1200, "stamina": 200 },
+					{ "name": "None", "interval": 0.2, "dmg": 50000, "radius": 220, "stamina": 0 },
+					{ "name": "None", "interval": 60, "dmg": 50000, "radius": 220, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Trex/Dinos/SuperTiger/DinoDropInventoryComponent_SuperTiger.DinoDropInventoryComponent_SuperTiger"
+					}
+				],
+				"engrams": [ "PrimalItem_Transform_TributeTiger_C" ],
+				"baseXP": 75
+			}
+		},
+		{
 			"name": "Tapejara",
 			"bp": "/Game/Mods/Trex/Dinos/Tapejara/Tapejara_Character_BP_Child_ADO.Tapejara_Character_BP_Child_ADO_C",
 			"dinoNameTag": "Tapejara",
@@ -30705,6 +30776,139 @@
 					}
 				],
 				"baseXP": 20
+			}
+		},
+		{
+			"name": "Mouse, the Tribute Wolf",
+			"bp": "/Game/Mods/Trex/Dinos/Wolf/Tribute/SupremeDirewolf_Character_BP_ADO.SupremeDirewolf_Character_BP_ADO_C",
+			"dinoNameTag": "Direwolf",
+			"customTag": "Direwolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 750,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 10, "max": 60 } ],
+				"mutagenCost": 58
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 2188.8 },
+				"swim": { "base": 480 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 2188.8 },
+				"swim": { "base": 480 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 7500,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "None", "interval": 0.08, "dmg": 7500, "radius": 160, "stamina": 5 },
+					{ "name": "Howl", "interval": 180, "dmg": 0, "radius": 0, "stamina": 35 },
+					{ "name": "Howl", "interval": 30, "dmg": 7500, "radius": 1000, "stamina": 250 },
+					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 },
+					{ "name": "Sniff", "interval": 0.08, "dmg": 7500, "radius": 160, "stamina": 5 },
+					{ "name": "Meteor Shower", "interval": 60, "dmg": 7500, "radius": 160, "stamina": 150 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 50
+			}
+		},
+		{
+			"name": "Evil Mouse, the Supreme Wolf",
+			"bp": "/Game/Mods/Trex/Dinos/Wolf/Tribute/SupremeDirewolf_Character_BP_Boss.SupremeDirewolf_Character_BP_Boss_C",
+			"dinoNameTag": "Direwolf",
+			"customTag": "Direwolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 750,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 10, "max": 60 } ],
+				"mutagenCost": 58
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 2188.8 },
+				"swim": { "base": 480 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 2188.8 },
+				"swim": { "base": 480 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50000,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "None", "interval": 0.08, "dmg": 50000, "radius": 160, "stamina": 5 },
+					{ "name": "Howl", "interval": 180, "dmg": 0, "radius": 0, "stamina": 35 },
+					{ "name": "Howl", "interval": 30, "dmg": 50000, "radius": 1000, "stamina": 250 },
+					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 },
+					{ "name": "Sniff", "interval": 0.08, "dmg": 50000, "radius": 160, "stamina": 5 },
+					{ "name": "Meteor Shower", "interval": 60, "dmg": 50000, "radius": 160, "stamina": 150 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Trex/Dinos/Wolf/Tribute/DinoDropInventoryComponent_Supreme_Wolf.DinoDropInventoryComponent_Supreme_Wolf"
+					}
+				],
+				"engrams": [ "PrimalItem_Transform_SupremeWolf_C" ],
+				"baseXP": 50
 			}
 		},
 		{
