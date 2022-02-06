@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "340.3.1639468742",
+	"version": "342.22.1644102970",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -2478,7 +2478,7 @@
 				"lootBags": [
 					{
 						"chance": 0.5,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Elemental_GlacierGolem.DinoDropInventoryComponent_Pyria_Elemental_GlacierGolem"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Elemental_LavaElemental.DinoDropInventoryComponent_Pyria_Elemental_LavaElemental"
 					},
 					{
 						"chance": 0.5,
@@ -2533,7 +2533,7 @@
 				"lootBags": [
 					{
 						"chance": 0.5,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Elemental_GlacierGolem.DinoDropInventoryComponent_Pyria_Elemental_GlacierGolem"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Elemental_LavaElemental.DinoDropInventoryComponent_Pyria_Elemental_LavaElemental"
 					},
 					{
 						"chance": 0.5,
@@ -5333,7 +5333,7 @@
 			}
 		},
 		{
-			"name": "Sentinel",
+			"name": "Spirit Sentinel",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Sentinel/Sentinel_Character_BP.Sentinel_Character_BP_C",
 			"dinoNameTag": "Krasue",
 			"customTag": "Krasue",
@@ -5344,6 +5344,7 @@
 				"allowMountedWeaponry",
 				"canBeDragged",
 				"canDrag",
+				"canMountOnHumans",
 				"isCarnivore",
 				"isFlyerDino"
 			],
@@ -5375,7 +5376,7 @@
 				"attacks": [
 					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 320, "stamina": 0 },
 					{
-						"name": "Melee", "interval": 0.8, "dmg": 0, "radius": 240, "stamina": 0,
+						"name": "Proj", "interval": 5, "dmg": 0, "radius": 240, "stamina": 0,
 						"isProjectile": true
 					}
 				]
@@ -5672,7 +5673,7 @@
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 120, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 240, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -5721,7 +5722,7 @@
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 120, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 240, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -5772,7 +5773,7 @@
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 120, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 240, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -7126,7 +7127,7 @@
 			}
 		},
 		{
-			"name": "Dark Mana Reaper Drone",
+			"name": "Dark Reaper",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp.DarkReaper_Character_bp_C",
 			"dinoNameTag": "Xenomorph",
 			"customTag": "Pyria",
@@ -7150,11 +7151,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 1000 },
+				"walk": { "base": 350, "sprint": 1400 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 1000 },
+				"walk": { "base": 350, "sprint": 1400 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -7166,10 +7167,18 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 40, "radius": 200, "stamina": 0 },
-					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Tail", "interval": 5, "dmg": 32, "radius": 200, "stamina": 0 },
-					{ "name": "Proj", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
-					{ "name": "Spear", "interval": 5, "dmg": 15, "radius": 300, "stamina": 0 }
+					{
+						"name": "TailSpines", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "Tailwhip", "interval": 10, "dmg": 50, "radius": 250, "stamina": 65 },
+					{ "name": "Jump", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "JumpAir", "interval": 10, "dmg": 0, "radius": 0, "stamina": 75 },
+					{
+						"name": "Deathmarch", "interval": 10, "dmg": 0, "radius": 0, "stamina": 80,
+						"isProjectile": true
+					},
+					{ "name": "Teleport", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -7382,7 +7391,7 @@
 			}
 		},
 		{
-			"name": "Summoned Dark Mana Reaper Drone",
+			"name": "Summoned Dark Incarnate Reaper",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp_Wild.DarkReaper_Character_bp_Wild_C",
 			"dinoNameTag": "Xenomorph",
 			"customTag": "Pyria",
@@ -7406,11 +7415,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 1000 },
+				"walk": { "base": 350, "sprint": 1400 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 1000 },
+				"walk": { "base": 350, "sprint": 1400 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -7422,10 +7431,13 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.4, "dmg": 32, "radius": 200, "stamina": 0 },
-					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Tail", "interval": 3, "dmg": 20, "radius": 200, "stamina": 0 },
+					{
+						"name": "Roar", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "Tail", "interval": 3, "dmg": 20, "radius": 200, "stamina": 65 },
 					{ "name": "Proj", "interval": 15, "dmg": 0, "radius": 0, "stamina": 100 },
-					{ "name": "Spear", "interval": 5, "dmg": 15, "radius": 300, "stamina": 0 }
+					{ "name": "Spear", "interval": 5, "dmg": 15, "radius": 300, "stamina": 75 }
 				]
 			},
 			"death": {
@@ -9397,13 +9409,14 @@
 		},
 		{
 			"name": "Orthros",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Orthros/Orthros_Character_bp.Orthros_Character_bp_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Orthros/Orthros_Character_bp.Orthros_Character_BP_C",
+			"dinoNameTag": "Orthros",
+			"customTag": "Orthros",
 			"targetingTeamName": "Carnivores_Medium",
-			"mass": 400,
+			"mass": 330,
 			"dragWeight": 250,
 			"flags": [
+				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
@@ -9413,17 +9426,81 @@
 				"isCarnivore",
 				"isTameable"
 			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 250, "sprint": 1500 },
-				"swim": { "base": 300 }
+				"walk": { "base": 280, "sprint": 1600 },
+				"swim": { "base": 350 }
 			},
 			"movementD": {
-				"walk": { "base": 250, "sprint": 1500 },
-				"swim": { "base": 300 }
+				"walk": { "base": 400, "sprint": 1600 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 35, "radius": 470, "stamina": 0 },
+					{ "name": "BiteFury", "interval": 15, "dmg": 40, "radius": 470, "stamina": 25 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 45, "radius": 470, "stamina": 0 },
+					{ "name": "RearingSwipe", "interval": 25, "dmg": 55, "radius": 470, "stamina": 225 },
+					{ "name": "Grab", "interval": 15, "dmg": 40, "radius": 470, "stamina": 0 },
+					{ "name": "Maul", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Lunge", "interval": 10, "dmg": 45, "radius": 470, "stamina": 225 },
+					{ "name": "Roar", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Alpha Orthros",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Orthros/Orthros_Character_bp_Alpha.Orthros_Character_bp_Alpha_C",
+			"dinoNameTag": "Orthros",
+			"customTag": "Orthros",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 330,
+			"dragWeight": 500,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 2000 },
+				"swim": { "base": 350 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2000 },
+				"swim": { "base": 500 }
 			},
 			"staminaRates": {
 				"sprint": -40,
@@ -9431,24 +9508,19 @@
 			},
 			"attack": {
 				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
+				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 40, "radius": 250, "stamina": 0 },
-					{ "name": "BiteFury", "interval": 7, "dmg": 43, "radius": 250, "stamina": 45 },
-					{ "name": "HeadSlam", "interval": 5, "dmg": 48, "radius": 200, "stamina": 0 },
-					{ "name": "Tailsmack", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.2, "dmg": 85, "radius": 525, "stamina": 0 },
+					{ "name": "BiteFury", "interval": 15, "dmg": 90, "radius": 525, "stamina": 25 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 105, "radius": 525, "stamina": 0 },
+					{ "name": "RearingSwipe", "interval": 25, "dmg": 115, "radius": 525, "stamina": 225 },
+					{ "name": "Grab", "interval": 15, "dmg": 80, "radius": 525, "stamina": 0 },
+					{ "name": "Maul", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Lunge", "interval": 10, "dmg": 95, "radius": 525, "stamina": 225 },
+					{ "name": "Roar", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
-					}
-				],
-				"baseXP": 30
-			}
+			"death": { "baseXP": 625 }
 		},
 		{
 			"name": "Miralis Yutyrannus",

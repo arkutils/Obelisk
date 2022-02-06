@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "340.3.1638347339",
+	"version": "342.22.1644102970",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -1720,7 +1720,7 @@
 		},
 		{
 			"name": "Create Dark Mana Seeker",
-			"description": "Use Dark Magic to conjure up a Dark Mana Seeker, a tainted variant of an Aura Seeker. Defeat a Dark Mana Reaper Empress to unlock this engram.",
+			"description": "Use Dark Magic to conjure up a Dark Mana Seeker, a tainted variant of an Aura Seeker.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaDarkSeek.PrimalItemConsumable_CreaDarkSeek_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateDarkManaSeeker.CreateDarkManaSeeker",
@@ -1737,8 +1737,7 @@
 				"recipe": [
 					{ "qty": 1150, "type": "PrimalItemResource_ManaDark_C" },
 					{ "qty": 650, "type": "PrimalItemResource_BlackPearlDust_C" },
-					{ "qty": 250, "type": "PrimalItemResource_Magicrystal_C" },
-					{ "qty": 250, "type": "PrimalItemResource_Gem_Element_C" }
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AuraSeeker_Fertilized_C" }
 				]
 			}
 		},
@@ -1983,9 +1982,86 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemResource_AlphaRexCorpse_C" },
 					{ "qty": 1, "type": "PrimalItemResource_AlphaRexSoul_C" },
-					{ "qty": 2000, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 2000, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_Bazelcrystal_C" }
+					{ "qty": 12000, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 6000, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Ignistone_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Bazelcrystal_C" }
+				]
+			}
+		},
+		{
+			"name": "Create Iron Golem",
+			"description": "Use some magic and some metal to sculpt an Iron Golem: a sturdy sentinel with a colossal blade.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaIronGolem.PrimalItemConsumable_CreaIronGolem_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateAutomaton.CreateAutomaton",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Alchitect" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 200,
+				"time": 40,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 800, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Magicrystal_C" },
+					{ "qty": 500, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 800, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 50, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Activated Lava Elemental",
+			"description": "Use this to bring your newly created Lava Elemental to life!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaLavaElem.PrimalItemConsumable_CreaLavaElem_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ActivatedFireElementalCore.ActivatedFireElementalCore",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Summons", "Elementals" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 200,
+				"time": 40,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5000, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_Sulfur_C" },
+					{ "qty": 1, "type": "PrimalItemResource_LavaElemCore_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 15000, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 25000, "type": "PrimalItemResource_FireElement_C" }
+				]
+			}
+		},
+		{
+			"name": "Create Mithril Golem",
+			"description": "Use some magic and some mithril to sculpt a Mithril Golem: a sterling white vanguard with powerful armor and a deadly blade.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaMithrilGolem.PrimalItemConsumable_CreaMithrilGolem_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/CreateAutomaton.CreateAutomaton",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Alchitect" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 200,
+				"time": 40,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 800, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Magicrystal_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Silicon_C" },
+					{ "qty": 1500, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 200, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			}
 		},
@@ -2739,7 +2815,7 @@
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_material_DarkFlame_0001.Icon_material_DarkFlame_0001",
 			"type": "Resource",
 			"weight": 0.5,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 1,
 				"time": 600,
@@ -4148,6 +4224,16 @@
 			"stackSize": 100
 		},
 		{
+			"name": "Lava Elemental Core",
+			"description": "This trophy proves your worth as a hunter.\nThe core of a Fire Elemental, that once- and still does- hold it's life energy. Can be used to create a loyal Lava Elemental of your own.\n\n\"The furor of the earth becomes encarnate, running rampant with volatile fury. As the earth itself refuses to die, so too does the child born from it, roaring its fury to all who hear before its final breath.\"",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/LavaElemental/PrimalItemResource_LavaElemCore.PrimalItemResource_LavaElemCore_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/FireElementalCore.FireElementalCore",
+			"type": "Resource",
+			"weight": 2,
+			"stackSize": 100
+		},
+		{
 			"name": "Gelragarian's Shop",
 			"description": "Everything you need to set up a shop for a Gelragarian! Place it down and they'll handle the rest!",
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Gelragarian/PrimalItemStructure_GelragarianSmithy.PrimalItemStructure_GelragarianSmithy_C",
@@ -5406,34 +5492,6 @@
 			"stackSize": 100
 		},
 		{
-			"name": "Fertilized Dark Reaper Egg",
-			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/PrimalItemConsumable_Egg_DarkReaper_Fertilized.PrimalItemConsumable_Egg_DarkReaper_Fertilized_C",
-			"parent": "/Game/Genesis/Dinos/BogSpider/PrimalItemConsumable_Egg_BogSpider.PrimalItemConsumable_Egg_BogSpider_C",
-			"icon": "/Game/Genesis/Icons/Items/Item_BogSpiderEgg_Icon.Item_BogSpiderEgg_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 8,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 50, "useItemQuality": true, "duration": 12.5 },
-				{ "stat": "health", "value": 50, "useItemQuality": true, "duration": 12.5 },
-				{ "stat": "stamina", "value": 50, "useItemQuality": true, "duration": 12.5 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/Pyria/Creatures/Wildlife/CorruptReaper/DarkReaper_Character_bp.DarkReaper_Character_bp_C",
-				"temperature": { "min": 27, "max": 30 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
 			"name": "Fertilized Dagon Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Dagon/PrimalItemConsumable_Egg_Dagon_Fertilized.PrimalItemConsumable_Egg_Dagon_Fertilized_C",
@@ -5925,6 +5983,29 @@
 				"food": 0.8,
 				"weight": 0.3,
 				"water": 0.01
+			}
+		},
+		{
+			"name": "Orthros Saddle",
+			"description": "Equip an Orthros with this to ride it. Can also be made in race smithies.",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Orthros/PrimalItemArmor_OrthrosSaddle.PrimalItemArmor_OrthrosSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Baryonyx/Baryonyx_Saddle/HUD_BaryonyxSaddle_Colorize_MIC.HUD_BaryonyxSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
+				]
 			}
 		},
 		{
