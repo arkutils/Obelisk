@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "342.22.1643491977",
+	"version": "343.7.1644766337",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -243,7 +243,7 @@
 		{
 			"name": "Crystal Poop",
 			"description": "A hefty load of crystal. Can be used as crystal in crafting recipes.",
-			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Crystal_Child.PrimalItemResource_Crystal_Child_C",
+			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Crystal_Poop.PrimalItemResource_Crystal_Poop_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Crystal.PrimalItemResource_Crystal_C",
 			"icon": "/Game/PrimalEarth/Test_Craig/Crystal_Icon.Crystal_Icon",
 			"type": "Resource",
@@ -251,9 +251,28 @@
 			"stackSize": 5000
 		},
 		{
+			"name": "Element Poop",
+			"description": "A hefty load of element. Can be used as element in crafting recipes and to power a few things that require Element.",
+			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Element_poop.PrimalItemResource_Element_Poop_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TEKElement_Icon.TEKElement_Icon",
+			"type": "Resource",
+			"folders": [ "Tek" ],
+			"weight": 0.5,
+			"stackSize": 5000,
+			"crafting": {
+				"xp": 0,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 100, "type": "PrimalItemResource_ElementShard_C" } ]
+			}
+		},
+		{
 			"name": "Metal Poop",
 			"description": "A hefty load of metal. Can be used as metal in crafting recipes, and smelted to make ingots.",
-			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Metal_Child.PrimalItemResource_Metal_Child_C",
+			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Metal_Poop.PrimalItemResource_Metal_Poop_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Metal.PrimalItemResource_Metal_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/MetalOre_Icon.MetalOre_Icon",
 			"type": "Resource",
@@ -263,7 +282,7 @@
 		{
 			"name": "Obsidian Poop",
 			"description": "A hefty load of obsidian. Can be used as obsidian in crafting recipes.",
-			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Obsidian_Child.PrimalItemResource_Obsidian_Child_C",
+			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Obsidian_Poop.PrimalItemResource_Obsidian_Poop_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Obsidian.PrimalItemResource_Obsidian_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Obsidian_Icon.Obsidian_Icon",
 			"type": "Resource",
@@ -273,7 +292,7 @@
 		{
 			"name": "Pearl Poop",
 			"description": "A hefty load of pearl. Can be used as Silica Pearls in crafting recipes.",
-			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Silicon_Child.PrimalItemResource_Silicon_Child_C",
+			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Silicon_Poop.PrimalItemResource_Silicon_Poop_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Silicon.PrimalItemResource_Silicon_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Pearl_Icon.Pearl_Icon",
 			"type": "Resource",
@@ -283,7 +302,7 @@
 		{
 			"name": "Stone Poop",
 			"description": "A hefty load of stone. Can be used as stone in crafting recipes.",
-			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Stone_Child.PrimalItemResource_Stone_Child_C",
+			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Stone_Poop.PrimalItemResource_Stone_Poop_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Stone.PrimalItemResource_Stone_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Stone_Icon.Stone_Icon",
 			"type": "Resource",
@@ -293,7 +312,7 @@
 		{
 			"name": "Wood Poop",
 			"description": "A hefty load of wood. Can be used as wood in crafting recipes.",
-			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Wood_Child.PrimalItemResource_Wood_Child_C",
+			"bp": "/Game/Mods/ArkOmega/Buffs/Variants/Other/PrimalItemResource_Wood_Poop.PrimalItemResource_Wood_Poop_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Wood.PrimalItemResource_Wood_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Wood_Icon.Wood_Icon",
 			"type": "Resource",
@@ -6278,7 +6297,7 @@
 		},
 		{
 			"name": "Paragon Breaker",
-			"description": "Dragging a Paragon Soul onto this item will create a Paragon Breaker for that species.\n\nYou can feed a Paragon Breaker to a creature that is Paragon level 30 or higher to continue increasing its Paragon Level.",
+			"description": "Dragging a Paragon Soul onto this item will create a Paragon Breaker for that species. You cannot drag a Paragon Soul onto this item inside of a dino's inventory, you must create the Paragon Breaker in the inventory of the player or a structure.\n\nYou can feed a Paragon Breaker to a creature that is Paragon level 30 or higher to continue increasing its Paragon Level.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_ParagonBreaker.PrimalItem_ParagonBreaker_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/TroodonWildDino_Icon.TroodonWildDino_Icon",
@@ -7300,6 +7319,30 @@
 			"structure": "/Game/Mods/ArkOmega/Structures/DimensionalStorage/DimensionalBox.DimensionalBox_C"
 		},
 		{
+			"name": "Dodo Cage",
+			"description": "Throw a wild Dodo in here to convert it to an unclaimed Dodo, allowing the Egg Collector to generate eggs for it (No-Tame only).",
+			"bp": "/Game/Mods/ArkOmega/Structures/DodoCage/PrimalItemStructure_DodoCage.PrimalItemStructure_DodoCage_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Cage_Icon.Cage_Icon",
+			"type": "Structure",
+			"folders": [ "Structures" ],
+			"weight": 8,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 9,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 110, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/ArkOmega/Structures/DodoCage/DodoCage_Wood.DodoCage_Wood_C"
+		},
+		{
 			"name": "Egg Collector",
 			"description": "Place this near your dinos to collect any unfertilized eggs that are dropped on the ground. This will also prevent all unfertilized eggs from spoiling.\n\nThe Egg Collector will also passively generate eggs for dinos around in that are in stasis, but will not work with dinos that are attached to a Hitching Post.",
 			"bp": "/Game/Mods/ArkOmega/Structures/EggCollector/PrimalItemStructure_EggCollector.PrimalItemStructure_EggCollector_C",
@@ -7873,7 +7916,7 @@
 			"weapon": "/Game/Mods/ArkOmega/Weapons/EtherealSpears/WeapEtherealSpear.WeapEtherealSpear_C"
 		},
 		{
-			"name": "Eviscerators",
+			"name": "Eviscerator",
 			"description": "Weapons of rage and hatred. \n\nThe more you attack, the faster you attack.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Eviscerators/PrimalItem_Evis.PrimalItem_Evis_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmoless.PrimalItemWeaponGenericAmmoless_C",
@@ -8819,7 +8862,7 @@
 					{ "qty": 10, "type": "PrimalItemResource_Hide_C" }
 				]
 			},
-			"weapon": "/Game/Mods/ArkOmega/Weapons/Slingshot/WeapVersatileStone.WeapVersatileStone_C"
+			"weapon": "/Game/Mods/ArkOmega/Weapons/Slingshot/RangedWeapVersatileStone.RangedWeapVersatileStone_C"
 		},
 		{
 			"name": "Stone Sickle",
