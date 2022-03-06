@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "343.19.1645426017",
+	"version": "344.3.1646553641",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -169,7 +169,6 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowRiding",
-				"allowRidingInWater",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -568,7 +567,10 @@
 			"attack": {
 				"defaultDmg": 75,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 75, "radius": 65, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 75, "radius": 65, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 }
+				]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -654,7 +656,6 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowRiding",
-				"allowRidingInWater",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -3434,6 +3435,12 @@
 				"isCarnivore"
 			],
 			"leveling": { "mutagenCost": 99000001 },
+			"cloning": {
+				"costBase": 2500000000,
+				"costLevel": 5500000000,
+				"timeBase": 17500000000,
+				"timeLevel": 38500000000
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4820,6 +4827,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"canMountOnHumans",
 				"isTameable"
 			],
 			"leveling": { "mutagenCost": 2 },
@@ -10816,7 +10824,7 @@
 			"attack": {
 				"defaultDmg": 61,
 				"defaultSwingRadius": 165,
-				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 61, "radius": 165, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 61, "radius": 200, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,

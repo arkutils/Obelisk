@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "343.19.1645426017",
+	"version": "344.3.1646553641",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -5686,7 +5686,7 @@
 		},
 		{
 			"name": "Nightvision Potion",
-			"description": "Gain the vision of Nightmare creatures temporarily at night.\n\nCannot be consumed during the day, and wears off when the sun comes up.",
+			"description": "Gain the vision of Nightmare creatures for 3 minutes.",
 			"bp": "/Game/Mods/ArkOmega/Items/Potions/NightvisionPotion/PrimalItemConsumable_NightvisionPotion.PrimalItemConsumable_NightvisionPotion_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Potions/NightvisionPotion/NightVision_PotionIcon.NightVision_PotionIcon",
@@ -6252,6 +6252,17 @@
 			"statEffects": [ { "stat": "torpidity", "value": 1280, "useItemQuality": true, "duration": 256 } ]
 		},
 		{
+			"name": "Unique God Soul",
+			"description": "Soul of a Unique Species God. Used to rank up Uniques to Godlike.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_AncientGodSoul.PrimalItem_AncientGodSoul_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_UniqueGodSoul.PrimalItem_UniqueGodSoul_C",
+			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/GodSoul_Icon.GodSoul_Icon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
 			"name": "Boss Soul",
 			"description": "Soul harvested from a Boss, used to summon a God.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_BossSoul.PrimalItem_BossSoul_C",
@@ -6572,6 +6583,29 @@
 				"recipe": [
 					{ "exact": true, "qty": 1, "type": "PrimalItem_SpeciesSoul_C" },
 					{ "exact": true, "qty": 100, "type": "PrimalItem_AlphaEssence_C" }
+				]
+			}
+		},
+		{
+			"name": "Ancient Unique God Token",
+			"description": "Use this in the God Egg to summon an Ancient Unique God. Killing the Ancient Unique God will allow you to rank up your Godlike Unique tame to Ancient tier.\n\nThe Ancient Unique God summoned by this token will be decided by the Unique God Soul used to craft it. \n\nIMPORTANT NOTE: Ancient Gods can only be damaged by the same Species! For example, a Reptar God can only be damaged by a Rex. Variants such as Tek, Feathered, and Skeletal do not count and are separate!",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_AncientGodToken.PrimalItem_AncientGodToken_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_UniqueGodSoul.PrimalItem_UniqueGodSoul_C",
+			"icon": "/Game/OldAssets/UI/Chat/ChatLog_Icon_Star.ChatLog_Icon_Star",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 2,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "exact": true, "qty": 1, "type": "PrimalItem_UniqueGodSoul_C" },
+					{ "exact": true, "qty": 50, "type": "PrimalItem_ParagonShard_C" },
+					{ "qty": 100, "type": "PrimalItem_SoulShard_C" }
 				]
 			}
 		},
@@ -7715,6 +7749,25 @@
 				"recipe": [ { "qty": 0, "type": "PrimalItemResource_Wood_C" } ]
 			},
 			"structure": "/Game/Mods/ArkOmega/Structures/UGGTrophy/Structure_UGGTrophy.Structure_UGGTrophy_C"
+		},
+		{
+			"name": "Zodiac Trophy",
+			"description": "A massive trophy to prove that you have beaten Zodiac.\n\nOr have you?",
+			"bp": "/Game/Mods/ArkOmega/Structures/UGGTrophy/ZodiacTrophy/PrimalItemStructure_ZodiacTrophy.PrimalItemStructure_ZodiacTrophy_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/Effects/Textures/Seasonal/T_Star_01.T_Star_01",
+			"type": "Structure",
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 0, "type": "PrimalItemResource_Wood_C" } ]
+			},
+			"structure": "/Game/Mods/ArkOmega/Structures/UGGTrophy/ZodiacTrophy/Structure_ZodiacTrophy.Structure_ZodiacTrophy_C"
 		},
 		{
 			"name": "Unique Totem",
