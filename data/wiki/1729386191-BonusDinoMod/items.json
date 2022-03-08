@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "333.13.1627650191",
+	"version": "344.3.1646692003",
 	"format": "4",
 	"mod": {
 		"id": "1729386191",
@@ -55,6 +55,280 @@
 					{ "qty": 1, "type": "PrimalItemResource_Sand_C" },
 					{ "qty": 1, "type": "PrimalItemConsumable_CactusSap_C" }
 				]
+			}
+		},
+		{
+			"name": "Hunt Point",
+			"description": "Signifies a significant kill for your Albertosaurus. Use it to unlock skills and features. Cannot be transferred between Albertosauruses and cannnot be removed from their inventory.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/PrimalItemResource_HuntPoint.PrimalItemResource_HuntPoint_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Teeth_Icon.Teeth_Icon",
+			"type": "Resource",
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 1
+		},
+		{
+			"name": "Albertosaurus Saddle",
+			"description": "Equip an Albertosaurus with this to ride it.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Saddle/PrimalItemArmor_AlbertSaddle.PrimalItemArmor_AlbertSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Carno/Carno_Saddle/HUD_CarnoSaddle_Colorize_MIC.HUD_CarnoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 62.8,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Albert Base Ability",
+			"description": "THE ALBERT IS POGGING?!",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertAbilityBase.PrimalItemConsumable_AlbertAbilityBase_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Genesis/Icons/Buffs/Condition_MissionArea_Icon.Condition_MissionArea_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 50, "type": "PrimalItemResource_HuntPoint_C" } ]
+			}
+		},
+		{
+			"name": "Skin: Dense Muscles",
+			"description": "Passive ability. The muscles underneath Albertosaurus's skin experience profound growth. However, the skin above becomes thinner to allow these muscles to move.\n\n-50% Resistance for +25% Movement Speed and +25% Melee Damage.\n\nAs a Skin ability, this cannot stack with Thick Skin or Thin Skin.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertDenseMuscles.PrimalItemConsumable_AlbertDenseMuscles_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertAbilityBase.PrimalItemConsumable_AlbertAbilityBase_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/PrimeMeat_Icon.PrimeMeat_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 500, "type": "PrimalItemResource_HuntPoint_C" } ]
+			}
+		},
+		{
+			"name": "Ability: Crushing Bite",
+			"description": "Unlocks Albertosaurus's Crushing Bite ability, which slows targets for a time. The attack becomes available on C.\n\nThe default buff time is 10 seconds. The smaller or larger the target is compared to Albertosaurus (Albert's 250 drag weight divided by target's drag weight), the longer or shorter the buff will last.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertHeavyBite.PrimalItemConsumable_AlbertHeavyBite_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertAbilityBase.PrimalItemConsumable_AlbertAbilityBase_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Condition_Injured_Icon.Condition_Injured_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 50, "type": "PrimalItemResource_HuntPoint_C" } ]
+			}
+		},
+		{
+			"name": "Ability: I Recognize This",
+			"description": "Unlocks a... change to Albertosaurus's roar. The ability can be shifted on and off with O.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertJPOG.PrimalItemConsumable_AlbertJPOG_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertAbilityBase.PrimalItemConsumable_AlbertAbilityBase_C",
+			"icon": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Text/Jpog.Jpog",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 450, "type": "PrimalItemResource_HuntPoint_C" } ]
+			}
+		},
+		{
+			"name": "Ability: Shoulderbash",
+			"description": "Unlocks Albertosaurus's Shoulder Bash. Deals good damage for its size, while inflicting heavy knockback. The attack becomes available on X.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertShoulderBash.PrimalItemConsumable_AlbertShoulderBash_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertAbilityBase.PrimalItemConsumable_AlbertAbilityBase_C",
+			"icon": "/Game/PrimalEarth/Dinos/Tropeognathus/Condition_TropeoDragSpeed.Condition_TropeoDragSpeed",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 50, "type": "PrimalItemResource_HuntPoint_C" } ]
+			}
+		},
+		{
+			"name": "Ability: Swift Swim",
+			"description": "Unlocks the ability for Albertosaurus to sprint swim in water.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertSwiftSwim.PrimalItemConsumable_AlbertSwiftSwim_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertAbilityBase.PrimalItemConsumable_AlbertAbilityBase_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Condition_SpinoWaterBuff.Condition_SpinoWaterBuff",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 25, "type": "PrimalItemResource_HuntPoint_C" } ]
+			}
+		},
+		{
+			"name": "Skin: Thick Skin",
+			"description": "Passive ability. The skin of the albertosaurus becomes thicker and more resistant to damage and stress. However, the excess weight makes things more difficult for the Albertosaurus to move.\n\n+25% Resistance and +25% Weight at the cost of -50% speed\n\nAs a Skin ability, this cannot stack with Thin Skin or Dense Muscles.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertThickSkin.PrimalItemConsumable_AlbertThickSkin_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertAbilityBase.PrimalItemConsumable_AlbertAbilityBase_C",
+			"icon": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Text/Icon_ItemResource_Scales.Icon_ItemResource_Scales",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 500, "type": "PrimalItemResource_HuntPoint_C" } ]
+			}
+		},
+		{
+			"name": "Skin: Thin Skin",
+			"description": "Passive ability. The skin of the albertosaurus becomes thinner, thus less effort needed to move. However, the loss of mass decreases strength for carry weight and resistance.\n\n-25% Resistance and -25% weight for +50% movement speed.\n\nAs a Skin ability, this cannot stack with Thick Skin or Dense Muscles.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertThinSkin.PrimalItemConsumable_AlbertThinSkin_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/Unlocks/PrimalItemConsumable_AlbertAbilityBase.PrimalItemConsumable_AlbertAbilityBase_C",
+			"icon": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Text/Icon_ItemResource_Hide_Lv2_Wyvern.Icon_ItemResource_Hide_Lv2_Wyvern",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 500, "type": "PrimalItemResource_HuntPoint_C" } ]
+			}
+		},
+		{
+			"name": "Alberto Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/PrimalItemConsumable_Egg_Albert.PrimalItemConsumable_Egg_Albert_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg_Medium.PrimalItemConsumable_Egg_Medium_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized  Alberto Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/PrimalItemConsumable_Egg_Albert_Fertilized.PrimalItemConsumable_Egg_Albert_Fertilized_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/PrimalItemConsumable_Egg_Albert.PrimalItemConsumable_Egg_Albert_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Alberta_Character_BP.Alberta_Character_BP_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized  Alberto Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/PrimalItemConsumable_Egg_Albert_Fertilized_Rockwell.PrimalItemConsumable_Egg_Albert_Fertilized_Rockwell_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/PrimalItemConsumable_Egg_Albert_Fertilized.PrimalItemConsumable_Egg_Albert_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carno.HUD_DinoEgg_MIC_Inst_Carno",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Alberta_Character_BP_Rockwell.Alberta_Character_BP_Rockwell_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
