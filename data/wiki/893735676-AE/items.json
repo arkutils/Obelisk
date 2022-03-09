@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "340.3.1635395904",
+	"version": "344.3.1646782005",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -525,6 +525,31 @@
 			"name": "Evolve To DarkStar Manticore",
 			"description": "Will evolve to DarkStar Manticore",
 			"bp": "/Game/Mods/AE/Core/Evolutions/Evolution/Items/PrimalItem_Evolution_ManticoreFly.PrimalItem_Evolution_ManticoreFly_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/ApexDropSpino_Icon.ApexDropSpino_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 2,
+			"stackSize": 10000,
+			"crafting": {
+				"xp": 10,
+				"time": 64,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemConsumable_Evolve_Fuel_C" },
+					{ "qty": 100, "type": "PrimalItemConsumable_PrimeBlood_C" },
+					{ "qty": 35, "type": "PrimalItem_Generic_EssenceHardMode_C" },
+					{ "qty": 1, "type": "PrimalItem_SummonReagent_C" },
+					{ "qty": 2, "type": "PrimalItem_MysteriousElement_C" },
+					{ "qty": 15, "type": "PrimalItem_Token_C" }
+				]
+			}
+		},
+		{
+			"name": "Evolve To Wicked Manticore",
+			"description": "Will evolve to a Wicked themed DarkStar Manticore",
+			"bp": "/Game/Mods/AE/Core/Evolutions/Evolution/Items/PrimalItem_Evolution_ManticoreFly_wicked.PrimalItem_Evolution_ManticoreFly_wicked_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/ApexDropSpino_Icon.ApexDropSpino_Icon",
 			"type": "MiscConsumable/Food",
@@ -25297,6 +25322,33 @@
 			}
 		},
 		{
+			"name": "Eternal Unknown Poison Grenade",
+			"description": "Pulling the pin starts a 5 second timer to an explosion. Tranqs out anything that can be KO'd .",
+			"bp": "/Game/Mods/AE/Items/Tools/Grenades/PrimalItem_WeaponTranqGrenade_AE.PrimalItem_WeaponTranqGrenade_AE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmolessConsumeSelf.PrimalItemWeaponGenericAmmolessConsumeSelf_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/PoisonGrenade_Icon.PoisonGrenade_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Explosive" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 11.35,
+				"time": 5,
+				"levelReq": 100,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20000, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 200000, "type": "PrimalItemResource_Oil_C" },
+					{ "qty": 200000, "type": "PrimalItemResource_Gunpowder_C" },
+					{ "qty": 20000, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 20000, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 20000, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"weapon": "/Game/Mods/AE/Items/Tools/Grenades/WeapGrenadeAE.WeapGrenadeAE_C"
+		},
+		{
 			"name": "Eternal HandHeld Chain Bola",
 			"description": "Wind it up and throw! Hand Held Chain Bola for Taming Those Pesky Tropo",
 			"bp": "/Game/Mods/AE/Items/Tools/HandheldChainBola/PrimalItem_WeaponBola_AEHandHeldChainBola.PrimalItem_WeaponBola_AEHandHeldChainBola_C",
@@ -28452,6 +28504,24 @@
 			"name": "Base Multi-item",
 			"description": "Inherit this for easy mutli-item creation",
 			"bp": "/Game/Mods/AE/Structures/EternalGodShrine/MultiCraftItems/PrimalItemConsumable_MulticraftItem_GodShrine_AEStuff.PrimalItemConsumable_MulticraftItem_GodShrine_AEStuff_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_MulticraftItem_Base.PrimalItemConsumable_MulticraftItem_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/FertilizerIcon.FertilizerIcon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 3600,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Gasoline_C" } ]
+			}
+		},
+		{
+			"name": "Base Multi-item",
+			"description": "Inherit this for easy mutli-item creation",
+			"bp": "/Game/Mods/AE/Structures/EternalGodShrine/MultiCraftItems/PrimalItemConsumable_MulticraftItem_GodShrine_AEStuffInstatame.PrimalItemConsumable_MulticraftItem_GodShrine_AEStuffInstatame_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_MulticraftItem_Base.PrimalItemConsumable_MulticraftItem_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/FertilizerIcon.FertilizerIcon",
 			"type": "MiscConsumable/Food",
