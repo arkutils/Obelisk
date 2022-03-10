@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "342.22.1643520911",
+	"version": "344.3.1646889330",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -849,7 +849,6 @@
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
 				"isBigDino",
 				"isCarnivore"
@@ -881,7 +880,7 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 125, "radius": 300, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.2, "dmg": 125, "radius": 600, "stamina": 0 },
 					{ "name": "Headbutt", "interval": 15, "dmg": 140, "radius": 300, "stamina": 80 },
 					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -1565,11 +1564,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 450, "sprint": 1980 },
+				"walk": { "base": 540, "sprint": 2376 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 1980 },
+				"walk": { "base": 540, "sprint": 2376 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -1584,7 +1583,7 @@
 					{ "name": "StunRoar", "interval": 25, "dmg": 15, "radius": 900, "stamina": 85 },
 					{ "name": "Hiss", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "SweepBite", "interval": 7, "dmg": 175, "radius": 465, "stamina": 66 }
+					{ "name": "SweepBite", "interval": 7, "dmg": 175, "radius": 600, "stamina": 66 }
 				]
 			},
 			"death": {
@@ -1596,7 +1595,7 @@
 					}
 				],
 				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
-				"baseXP": 30
+				"baseXP": 950
 			}
 		},
 		{
@@ -2215,67 +2214,6 @@
 			}
 		},
 		{
-			"name": "Alpha Shantungosaurus",
-			"bp": "/Game/Mods/AC2/Shant/AlphaShantung_Character_BP.AlphaShantung_Character_BP_C",
-			"dinoNameTag": "Iguanodon",
-			"customTag": "Shantung",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 400,
-			"dragWeight": 600,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage"
-			],
-			"leveling": { "mutagenCost": 33 },
-			"cloning": {
-				"costBase": 800,
-				"costLevel": 55,
-				"timeBase": 5600,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 238, "sprint": 1309 },
-				"swim": { "base": 569.5 }
-			},
-			"movementD": {
-				"walk": { "base": 322, "sprint": 1771 },
-				"swim": { "base": 770.5 }
-			},
-			"staminaRates": {
-				"sprint": -185,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 12,
-				"defaultSwingRadius": 100,
-				"attacks": [
-					{ "name": "Melee_Biped", "interval": 0.4, "dmg": 120, "radius": 420, "stamina": 0 },
-					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
-					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
-					{ "name": "Roar_Biped", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
-					{ "name": "None", "interval": 10, "dmg": 200, "radius": 500, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/AC2/Items/DinoDropInventoryComponent_AlphaAC.DinoDropInventoryComponent_AlphaAC"
-					}
-				],
-				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
-				"baseXP": 950
-			}
-		},
-		{
 			"name": "Shantungosaurus",
 			"bp": "/Game/Mods/AC2/Shant/Shantung_Character_BP.Shantung_Character_BP_C",
 			"dinoNameTag": "Iguanodon",
@@ -2323,10 +2261,71 @@
 					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
 					{ "name": "Roar_Biped", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
-					{ "name": "Roar_Biped", "interval": 10, "dmg": 70, "radius": 500, "stamina": 120 }
+					{ "name": "Stomp", "interval": 10, "dmg": 70, "radius": 500, "stamina": 120 }
 				]
 			},
 			"death": { "baseXP": 1 }
+		},
+		{
+			"name": "Alpha Shantungosaurus",
+			"bp": "/Game/Mods/AC2/Shant/Shantung_Character_BP_Alpha.Shantung_Character_BP_Alpha_C",
+			"dinoNameTag": "Iguanodon",
+			"customTag": "Shantung",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 400,
+			"dragWeight": 600,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 323, "sprint": 1776.5 },
+				"swim": { "base": 569.5 }
+			},
+			"movementD": {
+				"walk": { "base": 437, "sprint": 2403.5 },
+				"swim": { "base": 770.5 }
+			},
+			"staminaRates": {
+				"sprint": -185,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 100,
+				"attacks": [
+					{ "name": "Melee_Biped", "interval": 0.4, "dmg": 120, "radius": 420, "stamina": 0 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar_Biped", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "None", "interval": 10, "dmg": 200, "radius": 500, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AC2/Items/DinoDropInventoryComponent_AlphaAC.DinoDropInventoryComponent_AlphaAC"
+					}
+				],
+				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
+				"baseXP": 950
+			}
 		},
 		{
 			"name": "Stygimoloch",
@@ -2816,6 +2815,100 @@
 				]
 			},
 			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Alpha Aberrant Torvosaurus",
+			"bp": "/Game/Mods/AC2/Torvo/Ac2Torvo_Character_bp_Aberrant_Alpha.Ac2Torvo_Character_bp_Aberrant_Alpha_C",
+			"dinoNameTag": "Megalosaurus",
+			"customTag": "TorvosaurAC2",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 450,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1800 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1800 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 100, "radius": 650, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AC2/Items/DinoDropInventoryComponent_AlphaAC.DinoDropInventoryComponent_AlphaAC"
+					}
+				],
+				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
+				"baseXP": 950
+			}
+		},
+		{
+			"name": "Alpha Torvosaurus",
+			"bp": "/Game/Mods/AC2/Torvo/Ac2Torvo_Character_bp_Alpha.Ac2Torvo_Character_bp_Alpha_C",
+			"dinoNameTag": "Megalosaurus",
+			"customTag": "TorvosaurAC2",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 450,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1800 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1800 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 100, "radius": 650, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 950 }
 		},
 		{
 			"name": "Austroraptor",
@@ -3376,7 +3469,7 @@
 		},
 		{
 			"name": "Alpha Concavenator",
-			"bp": "/Game/Mods/AC2/conca/MegaConca_Character_BP.MegaConca_Character_BP_C",
+			"bp": "/Game/Mods/AC2/conca/Conca_Character_BP_Alpha.Conca_Character_BP_Alpha_C",
 			"dinoNameTag": "Allo",
 			"customTag": "Concav",
 			"targetingTeamName": "Carnivores_Medium",
@@ -3401,11 +3494,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 1600 },
+				"walk": { "base": 525, "sprint": 2100 },
 				"swim": { "base": 350 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 1600 },
+				"walk": { "base": 525, "sprint": 2100 },
 				"swim": { "base": 350 }
 			},
 			"staminaRates": {
@@ -3682,6 +3775,71 @@
 			"death": { "baseXP": 30 }
 		},
 		{
+			"name": "Alpha X-Deinocheirus",
+			"bp": "/Game/Mods/AC2/deinoch/Bog_Deinocheirus_Character_BP_Alpha.Bog_Deinocheirus_Character_BP_Alpha_C",
+			"dinoNameTag": "Deinoch",
+			"customTag": "Deinoch",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 490, "sprint": 2800 },
+				"swim": { "base": 490 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 2800 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "ClawSmacks", "interval": 0.2, "dmg": 120, "radius": 700, "stamina": 0 },
+					{ "name": "Uppercut", "interval": 18, "dmg": 280, "radius": 850, "stamina": 120 },
+					{ "name": "DoubleSmack", "interval": 10, "dmg": 180, "radius": 800, "stamina": 0 },
+					{ "name": "BrutalUppercutLeft", "interval": 0.2, "dmg": 280, "radius": 800, "stamina": 120 },
+					{ "name": "BrutalUppercutRight", "interval": 0.2, "dmg": 280, "radius": 800, "stamina": 120 },
+					{ "name": "Bite", "interval": 7, "dmg": 70, "radius": 480, "stamina": 0 },
+					{ "name": "RoarStationary", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "RoarMoving", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AC2/Items/DinoDropInventoryComponent_AlphaAC_Deinoch.DinoDropInventoryComponent_AlphaAC_Deinoch"
+					}
+				],
+				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
+				"baseXP": 950
+			}
+		},
+		{
 			"name": "Deinocheirus",
 			"bp": "/Game/Mods/AC2/deinoch/Deinocheirus_Character_BP.Deinocheirus_Character_BP_C",
 			"dinoNameTag": "Deinoch",
@@ -3794,6 +3952,136 @@
 				]
 			},
 			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Alpha Aberrant Deinocheirus",
+			"bp": "/Game/Mods/AC2/deinoch/Deinocheirus_Character_BP_Aberrant_Alpha.Deinocheirus_Character_BP_Aberrant_Alpha_C",
+			"dinoNameTag": "Deinoch",
+			"customTag": "Deinoch",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 490, "sprint": 2800 },
+				"swim": { "base": 490 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 2800 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "ClawSmacks", "interval": 0.2, "dmg": 50, "radius": 600, "stamina": 0 },
+					{ "name": "Uppercut", "interval": 18, "dmg": 168, "radius": 600, "stamina": 120 },
+					{ "name": "DoubleSmack", "interval": 10, "dmg": 90, "radius": 600, "stamina": 0 },
+					{ "name": "BrutalUppercutLeft", "interval": 0.2, "dmg": 168, "radius": 600, "stamina": 120 },
+					{ "name": "BrutalUppercutRight", "interval": 0.2, "dmg": 168, "radius": 600, "stamina": 120 },
+					{ "name": "Bite", "interval": 7, "dmg": 30, "radius": 480, "stamina": 0 },
+					{ "name": "RoarStationary", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "RoarMoving", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AC2/Items/DinoDropInventoryComponent_AlphaAC_Deinoch.DinoDropInventoryComponent_AlphaAC_Deinoch"
+					}
+				],
+				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
+				"baseXP": 950
+			}
+		},
+		{
+			"name": "Alpha Deinocheirus",
+			"bp": "/Game/Mods/AC2/deinoch/Deinocheirus_Character_BP_Alpha.Deinocheirus_Character_BP_Alpha_C",
+			"dinoNameTag": "Deinoch",
+			"customTag": "Deinoch",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 490, "sprint": 2800 },
+				"swim": { "base": 490 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 2800 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "ClawSmacks", "interval": 0.2, "dmg": 50, "radius": 600, "stamina": 0 },
+					{ "name": "Uppercut", "interval": 18, "dmg": 168, "radius": 600, "stamina": 120 },
+					{ "name": "DoubleSmack", "interval": 10, "dmg": 90, "radius": 600, "stamina": 0 },
+					{ "name": "BrutalUppercutLeft", "interval": 0.2, "dmg": 168, "radius": 600, "stamina": 120 },
+					{ "name": "BrutalUppercutRight", "interval": 0.2, "dmg": 168, "radius": 600, "stamina": 120 },
+					{ "name": "Bite", "interval": 7, "dmg": 30, "radius": 480, "stamina": 0 },
+					{ "name": "RoarStationary", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "RoarMoving", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AC2/Items/DinoDropInventoryComponent_AlphaAC_Deinoch.DinoDropInventoryComponent_AlphaAC_Deinoch"
+					}
+				],
+				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
+				"baseXP": 950
+			}
 		},
 		{
 			"name": "Ghost Deinocheirus",
@@ -4246,11 +4534,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 480, "sprint": 1440 },
+				"walk": { "base": 550, "sprint": 1650 },
 				"swim": { "base": 370 }
 			},
 			"movementD": {
-				"walk": { "base": 480, "sprint": 1440 },
+				"walk": { "base": 550, "sprint": 1650 },
 				"swim": { "base": 370 }
 			},
 			"staminaRates": {
@@ -4261,7 +4549,7 @@
 				"defaultDmg": 10,
 				"defaultSwingRadius": 90,
 				"attacks": [
-					{ "name": "Attack With Debuff", "interval": 0.33, "dmg": 54, "radius": 160, "stamina": 0 },
+					{ "name": "Attack With Debuff", "interval": 0.4, "dmg": 54, "radius": 420, "stamina": 0 },
 					{ "name": "Jump", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Jump", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
