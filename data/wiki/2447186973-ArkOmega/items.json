@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "344.3.1646553641",
+	"version": "344.8.1647061057",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -6337,6 +6337,17 @@
 			}
 		},
 		{
+			"name": "Perfect Soul",
+			"description": "The soul of Perfect Zodiac.\n\nFeed this to any Ancient tier creature to make it a Zodiac variant.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_PerfectSoul.PrimalItem_PerfectSoul_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/GodSoul_Icon.GodSoul_Icon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
 			"name": "Paragon Soul",
 			"description": "Soul harvested from a specific species, used as a permanent power up.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_SpeciesSoul.PrimalItem_SpeciesSoul_C",
@@ -6522,7 +6533,7 @@
 			"type": "MiscConsumable/Food",
 			"flags": [ "preventCheatGive" ],
 			"weight": 0.1,
-			"stackSize": 100
+			"stackSize": 1000
 		},
 		{
 			"name": "Basic Soul",
@@ -6946,6 +6957,26 @@
 			}
 		},
 		{
+			"name": "Eggselerator",
+			"description": "Equipping the Eggselerator in the trophy slot of an Egg Collector will rapidly increase the rate that it is able to generate eggs from surrounding creatures.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_Eggselerator.PrimalItem_Eggselerator_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/PrimalEarth/Test/EggIcon.EggIcon",
+			"type": "Equipment/Trophy",
+			"flags": [ "preventCheatGive" ],
+			"folders": [ "Structure Upgrades" ],
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 2,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 50, "type": "PrimalItem_SoulShard_C" } ]
+			}
+		},
+		{
 			"name": "Token of the Fallen God",
 			"description": "Feed this token to your Godlike tame to remove its God powers and return it to an Omega tier.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_GodWipe.PrimalItem_GodWipe_C",
@@ -7132,6 +7163,16 @@
 					{ "qty": 25, "type": "PrimalItem_SoulShard_C" }
 				]
 			}
+		},
+		{
+			"name": "Unique Token",
+			"description": "Use this token in the Omega Beacon to make your next summon a random Unique dino.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_UniqueToken.PrimalItem_UniqueToken_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/OldAssets/UI/Chat/ChatLog_Icon_Star.ChatLog_Icon_Star",
+			"type": "MiscConsumable/Food",
+			"weight": 0.5,
+			"stackSize": 1
 		},
 		{
 			"name": "Unstable Steak",
@@ -7326,6 +7367,29 @@
 				]
 			},
 			"structure": "/Game/Mods/ArkOmega/Structures/Craptivator/StructureBP_Craptivator.StructureBP_Craptivator_C"
+		},
+		{
+			"name": "Cursed Idol",
+			"description": "Curse your items. Do it.",
+			"bp": "/Game/Mods/ArkOmega/Structures/CursedStatue/PrimalItemStructure_CursedIdol.PrimalItemStructure_CursedIdol_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/ArkOmega/Structures/UpgradeBench/HexenUpgradeTable_Icon.HexenUpgradeTable_Icon",
+			"type": "Structure",
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 6.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItem_NightmareSoul_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
+				]
+			},
+			"structure": "/Game/Mods/ArkOmega/Structures/CursedStatue/StorageBox_CursedStatue.StorageBox_CursedStatue_C"
 		},
 		{
 			"name": "Dimensional Storage",
@@ -9018,6 +9082,30 @@
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Stormbringer/WeapStormbringer.WeapStormbringer_C"
+		},
+		{
+			"name": "Zeus Bolt",
+			"description": "",
+			"bp": "/Game/Mods/ArkOmega/Weapons/Thunderbolt/PrimalItem_Thunderbolt.PrimalItem_Thunderbolt_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmolessConsumeSelf.PrimalItemWeaponGenericAmmolessConsumeSelf_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/Spear_Icon.Spear_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Primitive", "Melee" ],
+			"weight": 3,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0.6,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 8, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Flint_C" },
+					{ "qty": 12, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"weapon": "/Game/Mods/ArkOmega/Weapons/Thunderbolt/WeapThunder.WeapThunder_C"
 		},
 		{
 			"name": "Alpha Knockout Arrow",
