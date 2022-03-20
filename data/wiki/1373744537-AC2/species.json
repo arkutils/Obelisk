@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.8.1647454309",
+	"version": "344.8.1647739878",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -838,6 +838,66 @@
 			"death": { "baseXP": 30 }
 		},
 		{
+			"name": "Alpha Aberrant Fasolasuchus",
+			"bp": "/Game/Mods/AC2/Fasola/Fasola_Character_BP_Aberrant_Alpha.Fasola_Character_BP_Aberrant_Alpha_C",
+			"dinoNameTag": "Fasola",
+			"customTag": "Fasola",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 196, "sprint": 1680 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 280, "sprint": 1680 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 125, "radius": 600, "stamina": 0 },
+					{ "name": "Headbutt", "interval": 15, "dmg": 140, "radius": 300, "stamina": 80 },
+					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AC2/Items/DinoDropInventoryComponent_AlphaAC_Fasola.DinoDropInventoryComponent_AlphaAC_Fasola"
+					}
+				],
+				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
+				"baseXP": 950
+			}
+		},
+		{
 			"name": "Alpha Fasolasuchus",
 			"bp": "/Game/Mods/AC2/Fasola/Fasola_Character_BP_Alpha.Fasola_Character_BP_Alpha_C",
 			"dinoNameTag": "Fasola",
@@ -1540,6 +1600,63 @@
 				]
 			},
 			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Alpha Aberrant Carcharodontosaurus",
+			"bp": "/Game/Mods/AC2/JPOGCArcha/ShadCarcha_Character_bp_Aberrant_Alpha.ShadCarcha_Character_bp_Aberrant_Alpha_C",
+			"dinoNameTag": "Carchar",
+			"customTag": "ShadCarchar",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 540, "sprint": 2376 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 540, "sprint": 2376 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 150, "radius": 600, "stamina": 0 },
+					{ "name": "StunRoar", "interval": 25, "dmg": 15, "radius": 900, "stamina": 85 },
+					{ "name": "Hiss", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "SweepBite", "interval": 7, "dmg": 175, "radius": 600, "stamina": 66 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AC2/Items/DinoDropInventoryComponent_AlphaAC_Carchar.DinoDropInventoryComponent_AlphaAC_Carchar"
+					}
+				],
+				"engrams": [ "PrimalItemAmmo_AC2PrimeDart_C", "PrimalItemArmor_BelluaSaddle_Tek_C" ],
+				"baseXP": 950
+			}
 		},
 		{
 			"name": "Alpha Carcharodontosaurus",
