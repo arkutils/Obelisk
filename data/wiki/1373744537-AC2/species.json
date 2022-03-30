@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.8.1647739878",
+	"version": "344.8.1648624933",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -1007,11 +1007,11 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Tail Attaccs", "interval": 0.1, "dmg": 15, "radius": 300, "stamina": 0 },
+					{ "name": "Tail Attaccs", "interval": 0.1, "dmg": 15, "radius": 325, "stamina": 0 },
 					{ "name": "Bite", "interval": 0.1, "dmg": 18, "radius": 300, "stamina": 0 },
 					{ "name": "Taunt", "interval": 0.1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Tail Spin", "interval": 5, "dmg": 15, "radius": 300, "stamina": 100 },
-					{ "name": "Tail Spin Slide", "interval": 15, "dmg": 15, "radius": 300, "stamina": 200 }
+					{ "name": "Tail Spin", "interval": 5, "dmg": 15, "radius": 325, "stamina": 100 },
+					{ "name": "Tail Spin Slide", "interval": 15, "dmg": 15, "radius": 325, "stamina": 200 }
 				]
 			},
 			"death": { "baseXP": 4 }
@@ -2680,6 +2680,55 @@
 			"death": { "baseXP": 30 }
 		},
 		{
+			"name": "VR Suchomimus",
+			"bp": "/Game/Mods/AC2/Suchomimus/Suchomimus_Character_bp_VR.Suchomimus_Character_bp_VR_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Succ",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 400,
+			"dragWeight": 450,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 2000 },
+				"swim": { "base": 1000, "sprint": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 2000 },
+				"swim": { "base": 1000, "sprint": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.05, "dmg": 35, "radius": 265, "stamina": 0 },
+					{ "name": "Claws", "interval": 3, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "HipCheck", "interval": 8, "dmg": 65, "radius": 300, "stamina": 150 },
+					{ "name": "TailSpin", "interval": 5, "dmg": 40, "radius": 300, "stamina": 85 },
+					{ "name": "TailWhip", "interval": 0.05, "dmg": 40, "radius": 300, "stamina": 25 },
+					{ "name": "Roar", "interval": 0.05, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
 			"name": "Psittacosaurus",
 			"bp": "/Game/Mods/AC2/Taco/Taco_Character_bp.Taco_Character_bp_C",
 			"dinoNameTag": "Pegomastax",
@@ -3431,59 +3480,6 @@
 		{
 			"name": "Chungkingosaurus",
 			"bp": "/Game/Mods/AC2/chung/ChunkyKing_Character_BP.ChunkyKing_Character_BP_C",
-			"dinoNameTag": "Kentro",
-			"customTag": "ChunkyKing",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 330,
-			"dragWeight": 400,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 67 },
-			"cloning": {
-				"costBase": 1675,
-				"costLevel": 0,
-				"timeBase": 11725,
-				"timeLevel": 0
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 140, "sprint": 1400 },
-				"swim": { "base": 210 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 1400 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -15,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 260,
-				"attacks": [
-					{ "name": "TailDirectional", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
-					{ "name": "TailSlam", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.2, "dmg": 38, "radius": 450, "stamina": 0 },
-					{ "name": "TailSpecial", "interval": 10, "dmg": 65, "radius": 450, "stamina": 50 },
-					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 30 }
-		},
-		{
-			"name": "Arcane Chungkingosaurus",
-			"bp": "/Game/Mods/AC2/chung/ChunkyKing_Character_BP_Arcane.ChunkyKing_Character_BP_Arcane_C",
 			"dinoNameTag": "Kentro",
 			"customTag": "ChunkyKing",
 			"targetingTeamName": "Herbivores_Medium",
@@ -4773,11 +4769,11 @@
 			},
 			"movementW": {
 				"walk": { "base": 280, "sprint": 1800 },
-				"swim": { "base": 455, "sprint": 2047.5 }
+				"swim": { "base": 455, "sprint": 1755 }
 			},
 			"movementD": {
 				"walk": { "base": 400, "sprint": 1800 },
-				"swim": { "base": 650, "sprint": 2047.5 }
+				"swim": { "base": 650, "sprint": 1755 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -4788,7 +4784,7 @@
 				"defaultSwingRadius": 260,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.04, "dmg": 35, "radius": 220, "stamina": 0 },
-					{ "name": "Claws", "interval": 0.4, "dmg": 25, "radius": 220, "stamina": 80 },
+					{ "name": "Claws", "interval": 0.4, "dmg": 32, "radius": 280, "stamina": 35 },
 					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -5126,7 +5122,7 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.6, "dmg": 55, "radius": 300, "stamina": 0 },
 					{ "name": "Ram", "interval": 15, "dmg": 70, "radius": 600, "stamina": 280 },
-					{ "name": "Thrash", "interval": 0.4, "dmg": 40, "radius": 300, "stamina": 100 },
+					{ "name": "Thrash", "interval": 12, "dmg": 40, "radius": 300, "stamina": 100 },
 					{ "name": "RipNTear", "interval": 8, "dmg": 62, "radius": 300, "stamina": 50 },
 					{ "name": "Emote", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Jump", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 280 }
@@ -5296,167 +5292,8 @@
 			"death": { "baseXP": 30 }
 		},
 		{
-			"name": "Aberrant Smok Saurovindico",
-			"bp": "/Game/Mods/AC2/smok/Saurovindico_Character_BP_Aberrant.Saurovindico_Character_BP_Aberrant_C",
-			"dinoNameTag": "Saurovindico",
-			"customTag": "Saurovindico",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 330,
-			"dragWeight": 550,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 67 },
-			"cloning": {
-				"costBase": 1675,
-				"costLevel": 0,
-				"timeBase": 11725,
-				"timeLevel": 0
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 2750 },
-				"swim": { "base": 210 }
-			},
-			"movementD": {
-				"walk": { "base": 500, "sprint": 2750 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -58,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 70, "radius": 450, "stamina": 0 },
-					{ "name": "Claw", "interval": 3, "dmg": 50, "radius": 450, "stamina": 0 },
-					{ "name": "Roar", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 30 }
-		},
-		{
-			"name": "Crystal Smok Saurovindico",
-			"bp": "/Game/Mods/AC2/smok/Saurovindico_Character_BP_Crystal.Saurovindico_Character_BP_Crystal_C",
-			"dinoNameTag": "Saurovindico",
-			"customTag": "Saurovindico",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 330,
-			"dragWeight": 550,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 67 },
-			"cloning": {
-				"costBase": 1675,
-				"costLevel": 0,
-				"timeBase": 11725,
-				"timeLevel": 0
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 2750 },
-				"swim": { "base": 210 }
-			},
-			"movementD": {
-				"walk": { "base": 500, "sprint": 2750 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -58,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 70, "radius": 450, "stamina": 0 },
-					{ "name": "Claw", "interval": 3, "dmg": 50, "radius": 450, "stamina": 0 },
-					{ "name": "Roar", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 30 }
-		},
-		{
 			"name": "Smok Saurovindico",
 			"bp": "/Game/Mods/AC2/smok/Saurovindico_Character_BP_Ghost.Saurovindico_Character_BP_Ghost_C",
-			"dinoNameTag": "Saurovindico",
-			"customTag": "Saurovindico",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 330,
-			"dragWeight": 550,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 67 },
-			"cloning": {
-				"costBase": 1675,
-				"costLevel": 0,
-				"timeBase": 11725,
-				"timeLevel": 0
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 2750 },
-				"swim": { "base": 210 }
-			},
-			"movementD": {
-				"walk": { "base": 500, "sprint": 2750 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -58,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 70, "radius": 450, "stamina": 0 },
-					{ "name": "Claw", "interval": 3, "dmg": 50, "radius": 450, "stamina": 0 },
-					{ "name": "Roar", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 30 }
-		},
-		{
-			"name": "X-Smok Saurovindico",
-			"bp": "/Game/Mods/AC2/smok/Volcano_Saurovindico_Character_BP.Volcano_Saurovindico_Character_BP_C",
 			"dinoNameTag": "Saurovindico",
 			"customTag": "Saurovindico",
 			"targetingTeamName": "Carnivore_Water",
