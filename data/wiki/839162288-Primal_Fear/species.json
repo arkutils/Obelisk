@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.8.1648841425",
+	"version": "344.8.1649126929",
 	"format": "4",
 	"mod": {
 		"id": "839162288",
@@ -36195,6 +36195,66 @@
 					}
 				],
 				"baseXP": 10
+			}
+		},
+		{
+			"name": "Personal Taming Electronic Rideable Object",
+			"bp": "/Game/Mods/Primal_Fear/Dinos/Misc/PTERO/PScout_Character_BP.PScout_Character_BP_C",
+			"dinoNameTag": "PFEndDrone",
+			"customTag": "PFEndDrone",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0, "min": 1, "max": 5 },
+					{ "chance": 0, "min": 6, "max": 12 },
+					{ "chance": 0, "min": 13, "max": 20 },
+					{ "chance": 1, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 49500001
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1760 },
+				"fly": { "base": 550, "sprint": 1936 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1760 },
+				"fly": { "base": 550, "sprint": 1936 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 562.5, "sprint": 1980 },
+				"fly": { "base": 618.8, "sprint": 2178 },
+				"swim": { "base": 337.5 }
+			},
+			"staminaRates": {
+				"sprint": 0,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 250,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{
+						"name": "RangedAttack", "interval": 12, "dmg": 0, "radius": 200, "stamina": 5,
+						"isProjectile": true
+					},
+					{ "name": "Dash", "interval": 0, "dmg": 0, "radius": 0, "stamina": 9 }
+				]
 			}
 		},
 		{
