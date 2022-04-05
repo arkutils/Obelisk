@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "340.3.1639467452",
+	"version": "344.8.1649164036",
 	"format": "4",
 	"mod": {
 		"id": "1652120435",
@@ -1418,7 +1418,6 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"isAmphibious",
 				"isBigDino",
 				"isCarnivore",
 				"isTameable"
@@ -1447,9 +1446,11 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 60, "radius": 300, "stamina": 0 },
-					{ "name": "Clawslap", "interval": 2, "dmg": 75, "radius": 300, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 240, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 54, "radius": 300, "stamina": 0 },
+					{ "name": "Clawslap", "interval": 2, "dmg": 70, "radius": 300, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 240, "stamina": 0 },
+					{ "name": "Claws", "interval": 0.4, "dmg": 58, "radius": 300, "stamina": 75 },
+					{ "name": "BEARBOMB", "interval": 0.4, "dmg": 80, "radius": 300, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 30 }
@@ -2614,6 +2615,67 @@
 		{
 			"name": "Tyrant Scorpion",
 			"bp": "/Game/Mods/AtlasPort/Critter/Scorpion/AScorpion_Character_BP.AScorpion_Character_BP_C",
+			"dinoNameTag": "Scorpion",
+			"customTag": "AScorpion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 120,
+			"dragWeight": 280,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 360, "sprint": 864 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 360, "sprint": 864 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Claws", "interval": 0.1, "dmg": 25, "radius": 250, "stamina": 0 },
+					{ "name": "VenomStab", "interval": 5, "dmg": 35, "radius": 250, "stamina": 0 },
+					{ "name": "Taunt", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "HeldSting", "interval": 15, "dmg": 64, "radius": 250, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Arcane Tyrant Scorpion",
+			"bp": "/Game/Mods/AtlasPort/Critter/Scorpion/AScorpion_Character_BP_Arcane.AScorpion_Character_BP_Arcane_C",
 			"dinoNameTag": "Scorpion",
 			"customTag": "AScorpion",
 			"targetingTeamName": "Carnivores_Medium",
