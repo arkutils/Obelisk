@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.13.1649357691",
+	"version": "345.3.1649829749",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -536,6 +536,60 @@
 			"death": { "baseXP": 30 }
 		},
 		{
+			"name": "Dilophovenatrix",
+			"bp": "/Game/Mods/AC2/Dilophovenatrix/Dilophovenatrix_Character_BP.Dilophovenatrix_Character_BP_C",
+			"dinoNameTag": "Dilo",
+			"customTag": "Dilophovenatrix",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 330,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 1750 },
+				"swim": { "base": 297.5 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 1750 },
+				"swim": { "base": 425 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 30, "radius": 300, "stamina": 0 },
+					{ "name": "Claw", "interval": 5, "dmg": 25, "radius": 300, "stamina": 25 },
+					{ "name": "TailSpin", "interval": 11, "dmg": 25, "radius": 300, "stamina": 75 },
+					{ "name": "SpinBite", "interval": 0, "dmg": 30, "radius": 300, "stamina": 50 },
+					{ "name": "Screm", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
 			"name": "Hadal Dragonfish",
 			"bp": "/Game/Mods/AC2/Dragonfish/Hadal_Character_bp.Hadal_Character_bp_C",
 			"dinoNameTag": "Angler",
@@ -808,11 +862,11 @@
 			"death": { "baseXP": 30 }
 		},
 		{
-			"name": "Eryops",
-			"bp": "/Game/Mods/AC2/Eryops/Eryops_Character_bp.Eryops_Character_bp_C",
+			"name": "X-Eryops",
+			"bp": "/Game/Mods/AC2/Eryops/Bog_Eryops_Character_bp.Bog_Eryops_Character_bp_C",
 			"dinoNameTag": "Sarco",
 			"customTag": "Eryops",
-			"targetingTeamName": "Carnivores_Medium",
+			"targetingTeamName": "Carnivores_Water",
 			"mass": 400,
 			"dragWeight": 200,
 			"flags": [
@@ -824,18 +878,18 @@
 				"isAmphibious",
 				"isBigDino",
 				"isCarnivore",
-				"isWaterDino"
+				"isTameable"
 			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 600 },
+				"walk": { "base": 250, "sprint": 750 },
 				"swim": { "base": 600, "sprint": 1800 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 600 },
+				"walk": { "base": 250, "sprint": 750 },
 				"swim": { "base": 600, "sprint": 1800 }
 			},
 			"staminaRates": {
@@ -847,7 +901,64 @@
 				"defaultSwingRadius": 300,
 				"attacks": [
 					{ "name": "Bite", "interval": 1, "dmg": 50, "radius": 250, "stamina": 0 },
-					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Dig In", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 },
+					{ "name": "Dig chomp", "interval": 1, "dmg": 45, "radius": 250, "stamina": 0 },
+					{ "name": "Dig chomp finished", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 },
+					{ "name": "Dig finished Anger", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 },
+					{ "name": "Swallow Panic", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 },
+					{ "name": "Explosion Dig Out", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Eryops",
+			"bp": "/Game/Mods/AC2/Eryops/Eryops_Character_bp.Eryops_Character_bp_C",
+			"dinoNameTag": "Sarco",
+			"customTag": "Eryops",
+			"targetingTeamName": "Carnivores_Water",
+			"mass": 400,
+			"dragWeight": 200,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250, "sprint": 750 },
+				"swim": { "base": 600, "sprint": 1800 }
+			},
+			"movementD": {
+				"walk": { "base": 250, "sprint": 750 },
+				"swim": { "base": 600, "sprint": 1800 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 50, "radius": 250, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Dig In", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 },
+					{ "name": "Dig chomp", "interval": 1, "dmg": 45, "radius": 250, "stamina": 0 },
+					{ "name": "Dig chomp finished", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 },
+					{ "name": "Dig finished Anger", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 },
+					{ "name": "Swallow Panic", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 },
+					{ "name": "Explosion Dig Out", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 30 }
