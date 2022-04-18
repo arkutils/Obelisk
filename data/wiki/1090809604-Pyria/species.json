@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.13.1649648091",
+	"version": "345.3.1650302264",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -4712,6 +4712,118 @@
 				],
 				"baseXP": 6
 			}
+		},
+		{
+			"name": "Bone Golem",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/BoneGolem/PyrBoneGolem_Character_bp.PyrBoneGolem_Character_bp_C",
+			"dinoNameTag": "RockElemental",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 360,
+			"dragWeight": 625,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1400 },
+				"swim": { "base": 626 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1400 },
+				"swim": { "base": 626 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Pawnches", "interval": 0.4, "dmg": 72, "radius": 350, "stamina": 0 },
+					{ "name": "Slam", "interval": 10, "dmg": 105, "radius": 350, "stamina": 75 },
+					{ "name": "CatchTheseHANDS!!", "interval": 10, "dmg": 75, "radius": 350, "stamina": 125 },
+					{
+						"name": "Nails", "interval": 2, "dmg": 0, "radius": 0, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BoneTeleport", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Fallen",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP.Fallen_Character_BP_C",
+			"dinoNameTag": "",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 125,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ],
+				"mutagenCost": 79
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 0,
+				"timeBase": 13825,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 2000
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 175 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 175 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [
+					{ "name": "Sword", "interval": 1, "dmg": 1, "radius": 325, "stamina": 5 },
+					{ "name": "BigSword", "interval": 12, "dmg": 65, "radius": 240, "stamina": 5 }
+				]
+			},
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Fallen Soldier (Greatsword)",

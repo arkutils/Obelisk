@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "345.3.1650248315",
+	"version": "345.3.1650302373",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -4841,8 +4841,7 @@
 				"canDrag",
 				"flyerAllowRidingInCaves",
 				"isCarnivore",
-				"isFlyerDino",
-				"isTameable"
+				"isFlyerDino"
 			],
 			"leveling": {
 				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ],
@@ -4876,9 +4875,66 @@
 				"defaultDmg": 32,
 				"defaultSwingRadius": 200,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 125, "radius": 800, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.2, "dmg": 100, "radius": 800, "stamina": 0 },
 					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Spin", "interval": 8, "dmg": 145, "radius": 700, "stamina": 335 }
+					{ "name": "Spin", "interval": 8, "dmg": 115, "radius": 700, "stamina": 335 }
+				]
+			},
+			"death": { "baseXP": 18 }
+		},
+		{
+			"name": "Hatzegopteryx",
+			"bp": "/Game/Mods/AC2/hatzy/Hatzy_Character_BP_Wild.Hatzy_Character_BP_Wild_C",
+			"dinoNameTag": "Quetz",
+			"customTag": "Hatzeg",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 850,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 34 } ],
+				"mutagenCost": 98
+			},
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1520 },
+				"fly": { "base": 1300, "sprint": 4940 },
+				"swim": { "base": 1300 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1520 },
+				"fly": { "base": 1300, "sprint": 4940 },
+				"swim": { "base": 1300 }
+			},
+			"staminaRates": {
+				"sprint": -1.5,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 200, "radius": 800, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin", "interval": 15, "dmg": 265, "radius": 800, "stamina": 335 }
 				]
 			},
 			"death": { "baseXP": 18 }

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.8.1647260880",
+	"version": "345.3.1650281665",
 	"format": "4",
 	"mod": {
 		"id": "1576299694",
@@ -7955,7 +7955,7 @@
 			"name": "Direwolf (Fire)",
 			"bp": "/Game/Mods/ElementalDinos/Dinos/Direwolf_Character_Elemental_Fire_BP.Direwolf_Character_Elemental_Fire_BP_C",
 			"dinoNameTag": "Direwolf_Fire",
-			"customTag": "Direwolf_Elemental",
+			"customTag": "Direwolf",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 195,
 			"dragWeight": 120,
@@ -8015,7 +8015,7 @@
 			"name": "Direwolf (Ice)",
 			"bp": "/Game/Mods/ElementalDinos/Dinos/Direwolf_Character_Elemental_Ice_BP.Direwolf_Character_Elemental_Ice_BP_C",
 			"dinoNameTag": "Direwolf_Ice",
-			"customTag": "Direwolf_Elemental",
+			"customTag": "Direwolf",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 195,
 			"dragWeight": 120,
@@ -8075,7 +8075,7 @@
 			"name": "Direwolf (Lightning)",
 			"bp": "/Game/Mods/ElementalDinos/Dinos/Direwolf_Character_Elemental_Lightning_BP.Direwolf_Character_Elemental_Lightning_BP_C",
 			"dinoNameTag": "Direwolf_Lightning",
-			"customTag": "Direwolf_Elemental",
+			"customTag": "Direwolf",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 195,
 			"dragWeight": 120,
@@ -20549,6 +20549,83 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Unstable wyvern",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/TekWyvern_Character_Elemental_BP.TekWyvern_Character_Elemental_BP_C",
+			"dinoNameTag": "TekWyvern_Elemental",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 416,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				],
+				"levelCapOffset": 50,
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementR": {
+				"walk": { "base": 572.7, "sprint": 1157.5 },
+				"fly": { "base": 2490, "sprint": 3355.3 },
+				"swim": { "base": 2490 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Flame", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI) Tamed", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 },
+					{ "name": "BarrelRoll(Taming)", "interval": 0, "dmg": 2000, "radius": 2000, "stamina": 5 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "Flame", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (AI) UnTamed", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
+				]
+			},
+			"death": { "baseXP": 120 }
+		},
+		{
 			"name": "Terror Bird (Air)",
 			"bp": "/Game/Mods/ElementalDinos/Dinos/TerrorBird_Character_Elemental_Air_BP.TerrorBird_Character_Elemental_Air_BP_C",
 			"dinoNameTag": "TerrorBird_Air",
@@ -24411,49 +24488,6 @@
 				]
 			},
 			"death": { "baseXP": 4 }
-		},
-		{
-			"name": "GachaClaus",
-			"bp": "/Game/Mods/ElementalDinos/Extinction/Dinos/Gacha/Gacha_Claus_Character_BP.Gacha_Claus_Character_BP_C",
-			"dinoNameTag": "Gacha",
-			"customTag": "Gacha",
-			"targetingTeamName": "Herbivores",
-			"mass": 400,
-			"dragWeight": 350,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
-			"leveling": { "mutagenCost": 62 },
-			"cloning": {
-				"costBase": 1550,
-				"costLevel": 55,
-				"timeBase": 10850,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 750 },
-				"swim": { "base": 200 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 750 },
-				"swim": { "base": 200 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 150,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.67, "dmg": 32, "radius": 200, "stamina": 0 },
-					{ "name": "MeleeSmash", "interval": 0.7, "dmg": 30, "radius": 150, "stamina": 0 },
-					{ "name": "Gather", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 2 }
 		}
 	]
 }

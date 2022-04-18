@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "344.8.1647260880",
+	"version": "345.3.1650281665",
 	"format": "4",
 	"mod": {
 		"id": "1576299694",
@@ -725,11 +725,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 10, "type": "PrimalItemConsumable_FuryPoop_C" },
-					{ "qty": 50, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 60, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 60, "type": "PrimalItemResource_Metal_C" }
+					{ "qty": 10, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" }
 				]
 			}
 		},
@@ -934,11 +933,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 10, "type": "PrimalItemConsumable_FuryPoop_C" },
-					{ "qty": 200, "type": "PrimalItemResource_Silicon_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 60, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 60, "type": "PrimalItemResource_Metal_C" }
+					{ "qty": 50, "type": "PrimalItemResource_Silicon_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" }
 				]
 			}
 		},
@@ -4578,6 +4576,41 @@
 			}
 		},
 		{
+			"name": "Unstable stew",
+			"description": "Made with a flavorful and aromatic blend of exotic berries as a base.  The unstable talon is first decreased, then increased, side creased, vertical creased, microwaved, and finally set out to bake in the sun for exactly 0.01 seconds.   \n\nNOTE: Feed this to a wyvern or rockdrake.  While it may make them incredibly sick, their egg may be worth their suffering.",
+			"bp": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_UnstableStew.PrimalItemConsumable_UnstableStew_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/Mods/ElementalDinos/Crafting/Consumables/MantisUnstableStew_Icon.MantisUnstableStew_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ElementalArk", "Light" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_WyvernHunter_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Berry_AirAmarberry_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Berry_LightningStimberry_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Berry_NatureTintoberry_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Berry_StoneNarcoberry_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Berry_WaterAzulberry_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05,
+				"water": -1
+			}
+		},
+		{
 			"name": "Fire Citronal",
 			"description": "This citronal is not only sour, but it is also hot.  It may prevent scurvy and keep you slightly warmer, if you can stomach it.",
 			"bp": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_Veggie_FireCitronal.PrimalItemConsumable_Veggie_FireCitronal_C",
@@ -7353,6 +7386,27 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_Rex_C" },
 					{ "qty": 10, "type": "PrimalItemResource_ElementalWaterEssenceLumin_C" }
+				]
+			}
+		},
+		{
+			"name": "Unstable Talon",
+			"description": "This somewhat ressembles a wyvern talon, but it appears that it is slowly disintegrating.",
+			"bp": "/Game/Mods/ElementalDinos/Crafting/Resources/PrimalItemResource_ApexDrop_WyvernHunter.PrimalItemResource_ApexDrop_WyvernHunter_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/ElementalDinos/Crafting/Resources/WyvernClawUnstable_Icon.WyvernClawUnstable_Icon",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_Rex_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ElementalAirEssenceLumin_C" }
 				]
 			}
 		},
@@ -15202,6 +15256,34 @@
 			}
 		},
 		{
+			"name": "Fertilized Unstable Wyvern Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_Egg_Wyvern_Fertilized_ElementalUnstable.PrimalItemConsumable_Egg_Wyvern_Fertilized_ElementalUnstable_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Wyvern_Fertilized.PrimalItemConsumable_Egg_Wyvern_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Wyvern_Tek.HUD_DinoEgg_MIC_Inst_Wyvern_Tek",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 50,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/ElementalDinos/Dinos/TekWyvern_Character_Elemental_BP.TekWyvern_Character_Elemental_BP_C",
+				"temperature": { "min": 80, "max": 90 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Fertilized Water Wyvern Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/ElementalDinos/Dinos/Eggs/PrimalItemConsumable_Egg_Wyvern_Fertilized_ElementalWater.PrimalItemConsumable_Egg_Wyvern_Fertilized_ElementalWater_C",
@@ -15719,167 +15801,220 @@
 			"weapon": "/Game/Mods/ElementalDinos/Misc/WeapEmptyCryopod_NoDebuff.WeapEmptyCryopod_NoDebuff_C"
 		},
 		{
-			"name": "Festive Dino Candy",
-			"description": "Has a curious effect when consumed by a dinosaur.",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_FestiveDinoCandy.PrimalItemConsumable_FestiveDinoCandy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/HUD_ChristmasCandy_Colorize.HUD_ChristmasCandy_Colorize",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"name": "Chibi-Archaeopteryx",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Archaeopteryx.PrimalItemSkin_ChibiDino_Archaeopteryx_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
 			"stackSize": 1
 		},
 		{
-			"name": "Holiday Tree",
-			"description": "This is the perfect tree to use when celebrating the winter solstace!",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_ChristmasTree.PrimalItemStructure_ChristmasTree_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/ChristmasTree_Icon.ChristmasTree_Icon",
-			"type": "Structure",
+			"name": "Chibi-Gallimimus",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Gallimimus.PrimalItemSkin_ChibiDino_Gallimimus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
+			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 12,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 80, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 80, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 40, "type": "PrimalItemResource_Thatch_C" }
-				]
-			},
-			"structure": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Christmas_Tree/Furniture_ChristmasTree.Furniture_ChristmasTree_C"
+			"weight": 0,
+			"stackSize": 1
 		},
 		{
-			"name": "Snowman",
-			"description": "Put a hat on it for extra fun!",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Snowman.PrimalItemStructure_Snowman_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/Snowman_Icon.Snowman_Icon",
-			"type": "Structure",
+			"name": "Chibi-Kairuku",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Kairuku.PrimalItemSkin_ChibiDino_Kairuku_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
+			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 18,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 7, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 8, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" },
-					{ "qty": 5, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
-				]
-			},
-			"structure": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Christmas_Tree/Furniture_Snowman.Furniture_Snowman_C"
+			"weight": 0,
+			"stackSize": 1
 		},
 		{
-			"name": "Holiday Stocking",
-			"description": "An oversized sock that adds jolliness to any holiday. Requires attaching to a wall.",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Stocking.PrimalItemStructure_Stocking_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/Stocking_Icon.Stocking_Icon",
-			"type": "Structure",
+			"name": "Chibi-Lovebird",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_LoveBird.PrimalItemSkin_ChibiDino_LoveBird_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_VeryRare.ChibiIconMaterial_Inst_VeryRare",
+			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 4,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 8, "type": "PrimalItemResource_Hide_C" }
-				]
-			},
-			"structure": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Stocking/Sign_Wall_Stocking.Sign_Wall_Stocking_C"
+			"weight": 0,
+			"stackSize": 1
 		},
 		{
-			"name": "Gift Box",
-			"description": "Put items in this and inscribe a Tribemember's name, and only they will be able to open it, with a bang!",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_StorageBox_ChristmasGift.PrimalItemStructure_StorageBox_ChristmasGift_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/Present2_Icon.Present2_Icon",
-			"type": "Structure",
+			"name": "Chibi-Pelagornis",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Pelagornis.PrimalItemSkin_ChibiDino_Pelagornis_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
+			"type": "Equipment/Shield",
 			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
-			"crafting": {
-				"xp": 9,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 3, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Thatch_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
-				]
-			},
-			"structure": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Christmas_Gift/StorageBox_ChristmasGift.StorageBox_ChristmasGift_C"
+			"weight": 0,
+			"stackSize": 1
 		},
 		{
-			"name": "Wreath",
-			"description": "A decorative collection of leaves that make any room festive. Requires attaching to a wall.",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Wreath.PrimalItemStructure_Wreath_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/Wreath_Icon.Wreath_Icon",
-			"type": "Structure",
+			"name": "BearHug Swim Bottom Skin",
+			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women.\n\nGuess that grumpy bruin was hoping for some honey.",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimPants_BearHug.PrimalItemSkin_Vday_SwimPants_BearHug_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
+			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Human/Male/Outfits/Underwear_July4th/Icons/HUD_VDay22_Bottoms_BearHug_Icon_Colorized_MIC.HUD_VDay22_Bottoms_BearHug_Icon_Colorized_MIC",
+			"type": "Skin",
 			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
+			"weight": 0,
+			"stackSize": 1,
 			"crafting": {
-				"xp": 7,
+				"xp": 3.2,
 				"time": 5,
 				"levelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 4, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 30, "type": "PrimalItemResource_Thatch_C" },
-					{ "qty": 30, "type": "PrimalItemResource_Fibers_C" }
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
 				]
-			},
-			"structure": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Wreath/Furniture_Wall_Wreath.Furniture_Wall_Wreath_C"
+			}
 		},
 		{
-			"name": "Holiday Lights",
-			"description": "A decorative string of lights that make any room festive.  Requires attaching to a wall.",
-			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_XmasLights.PrimalItemStructure_XmasLights_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
-			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/Icons/ChristmasLight_Icon.ChristmasLight_Icon",
-			"type": "Structure",
+			"name": "Odd Couple Swim Bottom Skin",
+			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women.\n\nThey say true love sees but doesn't mind. Good for them!",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimPants_OddCouple.PrimalItemSkin_Vday_SwimPants_OddCouple_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
+			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Human/Male/Outfits/Underwear_July4th/Icons/HUD_VDay22_Bottoms_OddCouple_Icon_Colorized_MIC.HUD_VDay22_Bottoms_OddCouple_Icon_Colorized_MIC",
+			"type": "Skin",
 			"folders": [ "Holiday" ],
-			"weight": 4,
-			"stackSize": 100,
-			"spoilsIn": 1814400,
+			"weight": 0,
+			"stackSize": 1,
 			"crafting": {
-				"xp": 3,
+				"xp": 3.2,
 				"time": 5,
 				"levelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_MistleToe_C" },
-					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "Sauropod Heart Swim Bottom Skin",
+			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women.\n\nWhen they form that heart shape, you just feel the love.",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimPants_SauropodHeart.PrimalItemSkin_Vday_SwimPants_SauropodHeart_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
+			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Human/Male/Outfits/Underwear_July4th/Icons/HUD_VDay22_Bottoms_SauropodHearts_Icon_Colorized_MIC.HUD_VDay22_Bottoms_SauropodHearts_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 3.2,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "BearHug Swim Top Skin",
+			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women.\n\nLove might bear all things, but all bears don't love everything.",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimShirt_Bearhug.PrimalItemSkin_Vday_SwimShirt_Bearhug_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
+			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_VDay22_Bra_BearHug_Icon_Colorized_MIC.HUD_VDay22_Bra_BearHug_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "Odd Couple Swim Top Skin",
+			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women.\n\nWho are we to deny their love? The heart wants what it wants.",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimShirt_OddCouple.PrimalItemSkin_Vday_SwimShirt_OddCouple_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
+			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_VDay22_Bra_OddCouple_Icon_Colorized_MIC.HUD_VDay22_Bra_OddCouple_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "Sauropod Heart Swim Top Skin",
+			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women.\n\nDon't you love it when they curve like that?",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimShirt_SauropodHeart.PrimalItemSkin_Vday_SwimShirt_SauropodHeart_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
+			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_VDay22_Bra_SauropodHearts_Icon_Colorized_MIC.HUD_VDay22_Bra_SauropodHearts_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "\"Self Hug\" Emote",
+			"description": "Consume this to permanently unlock the \"Self Hug\" emote.\n\nRemember, your survival depends on loving yourself.",
+			"bp": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_UnlockEmote_SelfHug.PrimalItemConsumable_UnlockEmote_SelfHug_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Mods/ElementalDinos/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Emotes/HUD_VDay22_Emote_SelfHug_Icon.HUD_VDay22_Emote_SelfHug_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Holiday" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
 				]
 			},
-			"structure": "/Game/Mods/ElementalDinos/PrimalEarth/Structures/Christmas/lightCable/Furniture_WallChain_XmasLights.Furniture_WallChain_XmasLights_C"
+			"statEffects": [
+				{
+					"stat": "health",
+					"value": 1,
+					"duration": 0.5
+				}
+			]
 		},
 		{
 			"name": "Elemental absorber",
