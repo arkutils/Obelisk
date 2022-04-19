@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "345.3.1650302264",
+	"version": "345.19.1650352642",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -5966,6 +5966,65 @@
 					}
 				],
 				"baseXP": 3
+			}
+		},
+		{
+			"name": "Arcane Baryonyx",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/ArcaneVariants/Baryonyx/Baryonyx_Character_BP_Arcane.Baryonyx_Character_BP_Arcane_C",
+			"dinoNameTag": "Baryonyx",
+			"customTag": "Baryonyx",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1470 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1323 }
+			},
+			"movementR": {
+				"walk": { "base": 400, "sprint": 1164.2 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.15, "dmg": 35, "radius": 250, "stamina": 0 },
+					{ "name": "SwimStun", "interval": 7, "dmg": 25, "radius": 300, "stamina": 20 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 5
 			}
 		},
 		{
