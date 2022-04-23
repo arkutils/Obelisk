@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "344.8.1649226152",
+	"version": "345.19.1650703459",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -5293,30 +5293,6 @@
 			}
 		},
 		{
-			"name": "Alpha Mating Potion",
-			"description": "Feed this to your female Alpha species creature to allow it to mate for 5 minutes.",
-			"bp": "/Game/Mods/ArkOmega/Items/Potions/AlphaMatingPotion/PrimalItemConsumable_AlphaMatingPotion.PrimalItemConsumable_AlphaMatingPotion_C",
-			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
-			"icon": "/Game/Mods/ArkOmega/Items/Potions/AlphaMatingPotion/AlphaMating_Icon.AlphaMating_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Potions" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 2,
-				"time": 3,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 100, "type": "PrimalItem_BossEssence_C" },
-					{ "qty": 5, "type": "PrimalItem_OmegaSoul_C" },
-					{ "qty": 10, "type": "PrimalItem_SoulShard_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
-				]
-			}
-		},
-		{
 			"name": "Anti-Gravity Potion",
 			"description": "Reduces the effect of gravity on you by 80%.",
 			"bp": "/Game/Mods/ArkOmega/Items/Potions/AntiGravityPotion/PrimalItemConsumable_AntiGravityPotion.PrimalItemConsumable_AntiGravityPotion_C",
@@ -5572,6 +5548,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/BasicPotion_Icon.BasicPotion_Icon",
 			"type": "MiscConsumable/Food",
+			"folders": [ "Potions", "Health" ],
 			"weight": 0.1,
 			"stackSize": 100,
 			"crafting": {
@@ -5629,6 +5606,29 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemConsumable_Stimulant_C" },
 					{ "qty": 1, "type": "PrimalItemConsumable_BetaSedative_ArkOmega_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
+				]
+			}
+		},
+		{
+			"name": "Godlike Health Potion",
+			"description": "This potion will instantly restore health to maximum, as well as provide 10% health per second for 30 seconds.\n\nCannot be used in conjunction with other health potions.",
+			"bp": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_GodPotion.PrimalItemConsumable_GodPotion_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion_Health.PrimalItemConsumable_BasePotion_Health_C",
+			"icon": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/GodPotion_Icon.GodPotion_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Potions", "Health" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 2,
+				"time": 3,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_Stimulant_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_GodlikeSedative_ArkOmega_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
 				]
 			}
@@ -7168,7 +7168,8 @@
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_UniqueToken.PrimalItem_UniqueToken_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/OldAssets/UI/Chat/ChatLog_Icon_Star.ChatLog_Icon_Star",
-			"type": "MiscConsumable/Food",
+			"type": "Equipment/Trophy",
+			"flags": [ "preventCheatGive" ],
 			"weight": 0.5,
 			"stackSize": 1
 		},
@@ -7601,6 +7602,31 @@
 				]
 			},
 			"structure": "/Game/Mods/ArkOmega/Structures/Craptivator/StructureBP_Craptivator.StructureBP_Craptivator_C"
+		},
+		{
+			"name": "Gene Splicer",
+			"description": "This structure allows dinos of different species to mate, assuming that they following the current Breeding Mode server setting. Only the species pre-determined as compatible will be able to mate with this structure, as it will not work for any pair of dinos you want to use.\n\nOriginally designed to allow Reaper Kings and Queens to mate, there might also be some interesting combinations when tried with other dinos.",
+			"bp": "/Game/Mods/ArkOmega/Structures/CrossMating/PrimalItemStructure_CrossMating.PrimalItemStructure_CrossMating_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/MateBoosted_Icon.MateBoosted_Icon",
+			"type": "Structure",
+			"folders": [ "Structures" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 6.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItem_UtilitySoul_C" },
+					{ "qty": 300, "type": "PrimalItem_OmegaEssence_C" },
+					{ "qty": 100, "type": "PrimalItemConsumable_Mutagen_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"structure": "/Game/Mods/ArkOmega/Structures/CrossMating/CrossMatingStructure.CrossMatingStructure_C"
 		},
 		{
 			"name": "Cursed Idol",
