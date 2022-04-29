@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.8.1649196643",
+	"version": "345.19.1651204830",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -27577,7 +27577,7 @@
 		},
 		{
 			"name": "Eternal Ice Wyvern",
-			"bp": "/Game/Mods/AE/Dinos/Evolution/FrostWyvern/IceWyvern_Character_BP.IceWyvern_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Evolution/FrostWyvern/IceWyvern_Character_BP_AE.IceWyvern_Character_BP_AE_C",
 			"dinoNameTag": "Eternal_Ice_Wyvern",
 			"customTag": "Alpha_Wyvern",
 			"targetingTeamName": "Carnivores_High",
@@ -41431,6 +41431,61 @@
 			}
 		},
 		{
+			"name": "Eternal Dodo Egg Jug Bug",
+			"bp": "/Game/Mods/AE/Dinos/Special/JugBugs/Jugbug_Character_BP_DodoEgg.Jugbug_Character_BP_DodoEgg_C",
+			"dinoNameTag": "Jugbug_Dodo",
+			"customTag": "Jugbug",
+			"targetingTeamName": "Herbivores",
+			"mass": 100,
+			"dragWeight": 30,
+			"flags": [ "canBeDragged", "canBeTorpid", "isFlyerDino", "isTameable" ],
+			"leveling": { "wildForcedLevel": 600 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 60, "sprint": 150 },
+				"fly": { "base": 120, "sprint": 300 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 60, "sprint": 150 },
+				"fly": { "base": 120, "sprint": 300 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [
+					{ "name": "Ground bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Fly bite attack", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 1
+			}
+		},
+		{
 			"name": "Eternal Element Jug Bug",
 			"bp": "/Game/Mods/AE/Dinos/Special/JugBugs/Jugbug_Character_BP_Element.Jugbug_Character_BP_Element_C",
 			"dinoNameTag": "Jugbug_Element",
@@ -42238,7 +42293,7 @@
 				"attacks": [
 					{ "name": "melee", "interval": 0.85, "dmg": 350000, "radius": 1460, "stamina": 200 },
 					{ "name": "melee", "interval": 0.85, "dmg": 750000, "radius": 1550, "stamina": 200 },
-					{ "name": "melee", "interval": 45, "dmg": 750000, "radius": 1550, "stamina": 200 }
+					{ "name": "Clone/meteors", "interval": 20, "dmg": 750000, "radius": 1550, "stamina": 200 }
 				]
 			},
 			"death": {
@@ -42796,6 +42851,7 @@
 						"item": "/Game/Mods/AE/Dinos/Mystical/DinoDropInventoryComponent_Immortal_hard.DinoDropInventoryComponent_Immortal_hard"
 					}
 				],
+				"engrams": [ "PrimalItemConsumable_Instant_Baby_Potion_C" ],
 				"baseXP": 5500
 			}
 		},
@@ -44195,6 +44251,75 @@
 			}
 		},
 		{
+			"name": "Jinx ",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/KingKeigh/Jinx_Character_BP_Lvl4.Jinx_Character_BP_Lvl4_C",
+			"dinoNameTag": "Jinx_Stage_4_Evo",
+			"customTag": "Direwolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 10000,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 0,
+				"costLevel": 0.01,
+				"timeBase": 0,
+				"timeLevel": 0.04
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 223.2, "sprint": 1017.8 },
+				"swim": { "base": 240, "sprint": 1094.4 }
+			},
+			"movementD": {
+				"walk": { "base": 223.2, "sprint": 1017.8 },
+				"swim": { "base": 240, "sprint": 1094.4 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 54000,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "None", "interval": 0.08, "dmg": 54000, "radius": 160, "stamina": 5 },
+					{ "name": "Howl", "interval": 180, "dmg": 0, "radius": 0, "stamina": 35 },
+					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 },
+					{ "name": "None", "interval": 0.08, "dmg": 54000, "radius": 160, "stamina": 5 },
+					{ "name": "Roar Meteor", "interval": 2, "dmg": 400, "radius": 160, "stamina": 5 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 6
+			}
+		},
+		{
 			"name": "Midnight Shadow",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/MidnightShadow/MidnightShadow_Griffin_Character_BP.MidnightShadow_Griffin_Character_BP_C",
 			"dinoNameTag": "MidnightShadow_Griffin",
@@ -44915,6 +45040,142 @@
 					}
 				],
 				"engrams": [ "PrimalItemArmor_AEMegatheriumSaddle_C" ],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "TBFG  Dire Bear",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/TBFGaming/BaseBP/TBFGTribute_Lv1_Direbear_Character_BP.TBFGTribute_Lv1_Direbear_Character_BP_C",
+			"dinoNameTag": "TBFGDirebear",
+			"customTag": "CelestialDirebear",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 330,
+			"dragWeight": 295,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0, "min": 1, "max": 5 },
+					{ "chance": 0, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.8, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 19801
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 213.8, "sprint": 1442.8 },
+				"swim": { "base": 405 }
+			},
+			"movementD": {
+				"walk": { "base": 156.8, "sprint": 1724.3 },
+				"swim": { "base": 297 }
+			},
+			"movementR": {
+				"walk": { "base": 156.8, "sprint": 3931.4 },
+				"swim": { "base": 297 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 2450,
+				"defaultSwingRadius": 390,
+				"attacks": [
+					{ "name": "None", "interval": 0.22, "dmg": 2450, "radius": 390, "stamina": 0 },
+					{ "name": "Fire Breath", "interval": 7, "dmg": 0, "radius": 1200, "stamina": 750 },
+					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 10500 },
+					{ "name": "WildPower", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Ascended TBFG  Dire Bear",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/TBFGaming/BaseBP/TBFG_Direbear_Character_BP_LV2.TBFG_Direbear_Character_BP_LV2_C",
+			"dinoNameTag": "TBFGDirebear_Lv2",
+			"customTag": "CelestialDirebear",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 330,
+			"dragWeight": 295,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0, "min": 1, "max": 5 },
+					{ "chance": 0, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.8, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 19801
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 213.8, "sprint": 1442.8 },
+				"swim": { "base": 405 }
+			},
+			"movementD": {
+				"walk": { "base": 156.8, "sprint": 1724.3 },
+				"swim": { "base": 297 }
+			},
+			"movementR": {
+				"walk": { "base": 156.8, "sprint": 3931.4 },
+				"swim": { "base": 297 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 2450,
+				"defaultSwingRadius": 390,
+				"attacks": [
+					{ "name": "None", "interval": 0.22, "dmg": 2450, "radius": 390, "stamina": 0 },
+					{ "name": "Fire Breath", "interval": 7, "dmg": 0, "radius": 1200, "stamina": 750 },
+					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 10500 },
+					{ "name": "WildPower", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
 				"baseXP": 4
 			}
 		},

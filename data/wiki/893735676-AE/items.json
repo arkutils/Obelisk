@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "344.8.1649196643",
+	"version": "345.19.1651204830",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -2745,6 +2745,31 @@
 				]
 			},
 			"statEffects": []
+		},
+		{
+			"name": "TBFG Tribute Ascension Item",
+			"description": "This item will ascend one of your TBFG Tribute Bear. Put in inventory and use multi-use wheel to Ascend. DO NOT CONSUME.",
+			"bp": "/Game/Mods/AE/Dinos/PFTransfers/CelestialBase/PrimalItemResource_TBFGAscensionItem.PrimalItemResource_TBFGAscensionItem_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/AE/Dinos/PFTransfers/CelestialBase/Ascension_Item_Icon.Ascension_Item_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Corruption" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 7200,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_ElementDust_C" },
+					{ "qty": 20, "type": "PrimalItemResource_CorruptedPolymer_C" },
+					{ "qty": 10, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Sap_C" }
+				]
+			}
 		},
 		{
 			"name": "Fertilized  Prime Kairuku Egg",
@@ -6164,30 +6189,6 @@
 			}
 		},
 		{
-			"name": "Charge Battery",
-			"description": "Stores Charge from Power Nodes, and can be placed in various Electrical Devices to power them.",
-			"bp": "/Game/Mods/AE/Items/Aberration/Items/PrimalItem_ChargeBattery_AE.PrimalItem_ChargeBattery_AE_C",
-			"parent": "/Game/Aberration/WeaponGlowStickCharge/PrimalItem_ChargeBattery.PrimalItem_ChargeBattery_C",
-			"icon": "/Game/Aberration/Icons/Weapons/ChargeStick_Icon.ChargeStick_Icon",
-			"type": "Resource",
-			"folders": [ "Aberration", "Misc" ],
-			"weight": 0.25,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 4, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 15, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Gas_C" }
-				]
-			}
-		},
-		{
 			"name": "Glow Stick",
 			"description": "Glow Sticks generate light in a radius around them. Throw it and it will stick immediately to the location they first impact.",
 			"bp": "/Game/Mods/AE/Items/Aberration/Items/PrimalItem_GlowStick_AE.PrimalItem_GlowStick_AE_C",
@@ -7022,34 +7023,6 @@
 				]
 			},
 			"structure": "/Game/Aberration/Structures/PrimitiveElevator/WoodElevatorTrack.WoodElevatorTrack_C"
-		},
-		{
-			"name": "Charge Lantern",
-			"description": "Weaponized Charge Light that damages and stuns lifeforms. Place down to ward of dangers in an area. Uses Charge Batteries as fuel. ",
-			"bp": "/Game/Mods/AE/Items/Aberration/Structures/PrimalItem_WeaponRadioactiveLanternCharge_AE.PrimalItem_WeaponRadioactiveLanternCharge_AE_C",
-			"parent": "/Game/Aberration/WeaponRadioactiveLanternCharge/PrimalItem_WeaponRadioactiveLanternCharge.PrimalItem_WeaponRadioactiveLanternCharge_C",
-			"icon": "/Game/Aberration/WeaponRadioactiveLanternCharge/HUD_Lantern_Charge_Colorize.HUD_Lantern_Charge_Colorize",
-			"type": "Weapon",
-			"folders": [ "Aberration", "Weapons" ],
-			"weight": 6,
-			"stackSize": 1,
-			"durability": 300,
-			"crafting": {
-				"xp": 6.6,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 130, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Electronics_C" },
-					{ "qty": 80, "type": "PrimalItemResource_Gem_Element_C" },
-					{ "qty": 2, "type": "PrimalItem_ChargeBattery_C" },
-					{ "qty": 400, "type": "PrimalItemResource_Gas_C" }
-				]
-			},
-			"weapon": "/Game/Aberration/WeaponRadioactiveLanternCharge/WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C"
 		},
 		{
 			"name": "Tripwire Charge Flare Trap",
@@ -19693,14 +19666,14 @@
 			"crafting": {
 				"xp": 2,
 				"time": 5,
-				"levelReq": 0,
+				"levelReq": 100,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 500, "type": "PrimalItemConsumable_RawPrimeMeat_C" },
-					{ "qty": 150, "type": "PrimalItem_EternalDinoDNA_C" },
-					{ "qty": 200, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_Crystal_C" }
+					{ "qty": 500, "type": "PrimalItemConsumable_FuturisticOrb_C" },
+					{ "qty": 150, "type": "PrimalItemConsumable_AncientOrb_C" },
+					{ "qty": 200, "type": "PrimalItem_Generic_EssenceHierophant_C" },
+					{ "qty": 1000, "type": "PrimalItem_MysteriousElement_C" }
 				]
 			}
 		},
@@ -26589,28 +26562,6 @@
 			}
 		},
 		{
-			"name": "Giant Bee Honey",
-			"description": "A delicious and nutritious snack, useful for luring creatures to a trap or for fishing.",
-			"bp": "/Game/Mods/AE/Structures/AutoFeeder/Consumeables/PrimalItemConsumable_Honey_AEStructures_C.PrimalItemConsumable_Honey_AEStructures_C_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Honey.PrimalItemConsumable_Honey_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Honey_Icon.Honey_Icon",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
-			"stackSize": 10000,
-			"spoilsIn": 1200,
-			"statEffects": [
-				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 3.333333 },
-				{ "stat": "health", "value": 8, "useItemQuality": true, "duration": 2 }
-			],
-			"cooking": {
-				"health": 0.11,
-				"stamina": 0.01,
-				"food": 0.2,
-				"weight": 0.02,
-				"water": 0.01
-			}
-		},
-		{
 			"name": "Aquatic Mushroom",
 			"description": "A wavy blueish-green mushroom with a glowing edge. Looks refreshing.",
 			"bp": "/Game/Mods/AE/Structures/AutoFeeder/Consumeables/PrimalItemConsumable_Mushroom_Aquatic_AEStructures_C.PrimalItemConsumable_Mushroom_Aquatic_AEStructures_C_C",
@@ -26852,52 +26803,6 @@
 				"health": -0.5,
 				"stamina": -0.3,
 				"food": 0.0625,
-				"weight": 0.02,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Sweet Vegetable Cake",
-			"description": "A sappy vegetable cake which Herbivores find delicious, which will be automatically eaten when needed for healing. Alas, humans and carnivores tend to find its taste repugnant. ",
-			"bp": "/Game/Mods/AE/Structures/AutoFeeder/Consumeables/PrimalItemConsumable_SweetVeggieCake_AEStructures_C.PrimalItemConsumable_SweetVeggieCake_AEStructures_C_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SweetVeggieCake.PrimalItemConsumable_SweetVeggieCake_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TastyCake_Icon.TastyCake_Icon",
-			"type": "MiscConsumable/Food",
-			"weight": 6,
-			"stackSize": 10000,
-			"spoilsIn": 4800,
-			"crafting": {
-				"xp": 1,
-				"time": 20,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
-					{ "exact": true, "qty": 2, "type": "PrimalItemConsumable_Honey_C" },
-					{ "exact": true, "qty": 4, "type": "PrimalItemResource_Sap_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Savoroot_C" },
-					{ "qty": 4, "type": "PrimalItemConsumable_Stimulant_C" }
-				]
-			},
-			"statEffects": [
-				{
-					"stat": "food",
-					"value": 20,
-					"duration": 3.333333
-				},
-				{
-					"stat": "health",
-					"value": 10
-				}
-			],
-			"cooking": {
-				"health": 0.1,
-				"stamina": 0.01,
-				"food": 0.1,
 				"weight": 0.02,
 				"water": 0.01
 			}
