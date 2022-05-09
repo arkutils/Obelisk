@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "345.19.1650771301",
+	"version": "345.23.1652091408",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -3701,6 +3701,68 @@
 				"weight": 0.3,
 				"water": 0.01
 			}
+		},
+		{
+			"name": "Sinotyrannus Saddle",
+			"description": "Equip a Sinotyrannus with this to ride it.",
+			"bp": "/Game/Mods/AC2/Sinotyrannus/PrimalItemArmor_SinotyrannusSaddle.PrimalItemArmor_SinotyrannusSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 86,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 380, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 15, "type": "PrimalItemResource_SinoSpine_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Sinotyrannus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Sinotyrannus/PrimalItemConsumable_Egg_Sinotyrannus_Fertilized.PrimalItemConsumable_Egg_Sinotyrannus_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Allo.PrimalItemConsumable_Egg_Allo_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Allosaurus.HUD_DinoEgg_MIC_Inst_Allosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Sinotyrannus/Sinotyrannus_Character_BP.Sinotyrannus_Character_BP_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Sinotyrannus Thorn",
+			"description": "A thorn from a Sinotyrannus. Packed with a potent venom.",
+			"bp": "/Game/Mods/AC2/Sinotyrannus/PrimalItemResource_SinoSpine.PrimalItemResource_SinoSpine_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/LostIsland/Dinos/Amargasaurus/ArkG_TGAItems_AmargaHorn.ArkG_TGAItems_AmargaHorn",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 500
 		},
 		{
 			"name": "Stygimoloch Saddle",
