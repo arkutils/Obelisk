@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.13.1649647528",
+	"version": "345.23.1652583858",
 	"format": "4",
 	"mod": {
 		"id": "1652120435",
@@ -1120,7 +1120,7 @@
 			"customTag": "Aegis",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 800,
-			"dragWeight": 250,
+			"dragWeight": 450,
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -1150,7 +1150,7 @@
 			"attack": {
 				"defaultDmg": 100,
 				"defaultSwingRadius": 650,
-				"attacks": [ { "name": "lunge", "interval": 0.5, "dmg": 34, "radius": 500, "stamina": 0 } ]
+				"attacks": [ { "name": "Bite", "interval": 0.5, "dmg": 34, "radius": 500, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 4 }
 		},
@@ -1712,7 +1712,7 @@
 		},
 		{
 			"name": "Leviathan, Lord of the Seas",
-			"bp": "/Game/Mods/AtlasPort/Critter/MeanWhale/Experimental_character_Bp.Experimental_character_Bp_C",
+			"bp": "/Game/Mods/AtlasPort/Critter/MeanWhale/LeviathanSAA_character_Bp.LeviathanSAA_character_Bp_C",
 			"dinoNameTag": "Basilosaurus",
 			"customTag": "Harbinger",
 			"targetingTeamName": "Carnivores_Low",
@@ -1740,12 +1740,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 2000 },
-				"swim": { "base": 400 }
+				"walk": { "base": 400, "sprint": 1200 },
+				"swim": { "base": 800 }
 			},
 			"movementD": {
-				"walk": { "base": 900, "sprint": 4500 },
-				"swim": { "base": 900 }
+				"walk": { "base": 900, "sprint": 2700 },
+				"swim": { "base": 1800 }
 			},
 			"staminaRates": {
 				"sprint": -20,
@@ -1755,10 +1755,9 @@
 				"defaultDmg": 90,
 				"defaultSwingRadius": 190,
 				"attacks": [
-					{ "name": "None", "interval": 0.4, "dmg": 400, "radius": 900, "stamina": 0 },
-					{ "name": "None", "interval": 10, "dmg": 600, "radius": 900, "stamina": 0 },
-					{ "name": "None", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "None", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 750, "radius": 1800, "stamina": 0 },
+					{ "name": "SavageBite", "interval": 8, "dmg": 900, "radius": 1800, "stamina": 0 },
+					{ "name": "Roar", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 40 }
@@ -1809,8 +1808,9 @@
 				"defaultDmg": 90,
 				"defaultSwingRadius": 190,
 				"attacks": [
-					{ "name": "None", "interval": 0.4, "dmg": 90, "radius": 600, "stamina": 0 },
-					{ "name": "None", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 90, "radius": 600, "stamina": 0 },
+					{ "name": "SavageBite", "interval": 8, "dmg": 110, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 40 }
@@ -3125,9 +3125,9 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.05, "dmg": 50, "radius": 450, "stamina": 0 },
-					{ "name": "HeadButt", "interval": 3, "dmg": 40, "radius": 500, "stamina": 0 },
-					{ "name": "Tail", "interval": 7, "dmg": 40, "radius": 500, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.05, "dmg": 62, "radius": 620, "stamina": 0 },
+					{ "name": "HeadButt", "interval": 3, "dmg": 52, "radius": 625, "stamina": 0 },
+					{ "name": "Tail", "interval": 7, "dmg": 55, "radius": 500, "stamina": 0 },
 					{ "name": "ShellOpenClose", "interval": 0.05, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Roar", "interval": 0.05, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
