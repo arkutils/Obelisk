@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "343.7.1644539989",
+	"version": "345.23.1652645359",
 	"format": "4",
 	"mod": {
 		"id": "1565015734",
@@ -725,24 +725,131 @@
 			}
 		},
 		{
-			"name": "Fertilized Deinonychus Egg",
-			"description": "",
-			"bp": "/Game/Mods/BetterDinosTest/Dinon/PrimalItemConsumable_Egg_Deinonychus_Fertilized.PrimalItemConsumable_Egg_Deinonychus_Fertilized_C",
-			"parent": "/Game/Valguero/Dinos/Deinonychus/PrimalItemConsumable_Egg_Deinonychus_Fertilized.PrimalItemConsumable_Egg_Deinonychus_Fertilized_C",
-			"icon": "/Game/Valguero/Dinos/Deinonychus/HUD_DinoEgg_MIC_Inst_Deinonychus.HUD_DinoEgg_MIC_Inst_Deinonychus",
+			"name": "Fertilized Dilo Egg - BD",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BetterDinosTest/Dilo/PrimalItemConsumable_Egg_Dilo_Fertilized.PrimalItemConsumable_Egg_Dilo_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Dilo.PrimalItemConsumable_Egg_Dilo_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Dilo.HUD_DinoEgg_MIC_Inst_Dilo",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
-			"weight": 6,
+			"weight": 3,
 			"stackSize": 1,
 			"spoilsIn": 691200,
 			"statEffects": [
-				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
-				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
-				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
 			],
 			"egg": {
-				"dinoClass": "/Game/Mods/BetterDinosTest/Dinon/Deinonychus_Character_BP.Deinonychus_Character_BP_C",
-				"temperature": { "min": 80, "max": 90 }
+				"dinoClass": "/Game/Mods/BetterDinosTest/Dilo/Dilo_Character_BP.Dilo_Character_BP_C",
+				"temperature": { "min": 28, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Dilophosaurus Saddle",
+			"description": "Equip a Dilophosaurus with this to ride it.",
+			"bp": "/Game/Mods/BetterDinosTest/Dilo/Saddle/PrimalItemArmor_DiloSaddle.PrimalItemArmor_DiloSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/BetterDinosTest/Dilo/Saddle/HUD_DiloSaddle_Colorize_MIC.HUD_DiloSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 72.4,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 150, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Wood_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Aberrant Dilo Egg - BD",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BetterDinosTest/Dilo/Variants/PrimalItemConsumable_Egg_Dilo_Fertilized_AB.PrimalItemConsumable_Egg_Dilo_Fertilized_AB_C",
+			"parent": "/Game/Mods/BetterDinosTest/Dilo/PrimalItemConsumable_Egg_Dilo_Fertilized.PrimalItemConsumable_Egg_Dilo_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Dilo.HUD_DinoEgg_MIC_Inst_Dilo",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Dilo/Variants/Dilo_Character_BP_Aberrant_BD.Dilo_Character_BP_Aberrant_BD_C",
+				"temperature": { "min": 28, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Paleo Dilo Egg - BD",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BetterDinosTest/Dilo/Variants/PrimalItemConsumable_Egg_Dilo_Fertilized_PaleoBD.PrimalItemConsumable_Egg_Dilo_Fertilized_PaleoBD_C",
+			"parent": "/Game/Mods/BetterDinosTest/Dilo/PrimalItemConsumable_Egg_Dilo_Fertilized.PrimalItemConsumable_Egg_Dilo_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Dilo.HUD_DinoEgg_MIC_Inst_Dilo",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Dilo/Variants/Dilo_Character_BP_Paleo_BD.Dilo_Character_BP_Paleo_BD_C",
+				"temperature": { "min": 28, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized R-Dilo Egg",
+			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BetterDinosTest/Dilo/Variants/PrimalItemConsumable_Egg_Dilo_Gen2_Fertilized.PrimalItemConsumable_Egg_Dilo_Gen2_Fertilized_C",
+			"parent": "/Game/Genesis2/Dinos/BiomeVariants/DinoEggs/PrimalItemConsumable_Egg_Dilo_Gen2.PrimalItemConsumable_Egg_Dilo_Gen2_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Dilo.HUD_DinoEgg_MIC_Inst_Dilo",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Dilo/Variants/Dilo_Character_BP_Rockwell.Dilo_Character_BP_Rockwell_C",
+				"temperature": { "min": 28, "max": 32 }
 			},
 			"cooking": {
 				"health": 0.8,
@@ -755,7 +862,7 @@
 		{
 			"name": "Fertilized Deinonychus Egg",
 			"description": "",
-			"bp": "/Game/Mods/BetterDinosTest/Dinon/PrimalItemConsumable_Egg_Deinonychus_Fertilized_BD.PrimalItemConsumable_Egg_Deinonychus_Fertilized_BD_C",
+			"bp": "/Game/Mods/BetterDinosTest/Dinon/PrimalItemConsumable_Egg_Deinonychus_Fertilized.PrimalItemConsumable_Egg_Deinonychus_Fertilized_C",
 			"parent": "/Game/Valguero/Dinos/Deinonychus/PrimalItemConsumable_Egg_Deinonychus_Fertilized.PrimalItemConsumable_Egg_Deinonychus_Fertilized_C",
 			"icon": "/Game/Valguero/Dinos/Deinonychus/HUD_DinoEgg_MIC_Inst_Deinonychus.HUD_DinoEgg_MIC_Inst_Deinonychus",
 			"type": "MiscConsumable/Food",
@@ -2651,6 +2758,34 @@
 			],
 			"egg": {
 				"dinoClass": "/Game/Mods/BetterDinosTest/Trike/Slag/BDBionicTrike_Character_BP.BDBionicTrike_Character_BP_C",
+				"temperature": { "min": 22, "max": 28 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Paleo Trike Egg (BD)",
+			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BetterDinosTest/Trike/Slag/PrimalItemConsumable_Egg_Trike_Fertilized_Paleo_BD.PrimalItemConsumable_Egg_Trike_Fertilized_Paleo_BD_C",
+			"parent": "/Game/Mods/BetterDinosTest/Trike/PrimalItemConsumable_Egg_Trike_Fertilized.PrimalItemConsumable_Egg_Trike_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Trike.HUD_DinoEgg_MIC_Inst_Trike",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 9,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 45, "useItemQuality": true, "duration": 11.25 },
+				{ "stat": "health", "value": 45, "useItemQuality": true, "duration": 11.25 },
+				{ "stat": "stamina", "value": 45, "useItemQuality": true, "duration": 11.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BetterDinosTest/Trike/Slag/Trike_Character_BP_Paleo_BD.Trike_Character_BP_Paleo_BD_C",
 				"temperature": { "min": 22, "max": 28 }
 			},
 			"cooking": {
