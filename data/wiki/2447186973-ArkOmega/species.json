@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "345.23.1651941479",
+	"version": "345.23.1652688839",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -2460,6 +2460,67 @@
 					"PrimalItemConsumable_Kibble_Boss_C"
 				],
 				"baseXP": 3000
+			}
+		},
+		{
+			"name": "Moeder",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/BeaconBoss/BeaconEelBoss_Character_BP_Omega.BeaconEelBoss_Character_BP_Omega_C",
+			"dinoNameTag": "EelBoss",
+			"customTag": "",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 4750,
+			"dragWeight": 7500,
+			"variants": [ "Boss" ],
+			"flags": [ "canBeDragged", "isBigDino", "isBossDino", "isWaterDino" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 2000 },
+				"swim": { "base": 1600 }
+			},
+			"movementD": {
+				"walk": { "base": 2000 },
+				"swim": { "base": 1600 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 1080,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 1080, "radius": 900, "stamina": 0 },
+					{
+						"name": "ElectricityBall", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{
+						"name": "ElectricityBall_Tail", "interval": 20, "dmg": 1080, "radius": 2500, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_TekReplicator_C",
+					"PrimalItemArmor_TekPants_C",
+					"PrimalItemStructure_TekTransmitter_C",
+					"PrimalItemArmor_TekShirt_C",
+					"PrimalItemStructure_TekGate_Large_C",
+					"PrimalItemStructure_TekGateframe_Large_C",
+					"PrimalItemStructure_TekLight_C",
+					"PrimalItemArmor_MegalodonSaddle_Tek_C",
+					"PrimalItemStructure_Bed_Tek_C",
+					"PrimalItemArmor_Tapejara_Tek_C",
+					"PrimalItemStructure_DedicatedStorage_C",
+					"PrimalItemStructure_TekAlarm_C",
+					"PrimalItemStructure_Ramp_Tek_C",
+					"PrimalItem_WeaponTekGrenadeLauncher_C",
+					"PrimalItemArmor_ShoulderCannon_C",
+					"PrimalItemStructure_GodEgg_C",
+					"PrimalItemConsumable_Kibble_Boss_C"
+				],
+				"baseXP": 2
 			}
 		},
 		{
@@ -5966,6 +6027,58 @@
 			}
 		},
 		{
+			"name": "Anglersichthys",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Anglersichthys/Anglersichthys_Character_BP.Anglersichthys_Character_BP_C",
+			"dinoNameTag": "Leedsichthys",
+			"customTag": "Leedsichthys",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 300,
+			"dragWeight": 1300,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "wildForcedLevel": 1 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 225, "sprint": 1485 },
+				"swim": { "base": 225, "sprint": 1485 }
+			},
+			"movementD": {
+				"walk": { "base": 1440, "sprint": 2376 },
+				"swim": { "base": 1440, "sprint": 2376 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 145,
+				"defaultSwingRadius": 840,
+				"attacks": [ { "name": "Bite", "interval": 2, "dmg": 145, "radius": 840, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Leed.DinoDropInventoryComponent_Carnivore_Huge_Leed"
+					}
+				],
+				"baseXP": 15
+			}
+		},
+		{
 			"name": "Araneoscorpius",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Araneoscorpius/AraneoScorpius_Character_BP.AraneoScorpius_Character_BP_C",
 			"dinoNameTag": "Araneoscorpius",
@@ -6130,6 +6243,184 @@
 				]
 			},
 			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Basilopleura",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Basilopleura/Basilopleura_Character_BP.Basilopleura_Character_BP_C",
+			"dinoNameTag": "Basilopleura",
+			"customTag": "Basilosaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 12000,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater"
+			],
+			"leveling": { "mutagenCost": 75 },
+			"cloning": {
+				"costBase": 1875,
+				"costLevel": 55,
+				"timeBase": 13125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 420 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 675, "sprint": 1350 },
+				"swim": { "base": 675 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 65,
+				"defaultSwingRadius": 650,
+				"attacks": [
+					{ "name": "lunge", "interval": 0.3, "dmg": 65, "radius": 650, "stamina": 0 },
+					{ "name": "BlowAir", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Basilo.DinoDropInventoryComponent_Basilo"
+					}
+				],
+				"baseXP": 15
+			}
+		},
+		{
+			"name": "Beelzegolem",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Beelzegolem/Beelzegolem_Character_BP.Beelzegolem_Character_BP_C",
+			"dinoNameTag": "ToadGolem",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 88 },
+			"cloning": {
+				"costBase": 2200,
+				"costLevel": 55,
+				"timeBase": 15400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 10,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 180, "sprint": 432 }
+			},
+			"movementD": {
+				"walk": { "base": 540, "sprint": 2160 }
+			},
+			"staminaRates": { "sprint": -25 },
+			"attack": {
+				"defaultDmg": 87,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 1, "dmg": 87, "radius": 600, "stamina": 30 },
+					{
+						"name": "ThrowRock", "interval": 1, "dmg": 87, "radius": 1200, "stamina": 100,
+						"isProjectile": true
+					},
+					{ "name": "Swipe", "interval": 3, "dmg": 62, "radius": 600, "stamina": 35 }
+				]
+			},
+			"death": { "baseXP": 50 }
+		},
+		{
+			"name": "Bloodpithecus",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Bloodpithecus/Bloodpithecus_Character_BP.Bloodpithecus_Character_BP_C",
+			"dinoNameTag": "Bloodpithecus",
+			"customTag": "Dinopithecus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 325,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50,
+				"mutagenCost": 68
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 6200
+			},
+			"movementW": {
+				"walk": { "base": 680, "sprint": 2142 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 680, "sprint": 2380 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 91,
+				"defaultSwingRadius": 86,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 91, "radius": 465, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 77, "radius": 667, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 77, "radius": 240, "stamina": 0 },
+					{
+						"name": "Throw Boulder", "interval": 15, "dmg": 0, "radius": 0, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "BattlecryCry", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BattlecryAttack", "interval": 30, "dmg": 60, "radius": 265, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
+			}
 		},
 		{
 			"name": "Bloodscout",
@@ -6440,6 +6731,57 @@
 				],
 				"baseXP": 1
 			}
+		},
+		{
+			"name": "Electrodon",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Electrodon/Electrodon_Character_BP.Electrodon_Character_BP_C",
+			"dinoNameTag": "Electrodon",
+			"customTag": "Iguanodon",
+			"targetingTeamName": "Herbivores",
+			"mass": 200,
+			"dragWeight": 125,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 212.5, "sprint": 1062.5 },
+				"swim": { "base": 280.5, "sprint": 1402.5 }
+			},
+			"movementD": {
+				"walk": { "base": 287.5, "sprint": 1437.5 },
+				"swim": { "base": 379.5, "sprint": 1897.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 95,
+				"defaultSwingRadius": 100,
+				"attacks": [
+					{ "name": "Melee_Biped", "interval": 0.4, "dmg": 95, "radius": 150, "stamina": 0 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar_Biped", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Featherlisk",
@@ -6759,6 +7101,59 @@
 			"death": { "baseXP": 6 }
 		},
 		{
+			"name": "Mammeti",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Mammeti/Mammeti_Character_BP.Mammeti_Character_BP_C",
+			"dinoNameTag": "Mammeti",
+			"customTag": "Mammoth",
+			"targetingTeamName": "Herbivores",
+			"mass": 340,
+			"dragWeight": 400,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 62 },
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 92,
+				"defaultSwingRadius": 500,
+				"attacks": [
+					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 98, "radius": 750, "stamina": 20 },
+					{ "name": "Stomp", "interval": 1.5, "dmg": 119, "radius": 800, "stamina": 40 },
+					{ "name": "Trumpet", "interval": 60, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "Swimming Attack", "interval": 1, "dmg": 98, "radius": 500, "stamina": 20 },
+					{ "name": "Carried Tusk Swipe", "interval": 0.5, "dmg": 98, "radius": 500, "stamina": 20 }
+				]
+			},
+			"death": { "baseXP": 8 }
+		},
+		{
 			"name": "Mesomantria",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Mesomantria/MonkeyMantria_Character_BP.MonkeyMantria_Character_BP_C",
 			"dinoNameTag": "MonkeyMoth",
@@ -6815,6 +7210,55 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Mosatops",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Mosatops/Mosatops_Character_BP.Mosatops_Character_BP_C",
+			"dinoNameTag": "Mosatops",
+			"customTag": "Camelsaurus",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 380,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 36 },
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250, "sprint": 1250 },
+				"swim": { "base": 265, "sprint": 1325 }
+			},
+			"movementD": {
+				"walk": { "base": 157.5, "sprint": 567 },
+				"swim": { "base": 166.9, "sprint": 601 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 132,
+				"defaultSwingRadius": 840,
+				"attacks": [
+					{ "name": "None", "interval": 0.63, "dmg": 132, "radius": 840, "stamina": 0 },
+					{ "name": "None", "interval": 0.63, "dmg": 132, "radius": 840, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
 			"name": "Phioneura",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Phioneura/Phioneura_Character_BP.Phioneura_Character_BP_C",
 			"dinoNameTag": "Pigbug",
@@ -6861,6 +7305,77 @@
 				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 20, "radius": 160, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 1 }
+		},
+		{
+			"name": "Phoenix Drake",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/PhoenixDrake/PhoenixDrake_Character_BP.PhoenixDrake_Character_BP_C",
+			"dinoNameTag": "FireDrake",
+			"customTag": "RockDrake",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 345,
+			"dragWeight": 425,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 650, "sprint": 1820 },
+				"swim": { "base": 600, "sprint": 840 }
+			},
+			"movementD": {
+				"walk": { "base": 650, "sprint": 2047.5 },
+				"swim": { "base": 600, "sprint": 945 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 83,
+				"defaultSwingRadius": 600,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 83, "radius": 600, "stamina": 20 },
+					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 263, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 173, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 83, "radius": 900, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_RockDrake.DinoDropInventoryComponent_Carnivore_Large_RockDrake"
+					}
+				],
+				"baseXP": 2
+			}
 		},
 		{
 			"name": "Piranhadon",
@@ -6922,6 +7437,45 @@
 				]
 			},
 			"death": { "baseXP": 3 }
+		},
+		{
+			"name": "Quetzalcanth",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/QuetzalCanth/Quetzalcanth_Character_BP.Quetzalcanth_Character_BP_C",
+			"dinoNameTag": "Quetzalcanth",
+			"customTag": "Coel",
+			"targetingTeamName": "Herbivore_Water",
+			"mass": 100,
+			"dragWeight": 125,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable",
+				"canBeWildTrappedWithFishBasket"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 360, "sprint": 756 },
+				"swim": { "base": 500 }
+			},
+			"movementD": {
+				"walk": { "base": 360, "sprint": 756 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.185
+			},
+			"attack": {
+				"defaultDmg": 37,
+				"defaultSwingRadius": 335,
+				"attacks": [ { "name": "None", "interval": 1, "dmg": 37, "radius": 335, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
 		},
 		{
 			"name": "Reapermane",
@@ -7036,6 +7590,66 @@
 			"death": { "baseXP": 0.5 }
 		},
 		{
+			"name": "Salmontooth Saber",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/SalmontoothSaber/Salmontooth_Character_BP.Salmontooth_Character_BP_C",
+			"dinoNameTag": "Sabertooth",
+			"customTag": "Sabertooth",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 49 },
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 25,
+				"maxSpeed": 1850
+			},
+			"movementW": {
+				"walk": { "base": 230, "sprint": 920 },
+				"swim": { "base": 300, "sprint": 1200 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 1150 },
+				"swim": { "base": 300, "sprint": 1500 }
+			},
+			"movementR": {
+				"walk": { "base": 207, "sprint": 1035 },
+				"swim": { "base": 270, "sprint": 1350 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 37,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 37, "radius": 160, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
 			"name": "Spinego",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Spinego/Spinego_Character_BP.Spinego_Character_BP_C",
 			"dinoNameTag": "Spinego",
@@ -7098,6 +7712,64 @@
 				],
 				"baseXP": 60
 			}
+		},
+		{
+			"name": "Tek Rexeratops",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/TekRexeratops/TekRexeratops_Character_BP.TekRexeratops_Character_BP_C",
+			"dinoNameTag": "Tek Rexeratops",
+			"customTag": "Trike",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 24
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1215 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 189, "sprint": 567 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 94,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "None", "interval": 0.63, "dmg": 94, "radius": 750, "stamina": 0 },
+					{ "name": "Ram", "interval": 30, "dmg": 94, "radius": 750, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Tek Stegidaria",
@@ -7220,6 +7892,56 @@
 				],
 				"baseXP": 6
 			}
+		},
+		{
+			"name": "Triceraterid",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Triketerid/Triketerid_Character_BP.Triketerid_Character_BP_C",
+			"dinoNameTag": "Triketerid",
+			"customTag": "Trike",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 94.5, "sprint": 283.5 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 44,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "None", "interval": 0.63, "dmg": 44, "radius": 600, "stamina": 0 },
+					{ "name": "Ram", "interval": 30, "dmg": 44, "radius": 430, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Trilachy",
@@ -7484,21 +8206,21 @@
 			},
 			"movementW": {
 				"walk": { "base": 212.5, "sprint": 1062.5 },
-				"swim": { "base": 382.5 }
+				"swim": { "base": 280.5, "sprint": 1402.5 }
 			},
 			"movementD": {
 				"walk": { "base": 287.5, "sprint": 1437.5 },
-				"swim": { "base": 517.5 }
+				"swim": { "base": 379.5, "sprint": 1897.5 }
 			},
 			"staminaRates": {
 				"sprint": -4,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 25,
+				"defaultDmg": 60,
 				"defaultSwingRadius": 100,
 				"attacks": [
-					{ "name": "Melee_Biped", "interval": 0.4, "dmg": 25, "radius": 150, "stamina": 0 },
+					{ "name": "Melee_Biped", "interval": 0.4, "dmg": 60, "radius": 150, "stamina": 0 },
 					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
 					{ "name": "Roar_Biped", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
@@ -8119,8 +8841,8 @@
 			},
 			"attack": {
 				"defaultDmg": 115,
-				"defaultSwingRadius": 930,
-				"attacks": [ { "name": "Bite", "interval": 10, "dmg": 115, "radius": 650, "stamina": 0 } ]
+				"defaultSwingRadius": 1200,
+				"attacks": [ { "name": "Bite", "interval": 10, "dmg": 115, "radius": 1200, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -8360,7 +9082,7 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 42,
+				"defaultDmg": 48,
 				"defaultSwingRadius": 500,
 				"attacks": [
 					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 },
@@ -10903,9 +11625,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 4,
+				"defaultDmg": 8,
 				"defaultSwingRadius": 78,
-				"attacks": [ { "name": "None", "interval": 1, "dmg": 4, "radius": 78, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 1, "dmg": 8, "radius": 78, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 0.5 }
 		},
@@ -13256,6 +13978,48 @@
 				],
 				"baseXP": 15
 			}
+		},
+		{
+			"name": "DPS Dummy",
+			"bp": "/Game/Mods/ArkOmega/Structures/DPSDummy/DPSDummy_Character_BP.DPSDummy_Character_BP_C",
+			"dinoNameTag": "Kairu",
+			"customTag": "DPSDummy",
+			"targetingTeamName": "Herbivores",
+			"mass": 0,
+			"dragWeight": 5000,
+			"flags": [ "canBeDragged", "canDrag" ],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 1, "max": 1 } ],
+				"mutagenCost": 42
+			},
+			"cloning": {
+				"costBase": 1025,
+				"costLevel": 27.5,
+				"timeBase": 7175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 70, "sprint": 147 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 38.5, "sprint": 80.8 },
+				"swim": { "base": 247.5 }
+			},
+			"staminaRates": {
+				"sprint": 0,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 105,
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 8, "radius": 105, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
 		}
 	]
 }
