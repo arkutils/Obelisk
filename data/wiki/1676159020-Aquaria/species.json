@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "342.22.1644356573",
+	"version": "345.31.1652950451",
 	"format": "4",
 	"mod": {
 		"id": "1676159020",
@@ -1652,7 +1652,7 @@
 				"swim": { "base": 900, "sprint": 3780 }
 			},
 			"staminaRates": {
-				"sprint": -25,
+				"sprint": -18,
 				"swimOrFly": 0
 			},
 			"attack": {
@@ -1662,7 +1662,7 @@
 					{ "name": "Bite", "interval": 0.4, "dmg": 42, "radius": 450, "stamina": 0 },
 					{ "name": "Roar", "interval": 7, "dmg": 0, "radius": 300, "stamina": 0 },
 					{ "name": "LandTailSlaps", "interval": 7, "dmg": 45, "radius": 450, "stamina": 100 },
-					{ "name": "Dart", "interval": 6, "dmg": 50, "radius": 450, "stamina": 125 }
+					{ "name": "Dart", "interval": 8, "dmg": 52, "radius": 450, "stamina": 100 }
 				]
 			},
 			"death": { "baseXP": 4 }
@@ -1674,7 +1674,7 @@
 			"customTag": "Shoni",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 300,
-			"dragWeight": 250,
+			"dragWeight": 1000,
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowRiding",
@@ -1686,10 +1686,7 @@
 				"dieIfLeftWater",
 				"isTameable"
 			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 32 } ],
-				"mutagenCost": 38
-			},
+			"leveling": { "mutagenCost": 38 },
 			"cloning": {
 				"costBase": 925,
 				"costLevel": 55,
@@ -1716,9 +1713,9 @@
 				"defaultDmg": 40,
 				"defaultSwingRadius": 170,
 				"attacks": [
-					{ "name": "None", "interval": 0.2, "dmg": 64, "radius": 320, "stamina": 0 },
-					{ "name": "None", "interval": 0.2, "dmg": 70, "radius": 320, "stamina": 0 },
-					{ "name": "None", "interval": 0.2, "dmg": 100, "radius": 500, "stamina": 100 }
+					{ "name": "None", "interval": 0.2, "dmg": 50, "radius": 450, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 60, "radius": 520, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 125, "radius": 500, "stamina": 100 }
 				]
 			},
 			"death": { "baseXP": 12 }
@@ -2181,6 +2178,56 @@
 		{
 			"name": "Tylosaurus",
 			"bp": "/Game/Mods/Aquaria/FIsh/Tylo/Tylo_Character_bp.Tylo_Character_bp_C",
+			"dinoNameTag": "Mosasaur",
+			"customTag": "Tylosaur",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 650, "sprint": 1950 },
+				"fly": { "base": 600, "sprint": 3600 }
+			},
+			"movementD": {
+				"walk": { "base": 650, "sprint": 1950 },
+				"fly": { "base": 600, "sprint": 3600 }
+			},
+			"staminaRates": {
+				"sprint": -25,
+				"swimOrFly": -10
+			},
+			"attack": {
+				"defaultDmg": 105,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0, "dmg": 80, "radius": 450, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Arcane Tylosaurus",
+			"bp": "/Game/Mods/Aquaria/FIsh/Tylo/Tylo_Character_bp_Arcane.Tylo_Character_bp_Arcane_C",
 			"dinoNameTag": "Mosasaur",
 			"customTag": "Tylosaur",
 			"targetingTeamName": "Carnivore_Water",
