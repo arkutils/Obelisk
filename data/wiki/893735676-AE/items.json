@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "345.19.1651204830",
+	"version": "345.31.1653101871",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -3671,6 +3671,30 @@
 			"statEffects": []
 		},
 		{
+			"name": "Bacons Armageddon Summon Reagent",
+			"description": "Will summon a tamed Bacons Armageddon ",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/Kaiju/PrimalItemConsumable_Summon_BaconsArmageddon.PrimalItemConsumable_Summon_BaconsArmageddon_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/Screenshot_3.Screenshot_3",
+			"type": "MiscConsumable/Medicine",
+			"folders": [ "Summons", "Tributes" ],
+			"weight": 2,
+			"stackSize": 1000,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 10,
+				"time": 5,
+				"levelReq": 100,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItem_Generic_Essence_C" },
+					{ "qty": 100, "type": "PrimalItemConsumable_PrimeBlood_C" }
+				]
+			},
+			"statEffects": []
+		},
+		{
 			"name": "Bacon's Overlord Summon Reagent",
 			"description": "Will summon a tamed Bacon's Overlord",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/PrimalItemConsumable_Summon_BaconsDaddy.PrimalItemConsumable_Summon_BaconsDaddy_C",
@@ -3695,8 +3719,32 @@
 			"statEffects": []
 		},
 		{
-			"name": "Bacon's Overlord Evolution",
-			"description": "Will evolve to Bacon's Overlord Tame",
+			"name": "Bacon's Armageddon Evolution",
+			"description": "Will evolve to Bacon's Armageddon Tame",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/PrimalItem_Evolution_BaconsDaddy2.PrimalItem_Evolution_BaconsDaddy2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/Screenshot_3.Screenshot_3",
+			"type": "MiscConsumable/Food",
+			"weight": 2,
+			"stackSize": 10000,
+			"crafting": {
+				"xp": 10,
+				"time": 32,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedBody_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedArms_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedCore_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedHead_C" },
+					{ "qty": 1, "type": "PrimalItemResource_ResurrectedLegs_C" }
+				]
+			}
+		},
+		{
+			"name": "Bacon Overlord's Daddy Evolution",
+			"description": "Will evolve to Bacon Overlord's Daddy Tame",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/PrimalItem_Evolution_BaconsDaddy.PrimalItem_Evolution_BaconsDaddy_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
 			"icon": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/Screenshot_3.Screenshot_3",
@@ -6189,6 +6237,30 @@
 			}
 		},
 		{
+			"name": "Charge Battery",
+			"description": "Stores Charge from Power Nodes, and can be placed in various Electrical Devices to power them.",
+			"bp": "/Game/Mods/AE/Items/Aberration/Items/PrimalItem_ChargeBattery_AE.PrimalItem_ChargeBattery_AE_C",
+			"parent": "/Game/Aberration/WeaponGlowStickCharge/PrimalItem_ChargeBattery.PrimalItem_ChargeBattery_C",
+			"icon": "/Game/Aberration/Icons/Weapons/ChargeStick_Icon.ChargeStick_Icon",
+			"type": "Resource",
+			"folders": [ "Aberration", "Misc" ],
+			"weight": 0.25,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 4, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Gas_C" }
+				]
+			}
+		},
+		{
 			"name": "Glow Stick",
 			"description": "Glow Sticks generate light in a radius around them. Throw it and it will stick immediately to the location they first impact.",
 			"bp": "/Game/Mods/AE/Items/Aberration/Items/PrimalItem_GlowStick_AE.PrimalItem_GlowStick_AE_C",
@@ -7025,6 +7097,34 @@
 			"structure": "/Game/Aberration/Structures/PrimitiveElevator/WoodElevatorTrack.WoodElevatorTrack_C"
 		},
 		{
+			"name": "Charge Lantern",
+			"description": "Weaponized Charge Light that damages and stuns lifeforms. Place down to ward of dangers in an area. Uses Charge Batteries as fuel. ",
+			"bp": "/Game/Mods/AE/Items/Aberration/Structures/PrimalItem_WeaponRadioactiveLanternCharge_AE.PrimalItem_WeaponRadioactiveLanternCharge_AE_C",
+			"parent": "/Game/Aberration/WeaponRadioactiveLanternCharge/PrimalItem_WeaponRadioactiveLanternCharge.PrimalItem_WeaponRadioactiveLanternCharge_C",
+			"icon": "/Game/Aberration/WeaponRadioactiveLanternCharge/HUD_Lantern_Charge_Colorize.HUD_Lantern_Charge_Colorize",
+			"type": "Weapon",
+			"folders": [ "Aberration", "Weapons" ],
+			"weight": 6,
+			"stackSize": 1,
+			"durability": 300,
+			"crafting": {
+				"xp": 6.6,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 130, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Electronics_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Gem_Element_C" },
+					{ "qty": 2, "type": "PrimalItem_ChargeBattery_C" },
+					{ "qty": 400, "type": "PrimalItemResource_Gas_C" }
+				]
+			},
+			"weapon": "/Game/Aberration/WeaponRadioactiveLanternCharge/WeaponRadioactiveLanternCharge.WeaponRadioactiveLanternCharge_C"
+		},
+		{
 			"name": "Tripwire Charge Flare Trap",
 			"description": "Place two of these near each other to create an explosive charge trap that scares nearby dinosaurs.",
 			"bp": "/Game/Mods/AE/Items/Aberration/Structures/PrimalItem_WeaponTripwireFlare_AE.PrimalItem_WeaponTripwireFlare_AE_C",
@@ -7286,6 +7386,131 @@
 			"name": "Eternal Tek Chestpiece",
 			"description": "Highly advanced chestpiece with an integrated jetpack.",
 			"bp": "/Game/Mods/AE/Items/Armor/AETek/PrimalItemArmor_EternalTekShirt.PrimalItemArmor_EternalTekShirt_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekShirt.PrimalItemArmor_TekShirt_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Tek/HUD_Tek_Shirt_Colorized_MIC.HUD_Tek_Shirt_Colorized_MIC",
+			"type": "Equipment/Shirt",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 6,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5.78,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Eternal Tek Boots(Advanced)",
+			"description": "Highly advanced boots capable of absorbing the impact of falling from high distances.",
+			"bp": "/Game/Mods/AE/Items/Armor/BaconTek/PrimalItemArmor_BaconTekBoots.PrimalItemArmor_BaconTekBoots_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekBoots.PrimalItemArmor_TekBoots_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Tek/HUD_Tek_Boots_Colorized_MIC.HUD_Tek_Boots_Colorized_MIC",
+			"type": "Equipment/Boots",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 3,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 3.58,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" }
+				]
+			}
+		},
+		{
+			"name": "Eternal Tek Gauntlets (Advanced)",
+			"description": "Highly advanced gauntlets that allow the wearer to perform devastating punches.",
+			"bp": "/Game/Mods/AE/Items/Armor/BaconTek/PrimalItemArmor_BaconTekGloves.PrimalItemArmor_BaconTekGloves_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekGloves.PrimalItemArmor_TekGloves_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Tek/HUD_Tek_Gloves_Colorized_MIC.HUD_Tek_Gloves_Colorized_MIC",
+			"type": "Equipment/Gloves",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 3,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 2.69,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Eternal Tek Helmet (Advanced)",
+			"description": "Never get lost again with the Tek Helmets night vision. Also provides a targeting mode that reveals other characters' positions, and infinite oxygen while underwater.",
+			"bp": "/Game/Mods/AE/Items/Armor/BaconTek/PrimalItemArmor_BaconTekHelmet.PrimalItemArmor_BaconTekHelmet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekHelmet.PrimalItemArmor_TekHelmet_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Tek/HUD_Tek_Hat_Colorized_MIC.HUD_Tek_Hat_Colorized_MIC",
+			"type": "Equipment/Hat",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0.8,
+				"time": 5,
+				"levelReq": 15,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Eternal Tek Leggings (Advanced)",
+			"description": "Highly advanced leggings that allow for powerful forward movement.",
+			"bp": "/Game/Mods/AE/Items/Armor/BaconTek/PrimalItemArmor_BaconTekPants.PrimalItemArmor_BaconTekPants_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekPants.PrimalItemArmor_TekPants_C",
+			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Tek/HUD_Tek_Pants_Colorized_MIC.HUD_Tek_Pants_Colorized_MIC",
+			"type": "Equipment/Pants",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 6,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 7.1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 450, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 55, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Eternal Tek Chestpiece (Advanced)",
+			"description": "Highly advanced chestpiece with an integrated jetpack.",
+			"bp": "/Game/Mods/AE/Items/Armor/BaconTek/PrimalItemArmor_BaconTekShirt.PrimalItemArmor_BaconTekShirt_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekShirt.PrimalItemArmor_TekShirt_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Tek/HUD_Tek_Shirt_Colorized_MIC.HUD_Tek_Shirt_Colorized_MIC",
 			"type": "Equipment/Shirt",
@@ -26562,6 +26787,28 @@
 			}
 		},
 		{
+			"name": "Giant Bee Honey",
+			"description": "A delicious and nutritious snack, useful for luring creatures to a trap or for fishing.",
+			"bp": "/Game/Mods/AE/Structures/AutoFeeder/Consumeables/PrimalItemConsumable_Honey_AEStructures_C.PrimalItemConsumable_Honey_AEStructures_C_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Honey.PrimalItemConsumable_Honey_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Honey_Icon.Honey_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 10000,
+			"spoilsIn": 1200,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 3.333333 },
+				{ "stat": "health", "value": 8, "useItemQuality": true, "duration": 2 }
+			],
+			"cooking": {
+				"health": 0.11,
+				"stamina": 0.01,
+				"food": 0.2,
+				"weight": 0.02,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Aquatic Mushroom",
 			"description": "A wavy blueish-green mushroom with a glowing edge. Looks refreshing.",
 			"bp": "/Game/Mods/AE/Structures/AutoFeeder/Consumeables/PrimalItemConsumable_Mushroom_Aquatic_AEStructures_C.PrimalItemConsumable_Mushroom_Aquatic_AEStructures_C_C",
@@ -26803,6 +27050,52 @@
 				"health": -0.5,
 				"stamina": -0.3,
 				"food": 0.0625,
+				"weight": 0.02,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Sweet Vegetable Cake",
+			"description": "A sappy vegetable cake which Herbivores find delicious, which will be automatically eaten when needed for healing. Alas, humans and carnivores tend to find its taste repugnant. ",
+			"bp": "/Game/Mods/AE/Structures/AutoFeeder/Consumeables/PrimalItemConsumable_SweetVeggieCake_AEStructures_C.PrimalItemConsumable_SweetVeggieCake_AEStructures_C_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SweetVeggieCake.PrimalItemConsumable_SweetVeggieCake_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TastyCake_Icon.TastyCake_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 6,
+			"stackSize": 10000,
+			"spoilsIn": 4800,
+			"crafting": {
+				"xp": 1,
+				"time": 20,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "exact": true, "qty": 2, "type": "PrimalItemConsumable_Honey_C" },
+					{ "exact": true, "qty": 4, "type": "PrimalItemResource_Sap_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Savoroot_C" },
+					{ "qty": 4, "type": "PrimalItemConsumable_Stimulant_C" }
+				]
+			},
+			"statEffects": [
+				{
+					"stat": "food",
+					"value": 20,
+					"duration": 3.333333
+				},
+				{
+					"stat": "health",
+					"value": 10
+				}
+			],
+			"cooking": {
+				"health": 0.1,
+				"stamina": 0.01,
+				"food": 0.1,
 				"weight": 0.02,
 				"water": 0.01
 			}
@@ -28502,24 +28795,6 @@
 			"name": "Base Multi-item",
 			"description": "Inherit this for easy mutli-item creation",
 			"bp": "/Game/Mods/AE/Structures/EternalGodShrine/MultiCraftItems/PrimalItemConsumable_MulticraftItem_GodShrine_AEStuff.PrimalItemConsumable_MulticraftItem_GodShrine_AEStuff_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_MulticraftItem_Base.PrimalItemConsumable_MulticraftItem_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/FertilizerIcon.FertilizerIcon",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 0,
-				"time": 3600,
-				"levelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Gasoline_C" } ]
-			}
-		},
-		{
-			"name": "Base Multi-item",
-			"description": "Inherit this for easy mutli-item creation",
-			"bp": "/Game/Mods/AE/Structures/EternalGodShrine/MultiCraftItems/PrimalItemConsumable_MulticraftItem_GodShrine_AEStuffInstatame.PrimalItemConsumable_MulticraftItem_GodShrine_AEStuffInstatame_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_MulticraftItem_Base.PrimalItemConsumable_MulticraftItem_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/FertilizerIcon.FertilizerIcon",
 			"type": "MiscConsumable/Food",
