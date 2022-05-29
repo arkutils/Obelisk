@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "340.3.1624371883",
+	"version": "345.37.1653762219",
 	"format": "4",
 	"mod": {
 		"id": "2112724006",
@@ -197,6 +197,281 @@
 			"bp": "/Game/Mods/DarkArk/Dinos/Allo/Nest/DA_Allo_Nest_Character_BP.DA_Allo_Nest_Character_BP_C",
 			"dinoNameTag": "Dodo",
 			"customTag": "AlloNesting",
+			"targetingTeamName": "Nests",
+			"mass": 50000,
+			"dragWeight": 20000,
+			"flags": [ "canBeDragged", "canBeTorpid" ],
+			"leveling": {
+				"wildForcedLevel": 1,
+				"mutagenCost": 2
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
+		},
+		{
+			"name": "Amargasaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Baby/DA_Amargasaurus_Character_BP_Child.DA_Amargasaurus_Character_BP_Child_C",
+			"dinoNameTag": "Amarga",
+			"customTag": "Amarga",
+			"targetingTeamName": "Herbivores",
+			"mass": 375,
+			"dragWeight": 375,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 1,
+				"maxExperience": 261747100,
+				"mutagenCost": 24
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 264, "sprint": 1485 },
+				"swim": { "base": 315, "sprint": 482 }
+			},
+			"movementD": {
+				"walk": { "base": 264, "sprint": 1485 },
+				"swim": { "base": 315, "sprint": 482 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 350,
+				"attacks": [
+					{ "name": "Tail Swing", "interval": 0.25, "dmg": 50, "radius": 350, "stamina": 0 },
+					{
+						"name": "Spike Proj", "interval": 8, "dmg": 0, "radius": 350, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Swap Spike Type", "interval": 15, "dmg": 80, "radius": 350, "stamina": 20 },
+					{ "name": "Neck Swing", "interval": 0.25, "dmg": 45, "radius": 350, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.25, "dmg": 40, "radius": 350, "stamina": 0 },
+					{ "name": "Foot Stomp", "interval": 0.25, "dmg": 55, "radius": 350, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 15 }
+		},
+		{
+			"name": "Amargasaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Baby/DA_Amargasaurus_Character_BP_Child_Alternate.DA_Amargasaurus_Character_BP_Child_Alternate_C",
+			"dinoNameTag": "Amarga",
+			"customTag": "Amarga",
+			"targetingTeamName": "Herbivores",
+			"mass": 375,
+			"dragWeight": 375,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 1,
+				"maxExperience": 261747100,
+				"mutagenCost": 24
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 264, "sprint": 1485 },
+				"swim": { "base": 315, "sprint": 482 }
+			},
+			"movementD": {
+				"walk": { "base": 264, "sprint": 1485 },
+				"swim": { "base": 315, "sprint": 482 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 350,
+				"attacks": [
+					{ "name": "Tail Swing", "interval": 0.25, "dmg": 50, "radius": 350, "stamina": 0 },
+					{ "name": "Neck Swing", "interval": 0.25, "dmg": 45, "radius": 350, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.25, "dmg": 40, "radius": 350, "stamina": 0 },
+					{ "name": "Foot Stomp", "interval": 0.25, "dmg": 55, "radius": 350, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 15 }
+		},
+		{
+			"name": "Amargasaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Amargasaurus/DA_Amargasaurus_Character_BP.DA_Amargasaurus_Character_BP_C",
+			"dinoNameTag": "Amarga",
+			"customTag": "Amarga",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 375,
+			"dragWeight": 375,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"leveling": {
+				"maxExperience": 261747100,
+				"mutagenCost": 24
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 264, "sprint": 1485 },
+				"swim": { "base": 315, "sprint": 482 }
+			},
+			"movementD": {
+				"walk": { "base": 264, "sprint": 1485 },
+				"swim": { "base": 315, "sprint": 482 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 350,
+				"attacks": [
+					{ "name": "Tail Swing", "interval": 0.25, "dmg": 50, "radius": 350, "stamina": 0 },
+					{
+						"name": "Spike Proj", "interval": 8, "dmg": 0, "radius": 350, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Swap Spike Type", "interval": 15, "dmg": 80, "radius": 350, "stamina": 20 },
+					{ "name": "Neck Swing", "interval": 0.25, "dmg": 45, "radius": 350, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.25, "dmg": 40, "radius": 350, "stamina": 0 },
+					{ "name": "Foot Stomp", "interval": 0.25, "dmg": 55, "radius": 350, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 15 }
+		},
+		{
+			"name": "Amargasaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Nest/DA_Amargasaurus_Character_BP_Mother.DA_Amargasaurus_Character_BP_Mother_C",
+			"dinoNameTag": "Amarga",
+			"customTag": "Amarga",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 375,
+			"dragWeight": 375,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 40, "max": 50 } ],
+				"maxExperience": 261747100,
+				"mutagenCost": 24
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 264, "sprint": 1485 },
+				"swim": { "base": 315, "sprint": 482 }
+			},
+			"movementD": {
+				"walk": { "base": 264, "sprint": 1485 },
+				"swim": { "base": 315, "sprint": 482 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 350,
+				"attacks": [
+					{ "name": "Tail Swing", "interval": 0.25, "dmg": 50, "radius": 350, "stamina": 0 },
+					{
+						"name": "Spike Proj", "interval": 8, "dmg": 0, "radius": 350, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Swap Spike Type", "interval": 15, "dmg": 80, "radius": 350, "stamina": 20 },
+					{ "name": "Neck Swing", "interval": 0.25, "dmg": 45, "radius": 350, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.25, "dmg": 40, "radius": 350, "stamina": 0 },
+					{ "name": "Foot Stomp", "interval": 0.25, "dmg": 55, "radius": 350, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 15 }
+		},
+		{
+			"name": "Amargasaurus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Nest/DA_Amargasaurus_Nest_Character_BP.DA_Amargasaurus_Nest_Character_BP_C",
+			"dinoNameTag": "TrikeNest",
+			"customTag": "AmargasaurusNest",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
 			"dragWeight": 20000,
@@ -3189,6 +3464,187 @@
 			"bp": "/Game/Mods/DarkArk/Dinos/Dimorph/Nest/DA_Dimorph_Nest_Character_BP.DA_Dimorph_Nest_Character_BP_C",
 			"dinoNameTag": "DimorphNest",
 			"customTag": "DimorphNest",
+			"targetingTeamName": "Nests",
+			"mass": 50000,
+			"dragWeight": 20000,
+			"flags": [ "canBeDragged", "canBeTorpid" ],
+			"leveling": {
+				"wildForcedLevel": 1,
+				"mutagenCost": 2
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
+		},
+		{
+			"name": "Dinopithecus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Dinopithecus/Baby/DA_Dinopithecus_Character_BP_Child.DA_Dinopithecus_Character_BP_Child_C",
+			"dinoNameTag": "Dinopithecus",
+			"customTag": "Dinopithecus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 325,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 1,
+				"maxExperience": 22213960,
+				"levelCapOffset": 50,
+				"mutagenCost": 68
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 6200
+			},
+			"movementW": {
+				"walk": { "base": 510, "sprint": 1606.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 510, "sprint": 1785 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 46,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 46, "radius": 350, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 32, "radius": 500, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 32, "radius": 180, "stamina": 0 },
+					{
+						"name": "Throw Boulder", "interval": 15, "dmg": 0, "radius": 0, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "BattlecryCry", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BattlecryAttack", "interval": 30, "dmg": 25, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Dinopithecus",
+			"bp": "/Game/Mods/DarkArk/Dinos/Dinopithecus/DA_Dinopithecus_Character_BP.DA_Dinopithecus_Character_BP_C",
+			"dinoNameTag": "Dinopithecus",
+			"customTag": "Dinopithecus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 325,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50,
+				"mutagenCost": 68
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 6200
+			},
+			"movementW": {
+				"walk": { "base": 510, "sprint": 1606.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 510, "sprint": 1785 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 46,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 46, "radius": 350, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 32, "radius": 500, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 32, "radius": 180, "stamina": 0 },
+					{
+						"name": "Throw Boulder", "interval": 15, "dmg": 0, "radius": 0, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "BattlecryCry", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BattlecryAttack", "interval": 30, "dmg": 25, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Dire Wolf",
+			"bp": "/Game/Mods/DarkArk/Dinos/Dinopithecus/Den/DA_Dinopithecus_Den_Character_BP.DA_Dinopithecus_Den_Character_BP_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "DiloNesting",
 			"targetingTeamName": "Nests",
 			"mass": 50000,
 			"dragWeight": 20000,
@@ -11784,6 +12240,61 @@
 				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 5, "radius": 88, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 1.5 }
+		},
+		{
+			"name": "Sinomacrops",
+			"bp": "/Game/Mods/DarkArk/Dinos/Sinomacrops/DA_Sinomacrops_Character_BP.DA_Sinomacrops_Character_BP_C",
+			"dinoNameTag": "Sino",
+			"customTag": "Sino",
+			"targetingTeamName": "Herbivores",
+			"mass": 70,
+			"dragWeight": 60,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canMountOnHumans",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 1,
+				"maxExperience": 261747100,
+				"mutagenCost": 29
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 48, "sprint": 192 },
+				"fly": { "base": 450, "sprint": 1125 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 48, "sprint": 192 },
+				"fly": { "base": 450, "sprint": 1125 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 10, "radius": 200, "stamina": 0 },
+					{ "name": "Scream", "interval": 60, "dmg": 0, "radius": 200, "stamina": 12 }
+				]
+			},
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Araneo",

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "340.3.1624371883",
+	"version": "345.37.1653762219",
 	"format": "4",
 	"mod": {
 		"id": "2112724006",
@@ -63,7 +63,7 @@
 			"spoilsIn": 1800,
 			"spoilsTo": "/Game/Mods/DarkArk/Crops/Azulberry/DA_PrimalItemConsumable_Seed_Azulberry.DA_PrimalItemConsumable_Seed_Azulberry_C",
 			"statEffects": [
-				{ "stat": "torpidity", "value": 3, "useItemQuality": true, "duration": 3 },
+				{ "stat": "torpidity", "value": 1, "useItemQuality": true, "duration": 3 },
 				{ "stat": "oxygen", "value": 12, "useItemQuality": true, "duration": 3 },
 				{ "stat": "water", "value": 2, "useItemQuality": true, "duration": 3 }
 			],
@@ -792,6 +792,107 @@
 				"stamina": 15,
 				"food": 15,
 				"weight": 1,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Amargasaurus Saddle",
+			"description": "Equip an Amargasaurus with this to ride it.",
+			"bp": "/Game/Mods/DarkArk/Dinos/Amargasaurus/DA_PrimalItemArmor_AmargaSaddle.DA_PrimalItemArmor_AmargaSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/LostIsland/Icons/Dinos/HUD_LostIsland_AmargasaurusSaddle_M.HUD_LostIsland_AmargasaurusSaddle_M",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Tier 4 Superior Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 40,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "DA_PrimalItemArmor_4_SuperiorSaddle_C" } ]
+			}
+		},
+		{
+			"name": "Large Amargasaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes. If fertilized, must be hatched using a Mud Nest.",
+			"bp": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Nest/DA_PrimalItemConsumable_Egg_Amargasaurus.DA_PrimalItemConsumable_Egg_Amargasaurus_C",
+			"parent": "/Game/Mods/DarkArk/Generic/Eggs/Classes/DA_PrimalItemConsumable_Egg_Large.DA_PrimalItemConsumable_Egg_Large_C",
+			"icon": "/Game/LostIsland/Dinos/Amargasaurus/HUD_DinoEgg_MIC_Inst_Amarga.HUD_DinoEgg_MIC_Inst_Amarga",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 13,
+			"stackSize": 1,
+			"spoilsIn": 86400,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 6.666667 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 6.666667 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 1.333333 }
+			],
+			"cooking": {
+				"health": 2,
+				"stamina": 10,
+				"food": 10,
+				"weight": 0.6,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Large Fertilized Amargasaurus Egg",
+			"description": "",
+			"bp": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Nest/DA_PrimalItemConsumable_Egg_Amargasaurus_Fertilized.DA_PrimalItemConsumable_Egg_Amargasaurus_Fertilized_C",
+			"parent": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Nest/DA_PrimalItemConsumable_Egg_Amargasaurus.DA_PrimalItemConsumable_Egg_Amargasaurus_C",
+			"icon": "/Game/LostIsland/Dinos/Amargasaurus/HUD_DinoEgg_MIC_Inst_Amarga.HUD_DinoEgg_MIC_Inst_Amarga",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 13,
+			"stackSize": 1,
+			"spoilsIn": 172800,
+			"spoilsTo": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Nest/DA_PrimalItemConsumable_Egg_Amargasaurus.DA_PrimalItemConsumable_Egg_Amargasaurus_C",
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 6.666667 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 6.666667 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 1.333333 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Baby/DA_Amargasaurus_Character_BP_Child.DA_Amargasaurus_Character_BP_Child_C",
+				"temperature": { "min": -500, "max": -550 }
+			},
+			"cooking": {
+				"health": 2,
+				"stamina": 10,
+				"food": 10,
+				"weight": 0.6,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Large Fertilized Amargasaurus Egg",
+			"description": "",
+			"bp": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Nest/DA_PrimalItemConsumable_Egg_Amargasaurus_Fertilized_Alternate.DA_PrimalItemConsumable_Egg_Amargasaurus_Fertilized_Alternate_C",
+			"parent": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Nest/DA_PrimalItemConsumable_Egg_Amargasaurus_Fertilized.DA_PrimalItemConsumable_Egg_Amargasaurus_Fertilized_C",
+			"icon": "/Game/LostIsland/Dinos/Amargasaurus/HUD_DinoEgg_MIC_Inst_Amarga.HUD_DinoEgg_MIC_Inst_Amarga",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 13,
+			"stackSize": 1,
+			"spoilsIn": 172800,
+			"spoilsTo": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Nest/DA_PrimalItemConsumable_Egg_Amargasaurus.DA_PrimalItemConsumable_Egg_Amargasaurus_C",
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 6.666667 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 6.666667 },
+				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 1.333333 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/DarkArk/Dinos/Amargasaurus/Baby/DA_Amargasaurus_Character_BP_Child_Alternate.DA_Amargasaurus_Character_BP_Child_Alternate_C",
+				"temperature": { "min": -500, "max": -550 }
+			},
+			"cooking": {
+				"health": 2,
+				"stamina": 10,
+				"food": 10,
+				"weight": 0.6,
 				"water": 0.01
 			}
 		},
@@ -5192,6 +5293,34 @@
 			]
 		},
 		{
+			"name": "Medical Brew",
+			"description": "This brew has little nutritional value, but it promotes healing.",
+			"bp": "/Game/Mods/DarkArk/Food/Brews/DA_PrimalItemConsumable_HealSoup.DA_PrimalItemConsumable_HealSoup_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable_BuffingSoup.PrimalItemConsumableEatable_BuffingSoup_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/HealthPotion_Icon.HealthPotion_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Brews" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"spoilsIn": 7200,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Narcotic_C" },
+					{ "qty": 20, "type": "PrimalItemConsumable_Berry_Tintoberry_C" }
+				]
+			},
+			"statEffects": [
+				{ "stat": "health", "value": 40, "useItemQuality": true, "duration": 120 },
+				{ "stat": "food", "value": 5, "useItemQuality": true, "duration": 1 }
+			]
+		},
+		{
 			"name": "Concentrated Hemoglobin",
 			"description": "A pack of concentrated hemoglobin enriched with hyperoxygenated fructose from azulberries and stimulant. Slows oxygen use while underwater.",
 			"bp": "/Game/Mods/DarkArk/Food/Brews/DA_PrimalItemConsumable_Hemoglobin.DA_PrimalItemConsumable_Hemoglobin_C",
@@ -5250,6 +5379,34 @@
 			"statEffects": [
 				{ "stat": "torpidity", "value": 40, "useItemQuality": true, "duration": 8 },
 				{ "stat": "health", "value": 15, "useItemQuality": true, "duration": 0.9375 }
+			]
+		},
+		{
+			"name": "Energy Brew",
+			"description": "This brew doesn't have any nutritional value, but fills your stamina.",
+			"bp": "/Game/Mods/DarkArk/Food/Brews/DA_PrimalItemConsumable_StaminaSoup.DA_PrimalItemConsumable_StaminaSoup_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_StaminaSoup.PrimalItemConsumable_StaminaSoup_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/StaminaPotion_Icon.StaminaPotion_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Brews" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"spoilsIn": 7200,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Stimulant_C" },
+					{ "qty": 20, "type": "PrimalItemConsumable_Berry_Azulberry_C" }
+				]
+			},
+			"statEffects": [
+				{ "stat": "stamina", "value": 40, "useItemQuality": true, "duration": 10 },
+				{ "stat": "torpidity", "value": -80, "useItemQuality": true, "duration": 10 }
 			]
 		},
 		{
@@ -5526,7 +5683,7 @@
 			"spoilsTo": "/Game/Mods/DarkArk/Food/Meat/DA_PrimalItemConsumable_SpoiledMeat_Child.DA_PrimalItemConsumable_SpoiledMeat_Child_C",
 			"statEffects": [
 				{ "stat": "food", "value": 10, "useItemQuality": true, "duration": 2 },
-				{ "stat": "health", "value": -5, "useItemQuality": true, "duration": 1 }
+				{ "stat": "health", "value": 0, "useItemQuality": true }
 			],
 			"cooking": {
 				"health": 0.11,
@@ -5548,14 +5705,7 @@
 			"stackSize": 50,
 			"spoilsIn": 1200,
 			"spoilsTo": "/Game/Mods/DarkArk/Food/Meat/DA_PrimalItemConsumable_SpoiledMeat_Child.DA_PrimalItemConsumable_SpoiledMeat_Child_C",
-			"statEffects": [
-				{ "stat": "food", "value": 5, "useItemQuality": true, "duration": 5 },
-				{
-					"stat": "health", "value": 5, "useItemQuality": true,
-					"allowWhenFull": false,
-					"duration": 10
-				}
-			],
+			"statEffects": [ { "stat": "food", "value": 5, "useItemQuality": true, "duration": 5 } ],
 			"cooking": {
 				"health": 0.11,
 				"stamina": 0.01,
@@ -5578,7 +5728,7 @@
 			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawMeat.PrimalItemConsumable_RawMeat_C",
 			"statEffects": [
 				{ "stat": "food", "value": 50, "useItemQuality": true, "duration": 5 },
-				{ "stat": "health", "value": -10, "useItemQuality": true, "duration": 1 }
+				{ "stat": "health", "value": 0, "useItemQuality": true }
 			],
 			"cooking": {
 				"health": 0.05,
@@ -5602,7 +5752,7 @@
 			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawMeat.PrimalItemConsumable_RawMeat_C",
 			"statEffects": [
 				{ "stat": "food", "value": 30, "useItemQuality": true, "duration": 3 },
-				{ "stat": "health", "value": -5, "useItemQuality": true, "duration": 0.5 }
+				{ "stat": "health", "value": 0, "useItemQuality": true }
 			],
 			"cooking": {
 				"health": 0.05,
@@ -5614,7 +5764,7 @@
 		},
 		{
 			"name": "Raw Prime Fish Meat",
-			"description": "This delicious slice of fish meat can be eaten raw safely or cooked for significant nutritional and health benefits.\n\n<RichColor Color=\"0,1,1,1\">The exceptionally rich protein content of the meat promotes significant natural healing for 30 seconds.</>",
+			"description": "This delicious slice of fish meat can be eaten raw safely or cooked for significant nutritional benefits.",
 			"bp": "/Game/Mods/DarkArk/Food/Meat/DA_PrimalItemConsumable_RawPrimeMeat_Fish_Child.DA_PrimalItemConsumable_RawPrimeMeat_Fish_Child_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawPrimeMeat_Fish.PrimalItemConsumable_RawPrimeMeat_Fish_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/RawPrimeFishMeat_Icon.RawPrimeFishMeat_Icon",
@@ -5626,7 +5776,7 @@
 			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawMeat_Fish.PrimalItemConsumable_RawMeat_Fish_C",
 			"statEffects": [
 				{ "stat": "food", "value": 15, "useItemQuality": true, "duration": 10 },
-				{ "stat": "health", "value": 10, "useItemQuality": true, "duration": 30 }
+				{ "stat": "health", "value": 0, "useItemQuality": true, "duration": 30 }
 			],
 			"cooking": {
 				"health": 0.025,
@@ -6041,6 +6191,222 @@
 				"weight": 0.05,
 				"water": -1
 			}
+		},
+		{
+			"name": "Chibi-Archaeopteryx",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Archaeopteryx.PrimalItemSkin_ChibiDino_Archaeopteryx_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Gallimimus",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Gallimimus.PrimalItemSkin_ChibiDino_Gallimimus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Kairuku",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Kairuku.PrimalItemSkin_ChibiDino_Kairuku_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Lovebird",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_LoveBird.PrimalItemSkin_ChibiDino_LoveBird_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_VeryRare.ChibiIconMaterial_Inst_VeryRare",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "Chibi-Pelagornis",
+			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Pelagornis.PrimalItemSkin_ChibiDino_Pelagornis_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
+			"type": "Equipment/Shield",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1
+		},
+		{
+			"name": "BearHug Swim Bottom Skin",
+			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women.\n\nGuess that grumpy bruin was hoping for some honey.",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimPants_BearHug.PrimalItemSkin_Vday_SwimPants_BearHug_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
+			"icon": "/Game/Mods/DarkArk/PrimalEarth/Human/Male/Outfits/Underwear_July4th/Icons/HUD_VDay22_Bottoms_BearHug_Icon_Colorized_MIC.HUD_VDay22_Bottoms_BearHug_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 3.2,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "Odd Couple Swim Bottom Skin",
+			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women.\n\nThey say true love sees but doesn't mind. Good for them!",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimPants_OddCouple.PrimalItemSkin_Vday_SwimPants_OddCouple_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
+			"icon": "/Game/Mods/DarkArk/PrimalEarth/Human/Male/Outfits/Underwear_July4th/Icons/HUD_VDay22_Bottoms_OddCouple_Icon_Colorized_MIC.HUD_VDay22_Bottoms_OddCouple_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 3.2,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "Sauropod Heart Swim Bottom Skin",
+			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women.\n\nWhen they form that heart shape, you just feel the love.",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimPants_SauropodHeart.PrimalItemSkin_Vday_SwimPants_SauropodHeart_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
+			"icon": "/Game/Mods/DarkArk/PrimalEarth/Human/Male/Outfits/Underwear_July4th/Icons/HUD_VDay22_Bottoms_SauropodHearts_Icon_Colorized_MIC.HUD_VDay22_Bottoms_SauropodHearts_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 3.2,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "BearHug Swim Top Skin",
+			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women.\n\nLove might bear all things, but all bears don't love everything.",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimShirt_Bearhug.PrimalItemSkin_Vday_SwimShirt_Bearhug_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
+			"icon": "/Game/Mods/DarkArk/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_VDay22_Bra_BearHug_Icon_Colorized_MIC.HUD_VDay22_Bra_BearHug_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "Odd Couple Swim Top Skin",
+			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women.\n\nWho are we to deny their love? The heart wants what it wants.",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimShirt_OddCouple.PrimalItemSkin_Vday_SwimShirt_OddCouple_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
+			"icon": "/Game/Mods/DarkArk/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_VDay22_Bra_OddCouple_Icon_Colorized_MIC.HUD_VDay22_Bra_OddCouple_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "Sauropod Heart Swim Top Skin",
+			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women.\n\nDon't you love it when they curve like that?",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimShirt_SauropodHeart.PrimalItemSkin_Vday_SwimShirt_SauropodHeart_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
+			"icon": "/Game/Mods/DarkArk/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_VDay22_Bra_SauropodHearts_Icon_Colorized_MIC.HUD_VDay22_Bra_SauropodHearts_Icon_Colorized_MIC",
+			"type": "Skin",
+			"folders": [ "Holiday" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			}
+		},
+		{
+			"name": "\"Self Hug\" Emote",
+			"description": "Consume this to permanently unlock the \"Self Hug\" emote.\n\nRemember, your survival depends on loving yourself.",
+			"bp": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_UnlockEmote_SelfHug.PrimalItemConsumable_UnlockEmote_SelfHug_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Mods/DarkArk/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Emotes/HUD_VDay22_Emote_SelfHug_Icon.HUD_VDay22_Emote_SelfHug_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Holiday" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
+				]
+			},
+			"statEffects": [
+				{
+					"stat": "health",
+					"value": 1,
+					"duration": 0.5
+				}
+			]
 		},
 		{
 			"name": "Fertilizer",
