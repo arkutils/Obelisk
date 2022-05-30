@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.8.1648933425",
+	"version": "345.37.1653902498",
 	"format": "4",
 	"mod": {
 		"id": "1734595558",
@@ -8,6 +8,60 @@
 		"title": "Pyria: The Second Chapter"
 	},
 	"species": [
+		{
+			"name": "Kunoichi",
+			"bp": "/Game/Mods/Pyria2/Creatures/Mamono/Kunoichi/Kunoichi_Character_BP.Kunoichi_Character_BP_C",
+			"dinoNameTag": "",
+			"customTag": "Offhand",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 2400 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 2400 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Jutsu Jabs", "interval": 0.01, "dmg": 22, "radius": 240, "stamina": 0 },
+					{ "name": "Jutsu Dropkick", "interval": 11, "dmg": 30, "radius": 240, "stamina": 0 },
+					{ "name": "Jutsu Combo", "interval": 0.04, "dmg": 25, "radius": 240, "stamina": 0 },
+					{
+						"name": "KunaiStorm", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "EvadeAttacks: Jutsu", "interval": 3, "dmg": 25, "radius": 320, "stamina": 0 },
+					{ "name": "Ronin Slashes", "interval": 0.01, "dmg": 45, "radius": 240, "stamina": 0 },
+					{ "name": "Ronin MortalBlade", "interval": 9, "dmg": 47, "radius": 240, "stamina": 0 },
+					{ "name": "RogueBasicAttacks", "interval": 0.01, "dmg": 30, "radius": 320, "stamina": 0 },
+					{ "name": "RogueSpinAttack", "interval": 5, "dmg": 34, "radius": 320, "stamina": 0 },
+					{ "name": "RogueJumpAttacks", "interval": 8, "dmg": 34, "radius": 320, "stamina": 0 },
+					{ "name": "RogueAssasinate", "interval": 8, "dmg": 34, "radius": 320, "stamina": 0 },
+					{ "name": "RogueEvades", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
 		{
 			"name": "Lycan Bastion",
 			"bp": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Bastion/Bastion_Character_BP.Bastion_Character_BP_C",
@@ -305,6 +359,793 @@
 					{
 						"chance": 1,
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Paladin.DinoDropInventoryComponent_Pyria_Race_Paladin"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Briarwood Knight",
+			"bp": "/Game/Mods/Pyria2/Creatures/Undead/BriarKnight/BriarKnight_Character_BP.BriarKnight_Character_BP_C",
+			"dinoNameTag": "Withered",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 1050 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 200, "sprint": 1050 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "MeleeBasic", "interval": 0.2, "dmg": 42, "radius": 320, "stamina": 0 },
+					{ "name": "MeleeAoE", "interval": 10, "dmg": 45, "radius": 320, "stamina": 0 },
+					{ "name": "MeleeKnockUp", "interval": 15, "dmg": 48, "radius": 320, "stamina": 0 },
+					{ "name": "RetreatingSlash", "interval": 18, "dmg": 45, "radius": 320, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Wraith",
+			"bp": "/Game/Mods/Pyria2/Creatures/Undead/Wraith/Wraith_Character_BP.Wraith_Character_BP_C",
+			"dinoNameTag": "Withered",
+			"customTag": "Wiithered",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 325, "stamina": 0 },
+					{
+						"name": "Projectile", "interval": 2, "dmg": 0, "radius": 0, "stamina": 25,
+						"isProjectile": true
+					},
+					{ "name": "Invis", "interval": 65, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "TestWarp", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "AIProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Leslie, Echo of Monaia",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Leslie_Character_BP.Leslie_Character_BP_C",
+			"dinoNameTag": "Gigant",
+			"customTag": "Gigant",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 950,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 99 },
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 60,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1050, "sprint": 3003 }
+			},
+			"movementD": {
+				"walk": { "base": 1050, "sprint": 3003 }
+			},
+			"staminaRates": { "sprint": -50 },
+			"attack": {
+				"defaultDmg": 300,
+				"defaultSwingRadius": 850,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 500, "radius": 850, "stamina": 0 },
+					{ "name": "Proj", "interval": 0.4, "dmg": 0, "radius": 850, "stamina": 0 },
+					{ "name": "Spellcast", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Lifeline", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Stomp", "interval": 0.4, "dmg": 1000, "radius": 800, "stamina": 0 },
+					{ "name": "TailSlam", "interval": 0.4, "dmg": 800, "radius": 800, "stamina": 0 },
+					{ "name": "VulnerableState", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Gigant.DinoDropInventoryComponent_Carnivore_Huge_Gigant"
+					}
+				],
+				"baseXP": 200
+			}
+		},
+		{
+			"name": "Leslie's Mitosis",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/Artemis_Character_BP_Dark_Leslie.Artemis_Character_BP_Dark_Leslie_C",
+			"dinoNameTag": "Artemis",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 100,
+			"dragWeight": 125,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 1440 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 1440 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Normal", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Ballista", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Rapid", "interval": 15, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 25, "radius": 100, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_ArcherDark.DinoDropInventoryComponent_Pyria_Race_ArcherDark"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Leslie's Mitosis",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/Berserker_Character_BP_Dark_Leslie.Berserker_Character_BP_Dark_Leslie_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 100,
+			"dragWeight": 125,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 1320 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 1320 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Basic Swings", "interval": 0.2, "dmg": 45, "radius": 250, "stamina": 0 },
+					{ "name": "WildSlash", "interval": 6, "dmg": 35, "radius": 250, "stamina": 0 },
+					{ "name": "Impale", "interval": 4, "dmg": 45, "radius": 250, "stamina": 0 },
+					{ "name": "WindBurst", "interval": 8, "dmg": 125, "radius": 700, "stamina": 50 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_BerserkerDark.DinoDropInventoryComponent_Pyria_Race_BerserkerDark"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Leslie's Mitosis",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/Eminence_Character_BP_Dark_Leslie.Eminence_Character_BP_Dark_Leslie_C",
+			"dinoNameTag": "Berserker",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 2000,
+			"dragWeight": 150,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ],
+				"mutagenCost": 24
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 140, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 75, "radius": 200, "stamina": 0 },
+					{ "name": "Wind Blades", "interval": 3, "dmg": 85, "radius": 200, "stamina": 0 },
+					{ "name": "Shockwave", "interval": 6, "dmg": 65, "radius": 200, "stamina": 0 },
+					{ "name": "Melee", "interval": 8, "dmg": 0, "radius": 200, "stamina": 0 },
+					{ "name": "Incalescent Undex", "interval": 25, "dmg": 70, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkEminence.DinoDropInventoryComponent_Pyria_Race_DarkEminence"
+					}
+				],
+				"baseXP": 2000
+			}
+		},
+		{
+			"name": "Leslie's Mitosis",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/Hydra_Character_BP_Leslie.Hydra_Character_BP_Leslie_C",
+			"dinoNameTag": "Dragon",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 4000,
+			"dragWeight": 800,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 1001 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 1001 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 350, "sprint": 2282.3 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 80, "radius": 300, "stamina": 0 },
+					{ "name": "Roar", "interval": 30, "dmg": 7, "radius": 800, "stamina": 150 },
+					{ "name": "FlameBreath", "interval": 10, "dmg": 0, "radius": 0, "stamina": 150 },
+					{ "name": "Stomp", "interval": 15, "dmg": 150, "radius": 450, "stamina": 150 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Leslie's Mitosis",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/LionfishLion_Character_BP_Leslie.LionfishLion_Character_BP_Leslie_C",
+			"dinoNameTag": "Lionfish Lion",
+			"customTag": "LionfishLion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 350,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"levelCapOffset": 50,
+				"mutagenCost": 95
+			},
+			"cloning": {
+				"costBase": 2375,
+				"costLevel": 55,
+				"timeBase": 16625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 375, "sprint": 1500 },
+				"swim": { "base": 500, "sprint": 1400 }
+			},
+			"movementD": {
+				"walk": { "base": 375, "sprint": 1875 },
+				"swim": { "base": 500, "sprint": 1750 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "RightClickMeleeComboAdjustIndex", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Female Activate Stealth", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Male Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 80, "radius": 0, "stamina": 0 },
+					{ "name": "TriggerSoloCloak", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildTeleport", "interval": 1.2, "dmg": 35, "radius": 400, "stamina": 25 },
+					{ "name": "Bite", "interval": 1.2, "dmg": 35, "radius": 400, "stamina": 25 },
+					{ "name": "BiteFinisher", "interval": 1.2, "dmg": 35, "radius": 400, "stamina": 25 },
+					{ "name": "Teleport", "interval": 0, "dmg": 50, "radius": 0, "stamina": 0 },
+					{ "name": "MeleeCombo1", "interval": 0.2, "dmg": 47, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo2", "interval": 0.2, "dmg": 43, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo3", "interval": 0.2, "dmg": 44, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo4", "interval": 0.2, "dmg": 46, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo5", "interval": 0.2, "dmg": 45, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo6", "interval": 0.2, "dmg": 48, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Genesis2/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_LionfishLion.DinoDropInventoryComponent_Carnivore_Medium_LionfishLion"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Leslie's Mitosis",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/Spino_Character_BP_Leslie.Spino_Character_BP_Leslie_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 40, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Spino.DinoDropInventoryComponent_Carnivore_Huge_Spino"
+					}
+				],
+				"baseXP": 60
+			}
+		},
+		{
+			"name": "Leslie's Mitosis",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/Wyvern_Character_BP_Drachenthorne_Leslie.Wyvern_Character_BP_Drachenthorne_Leslie_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 416,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementR": {
+				"walk": { "base": 572.7, "sprint": 1157.5 },
+				"fly": { "base": 2490, "sprint": 3355.3 },
+				"swim": { "base": 2490 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{
+						"name": "Lightning", "interval": 6.5, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 0 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 0 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roll", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_LightningWyvern.DinoDropInventoryComponent_Carnivore_Huge_LightningWyvern"
+					}
+				],
+				"baseXP": 120
+			}
+		},
+		{
+			"name": "Leslie's Mitosis",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/Xenomorph_Character_BP_Male_Tamed_Leslie.Xenomorph_Character_BP_Male_Tamed_Leslie_C",
+			"dinoNameTag": "Xenomorph Corrupt",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Male", "Tamed" ],
+			"flags": [
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore",
+				"preventNeuter",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 93 },
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 699, "sprint": 1782.5 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1584.4 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 466, "sprint": 1346.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 65,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 100, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 75, "radius": 1000, "stamina": 30 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 100, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Extinction/CoreBlueprints/ItemLootSets/DinoDropInventoryComponent_Corrupted_Huge.DinoDropInventoryComponent_Corrupted_Huge"
+					}
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Leslie's Mitosis",
+			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/Zenith_Character_BP_Dark_Leslie.Zenith_Character_BP_Dark_Leslie_C",
+			"dinoNameTag": "Zenith",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 165,
+			"dragWeight": 150,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 30 } ],
+				"mutagenCost": 24
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 1200 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 1200 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -30,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Will Of The Wind", "interval": 2, "dmg": 120, "radius": 850, "stamina": 0 },
+					{ "name": "MeteorRain", "interval": 20, "dmg": 0, "radius": 0, "stamina": 150 },
+					{ "name": "PoisonStorm", "interval": 30, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "ElectroBurst", "interval": 15, "dmg": 190, "radius": 900, "stamina": 100 },
+					{ "name": "Aura Burst", "interval": 15, "dmg": 185, "radius": 900, "stamina": 75 },
+					{ "name": "Aura Barrage", "interval": 10, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Glacial End", "interval": 15, "dmg": 0, "radius": 0, "stamina": 425 },
+					{ "name": "Nature'sWrath", "interval": 20, "dmg": 0, "radius": 1000, "stamina": 150 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_DarkZenith.DinoDropInventoryComponent_Pyria_Race_DarkZenith"
 					}
 				],
 				"baseXP": 3

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "345.19.1650352642",
+	"version": "345.37.1653902901",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -1238,6 +1238,31 @@
 			}
 		},
 		{
+			"name": "Light's Blessing",
+			"description": "An elixir embewed with holy energy. Cures most forms of Dark-based Ailments (DarkBlight, Blood Curse, Fell Curse), and protects against them for a minute afterward.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_DivineCure.PrimalItemConsumable_DivineCure_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DivineAuraPotion.DivineAuraPotion",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 45, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 45, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 160, "type": "PrimalItemConsumable_Berry_Azulberry_C" },
+					{ "qty": 160, "type": "PrimalItemResource_ManaLight_C" }
+				]
+			}
+		},
+		{
 			"name": "Grand Elixir",
 			"description": "Heals 250 HP per second for 10 seconds. Recovers 100 food per sec to compensate.Not for player consumption.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GrandElixir.PrimalItemConsumable_GrandElixir_C",
@@ -2009,8 +2034,8 @@
 					{ "qty": 800, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 50, "type": "PrimalItemResource_Magicrystal_C" },
 					{ "qty": 500, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 800, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 50, "type": "PrimalItemResource_BlackPearl_C" }
+					{ "qty": 1600, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 200, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			}
 		},
@@ -2057,11 +2082,12 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 800, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 500, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 300, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 150, "type": "PrimalItemResource_Magicrystal_C" },
 					{ "qty": 500, "type": "PrimalItemResource_Silicon_C" },
-					{ "qty": 1500, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 200, "type": "PrimalItemResource_BlackPearl_C" }
+					{ "qty": 3200, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 300, "type": "PrimalItemResource_BlackPearlDust_C" }
 				]
 			}
 		},
@@ -2855,14 +2881,13 @@
 		},
 		{
 			"name": "Magicrystal",
-			"description": "Crystal enchanted with arcane energy and mana, becoming a powerful conductor for it. It's normally fabricated, but can be very rarely formed naturally in nature. \n\nIt can be made into lenses, used as an electronics component, or mixed into powerful explosives",
+			"description": "Crystal enchanted with arcane energy and mana, becoming a powerful conductor for it. It's normally fabricated, but can be very rarely formed naturally in nature. \n\nUsually used in various arcane, alchemical practices. In Pyria, they're widely used as a conductor, or reagent.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Resource/PrimalItemResource_Magicrystal.PrimalItemResource_Magicrystal_C",
-			"parent": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalResources/Primal/PrimalItemResource_Crystal_IslesPrimal.PrimalItemResource_Crystal_IslesPrimal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Magicrystal.Magicrystal",
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 1000,
-			"spoilsIn": 0,
 			"crafting": {
 				"xp": 1,
 				"time": 5,
