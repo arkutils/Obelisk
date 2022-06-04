@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "340.3.1635887922",
+	"version": "345.39.1654361801",
 	"format": "4",
 	"mod": {
 		"id": "1522327484",
@@ -139,6 +139,70 @@
 		{
 			"name": "X-Acrocanthosaurus",
 			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/Bog_Acrocanthosaurus_Character_BP.Bog_Acrocanthosaurus_Character_BP_C",
+			"dinoNameTag": "Acro",
+			"customTag": "Acro",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 450,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 87 },
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 650, "sprint": 1144 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 650, "sprint": 1430 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -18,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 50, "radius": 400, "stamina": 0 },
+					{ "name": "Shield Stance", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Stomp", "interval": 15, "dmg": 95, "radius": 800, "stamina": 7 },
+					{ "name": "ShieldBash", "interval": 0, "dmg": 20, "radius": 800, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "AdrenalineBite", "interval": 2, "dmg": 50, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Blueprints/DinoDropInventoryComponent_Carnivore_Huge_Acro.DinoDropInventoryComponent_Carnivore_Huge_Acro"
+					}
+				],
+				"baseXP": 35
+			}
+		},
+		{
+			"name": "Paleo Acrocanthosaurus",
+			"bp": "/Game/Mods/Additions_Pack/Acrocanthosaurus/Dinos/PaleoArk_Acrocanthosaurus_Character_BP.PaleoArk_Acrocanthosaurus_Character_BP_C",
 			"dinoNameTag": "Acro",
 			"customTag": "Acro",
 			"targetingTeamName": "Carnivores_High",
@@ -444,7 +508,7 @@
 					{ "name": "BackStomps", "interval": 0.8, "dmg": 110, "radius": 700, "stamina": 20 },
 					{ "name": "ChangeStance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 15 },
 					{ "name": "Bellow", "interval": 0, "dmg": 1, "radius": 1500, "stamina": 150 },
-					{ "name": "MegaStomp", "interval": 0, "dmg": 2500, "radius": 1700, "stamina": 0 }
+					{ "name": "MegaStomp", "interval": 0, "dmg": 2000, "radius": 1700, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 100 }
@@ -485,7 +549,7 @@
 					{ "name": "BackStomps", "interval": 0.8, "dmg": 110, "radius": 700, "stamina": 20 },
 					{ "name": "ChangeStance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 15 },
 					{ "name": "Bellow", "interval": 0, "dmg": 1, "radius": 1500, "stamina": 150 },
-					{ "name": "MegaStomp", "interval": 0, "dmg": 2500, "radius": 1700, "stamina": 0 }
+					{ "name": "MegaStomp", "interval": 0, "dmg": 2000, "radius": 1700, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 100 }
@@ -526,7 +590,7 @@
 					{ "name": "BackStomps", "interval": 0.8, "dmg": 110, "radius": 700, "stamina": 20 },
 					{ "name": "ChangeStance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 15 },
 					{ "name": "Bellow", "interval": 0, "dmg": 1, "radius": 1500, "stamina": 150 },
-					{ "name": "MegaStomp", "interval": 0, "dmg": 2500, "radius": 1700, "stamina": 0 }
+					{ "name": "MegaStomp", "interval": 0, "dmg": 2000, "radius": 1700, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 100 }
@@ -567,7 +631,7 @@
 					{ "name": "BackStomps", "interval": 0.8, "dmg": 110, "radius": 700, "stamina": 20 },
 					{ "name": "ChangeStance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 15 },
 					{ "name": "Bellow", "interval": 0, "dmg": 1, "radius": 1500, "stamina": 150 },
-					{ "name": "MegaStomp", "interval": 0, "dmg": 2500, "radius": 1700, "stamina": 0 }
+					{ "name": "MegaStomp", "interval": 0, "dmg": 2000, "radius": 1700, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 100 }
@@ -608,7 +672,7 @@
 					{ "name": "BackStomps", "interval": 0.8, "dmg": 110, "radius": 700, "stamina": 20 },
 					{ "name": "ChangeStance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 15 },
 					{ "name": "Bellow", "interval": 0, "dmg": 1, "radius": 1500, "stamina": 150 },
-					{ "name": "MegaStomp", "interval": 0, "dmg": 2500, "radius": 1700, "stamina": 0 }
+					{ "name": "MegaStomp", "interval": 0, "dmg": 2000, "radius": 1700, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 100 }
@@ -1070,6 +1134,156 @@
 				],
 				"baseXP": 2
 			}
+		},
+		{
+			"name": "R-Helicoprion",
+			"bp": "/Game/Mods/Additions_Pack/Helicoprion/Dinos/G_EdenHelicoprion_Character_BP.G_EdenHelicoprion_Character_BP_C",
+			"dinoNameTag": "G_Helicoprion",
+			"customTag": "G_Helicoprion",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 70 },
+			"cloning": {
+				"costBase": 1750,
+				"costLevel": 55,
+				"timeBase": 12250,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.55, "dmg": 30, "radius": 250, "stamina": 0 },
+					{ "name": "Tail Hwip", "interval": 13, "dmg": 50, "radius": 400, "stamina": 20 },
+					{ "name": "Breaching", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 8 }
+		},
+		{
+			"name": "Helicoprion",
+			"bp": "/Game/Mods/Additions_Pack/Helicoprion/Dinos/G_Helicoprion_Character_BP.G_Helicoprion_Character_BP_C",
+			"dinoNameTag": "G_Helicoprion",
+			"customTag": "G_Helicoprion",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 70 },
+			"cloning": {
+				"costBase": 1750,
+				"costLevel": 55,
+				"timeBase": 12250,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.55, "dmg": 30, "radius": 250, "stamina": 0 },
+					{ "name": "Tail Hwip", "interval": 13, "dmg": 50, "radius": 400, "stamina": 20 },
+					{ "name": "Breaching", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 8 }
+		},
+		{
+			"name": "X-Helicoprion",
+			"bp": "/Game/Mods/Additions_Pack/Helicoprion/Dinos/G_OceanHelicoprion_Character_BP.G_OceanHelicoprion_Character_BP_C",
+			"dinoNameTag": "G_Helicoprion",
+			"customTag": "G_Helicoprion",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 70 },
+			"cloning": {
+				"costBase": 1750,
+				"costLevel": 55,
+				"timeBase": 12250,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.55, "dmg": 30, "radius": 250, "stamina": 0 },
+					{ "name": "Tail Hwip", "interval": 13, "dmg": 50, "radius": 400, "stamina": 20 },
+					{ "name": "Breaching", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 8 }
 		},
 		{
 			"name": "Abyssal Xiphactinus",
