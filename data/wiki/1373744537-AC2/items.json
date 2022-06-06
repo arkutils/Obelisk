@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "345.31.1652950577",
+	"version": "345.39.1654509562",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -244,7 +244,7 @@
 			"folders": [ "Consumables", "Berries" ],
 			"weight": 0.02,
 			"stackSize": 1000,
-			"spoilsIn": 600,
+			"spoilsIn": 1200,
 			"crafting": {
 				"xp": 1,
 				"time": 5,
@@ -1093,7 +1093,7 @@
 		{
 			"name": "Spinosaurus Saddle",
 			"description": "Equip an Spinosaurus with this to ride it.",
-			"bp": "/Game/Mods/AC2/GenomicSpino/PrimalItemArmor_GeneSpino.PrimalItemArmor_GeneSpino_C",
+			"bp": "/Game/Mods/AC2/GenomicSpino/PrimalItemArmor_GeneSpinoSaddle.PrimalItemArmor_GeneSpinoSaddle_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/PrimalEarth/Dinos/Spino/Saddle/HUD_SpinoSaddle_Colorize_MIC.HUD_SpinoSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
@@ -1308,6 +1308,39 @@
 				"food": 0.0525,
 				"weight": 0.01,
 				"water": 0.035
+			}
+		},
+		{
+			"name": "Swamp Boss Kibble",
+			"description": "This kibble is a hard-crafted delicacy. With a certain fluffy friend on your shoulder, a certain \"big, angry bird\" should definately be given enough internal struggles to decide you're worth tolerating and becoming friends with!",
+			"bp": "/Game/Mods/AC2/Items/GooseFood/PrimalItemConsumable_Kibble_Base_GooseFood.PrimalItemConsumable_Kibble_Base_GooseFood_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/Mods/AC2/Items/Icons/Mythos_Apex_Kibble.Mythos_Apex_Kibble",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.01,
+			"stackSize": 500,
+			"spoilsIn": 259200,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_Kibble_Base_Special_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_CropBlend_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_CookedPrimeMeat_Fish_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Honey_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 62, "useItemQuality": true, "duration": 12.4 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05,
+				"water": -1
 			}
 		},
 		{
@@ -1566,13 +1599,436 @@
 			"stackSize": 1000
 		},
 		{
-			"name": "Genome Assembly",
+			"name": "Genomic Spinosaurus Genome",
+			"description": "Genomic Series artificial genome for Spinosaurus. An attempt to create an animal closer to the original, while still being viable for, and adapted for, ARK network environments.\n\nSuchomimus, Baryonyx, and Vallibonaventrix are pulled for aquatic adaptability and affinity. Spinosaurus and Oxalaia are pulled for size, durability, power and terrestrial capability.\n\nThe result is a more traditional Spinosaurus species on-par to the ARK's Tyrannosaurus dominum.\n\nSemi-Hybrids are defined as taking genomes from creatures within the same family. As such, they can breed reliably, compared to normal hybrids.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Artificial/Semihybrid/PrimalItemResource_Genome_GenomicSpoon.PrimalItemResource_Genome_GenomicSpoon_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/PrimalItemResource_Genome_Base.PrimalItemResource_Genome_Base_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/GeneSpinoGenome.GeneSpinoGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Artificial", "Semihybrid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 120,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Genome_AC2Spino_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Bary_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Oxa_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Succ_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_ValleyGirl_C" }
+				]
+			}
+		},
+		{
+			"name": "R-Genomic Spinosaurus Genome",
+			"description": "Genomic Series artificial genome for Spinosaurus of R-variation. An attempt to create an animal closer to the original, while still being viable for, and adapted for, ARK network environments.\n\nSuchomimus, Baryonyx, and Vallibonaventrix are pulled for aquatic adaptability and affinity. Spinosaurus and Oxalaia are pulled for size, durability, power and terrestrial capability.\n\nThe result is a more traditional Spinosaurus species on-par to the ARK's Tyrannosaurus dominum.\n\nSemi-Hybrids are defined as taking genomes from creatures within the same family. As such, they can breed reliably, compared to normal hybrids.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Artificial/Semihybrid/PrimalItemResource_Genome_GenomicSpoon_Aberrant.PrimalItemResource_Genome_GenomicSpoon_Aberrant_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Artificial/Semihybrid/PrimalItemResource_Genome_GenomicSpoon.PrimalItemResource_Genome_GenomicSpoon_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/GeneSpinoGenome.GeneSpinoGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Artificial", "Semi-Hybrid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 120,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Genome_AC2Spino_Aberrant_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Bary_Aberrant_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Oxa_Aberrant_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Succ_Aberrant_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_ValleyGirl_C" }
+				]
+			}
+		},
+		{
+			"name": "X-Genomic Spinosaurus Genome",
+			"description": "Genomic Series artificial genome for Spinosaurus of X-variation. An attempt to create an animal closer to the original, while still being viable for, and adapted for, ARK network environments.\n\nSuchomimus, Baryonyx, and Vallibonaventrix are pulled for aquatic adaptability and affinity. Spinosaurus and Oxalaia are pulled for size, durability, power and terrestrial capability.\n\nThe result is a more traditional Spinosaurus species on-par to the ARK's Tyrannosaurus dominum.\n\nSemi-Hybrids are defined as taking genomes from creatures within the same family. As such, they can breed reliably, compared to normal hybrids.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Artificial/Semihybrid/PrimalItemResource_Genome_GenomicSpoon_Bog.PrimalItemResource_Genome_GenomicSpoon_Bog_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Artificial/Semihybrid/PrimalItemResource_Genome_GenomicSpoon.PrimalItemResource_Genome_GenomicSpoon_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/GeneSpinoGenome.GeneSpinoGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Artificial", "Semihybrid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 120,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Genome_AC2Spino_Bog_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Bary_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Oxa_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Succ_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_ValleyGirl_C" }
+				]
+			}
+		},
+		{
+			"name": "Aberrant Genomic Spinosaurus Genome",
+			"description": "Genomic Series artificial genome for Spinosaurus of Aberrant variation. An attempt to create an animal closer to the original, while still being viable for, and adapted for, ARK network environments.\n\nSuchomimus, Baryonyx, and Vallibonaventrix are pulled for aquatic adaptability and affinity. Spinosaurus and Oxalaia are pulled for size, durability, power and terrestrial capability.\n\nThe result is a more traditional Spinosaurus species on-par to the ARK's Tyrannosaurus dominum.\n\nSemi-Hybrids are defined as taking genomes from creatures within the same family. As such, they can breed reliably, compared to normal hybrids.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Artificial/Semihybrid/PrimalItemResource_Genome_GenomicSpoon_Eden.PrimalItemResource_Genome_GenomicSpoon_Eden_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Artificial/Semihybrid/PrimalItemResource_Genome_GenomicSpoon.PrimalItemResource_Genome_GenomicSpoon_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/GeneSpinoGenome.GeneSpinoGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Artificial", "Semihybrid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 120,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Genome_AC2Spino_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Bary_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Oxa_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_Succ_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Genome_ValleyGirl_C" }
+				]
+			}
+		},
+		{
+			"name": "Base Genome",
+			"description": "Generic Genome Base :O",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/PrimalItemResource_Genome_Base.PrimalItemResource_Genome_Base_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/AbelisaurGenome.AbelisaurGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_RawMeat_C" } ]
+			}
+		},
+		{
+			"name": "Spinosaurus Genome",
+			"description": "Genetic material of the ARK's Spinosaurus aquareliga species.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_AC2Spino.PrimalItemResource_Genome_AC2Spino_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/PrimalItemResource_Genome_Base.PrimalItemResource_Genome_Base_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Spino_Fertilized_C" } ]
+			}
+		},
+		{
+			"name": "Aberrant Spinosaurus Genome",
+			"description": "Genetic material of the ARK's Spinosaurus aquareliga Aberrant subspecies.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_AC2Spino_Aberrant.PrimalItemResource_Genome_AC2Spino_Aberrant_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_AC2Spino.PrimalItemResource_Genome_AC2Spino_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Spino_Fertilized_Aberrant_C" } ]
+			}
+		},
+		{
+			"name": "X-Spinosaurus Genome",
+			"description": "Genetic material of the ARK's Spinosaurus aquareliga X subspecies.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_AC2Spino_Bog.PrimalItemResource_Genome_AC2Spino_Bog_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_AC2Spino.PrimalItemResource_Genome_AC2Spino_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Spino_Fertilized_Bog_C" } ]
+			}
+		},
+		{
+			"name": "Baryonyx Genome",
+			"description": "Genetic material of the ARK's Baryonyx aquafulgur species.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_Bary.PrimalItemResource_Genome_Bary_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/PrimalItemResource_Genome_Base.PrimalItemResource_Genome_Base_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Baryonyx_Fertilized_C" } ]
+			}
+		},
+		{
+			"name": "Baryonyx Genome",
+			"description": "Genetic material of the ARK's Baryonyx aquafulgur species.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_Bary_Aberrant.PrimalItemResource_Genome_Bary_Aberrant_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_Bary.PrimalItemResource_Genome_Bary_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Baryonyx_Fertilized_Aberrant_C" } ]
+			}
+		},
+		{
+			"name": "Oxalaia Genome",
+			"description": "Genetic material of the ARK's Oxalaia dacia species.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_Oxa.PrimalItemResource_Genome_Oxa_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/PrimalItemResource_Genome_Base.PrimalItemResource_Genome_Base_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Oxa_Fertilized_C" } ]
+			}
+		},
+		{
+			"name": "Aberrant Oxalaia Genome",
+			"description": "Genetic material of the ARK's Oxalaia dacia Aberrant subspecies.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_Oxa_Aberrant.PrimalItemResource_Genome_Oxa_Aberrant_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_Oxa.PrimalItemResource_Genome_Oxa_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Oxa_Fertilized_Aberrant_C" } ]
+			}
+		},
+		{
+			"name": "Suchomimus Genome",
+			"description": "Genetic material of the ARK's Suchomimus grandis species.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_Succ.PrimalItemResource_Genome_Succ_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/PrimalItemResource_Genome_Base.PrimalItemResource_Genome_Base_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Succ_Fertilized_C" } ]
+			}
+		},
+		{
+			"name": "Aberrant Suchomimus Genome",
+			"description": "Genetic material of the ARK's Suchomimus grandis Aberrant subspecies.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_Succ_Aberrant.PrimalItemResource_Genome_Succ_Aberrant_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_Succ.PrimalItemResource_Genome_Succ_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Succ_Fertilized_Aberrant_C" } ]
+			}
+		},
+		{
+			"name": "Vallibonaventrix Genome",
+			"description": "Genetic material of the ARK's Vallibonaventrix levinacrus species.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Whole/PrimalItemResource_Genome_ValleyGirl.PrimalItemResource_Genome_ValleyGirl_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/PrimalItemResource_Genome_Base.PrimalItemResource_Genome_Base_C",
+			"icon": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/Genomes/Icons/SpinosauridGenome.SpinosauridGenome",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 5,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Valli_Fertilized_C" } ]
+			}
+		},
+		{
+			"name": "Synthesized Egg Base",
+			"description": "Poggo Eggo?",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/SynthEggs/PrimalItemResource_SynthEgg_Base.PrimalItemResource_SynthEgg_Base_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Egg_Icon.Egg_Icon",
+			"type": "Resource",
+			"folders": [ "Genetics", "Hybrid Projects", "Semi-Hybrid" ],
+			"weight": 2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 100, "type": "PrimalItemResource_Genome_Base_C" } ]
+			}
+		},
+		{
+			"name": "Synthesized Genomic Spinosaurus Egg",
+			"description": "After crafting this item, consume it (use it) to spawn a fertilized egg of the hybrid at your feet. The egg will need to be cared for like a normal egg, so be ready.\n\nCreation time: 30 Minutes",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/SynthEggs/SemiHybrid/PrimalItemResource_SynthEgg_GenomicSpino.PrimalItemResource_SynthEgg_GenomicSpino_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/SynthEggs/PrimalItemResource_SynthEgg_Base.PrimalItemResource_SynthEgg_Base_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
+			"type": "Resource",
+			"folders": [ "Genetics", "Hybrid Projects", "Semi-Hybrid" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 300,
+			"crafting": {
+				"xp": 1,
+				"time": 1800,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 100, "type": "PrimalItemResource_Genome_GenomicSpoon_C" } ]
+			}
+		},
+		{
+			"name": "Synthesized Aberrant Genomic Spinosaurus Egg",
+			"description": "After crafting this item, consume it (use it) to spawn a fertilized egg of the hybrid at your feet. The egg will need to be cared for like a normal egg, so be ready.\n\nCreation time: 30 Minutes",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/SynthEggs/SemiHybrid/PrimalItemResource_SynthEgg_GenomicSpino_Aberrant.PrimalItemResource_SynthEgg_GenomicSpino_Aberrant_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/SynthEggs/PrimalItemResource_SynthEgg_Base.PrimalItemResource_SynthEgg_Base_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
+			"type": "Resource",
+			"folders": [ "Genetics", "Hybrid Projects", "Semi-Hybrid" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 300,
+			"crafting": {
+				"xp": 1,
+				"time": 1800,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 100, "type": "PrimalItemResource_Genome_GenomicSpoon_Aberrant_C" } ]
+			}
+		},
+		{
+			"name": "Synthesized X-Genomic Spinosaurus Egg",
+			"description": "After crafting this item, consume it (use it) to spawn a fertilized egg of the hybrid at your feet. The egg will need to be cared for like a normal egg, so be ready.\n\nCreation time: 30 Minutes",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/SynthEggs/SemiHybrid/PrimalItemResource_SynthEgg_GenomicSpino_Bog.PrimalItemResource_SynthEgg_GenomicSpino_Bog_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/SynthEggs/PrimalItemResource_SynthEgg_Base.PrimalItemResource_SynthEgg_Base_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
+			"type": "Resource",
+			"folders": [ "Genetics", "Hybrid Projects", "Semi-Hybrid" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 300,
+			"crafting": {
+				"xp": 1,
+				"time": 1800,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 100, "type": "PrimalItemResource_Genome_GenomicSpoon_Bog_C" } ]
+			}
+		},
+		{
+			"name": "Synthesized R-Genomic Spinosaurus Egg",
+			"description": "After crafting this item, consume it (use it) to spawn a fertilized egg of the hybrid at your feet. The egg will need to be cared for like a normal egg, so be ready.\n\nCreation time: 30 Minutes",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/SynthEggs/SemiHybrid/PrimalItemResource_SynthEgg_GenomicSpino_Eden.PrimalItemResource_SynthEgg_GenomicSpino_Eden_C",
+			"parent": "/Game/Mods/AC2/Items/SPEKTOR/Genetics/SynthEggs/PrimalItemResource_SynthEgg_Base.PrimalItemResource_SynthEgg_Base_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
+			"type": "Resource",
+			"folders": [ "Genetics", "Hybrid Projects", "Semi-Hybrid" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 300,
+			"crafting": {
+				"xp": 1,
+				"time": 1800,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 100, "type": "PrimalItemResource_Genome_GenomicSpoon_Eden_C" } ]
+			}
+		},
+		{
+			"name": "Genomics Assembly",
 			"description": "A modified stasis chamber used to manufacture genetic life.",
 			"bp": "/Game/Mods/AC2/Items/SPEKTOR/GenomeAssembly/PrimalItemStructure_GenomeAssembly.PrimalItemStructure_GenomeAssembly_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/ChemistryTable_Icon.ChemistryTable_Icon",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKCloningChamber_Icon.TEKCloningChamber_Icon",
 			"type": "Structure",
-			"folders": [ "Structures", "Crafting" ],
+			"folders": [ "Structures" ],
 			"weight": 4,
 			"stackSize": 1,
 			"crafting": {
@@ -1582,11 +2038,13 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 400, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 250, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 350, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 350, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 600, "type": "PrimalItemResource_Electronics_C" }
+					{ "qty": 1000, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_SteelIngot_C" },
+					{ "qty": 600, "type": "PrimalItemResource_Tungsten_C" },
+					{ "qty": 450, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 760, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 800, "type": "PrimalItemResource_Electronics_C" }
 				]
 			},
 			"structure": "/Game/Mods/AC2/Items/SPEKTOR/GenomeAssembly/StorageBox_GenomeAssembly.StorageBox_GenomeAssembly_C"
@@ -1611,7 +2069,7 @@
 			}
 		},
 		{
-			"name": "Sciences Table",
+			"name": "C.A.A. Science Workstation",
 			"description": "Looks a bit rusted and rough, but that's what you get on the arks. It's a reliable station to help you learn some sciences that'll give you an edge of survival. Requires electrical power, as well as additional gasoline power in inventory.",
 			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Table/PrimalItemStructure_CAATable.PrimalItemStructure_CAATable_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
@@ -3172,7 +3630,7 @@
 			"name": "Fertilized Aberrant Oxalaia Egg",
 			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AC2/Oxa/PrimalItemConsumable_Egg_Oxa_Fertilized_Aberrant.PrimalItemConsumable_Egg_Oxa_Fertilized_Aberrant_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Spino.PrimalItemConsumable_Egg_Spino_C",
+			"parent": "/Game/Mods/AC2/Oxa/PrimalItemConsumable_Egg_Oxa_Fertilized.PrimalItemConsumable_Egg_Oxa_Fertilized_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
@@ -3898,7 +4356,7 @@
 			"name": "Fertilized Aberrant Suchomimus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AC2/Suchomimus/PrimalItemConsumable_Egg_Succ_Fertilized_Aberrant.PrimalItemConsumable_Egg_Succ_Fertilized_Aberrant_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Yuty.PrimalItemConsumable_Egg_Yuty_C",
+			"parent": "/Game/Mods/AC2/Suchomimus/PrimalItemConsumable_Egg_Succ_Fertilized.PrimalItemConsumable_Egg_Succ_Fertilized_C",
 			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Yuty.HUD_DinoEgg_MIC_Inst_Yuty",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Consumables", "Eggs" ],
@@ -4102,6 +4560,108 @@
 			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AC2/Torvo/Ac2Torvo_Character_bp_Aberrant.Ac2Torvo_Character_bp_Aberrant_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Vallibonavenatrix Gauntlets",
+			"description": "Equip a Vallibonavenatrix with these gauntlets in order to boost its claw attack power and new attributes to the attacks.",
+			"bp": "/Game/Mods/AC2/Valli/Equip/PrimalItemArmor_ValliGauntlets.PrimalItemArmor_ValliGauntlets_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/Mods/AC2/Valli/Tex/BoneGloves_icon_02.BoneGloves_icon_02",
+			"type": "Equipment/Gloves",
+			"folders": [ "Saddles" ],
+			"weight": 15,
+			"stackSize": 1,
+			"durability": 120,
+			"crafting": {
+				"xp": 86,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 380, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 32, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 35, "type": "PrimalItemResource_ApexDrop_Megalodon_C" }
+				]
+			},
+			"repair": {
+				"xp": 86,
+				"time": 5,
+				"recipe": [
+					{ "qty": 190, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 16, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 17.5, "type": "PrimalItemResource_ApexDrop_Megalodon_C" }
+				]
+			}
+		},
+		{
+			"name": "Vallibonavenatrix Muzzle",
+			"description": "Equip a Vallibonavenatrix with this to increase its biting strength.",
+			"bp": "/Game/Mods/AC2/Valli/Equip/PrimalItemArmor_ValliMuzzle.PrimalItemArmor_ValliMuzzle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Teeth_Icon.Teeth_Icon",
+			"type": "Equipment/Hat",
+			"folders": [ "Saddles" ],
+			"weight": 10,
+			"stackSize": 1,
+			"durability": 120,
+			"crafting": {
+				"xp": 86,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 150, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 15, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ApexDrop_Megalodon_C" }
+				]
+			},
+			"repair": {
+				"xp": 86,
+				"time": 5,
+				"recipe": [
+					{ "qty": 75, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 7.5, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 12.5, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 12.5, "type": "PrimalItemResource_ApexDrop_Megalodon_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Vallibonaventrix Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Valli/PrimalItemConsumable_Egg_Valli_Fertilized.PrimalItemConsumable_Egg_Valli_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Allo.PrimalItemConsumable_Egg_Allo_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Allosaurus.HUD_DinoEgg_MIC_Inst_Allosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Valli/Valli_Character_BP.Valli_Character_BP_C",
 				"temperature": { "min": 26, "max": 32 }
 			},
 			"cooking": {
