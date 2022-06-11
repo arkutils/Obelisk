@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/species.json",
-	"version": "345.3.8538117",
+	"version": "345.39.8870324",
 	"format": "4",
 	"species": [
 		{
@@ -7310,7 +7310,7 @@
 			"targetingTeamName": "Bot",
 			"mass": 100,
 			"dragWeight": 35,
-			"variants": [ "Genesis" ],
+			"variants": [ "Genesis", "Minion" ],
 			"leveling": {
 				"wildLevelTable": []
 			},
@@ -7350,7 +7350,7 @@
 			"targetingTeamName": "Bot",
 			"mass": 100,
 			"dragWeight": 35,
-			"variants": [ "Genesis" ],
+			"variants": [ "Genesis", "Minion" ],
 			"leveling": {
 				"wildLevelTable": []
 			},
@@ -7385,7 +7385,7 @@
 			"targetingTeamName": "Bot",
 			"mass": 100,
 			"dragWeight": 35,
-			"variants": [ "Genesis" ],
+			"variants": [ "Genesis", "Minion" ],
 			"leveling": {
 				"wildLevelTable": []
 			},
@@ -7425,7 +7425,7 @@
 			"targetingTeamName": "Bot",
 			"mass": 100,
 			"dragWeight": 35,
-			"variants": [ "Genesis" ],
+			"variants": [ "Genesis", "Minion" ],
 			"leveling": {
 				"wildLevelTable": []
 			},
@@ -41303,7 +41303,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 10000,
 			"dragWeight": 1200,
-			"variants": [ "Valguero" ],
+			"variants": [ "Boss", "Valguero" ],
 			"flags": [ "canDrag", "isBigDino", "isCarnivore" ],
 			"falling": {
 				"dmgMult": 80,
@@ -45184,6 +45184,7 @@
 			"targetingTeamName": "TargetOnlyPlayers",
 			"mass": 400,
 			"dragWeight": 1500,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -45230,6 +45231,7 @@
 			"targetingTeamName": "TargetOnlyPlayers",
 			"mass": 400,
 			"dragWeight": 1500,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -45276,6 +45278,7 @@
 			"targetingTeamName": "TargetOnlyPlayers",
 			"mass": 400,
 			"dragWeight": 1500,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -46268,111 +46271,6 @@
 				"attacks": [ { "name": "Melee", "interval": 0.4, "dmg": 8, "radius": 170, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 1 }
-		},
-		{
-			"name": "Tek Giganotosaurus",
-			"bp": "/Game/PrimalEarth/Dinos/Giganotosaurus/BionicGigant_Character_BP.BionicGigant_Character_BP_C",
-			"dinoNameTag": "Gigant",
-			"customTag": "Gigant",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 400,
-			"dragWeight": 950,
-			"flags": [
-				"allowRiding",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isTameable"
-			],
-			"leveling": {
-				"wildLevelTable": [
-					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
-					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
-					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
-					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
-				],
-				"mutagenCost": 99
-			},
-			"falling": {
-				"dmgMult": 60,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 1050, "sprint": 1681.7 }
-			},
-			"movementD": {
-				"walk": { "base": 1050, "sprint": 1681.7 }
-			},
-			"staminaRates": { "sprint": -29 },
-			"attack": {
-				"defaultDmg": 300,
-				"defaultSwingRadius": 850,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Gigant.DinoDropInventoryComponent_Carnivore_Huge_Gigant"
-					}
-				],
-				"baseXP": 200
-			}
-		},
-		{
-			"name": "Malfunctioned Tek Giganotosaurus",
-			"bp": "/Game/PrimalEarth/Dinos/Giganotosaurus/BionicGigant_Character_BP_Malfunctioned.BionicGigant_Character_BP_Malfunctioned_C",
-			"dinoNameTag": "Gigant",
-			"customTag": "Gigant",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 400,
-			"dragWeight": 950,
-			"flags": [
-				"allowRiding",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"leveling": { "mutagenCost": 99 },
-			"falling": {
-				"dmgMult": 60,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 1050, "sprint": 1681.7 }
-			},
-			"movementD": {
-				"walk": { "base": 1050, "sprint": 1681.7 }
-			},
-			"staminaRates": { "sprint": -29 },
-			"attack": {
-				"defaultDmg": 300,
-				"defaultSwingRadius": 850,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Gigant.DinoDropInventoryComponent_Carnivore_Huge_Gigant"
-					}
-				],
-				"baseXP": 200
-			}
 		},
 		{
 			"name": "Skeletal Giganotosaurus",
@@ -49873,7 +49771,7 @@
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
 			"mass": 100,
 			"dragWeight": 21,
-			"variants": [ "BreakNet" ],
+			"variants": [ "BreakNet", "Mission" ],
 			"flags": [
 				"canBeDragged",
 				"canDrag",
@@ -49915,7 +49813,7 @@
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
 			"mass": 100,
 			"dragWeight": 21,
-			"variants": [ "IceFishing" ],
+			"variants": [ "IceFishing", "Mission" ],
 			"flags": [
 				"canBeDragged",
 				"canDrag",
@@ -51172,126 +51070,6 @@
 					{ "name": "Bite", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 },
 					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Bite (AI)", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Rex.DinoDropInventoryComponent_Carnivore_Huge_Rex"
-					}
-				],
-				"baseXP": 30
-			}
-		},
-		{
-			"name": "Malfunctioned Tek Rex",
-			"bp": "/Game/PrimalEarth/Dinos/Rex/BionicRex_Character_BP_Malfunctioned.BionicRex_Character_BP_Malfunctioned_C",
-			"dinoNameTag": "Rex",
-			"customTag": "Rex",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"leveling": { "mutagenCost": 87 },
-			"cloning": {
-				"costBase": 2175,
-				"costLevel": 55,
-				"timeBase": 15225,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 515, "sprint": 736.4 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 515, "sprint": 1104.7 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 60,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 },
-					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (AI)", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Rex.DinoDropInventoryComponent_Carnivore_Huge_Rex"
-					}
-				],
-				"baseXP": 30
-			}
-		},
-		{
-			"name": "Malfunctioned Tek Rex",
-			"bp": "/Game/PrimalEarth/Dinos/Rex/BionicRex_Character_BP_Malfunctioned_Adolescent.BionicRex_Character_BP_Malfunctioned_Adolescent_C",
-			"dinoNameTag": "Rex",
-			"customTag": "Rex",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 400,
-			"dragWeight": 550,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"leveling": { "mutagenCost": 87 },
-			"cloning": {
-				"costBase": 2175,
-				"costLevel": 55,
-				"timeBase": 15225,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 515, "sprint": 736.4 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 515, "sprint": 1104.7 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 60,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 },
-					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (AI)", "interval": 0.4, "dmg": 62, "radius": 200, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -54896,7 +54674,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 800,
 			"dragWeight": 1000,
-			"variants": [ "ScorchedEarth" ],
+			"variants": [ "Boss", "ScorchedEarth" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowRiding",
@@ -54978,7 +54756,7 @@
 			"targetingTeamName": "Herbivores",
 			"mass": 50,
 			"dragWeight": 25,
-			"variants": [ "ScorchedEarth" ],
+			"variants": [ "ScorchedEarth", "Skeletal" ],
 			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
 			"leveling": {
 				"wildForcedLevel": 1,

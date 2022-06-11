@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "345.39.1654808990",
+	"version": "345.39.1654982153",
 	"format": "4",
 	"mod": {
 		"id": "2112724006",
@@ -2912,7 +2912,8 @@
 			"folders": [ "Consumables", "Eggs" ],
 			"weight": 2,
 			"stackSize": 1,
-			"spoilsIn": 172800,
+			"spoilsIn": 86400,
+			"spoilsTo": "/Game/Mods/DarkArk/Dinos/Mantis/Nest/DA_PrimalItemConsumable_Egg_Mantis_Fertilized.DA_PrimalItemConsumable_Egg_Mantis_Fertilized_C",
 			"statEffects": [
 				{ "stat": "food", "value": 150, "useItemQuality": true, "duration": 10 },
 				{ "stat": "stamina", "value": 150, "useItemQuality": true, "duration": 10 },
@@ -4675,6 +4676,54 @@
 			}
 		},
 		{
+			"name": "Araneo Saddle",
+			"description": "Equip an Araneo with this to ride it.",
+			"bp": "/Game/Mods/DarkArk/Dinos/Spider/DA_PrimalItemArmor_SpiderSaddle.DA_PrimalItemArmor_SpiderSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Stag/Saddle/HUD_StagSaddle_Colorize_MIC.HUD_StagSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Tier 4 Superior Saddles" ],
+			"weight": 12,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 40,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "DA_PrimalItemArmor_4_SuperiorSaddle_C" } ]
+			}
+		},
+		{
+			"name": "Fertilized Araneo Egg",
+			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or... If fertilized, must be hatched using a Living Nest.",
+			"bp": "/Game/Mods/DarkArk/Dinos/Spider/Nest/DA_PrimalItemConsumable_Egg_Spider_Fertilized.DA_PrimalItemConsumable_Egg_Spider_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Spider.PrimalItemConsumable_Egg_Spider_C",
+			"icon": "/Game/Genesis/Icons/Items/Item_BogSpiderEgg_Icon.Item_BogSpiderEgg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 1.5,
+			"stackSize": 1,
+			"spoilsIn": 86400,
+			"spoilsTo": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Spider_Silk.DA_PrimalItemResource_Spider_Silk_C",
+			"statEffects": [
+				{ "stat": "food", "value": 45, "useItemQuality": true, "duration": 11.25 },
+				{ "stat": "health", "value": 45, "useItemQuality": true, "duration": 11.25 },
+				{ "stat": "stamina", "value": 45, "useItemQuality": true, "duration": 11.25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/DarkArk/Dinos/Spider/Baby/DA_SpiderS_Character_BP_Child.DA_SpiderS_Character_BP_Child_C",
+				"temperature": { "min": 1000, "max": 1050 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Colossal Fertilized Spino Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes. If fertilized, must be hatched using a Living Nest.",
 			"bp": "/Game/Mods/DarkArk/Dinos/Spino/AberrantSpino/Nest/DA_Ab_PrimalItemConsumable_Egg_Spino_Fertilized.DA_Ab_PrimalItemConsumable_Egg_Spino_Fertilized_C",
@@ -5894,7 +5943,7 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "DA_PrimalItemConsumable_SpoiledMeat_Child_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_SpoiledMeat_C" },
 					{ "qty": 2, "type": "PrimalItemResource_Charcoal_C" },
 					{ "qty": 2, "type": "PrimalItemResource_Hide_C" }
 				]
@@ -7213,16 +7262,6 @@
 			"stackSize": 100
 		},
 		{
-			"name": "Metal",
-			"description": "A lump of unrefined metal ore, mined from rocks usually found high on mountains, or in caves. Can be refined in a Forge.",
-			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Metal.DA_PrimalItemResource_Metal_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Metal.PrimalItemResource_Metal_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/MetalOre_Icon.MetalOre_Icon",
-			"type": "Resource",
-			"weight": 1,
-			"stackSize": 300
-		},
-		{
 			"name": "Honeycomb Morel",
 			"description": "An exceptionally rare and delicious mushroom, its distinctive sweet and woody taste allows it to be used as a substitute for honey in recipes. Provides a buff to earning XP.",
 			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_MorelMushroom.DA_PrimalItemResource_MorelMushroom_C",
@@ -7398,16 +7437,6 @@
 			"stackSize": 200
 		},
 		{
-			"name": "Stone",
-			"description": "A hefty chunk of stone.",
-			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Stone.DA_PrimalItemResource_Stone_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Stone.PrimalItemResource_Stone_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Stone_Icon.Stone_Icon",
-			"type": "Resource",
-			"weight": 0.5,
-			"stackSize": 100
-		},
-		{
 			"name": "Sulfur",
 			"description": "Used to craft distinct kind of ammunition. Can be found in the Caves",
 			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Sulfur.DA_PrimalItemResource_Sulfur_C",
@@ -7429,39 +7458,11 @@
 			}
 		},
 		{
-			"name": "Thatch",
-			"description": "Sticks torn from trees.  Useful for primitive bindings.",
-			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Thatch.DA_PrimalItemResource_Thatch_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Thatch.PrimalItemResource_Thatch_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Thatch_Icon.Thatch_Icon",
-			"type": "Resource",
-			"weight": 0.02,
-			"stackSize": 200,
-			"crafting": {
-				"xp": 1,
-				"time": 0.2,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
-			}
-		},
-		{
 			"name": "Shell Fragment",
 			"description": "A firm, flexible material from the shell of a large animal. Can be used as a replacement for Keratin.",
 			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_TurtleShell.DA_PrimalItemResource_TurtleShell_C",
 			"parent": "/Game/Genesis/CoreBlueprints/Resources/PrimalItemResource_TurtleShell.PrimalItemResource_TurtleShell_C",
 			"icon": "/Game/Genesis/UI/Icons/HUD_TurtleShellFragment_Icon.HUD_TurtleShellFragment_Icon",
-			"type": "Resource",
-			"weight": 0.5,
-			"stackSize": 100
-		},
-		{
-			"name": "Wood",
-			"description": "A thick, sturdy cutting from a tree.",
-			"bp": "/Game/Mods/DarkArk/Resource/DA_PrimalItemResource_Wood.DA_PrimalItemResource_Wood_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Wood.PrimalItemResource_Wood_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Wood_Icon.Wood_Icon",
 			"type": "Resource",
 			"weight": 0.5,
 			"stackSize": 100
@@ -8214,7 +8215,7 @@
 			"structure": "/Game/Mods/DarkArk/Structures/Bonfire/DA_Bonfire.DA_Bonfire_C"
 		},
 		{
-			"name": "Campfire",
+			"name": "Campfire (Hunted)",
 			"description": "Perfect for cooking meat, staying warm, and providing light.",
 			"bp": "/Game/Mods/DarkArk/Structures/Campfire/DA_PrimalItemStructure_Campfire.DA_PrimalItemStructure_Campfire_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
@@ -8408,7 +8409,7 @@
 			}
 		},
 		{
-			"name": "Cooking Pot",
+			"name": "Cooking Pot (Hunted)",
 			"description": "Must contain basic fuel to light the fire.  Put various ingredients with water in this to make soups, stews, and dyes.",
 			"bp": "/Game/Mods/DarkArk/Structures/CookingPot/DA_PrimalItemStructure_CookingPot.DA_PrimalItemStructure_CookingPot_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
