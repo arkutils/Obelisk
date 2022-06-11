@@ -183,15 +183,71 @@
 					"title": "Weight",
 					"type": "number"
 				},
+				"rollOneItemOnly": {
+					"title": "Rolloneitemonly",
+					"default": false,
+					"anyOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "boolean"
+						}
+					]
+				},
 				"qty": {
 					"$ref": "#/definitions/MinMaxPowerRange"
 				},
 				"quality": {
 					"$ref": "#/definitions/MinMaxPowerRange"
 				},
-				"forceBP": {
-					"title": "Forcebp",
-					"type": "boolean"
+				"bpChance": {
+					"title": "Bpchance",
+					"default": 0,
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"grindable": {
+					"title": "Grindable",
+					"default": false,
+					"anyOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "boolean"
+						}
+					]
+				},
+				"statMaxMult": {
+					"title": "Statmaxmult",
+					"default": 1,
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
 				},
 				"items": {
 					"title": "Items",
@@ -223,7 +279,6 @@
 				"weight",
 				"qty",
 				"quality",
-				"forceBP",
 				"items"
 			],
 			"additionalProperties": false
@@ -232,6 +287,10 @@
 			"title": "ItemSet",
 			"type": "object",
 			"properties": {
+				"bp": {
+					"title": "Bp",
+					"type": "string"
+				},
 				"name": {
 					"title": "Name",
 					"type": "string"
@@ -247,10 +306,20 @@
 						}
 					]
 				},
-				"qtyScale": {
-					"$ref": "#/definitions/MinMaxPowerRange"
+				"canRepeatItems": {
+					"title": "Canrepeatitems",
+					"description": "Each item entry can be picked more than once",
+					"default": true,
+					"anyOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "boolean"
+						}
+					]
 				},
-				"qualityScale": {
+				"qtyScale": {
 					"$ref": "#/definitions/MinMaxPowerRange"
 				},
 				"entries": {
@@ -264,7 +333,6 @@
 			"required": [
 				"weight",
 				"qtyScale",
-				"qualityScale",
 				"entries"
 			],
 			"additionalProperties": false
