@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/species.json",
-	"version": "345.39.8870324",
+	"version": "345.39.8870324.1",
 	"format": "4",
 	"species": [
 		{
@@ -4423,47 +4423,6 @@
 			"dinoNameTag": "Enforcer",
 			"customTag": "Enforcer",
 			"targetingTeamName": "Robot_Neutral",
-			"mass": 500,
-			"dragWeight": 35,
-			"variants": [ "Extinction" ],
-			"flags": [ "allowRiding", "canBeDragged" ],
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 600, "sprint": 1402.5 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 600, "sprint": 1650 },
-				"swim": { "base": 300 }
-			},
-			"movementR": {
-				"walk": { "base": 600, "sprint": 2145 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 34, "radius": 300, "stamina": 25 },
-					{ "name": "Blink", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 300 },
-					{ "name": "Blast", "interval": 15, "dmg": 0, "radius": 0, "stamina": 500 }
-				]
-			},
-			"death": { "baseXP": 2 }
-		},
-		{
-			"name": "Malfunctioned Enforcer",
-			"bp": "/Game/Extinction/Dinos/Enforcer/Enforcer_Character_BP_Malfunctioned.Enforcer_Character_BP_Malfunctioned_C",
-			"dinoNameTag": "Enforcer",
-			"customTag": "Enforcer",
-			"targetingTeamName": "Carnivores_High",
 			"mass": 500,
 			"dragWeight": 35,
 			"variants": [ "Extinction" ],
@@ -42982,6 +42941,7 @@
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 222,
 			"dragWeight": 600,
+			"variants": [ "Skeletal" ],
 			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
 			"leveling": { "mutagenCost": 27 },
 			"cloning": {
@@ -46280,6 +46240,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 950,
+			"variants": [ "Skeletal" ],
 			"flags": [
 				"allowRiding",
 				"canBeTorpid",
@@ -49291,55 +49252,6 @@
 			"death": { "baseXP": 1 }
 		},
 		{
-			"name": "Malfunctioned Tek Parasaur",
-			"bp": "/Game/PrimalEarth/Dinos/Para/BionicPara_Character_BP_Malfunctioned.BionicPara_Character_BP_Malfunctioned_C",
-			"dinoNameTag": "Para",
-			"customTag": "Parasaur",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 200,
-			"dragWeight": 125,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag"
-			],
-			"leveling": { "mutagenCost": 15 },
-			"cloning": {
-				"costBase": 350,
-				"costLevel": 38.5,
-				"timeBase": 2450,
-				"timeLevel": 269.5
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 916.5 },
-				"swim": { "base": 450 }
-			},
-			"movementD": {
-				"walk": { "base": 150, "sprint": 458.3 },
-				"swim": { "base": 337.5 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 12,
-				"defaultSwingRadius": 100,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 12, "radius": 100, "stamina": 5 },
-					{ "name": "AlertPulse", "interval": 0, "dmg": 0, "radius": 0, "stamina": 15 },
-					{ "name": "Frighten", "interval": 120, "dmg": 0, "radius": 0, "stamina": 80 }
-				]
-			},
-			"death": { "baseXP": 1 }
-		},
-		{
 			"name": "Parasaur",
 			"bp": "/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C",
 			"dinoNameTag": "Para",
@@ -50410,63 +50322,6 @@
 			"death": { "baseXP": 18 }
 		},
 		{
-			"name": "Malfunctioned Tek Quetzal",
-			"bp": "/Game/PrimalEarth/Dinos/Quetzalcoatlus/BionicQuetz_Character_BP_Malfunctioned.BionicQuetz_Character_BP_Malfunctioned_C",
-			"dinoNameTag": "Quetz",
-			"customTag": "Quetz",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 190,
-			"dragWeight": 500,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isFlyerDino"
-			],
-			"leveling": { "mutagenCost": 98 },
-			"cloning": {
-				"costBase": 2450,
-				"costLevel": 550,
-				"timeBase": 17150,
-				"timeLevel": 3850
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 478.8, "sprint": 1149.1 },
-				"fly": { "base": 665, "sprint": 1596 },
-				"swim": { "base": 665 }
-			},
-			"movementD": {
-				"walk": { "base": 360, "sprint": 684 },
-				"fly": { "base": 500, "sprint": 950 },
-				"swim": { "base": 500 }
-			},
-			"movementR": {
-				"walk": { "base": 320.4, "sprint": 578.3 },
-				"fly": { "base": 445, "sprint": 803.2 },
-				"swim": { "base": 445 }
-			},
-			"staminaRates": {
-				"sprint": -7,
-				"swimOrFly": -0.185
-			},
-			"attack": {
-				"defaultDmg": 32,
-				"defaultSwingRadius": 200,
-				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 32, "radius": 720, "stamina": 16 },
-					{ "name": "None", "interval": 1, "dmg": 32, "radius": 370, "stamina": 80 }
-				]
-			},
-			"death": { "baseXP": 18 }
-		},
-		{
 			"name": "Skeletal Quetzal",
 			"bp": "/Game/PrimalEarth/Dinos/Quetzalcoatlus/Bone_Quetz_Character_BP.Bone_Quetz_Character_BP_C",
 			"dinoNameTag": "Quetz",
@@ -50474,6 +50329,7 @@
 			"targetingTeamName": "Herbivores",
 			"mass": 190,
 			"dragWeight": 500,
+			"variants": [ "Skeletal" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowRiding",
@@ -50660,66 +50516,6 @@
 			}
 		},
 		{
-			"name": "Malfunctioned Tek Raptor",
-			"bp": "/Game/PrimalEarth/Dinos/Raptor/BionicRaptor_Character_BP_Malfunctioned.BionicRaptor_Character_BP_Malfunctioned_C",
-			"dinoNameTag": "Raptor",
-			"customTag": "Raptor",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore"
-			],
-			"leveling": { "mutagenCost": 24 },
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 480, "sprint": 993.6 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 480, "sprint": 1104 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 0 },
-					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 },
-					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "None", "interval": 0.2, "dmg": 20, "radius": 180, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 0.3,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
 			"name": "Skeletal Raptor",
 			"bp": "/Game/PrimalEarth/Dinos/Raptor/Bone_MegaRaptor_Character_BP.Bone_MegaRaptor_Character_BP_C",
 			"dinoNameTag": "Bone Raptor",
@@ -50727,6 +50523,7 @@
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 185,
 			"dragWeight": 600,
+			"variants": [ "Skeletal" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -51091,6 +50888,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 550,
+			"variants": [ "Skeletal" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -51677,6 +51475,7 @@
 			"targetingTeamName": "Herbivores_Large",
 			"mass": 500,
 			"dragWeight": 1000,
+			"variants": [ "Skeletal" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -52989,57 +52788,6 @@
 			"death": { "baseXP": 5 }
 		},
 		{
-			"name": "Malfunctioned Tek Stegosaurus",
-			"bp": "/Game/PrimalEarth/Dinos/Stego/BionicStego_Character_BP_Malfunctioned.BionicStego_Character_BP_Malfunctioned_C",
-			"dinoNameTag": "Stego",
-			"customTag": "Stego",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 260,
-			"dragWeight": 250,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino"
-			],
-			"leveling": { "mutagenCost": 30 },
-			"cloning": {
-				"costBase": 725,
-				"costLevel": 55,
-				"timeBase": 5075,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 170, "sprint": 607.7 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 76.5, "sprint": 210.4 },
-				"swim": { "base": 135 }
-			},
-			"staminaRates": {
-				"sprint": -20,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 42,
-				"defaultSwingRadius": 450,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 },
-					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 },
-					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 5 }
-		},
-		{
 			"name": "Skeletal Stego",
 			"bp": "/Game/PrimalEarth/Dinos/Stego/Bone_Stego_Character_BP.Bone_Stego_Character_BP_C",
 			"dinoNameTag": "Stego",
@@ -53047,6 +52795,7 @@
 			"targetingTeamName": "Herbivores_Medium",
 			"mass": 260,
 			"dragWeight": 250,
+			"variants": [ "Skeletal" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -53656,55 +53405,6 @@
 			"death": { "baseXP": 4 }
 		},
 		{
-			"name": "Malfunctioned Tek Triceratops",
-			"bp": "/Game/PrimalEarth/Dinos/Trike/BionicTrike_Character_BP_Malfunctioned.BionicTrike_Character_BP_Malfunctioned_C",
-			"dinoNameTag": "Trike",
-			"customTag": "Trike",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 225,
-			"dragWeight": 300,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino"
-			],
-			"leveling": { "mutagenCost": 24 },
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 150, "sprint": 607.5 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 94.5, "sprint": 283.5 },
-				"swim": { "base": 189 }
-			},
-			"staminaRates": {
-				"sprint": -14,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 32,
-				"defaultSwingRadius": 430,
-				"attacks": [
-					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 430, "stamina": 0 },
-					{ "name": "Ram", "interval": 30, "dmg": 32, "radius": 430, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 4 }
-		},
-		{
 			"name": "Skeletal Trike",
 			"bp": "/Game/PrimalEarth/Dinos/Trike/Bone_Trike_Character_BP.Bone_Trike_Character_BP_C",
 			"dinoNameTag": "Trike",
@@ -53712,6 +53412,7 @@
 			"targetingTeamName": "Herbivores_Medium",
 			"mass": 225,
 			"dragWeight": 300,
+			"variants": [ "Skeletal" ],
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -55753,7 +55454,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 800,
 			"dragWeight": 416,
-			"variants": [ "ScorchedEarth" ],
+			"variants": [ "ScorchedEarth", "Skeletal" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowRiding",
