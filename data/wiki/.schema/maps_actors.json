@@ -160,6 +160,14 @@
 			"items": {
 				"$ref": "#/definitions/Carniflora"
 			}
+		},
+		"runes": {
+			"title": "Runes",
+			"default": [],
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Rune"
+			}
 		}
 	},
 	"required": [
@@ -1355,6 +1363,82 @@
 		},
 		"Carniflora": {
 			"title": "Carniflora",
+			"type": "object",
+			"properties": {
+				"hidden": {
+					"title": "Hidden",
+					"default": false,
+					"type": "boolean"
+				},
+				"x": {
+					"title": "X",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"y": {
+					"title": "Y",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"z": {
+					"title": "Z",
+					"anyOf": [
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						},
+						{
+							"type": "number"
+						},
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"lat": {
+					"title": "Lat",
+					"type": "number"
+				},
+				"long": {
+					"title": "Long",
+					"type": "number"
+				}
+			},
+			"required": [
+				"x",
+				"y",
+				"z"
+			],
+			"additionalProperties": false
+		},
+		"Rune": {
+			"title": "Rune",
 			"type": "object",
 			"properties": {
 				"hidden": {
