@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "340.3.1630328296",
+	"version": "346.16.1655745445",
 	"format": "4",
 	"mod": {
 		"id": "1270181453",
@@ -304,7 +304,7 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 480, "sprint": 1296 },
+				"walk": { "base": 480, "sprint": 1008 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
@@ -395,53 +395,6 @@
 				],
 				"baseXP": 1
 			}
-		},
-		{
-			"name": "Aberrant Dimorphodon",
-			"bp": "/Game/Mods/AdditionalAberrantDinos/Dimorph/Dimorph_Character_BP_Aberrant.Dimorph_Character_BP_Aberrant_C",
-			"dinoNameTag": "Dimorph",
-			"customTag": "Dimorph",
-			"targetingTeamName": "Carnivores_Low",
-			"mass": 70,
-			"dragWeight": 70,
-			"flags": [
-				"canBeDragged",
-				"canBeTorpid",
-				"canMountOnHumans",
-				"isFlyerDino",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 29 },
-			"cloning": {
-				"costBase": 700,
-				"costLevel": 55,
-				"timeBase": 4900,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450, "sprint": 810 },
-				"swim": { "base": 450 }
-			},
-			"movementD": {
-				"walk": { "base": 80, "sprint": 144 },
-				"fly": { "base": 450, "sprint": 810 },
-				"swim": { "base": 450 }
-			},
-			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 23,
-				"defaultSwingRadius": 200,
-				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 23, "radius": 200, "stamina": 0 } ]
-			},
-			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Aberrant Eurypterid",
@@ -955,7 +908,14 @@
 					{ "chance": 0.2, "min": 6, "max": 12 },
 					{ "chance": 0.2, "min": 13, "max": 20 },
 					{ "chance": 0.2, "min": 21, "max": 38 }
-				]
+				],
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
 			},
 			"falling": {
 				"dmgMult": 80,
@@ -2025,6 +1985,127 @@
 					}
 				],
 				"baseXP": 30
+			}
+		},
+		{
+			"name": "Raptor",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/_SharedParents/KrakenRaptor_Character_BP_AAD.KrakenRaptor_Character_BP_AAD_C",
+			"dinoNameTag": "Raptor",
+			"customTag": "Raptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 1176 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1680 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 20, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Deinonychus",
+			"bp": "/Game/Mods/AdditionalAberrantDinos/_SharedParents/KrakenUberRaptor_Character_BP_AAD.KrakenUberRaptor_Character_BP_AAD_C",
+			"dinoNameTag": "Deinonychus",
+			"customTag": "Deinonychus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 1008 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1440 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 350, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 30, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 30, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
 			}
 		}
 	]
