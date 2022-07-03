@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "346.16.1656375567",
+	"version": "347.1.1656835701",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -2255,7 +2255,7 @@
 			"type": "Weapon",
 			"folders": [ "Weapons", "Other" ],
 			"weight": 0.5,
-			"stackSize": 10,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 11.35,
 				"time": 5,
@@ -6369,7 +6369,7 @@
 			"description": "Soul harvested from a wild Omega creature.\nCan be placed in the beacon to guarantee the same variant is summoned.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_OmegaSoul.PrimalItem_OmegaSoul_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
-			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/BossSoul_Icon.BossSoul_Icon",
+			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/OmegaSoul_Icon.OmegaSoul_Icon",
 			"type": "Equipment/Trophy",
 			"flags": [ "preventCheatGive" ],
 			"weight": 0.5,
@@ -8228,6 +8228,31 @@
 				]
 			},
 			"structure": "/Game/Mods/ArkOmega/Structures/SetMan/Structure_SetMannequin.Structure_SetMannequin_C"
+		},
+		{
+			"name": "Soul Compressor",
+			"description": "A storage unit able to compress and cache Omega Souls into itself, taking up no inventory space.\n\nCached souls are able to be pulled out using a Soul Magnet.",
+			"bp": "/Game/Mods/ArkOmega/Structures/SoulCompressor/PrimalItemStructure_SoulCompressor.PrimalItemStructure_SoulCompressor_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/ArkOmega/Structures/DimensionalStorage/hexen_dimstorage_icon.hexen_dimstorage_icon",
+			"type": "Structure",
+			"folders": [ "Structures" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 160,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 3, "type": "PrimalItem_UtilitySoul_C" },
+					{ "qty": 15, "type": "PrimalItem_BasicEssence_C" }
+				]
+			},
+			"structure": "/Game/Mods/ArkOmega/Structures/SoulCompressor/SoulCompressor.SoulCompressor_C"
 		},
 		{
 			"name": "Soul Furnace",
