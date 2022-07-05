@@ -1,11 +1,11 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "346.11.1653101871",
+	"version": "347.1.1656980914",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
 		"tag": "AE",
-		"title": "ARK: Eternal"
+		"title": "Ark Eternal"
 	},
 	"items": [
 		{
@@ -1208,6 +1208,29 @@
 			}
 		},
 		{
+			"name": "Indominus Rex Saddle",
+			"description": "Equip a Indominus Rex with this to ride it.",
+			"bp": "/Game/Mods/AE/Dinos/Alpha/Indom/IndomSaddle/PrimalItemArmor_IndomSaddle.PrimalItemArmor_IndomSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 303,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 680, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 120, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
 			"name": "Base Multi-item",
 			"description": "Inherit this for easy mutli-item creation",
 			"bp": "/Game/Mods/AE/Dinos/Alpha/Moth/PrimalItemConsumable_MulticraftItem_AlphaMoth.PrimalItemConsumable_MulticraftItem_AlphaMoth_C",
@@ -1254,6 +1277,58 @@
 			}
 		},
 		{
+			"name": "Bionic Egg",
+			"description": "Use this to create \n<RichColor Color=\"1, 0.65, 0, 1\">Bionic Kibble</>.",
+			"bp": "/Game/Mods/AE/Dinos/ArkBionicTransfer/Item/Egg/PrimalItemConsumable_BionicEgg.PrimalItemConsumable_BionicEgg_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Gigant_Bionic.HUD_DinoEgg_MIC_Inst_Gigant_Bionic",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 6,
+			"stackSize": 500,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Bionic Kibble",
+			"description": "This is the only thing you can tame a <RichColor Color=\"0.75, 0.25, 1, 1\">Bionic</> creature with. ",
+			"bp": "/Game/Mods/AE/Dinos/ArkBionicTransfer/Item/Kibble/PrimalItemConsumable_BionicKibble.PrimalItemConsumable_BionicKibble_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_Medium.PrimalItemConsumable_Kibble_Base_Medium_C",
+			"icon": "/Game/Mods/AE/Dinos/ArkBionicTransfer/Core/Icons/BionicKibble_Icon.BionicKibble_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 0.1,
+			"stackSize": 500,
+			"spoilsIn": 259200,
+			"crafting": {
+				"xp": 0.5,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItemConsumable_BionicEgg_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 6, "type": "PrimalItemConsumable_RawMeat_C" },
+					{ "qty": 2, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 2, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 9, "type": "PrimalItemConsumable_Berry_Stimberry_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ]
+		},
+		{
 			"name": "Darkstar Attacks",
 			"description": "- Attacks- \nLeft Click\nRight Click\nC",
 			"bp": "/Game/Mods/AE/Dinos/Darkstar/PrimalItem_Note_DarkstarAttacks.PrimalItem_Note_DarkstarAttacks_C",
@@ -1266,156 +1341,29 @@
 			"statEffects": []
 		},
 		{
-			"name": "Nova, the Destroyer Armor",
-			"description": "Equip a Nova, the Destroyer with this to gain armor.",
-			"bp": "/Game/Mods/AE/Dinos/DodoReaper/Armor/PrimalItemArmor_AEDestroyerReaperArmor.PrimalItemArmor_AEDestroyerReaperArmor_C",
+			"name": "Elemental Dragon Armor",
+			"description": "Equip an Elemental Dragon with this to gain extra protection",
+			"bp": "/Game/Mods/AE/Dinos/Elemental/Dragon/PrimalItemArmor_AEDragonArmor.PrimalItemArmor_AEDragonArmor_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/PrimalEarth/Dinos/Argentavis/Saddle/HUD_ArgentavisSaddle_Colorize_MIC.HUD_ArgentavisSaddle_Colorize_MIC",
+			"icon": "/Game/Mods/AE/Items/Saddles/Alphas/Icons/HUD_RaptorSaddle_Colorize_MIC.HUD_RaptorSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles", "Destroyer" ],
+			"folders": [ "Saddles" ],
 			"weight": 20,
 			"stackSize": 1,
 			"crafting": {
-				"xp": 72.4,
+				"xp": 17.6,
 				"time": 10,
 				"levelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 475, "type": "PrimalItemResource_Hide_Celestial_C" },
-					{ "qty": 475, "type": "PrimalItemResource_Hide_Demonic_C" },
-					{ "qty": 1450, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 1625, "type": "PrimalItemResource_ChitinOrKeratin_C" },
-					{ "qty": 1025, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemResource_DestroyerSoul_C" }
+					{ "qty": 50, "type": "PrimalItemConsumable_Crystal_Blue_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_Crystal_Green_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_Crystal_Orange_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_Crystal_Red_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_DinoBlood_C" }
 				]
 			}
-		},
-		{
-			"name": "Dark HieroPhant Summon",
-			"description": "Consume this to summon the Dark HieroPhant Boss.",
-			"bp": "/Game/Mods/AE/Dinos/DodoReaper/SpawnItem/PrimalItemConsumable_DarlHiero_AE.PrimalItemConsumable_DarlHiero_AE_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/AE/Dinos/DodoReaper/SpawnItem/Destroyer-Icon.Destroyer-Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Boss Summoners", "Tier 5" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 12000000,
-			"crafting": {
-				"xp": 1,
-				"time": 40,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_ChaosOrb_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_SpiritOrb_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OArgent_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OCarno_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ODirebear_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OKairuku_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ORaptor_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ORex_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OSpino_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OWyvern_Tribute_C" },
-					{ "qty": 5, "type": "PrimalItemResource_CelestialSoul_C" },
-					{ "qty": 5, "type": "PrimalItemResource_DemonicSoul_C" },
-					{ "qty": 5, "type": "PrimalItemResource_PrimalSoul_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Emp_CelestialSoul_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Emp_DemonicSoul_C" },
-					{ "qty": 2, "type": "PrimalItemArtifactGeneric_C" }
-				]
-			},
-			"statEffects": [
-				{
-					"stat": "health", "value": 500, "useItemQuality": true,
-					"pctOf": "current",
-					"pctAbsRange": { "min": 0, "max": 0 },
-					"setValue": true,
-					"setAddValue": true,
-					"duration": 500
-				},
-				{
-					"stat": "stamina", "value": 500, "useItemQuality": true,
-					"pctOf": "current",
-					"pctAbsRange": { "min": 0, "max": 0 },
-					"setValue": true,
-					"setAddValue": true,
-					"duration": 500
-				},
-				{
-					"stat": "meleedamagemultiplier", "value": 500, "useItemQuality": true,
-					"pctOf": "current",
-					"pctAbsRange": { "min": 0, "max": 0 },
-					"setValue": true,
-					"setAddValue": true,
-					"duration": 500
-				}
-			]
-		},
-		{
-			"name": "Nova, the Destroyer Summon",
-			"description": "Consume this to summon Nova, the Destroyer Boss.",
-			"bp": "/Game/Mods/AE/Dinos/DodoReaper/SpawnItem/PrimalItemConsumable_Destroyer_AE.PrimalItemConsumable_Destroyer_AE_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/AE/Dinos/DodoReaper/SpawnItem/Destroyer-Icon.Destroyer-Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Boss Summoners", "Tier 5" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 12000000,
-			"crafting": {
-				"xp": 1,
-				"time": 40,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_ChaosOrb_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_SpiritOrb_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OArgent_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OCarno_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ODirebear_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OKairuku_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ORaptor_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_ORex_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OSpino_Tribute_C" },
-					{ "qty": 1, "type": "PrimalItemResource_OWyvern_Tribute_C" },
-					{ "qty": 5, "type": "PrimalItemResource_CelestialSoul_C" },
-					{ "qty": 5, "type": "PrimalItemResource_DemonicSoul_C" },
-					{ "qty": 5, "type": "PrimalItemResource_PrimalSoul_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Emp_CelestialSoul_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Emp_DemonicSoul_C" },
-					{ "qty": 2, "type": "PrimalItemArtifactGeneric_C" }
-				]
-			},
-			"statEffects": [
-				{
-					"stat": "health", "value": 500, "useItemQuality": true,
-					"pctOf": "current",
-					"pctAbsRange": { "min": 0, "max": 0 },
-					"setValue": true,
-					"setAddValue": true,
-					"duration": 500
-				},
-				{
-					"stat": "stamina", "value": 500, "useItemQuality": true,
-					"pctOf": "current",
-					"pctAbsRange": { "min": 0, "max": 0 },
-					"setValue": true,
-					"setAddValue": true,
-					"duration": 500
-				},
-				{
-					"stat": "meleedamagemultiplier", "value": 500, "useItemQuality": true,
-					"pctOf": "current",
-					"pctAbsRange": { "min": 0, "max": 0 },
-					"setValue": true,
-					"setAddValue": true,
-					"duration": 500
-				}
-			]
 		},
 		{
 			"name": "Elemental Dragon Armor",
@@ -1980,24 +1928,6 @@
 					{ "qty": 1, "type": "PrimalItemResource_Oil_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Hide_C" }
 				]
-			}
-		},
-		{
-			"name": "Metal Ingot",
-			"description": "Created by refining metal ore in a Forge.",
-			"bp": "/Game/Mods/AE/Dinos/Eternal/Crafter/Ankylo/PrimalItemResource_MetalIngotAE.PrimalItemResource_MetalIngotAE_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/MetalIngot_Icon.MetalIngot_Icon",
-			"type": "Resource",
-			"weight": 1,
-			"stackSize": 200,
-			"crafting": {
-				"xp": 1,
-				"time": 20,
-				"levelReq": 0,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Metal_C" } ]
 			}
 		},
 		{
@@ -2800,26 +2730,50 @@
 			}
 		},
 		{
-			"name": "Unassembled Eternal Robot Enforcer",
-			"description": "Use this item to assemble a new Enforcer!",
-			"bp": "/Game/Mods/AE/Dinos/Robot/Extinction/Enforcer/PrimalItem_Spawner_Enforcer_AE.PrimalItem_Spawner_Enforcer_AE_C",
-			"parent": "/Game/Extinction/CoreBlueprints/Items/PrimalItem_DinoSpawner_Base.PrimalItem_DinoSpawner_Base_C",
-			"icon": "/Game/Extinction/Icons/Resources/EnforcerUnassembled_Icon.EnforcerUnassembled_Icon",
-			"type": "MiscConsumable/Food",
-			"weight": 200,
+			"name": "Elephant Platform Saddle",
+			"description": "Equip an Elephant with this to ride it. You can build structures on the large platform to make a mobile base.",
+			"bp": "/Game/Mods/AE/Dinos/PugTransfer/Elephant/Saddle/PrimalItemArmor_ElephantSaddle_Platform_AE3.PrimalItemArmor_ElephantSaddle_Platform_AE3_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Paraceratherium/Saddle/HUD_Paracera_PlatformSaddle_Colorize_MIC.HUD_Paracera_PlatformSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
 			"stackSize": 1,
 			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 100,
+				"xp": 133.8,
+				"time": 15,
+				"levelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 5, "type": "PrimalItemResource_ElementDust_C" },
-					{ "qty": 5, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 5, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 5, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_PrimeBlood_C" }
+					{ "qty": 320, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 70, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 45, "type": "PrimalItemResource_Silicon_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			}
+		},
+		{
+			"name": "Elephant Saddle",
+			"description": "Equip a Elephant with this to ride it.",
+			"bp": "/Game/Mods/AE/Dinos/PugTransfer/Elephant/Saddle/PrimalItemArmor_Elephant_Saddle_AE.PrimalItemArmor_Elephant_Saddle_AE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Paraceratherium/Saddle/HUD_ParaceraSaddle_Colorize_MIC.HUD_ParaceraSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 74.4,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 200, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 110, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" }
 				]
 			}
 		},
@@ -3575,6 +3529,29 @@
 			}
 		},
 		{
+			"name": "Kraken Saddle",
+			"description": "This crustaceous saddle looks old and is covered in barnacles...",
+			"bp": "/Game/Mods/AE/Dinos/Special/Kraken/Saddle/PrimalItemArmor_KrakenSaddle_AE.PrimalItemArmor_KrakenSaddle_AE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Trike/Saddle/HUD_TrikeSaddle_Colorize_MIC.HUD_TrikeSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 22.2,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 140, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" }
+				]
+			}
+		},
+		{
 			"name": "Lion Saddle",
 			"description": "Equip a Lion with this to ride it.",
 			"bp": "/Game/Mods/AE/Dinos/Special/Lion/Saddle/PrimalItemArmor_LionSaddle.PrimalItemArmor_LionSaddle_C",
@@ -3652,54 +3629,6 @@
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Arch/PrimalItemConsumable_Summon_Chewie.PrimalItemConsumable_Summon_Chewie_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/AE/Dinos/Special/Tributes/Arch/Archie.Archie",
-			"type": "MiscConsumable/Medicine",
-			"folders": [ "Summons", "Tributes" ],
-			"weight": 2,
-			"stackSize": 1000,
-			"spoilsIn": 0,
-			"crafting": {
-				"xp": 10,
-				"time": 5,
-				"levelReq": 100,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 3, "type": "PrimalItem_Generic_Essence_C" },
-					{ "qty": 100, "type": "PrimalItemConsumable_PrimeBlood_C" }
-				]
-			},
-			"statEffects": []
-		},
-		{
-			"name": "Bacons Armageddon Summon Reagent",
-			"description": "Will summon a tamed Bacons Armageddon ",
-			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/Kaiju/PrimalItemConsumable_Summon_BaconsArmageddon.PrimalItemConsumable_Summon_BaconsArmageddon_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
-			"icon": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/Screenshot_3.Screenshot_3",
-			"type": "MiscConsumable/Medicine",
-			"folders": [ "Summons", "Tributes" ],
-			"weight": 2,
-			"stackSize": 1000,
-			"spoilsIn": 0,
-			"crafting": {
-				"xp": 10,
-				"time": 5,
-				"levelReq": 100,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 3, "type": "PrimalItem_Generic_Essence_C" },
-					{ "qty": 100, "type": "PrimalItemConsumable_PrimeBlood_C" }
-				]
-			},
-			"statEffects": []
-		},
-		{
-			"name": "Bacon's Overlord Summon Reagent",
-			"description": "Will summon a tamed Bacon's Overlord",
-			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/PrimalItemConsumable_Summon_BaconsDaddy.PrimalItemConsumable_Summon_BaconsDaddy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
-			"icon": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/Screenshot_3.Screenshot_3",
 			"type": "MiscConsumable/Medicine",
 			"folders": [ "Summons", "Tributes" ],
 			"weight": 2,
@@ -3906,6 +3835,30 @@
 				]
 			},
 			"statEffects": []
+		},
+		{
+			"name": "Fabled Grifficorn Armor",
+			"description": "Equip a Fabled Grifficorn with this to gain armor.",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/MidnightShadow/NewVers/PrimalItemArmor_MidnightShadowSaddle.PrimalItemArmor_MidnightShadowSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Argentavis/Saddle/HUD_ArgentavisSaddle_Colorize_MIC.HUD_ArgentavisSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Fabled" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 72.4,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1040, "type": "PrimalItemResource_Hide_Fabled_C" },
+					{ "qty": 690, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 650, "type": "PrimalItemResource_ChitinOrKeratin_C" },
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
 		},
 		{
 			"name": "Fertilized Penguino Egg",
@@ -4858,202 +4811,6 @@
 			}
 		},
 		{
-			"name": "Fertilized Tapejara Egg",
-			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AE/Dinos/Vanilla/FlyerEggs/PrimalItemConsumable_Egg_Tapejara_FertilizedAE.PrimalItemConsumable_Egg_Tapejara_FertilizedAE_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Tapejara.PrimalItemConsumable_Egg_Tapejara_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Tapejara.HUD_DinoEgg_MIC_Inst_Tapejara",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 7,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
-				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
-				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Remaps_Old/Tapejara_Character_BP_AE.Tapejara_Character_BP_AE_C",
-				"temperature": { "min": 29, "max": 32 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Superior Fertilized Maewing Egg",
-			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AE/Dinos/Vanilla/Gen2/PrimalItemConsumable_Egg_MilkGlider_Large_Fertilized_AE.PrimalItemConsumable_Egg_MilkGlider_Large_Fertilized_AE_C",
-			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Large_Fertilized.PrimalItemConsumable_Egg_MilkGlider_Large_Fertilized_C",
-			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Large.HUD_DinoEgg_MIC_Inst_MilkGlider_Large",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 6,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
-				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
-				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Gen2/MilkGlider_Character_BP_AE_Base.MilkGlider_Character_BP_AE_Base_C",
-				"temperature": { "min": 22, "max": 26 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Regular Fertilized Maewing Egg",
-			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AE/Dinos/Vanilla/Gen2/PrimalItemConsumable_Egg_MilkGlider_Medium_Fertilized_AE.PrimalItemConsumable_Egg_MilkGlider_Medium_Fertilized_AE_C",
-			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Medium_Fertilized.PrimalItemConsumable_Egg_MilkGlider_Medium_Fertilized_C",
-			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Medium.HUD_DinoEgg_MIC_Inst_MilkGlider_Medium",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 6,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
-				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
-				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Gen2/MilkGlider_Character_BP_AE_Base.MilkGlider_Character_BP_AE_Base_C",
-				"temperature": { "min": 22, "max": 26 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Simple Fertilized Maewing Egg",
-			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AE/Dinos/Vanilla/Gen2/PrimalItemConsumable_Egg_MilkGlider_Small_Fertilized_AE.PrimalItemConsumable_Egg_MilkGlider_Small_Fertilized_AE_C",
-			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Small_Fertilized.PrimalItemConsumable_Egg_MilkGlider_Small_Fertilized_C",
-			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Small.HUD_DinoEgg_MIC_Inst_MilkGlider_Small",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 6,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
-				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
-				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Gen2/MilkGlider_Character_BP_AE_Base.MilkGlider_Character_BP_AE_Base_C",
-				"temperature": { "min": 22, "max": 26 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Extraordinary Fertilized Maewing Egg",
-			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AE/Dinos/Vanilla/Gen2/PrimalItemConsumable_Egg_MilkGlider_Special_Fertilized_AE.PrimalItemConsumable_Egg_MilkGlider_Special_Fertilized_AE_C",
-			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_Special_Fertilized.PrimalItemConsumable_Egg_MilkGlider_Special_Fertilized_C",
-			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_Special.HUD_DinoEgg_MIC_Inst_MilkGlider_Special",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 6,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
-				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
-				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Gen2/MilkGlider_Character_BP_AE_Base.MilkGlider_Character_BP_AE_Base_C",
-				"temperature": { "min": 22, "max": 26 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Exceptional Fertilized Maewing Egg",
-			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AE/Dinos/Vanilla/Gen2/PrimalItemConsumable_Egg_MilkGlider_XLarge_Fertilized_AE.PrimalItemConsumable_Egg_MilkGlider_XLarge_Fertilized_AE_C",
-			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_XLarge_Fertilized.PrimalItemConsumable_Egg_MilkGlider_XLarge_Fertilized_C",
-			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_XLarge.HUD_DinoEgg_MIC_Inst_MilkGlider_XLarge",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 6,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
-				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
-				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Gen2/MilkGlider_Character_BP_AE_Base.MilkGlider_Character_BP_AE_Base_C",
-				"temperature": { "min": 22, "max": 26 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Basic Fertilized Maewing Egg",
-			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AE/Dinos/Vanilla/Gen2/PrimalItemConsumable_Egg_MilkGlider_XSmall_Fertilized_AE.PrimalItemConsumable_Egg_MilkGlider_XSmall_Fertilized_AE_C",
-			"parent": "/Game/Genesis2/Dinos/MilkGlider/Eggs/PrimalItemConsumable_Egg_MilkGlider_XSmall_Fertilized.PrimalItemConsumable_Egg_MilkGlider_XSmall_Fertilized_C",
-			"icon": "/Game/Genesis2/Dinos/MilkGlider/Eggs/HUD_DinoEgg_MIC_Inst_MilkGlider_XSmall.HUD_DinoEgg_MIC_Inst_MilkGlider_XSmall",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 6,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 25, "useItemQuality": true, "duration": 6.25 },
-				{ "stat": "health", "value": 25, "useItemQuality": true, "duration": 6.25 },
-				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Vanilla/Gen2/MilkGlider_Character_BP_AE_Base.MilkGlider_Character_BP_AE_Base_C",
-				"temperature": { "min": 22, "max": 26 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
 			"name": "Fertilized Kairuku Egg",
 			"description": "Tremendously nourishing by itself, this egg provides basic nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AE/Dinos/Vanilla/PrimalItemConsumable_Egg_Kairuku_FertilizedAE.PrimalItemConsumable_Egg_Kairuku_FertilizedAE_C",
@@ -5187,24 +4944,6 @@
 					{ "qty": 75, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 30, "type": "PrimalItemResource_Silicon_C" }
 				]
-			}
-		},
-		{
-			"name": "Congealed Gas Ball",
-			"description": "Used for crafting, can be found within Gas Veins.",
-			"bp": "/Game/Mods/AE/Extinction/CoreBlueprints/Resources/PrimalItemResource_GasRefined.PrimalItemResource_GasRefined_C",
-			"parent": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemResource_Gas.PrimalItemResource_Gas_C",
-			"icon": "/Game/Aberration/Icons/Resources/GasBall_Icon.GasBall_Icon",
-			"type": "Resource",
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 1,
-				"time": 30,
-				"levelReq": 0,
-				"productCount": 2,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemResource_CondensedGas_C" } ]
 			}
 		},
 		{
@@ -8069,6 +7808,316 @@
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 1000
+		},
+		{
+			"name": "Generic Consumable",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C"
+		},
+		{
+			"name": "Rockwell Prime Alpha Ascender",
+			"description": "Unlocks Rockwell Prime's Alpha Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Gen2Rockwell_Alpha.PrimalItem_Ascender_Gen2Rockwell_Alpha_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Misc/Icons/PortalRed_Icon.PortalRed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genesis 2" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 180, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Rockwell Prime Beta Ascender",
+			"description": "Unlocks Rockwell Prime's Beta Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Gen2Rockwell_Beta.PrimalItem_Ascender_Gen2Rockwell_Beta_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Misc/Icons/PortalBlue_Icon.PortalBlue_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genesis 2" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 165, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Rockwell Prime Gamma Ascender",
+			"description": "Unlocks Rockwell Prime's Gamma Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Gen2Rockwell_Gamma.PrimalItem_Ascender_Gen2Rockwell_Gamma_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Misc/Icons/PortalGreen_Icon.PortalGreen_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genesis 2" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 150, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Overseer Alpha Ascender",
+			"description": "Unlocks Overseer's Alpha Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Guardian_Alpha.PrimalItem_Ascender_Guardian_Alpha_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Implant_Icon_Alpha.Implant_Icon_Alpha",
+			"type": "MiscConsumable/Food",
+			"folders": [ "The Island" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 45, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Overseer Beta Ascender",
+			"description": "Unlocks Overseer's Beta Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Guardian_Beta.PrimalItem_Ascender_Guardian_Beta_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Implant_Icon_Beta.Implant_Icon_Beta",
+			"type": "MiscConsumable/Food",
+			"folders": [ "The Island" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 30, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Overseer Gamma Ascender",
+			"description": "Unlocks Overseer's Gamma Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Guardian_Gamma.PrimalItem_Ascender_Guardian_Gamma_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Implant_Icon_Gamma.Implant_Icon_Gamma",
+			"type": "MiscConsumable/Food",
+			"folders": [ "The Island" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 15, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "King Titan Alpha Ascender",
+			"description": "Unlocks King Titan's Alpha Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_KingTitan_Alpha.PrimalItem_Ascender_KingTitan_Alpha_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/Extinction/Icons/Buffs/HomoDeusRecord_Icon.HomoDeusRecord_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Extinction" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 225, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "King Titan Beta Ascender",
+			"description": "Unlocks King Titan's Beta Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_KingTitan_Beta.PrimalItem_Ascender_KingTitan_Beta_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/Extinction/Icons/Buffs/HomoDeusRecord_Icon.HomoDeusRecord_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Extinction" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 210, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "King Titan Gamma Ascender",
+			"description": "Unlocks King Titan's Gamma Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_KingTitan_Gamma.PrimalItem_Ascender_KingTitan_Gamma_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/Extinction/Icons/Buffs/HomoDeusRecord_Icon.HomoDeusRecord_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Extinction" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 195, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Rockwell Alpha Ascender",
+			"description": "Unlocks Rockwell's Alpha Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Rockwell_Alpha.PrimalItem_Ascender_Rockwell_Alpha_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Aberration_Implant_Icon_Alpha.Aberration_Implant_Icon_Alpha",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Aberration" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 90, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Rockwell Beta Ascender",
+			"description": "Unlocks Rockwell's Beta Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Rockwell_Beta.PrimalItem_Ascender_Rockwell_Beta_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Aberration_Implant_Icon_Beta.Aberration_Implant_Icon_Beta",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Aberration" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 75, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Rockwell Gamma Ascender",
+			"description": "Unlocks Rockwell's Gamma Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Rockwell_Gamma.PrimalItem_Ascender_Rockwell_Gamma_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Aberration_Implant_Icon_Gamma.Aberration_Implant_Icon_Gamma",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Aberration" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 60, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Master Controller Alpha Ascender",
+			"description": "Unlocks Master Controller's Alpha Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_VRMainBoss_Alpha.PrimalItem_Ascender_VRMainBoss_Alpha_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/HUD_TerranAlphaImplant_Icon.HUD_TerranAlphaImplant_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genesis 1" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 135, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Master Controller Beta Ascender",
+			"description": "Unlocks Master Controller's Beta Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_VRMainBoss_Beta.PrimalItem_Ascender_VRMainBoss_Beta_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/HUD_TerranGammaImplant_Icon.HUD_TerranGammaImplant_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genesis 1" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 120, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Master Controller Gamma Ascender",
+			"description": "Unlocks Master Controller's Gamma Ascension!",
+			"bp": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_VRMainBoss_Gamma.PrimalItem_Ascender_VRMainBoss_Gamma_C",
+			"parent": "/Game/Mods/AE/Items/Ascender/Items/PrimalItem_Ascender_Base.PrimalItem_Ascender_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/HUD_TerranBetaImplant_Icon.HUD_TerranBetaImplant_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Genesis 1" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 105, "type": "PrimalItemResource_Element_C" } ]
+			}
+		},
+		{
+			"name": "Ascender",
+			"description": "Offer up tributes to ascend By Eilex",
+			"bp": "/Game/Mods/AE/Items/Ascender/Structures/PrimalItemStructure_Ascender.PrimalItemStructure_Ascender_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Items/Ascender/Assets/AscenderIcon.AscenderIcon",
+			"type": "Structure",
+			"folders": [ "Ascension" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 5,
+				"levelReq": 100,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 10, "type": "PrimalItemResource_Element_C" } ]
+			},
+			"structure": "/Game/Mods/AE/Items/Ascender/Structures/Ascender_BP.Ascender_BP_C"
 		},
 		{
 			"name": "Golden Carrot",
@@ -14580,6 +14629,34 @@
 			}
 		},
 		{
+			"name": "Fertilized Eternal Alpha Zombie Wyvern Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AE/Items/DinoEggs/PrimalItemConsumable_Egg_Wyvern_Zombie_Fertilized.PrimalItemConsumable_Egg_Wyvern_Zombie_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Wyvern_Fertilized.PrimalItemConsumable_Egg_Wyvern_Fertilized_C",
+			"icon": "/Game/ScorchedEarth/Icons/Resources/WyvernEgg1_Icon.WyvernEgg1_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 50,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AE/Dinos/Evolution/ZombieWyvern/Zombie_Wyvern_Character_BP.Zombie_Wyvern_Character_BP_C",
+				"temperature": { "min": 80, "max": 90 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Yutyrannus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/AE/Items/DinoEggs/PrimalItemConsumable_Egg_Yuty_AE.PrimalItemConsumable_Egg_Yuty_AE_C",
@@ -15432,33 +15509,6 @@
 					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			}
-		},
-		{
-			"name": "Empty Cryopod",
-			"description": "Hold up to a creature to capture it. Throw to deploy a captured creature.",
-			"bp": "/Game/Mods/AE/Items/Extinction/Items/PrimalItem_WeaponEmptyCryopod_AE.PrimalItem_WeaponEmptyCryopod_AE_C",
-			"parent": "/Game/Extinction/CoreBlueprints/Weapons/PrimalItem_WeaponEmptyCryopod.PrimalItem_WeaponEmptyCryopod_C",
-			"icon": "/Game/Extinction/Icons/Weapons/CryoPod_Icon.CryoPod_Icon",
-			"type": "Weapon",
-			"folders": [ "Extinction", "Weapons" ],
-			"weight": 0.5,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 11.35,
-				"time": 5,
-				"levelReq": 55,
-				"productCount": 0,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 4, "type": "PrimalItemResource_Oil_C" },
-					{ "qty": 8, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 5, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 15, "type": "PrimalItemResource_Fibers_C" }
-				]
-			},
-			"weapon": "/Game/Extinction/CoreBlueprints/Weapons/WeapEmptyCryopod.WeapEmptyCryopod_C"
 		},
 		{
 			"name": "Scout Remote",
@@ -20331,7 +20381,7 @@
 		},
 		{
 			"name": "H.O.T. Potion",
-			"description": "Regenerates heatlh to 50% of max per use Gives 10 per craft",
+			"description": "Regenerates health to 50% of max per use Gives 10 per craft",
 			"bp": "/Game/Mods/AE/Items/Potions/RegPotion/PrimalItemConsumable_HoTPotion.PrimalItemConsumable_HoTPotion_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
 			"icon": "/Game/Mods/AE/Core/Icons/EternalToken.EternalToken",
@@ -23032,6 +23082,11 @@
 			"structure": "/Game/ScorchedEarth/Structures/OilPump/OilPump.OilPump_C"
 		},
 		{
+			"name": "Ark Eternal Cap Skin Skin",
+			"bp": "/Game/Mods/AE/Items/Skins/Cap_Eternal_Skin/PrimalItem_Skin_ArkEternal.PrimalItem_Skin_ArkEternal_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C"
+		},
+		{
 			"name": "Ancient BigFoot",
 			"description": "Will summon the Ancient BigFoot. Can be knocked out and tamed using Ancient Orbs.\nWill spawn at a random level.",
 			"bp": "/Game/Mods/AE/Items/SummonReagents/Ancient/PrimalItemConsumable_Summon_Ancient_BigFoot.PrimalItemConsumable_Summon_Ancient_BigFoot_C",
@@ -25611,40 +25666,6 @@
 			"weapon": "/Game/Mods/AE/Items/Tools/HandheldChainBola/WeapBola_AEChainBola.WeapBola_AEChainBola_C"
 		},
 		{
-			"name": "Mace",
-			"description": "The undisputed ruler of short-range combat. Needs a hotter flame to be forged.",
-			"bp": "/Game/Mods/AE/Items/Tools/Mace/PrimalItem_WeaponMace.PrimalItem_WeaponMace_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
-			"icon": "/Game/Mods/AE/Items/Tools/Mace/MaceIcon.MaceIcon",
-			"type": "Weapon",
-			"folders": [ "Weapons", "Primitive", "Melee" ],
-			"weight": 5,
-			"stackSize": 1,
-			"durability": 70,
-			"crafting": {
-				"xp": 6.6,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 15, "type": "PrimalItemResource_Hide_C" }
-				]
-			},
-			"repair": {
-				"xp": 6.6,
-				"time": 5,
-				"recipe": [
-					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 0.5, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 7.5, "type": "PrimalItemResource_Hide_C" }
-				]
-			},
-			"weapon": "/Game/Mods/AE/Items/Tools/Mace/WeapMace.WeapMace_C"
-		},
-		{
 			"name": "Eternal Alpha Poison Pike",
 			"description": "A pike dipped in tranquilizing poison. Tranqs up to and including Prime Tier .Pike is Unbreakable.",
 			"bp": "/Game/Mods/AE/Items/Tools/PoisonPike/AlphaPoisPike/PrimalItem_WeaponPoisonPikeAlpha.PrimalItem_WeaponPoisonPikeAlpha_C",
@@ -25830,74 +25851,6 @@
 				"recipe": [ { "qty": 10, "type": "PrimalItemResource_Element_C" } ]
 			},
 			"weapon": "/Game/Mods/AE/Items/Tools/TekRifle/AE_Tranq/WeapTekRifle_Eternal_Tranq.WeapTekRifle_Eternal_Tranq_C"
-		},
-		{
-			"name": "Axe",
-			"description": "The undisputed ruler of short-range combat. Needs a hotter flame to be forged.",
-			"bp": "/Game/Mods/AE/Items/Tools/Weapons/Axe/PrimalItem_WeaponAxe.PrimalItem_WeaponAxe_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
-			"icon": "/Game/Mods/AE/Items/Tools/Weapons/Axe/AxeIcon.AxeIcon",
-			"type": "Weapon",
-			"folders": [ "Weapons", "Primitive", "Melee" ],
-			"weight": 5,
-			"stackSize": 1,
-			"durability": 70,
-			"crafting": {
-				"xp": 6.6,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 15, "type": "PrimalItemResource_Hide_C" }
-				]
-			},
-			"repair": {
-				"xp": 6.6,
-				"time": 5,
-				"recipe": [
-					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 0.5, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 7.5, "type": "PrimalItemResource_Hide_C" }
-				]
-			},
-			"weapon": "/Game/Mods/AE/Items/Tools/Weapons/Axe/WeapAxe.WeapAxe_C"
-		},
-		{
-			"name": "Sword",
-			"description": "The undisputed ruler of short-range combat. Needs a hotter flame to be forged.",
-			"bp": "/Game/Mods/AE/Items/Tools/Weapons/Sword/PrimalItem_WeaponSword.PrimalItem_WeaponSword_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
-			"icon": "/Game/Mods/AE/Items/Tools/Weapons/Sword/SwordIcon.SwordIcon",
-			"type": "Weapon",
-			"folders": [ "Weapons", "Primitive", "Melee" ],
-			"weight": 5,
-			"stackSize": 1,
-			"durability": 70,
-			"crafting": {
-				"xp": 6.6,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 15, "type": "PrimalItemResource_Hide_C" }
-				]
-			},
-			"repair": {
-				"xp": 6.6,
-				"time": 5,
-				"recipe": [
-					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 0.5, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 7.5, "type": "PrimalItemResource_Hide_C" }
-				]
-			},
-			"weapon": "/Game/Mods/AE/Items/Tools/Weapons/Sword/WeapSword.WeapSword_C"
 		},
 		{
 			"name": "Unlock Aberration Engrams",
@@ -26452,16 +26405,6 @@
 			]
 		},
 		{
-			"name": "Festive Dino Candy",
-			"description": "A unique candy with a curious effect that few dino's can passover.",
-			"bp": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_EasterDinoCandy.PrimalItemConsumable_EasterDinoCandy_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/AE/PrimalEarth/Environment/Seasonal/Easter/Egg/HUD_EasterEgg_Candy_Colorize_MIC.HUD_EasterEgg_Candy_Colorize_MIC",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
-			"stackSize": 1
-		},
-		{
 			"name": "Kibble (Hesperonis Egg)",
 			"description": "This pet food recipe has been carefully designed to give balanced nutrition to almost any creature native to the island.  Includes the best protein, plant fibers to help with digestion, and egg to bind the mix.  Humans have difficulty digesting this.",
 			"bp": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_HesperonisEgg.PrimalItemConsumable_Kibble_HesperonisEgg_C",
@@ -26624,47 +26567,24 @@
 			"weapon": "/Game/Mods/AE/ScorchedEarth/WeaponNetGun/WeapNetGun.WeapNetGun_C"
 		},
 		{
-			"name": "Eternal Teleporter",
-			"description": "Teleport Around! Must use the settings on each new pad you place and they must match.",
-			"bp": "/Game/Mods/AE/Structures/AETeleporter/PrimalItemStructure_Teleporter_AE.PrimalItemStructure_Teleporter_AE_C",
+			"name": "Eternal Death Recovery",
+			"description": "Get Back Your Items From Your Corpse! Courtesy of NanoDragon.",
+			"bp": "/Game/Mods/AE/Structures/AEDeath_Recovery/PrimalItemStructure_AEDeathRecovery.PrimalItemStructure_AEDeathRecovery_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseFloor.PrimalItemStructure_BaseFloor_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKFoundation_Icon.TEKFoundation_Icon",
+			"icon": "/Game/Mods/AE/Structures/AEDeath_Recovery/Golem_Statue/Golem_Icon.Golem_Icon",
 			"type": "Structure",
-			"folders": [ "Structures", "Teleporter" ],
+			"folders": [ "Structures", "Death Recovery" ],
 			"weight": 4,
 			"stackSize": 100,
 			"crafting": {
 				"xp": 50,
 				"time": 90,
-				"levelReq": 0,
+				"levelReq": 10,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Crystal_C" }
-				]
+				"recipe": [ { "qty": 10, "type": "PrimalItemResource_ChitinPaste_C" } ]
 			},
-			"structure": "/Game/Mods/AE/Structures/AETeleporter/StorageBox_TeleporterAE.StorageBox_TeleporterAE_C"
-		},
-		{
-			"name": "Eternal Teleporter Remote",
-			"description": "Use This To Teleport To Your Teleporters From Anywhere! Does not work from Hotbar must be used from Inventory!",
-			"bp": "/Game/Mods/AE/Structures/AETeleporter/Remote/PrimalItemConsumable_TeleporterRemoteAE.PrimalItemConsumable_TeleporterRemoteAE_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Weapons/Icons/TransGPSRemote_Icon.TransGPSRemote_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Structures", "Teleporter" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 2,
-				"time": 0.5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 10, "type": "PrimalItemResource_Electronics_C" } ]
-			}
+			"structure": "/Game/Mods/AE/Structures/AEDeath_Recovery/AE_GolemStatue.AE_GolemStatue_C"
 		},
 		{
 			"name": "Beer Jar",
@@ -27232,6 +27152,30 @@
 					{ "qty": 10, "type": "PrimalItemConsumable_Berry_EternalBerry_C" }
 				]
 			}
+		},
+		{
+			"name": "Eternal Auto Beer Crafter",
+			"description": "Place 10 thatch and 10 eternal berry inside to make full beer jars..",
+			"bp": "/Game/Mods/AE/Structures/BeerBarrel/PrimalItemStructure_BeerBarrel_AE.PrimalItemStructure_BeerBarrel_AE_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/BeerBarrel_Icon.BeerBarrel_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Cooking" ],
+			"weight": 4,
+			"stackSize": 3,
+			"crafting": {
+				"xp": 20,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 500, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 80, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/BeerBarrel/AutoBeerCrafter.AutoBeerCrafter_C"
 		},
 		{
 			"name": "Eternal Charge Station",
@@ -29530,32 +29474,6 @@
 				"recipe": [ { "qty": 10, "type": "PrimalItemResource_Stone_C" } ]
 			},
 			"structure": "/Game/Mods/AE/Structures/SpoilandMortar/SpoilandMortar_Structure.SpoilandMortar_Structure_C"
-		},
-		{
-			"name": "AE Teleporter",
-			"description": "Allows instantaneous traversal between Teleporters! Requires Tek Generator to power, and Element & Engram to use.",
-			"bp": "/Game/Mods/AE/Structures/Teleporter/PrimalItemStructure_AETeleporter.PrimalItemStructure_AETeleporter_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKLargeTeleporter_Icon.TEKLargeTeleporter_Icon",
-			"type": "Structure",
-			"folders": [ "Structures", "Misc" ],
-			"weight": 4,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 33,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 85, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 2500, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 600, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 150, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 1200, "type": "PrimalItemResource_Polymer_C" }
-				]
-			},
-			"structure": "/Game/Mods/AE/Structures/Teleporter/AETeleporter.AETeleporter_C"
 		},
 		{
 			"name": "Eternal Torpor Dummy",
