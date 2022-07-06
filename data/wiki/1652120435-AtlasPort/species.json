@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "345.31.1653047777",
+	"version": "347.1.1657088085",
 	"format": "4",
 	"mod": {
 		"id": "1652120435",
@@ -866,10 +866,10 @@
 			"name": "Midgard Moray",
 			"bp": "/Game/Mods/AtlasPort/Critter/Eel/AEel_Character_bp.AEel_Character_bp_C",
 			"dinoNameTag": "Eel",
-			"customTag": "",
+			"customTag": "MidgardEel",
 			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
 			"mass": 300,
-			"dragWeight": 125,
+			"dragWeight": 250,
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -894,20 +894,16 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1050 }
+				"walk": { "base": 1000, "sprint": 3500 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1050 }
+				"walk": { "base": 1000, "sprint": 3500 }
 			},
-			"staminaRates": { "sprint": -10 },
+			"staminaRates": { "sprint": -5 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 170,
-				"attacks": [
-					{ "name": "None", "interval": 0.2, "dmg": 25, "radius": 220, "stamina": 0 },
-					{ "name": "None", "interval": 0.2, "dmg": 25, "radius": 220, "stamina": 0 },
-					{ "name": "None", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
+				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 55, "radius": 340, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 12 }
 		},
@@ -955,8 +951,8 @@
 				"defaultDmg": 42,
 				"defaultSwingRadius": 500,
 				"attacks": [
-					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 50, "radius": 500, "stamina": 20 },
-					{ "name": "Stomp", "interval": 3, "dmg": 64, "radius": 800, "stamina": 20 },
+					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 55, "radius": 500, "stamina": 20 },
+					{ "name": "Stomp", "interval": 3, "dmg": 72, "radius": 800, "stamina": 20 },
 					{ "name": "Taunt", "interval": 0.5, "dmg": 0, "radius": 500, "stamina": 20 }
 				]
 			},
@@ -1006,8 +1002,8 @@
 				"defaultDmg": 42,
 				"defaultSwingRadius": 500,
 				"attacks": [
-					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 50, "radius": 500, "stamina": 20 },
-					{ "name": "Stomp", "interval": 3, "dmg": 64, "radius": 800, "stamina": 20 },
+					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 55, "radius": 500, "stamina": 20 },
+					{ "name": "Stomp", "interval": 3, "dmg": 72, "radius": 800, "stamina": 20 },
 					{ "name": "Taunt", "interval": 0.5, "dmg": 0, "radius": 500, "stamina": 20 }
 				]
 			},
@@ -2875,8 +2871,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Horns", "interval": 0.4, "dmg": 40, "radius": 400, "stamina": 0 },
-					{ "name": "Stomp", "interval": 5, "dmg": 50, "radius": 240, "stamina": 0 },
+					{ "name": "Horns", "interval": 0.4, "dmg": 43, "radius": 400, "stamina": 0 },
+					{ "name": "Stomp", "interval": 5, "dmg": 50, "radius": 450, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -2933,7 +2929,10 @@
 				"attacks": [
 					{ "name": "Tentaslap", "interval": 0, "dmg": 45, "radius": 1200, "stamina": 10 },
 					{ "name": "Grab Prey", "interval": 1.5, "dmg": 15, "radius": 1200, "stamina": 25 },
-					{ "name": "Ink", "interval": 60, "dmg": 0, "radius": 0, "stamina": 50 },
+					{
+						"name": "Ink", "interval": 60, "dmg": 0, "radius": 0, "stamina": 50,
+						"isProjectile": true
+					},
 					{ "name": "Crush Prey", "interval": 0, "dmg": 55, "radius": 0, "stamina": 10 }
 				]
 			},
@@ -3125,9 +3124,9 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.05, "dmg": 62, "radius": 620, "stamina": 0 },
-					{ "name": "HeadButt", "interval": 3, "dmg": 52, "radius": 625, "stamina": 0 },
-					{ "name": "Tail", "interval": 7, "dmg": 55, "radius": 500, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.05, "dmg": 65, "radius": 620, "stamina": 0 },
+					{ "name": "HeadButt", "interval": 3, "dmg": 55, "radius": 625, "stamina": 0 },
+					{ "name": "Tail", "interval": 7, "dmg": 67, "radius": 500, "stamina": 0 },
 					{ "name": "ShellOpenClose", "interval": 0.05, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Roar", "interval": 0.05, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -3217,7 +3216,7 @@
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 500,
-				"attacks": [ { "name": "Horn Attacks", "interval": 0.3, "dmg": 25, "radius": 240, "stamina": 0 } ]
+				"attacks": [ { "name": "Horn Attacks", "interval": 0.3, "dmg": 25, "radius": 420, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 8 }
 		},
@@ -3264,7 +3263,7 @@
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 500,
-				"attacks": [ { "name": "Horn Attacks", "interval": 0.3, "dmg": 25, "radius": 240, "stamina": 0 } ]
+				"attacks": [ { "name": "Horn Attacks", "interval": 0.3, "dmg": 25, "radius": 420, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 8 }
 		},

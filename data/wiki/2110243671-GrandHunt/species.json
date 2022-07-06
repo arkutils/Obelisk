@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "344.8.1647454195",
+	"version": "347.1.1657094972",
 	"format": "4",
 	"mod": {
 		"id": "2110243671",
@@ -19,7 +19,6 @@
 			"flags": [
 				"allowCarryFlyerDinos",
 				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
@@ -31,7 +30,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 34 } ]
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 38 } ]
 			},
 			"falling": {
 				"dmgMult": 80,
@@ -55,10 +54,10 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 68, "radius": 640, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 62, "radius": 640, "stamina": 0 },
 					{ "name": "BasicFire", "interval": 10, "dmg": 0, "radius": 0, "stamina": 150 },
 					{ "name": "Claw", "interval": 6, "dmg": 40, "radius": 420, "stamina": 0 },
-					{ "name": "GroundPound", "interval": 8, "dmg": 78, "radius": 420, "stamina": 100 },
+					{ "name": "GroundPound", "interval": 8, "dmg": 70, "radius": 420, "stamina": 100 },
 					{ "name": "BurningPalm", "interval": 25, "dmg": 145, "radius": 625, "stamina": 350 },
 					{ "name": "TailRear", "interval": 25, "dmg": 45, "radius": 420, "stamina": 0 },
 					{ "name": "TailSpin", "interval": 8, "dmg": 45, "radius": 420, "stamina": 125 },
@@ -174,7 +173,6 @@
 			"mass": 260,
 			"dragWeight": 550,
 			"flags": [
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
@@ -220,6 +218,119 @@
 				]
 			},
 			"death": { "baseXP": 7 }
+		},
+		{
+			"name": "Skeletal Rex",
+			"bp": "/Game/Mods/GrandHunt/PrimalEarth/Dinos/Rex/Bone_MegaRex_Character_BP.Bone_MegaRex_Character_BP_C",
+			"dinoNameTag": "Bone Rex",
+			"customTag": "Rex",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 87 },
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 755, "sprint": 1079.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 755, "sprint": 1619.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 170,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "None", "interval": 0.3, "dmg": 170, "radius": 450, "stamina": 0 },
+					{ "name": "None", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/GrandHunt/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Mega_Rex_Bone.DinoDropInventoryComponent_Carnivore_Mega_Rex_Bone"
+					}
+				],
+				"baseXP": 885
+			}
+		},
+		{
+			"name": "Skeletal Bronto",
+			"bp": "/Game/Mods/GrandHunt/PrimalEarth/Dinos/Sauropod/Bone_Sauropod_Character_BP.Bone_Sauropod_Character_BP_C",
+			"dinoNameTag": "Bronto",
+			"customTag": "Bronto",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 500,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"leveling": { "mutagenCost": 79 },
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 180, "sprint": 405 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 90,
+				"defaultSwingRadius": 1000,
+				"attacks": [ { "name": "melee", "interval": 1.2, "dmg": 90, "radius": 1000, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/GrandHunt/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Sauro_Bone.DinoDropInventoryComponent_Carnivore_Huge_Sauro_Bone"
+					}
+				],
+				"baseXP": 22
+			}
 		}
 	]
 }
