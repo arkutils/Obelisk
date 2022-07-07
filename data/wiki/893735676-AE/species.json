@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "347.1.1656980914",
+	"version": "347.1.1657152002",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -45455,68 +45455,6 @@
 			}
 		},
 		{
-			"name": "Bacon's Overlord",
-			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/BaconsDaddyNew_Character_BP.BaconsDaddyNew_Character_BP_C",
-			"dinoNameTag": "CreatorBoss",
-			"customTag": "CreatorBoss",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 1000,
-			"dragWeight": 1000,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowRiding",
-				"canDrag",
-				"doStepDamage",
-				"isBossDino",
-				"isCarnivore"
-			],
-			"cloning": {
-				"costBase": 2200,
-				"costLevel": 55,
-				"timeBase": 15400,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 450, "sprint": 1080 }
-			},
-			"movementD": {
-				"walk": { "base": 450, "sprint": 1080 }
-			},
-			"movementR": {
-				"walk": { "base": 450, "sprint": 3240 }
-			},
-			"staminaRates": { "sprint": -25 },
-			"attack": {
-				"defaultDmg": 450000,
-				"defaultSwingRadius": 3000,
-				"attacks": [
-					{ "name": "Melee Attack", "interval": 1, "dmg": 450000, "radius": 1700, "stamina": 25 },
-					{ "name": "Explosion Attack", "interval": 20, "dmg": 900000, "radius": 7500, "stamina": 25 },
-					{
-						"name": "ThrowRock", "interval": 11, "dmg": 450000, "radius": 3600, "stamina": 75,
-						"isProjectile": true
-					},
-					{ "name": "Swipe", "interval": 3, "dmg": 350000, "radius": 1800, "stamina": 25 },
-					{ "name": "Summon Minions", "interval": 20, "dmg": 1, "radius": 1500, "stamina": 0 },
-					{ "name": "Knock Out Fliers", "interval": 30, "dmg": 450000, "radius": 15000, "stamina": 25 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/AE/Dinos/Mystical/DinoDropInventoryComponent_Immortal_hard.DinoDropInventoryComponent_Immortal_hard"
-					}
-				],
-				"baseXP": 5500
-			}
-		},
-		{
 			"name": "Bacon Overlord's Daddy",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/BaconsDaddy_Character_BP.BaconsDaddy_Character_BP_C",
 			"dinoNameTag": "MegaBacon",
@@ -46527,6 +46465,82 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Silvernight",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Eaglescout/SilverNight_Character_BP.SilverNight_Character_BP_C",
+			"dinoNameTag": "SilverNight",
+			"customTag": "Griffin",
+			"targetingTeamName": "Carnivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 20, "max": 30 } ]
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 1500 },
+				"fly": { "base": 480, "sprint": 2100 },
+				"swim": { "base": 400, "sprint": 1250 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1500 },
+				"fly": { "base": 480, "sprint": 2100 },
+				"swim": { "base": 400, "sprint": 1250 }
+			},
+			"movementR": {
+				"walk": { "base": 702, "sprint": 3071.2 },
+				"fly": { "base": 702, "sprint": 4299.7 },
+				"swim": { "base": 585, "sprint": 2559.4 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 32500,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Claw", "interval": 1, "dmg": 65000, "radius": 1500, "stamina": 0 },
+					{ "name": "Fire Breath", "interval": 7, "dmg": 0, "radius": 1200, "stamina": 750 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 65000, "radius": 3000, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 65000, "radius": 4000, "stamina": 30 },
+					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 4500 },
+					{ "name": "Grab", "interval": 1, "dmg": 12, "radius": 1000, "stamina": 60 },
+					{ "name": "Heal", "interval": 10, "dmg": 1, "radius": 2500, "stamina": 2000 },
+					{ "name": "Summon Minions", "interval": 20, "dmg": 1, "radius": 1500, "stamina": 1000 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
 			"name": "F1RECRACKR Velo",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/FireCracker/F1reCrackr_Spindles_Character_BP.F1reCrackr_Spindles_Character_BP_C",
 			"dinoNameTag": "Trib_Velonasaur_F1re",
@@ -47362,6 +47376,7 @@
 			"dragWeight": 300,
 			"flags": [
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
@@ -48657,100 +48672,6 @@
 					}
 				],
 				"baseXP": 3
-			}
-		},
-		{
-			"name": "Dark Hierophant",
-			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Zoe/DarkHierophant_Character_BP.DarkHierophant_Character_BP_C",
-			"dinoNameTag": "DarkHierophant",
-			"customTag": "DarkHierophant",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 1000,
-			"dragWeight": 525,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowRiding",
-				"canDrag",
-				"doStepDamage",
-				"isBossDino",
-				"isCarnivore",
-				"preventNeuter"
-			],
-			"cloning": {
-				"costBase": 2325,
-				"costLevel": 55,
-				"timeBase": 16275,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 20,
-				"maxSpeed": 2800
-			},
-			"movementW": {
-				"walk": { "base": 2796, "sprint": 4613.4 },
-				"swim": { "base": 1800, "sprint": 2970 }
-			},
-			"movementD": {
-				"walk": { "base": 1864, "sprint": 4100.8 },
-				"swim": { "base": 1200, "sprint": 2640 }
-			},
-			"movementR": {
-				"walk": { "base": 1864, "sprint": 3485.7 },
-				"swim": { "base": 1200, "sprint": 2244 }
-			},
-			"staminaRates": {
-				"sprint": -14,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 65,
-				"defaultSwingRadius": 1200,
-				"attacks": [
-					{ "name": "BiteAttack", "interval": 0.7, "dmg": 450000, "radius": 2400, "stamina": 0 },
-					{
-						"name": "Web Attack", "interval": 25, "dmg": 32000, "radius": 2400, "stamina": 7500,
-						"isProjectile": true
-					},
-					{ "name": "Tail Explosion", "interval": 30, "dmg": 1900000, "radius": 10000, "stamina": 15000 },
-					{
-						"name": "Tail spike", "interval": 10, "dmg": 32000, "radius": 2400, "stamina": 4500,
-						"isProjectile": true
-					},
-					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 2400, "stamina": 0 },
-					{ "name": "Fireballs", "interval": 10, "dmg": 0, "radius": 0, "stamina": 15000 },
-					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 16000, "radius": 800, "stamina": 5 },
-					{ "name": "Tail swipe", "interval": 4, "dmg": 900000, "radius": 4000, "stamina": 30 },
-					{ "name": "Summon Minions", "interval": 20, "dmg": 11700, "radius": 1500, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Primal_Fear/LootSets/Creator/DinoDropInventoryComponent_Creator.DinoDropInventoryComponent_Creator"
-					}
-				],
-				"engrams": [
-					"PrimalItemArmor_CelestialRexSaddle_Tek_C",
-					"PrimalItemArmor_ApexRexSaddle_Tek_C",
-					"PrimalItemArmor_ApexMosaSaddle_Tek_C",
-					"PrimalItemArmor_ApexMegalodonSaddle_Tek_C",
-					"PrimalItemArmor_AlphaRexSaddle_Tek_C",
-					"PrimalItemArmor_AlphaRexSaddle_Tek_C",
-					"PrimalItemArmor_AlphaMosaSaddle_Tek_C",
-					"PrimalItemArmor_AlphaMegalodonSaddle_Tek_C",
-					"PrimalItemArmor_PFAlphaRockDrakeSaddle_Tek_C",
-					"PrimalItemArmor_PFApexRockDrakeSaddle_Tek_C",
-					"PrimalItemArmor_CelestialRockDrakeSaddle_Tek_C",
-					"PrimalItem_TekGrenade_C",
-					"PrimalItemStructure_Bed_Tek_C",
-					"PrimalItemArmor_ShieldTek_C",
-					"PrimalItem_TekSniper_C",
-					"PrimalItemStructure_PrimalTurretTek_C",
-					"PrimalItemStructure_PrimalTekShield_C"
-				],
-				"baseXP": 5500
 			}
 		},
 		{
