@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "347.1.1657515543",
+	"version": "348.2.1658442679",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -1311,6 +1311,63 @@
 			"stackSize": 100,
 			"spoilsIn": 0,
 			"statEffects": []
+		},
+		{
+			"name": "Dragon King's Feast",
+			"bp": "/Game/Mods/AE/Dinos/DragonPack/Creatures/DragonKing/PrimalItemConsumable_DragonFeast.PrimalItemConsumable_DragonFeast_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C"
+		},
+		{
+			"name": "Ryu Egg",
+			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
+			"bp": "/Game/Mods/AE/Dinos/DragonPack/Creatures/DragonKing/Ryu/PrimalItemConsumable_Egg_Ryu.PrimalItemConsumable_Egg_Ryu_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
+			"icon": "/Game/Mods/AE/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 100,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Ryu Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AE/Dinos/DragonPack/Creatures/DragonKing/Ryu/PrimalItemConsumable_Egg_Ryu_Fertilized.PrimalItemConsumable_Egg_Ryu_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Gigant.PrimalItemConsumable_Egg_Gigant_C",
+			"icon": "/Game/Mods/AE/ScorchedEarth/Dinos/Wyvern/HUD_DinoEgg_MIC_Inst_Wyvern_Poison.HUD_DinoEgg_MIC_Inst_Wyvern_Poison",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AE/Dinos/DragonPack/Creatures/DragonKing/Ryu/Ryu_Character_BP.Ryu_Character_BP_C",
+				"temperature": { "min": 43, "max": 44 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
 		},
 		{
 			"name": "Elemental Dragon Armor",
@@ -2714,7 +2771,7 @@
 			"crafting": {
 				"xp": 133.8,
 				"time": 15,
-				"levelReq": 0,
+				"levelReq": 50,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
@@ -2739,7 +2796,7 @@
 			"crafting": {
 				"xp": 74.4,
 				"time": 10,
-				"levelReq": 0,
+				"levelReq": 41,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
