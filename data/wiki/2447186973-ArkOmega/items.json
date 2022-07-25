@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "347.1.1657647099",
+	"version": "348.2.1658722309",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -2427,6 +2427,51 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [ { "exact": true, "qty": 10, "type": "PrimalItem_PrimeEssence_C" } ]
+			}
+		},
+		{
+			"name": "Early Set Token",
+			"description": "Consume to receive a random early game set item. These set items cannot be imbued or fragmented. Their only purpose is to give players a starting boost. ",
+			"bp": "/Game/Mods/ArkOmega/Items/Gamble/PrimalItem_EarlySetGamble.PrimalItem_EarlySetGamble_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Aberration_Implant_Icon_Gamma.Aberration_Implant_Icon_Gamma",
+			"type": "MiscConsumable/Food",
+			"weight": 1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItem_Souls_C" },
+					{ "exact": true, "qty": 5, "type": "PrimalItem_BasicEssence_C" }
+				]
+			}
+		},
+		{
+			"name": "Omega Glider Suit Skin",
+			"description": "When attached to a Chest Armor, the Glider Suit enables sailing through the air by double-tapping jump, while gaining speed by running and diving!",
+			"bp": "/Game/Mods/ArkOmega/Items/Glider/PrimalItemArmor_OmegaGlider.PrimalItemArmor_OmegaGlider_C",
+			"parent": "/Game/Aberration/CoreBlueprints/Items/Armor/PrimalItemArmor_Glider.PrimalItemArmor_Glider_C",
+			"icon": "/Game/Aberration/Icons/Outfits/Materials/HUD_GliderSuit_Colorized.HUD_GliderSuit_Colorized",
+			"type": "Skin",
+			"folders": [ "Armor", "Attachments" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 22.5,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItem_BasicEssence_C" },
+					{ "qty": 5, "type": "PrimalItem_EtherealSoul_C" },
+					{ "qty": 75, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Fibers_C" }
+				]
 			}
 		},
 		{
@@ -7099,7 +7144,7 @@
 				"levelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "exact": true, "qty": 50, "type": "PrimalItem_SoulShard_C" } ]
+				"recipe": [ { "exact": true, "qty": 25, "type": "PrimalItem_SoulShard_C" } ]
 			}
 		},
 		{
@@ -7150,25 +7195,6 @@
 			"name": "Imbue Wipe Token - Armor",
 			"description": "Drag this onto an imbued armor or saddle to wipe the imbues and restore it back to its original settings. ",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_ImbueWipe.PrimalItem_ImbueWipe_C",
-			"parent": "/Script/ShooterGame.PrimalItem",
-			"icon": "/Game/Mods/ArkOmega/PrimalEarth/UI/Textures/HubTributeIcon.HubTributeIcon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Items" ],
-			"weight": 0.5,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 2,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "exact": true, "qty": 3, "type": "PrimalItem_SoulShard_C" } ]
-			}
-		},
-		{
-			"name": "Imbue Wipe Token - Weapon",
-			"description": "Drag this onto an imbued weapon to wipe the imbues and restore it back to its original settings. ",
-			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_ImbueWipeWeapon.PrimalItem_ImbueWipeWeapon_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/PrimalEarth/UI/Textures/HubTributeIcon.HubTributeIcon",
 			"type": "MiscConsumable/Food",
@@ -7707,14 +7733,14 @@
 			"structure": "/Game/Mods/ArkOmega/Structures/BossBeacon/GauntletBeacon_BP.GauntletBeacon_BP_C"
 		},
 		{
-			"name": "Chromatic Cannon Module",
-			"description": "Chromatic Cannon Upgrade Module",
-			"bp": "/Game/Mods/ArkOmega/Structures/ChromaticCannon/Modules/PrimalItem_Module_Parent.PrimalItem_Module_Parent_C",
+			"name": "God Module",
+			"description": "With this module equipped in the trophy slot of your Gauntlet Beacon, you can summon Gods from Boss Souls.",
+			"bp": "/Game/Mods/ArkOmega/Structures/BossBeacon/PrimalItem_GodModule.PrimalItem_GodModule_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
-			"icon": "/Game/Mods/ArkOmega/Structures/ChromaticCannon/Cannon_Icon.Cannon_Icon",
+			"icon": "/Game/Mods/ArkOmega/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/CubeArtifact_Icon.CubeArtifact_Icon",
 			"type": "Equipment/Trophy",
 			"flags": [ "preventCheatGive" ],
-			"folders": [ "Modules" ],
+			"folders": [ "Structure Upgrades" ],
 			"weight": 0.5,
 			"stackSize": 1,
 			"crafting": {
@@ -7723,7 +7749,11 @@
 				"levelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "exact": true, "qty": 50, "type": "PrimalItem_SoulShard_C" } ]
+				"recipe": [
+					{ "exact": true, "qty": 50, "type": "PrimalItem_SoulShard_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 50, "type": "PrimalItemStructure_GodEgg_C" }
+				]
 			}
 		},
 		{
@@ -7892,7 +7922,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Oil_C" },
 					{ "qty": 3, "type": "PrimalItem_EtherealSoul_C" },
 					{ "qty": 15, "type": "PrimalItem_BasicEssence_C" }
 				]
@@ -7980,7 +8010,7 @@
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 4,
-			"stackSize": 100,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 160,
 				"time": 5,
@@ -8283,7 +8313,7 @@
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 4,
-			"stackSize": 100,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 160,
 				"time": 5,
@@ -8304,7 +8334,7 @@
 			"description": "A structure specifically designed to burn souls for heat. This Furnace has the ability to do the tasks of many other structures. \n\nBurns Souls for energy.",
 			"bp": "/Game/Mods/ArkOmega/Structures/SoulFurnace/PrimalItemStructure_SoulFurnace.PrimalItemStructure_SoulFurnace_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/ArkOmega/Structures/SoulFurnace/StrengthenedForge_Icon.StrengthenedForge_Icon",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKShieldGenerator_Icon.TEKShieldGenerator_Icon",
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 50,
@@ -8680,15 +8710,15 @@
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Eviscerators/WeapEvis.WeapEvis_C"
 		},
 		{
-			"name": "Flashbang Grenade",
-			"description": "Bioluminescent Fruit that provides a flash of Charge lighting",
+			"name": "Psychosis Grenade",
+			"description": "While it deals low damage, it will also enrage everything in the explosion radius, forcing them to attack eachother.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Flashbang/PrimalItem_FlashbangGrenade.PrimalItem_FlashbangGrenade_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmolessConsumeSelf_Spoils.PrimalItemWeaponGenericAmmolessConsumeSelf_Spoils_C",
 			"icon": "/Game/ScorchedEarth/Icons/Weapons/ClusterGrenade_Icon.ClusterGrenade_Icon",
 			"type": "Weapon",
 			"folders": [ "Weapons", "Grenades" ],
-			"weight": 1,
-			"stackSize": 100,
+			"weight": 0.2,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 1,
 				"time": 5,
@@ -8696,8 +8726,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "PrimalItem_UnstableSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_BasicEssence_C" },
+					{ "qty": 5, "type": "PrimalItem_RageSoul_C" },
+					{ "qty": 5, "type": "PrimalItem_AlphaEssence_C" },
 					{ "qty": 5, "type": "PrimalItemResource_ChitinPaste_C" },
 					{ "qty": 5, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 5, "type": "PrimalItemResource_Crystal_C" }
@@ -9442,7 +9472,7 @@
 				"recipe": [
 					{ "qty": 3, "type": "PrimalItem_ResourceSoul_C" },
 					{ "qty": 15, "type": "PrimalItem_BasicEssence_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Obsidian_C" }
+					{ "qty": 5, "type": "PrimalItemResource_Obsidian_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/ObsidianMultiTool/WeapObsidianMultiTool_Omega.WeapObsidianMultiTool_Omega_C"
