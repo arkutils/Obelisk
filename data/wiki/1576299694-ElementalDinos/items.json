@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "346.11.1650281665",
+	"version": "348.6.1659523193",
 	"format": "4",
 	"mod": {
 		"id": "1576299694",
@@ -4208,6 +4208,32 @@
 			}
 		},
 		{
+			"name": "Mutagel",
+			"description": "Rare mechanochemical substance derived from Mutagen. Use with caution to tame autonomous Stryders.",
+			"bp": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_Mutagel_Elemental.PrimalItemConsumable_Mutagel_Elemental_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Environment/Mutagen/PrimalItemConsumable_Mutagel.PrimalItemConsumable_Mutagel_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_Gen2_Mutagel_Icon.HUD_Gen2_Mutagel_Icon",
+			"type": "MiscConsumable/Other",
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 25,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_AirCatalystShard_C" },
+					{ "qty": 1, "type": "PrimalItemResource_FireCatalystShard_C" },
+					{ "qty": 1, "type": "PrimalItemResource_IceCatalystShard_C" },
+					{ "qty": 1, "type": "PrimalItemResource_LightningCatalystShard_C" },
+					{ "qty": 1, "type": "PrimalItemResource_NatureCatalystShard_C" },
+					{ "qty": 1, "type": "PrimalItemResource_StoneCatalystShard_C" },
+					{ "qty": 1, "type": "PrimalItemResource_WaterCatalystShard_C" }
+				]
+			}
+		},
+		{
 			"name": "Narcotic",
 			"description": "Increases your health, but puts you to sleep.",
 			"bp": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_Narcotic_Base.PrimalItemConsumable_Narcotic_Base_C",
@@ -4564,41 +4590,6 @@
 					{ "qty": 50, "type": "PrimalItemResource_ElementalFenEssence_C" },
 					{ "qty": 50, "type": "PrimalItemResource_ElementalStormEssence_C" },
 					{ "qty": 50, "type": "PrimalItemResource_ElementalVaporEssence_C" }
-				]
-			},
-			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ],
-			"cooking": {
-				"health": 0.01,
-				"stamina": 3,
-				"food": 2.25,
-				"weight": 0.05,
-				"water": -1
-			}
-		},
-		{
-			"name": "Unstable stew",
-			"description": "Made with a flavorful and aromatic blend of exotic berries as a base.  The unstable talon is first decreased, then increased, side creased, vertical creased, microwaved, and finally set out to bake in the sun for exactly 0.01 seconds.   \n\nNOTE: Feed this to a wyvern or rockdrake.  While it may make them incredibly sick, their egg may be worth their suffering.",
-			"bp": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItemConsumable_UnstableStew.PrimalItemConsumable_UnstableStew_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
-			"icon": "/Game/Mods/ElementalDinos/Crafting/Consumables/MantisUnstableStew_Icon.MantisUnstableStew_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "ElementalArk", "Light" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 0,
-			"crafting": {
-				"xp": 1,
-				"time": 2,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_WyvernHunter_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Berry_AirAmarberry_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Berry_LightningStimberry_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Berry_NatureTintoberry_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Berry_StoneNarcoberry_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Berry_WaterAzulberry_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ],
@@ -5924,6 +5915,31 @@
 					{ "qty": 20, "type": "PrimalItemResourceDeinoDust_C" },
 					{ "exact": true, "qty": 10, "type": "PrimalItemResource_ApexDrop_WaterWyvern_C" },
 					{ "qty": 1, "type": "PrimalItem_PureEssence_Water_C" }
+				]
+			}
+		},
+		{
+			"name": "Omnivoid wyvern",
+			"description": "Use this item to summon an omnivoid wyvern..",
+			"bp": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItem_Spawner_Elemental_Custom_Wyvern_Omni.PrimalItem_Spawner_Elemental_Custom_Wyvern_Omni_C",
+			"parent": "/Game/Mods/ElementalDinos/Crafting/Consumables/PrimalItem_Spawner_Elemental_Custom_BASE.PrimalItem_Spawner_Elemental_Custom_BASE_C",
+			"icon": "/Game/Mods/ElementalDinos/Dinos/Entries/Icons/MIC_DinoEntryIcon_TekWyvern.MIC_DinoEntryIcon_TekWyvern",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Drakes" ],
+			"weight": 100,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_WyvernHunter_C" },
+					{ "exact": true, "qty": 1, "type": "PrimalItem_PureEssence_Storm_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ElementalFenEssenceLumin_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ElementalGlacialEssenceLumin_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ElementalVaporEssenceLumin_C" }
 				]
 			}
 		},
@@ -7397,18 +7413,7 @@
 			"icon": "/Game/Mods/ElementalDinos/Crafting/Resources/WyvernClawUnstable_Icon.WyvernClawUnstable_Icon",
 			"type": "Resource",
 			"weight": 1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_Rex_C" },
-					{ "qty": 10, "type": "PrimalItemResource_ElementalAirEssenceLumin_C" }
-				]
-			}
+			"stackSize": 100
 		},
 		{
 			"name": "Black Pearl",
