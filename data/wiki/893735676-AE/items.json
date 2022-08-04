@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "348.2.1658536548",
+	"version": "348.7.1659567653",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -193,6 +193,17 @@
 			"stackSize": 10,
 			"spoilsIn": 3600,
 			"structure": "/Game/Mods/AE/Aberration/Structures/CarnivorousPlant/Structure_Carnivorous_Plant_Trap.Structure_Carnivorous_Plant_Trap_C"
+		},
+		{
+			"name": "Plant Species Z Fruit",
+			"description": "Bioluminescent Fruit that provides a flash of Charge lighting",
+			"bp": "/Game/Mods/AE/Aberration/WeaponPlantSpeciesZ/PrimalItemConsumable_PlantSpeciesZ_Fruit.PrimalItemConsumable_PlantSpeciesZ_Fruit_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Aberration/Icons/Plants/PlantZ_Fruit_Icon.PlantZ_Fruit_Icon",
+			"type": "MiscConsumable/Other",
+			"weight": 0.1,
+			"stackSize": 1,
+			"spoilsIn": 1200
 		},
 		{
 			"name": "Tripwire Charge Flare Trap",
@@ -1271,11 +1282,6 @@
 			"stackSize": 100,
 			"spoilsIn": 0,
 			"statEffects": []
-		},
-		{
-			"name": "Dragon King's Feast",
-			"bp": "/Game/Mods/AE/Dinos/DragonPack/Creatures/DragonKing/PrimalItemConsumable_DragonFeast.PrimalItemConsumable_DragonFeast_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C"
 		},
 		{
 			"name": "Ryu Egg",
@@ -3818,6 +3824,7 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
+					{ "qty": 1040, "type": "PrimalItemResource_Hide_Fabled_C" },
 					{ "qty": 690, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 650, "type": "PrimalItemResource_ChitinOrKeratin_C" },
 					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" }
@@ -10425,34 +10432,6 @@
 				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
 				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
 			],
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Fertilized Evolution Compy Egg",
-			"description": "Tremendously nourishing by itself, this egg provides simple nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AE/Items/DinoEggs/PrimalItemConsumable_Egg_Compy_Evo_Fertilized.PrimalItemConsumable_Egg_Compy_Evo_Fertilized_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Compy.PrimalItemConsumable_Egg_Compy_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Compy.HUD_DinoEgg_MIC_Inst_Compy",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 3,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
-				{ "stat": "health", "value": 20, "useItemQuality": true, "duration": 5 },
-				{ "stat": "stamina", "value": 25, "useItemQuality": true, "duration": 6.25 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AE/Dinos/Evolution/DarkstarEvolution/Compy/Evo_Compy_Character_BP.Evo_Compy_Character_BP_C",
-				"temperature": { "min": 24, "max": 32 }
-			},
 			"cooking": {
 				"health": 0.8,
 				"stamina": 0.8,
@@ -26389,6 +26368,24 @@
 			}
 		},
 		{
+			"name": "Magic Charcoal",
+			"description": "Drag it into Raw Meat to INSTANTLY create Cooked Meat!",
+			"bp": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_MagicCharcoal.PrimalItemResource_MagicCharcoal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Charcoal_Icon.Charcoal_Icon",
+			"type": "Resource",
+			"weight": 0.25,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
+			}
+		},
+		{
 			"name": "Diplocaulus Egg",
 			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
 			"bp": "/Game/Mods/AE/PrimalEarth/Test/PrimalItemConsumable_Egg_Diplocaulus.PrimalItemConsumable_Egg_Diplocaulus_C",
@@ -26531,6 +26528,52 @@
 				"recipe": [ { "qty": 10, "type": "PrimalItemResource_ChitinPaste_C" } ]
 			},
 			"structure": "/Game/Mods/AE/Structures/AEDeath_Recovery/AE_GolemStatue.AE_GolemStatue_C"
+		},
+		{
+			"name": "Large Placeable Arena",
+			"description": "Go on, hide.Made by Vic From WKD Gaming",
+			"bp": "/Game/Mods/AE/Structures/Arenas/large/PrimalItemStructure_WKDArenaLG.PrimalItemStructure_WKDArenaLG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/CrystalIsles/Assets/Dinos/CIBoss/Arena/CIBossSummon_Icon_Hard.CIBossSummon_Icon_Hard",
+			"type": "Structure",
+			"folders": [ "Structures" ],
+			"weight": 20,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 75, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 300, "type": "PrimalItemResource_Stone_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/Arenas/large/WKDArena_StructureLG.WKDArena_StructureLG_C"
+		},
+		{
+			"name": "Eternal Arena",
+			"description": "It's a generic consumable!  Small Placeable Boss arena made by Vic from WKD gaming",
+			"bp": "/Game/Mods/AE/Structures/Arenas/small/PrimalItemStructure_WKDArenaSM.PrimalItemStructure_WKDArenaSM_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/CrystalIsles/Assets/Dinos/CIBoss/Arena/CIBossSummon_Icon_Easy.CIBossSummon_Icon_Easy",
+			"type": "Structure",
+			"folders": [ "Structures" ],
+			"weight": 20,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 75, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 300, "type": "PrimalItemResource_Stone_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/Arenas/small/WKDArena_StructureSM.WKDArena_StructureSM_C"
 		},
 		{
 			"name": "Beer Jar",
@@ -29138,6 +29181,3030 @@
 			"structure": "/Game/Mods/AE/Structures/Generator/StorageBox_AEGenerator.StorageBox_AEGenerator_C"
 		},
 		{
+			"name": "Cementing Paste",
+			"description": "This thick, waterproof paste could be used as mortar, or to thicken another substance.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGAchatinaBox/PrimalItemResource_HG_ChitinPaste.PrimalItemResource_HG_ChitinPaste_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/CementPaste_Icon.CementPaste_Icon",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_SnailPaste_C" } ]
+			}
+		},
+		{
+			"name": "Polymer",
+			"description": "These incredibly strong, lightweight plates can be shaped and then heat treated into casings for anything.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGAchatinaBox/PrimalItemResource_HG_Polymer.PrimalItemResource_HG_Polymer_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Polymer_Icon.Polymer_Icon",
+			"type": "Resource",
+			"folders": [ "Composites" ],
+			"weight": 0.25,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Polymer_Organic_C" } ]
+			}
+		},
+		{
+			"name": "Eternal Achatina Box",
+			"description": "A small box to pick up achatina paste.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGAchatinaBox/PrimalItemStructure_HG_AchatinaBox.PrimalItemStructure_HG_AchatinaBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGAchatinaBox/HGAchatinaBox_Icon.HGAchatinaBox_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 10,
+			"crafting": {
+				"xp": 3.7,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGAchatinaBox/HG_AchatinaBox.HG_AchatinaBox_C"
+		},
+		{
+			"name": "Eternal Ammo Storage Box",
+			"description": "A large cabinet to store your ammo. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGAmmoStorageBox/PrimalItemStructure_HGAmmoStorageBox.PrimalItemStructure_HGAmmoStorageBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/HGAmmoStorageBox_Icon.HGAmmoStorageBox_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGAmmoStorageBox/HGAmmoStorageBox.HGAmmoStorageBox_C"
+		},
+		{
+			"name": "Eternal Seed Crafter",
+			"description": "Store berries, vegetables and seeds automatically pick up.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/PrimalItemStructure_HGBarrel.PrimalItemStructure_HGBarrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/HGBerrel_Icon.HGBerrel_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/HGBarrel.HGBarrel_C"
+		},
+		{
+			"name": "Aggeravic Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AggeravicMushroom.PrimalItemConsumable_Seed_AggeravicMushroom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AggeravicMushroom_Seed_Icon.AggeravicMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Aggeravic Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AggeravicMushroom_Berrel.PrimalItemConsumable_Seed_AggeravicMushroom_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AggeravicMushroom_Seed_Icon.AggeravicMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "AB" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_CommonMushroom_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Amarberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Amarberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Amarberry.PrimalItemConsumable_Seed_Amarberry_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/AmarberrySeed_Icon.AmarberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Amarberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Amarberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Amarberry_Berrel.PrimalItemConsumable_Seed_Amarberry_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/AmarberrySeed_Icon.AmarberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Berry_Amarberry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Ammonite Bile Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AmmoniteBile.PrimalItemConsumable_Seed_AmmoniteBile_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AmmoniteBile_Seed_Icon.AmmoniteBile_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Ammonite Bile Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AmmoniteBile_Berrel.PrimalItemConsumable_Seed_AmmoniteBile_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AmmoniteBile_Seed_Icon.AmmoniteBile_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_AmmoniteBlood_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Angler Gel Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AnglerGel.PrimalItemConsumable_Seed_AnglerGel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AnglerGel_Seed_Icon.AnglerGel_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Angler Gel Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AnglerGel_Berrel.PrimalItemConsumable_Seed_AnglerGel_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AnglerGel_Seed_Icon.AnglerGel_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_AnglerGel_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Aquatic Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AquaticMushroom.PrimalItemConsumable_Seed_AquaticMushroom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AquaticMushroom_Seed_Icon.AquaticMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Aquatic Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AquaticMushroom_Berrel.PrimalItemConsumable_Seed_AquaticMushroom_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AquaticMushroom_Seed_Icon.AquaticMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "AB" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Mushroom_Aquatic_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Ascerbic Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AscerbicMushroom.PrimalItemConsumable_Seed_AscerbicMushroom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AscerbicMushroom_Seed_Icon.AscerbicMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Ascerbic Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AscerbicMushroom_Berrel.PrimalItemConsumable_Seed_AscerbicMushroom_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AscerbicMushroom_Seed_Icon.AscerbicMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "AB" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Mushroom_Ascerbic_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Auric Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AuricMushroom.PrimalItemConsumable_Seed_AuricMushroom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AuricMushroom_Seed_Icon.AuricMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Auric Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_AuricMushroom_Berrel.PrimalItemConsumable_Seed_AuricMushroom_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/AuricMushroom_Seed_Icon.AuricMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "AB" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Mushroom_Auric_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Azulberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Azulberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Azulberry.PrimalItemConsumable_Seed_Azulberry_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/AzulberrySeed_Icon.AzulberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Azulberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Azulberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Azulberry_Berrel.PrimalItemConsumable_Seed_Azulberry_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/AzulberrySeed_Icon.AzulberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Berry_Azulberry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Bio Toxin Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_BioToxin.PrimalItemConsumable_Seed_BioToxin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/BioToxin_Seed_Icon.BioToxin_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Bio Toxin Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_BioToxin_Barrel.PrimalItemConsumable_Seed_BioToxin_Barrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/BioToxin_Seed_Icon.BioToxin_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_JellyVenom_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Black Pearl Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_BlackPearl.PrimalItemConsumable_Seed_BlackPearl_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/BlackPearl_Seed_Icon.BlackPearl_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Black Pearl Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_BlackPearl_Berrel.PrimalItemConsumable_Seed_BlackPearl_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/BlackPearl_Seed_Icon.BlackPearl_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_BlackPearl_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Cactus Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_CactusSap.PrimalItemConsumable_Seed_CactusSap_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/CactusSap_Seed_Icon.CactusSap_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Cactus Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Cactus_Barrel.PrimalItemConsumable_Seed_Cactus_Barrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/CactusSap_Seed_Icon.CactusSap_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "SE" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_CactusSap_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Citronal Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Citronal crop.  Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Citronal.PrimalItemConsumable_Seed_Citronal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/CitronalSeed_Icon.CitronalSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Citronal Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Citronal crop.  Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Citronal_Berrel.PrimalItemConsumable_Seed_Citronal_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/CitronalSeed_Icon.CitronalSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Veggie_Citronal_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Crystal Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Crystal.PrimalItemConsumable_Seed_Crystal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Crystal_Seed_Icon.Crystal_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Crystal Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Crystal_Berrel.PrimalItemConsumable_Seed_Crystal_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Crystal_Seed_Icon.Crystal_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Crystal_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Element Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Element.PrimalItemConsumable_Seed_Element_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/HGElement_Seed_Icon.HGElement_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Element Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Element_Berrel.PrimalItemConsumable_Seed_Element_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/HGElement_Seed_Icon.HGElement_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_ElementShard_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gem Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Gem.PrimalItemConsumable_Seed_Gem_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Gem_Seed_Icon.Gem_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Gem Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Gem_Berrel.PrimalItemConsumable_Seed_Gem_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Gem_Seed_Icon.Gem_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "AB" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Gem_BioLum_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Honey Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Honey.PrimalItemConsumable_Seed_Honey_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Resources/Icons/HoneyLure_Icon.HoneyLure_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Honey Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Honey_Berrel.PrimalItemConsumable_Seed_Honey_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Resources/Icons/HoneyLure_Icon.HoneyLure_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Honey_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Leech Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Leech.PrimalItemConsumable_Seed_Leech_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Leech_Seed_Icon.Leech_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Leech Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Leech_Berrel.PrimalItemConsumable_Seed_Leech_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Leech_Seed_Icon.Leech_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_LeechBlood_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Longrass Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Longrass crop.  Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Longrass.PrimalItemConsumable_Seed_Longrass_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/LongrassSeed_Icon.LongrassSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Longrass Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Longrass crop.  Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Longrass_Berrel.PrimalItemConsumable_Seed_Longrass_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/LongrassSeed_Icon.LongrassSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Veggie_Longrass_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Mejoberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Mejoberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Mejoberry.PrimalItemConsumable_Seed_Mejoberry_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/MejoberrySeed_Icon.MejoberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Mejoberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Mejoberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Mejoberry_Berrel.PrimalItemConsumable_Seed_Mejoberry_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/MejoberrySeed_Icon.MejoberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Berry_Mejoberry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Mutagel Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Mutagel.PrimalItemConsumable_Seed_Mutagel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/HGMutagel_Seed_Icon.HGMutagel_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Mutagel Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Mutagel_Berrel.PrimalItemConsumable_Seed_Mutagel_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/HGMutagel_Seed_Icon.HGMutagel_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "GE" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Mutagel_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Narcoberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Narcoberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Narcoberry.PrimalItemConsumable_Seed_Narcoberry_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/NarcoberrySeed_Icon.NarcoberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Narcoberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Narcoberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Narcoberry_Berrel.PrimalItemConsumable_Seed_Narcoberry_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/NarcoberrySeed_Icon.NarcoberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Berry_Narcoberry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Obsidian Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Obsidian.PrimalItemConsumable_Seed_Obsidian_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Obsidian_Seed_Icon.Obsidian_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Obsidian Seed",
+			"description": " Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Obsidian_Berrel.PrimalItemConsumable_Seed_Obsidian_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Obsidian_Seed_Icon.Obsidian_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Obsidian_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Organic Polymer Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_OrganicPolymer.PrimalItemConsumable_Seed_OrganicPolymer_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Organic_Plymer_Seed_Icon.Organic_Plymer_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Organic Polymer Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_OrganicPolymer_Berrel.PrimalItemConsumable_Seed_OrganicPolymer_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Organic_Plymer_Seed_Icon.Organic_Plymer_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Polymer_Organic_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Palm Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Palm.PrimalItemConsumable_Seed_Palm_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/PalmOil_Seed_Icon.PalmOil_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Palm Seed",
+			"description": " Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Palm_Berrel.PrimalItemConsumable_Seed_Palm_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/PalmOil_Seed_Icon.PalmOil_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_Polymer_Organic_C" },
+					{ "qty": 1, "type": "PrimalItemResource_RareMushroom_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Pearl Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Amarberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Pearls.PrimalItemConsumable_Seed_Pearls_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Pearll_Seed_Icon.Pearll_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Pearl Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Amarberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Pearls_Berrel.PrimalItemConsumable_Seed_Pearls_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Pearll_Seed_Icon.Pearll_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Silicon_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Plant Species Y Seed",
+			"description": "Plant this in a viable large crop plot to grow a frightening-looking defensive plant, which will shoot poisonous spores at any interlopers!",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_PlantSpeciesY.PrimalItemConsumable_Seed_PlantSpeciesY_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/ScorchedEarth/Icons/PlantSpeciesYSeed_Icon.PlantSpeciesYSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Plant Species Y Seed",
+			"description": "Plant this in a viable large crop plot to grow a frightening-looking defensive plant, which will shoot poisonous spores at any interlopers!",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_PlantSpeciesY_Berrel.PrimalItemConsumable_Seed_PlantSpeciesY_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumableSeed.PrimalItemConsumableSeed_C",
+			"icon": "/Game/ScorchedEarth/Icons/PlantSpeciesYSeed_Icon.PlantSpeciesYSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "SE" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_BlackPearl_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": -1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Plant Species Z Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_PlantSpeciesZ.PrimalItemConsumable_Seed_PlantSpeciesZ_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/HGPlantZ_Seed_Icon.HGPlantZ_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": -1, "useItemQuality": true, "duration": 5 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Plant Species Z Seed",
+			"description": "Plant this in a viable large crop plot to grow a charge-infused plant, that will protect you against enemies and provide you with fruits!",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_PlantSpeciesZ_Berrel.PrimalItemConsumable_Seed_PlantSpeciesZ_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumableSeed.PrimalItemConsumableSeed_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/HGPlantZ_Seed_Icon.HGPlantZ_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "AB" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 0, "type": "PrimalItem_PlantSpeciesZ_Grenade_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": -1, "useItemQuality": true, "duration": 5 } ]
+		},
+		{
+			"name": "Rare Flower Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_RareFlower.PrimalItemConsumable_Seed_RareFlower_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/RareFlower_Seed_Icon.RareFlower_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Rare Flower Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_RareFlower_Berrel.PrimalItemConsumable_Seed_RareFlower_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/RareFlower_Seed_Icon.RareFlower_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_RareFlower_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Rare Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_RareMushroom.PrimalItemConsumable_Seed_RareMushroom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/RareMushroom_Seed_Icon.RareMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Rare Mushroom Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_RareMushroom_Berrel.PrimalItemConsumable_Seed_RareMushroom_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/RareMushroom_Seed_Icon.RareMushroom_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_RareMushroom_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Rockarrot Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Rockarrot crop.  Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Rockarrot.PrimalItemConsumable_Seed_Rockarrot_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/CarrotSeed_Icon.CarrotSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Rockarrot Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Rockarrot crop.  Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Rockarrot_Berrel.PrimalItemConsumable_Seed_Rockarrot_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/CarrotSeed_Icon.CarrotSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Red Wood Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Sap.PrimalItemConsumable_Seed_Sap_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/RedWood_Seed_Icon.RedWood_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Blue Sap Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_SapBlue.PrimalItemConsumable_Seed_SapBlue_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/BlueSapSeed_Icon.BlueSapSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Blue Sap Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_SapBlue_Barrel.PrimalItemConsumable_Seed_SapBlue_Barrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/BlueSapSeed_Icon.BlueSapSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "EX" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_BlueSap_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Red Sap Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_SapRed.PrimalItemConsumable_Seed_SapRed_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/RedSapSeed_Icon.RedSapSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Red Sap Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_SapRed_Barrel.PrimalItemConsumable_Seed_SapRed_Barrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/RedSapSeed_Icon.RedSapSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "EX" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_RedSap_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Red Wood Seed",
+			"description": "Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Sap_Barrel.PrimalItemConsumable_Seed_Sap_Barrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/RedWood_Seed_Icon.RedWood_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Sap_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Savoroot Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Savoroot crop.  Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Savoroot.PrimalItemConsumable_Seed_Savoroot_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/SavrootSeed_Icon.SavrootSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Savoroot Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Savoroot crop.  Can be planted in Medium or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Savoroot_Berrel.PrimalItemConsumable_Seed_Savoroot_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/SavrootSeed_Icon.SavrootSeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Veggie_Savoroot_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Silk Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Silk.PrimalItemConsumable_Seed_Silk_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Silk_Seed_Icon.Silk_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Silk Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Silk_Berrel.PrimalItemConsumable_Seed_Silk_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Silk_Seed_Icon.Silk_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "SE" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Silk_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Stimberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Stimberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Stimberry.PrimalItemConsumable_Seed_Stimberry_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/StimberrySeed_Icon.StimberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Stimberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Stimberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Stimberry_Berrel.PrimalItemConsumable_Seed_Stimberry_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/StimberrySeed_Icon.StimberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Berry_Stimberry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Sulfur Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Sulfur.PrimalItemConsumable_Seed_Sulfur_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Sulfur_Seed_Icon.Sulfur_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Sulfur Seed",
+			"description": "Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Sulfur_Barrel.PrimalItemConsumable_Seed_Sulfur_Barrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Material/Sulfur_Seed_Icon.Sulfur_Seed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Sulfur_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Tintoberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Tintoberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Tintoberry.PrimalItemConsumable_Seed_Tintoberry_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/TintoberrySeed_Icon.TintoberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Tintoberry Seed",
+			"description": "Eat it to gain a tiny amount of nourishment, or plant it to grow your own Tintoberry bush.  Can be planted in Small, Medium, or Large Crop Plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBarrel/Seeds/PrimalItemConsumable_Seed_Tintoberry_Berrel.PrimalItemConsumable_Seed_Tintoberry_Berrel_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseBerry.PrimalItemConsumable_Seed_BaseBerry_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/TintoberrySeed_Icon.TintoberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "ARK" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"spoilsIn": 900,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Berry_Tintoberry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Eternal Book Shelf Storage Box",
+			"description": "A large cabinet to store your blueprints. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGBookShelf/PrimalItemStructure_HG_BookShelf.PrimalItemStructure_HG_BookShelf_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGBookShelf/HGBookShelf_Icon.HGBookShelf_Icon",
+			"type": "Structure",
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGBookShelf/BP_HG_BookShelf.BP_HG_BookShelf_C"
+		},
+		{
+			"name": "HG Super Fertilizer",
+			"description": "High nitrogen fertilizer that helps crops grow in their plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGCompostBin/PrimalItemConsumable_Fertilizer_Compost_Child.PrimalItemConsumable_Fertilizer_Compost_Child_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Fertilizer_Compost.PrimalItemConsumable_Fertilizer_Compost_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGCompostBin/SuperFertilizer_Icon.SuperFertilizer_Icon",
+			"type": "MiscConsumable/Other",
+			"folders": [ "Consumables", "Feces" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 800,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemConsumable_SpoiledMeat_C" },
+					{ "qty": 6, "type": "PrimalItemConsumablePoop_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilizer",
+			"description": "High nitrogen fertilizer that helps crops grow in their plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGCompostBin/PrimalItemConsumable_HG_Fertilizer_Compost.PrimalItemConsumable_HG_Fertilizer_Compost_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Fertilizer_Base.PrimalItemConsumable_Fertilizer_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Fertilizer_Icon.Fertilizer_Icon",
+			"type": "MiscConsumable/Other",
+			"folders": [ "Consumables", "Feces" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 320,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 3, "type": "PrimalItemConsumablePoop_C" }
+				]
+			}
+		},
+		{
+			"name": "HG SuperFertilizer",
+			"description": "High nitrogen fertilizer that helps crops grow in their plots.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGCompostBin/PrimalItemConsumable_HG_SuperFertilizer_Compost.PrimalItemConsumable_HG_SuperFertilizer_Compost_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Fertilizer_Base.PrimalItemConsumable_Fertilizer_Base_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGCompostBin/SuperFertilizer_Icon.SuperFertilizer_Icon",
+			"type": "MiscConsumable/Other",
+			"folders": [ "Consumables", "Feces" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 800,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 30, "type": "PrimalItemConsumable_SpoiledMeat_C" },
+					{ "qty": 6, "type": "PrimalItemConsumablePoop_C" }
+				]
+			}
+		},
+		{
+			"name": "Eternal Compost Bin",
+			"description": "A large bin for converting dung into high-quality fertilizer.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGCompostBin/PrimalItemStructure_HG_CompostBin.PrimalItemStructure_HG_CompostBin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/CompostBin.CompostBin",
+			"type": "Structure",
+			"folders": [ "Structures", "Farming" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 5.99,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 12, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGCompostBin/HG_CompostBin.HG_CompostBin_C"
+		},
+		{
+			"name": "Eternal Crafting Storage Box",
+			"description": "A large cabinet to store your crafted items. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGCraftingStorageBox/PrimalItemStructure_HGCraftingStorageBox.PrimalItemStructure_HGCraftingStorageBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/HGLargeStorage_Icon_C.HGLargeStorage_Icon_C",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGCraftingStorageBox/HGCraftingStorageBox.HGCraftingStorageBox_C"
+		},
+		{
+			"name": "Eternal Crafting Storage Box Metal",
+			"description": "A large cabinet to store your crafted items. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGCraftingStorageBox/PrimalItemStructure_HGCraftingStorageBox_Metal.PrimalItemStructure_HGCraftingStorageBox_Metal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/HGCraftingStorageBox_Metal_Icon.HGCraftingStorageBox_Metal_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGCraftingStorageBox/HGCraftingStorageBox_Metal.HGCraftingStorageBox_Metal_C"
+		},
+		{
+			"name": "Eternal Cryofridge",
+			"description": "Requires electricity to run.  Keeps Cryopods alive forever!",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGCryoFridge/PrimalItemStructure_HG_CryoFridge.PrimalItemStructure_HG_CryoFridge_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Extinction/Icons/Structures/CryoFridge_Icon.CryoFridge_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Electric" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 73,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGCryoFridge/HG_CryoFridge.HG_CryoFridge_C"
+		},
+		{
+			"name": "Eternal Dedicated Storage Box",
+			"description": "Holds a large amount of a single resource.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGDedicatedBox/PrimalItemStructure_HG_DedicatedStorageBox.PrimalItemStructure_HG_DedicatedStorageBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGDedicatedBox/HGDedicatedBox_Icon2.HGDedicatedBox_Icon2",
+			"type": "Structure",
+			"folders": [ "[HG]", "Storage" ],
+			"weight": 2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 2,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 36, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 55, "type": "PrimalItemResource_Polymer_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGDedicatedBox/BP_HG_DedicatedStorageBox.BP_HG_DedicatedStorageBox_C"
+		},
+		{
+			"name": "Eternal HG Egg Collector",
+			"description": "Requires electricity to run.  Pick up eggs automatically.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGEggCollector/PrimalItemStructure_HGEggCollector.PrimalItemStructure_HGEggCollector_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGEggCollector/EggCollector_Icon.EggCollector_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Electric" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 73,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGEggCollector/HGEggCollector.HGEggCollector_C"
+		},
+		{
+			"name": "Eternal Extinction Storage Box",
+			"description": "A large cabinet to store your resources. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGExtinctionBox/PrimalItemStructure_HGExtinctionBox.PrimalItemStructure_HGExtinctionBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGExtinctionBox/HGExtinctionBox_Icon.HGExtinctionBox_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGExtinctionBox/HGExtinctionBox.HGExtinctionBox_C"
+		},
+		{
+			"name": "Eternal Farm Box",
+			"description": "Automatically pull resources from Dino.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGFarmBox/PrimalItemStructure_HGFarmBox.PrimalItemStructure_HGFarmBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/SmallStorage_Icon.SmallStorage_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 2,
+			"stackSize": 10,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 7, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Metal_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGFarmBox/HG_FarmBox.HG_FarmBox_C"
+		},
+		{
+			"name": "Eternal Gacha Box",
+			"description": "Automatically pick up gacha crystral.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGFarmBox/PrimalItemStructure_HGGachaBox.PrimalItemStructure_HGGachaBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGFarmBox/HGGachaBox_Icon.HGGachaBox_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 7, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Metal_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGFarmBox/HG_GachaBox.HG_GachaBox_C"
+		},
+		{
+			"name": "Eternal HG Mini Refrigerator",
+			"description": "Requires electricity to run.  Keeps perishables from spoiling for a long time.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGFridge/PrimalItemStructure_HGFridge.PrimalItemStructure_HGFridge_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/HGFridge_Icon.HGFridge_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Electric" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 73,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGFridge/HGFridge.HGFridge_C"
+		},
+		{
+			"name": "Golden Hesperornis Egg",
+			"description": "Eat it to gain tremendous nourishment, or feed it to small creatures for enlightenment!",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/Kibble/PrimalItemConsumable_Egg_Hesperonis_Golden_HG.PrimalItemConsumable_Egg_Hesperonis_Golden_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/GoldenEgg_Icon.GoldenEgg_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 6,
+			"stackSize": 1,
+			"spoilsIn": 1800,
+			"crafting": {
+				"xp": 1,
+				"time": 0.5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 25, "type": "PrimalItemConsumable_Honey_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Hesperonis_C" }
+				]
+			},
+			"statEffects": [
+				{ "stat": "food", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Nameless Venom",
+			"description": "A volatile substance that can be used to raise Rock Drakes!",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/Kibble/PrimalItemConsumable_NamelessVenom_HG.PrimalItemConsumable_NamelessVenom_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable_NoIceBox.PrimalItemConsumableEatable_NoIceBox_C",
+			"icon": "/Game/Aberration/Icons/Resources/BasiliskVenom_Icon.BasiliskVenom_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1,
+			"spoilsIn": 1800,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 15, "type": "PrimalItemConsumable_Honey_C" },
+					{ "qty": 10, "type": "PrimalItemResource_RareFlower_C" }
+				]
+			},
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": -50, "useItemQuality": true, "duration": 5 }
+			]
+		},
+		{
+			"name": "Sweet Vegetable Cake",
+			"description": "A sappy vegetable cake which Herbivores find delicious, which will be automatically eaten when needed for healing. Alas, humans and carnivores tend to find its taste repugnant. ",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/Kibble/PrimalItemConsumable_SweetVeggieCake_HG.PrimalItemConsumable_SweetVeggieCake_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable_BuffingSoup.PrimalItemConsumableEatable_BuffingSoup_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/TastyCake_Icon.TastyCake_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 6,
+			"stackSize": 5,
+			"spoilsIn": 4800,
+			"crafting": {
+				"xp": 1,
+				"time": 0.5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "exact": true, "qty": 1, "type": "PrimalItemConsumable_Honey_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Veggie_Savoroot_C" }
+				]
+			},
+			"statEffects": [
+				{
+					"stat": "food",
+					"value": 20,
+					"duration": 3.333333
+				},
+				{
+					"stat": "health",
+					"value": 10
+				}
+			],
+			"cooking": {
+				"health": 0.1,
+				"stamina": 0.01,
+				"food": 0.1,
+				"weight": 0.02,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Wyvern Milk",
+			"description": "Eat it to gain nourishment, or feed to raise Wyverns!",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/Kibble/PrimalItemConsumable_WyvernMilk_HG.PrimalItemConsumable_WyvernMilk_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable_NoIceBox.PrimalItemConsumableEatable_NoIceBox_C",
+			"icon": "/Game/ScorchedEarth/Icons/Resources/WyvernMilk_Icon.WyvernMilk_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1,
+			"spoilsIn": 1800,
+			"crafting": {
+				"xp": 1,
+				"time": 0.5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_CactusSap_C" },
+					{ "qty": 100, "type": "PrimalItemConsumable_Berry_Stimberry_C" }
+				]
+			},
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 5 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 5 }
+			]
+		},
+		{
+			"name": "Primal Crystal",
+			"description": "Craft 15 Primal Crystal",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/Kibble/PrimalItemResource_Crystal_IslesPrimal_HG.PrimalItemResource_Crystal_IslesPrimal_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Crystal.PrimalItemResource_Crystal_C",
+			"icon": "/Game/PrimalEarth/Dinos/CrystalWyvern/CrystalResources/Primal/PrimalCrystal_Icon.PrimalCrystal_Icon",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 1,
+			"spoilsIn": 2700,
+			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Crystal.PrimalItemResource_Crystal_C",
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 250, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" }
+				]
+			}
+		},
+		{
+			"name": "Deathworm Horn",
+			"description": "Beloved by large desert insects, and also can be used in very specialized Recipes...",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/Kibble/PrimalItemResource_KeratinSpike_HG.PrimalItemResource_KeratinSpike_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Horn.PrimalItemResource_Horn_C",
+			"icon": "/Game/ScorchedEarth/Icons/Resources/DeathWormSpike_Icon.DeathWormSpike_Icon",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 20,
+			"crafting": {
+				"xp": 1,
+				"time": 0.2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "exact": true, "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"statEffects": [
+				{
+					"stat": "food", "value": 1, "useItemQuality": true,
+					"setValue": true,
+					"allowWhenFull": false,
+					"qualityMult": 0,
+					"duration": 1
+				}
+			]
+		},
+		{
+			"name": "Superior Kibble",
+			"description": "This specially blended pet food is a favorite of many larger creatures. Containing only the finest natural ingredients, it provides pets with the balanced nutrition they need. And with a taste they can't resist, they'll warm up to you in no time! Not intended for human consumption.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/NewKibble/PrimalItemConsumable_Kibble_Base_Large_HG.PrimalItemConsumable_Kibble_Base_Large_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon_Large.Kibble_Icon_Large",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Kibble" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 259200,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Citronal_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_CookedPrimeMeat_Jerky_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 2, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Sap_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05,
+				"water": -1
+			}
+		},
+		{
+			"name": "Regular Kibble",
+			"description": "This specially blended pet food is a favorite of many medium creatures. Containing only the finest natural ingredients, it provides pets with the balanced nutrition they need. And with a taste they can't resist, they'll warm up to you in no time! Not intended for human consumption.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/NewKibble/PrimalItemConsumable_Kibble_Base_Medium_HG.PrimalItemConsumable_Kibble_Base_Medium_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon_Medium.Kibble_Icon_Medium",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Kibble" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 259200,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_CookedMeat_Jerky_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Savoroot_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05,
+				"water": -1
+			}
+		},
+		{
+			"name": "Simple Kibble",
+			"description": "This pet food recipe has been carefully designed to give balanced nutrition to many small creatures.  Includes plant fibers to help with digestion and egg to bind the mix.  Humans have difficulty digesting this.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/NewKibble/PrimalItemConsumable_Kibble_Base_Small_HG.PrimalItemConsumable_Kibble_Base_Small_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon_Small.Kibble_Icon_Small",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Kibble" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 259200,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_CookedMeat_Fish_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05,
+				"water": -1
+			}
+		},
+		{
+			"name": "Extraordinary Kibble ",
+			"description": "This specially blended pet food is a favorite of many exotic creatures. Containing only the finest natural ingredients, it provides pets with the balanced nutrition they need. And with a taste they can't resist, they'll warm up to you in no time! Not intended for human consumption.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/NewKibble/PrimalItemConsumable_Kibble_Base_Special_HG.PrimalItemConsumable_Kibble_Base_Special_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_XLarge.PrimalItemConsumable_Kibble_Base_XLarge_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon_Special.Kibble_Icon_Special",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Kibble" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 259200,
+			"crafting": {
+				"xp": 10,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Honey_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Soup_LazarusChowder_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Berry_Mejoberry_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 10, "useItemQuality": true, "duration": 2 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05,
+				"water": -1
+			}
+		},
+		{
+			"name": "Exceptional Kibble",
+			"description": "This specially blended pet food is a favorite of many extra large creatures. Containing only the finest natural ingredients, it provides pets with the balanced nutrition they need. And with a taste they can't resist, they'll warm up to you in no time! Not intended for human consumption.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/NewKibble/PrimalItemConsumable_Kibble_Base_XLarge_HG.PrimalItemConsumable_Kibble_Base_XLarge_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon_ExLarge.Kibble_Icon_ExLarge",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Kibble" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 259200,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Soup_FocalChili_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
+					{ "qty": 1, "type": "PrimalItemResource_RareFlower_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05,
+				"water": -1
+			}
+		},
+		{
+			"name": "Basic Kibble",
+			"description": "This pet food recipe has been carefully designed to give balanced nutrition to many smaller creatures.  Includes plant fibers to help with digestion and egg to bind the mix.  Humans have difficulty digesting this.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/NewKibble/PrimalItemConsumable_Kibble_Base_XSmall_HG.PrimalItemConsumable_Kibble_Base_XSmall_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Kibble_Icon_ExSmall.Kibble_Icon_ExSmall",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Kibble" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 259200,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_HGKibblePaste_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Berry_Amarberry_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_CookedMeat_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Berry_Tintoberry_C" }
+				]
+			},
+			"statEffects": [ { "stat": "food", "value": 1, "useItemQuality": true, "duration": 0.2 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 3,
+				"food": 2.25,
+				"weight": 0.05,
+				"water": -1
+			}
+		},
+		{
+			"name": "Eternal Kibble paste",
+			"description": "This kibble paste is needed to craft kibble.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/PrimalItemConsumable_HGKibblePaste.PrimalItemConsumable_HGKibblePaste_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/KibblePaste_Icon.KibblePaste_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 500,
+			"spoilsIn": 600,
+			"crafting": {
+				"xp": 1,
+				"time": 0.5,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" },
+					{ "qty": 1, "type": "PrimalItemResource_RareFlower_C" }
+				]
+			},
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
+			"name": "Eternal Kibble Bench",
+			"description": "This bench can be used to craft kibble.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/PrimalItemStructure_HGKibble_Bench.PrimalItemStructure_HGKibble_Bench_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Core/HGStuff/Material/HGKibbleBench_Icon.HGKibbleBench_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGKibbleBench/HGKibble_Bench.HGKibble_Bench_C"
+		},
+		{
+			"name": "Eternal Pack Station",
+			"description": "A pack station to pull resources from dino.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGPackStation/PrimalItemStructure_HGPackStation.PrimalItemStructure_HGPackStation_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGPackStation/HG_Packstation_Icon.HG_Packstation_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 40,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 3.7,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 200, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGPackStation/HGPackStation.HGPackStation_C"
+		},
+		{
+			"name": "Eternal Paint Box",
+			"description": "A paint box to store your crafted colours. Automatically pick up.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGPaintBox/PrimalItemStructure_HGPaintBox.PrimalItemStructure_HGPaintBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGPaintBox/HGPaintBox_Icon.HGPaintBox_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGPaintBox/HGPaintBox.HGPaintBox_C"
+		},
+		{
+			"name": "Eternal Private Storage",
+			"description": "Private storgae, access only to the one who placed the storgae.\n- Tribe mate has no access to inventory\n- Can not demolish or pick up with demo gun\n- Immune to auto demolish\n- Multiple designs\n- Can charge Cryopods if powered\n\nSet *name to exclud pulling!",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGPrivateStorage/PrimalItemStructure_HGPrivateStorage.PrimalItemStructure_HGPrivateStorage_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGPrivateStorage/HGPrivateBox_Icon.HGPrivateBox_Icon",
+			"type": "Structure",
+			"weight": 2,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 75, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGPrivateStorage/BP_HGPrivateStorage.BP_HGPrivateStorage_C"
+		},
+		{
+			"name": "Eternal Saddle Storage Box",
+			"description": "A large cabinet to store your saddle. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGSaddleBox/PrimalItemStructure_HGSaddleBox.PrimalItemStructure_HGSaddleBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGSaddleBox/HGSaddleStorageBox_Icon.HGSaddleStorageBox_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGSaddleBox/HGSaddleStorageBox.HGSaddleStorageBox_C"
+		},
+		{
+			"name": "Eternal Small Crafting Box",
+			"description": "A small box to store your crafted items. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGSmallStorageBox/PrimalItemStructure_HGSmallCraftingBox.PrimalItemStructure_HGSmallCraftingBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGSmallStorageBox/HGSmallCrafting_Icon.HGSmallCrafting_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGSmallStorageBox/HGSmallCraftingBox.HGSmallCraftingBox_C"
+		},
+		{
+			"name": "Eternal Small Storage Box",
+			"description": "A small box to store your resources. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGSmallStorageBox/PrimalItemStructure_HGSmallStorageBox.PrimalItemStructure_HGSmallStorageBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGSmallStorageBox/HGSmallStorage_Icon.HGSmallStorage_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGSmallStorageBox/HGSmallStorageBox.HGSmallStorageBox_C"
+		},
+		{
+			"name": "Eternal Resource Storage Box",
+			"description": "A large cabinet to store your resources. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGStorageBox/PrimalItemStructure_HGMultiStorageBox.PrimalItemStructure_HGMultiStorageBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/HGLargeStorage_Icon_R.HGLargeStorage_Icon_R",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGStorageBox/HGMultiStorageBox.HGMultiStorageBox_C"
+		},
+		{
+			"name": "Eternal Resource Storage Box Metal",
+			"description": "A large cabinet to store your resources. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGStorageBox/PrimalItemStructure_HGMultiStorageBox_Metal.PrimalItemStructure_HGMultiStorageBox_Metal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/HGMultiStorageBox_Metal_Icon.HGMultiStorageBox_Metal_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGStorageBox/HGMultiStorageBox_Metal.HGMultiStorageBox_Metal_C"
+		},
+		{
+			"name": "Eternal Structure Storage Box",
+			"description": "A large cabinet to store your resources. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGStructureStorageBox/PrimalItemStructure_HGStructureStorageBox.PrimalItemStructure_HGStructureStorageBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGStructureStorageBox/HGStructureStorageBox_Icon.HGStructureStorageBox_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGStructureStorageBox/HGStructureStorageBox.HGStructureStorageBox_C"
+		},
+		{
+			"name": "Eternal Stryder Box",
+			"description": "Place the Stryder Box on Stryder and activate it.\n- Pull resources from Stryder inventory to the HG Stryder Box.\n- Deposit resources to HG dedicated storage box.\n- No linking necessary.\n- Stryder Box has a 90% weight reduction.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGStryderBox/PrimalItemStructure_StryderBox_HG.PrimalItemStructure_StryderBox_HG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGStryderBox/HGStryderBox_Icon.HGStryderBox_Icon",
+			"type": "Structure",
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGStryderBox/BP_StryderBox_HG.BP_StryderBox_HG_C"
+		},
+		{
+			"name": "Eternal Treasure Chest",
+			"description": "A large cabinet to store your resources. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGTreasureChest/PrimalItemStructure_HGTreasureChest.PrimalItemStructure_HGTreasureChest_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/treasure_chest_icon.treasure_chest_icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Metal_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGTreasureChest/HGTreasureChest.HGTreasureChest_C"
+		},
+		{
+			"name": "Eternal HG Mini-Vault",
+			"description": "A small metal vault to securely store goods in.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGVault/PrimalItemStructure_HGStorageBox_Huge.PrimalItemStructure_HGStorageBox_Huge_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Vault_Icon.Vault_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Metal", "Storage" ],
+			"weight": 20,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 82,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 200, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 50, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Oil_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Polymer_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGVault/HGStorageBox_Huge.HGStorageBox_Huge_C"
+		},
+		{
+			"name": "Eternal Weapon Storage Box",
+			"description": "A large cabinet to store your weapons. Automatically pick up.\nPress G to disable snapping.",
+			"bp": "/Game/Mods/AE/Structures/HGStructures/HGWeaponStorageBox/PrimalItemStructure_HGWeaponStorageBox.PrimalItemStructure_HGWeaponStorageBox_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/HGStructures/HGWeaponStorageBox/HGWeaponStorageBox_Icon.HGWeaponStorageBox_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Wood", "Storage" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 35, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/HGStructures/HGWeaponStorageBox/HGWeapopnStorageBox.HGWeapopnStorageBox_C"
+		},
+		{
 			"name": "Eternal Collector",
 			"description": "Place this to collect items from the ground. including Gacha Crystals",
 			"bp": "/Game/Mods/AE/Structures/ItemCollector/PrimalItemStructure_AE_Collector.PrimalItemStructure_AE_Collector_C",
@@ -29235,6 +32302,29 @@
 				]
 			},
 			"structure": "/Game/Mods/AE/Structures/MiniVault/MiniVault_Structure.MiniVault_Structure_C"
+		},
+		{
+			"name": "Ruins(Eternal)",
+			"description": "Go on, hide. Credit goes to Vic From WKD for making this.",
+			"bp": "/Game/Mods/AE/Structures/Ruin/PrimalItemStructure_EternalRuin.PrimalItemStructure_EternalRuin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/Ruin/WKDRuin_Icon.WKDRuin_Icon",
+			"type": "Structure",
+			"folders": [ "Structures" ],
+			"weight": 20,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 75, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 300, "type": "PrimalItemResource_Stone_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/Ruin/AERuin_Structure.AERuin_Structure_C"
 		},
 		{
 			"name": "Eternal DLC Workbench",

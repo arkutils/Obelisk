@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "348.2.1658442679",
+	"version": "348.7.1659567653",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -4002,7 +4002,7 @@
 		},
 		{
 			"name": "Eternal Alpha Pegasus",
-			"bp": "/Game/Mods/AE/Dinos/Alpha/Pegasus/AE_AlphaPegasus_Character_BP.AE_AlphaPegasus_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Alpha/Pegasus/Eternal_Alpha_Pegasus_Character_BP.Eternal_Alpha_Pegasus_Character_BP_C",
 			"dinoNameTag": "Alpha_Pegasus",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -4015,15 +4015,14 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"doStepDamage",
 				"flyerAllowRidingInCaves",
 				"isFlyerDino",
 				"isTameable"
 			],
 			"leveling": {
 				"wildLevelTable": [
-					{ "chance": 0.5, "min": 15, "max": 19 },
-					{ "chance": 0.5, "min": 20, "max": 30 }
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
 				],
 				"mutagenCost": 45
 			},
@@ -4034,7 +4033,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -4065,16 +4064,12 @@
 				"lootBagChance": 1,
 				"lootBags": [
 					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
 					},
 					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
-					},
-					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
 					}
 				],
 				"baseXP": 1
@@ -5265,7 +5260,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 3,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -8737,7 +8732,7 @@
 			"name": "Armored Giganotosaurus",
 			"bp": "/Game/Mods/AE/Dinos/Armored/Giga/ArmoredGiga_Character_BP.ArmoredGiga_Character_BP_C",
 			"dinoNameTag": "Armored_Gigant",
-			"customTag": "Gigant",
+			"customTag": "Alpha_Gigant",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 400,
 			"dragWeight": 4000,
@@ -9752,8 +9747,8 @@
 				"swim": { "base": 300, "sprint": 1500 }
 			},
 			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -10
+				"sprint": -3,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 120,
@@ -9813,8 +9808,8 @@
 				"fly": { "base": 3000, "sprint": 6000 }
 			},
 			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -10
+				"sprint": -3,
+				"swimOrFly": -0.275
 			},
 			"attack": {
 				"defaultDmg": 120,
@@ -9859,8 +9854,7 @@
 				"isAmphibious",
 				"isBigDino",
 				"isCarnivore",
-				"isWaterDino",
-				"isTameable"
+				"isWaterDino"
 			],
 			"leveling": {
 				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 42 } ]
@@ -15657,7 +15651,7 @@
 		},
 		{
 			"name": "Elemental Lightning Pegasus",
-			"bp": "/Game/Mods/AE/Dinos/Elemental/Pegasi/AE_ElecPegasus_Character_BP.AE_ElecPegasus_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Elemental/Pegasi/Elem_Elec_Pegasus_Character_BP_AE.Elem_Elec_Pegasus_Character_BP_AE_C",
 			"dinoNameTag": "Elem_Pegasus_Elec",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -15670,12 +15664,17 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"doStepDamage",
 				"flyerAllowRidingInCaves",
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": { "mutagenCost": 45 },
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 45
+			},
 			"cloning": {
 				"costBase": 1100,
 				"costLevel": 55,
@@ -15683,7 +15682,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -15714,15 +15713,11 @@
 				"lootBagChance": 1,
 				"lootBags": [
 					{
-						"chance": 0.333333333,
+						"chance": 0.5,
 						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
 					},
 					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
-					},
-					{
-						"chance": 0.333333333,
+						"chance": 0.5,
 						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
 					}
 				],
@@ -15731,7 +15726,7 @@
 		},
 		{
 			"name": "Elemental Fire Pegasus",
-			"bp": "/Game/Mods/AE/Dinos/Elemental/Pegasi/AE_FirePegasus_Character_BP.AE_FirePegasus_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Elemental/Pegasi/Elem_Fire_Pegasus_Character_BP_AE.Elem_Fire_Pegasus_Character_BP_AE_C",
 			"dinoNameTag": "Elem_Pegasus_Fire",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -15744,12 +15739,17 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"doStepDamage",
 				"flyerAllowRidingInCaves",
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": { "mutagenCost": 45 },
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 45
+			},
 			"cloning": {
 				"costBase": 1100,
 				"costLevel": 55,
@@ -15757,7 +15757,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -15788,15 +15788,11 @@
 				"lootBagChance": 1,
 				"lootBags": [
 					{
-						"chance": 0.333333333,
+						"chance": 0.5,
 						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
 					},
 					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
-					},
-					{
-						"chance": 0.333333333,
+						"chance": 0.5,
 						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
 					}
 				],
@@ -15805,7 +15801,7 @@
 		},
 		{
 			"name": "Elemental Poison Pegasus",
-			"bp": "/Game/Mods/AE/Dinos/Elemental/Pegasi/AE_Poison_Pegasus_Character_BP.AE_Poison_Pegasus_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Elemental/Pegasi/Elem_Pois_Pegasus_Character_BP_AE.Elem_Pois_Pegasus_Character_BP_AE_C",
 			"dinoNameTag": "Elem_Pegasus_Pois",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -15818,12 +15814,17 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"doStepDamage",
 				"flyerAllowRidingInCaves",
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": { "mutagenCost": 45 },
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 45
+			},
 			"cloning": {
 				"costBase": 1100,
 				"costLevel": 55,
@@ -15831,7 +15832,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -15862,15 +15863,11 @@
 				"lootBagChance": 1,
 				"lootBags": [
 					{
-						"chance": 0.333333333,
+						"chance": 0.5,
 						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
 					},
 					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
-					},
-					{
-						"chance": 0.333333333,
+						"chance": 0.5,
 						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
 					}
 				],
@@ -16516,11 +16513,11 @@
 			"name": "Elemental Radiokinetic Ankylosaurus",
 			"bp": "/Game/Mods/AE/Dinos/Elemental/Radiokinetic/Ankylo/AE_Ankylo_Character_BP_Rad.AE_Ankylo_Character_BP_Rad_C",
 			"dinoNameTag": "Rad_Anky",
-			"customTag": "",
+			"customTag": "Anky",
 			"targetingTeamName": "",
 			"mass": 100,
 			"dragWeight": 35,
-			"flags": [ "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
 			"leveling": { "mutagenCost": 1 },
 			"cloning": {
 				"costBase": 2.5,
@@ -18634,7 +18631,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -18693,7 +18690,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -18752,7 +18749,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -32244,7 +32241,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 3,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -33935,6 +33932,187 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Fire Archaeopteryx Minion",
+			"bp": "/Game/Mods/AE/Dinos/PFTransfers/Kaiju/Colossus/Fire/Minions/ElementalFireArcha_Character_BP_Minion.ElementalFireArcha_Character_BP_Minion_C",
+			"dinoNameTag": "ElementalArcha",
+			"customTag": "ElementalArcha",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 50,
+			"dragWeight": 200,
+			"variants": [ "Minion" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0, "min": 1, "max": 5 },
+					{ "chance": 0.625, "min": 6, "max": 12 },
+					{ "chance": 0.25, "min": 13, "max": 20 },
+					{ "chance": 0.125, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 14
+			},
+			"cloning": {
+				"costBase": 325,
+				"costLevel": 38.5,
+				"timeBase": 2275,
+				"timeLevel": 269.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 2352 },
+				"fly": { "base": 850, "sprint": 3332 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 420, "sprint": 1646.4 },
+				"fly": { "base": 595, "sprint": 2332.4 },
+				"swim": { "base": 420 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 200,
+				"defaultSwingRadius": 270,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.25, "dmg": 200, "radius": 270, "stamina": 10 },
+					{ "name": "Melee", "interval": 0.25, "dmg": 125, "radius": 1200, "stamina": 150 }
+				]
+			},
+			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "Fire Griffin Minion",
+			"bp": "/Game/Mods/AE/Dinos/PFTransfers/Kaiju/Colossus/Fire/Minions/FireGriffin_Character_BP_Minion.FireGriffin_Character_BP_Minion_C",
+			"dinoNameTag": "PFFireGriffin",
+			"customTag": "ElementalGriffin",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 500,
+			"variants": [ "Minion" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0, "min": 1, "max": 5 },
+					{ "chance": 0.625, "min": 6, "max": 12 },
+					{ "chance": 0.25, "min": 13, "max": 20 },
+					{ "chance": 0.125, "min": 21, "max": 30 }
+				]
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 240, "sprint": 750 },
+				"fly": { "base": 600, "sprint": 1500 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 240, "sprint": 750 },
+				"fly": { "base": 600, "sprint": 1500 },
+				"swim": { "base": 240 }
+			},
+			"movementR": {
+				"walk": { "base": 270, "sprint": 843.8 },
+				"fly": { "base": 675, "sprint": 1687.5 },
+				"swim": { "base": 270 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 202,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Claw", "interval": 2, "dmg": 252, "radius": 700, "stamina": 0 },
+					{ "name": "FlameBreath", "interval": 4, "dmg": 505, "radius": 1600, "stamina": 125 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 3450, "radius": 1500, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 1475, "radius": 2000, "stamina": 30 }
+				]
+			},
+			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "Fire Megaraptor Minion",
+			"bp": "/Game/Mods/AE/Dinos/PFTransfers/Kaiju/Colossus/Fire/Minions/FireMicroraptor_Character_BP_Minion.FireMicroraptor_Character_BP_Minion_C",
+			"dinoNameTag": "FireMegaraptor",
+			"customTag": "ElementalMegaraptor",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 70,
+			"dragWeight": 200,
+			"variants": [ "Minion" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0, "min": 1, "max": 5 },
+					{ "chance": 0.625, "min": 6, "max": 12 },
+					{ "chance": 0.25, "min": 13, "max": 20 },
+					{ "chance": 0.125, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 35
+			},
+			"cloning": {
+				"costBase": 850,
+				"costLevel": 55,
+				"timeBase": 5950,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 675, "sprint": 5625 },
+				"fly": { "base": 675, "sprint": 2812.5 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 750, "sprint": 4500 },
+				"fly": { "base": 750, "sprint": 2250 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 240,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 230, "radius": 240, "stamina": 0 },
+					{ "name": "BreathAttack", "interval": 1, "dmg": 150, "radius": 1700, "stamina": 125 }
+				]
+			},
+			"death": { "baseXP": 5 }
+		},
+		{
 			"name": "Fire Colossus",
 			"bp": "/Game/Mods/AE/Dinos/PFTransfers/Kaiju/Colossus/Fire/PF_FireColossus_Character_BP.PF_FireColossus_Character_BP_C",
 			"dinoNameTag": "PFFireColossus",
@@ -34000,6 +34178,13 @@
 			},
 			"death": {
 				"dossierId": 686,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Primal_Fear/LootSets/Colossus/DinoDropInventoryComponent_ElementalColossus.DinoDropInventoryComponent_ElementalColossus"
+					}
+				],
 				"baseXP": 50000
 			}
 		},
@@ -34164,12 +34349,7 @@
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": {
-				"xpRamp": "Player",
-				"maxExperience": 100000,
-				"maxTameLevels": 74,
-				"mutagenCost": 1
-			},
+			"leveling": { "mutagenCost": 1 },
 			"cloning": {
 				"costBase": 2.5,
 				"costLevel": 5.5,
@@ -34191,8 +34371,8 @@
 				"swim": { "base": 1500 }
 			},
 			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -0.3
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 510,
@@ -34221,6 +34401,13 @@
 			},
 			"death": {
 				"dossierId": 100,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Primal_Fear_Bosses/LootSets/Vanilla/DinoDropInventoryComponent_PFBVanilla.DinoDropInventoryComponent_PFBVanilla"
+					}
+				],
 				"baseXP": 1500
 			}
 		},
@@ -37115,7 +37302,7 @@
 		},
 		{
 			"name": "Prime Pegasus",
-			"bp": "/Game/Mods/AE/Dinos/Prime/Pegasus/AE_PrimePegasus_Character_BP.AE_PrimePegasus_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Prime/Pegasus/Eternal_Prime_Pegasus_Character_BP.Eternal_Prime_Pegasus_Character_BP_C",
 			"dinoNameTag": "Prime_Pegasus",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -37128,15 +37315,14 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"doStepDamage",
 				"flyerAllowRidingInCaves",
 				"isFlyerDino",
 				"isTameable"
 			],
 			"leveling": {
 				"wildLevelTable": [
-					{ "chance": 0.5, "min": 15, "max": 19 },
-					{ "chance": 0.5, "min": 20, "max": 30 }
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
 				],
 				"mutagenCost": 45
 			},
@@ -37147,23 +37333,18 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 292.5, "sprint": 585 },
-				"fly": { "base": 390, "sprint": 1014 },
-				"swim": { "base": 390, "sprint": 780 }
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"fly": { "base": 390, "sprint": 1544.4 },
+				"swim": { "base": 390 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 1080 },
-				"fly": { "base": 600, "sprint": 1872 },
-				"swim": { "base": 600, "sprint": 1440 }
-			},
-			"movementR": {
-				"walk": { "base": 450, "sprint": 1404 },
-				"fly": { "base": 600, "sprint": 2433.6 },
-				"swim": { "base": 600, "sprint": 1872 }
+				"walk": { "base": 292.5, "sprint": 965.2 },
+				"fly": { "base": 390, "sprint": 1287 },
+				"swim": { "base": 390 }
 			},
 			"staminaRates": {
 				"sprint": -40,
@@ -37184,16 +37365,12 @@
 				"lootBagChance": 1,
 				"lootBags": [
 					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
 					},
 					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
-					},
-					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
 					}
 				],
 				"baseXP": 1
@@ -37909,7 +38086,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 3,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -46385,7 +46562,10 @@
 				"defaultSwingRadius": 50,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.4, "dmg": 750, "radius": 95, "stamina": 0 },
-					{ "name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0 }
+					{
+						"name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
 				]
 			},
 			"death": { "baseXP": 2 }
@@ -47132,7 +47312,11 @@
 			"attack": {
 				"defaultDmg": 650000,
 				"defaultSwingRadius": 930,
-				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 650000, "radius": 930, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "None", "interval": 0.3, "dmg": 650000, "radius": 930, "stamina": 0 },
+					{ "name": "Meteors", "interval": 8, "dmg": 650000, "radius": 930, "stamina": 0 },
+					{ "name": "Lay Minions", "interval": 8, "dmg": 650000, "radius": 930, "stamina": 0 }
+				]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -48027,6 +48211,7 @@
 				"allowFlyerLandedRider",
 				"allowRiding",
 				"canBeDragged",
+				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
 				"flyerAllowRidingInCaves",
@@ -48072,7 +48257,8 @@
 					{ "name": "SplosionofBOOM", "interval": 30, "dmg": 65000, "radius": 700, "stamina": 0 },
 					{ "name": "SparkRoar", "interval": 20, "dmg": 65000, "radius": 400, "stamina": 0 },
 					{ "name": "BodyShock", "interval": 10, "dmg": 65000, "radius": 600, "stamina": 0 },
-					{ "name": "Manashot", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Manashot", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Targeted Projectile", "interval": 30, "dmg": 0, "radius": 700, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -48088,7 +48274,7 @@
 		},
 		{
 			"name": "SkyRider",
-			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Pegasi/AE_Pegasus_Character_BP.AE_Pegasus_Character_BP_C",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Pegasi/AE_Pegasus_Character_BP2.AE_Pegasus_Character_BP2_C",
 			"dinoNameTag": "AE_Pegasus",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -48165,7 +48351,7 @@
 		},
 		{
 			"name": "SkyRider",
-			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Pegasi/AE_Pegasus_Character_BP2.AE_Pegasus_Character_BP2_C",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Pegasi/Skyrider_Pegasus_Character_BP.Skyrider_Pegasus_Character_BP_C",
 			"dinoNameTag": "AE_Pegasus",
 			"customTag": "Equus",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
@@ -48178,13 +48364,12 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"doStepDamage",
 				"flyerAllowRidingInCaves",
 				"isFlyerDino",
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 20, "max": 30 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ],
 				"mutagenCost": 45
 			},
 			"cloning": {
@@ -48208,15 +48393,15 @@
 				"swim": { "base": 390 }
 			},
 			"staminaRates": {
-				"sprint": -14,
+				"sprint": -40,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 2500,
+				"defaultDmg": 6500,
 				"defaultSwingRadius": 170,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 2500, "radius": 220, "stamina": 10 },
-					{ "name": "BuckKick", "interval": 0.4, "dmg": 2500, "radius": 220, "stamina": 100 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 6500, "radius": 220, "stamina": 10 },
+					{ "name": "BuckKick", "interval": 0.4, "dmg": 6500, "radius": 220, "stamina": 100 },
 					{ "name": "Whinney", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
 					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 }
 				]
@@ -48225,15 +48410,11 @@
 				"lootBagChance": 1,
 				"lootBags": [
 					{
-						"chance": 0.333333333,
+						"chance": 0.5,
 						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
 					},
 					{
-						"chance": 0.333333333,
-						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
-					},
-					{
-						"chance": 0.333333333,
+						"chance": 0.5,
 						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
 					}
 				],
@@ -48868,77 +49049,6 @@
 			}
 		},
 		{
-			"name": "TBFG Dire Bear",
-			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/TBFGaming/TBFG_Direbear_Character_BP.TBFG_Direbear_Character_BP_C",
-			"dinoNameTag": "TBFG_Direbear",
-			"customTag": "Alpha_Direbear",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 330,
-			"dragWeight": 295,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isTameable"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 20, "max": 30 } ],
-				"mutagenCost": 1
-			},
-			"cloning": {
-				"costBase": 0.2,
-				"costLevel": 5.5,
-				"timeBase": 1.7,
-				"timeLevel": 38.5
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 213.8, "sprint": 1442.8 },
-				"swim": { "base": 450, "sprint": 3037.5 }
-			},
-			"movementD": {
-				"walk": { "base": 156.8, "sprint": 1724.3 },
-				"swim": { "base": 330, "sprint": 3630 }
-			},
-			"movementR": {
-				"walk": { "base": 156.8, "sprint": 3931.4 },
-				"swim": { "base": 330, "sprint": 8276.4 }
-			},
-			"staminaRates": {
-				"sprint": -14,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 4000,
-				"defaultSwingRadius": 260,
-				"attacks": [
-					{ "name": "None", "interval": 0.22, "dmg": 4000, "radius": 260, "stamina": 0 },
-					{ "name": "None", "interval": 0.22, "dmg": 4000, "radius": 260, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 0.5,
-						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
-					},
-					{
-						"chance": 0.5,
-						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
-					}
-				],
-				"baseXP": 4
-			}
-		},
-		{
 			"name": "Terra Nova",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/TerraNova/TerraNova_Character_BP.TerraNova_Character_BP_C",
 			"dinoNameTag": "Terra_Nova",
@@ -49225,7 +49335,7 @@
 						"isProjectile": true
 					},
 					{ "name": "TargetProj", "interval": 0.75, "dmg": 65000, "radius": 1200, "stamina": 30 },
-					{ "name": "Meteor shower", "interval": 0.75, "dmg": 65000, "radius": 1200, "stamina": 30 }
+					{ "name": "Meteor shower", "interval": 20, "dmg": 65000, "radius": 1200, "stamina": 30 }
 				]
 			},
 			"death": {
@@ -49241,6 +49351,76 @@
 					}
 				],
 				"baseXP": 200
+			}
+		},
+		{
+			"name": "Mase Dodo",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Wicked/Mase/Mase_Dodo_Character_BP.Mase_Dodo_Character_BP_C",
+			"dinoNameTag": "Mase_Dodo",
+			"customTag": "Alpha_Wyvern",
+			"targetingTeamName": "Herbivores",
+			"mass": 100000,
+			"dragWeight": 25,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ],
+				"mutagenCost": 2
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 735 },
+				"swim": { "base": 350, "sprint": 735 }
+			},
+			"movementD": {
+				"walk": { "base": 294, "sprint": 771.7 },
+				"swim": { "base": 294, "sprint": 771.7 }
+			},
+			"movementR": {
+				"walk": { "base": 294, "sprint": 1157.6 },
+				"swim": { "base": 294, "sprint": 1157.6 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 3500,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 3500, "radius": 180, "stamina": 5 },
+					{ "name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 10500 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 0.5
 			}
 		},
 		{
@@ -61910,6 +62090,42 @@
 				],
 				"baseXP": 4
 			}
+		},
+		{
+			"name": "Coelacanth",
+			"bp": "/Game/Mods/AE/PrimalEarth/Dinos/Coelacanth/Coel_Character_BP_Rare.Coel_Character_BP_Rare_C",
+			"dinoNameTag": "RareCoel",
+			"customTag": "",
+			"targetingTeamName": "Herbivore_Water",
+			"mass": 100,
+			"dragWeight": 25,
+			"variants": [ "Rare" ],
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable",
+				"canBeWildTrappedWithFishBasket",
+				"canBeTamedWithFishBasket"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 252 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 252 }
+			},
+			"staminaRates": { "sprint": -4 },
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 67,
+				"attacks": [ { "name": "None", "interval": 1, "dmg": 5, "radius": 67, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
 		},
 		{
 			"name": "Skeletal Bronto",
