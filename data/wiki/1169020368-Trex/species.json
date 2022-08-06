@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "348.6.1659177861",
+	"version": "348.7.1659778370",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -1408,7 +1408,11 @@
 						"item": "/Game/Mods/Trex/Aberrant/Dinos/Nameless/Dodoreaper/DinoDropInventoryComponent_Carnivore_Large_Reaper_Dodo_ADO.DinoDropInventoryComponent_Carnivore_Large_Reaper_Dodo_ADO"
 					}
 				],
-				"engrams": [ "PrimalItemConsumable_Reaper_DNA_C", "PrimalItem_Transform_CelestReaperKing_C" ],
+				"engrams": [
+					"PrimalItemConsumable_Reaper_DNA_C",
+					"PrimalItem_Transform_CelestReaperKing_C",
+					"PrimalItem_Transform_CelestDodoReaper_C"
+				],
 				"baseXP": 1500
 			}
 		},
@@ -1685,6 +1689,76 @@
 					"PrimalItemSpawner_DodoReaper_ADO_C"
 				],
 				"baseXP": 1500
+			}
+		},
+		{
+			"name": "Ryan's Dodo Reaper",
+			"bp": "/Game/Mods/Trex/Aberrant/Dinos/Nameless/Ryans_Tribute/CelestialDodoreaper_Character_BP_ADO.CelestialDodoreaper_Character_BP_ADO_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 60, "max": 60 } ],
+				"mutagenCost": 990001
+			},
+			"cloning": {
+				"costBase": 25000000,
+				"costLevel": 137500,
+				"timeBase": 175000000,
+				"timeLevel": 962500
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 1912.5, "sprint": 3251.3 },
+				"swim": { "base": 2025 }
+			},
+			"movementD": {
+				"walk": { "base": 1020, "sprint": 3612.5 },
+				"swim": { "base": 1080 }
+			},
+			"movementR": {
+				"walk": { "base": 1020, "sprint": 3070.6 },
+				"swim": { "base": 1080 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15000,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.35, "dmg": 26850, "radius": 600, "stamina": 5 },
+					{
+						"name": "Fireballs", "interval": 7, "dmg": 500, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 45000, "radius": 2600, "stamina": 30 },
+					{ "name": "AOE Attack", "interval": 60, "dmg": 15000, "radius": 5000, "stamina": 250 },
+					{
+						"name": "Fireball Attack", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "FlameBeath Attack", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50 },
+					{ "name": "Projectile", "interval": 2.5, "dmg": 0, "radius": 430, "stamina": 0 },
+					{ "name": "Lock Roar", "interval": 0, "dmg": 0, "radius": 1200, "stamina": 100 }
+				]
+			},
+			"death": {
+				"engrams": [ "PrimalItemConsumable_AlphaReaper_Spore_C" ],
+				"baseXP": 1250
 			}
 		},
 		{
@@ -20767,7 +20841,7 @@
 				"defaultSwingRadius": 430,
 				"attacks": [
 					{ "name": "None", "interval": 0.22, "dmg": 1000, "radius": 430, "stamina": 0 },
-					{ "name": "None", "interval": 0.22, "dmg": 5000, "radius": 430, "stamina": 0 }
+					{ "name": "None", "interval": 0.22, "dmg": 1000, "radius": 430, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -39127,6 +39201,69 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Shagnasti, the Mega Ferox",
+			"bp": "/Game/Mods/Trex/Genesis/Dinos/ShapeShifter/Large/MegaFerox_Character_BP_ADO.MegaFerox_Character_BP_ADO_C",
+			"dinoNameTag": "Bigly",
+			"customTag": "Bigly",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 165,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 1, "max": 60 } ],
+				"maxExperience": 22213960,
+				"levelCapOffset": 50,
+				"mutagenCost": 24
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 950, "sprint": 2565 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 950, "sprint": 2850 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 25000,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 25000, "radius": 500, "stamina": 0 },
+					{ "name": "AOE attack", "interval": 30, "dmg": 30000, "radius": 1200, "stamina": 200 },
+					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 1200, "stamina": 100 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 30000, "radius": 180, "stamina": 0 },
+					{
+						"name": "Throw Boulder", "interval": 15, "dmg": 20000, "radius": 400, "stamina": 75,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Trex/Dinos/Argentavis/Warden/DinoDropInventoryComponent_Wardens_ADO.DinoDropInventoryComponent_Wardens_ADO"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
 			"name": "Ferox",
 			"bp": "/Game/Mods/Trex/Genesis/Dinos/ShapeShifter/Large/Shapeshifter_Large_Character_BP_Child.Shapeshifter_Large_Character_BP_Child_C",
 			"dinoNameTag": "Bigly",
@@ -40852,7 +40989,7 @@
 				"defaultDmg": 7500,
 				"defaultSwingRadius": 870,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 7500, "radius": 870, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 7500, "radius": 870, "stamina": 0 },
 					{ "name": "Flame", "interval": 9, "dmg": 0, "radius": 1, "stamina": 100 },
 					{
 						"name": "Fireball", "interval": 60, "dmg": 0, "radius": 0, "stamina": 25,
@@ -40904,12 +41041,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1500, "sprint": 6000 },
-				"swim": { "base": 500 }
+				"walk": { "base": 1750, "sprint": 7000 },
+				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 1500, "sprint": 6000 },
-				"swim": { "base": 500 }
+				"walk": { "base": 1750, "sprint": 7000 },
+				"swim": { "base": 1100 }
 			},
 			"staminaRates": {
 				"sprint": -4,
@@ -40919,7 +41056,7 @@
 				"defaultDmg": 7500,
 				"defaultSwingRadius": 870,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 7500, "radius": 870, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 7500, "radius": 870, "stamina": 0 },
 					{ "name": "Flame", "interval": 9, "dmg": 0, "radius": 1, "stamina": 100 },
 					{
 						"name": "Fireball", "interval": 3, "dmg": 0, "radius": 0, "stamina": 25,

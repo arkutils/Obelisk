@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "348.6.1659177861",
+	"version": "348.7.1659778370",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -390,6 +390,32 @@
 			"type": "Resource",
 			"weight": 0.2,
 			"stackSize": 500
+		},
+		{
+			"name": "Ryan's Dodo Reaper King",
+			"description": "This item allow you to transform your Alpha Reaper King to Tribute DodoReaper King",
+			"bp": "/Game/Mods/Trex/Aberrant/Dinos/Nameless/Ryans_Tribute/PrimalItem_Transform_CelestDodoReaper.PrimalItem_Transform_CelestDodoReaper_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/Trex/Aberrant/Dinos/Nameless/Ryans_Tribute/DodoReaperCostume_Icon.DodoReaperCostume_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 500,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_EvolveMatrix_C" },
+					{ "qty": 300, "type": "PrimalItemResource_RareDrop_ReaperKIng_Gland_C" },
+					{ "qty": 300, "type": "PrimalItemResource_XenomorphPheromoneGland_C" },
+					{ "qty": 30, "type": "PrimalItemResource_ApexDrop_ReaperBarb_C" },
+					{ "qty": 10000, "type": "PrimalItemResource_AlphaBlood_ADO_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Reaper_DNA_C" },
+					{ "qty": 5000, "type": "PrimalItemResource_Element_C" }
+				]
+			}
 		},
 		{
 			"name": "Alpha Rock Drake Saddle",
@@ -1313,7 +1339,7 @@
 		},
 		{
 			"name": "Prime Chitin Armor Pack",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Armors/Chitin/PrimalItemConsumable_ChitinArmorPack.PrimalItemConsumable_ChitinArmorPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/PrimalEarth/Test_Craig/ArmorChitinShirt_TempIcon.ArmorChitinShirt_TempIcon",
@@ -1445,7 +1471,7 @@
 		},
 		{
 			"name": "Prime Cloth Armor Pack",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Armors/Cloth/PrimalItemConsumable_ClothArmorPack.PrimalItemConsumable_ClothArmorPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/PrimalEarth/Test_Craig/ArmorClothShirt_TempIcon.ArmorClothShirt_TempIcon",
@@ -2091,10 +2117,35 @@
 		},
 		{
 			"name": "Prime Hide Armor Pack",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Armors/Hide/PrimalItemConsumable_HideArmorPack.PrimalItemConsumable_HideArmorPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/PrimalEarth/Test_Craig/ArmorHideShirt_TempIcon.ArmorHideShirt_TempIcon",
+			"type": "MiscConsumable/Other",
+			"folders": [ "Consumables", "Crafted Foods" ],
+			"weight": 5,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 25,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Berry_Mejoberry_C" }
+				]
+			},
+			"statEffects": []
+		},
+		{
+			"name": "Prime Tek Armor Pack",
+			"description": "Consume this to get your Reward",
+			"bp": "/Game/Mods/Trex/Armors/Hide/PrimalItemConsumable_PrimeTekArmorPack.PrimalItemConsumable_PrimeTekArmorPack_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/Mods/Trex/Tekitems/Armor/TEKShirt_Icon1.TEKShirt_Icon1",
 			"type": "MiscConsumable/Other",
 			"folders": [ "Consumables", "Crafted Foods" ],
 			"weight": 5,
@@ -4324,7 +4375,7 @@
 		},
 		{
 			"name": "Apex Drops Aberrant pack",
-			"description": "Consume this to get your reward",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Dinos/Apex/Carno/PrimalItemConsumable_ApexDropsPack_AB.PrimalItemConsumable_ApexDropsPack_AB_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/Aberration/Icons/ImplantABGamma_Icon.ImplantABGamma_Icon",
@@ -4349,7 +4400,7 @@
 		},
 		{
 			"name": "Apex Drops Wyverns pack",
-			"description": "Consume this to get your reward",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Dinos/Apex/Carno/PrimalItemConsumable_ApexDropsPack_SE.PrimalItemConsumable_ApexDropsPack_SE_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/ScorchedEarth/Icons/Resources/WyvernClaw_Icon.WyvernClaw_Icon",
@@ -4936,7 +4987,7 @@
 		},
 		{
 			"name": "Ancient Resource Pack",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Dinos/Bosses/PrimalItemConsumable_AncientResourcePack.PrimalItemConsumable_AncientResourcePack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/ScorchedEarth/Icons/DesertFurnitureSet/hub_Vessel_Colorize_d.hub_Vessel_Colorize_d",
@@ -12934,7 +12985,7 @@
 		},
 		{
 			"name": "Apex Drops Full Set",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Dinos/rex/Boss/PrimalItemConsumable_ApexDropsPack_Full.PrimalItemConsumable_ApexDropsPack_Full_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/PrimalEarth/Test/IDTagIcon.IDTagIcon",
@@ -12959,7 +13010,7 @@
 		},
 		{
 			"name": "Artifact Full Set",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Dinos/rex/Boss/PrimalItemConsumable_ArtifactPack_Full.PrimalItemConsumable_ArtifactPack_Full_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/PrimalEarth/Test_Craig/Artifact_Icon.Artifact_Icon",
@@ -12984,7 +13035,7 @@
 		},
 		{
 			"name": "Knight Armor Pack",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Dinos/rex/Boss/PrimalItemConsumable_KnightArmorPack.PrimalItemConsumable_KnightArmorPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/Armors/KnightProme/Armor/TEKShirt_Icon_2.TEKShirt_Icon_2",
@@ -16786,7 +16837,7 @@
 		},
 		{
 			"name": "Uber heads Pack",
-			"description": "Consume it to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Ubers/Dodorex/Boss/PrimalItemConsumable_UberHeadsPack.PrimalItemConsumable_UberHeadsPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/Items/boss_trophys.boss_trophys",
@@ -16993,8 +17044,8 @@
 			}
 		},
 		{
-			"name": "Bullets Pack",
-			"description": "Consume this to get different type bullets",
+			"name": "Arrows Pack",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Ubers/Dodorex/PrimalItemConsumable_ArrowsPack.PrimalItemConsumable_ArrowsPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/Ammo/Arrows_Icon.Arrows_Icon",
@@ -17019,7 +17070,7 @@
 		},
 		{
 			"name": "Bullets Pack",
-			"description": "Consume this to get different type bullets",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Ubers/Dodorex/PrimalItemConsumable_BulletsPack.PrimalItemConsumable_BulletsPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/Consumable/Stimulant/bulletpack.bulletpack",
@@ -17100,7 +17151,7 @@
 		},
 		{
 			"name": "Riot Armor Pack",
-			"description": "Consume this to get Riot Armor Set",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Ubers/Dodorex/PrimalItemConsumable_RiotPack.PrimalItemConsumable_RiotPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Mods/Trex/PrimalEarth/CoreBlueprints/Weapons/Icons/RiotShield_Icon.RiotShield_Icon",
@@ -17232,7 +17283,7 @@
 		},
 		{
 			"name": "Desert Armor Pack",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Ubers/Dodowyvern/PrimalItemConsumable_DesertArmorPack.PrimalItemConsumable_DesertArmorPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/ScorchedEarth/Icons/Outfits/HUD_MaleDesertPants_Colorize_d.HUD_MaleDesertPants_Colorize_d",
@@ -17476,7 +17527,7 @@
 		},
 		{
 			"name": "Flak Armor Pack",
-			"description": "Consume this to your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Ubers/Dragon/PrimalItemConsumable_FlakArmorPack.PrimalItemConsumable_FlakArmorPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/Icons/MetalShirt_Icon.MetalShirt_Icon",
@@ -17609,7 +17660,7 @@
 		},
 		{
 			"name": "Fur Armor Pack",
-			"description": "Consume this to your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Ubers/Gorilla/PrimalItemConsumable_FurArmorPack.PrimalItemConsumable_FurArmorPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/PrimalEarth/Human/Male/Outfits/Fur/Colorization/HUD_FurShirt_Colorize_d.HUD_FurShirt_Colorize_d",
@@ -17741,7 +17792,7 @@
 		},
 		{
 			"name": "Hazard Armor Pack",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Ubers/Manticore/PrimalItemConsumable_HazardArmorPack.PrimalItemConsumable_HazardArmorPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/Aberration/Outfits/Male/HazardSuit/Textures/HUD_HazardShirt_Icon_Colorize_d.HUD_HazardShirt_Icon_Colorize_d",
@@ -17902,7 +17953,7 @@
 		},
 		{
 			"name": "Ghillie Armor Pack",
-			"description": "Consume this to get your prize",
+			"description": "Consume this to get your Reward",
 			"bp": "/Game/Mods/Trex/Ubers/Spider/PrimalItemConsumable_GhillieArmorPack.PrimalItemConsumable_GhillieArmorPack_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Ghillie/Icons/GhillieShirt_Icon.GhillieShirt_Icon",
