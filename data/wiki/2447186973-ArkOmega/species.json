@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "348.5.1659071935",
+	"version": "348.7.1660362757",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -10166,6 +10166,47 @@
 			"death": { "baseXP": 1 }
 		},
 		{
+			"name": "Golem",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Minions/Companion_Character_BP_ClonerStaff.Companion_Character_BP_ClonerStaff_C",
+			"dinoNameTag": "RockElemental",
+			"customTag": "CompanionGolem",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"flags": [ "canDrag", "doStepDamage", "isCarnivore" ],
+			"leveling": { "mutagenCost": 88 },
+			"cloning": {
+				"costBase": 2200,
+				"costLevel": 55,
+				"timeBase": 15400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 960 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 960 }
+			},
+			"staminaRates": { "sprint": -25 },
+			"attack": {
+				"defaultDmg": 75,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 1, "dmg": 25, "radius": 600, "stamina": 30 },
+					{
+						"name": "ThrowRock", "interval": 11, "dmg": 25, "radius": 1200, "stamina": 100,
+						"isProjectile": true
+					},
+					{ "name": "Swipe", "interval": 3, "dmg": 25, "radius": 600, "stamina": 35 }
+				]
+			},
+			"death": { "baseXP": 50 }
+		},
+		{
 			"name": "Turdanodon",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Minions/Ptero_Character_BP_Turdanodon.Ptero_Character_BP_Turdanodon_C",
 			"dinoNameTag": "Ptera",
@@ -14586,7 +14627,7 @@
 			"name": "Omega Raft",
 			"bp": "/Game/Mods/ArkOmega/Items/Raft/Raft_BP_Omega.Raft_BP_Omega_C",
 			"dinoNameTag": "Raft",
-			"customTag": "",
+			"customTag": "EtherealRaft",
 			"targetingTeamName": "",
 			"mass": 250,
 			"dragWeight": 500,
@@ -14600,10 +14641,10 @@
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"swim": { "base": 900, "sprint": 2700 }
+				"swim": { "base": 1800 }
 			},
 			"movementD": {
-				"swim": { "base": 900, "sprint": 2700 }
+				"swim": { "base": 1800 }
 			},
 			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
