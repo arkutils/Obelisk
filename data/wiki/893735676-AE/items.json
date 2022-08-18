@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "348.7.1659567653",
+	"version": "348.10.1660792148",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -2672,6 +2672,30 @@
 			"statEffects": []
 		},
 		{
+			"name": "Krio Sinomacrops Summon Reagent",
+			"description": "Will summon a tamed Kriogenic Sinomacrops",
+			"bp": "/Game/Mods/AE/Dinos/KrioProjects/KrioSino/PrimalItemConsumable_Summon_KrioSino.PrimalItemConsumable_Summon_KrioSino_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C",
+			"icon": "/Game/Mods/AE/Core/Icons/EternalToken3.EternalToken3",
+			"type": "MiscConsumable/Medicine",
+			"folders": [ "Summons", "Tributes" ],
+			"weight": 2,
+			"stackSize": 1000,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 10,
+				"time": 5,
+				"levelReq": 100,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItem_Generic_Essence_C" },
+					{ "qty": 100, "type": "PrimalItemConsumable_PrimeBlood_C" }
+				]
+			},
+			"statEffects": []
+		},
+		{
 			"name": "TBFG Tribute Ascension Item",
 			"description": "This item will ascend one of your TBFG Tribute Bear. Put in inventory and use multi-use wheel to Ascend. DO NOT CONSUME.",
 			"bp": "/Game/Mods/AE/Dinos/PFTransfers/CelestialBase/PrimalItemResource_TBFGAscensionItem.PrimalItemResource_TBFGAscensionItem_C",
@@ -3824,7 +3848,6 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1040, "type": "PrimalItemResource_Hide_Fabled_C" },
 					{ "qty": 690, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 650, "type": "PrimalItemResource_ChitinOrKeratin_C" },
 					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" }
@@ -26368,24 +26391,6 @@
 			}
 		},
 		{
-			"name": "Magic Charcoal",
-			"description": "Drag it into Raw Meat to INSTANTLY create Cooked Meat!",
-			"bp": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_MagicCharcoal.PrimalItemResource_MagicCharcoal_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Charcoal_Icon.Charcoal_Icon",
-			"type": "Resource",
-			"weight": 0.25,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 1,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
-			}
-		},
-		{
 			"name": "Diplocaulus Egg",
 			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
 			"bp": "/Game/Mods/AE/PrimalEarth/Test/PrimalItemConsumable_Egg_Diplocaulus.PrimalItemConsumable_Egg_Diplocaulus_C",
@@ -27191,6 +27196,30 @@
 				]
 			},
 			"structure": "/Game/Mods/AE/Structures/ChargeStation/Eternal_Charge_Station.Eternal_Charge_Station_C"
+		},
+		{
+			"name": "Eternal Dedicated WorkBench",
+			"description": "picks up resources.Acts as fridge and distributes resources to dedicated storage.",
+			"bp": "/Game/Mods/AE/Structures/Craftstation/DedicatedBench/PrimalItemStructure_EternalDedicatedBench.PrimalItemStructure_EternalDedicatedBench_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/AE/Structures/Craftstation/AEBenchIcon.AEBenchIcon",
+			"type": "Structure",
+			"weight": 40,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 3.7,
+				"time": 5,
+				"levelReq": 25,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 125, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/Craftstation/DedicatedBench/EternalDediBench.EternalDediBench_C"
 		},
 		{
 			"name": "Eternal Workbench",
@@ -31216,8 +31245,8 @@
 			"structure": "/Game/Mods/AE/Structures/HGStructures/HGCompostBin/HG_CompostBin.HG_CompostBin_C"
 		},
 		{
-			"name": "Eternal Crafting Storage Box",
-			"description": "A large cabinet to store your crafted items. Automatically pick up.\nPress G to disable snapping.",
+			"name": "Eternal Crafting Storage Box(Craftable)",
+			"description": "A large cabinet to store your craftable resources. Automatically pick up.\nPress G to disable snapping.",
 			"bp": "/Game/Mods/AE/Structures/HGStructures/HGCraftingStorageBox/PrimalItemStructure_HGCraftingStorageBox.PrimalItemStructure_HGCraftingStorageBox_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/HGLargeStorage_Icon_C.HGLargeStorage_Icon_C",
@@ -31240,8 +31269,8 @@
 			"structure": "/Game/Mods/AE/Structures/HGStructures/HGCraftingStorageBox/HGCraftingStorageBox.HGCraftingStorageBox_C"
 		},
 		{
-			"name": "Eternal Crafting Storage Box Metal",
-			"description": "A large cabinet to store your crafted items. Automatically pick up.\nPress G to disable snapping.",
+			"name": "Eternal Crafting Storage Box Metal(Craftable)",
+			"description": "A large cabinet to store your craftable resources. Automatically pick up.\nPress G to disable snapping.",
 			"bp": "/Game/Mods/AE/Structures/HGStructures/HGCraftingStorageBox/PrimalItemStructure_HGCraftingStorageBox_Metal.PrimalItemStructure_HGCraftingStorageBox_Metal_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Mods/AE/Core/HGStuff/Textur/HGCraftingStorageBox_Metal_Icon.HGCraftingStorageBox_Metal_Icon",
@@ -31301,14 +31330,12 @@
 			"crafting": {
 				"xp": 2,
 				"time": 2,
-				"levelReq": 0,
+				"levelReq": 20,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 36, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 55, "type": "PrimalItemResource_Polymer_C" }
+					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 55, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
 			},
 			"structure": "/Game/Mods/AE/Structures/HGStructures/HGDedicatedBox/BP_HG_DedicatedStorageBox.BP_HG_DedicatedStorageBox_C"
@@ -31902,14 +31929,12 @@
 			"crafting": {
 				"xp": 3.7,
 				"time": 5,
-				"levelReq": 0,
+				"levelReq": 20,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 200, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 125, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 50, "type": "PrimalItemResource_Crystal_C" }
+					{ "qty": 25, "type": "PrimalItemResource_Metal_C" }
 				]
 			},
 			"structure": "/Game/Mods/AE/Structures/HGStructures/HGPackStation/HGPackStation.HGPackStation_C"
