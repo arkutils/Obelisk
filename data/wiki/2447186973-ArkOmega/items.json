@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "348.7.1660362757",
+	"version": "349.2.1661580009",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -5472,6 +5472,29 @@
 			}
 		},
 		{
+			"name": "Crafting Potion",
+			"description": "Using this doubles your current Crafting Skill.",
+			"bp": "/Game/Mods/ArkOmega/Items/Potions/CraftingPotion/PrimalItemConsumable_CraftingPotion.PrimalItemConsumable_CraftingPotion_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
+			"icon": "/Game/Mods/ArkOmega/Items/Potions/CraftingPotion/Crafting_PotionIcon.Crafting_PotionIcon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Potions" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 2,
+				"time": 3,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItem_EtherealSoul_C" },
+					{ "qty": 5, "type": "PrimalItem_BasicEssence_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
+				]
+			}
+		},
+		{
 			"name": "Dino Beer",
 			"description": "This fermented liquid courage will reduce the damage your dino takes by 10% and make them immune to Fear, but will also make them gain 1% of their torpor per second and unable to run.\n\nLasts 60 seconds.",
 			"bp": "/Game/Mods/ArkOmega/Items/Potions/DinoBeer/PrimalItemConsumable_DinoBeer.PrimalItemConsumable_DinoBeer_C",
@@ -5831,6 +5854,29 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemConsumable_Stimulant_C" },
 					{ "qty": 1, "type": "PrimalItemConsumable_UltimateSedative_ArkOmega_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
+				]
+			}
+		},
+		{
+			"name": "Magic Find Potion",
+			"description": "Use this to gain 100% Magic Find for 90 seconds. ",
+			"bp": "/Game/Mods/ArkOmega/Items/Potions/MagicFindPotion/PrimalItemConsumable_MagicPotion.PrimalItemConsumable_MagicPotion_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
+			"icon": "/Game/Mods/ArkOmega/Items/Potions/MagicFindPotion/Magic_PotionIcon.Magic_PotionIcon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Potions" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 2,
+				"time": 3,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItem_LuckySoul_C" },
+					{ "qty": 25, "type": "PrimalItem_AlphaEssence_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
 				]
 			}
@@ -6938,8 +6984,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "exact": true, "qty": 4, "type": "PrimalItem_BossToken_C" },
-					{ "qty": 400, "type": "PrimalItem_LuckySoul_C" }
+					{ "exact": true, "qty": 12, "type": "PrimalItem_BossToken_C" },
+					{ "qty": 1200, "type": "PrimalItem_LuckySoul_C" }
 				]
 			}
 		},
@@ -7207,25 +7253,6 @@
 					{ "exact": true, "qty": 1, "type": "PrimalItem_DinoMindWipe_C" },
 					{ "exact": true, "qty": 1, "type": "PrimalItem_GodSoul_C" }
 				]
-			}
-		},
-		{
-			"name": "Imbue Wipe Token - Armor",
-			"description": "Drag this onto an imbued armor or saddle to wipe the imbues and restore it back to its original settings. ",
-			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_ImbueWipe.PrimalItem_ImbueWipe_C",
-			"parent": "/Script/ShooterGame.PrimalItem",
-			"icon": "/Game/Mods/ArkOmega/PrimalEarth/UI/Textures/HubTributeIcon.HubTributeIcon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Items" ],
-			"weight": 0.5,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 2,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "exact": true, "qty": 3, "type": "PrimalItem_SoulShard_C" } ]
 			}
 		},
 		{
@@ -7775,6 +7802,32 @@
 			}
 		},
 		{
+			"name": "Bullshit structure",
+			"description": "",
+			"bp": "/Game/Mods/ArkOmega/Structures/BullshitStructure/PrimalItemStructure_Bullshit.PrimalItemStructure_Bullshit_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/ArkOmega/Structures/OmegaAltar/hexen_altar_icon.hexen_altar_icon",
+			"type": "Structure",
+			"folders": [ "Structures" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 99,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 500, "type": "PrimalItem_Souls_C" },
+					{ "qty": 100, "type": "PrimalItem_GodEssence_C" },
+					{ "qty": 2500, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 100, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 500, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"structure": "/Game/Mods/ArkOmega/Structures/BullshitStructure/BullshitStructure.BullshitStructure_C"
+		},
+		{
 			"name": "Chromatic Cannon",
 			"description": "An elementally imbued cannon that is able to use Elemental Souls for power to shoot Elemental Balls. No other ammunition required.",
 			"bp": "/Game/Mods/ArkOmega/Structures/ChromaticCannon/PrimalItemStructure_ChromaticCannon.PrimalItemStructure_ChromaticCannon_C",
@@ -8129,6 +8182,17 @@
 			"stackSize": 100
 		},
 		{
+			"name": "Magic Fragments",
+			"description": "Small fragments of magical items, this item can be used to reroll the imbues on non-set armors in the Imbue Workbench.",
+			"bp": "/Game/Mods/ArkOmega/Structures/ItemFrag/PrimalItem_MagicFragment.PrimalItem_MagicFragment_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/Structures/ItemFrag/CharmFragments.CharmFragments",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.1,
+			"stackSize": 100
+		},
+		{
 			"name": "Set Fragments",
 			"description": "Small fragments of a Set Item, this item can be used to reroll the imbues on Set Items.\n\nPlace the Set Item in the Omega Upgrade Bench to reroll its imbues. The Bench will tell you the required number of Fragments when clicking on the Set Item.",
 			"bp": "/Game/Mods/ArkOmega/Structures/ItemFrag/PrimalItem_SetFragment.PrimalItem_SetFragment_C",
@@ -8225,6 +8289,31 @@
 				]
 			},
 			"structure": "/Game/Mods/ArkOmega/Structures/OmegaWorkbench/StorageBox_OmegaWorkBench.StorageBox_OmegaWorkBench_C"
+		},
+		{
+			"name": "Quantum Compactor",
+			"description": "Items placed in the Quantum Compactors inventory can be smashed to infinitely small, no longer taking up inventory space.\n\nSimilar to Dedicated Storage, but able to hold an almost limitless number of different item types.\n\nWill not be able to compact any item that has custom data stored on it.",
+			"bp": "/Game/Mods/ArkOmega/Structures/QuantumCompactor/PrimalItemStructure_QuantumCompactor.PrimalItemStructure_QuantumCompactor_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/ArkOmega/Structures/DimensionalStorage/hexen_dimstorage_icon.hexen_dimstorage_icon",
+			"type": "Structure",
+			"folders": [ "Structures" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 160,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 3, "type": "PrimalItem_UtilitySoul_C" },
+					{ "qty": 15, "type": "PrimalItem_BasicEssence_C" }
+				]
+			},
+			"structure": "/Game/Mods/ArkOmega/Structures/QuantumCompactor/QuantumCompactor.QuantumCompactor_C"
 		},
 		{
 			"name": "Respawn Point",
@@ -8324,7 +8413,7 @@
 		},
 		{
 			"name": "Soul Compressor",
-			"description": "A storage unit able to compress and cache Omega Souls into itself, taking up no inventory space.\n\nCached souls are able to be pulled out using a Soul Magnet.",
+			"description": "A storage unit able to compress and cache various souls into itself, taking up no inventory space.\n\nCached souls are able to be pulled out using a Soul Magnet.\n\nPicking this up will retain all souls EXCEPT Paragon souls, so remove them first!",
 			"bp": "/Game/Mods/ArkOmega/Structures/SoulCompressor/PrimalItemStructure_SoulCompressor.PrimalItemStructure_SoulCompressor_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Mods/ArkOmega/Structures/DimensionalStorage/hexen_dimstorage_icon.hexen_dimstorage_icon",
@@ -8638,7 +8727,7 @@
 			"type": "Weapon",
 			"folders": [ "Weapons", "Grenades" ],
 			"weight": 0.5,
-			"stackSize": 10,
+			"stackSize": 100,
 			"crafting": {
 				"xp": 11.35,
 				"time": 5,
@@ -8870,7 +8959,7 @@
 				"recipe": [
 					{ "qty": 3, "type": "PrimalItem_MythicalSoul_C" },
 					{ "qty": 15, "type": "PrimalItem_BasicEssence_C" },
-					{ "qty": 1, "type": "PrimalItem_WeaponTorch_C" }
+					{ "qty": 100, "type": "PrimalItemResource_Wood_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/HadesTorch/WeapHadesTorch.WeapHadesTorch_C"
@@ -8884,7 +8973,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Spear Bolts" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 9.3,
 				"time": 5,
@@ -8906,7 +8995,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Spear Bolts" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 9.3,
 				"time": 5,
@@ -8928,7 +9017,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Spear Bolts" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 9.3,
 				"time": 5,
@@ -8950,7 +9039,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Spear Bolts" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 9.3,
 				"time": 5,
@@ -8972,7 +9061,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Spear Bolts" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 9.3,
 				"time": 5,
@@ -8994,7 +9083,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Spear Bolts" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 9.3,
 				"time": 5,
@@ -9016,7 +9105,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Spear Bolts" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 9.3,
 				"time": 5,
@@ -9038,7 +9127,7 @@
 			"type": "Ammo",
 			"folders": [ "Healing Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9061,7 +9150,7 @@
 			"type": "Ammo",
 			"folders": [ "Healing Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9084,7 +9173,7 @@
 			"type": "Ammo",
 			"folders": [ "Healing Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9107,7 +9196,7 @@
 			"type": "Ammo",
 			"folders": [ "Healing Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9130,7 +9219,7 @@
 			"type": "Ammo",
 			"folders": [ "Healing Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9153,7 +9242,7 @@
 			"type": "Ammo",
 			"folders": [ "Healing Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9176,7 +9265,7 @@
 			"type": "Ammo",
 			"folders": [ "Weapons", "Mid Game" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.024,
 				"time": 0.5,
@@ -9344,7 +9433,8 @@
 					{ "qty": 50, "type": "PrimalItem_OmegaEssence_C" },
 					{ "qty": 300, "type": "PrimalItem_NightmareSoul_C" }
 				]
-			}
+			},
+			"weapon": "/Game/Mods/ArkOmega/Weapons/Lurkers/WeapLurkers.WeapLurkers_C"
 		},
 		{
 			"name": "Malice",
@@ -9381,7 +9471,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Metal Arrows" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.024,
 				"time": 0.5,
@@ -9403,7 +9493,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Metal Arrows" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.024,
 				"time": 0.5,
@@ -9425,7 +9515,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Metal Arrows" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.024,
 				"time": 0.5,
@@ -9447,7 +9537,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Metal Arrows" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.024,
 				"time": 0.5,
@@ -9469,7 +9559,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Metal Arrows" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.024,
 				"time": 0.5,
@@ -9491,7 +9581,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Metal Arrows" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.024,
 				"time": 0.5,
@@ -9513,7 +9603,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Metal Arrows" ],
 			"weight": 0.4,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.024,
 				"time": 0.5,
@@ -9877,7 +9967,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Arrows" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9899,7 +9989,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Arrows" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9921,7 +10011,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Arrows" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9943,7 +10033,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Arrows" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9965,7 +10055,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Arrows" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -9987,7 +10077,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Arrows" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -10009,7 +10099,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Arrows" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -10031,7 +10121,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -10054,7 +10144,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -10077,7 +10167,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -10100,7 +10190,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -10123,7 +10213,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -10146,7 +10236,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -10169,7 +10259,7 @@
 			"type": "Ammo",
 			"folders": [ "Tranqs", "Darts" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,
@@ -10264,7 +10354,7 @@
 			"type": "Weapon",
 			"folders": [ "Weapons", "Grenades" ],
 			"weight": 0.5,
-			"stackSize": 10,
+			"stackSize": 100,
 			"crafting": {
 				"xp": 11.35,
 				"time": 5,
@@ -10274,7 +10364,7 @@
 				"recipe": [
 					{ "qty": 10, "type": "PrimalItem_BasicEssence_C" },
 					{ "qty": 5, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 5, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Metal_C" },
 					{ "qty": 1, "type": "PrimalItem_ResourceSoul_C" }
 				]
 			},
@@ -10338,7 +10428,7 @@
 			"type": "Ammo",
 			"folders": [ "Other" ],
 			"weight": 0.2,
-			"stackSize": 100,
+			"stackSize": 1000,
 			"crafting": {
 				"xp": 0.05,
 				"time": 1,

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "348.10.1660792148",
+	"version": "349.2.1661548349",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -1245,6 +1245,127 @@
 					}
 				],
 				"baseXP": 120
+			}
+		},
+		{
+			"name": "Robot Siren Head",
+			"bp": "/Game/Mods/AE/Dinos/ABXfers/Dinos/Boss/SirenHead/BossBionicSirenHead_Character_BP.BossBionicSirenHead_Character_BP_C",
+			"dinoNameTag": "SirenHead_Boss_Robot",
+			"customTag": "SirenHead",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 10000,
+			"dragWeight": 7500,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canDrag",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 425, "sprint": 892.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -25,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 3500000,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Swipe", "interval": 0.6, "dmg": 3500000, "radius": 110, "stamina": 0 },
+					{ "name": "Feast", "interval": 0.5, "dmg": 3500000, "radius": 120, "stamina": 0 },
+					{ "name": "Grab", "interval": 0.5, "dmg": 0, "radius": 120, "stamina": 0 },
+					{ "name": "Lunar Storm", "interval": 60, "dmg": 0, "radius": 0, "stamina": 100 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					}
+				],
+				"baseXP": 8
+			}
+		},
+		{
+			"name": "Robot Lysrix",
+			"bp": "/Game/Mods/AE/Dinos/ABXfers/Dinos/Boss/Spider/BossBionicLysrix_Character_BP.BossBionicLysrix_Character_BP_C",
+			"dinoNameTag": "Uberspider_Robot_AE",
+			"customTag": "Uberspider",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 10000,
+			"dragWeight": 1200,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canDrag",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 290, "sprint": 507.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 406, "sprint": 1349.9 },
+				"swim": { "base": 420 }
+			},
+			"staminaRates": {
+				"sprint": -25,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 1, "dmg": 3500000, "radius": 670, "stamina": 0 },
+					{
+						"name": "Web Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{
+						"name": "Acid Cone", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{
+						"name": "Glacial Spike", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "Star fall", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 }
+				]
+			},
+			"death": {
+				"dossierId": 87,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					}
+				],
+				"baseXP": 8
 			}
 		},
 		{
@@ -8894,6 +9015,58 @@
 					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Roar", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Dino Flyer",
+			"bp": "/Game/Mods/AE/Dinos/Base_BPs/Dino_Character_BP_DivingFlyer_SOD.Dino_Character_BP_DivingFlyer_SOD_C",
+			"dinoNameTag": "Diving Flyer",
+			"customTag": "",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"xpRamp": "Player",
+				"maxExperience": 100000,
+				"maxTameLevels": 74,
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 900 },
+				"fly": { "base": 600, "sprint": 900 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 900 },
+				"fly": { "base": 600, "sprint": 900 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -0.3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90
 			},
 			"death": { "baseXP": 2 }
 		},
@@ -23579,94 +23752,9 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge.DinoDropInventoryComponent_Carnivore_Huge"
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBoss.DinoDropInventoryComponent_EndBoss"
 					}
 				],
-				"baseXP": 120
-			}
-		},
-		{
-			"name": "Magmasaur",
-			"bp": "/Game/Mods/AE/Dinos/EndBoss/BionicMagmasaur/Robot_Cherufe_Character_BP_BossLvl2.Robot_Cherufe_Character_BP_BossLvl2_C",
-			"dinoNameTag": "LavaLizard_HardModeBoss",
-			"customTag": "LavaLizard",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 10000,
-			"dragWeight": 555,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isTameable"
-			],
-			"leveling": {
-				"maxExperience": 22213960,
-				"levelCapOffset": 50,
-				"mutagenCost": 1
-			},
-			"cloning": {
-				"costBase": 0,
-				"costLevel": 0.01,
-				"timeBase": 0,
-				"timeLevel": 0.04
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 750, "sprint": 656.2 },
-				"swim": { "base": 600, "sprint": 525 }
-			},
-			"movementD": {
-				"walk": { "base": 900, "sprint": 2296.9 },
-				"swim": { "base": 720, "sprint": 1837.5 }
-			},
-			"movementR": {
-				"walk": { "base": 747, "sprint": 1906.4 },
-				"swim": { "base": 597.6, "sprint": 1525.1 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 560000,
-				"defaultSwingRadius": 1200,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 640000, "radius": 450, "stamina": 10 },
-					{
-						"name": "Fireball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20,
-						"isProjectile": true
-					},
-					{ "name": "VentForge", "interval": 30, "dmg": 540000, "radius": 2000, "stamina": 2 },
-					{ "name": "Claw", "interval": 0.5, "dmg": 640000, "radius": 350, "stamina": 10 },
-					{ "name": "AIChargeHeat", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Taunt", "interval": 20, "dmg": 640000, "radius": 450, "stamina": 10 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 0.476190476,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossHard.DinoDropInventoryComponent_EndBossHard"
-					},
-					{
-						"chance": 0.0476190483,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossHard.DinoDropInventoryComponent_EndBossHard"
-					},
-					{
-						"chance": 0.476190476,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossHard.DinoDropInventoryComponent_EndBossHard"
-					}
-				],
-				"engrams": [ "PrimalItemStructure_EmpowermentStation_C", "PrimalItemEmpowermentArtifact_02_C" ],
 				"baseXP": 120
 			}
 		},
@@ -24289,7 +24377,8 @@
 					"PrimalItemStructure_TekJumpPad_C",
 					"PrimalItemStructure_TekAlarm_C",
 					"PrimalItemStructure_PressurePlate_C",
-					"PrimalItemArmor_SpaceWhaleSaddle_Tek_C"
+					"PrimalItemArmor_SpaceWhaleSaddle_Tek_C",
+					"PrimalItemConsumable_InstaTameFood_C"
 				],
 				"baseXP": 40000
 			}
@@ -33154,61 +33243,6 @@
 			}
 		},
 		{
-			"name": "Mystical Gigant",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/Gigant/Immortal_Gigant_Character_BP2.Immortal_Gigant_Character_BP2_C",
-			"dinoNameTag": "Immortal_Gigant",
-			"customTag": "Alpha_Gigant",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 400,
-			"dragWeight": 4000,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowMountedWeaponry",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isBossDino",
-				"isCarnivore"
-			],
-			"cloning": {
-				"costBase": 2.5,
-				"costLevel": 5.5,
-				"timeBase": 17.5,
-				"timeLevel": 38.5
-			},
-			"falling": {
-				"dmgMult": 5,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 1575, "sprint": 2522.5 }
-			},
-			"movementD": {
-				"walk": { "base": 1575, "sprint": 2522.5 }
-			},
-			"staminaRates": { "sprint": -29 },
-			"attack": {
-				"defaultDmg": 20836,
-				"defaultSwingRadius": 850,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 20836, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Gnash", "interval": 0.4, "dmg": 20836, "radius": 850, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/AE/Dinos/Mystical/DinoDropInventoryComponent_Immortal.DinoDropInventoryComponent_Immortal"
-					}
-				],
-				"engrams": [ "PrimalItemResource_Eternal_RezStone_C" ],
-				"baseXP": 4800
-			}
-		},
-		{
 			"name": "Mystical Giga (Hard Mode)",
 			"bp": "/Game/Mods/AE/Dinos/Mystical/Gigant/MysticalGigaHard_Character_BP.MysticalGigaHard_Character_BP_C",
 			"dinoNameTag": "Mystical_Giga_Hard",
@@ -33540,61 +33574,6 @@
 				"engrams": [ "PrimalItem_Ascender_VRMainBoss_Beta_C" ],
 				"baseXP": 2
 			}
-		},
-		{
-			"name": "Mystical Pteranodon",
-			"bp": "/Game/Mods/AE/Dinos/Mystical/Ptero/PteroGrab_Character_BP_AE.PteroGrab_Character_BP_AE_C",
-			"dinoNameTag": "Mystical_Ptero",
-			"customTag": "Tapejara",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 10000,
-			"dragWeight": 149,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isFlyerDino",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 67 },
-			"cloning": {
-				"costBase": 1675,
-				"costLevel": 55,
-				"timeBase": 11725,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 270, "sprint": 864 },
-				"fly": { "base": 594, "sprint": 1900.8 },
-				"swim": { "base": 270, "sprint": 864 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 720 },
-				"fly": { "base": 660, "sprint": 1584 },
-				"swim": { "base": 300, "sprint": 720 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -0.325
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 200,
-				"attacks": [
-					{ "name": "Bite", "interval": 1, "dmg": 30, "radius": 180, "stamina": 0 },
-					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
-					{ "name": "Taunt", "interval": 20, "dmg": 50, "radius": 200, "stamina": 70 },
-					{ "name": "picki", "interval": 3, "dmg": 5, "radius": 200, "stamina": 0 },
-					{ "name": "picki", "interval": 4, "dmg": 5, "radius": 200, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Mystical Rhino",
@@ -39473,7 +39452,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 0,
+				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -59469,6 +59448,81 @@
 					}
 				],
 				"baseXP": 6
+			}
+		},
+		{
+			"name": "Elemental Lightning Corrupted Paraceratherium",
+			"bp": "/Game/Mods/AE/Dinos/azprojects/CorruptDinos/Paracacer/Elec_Paracer_Character_BP_Corrupt.Elec_Paracer_Character_BP_Corrupt_C",
+			"dinoNameTag": "Elem_Paracer_Corrupt_Elec",
+			"customTag": "Paracer",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 360,
+			"dragWeight": 600,
+			"variants": [ "Corrupted" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isBigDino",
+				"isCarnivore",
+				"isCorrupted",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 66
+			},
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300, "sprint": 825 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300, "sprint": 825 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 500,
+				"defaultSwingRadius": 550,
+				"attacks": [
+					{ "name": "melee", "interval": 0.375, "dmg": 750, "radius": 550, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 750, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 750, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Elemental/DinoDropInventoryComponent_Elem_Huge.DinoDropInventoryComponent_Elem_Huge"
+					}
+				],
+				"baseXP": 12
 			}
 		},
 		{
