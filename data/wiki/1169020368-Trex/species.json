@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "349.22.1663103133",
+	"version": "349.27.1663957342",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -36183,6 +36183,57 @@
 					{ "name": "Sword", "interval": 1, "dmg": 600, "radius": 3000, "stamina": 50 },
 					{
 						"name": "Shoot", "interval": 0.2, "dmg": 500, "radius": 650, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "BackpackAbility", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 100 }
+		},
+		{
+			"name": "Mek Stage2",
+			"bp": "/Game/Mods/Trex/Extinction/Dinos/Mek/Stage2/Mek_Character_BP_Stage2_ADO.Mek_Character_BP_Stage2_ADO_C",
+			"dinoNameTag": "Mek",
+			"customTag": "Mek2",
+			"targetingTeamName": "",
+			"mass": 3500,
+			"dragWeight": 1200,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isBigDino",
+				"isRobot",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 6200
+			},
+			"movementW": {
+				"walk": { "base": 450 },
+				"swim": { "base": 100 }
+			},
+			"movementD": {
+				"walk": { "base": 450 },
+				"swim": { "base": 100 }
+			},
+			"movementR": {
+				"walk": { "base": 1800 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Sword", "interval": 0.35, "dmg": 1800, "radius": 3000, "stamina": 50 },
+					{
+						"name": "Shoot", "interval": 0.1, "dmg": 1500, "radius": 650, "stamina": 50,
 						"isProjectile": true
 					},
 					{ "name": "BackpackAbility", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 }
