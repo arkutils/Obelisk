@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "349.16.1662535603",
+	"version": "350.5.1665202463",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -710,7 +710,7 @@
 					{ "name": "Bite", "interval": 0.5, "dmg": 320, "radius": 495, "stamina": 10 },
 					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 20 },
 					{ "name": "Grab", "interval": 1, "dmg": 320, "radius": 300, "stamina": 40 },
-					{ "name": "Taunt", "interval": 0, "dmg": 320, "radius": 2000, "stamina": 2 },
+					{ "name": "Taunt", "interval": 30, "dmg": 320, "radius": 2000, "stamina": 2 },
 					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 320, "radius": 614, "stamina": 10 }
 				]
 			},
@@ -1590,7 +1590,7 @@
 				"defaultSwingRadius": 185,
 				"attacks": [
 					{ "name": "Attack", "interval": 0.4, "dmg": 35, "radius": 185, "stamina": 0 },
-					{ "name": "AlertPulse", "interval": 0, "dmg": 0, "radius": 0, "stamina": 15 }
+					{ "name": "AlertPulse", "interval": 10, "dmg": 0, "radius": 0, "stamina": 15 }
 				]
 			},
 			"death": {
@@ -3828,7 +3828,7 @@
 			"name": "Desert Titan",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Titans/DesertTitan/DesertKaiju_Character_BP_Omega.DesertKaiju_Character_BP_Omega_C",
 			"dinoNameTag": "OmegaDesertTitan",
-			"customTag": "Titan",
+			"customTag": "OmegaTitan",
 			"targetingTeamName": "",
 			"mass": 5000,
 			"dragWeight": 35,
@@ -3886,7 +3886,7 @@
 			"name": "Forest Titan",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Titans/ForestTitan/ForestKaiju_Character_BP_Omega.ForestKaiju_Character_BP_Omega_C",
 			"dinoNameTag": "OmegaForestTitan",
-			"customTag": "Titan",
+			"customTag": "OmegaTitan",
 			"targetingTeamName": "",
 			"mass": 4000,
 			"dragWeight": 35,
@@ -3934,7 +3934,7 @@
 			"name": "Arctic Titan",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Titans/IceTitan/IceKaiju_Character_BP_Omega.IceKaiju_Character_BP_Omega_C",
 			"dinoNameTag": "OmegaIceTitan",
-			"customTag": "Titan",
+			"customTag": "OmegaTitan",
 			"targetingTeamName": "",
 			"mass": 4000,
 			"dragWeight": 10000,
@@ -8846,9 +8846,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 8,
+				"defaultDmg": 13,
 				"defaultSwingRadius": 105,
-				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 8, "radius": 105, "stamina": 0 } ]
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 13, "radius": 105, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 0.5 }
 		},
@@ -11541,12 +11541,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 35,
+				"defaultDmg": 20,
 				"defaultSwingRadius": 185,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 10, "radius": 185, "stamina": 0 },
-					{ "name": "Claw", "interval": 1, "dmg": 10, "radius": 185, "stamina": 0 },
-					{ "name": "Charge Breath", "interval": 5, "dmg": 10, "radius": 200, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 20, "radius": 185, "stamina": 0 },
+					{ "name": "Claw", "interval": 1, "dmg": 20, "radius": 185, "stamina": 0 },
+					{ "name": "Charge Breath", "interval": 5, "dmg": 20, "radius": 200, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -13989,7 +13989,7 @@
 			"name": "Vulture",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Vulture_Character_BP_Child.Vulture_Character_BP_Child_C",
 			"dinoNameTag": "Vulture",
-			"customTag": "Dimorph",
+			"customTag": "Vulture",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 70,
 			"dragWeight": 70,
@@ -14185,7 +14185,7 @@
 						"isProjectile": true
 					},
 					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
-					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Taunt", "interval": 30, "dmg": 60, "radius": 2000, "stamina": 2 },
 					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 }
 				]
 			},
@@ -14272,7 +14272,7 @@
 					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
 					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 },
 					{
-						"name": "Poison (AI)", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
+						"name": "Poison (AI)", "interval": 3, "dmg": 0, "radius": 0, "stamina": 20,
 						"isProjectile": true
 					}
 				]

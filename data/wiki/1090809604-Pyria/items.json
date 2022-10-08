@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "349.27.1664805423",
+	"version": "350.5.1665173924",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -1085,6 +1085,28 @@
 			}
 		},
 		{
+			"name": "Nature Element",
+			"description": "The Element of Nature is normally associated with aspects like beauty, growth, and maternal instict. \n\nAs such, it ranks among the best of elements for healing magic, alongside Light and Water.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_NatureElement.PrimalItemResource_NatureElement_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Element_Wind.Icon_Element_Wind",
+			"type": "Resource",
+			"folders": [ "Mana Manipulation", "Elements" ],
+			"weight": 0,
+			"stackSize": 3000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 30,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Mana_C" }
+				]
+			}
+		},
+		{
 			"name": "Water Element",
 			"description": "The Element of Water is associated with serenity, as well as calmness of mind and fluidity. Used in spells and magic within Pyria.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_WaterElement.PrimalItemResource_WaterElement_C",
@@ -1145,7 +1167,7 @@
 			"description": "A potion that blocks out all external cold for 15 minutes. Cannot be used with Heatblock potion: will completely cancel effects.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_ColdBlock.PrimalItemConsumable_ColdBlock_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ColdblockPotion.ColdblockPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewHeatblock.NewHeatblock",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -1169,7 +1191,7 @@
 			"description": "A potion that blocks out all external cold for 15 minutes. Cannot be used with Heatblock potion: will completely cancel effects. This potion will even prevent against freezing. Defeat a Diorex to unlock this.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_ColdBlockUltra.PrimalItemConsumable_ColdBlockUltra_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SelfBlizzard.SelfBlizzard",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewSelfBlizzard.NewSelfBlizzard",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -1242,10 +1264,10 @@
 		},
 		{
 			"name": "Grand Elixir",
-			"description": "Heals 250 HP per second for 10 seconds. Recovers 100 food per sec to compensate.Not for player consumption.",
+			"description": "Heals 250 HP per second for 10 seconds. Recovers 100 food per sec to compensate.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GrandElixir.PrimalItemConsumable_GrandElixir_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/GreatElixir.GreatElixir",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewGrandElixir.NewGrandElixir",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -1270,7 +1292,7 @@
 			"description": "Heals 80 HP pers second for 10 seconds. Recovers 20 food per sec to compensate.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GreatElixir.PrimalItemConsumable_GreatElixir_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/GreatElixir.GreatElixir",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewGreatElix.NewGreatElix",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -1295,7 +1317,7 @@
 			"description": "A potion that blocks out all external heat for 15 minutes. Cannot be used with Coldblock potion: will completely cancel effects.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_HeatBlock.PrimalItemConsumable_HeatBlock_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/HeatblockPotion.HeatblockPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewColdBlock.NewColdBlock",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -1319,7 +1341,7 @@
 			"description": "A rare, extremely upgraded version of the Heatblock potion. Though its effect does not last as long, it prevents the user from being set aflame in almost any way! DISCLAIMER: will not prevent against lava, and wont work with Heat or Coldblock potions. Defeat a Diorex to unlock this engram. ",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_HeatBlockUltra.PrimalItemConsumable_HeatBlockUltra_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SelfInfernoPotion.SelfInfernoPotion",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewSelfInferno.NewSelfInferno",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -1343,7 +1365,7 @@
 			"description": "Heals 200 health in 10 seconds. A good item to use for players with lower health caps.Slightly regenerates food to compensate.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_LightElixir.PrimalItemConsumable_LightElixir_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/LightElixir.LightElixir",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewLightElix.NewLightElix",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -1367,7 +1389,7 @@
 			"description": "Heals 25% of health over 60 seconds. A must-have for prolonged combat. Defeat an Ogre, or any sort of Pyrian \"alpha\" creature to unlock this.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_MaxElixir.PrimalItemConsumable_MaxElixir_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/HighElixir.HighElixir",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewHighElixir.NewHighElixir",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
 			"weight": 0.1,
@@ -1526,7 +1548,7 @@
 		},
 		{
 			"name": "Cerulean Scout Boots",
-			"description": "Lightweight armor for those who live among the merfolk. In water, its insulation is top-notch.\n\nGrants the \"Hydronamic 4\" ability, increasing swimming speed by 25%",
+			"description": "Lightweight armor for those who live among the merfolk. In water, its insulation is top-notch.\n\nGrants the \"Hydronamic 4\" ability, increasing swimming speed by 100%",
 			"bp": "/Game/Mods/Pyria/Alchemy/Armors/CeruleanScout/PrimalItemArmor_CScoutBoots.PrimalItemArmor_CScoutBoots_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseBoots.PrimalItemArmor_BaseBoots_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Armors/CeruleanScout/Icon/HUD_Manticore_Shirt_Colorized_MIC.HUD_Manticore_Shirt_Colorized_MIC",
@@ -1534,7 +1556,7 @@
 			"folders": [ "Armor", "Cerulean Scout" ],
 			"weight": 1,
 			"stackSize": 1,
-			"durability": 65,
+			"durability": 100,
 			"crafting": {
 				"xp": 0.7,
 				"time": 5,
@@ -1569,7 +1591,7 @@
 			"folders": [ "Armor", "Cerulean Scout" ],
 			"weight": 0.5,
 			"stackSize": 1,
-			"durability": 65,
+			"durability": 100,
 			"crafting": {
 				"xp": 0.58,
 				"time": 5,
@@ -1604,7 +1626,7 @@
 			"folders": [ "Armor", "Cerulean Scout" ],
 			"weight": 1,
 			"stackSize": 1,
-			"durability": 65,
+			"durability": 100,
 			"crafting": {
 				"xp": 0.87,
 				"time": 5,
@@ -1639,7 +1661,7 @@
 			"folders": [ "Armor", "Cerulean Scout" ],
 			"weight": 4,
 			"stackSize": 1,
-			"durability": 65,
+			"durability": 100,
 			"crafting": {
 				"xp": 1.45,
 				"time": 5,
@@ -1674,7 +1696,7 @@
 			"folders": [ "Armor", "Cerulean Scout" ],
 			"weight": 4,
 			"stackSize": 1,
-			"durability": 65,
+			"durability": 100,
 			"crafting": {
 				"xp": 1.16,
 				"time": 5,
@@ -1696,6 +1718,511 @@
 					{ "qty": 25, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 12.5, "type": "PrimalItemResource_Silicon_C" },
 					{ "qty": 12.5, "type": "PrimalItemResource_AnglerGel_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonleather Boots",
+			"description": "Provides moderate physical protection, but can get a little warm.\n\nA leather armor studded with metal, made from dragon's skin. Surprisingly durable.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/PrimalItemArmor_DragonleatherBoots.PrimalItemArmor_DragonleatherBoots_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseBoots.PrimalItemArmor_BaseBoots_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC.HUD_Manticore_Boots_Colorized_MIC",
+			"type": "Equipment/Boots",
+			"folders": [ "Armor", "Chitin" ],
+			"weight": 3,
+			"stackSize": 1,
+			"durability": 150,
+			"crafting": {
+				"xp": 1.58,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 12, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 6, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 6, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 1.58,
+				"time": 5,
+				"recipe": [
+					{ "qty": 6, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 3, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonleather Gauntlets",
+			"description": "Provides moderate physical protection, but can get a little warm.\n\nA leather armor studded with metal, made from dragon's skin. Surprisingly durable.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/PrimalItemArmor_DragonleatherGloves.PrimalItemArmor_DragonleatherGloves_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseGloves.PrimalItemArmor_BaseGloves_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC_2.HUD_Manticore_Boots_Colorized_MIC_2",
+			"type": "Equipment/Gloves",
+			"folders": [ "Armor", "Chitin" ],
+			"weight": 3,
+			"stackSize": 1,
+			"durability": 150,
+			"crafting": {
+				"xp": 1.29,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 15, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 5, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 1.29,
+				"time": 5,
+				"recipe": [
+					{ "qty": 7.5, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 2.5, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 2.5, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonleather Helmet",
+			"description": "Provides moderate physical protection, but can get a little warm.\n\nA leather armor studded with metal, made from dragon's skin. Surprisingly durable.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/PrimalItemArmor_DragonleatherHelmet.PrimalItemArmor_DragonleatherHelmet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseHelmet.PrimalItemArmor_BaseHelmet_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC_3.HUD_Manticore_Boots_Colorized_MIC_3",
+			"type": "Equipment/Hat",
+			"folders": [ "Armor", "Chitin" ],
+			"weight": 4,
+			"stackSize": 1,
+			"durability": 150,
+			"crafting": {
+				"xp": 1.91,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 15, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 7, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 6, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 1.91,
+				"time": 5,
+				"recipe": [
+					{ "qty": 7.5, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 3.5, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonleather Leggings",
+			"description": "Provides moderate physical protection, but can get a little warm.\n\nA leather armor studded with metal, made from dragon's skin. Surprisingly durable.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/PrimalItemArmor_DragonleatherPants.PrimalItemArmor_DragonleatherPants_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BasePants.PrimalItemArmor_BasePants_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC_22.HUD_Manticore_Boots_Colorized_MIC_22",
+			"type": "Equipment/Pants",
+			"folders": [ "Armor", "Chitin" ],
+			"weight": 6,
+			"stackSize": 1,
+			"durability": 150,
+			"crafting": {
+				"xp": 3.2,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 40, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 12, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 3.2,
+				"time": 5,
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 6, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonleather Chestpiece",
+			"description": "Provides moderate physical protection, but can get a little warm.\n\nA leather armor studded with metal, made from dragon's skin. Surprisingly durable.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/PrimalItemArmor_DragonleatherShirt.PrimalItemArmor_DragonleatherShirt_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseShirt.PrimalItemArmor_BaseShirt_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC_4.HUD_Manticore_Boots_Colorized_MIC_4",
+			"type": "Equipment/Shirt",
+			"folders": [ "Armor", "Chitin" ],
+			"weight": 6,
+			"stackSize": 1,
+			"durability": 150,
+			"crafting": {
+				"xp": 2.58,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 2.58,
+				"time": 5,
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 5, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonclan Greaves",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nArmor worn by knights and warriors who live among distant dragonfolk. A dragon's pride surges within, offering a unique benefit when worn as a full set. Considerable strength is required to wear it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/PrimalItemArmor_PyrDragonclanBoots.PrimalItemArmor_PyrDragonclanBoots_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseBoots.PrimalItemArmor_BaseBoots_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/Icon/HUD_Manticore_Boots_Colorized_MIC.HUD_Manticore_Boots_Colorized_MIC",
+			"type": "Equipment/Boots",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 5,
+			"stackSize": 1,
+			"durability": 175,
+			"crafting": {
+				"xp": 3.58,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 16, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 12, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 8, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 8, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"repair": {
+				"xp": 3.58,
+				"time": 5,
+				"recipe": [
+					{ "qty": 8, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 6, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 4, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 4, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonclan Gauntlets",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nArmor worn by knights and warriors who live among distant dragonfolk. A dragon's pride surges within, offering a unique benefit when worn as a full set. Considerable strength is required to wear it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/PrimalItemArmor_PyrDragonclanGloves.PrimalItemArmor_PyrDragonclanGloves_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseGloves.PrimalItemArmor_BaseGloves_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/Icon/HUD_Manticore_Boots_Colorized_MIC_3.HUD_Manticore_Boots_Colorized_MIC_3",
+			"type": "Equipment/Gloves",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 4,
+			"stackSize": 1,
+			"durability": 175,
+			"crafting": {
+				"xp": 2.69,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 12, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 5, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"repair": {
+				"xp": 2.69,
+				"time": 5,
+				"recipe": [
+					{ "qty": 6, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 2.5, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 2.5, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonclan Helmet",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nArmor worn by knights and warriors who live among distant dragonfolk. A dragon's pride surges within, offering a unique benefit when worn as a full set. Considerable strength is required to wear it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/PrimalItemArmor_PyrDragonclanHelmet.PrimalItemArmor_PyrDragonclanHelmet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseHelmet.PrimalItemArmor_BaseHelmet_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/Icon/HUD_Manticore_Boots_Colorized_MIC_42.HUD_Manticore_Boots_Colorized_MIC_42",
+			"type": "Equipment/Hat",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 5,
+			"stackSize": 1,
+			"durability": 175,
+			"crafting": {
+				"xp": 4.41,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 14, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 6, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 6, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"repair": {
+				"xp": 4.41,
+				"time": 5,
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 7, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 3, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonclan Leggings",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nArmor worn by knights and warriors who live among distant dragonfolk. A dragon's pride surges within, offering a unique benefit when worn as a full set. Considerable strength is required to wear it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/PrimalItemArmor_PyrDragonclanPants.PrimalItemArmor_PyrDragonclanPants_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BasePants.PrimalItemArmor_BasePants_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/Icon/HUD_Manticore_Boots_Colorized_MIC_4.HUD_Manticore_Boots_Colorized_MIC_4",
+			"type": "Equipment/Pants",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 12,
+			"stackSize": 1,
+			"durability": 175,
+			"crafting": {
+				"xp": 7.1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 32, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 14, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 10, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"repair": {
+				"xp": 7.1,
+				"time": 5,
+				"recipe": [
+					{ "qty": 16, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 7, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 5, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Dragonclan Chestpiece",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nArmor worn by knights and warriors who live among distant dragonfolk. A dragon's pride surges within, offering a unique benefit when worn as a full set. Considerable strength is required to wear it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/PrimalItemArmor_PyrDragonclanShirt.PrimalItemArmor_PyrDragonclanShirt_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseShirt.PrimalItemArmor_BaseShirt_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/Dragonclan/Icon/HUD_Manticore_Boots_Colorized_MIC_2.HUD_Manticore_Boots_Colorized_MIC_2",
+			"type": "Equipment/Shirt",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 15,
+			"stackSize": 1,
+			"durability": 175,
+			"crafting": {
+				"xp": 5.78,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 26, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 8, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 8, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"repair": {
+				"xp": 5.78,
+				"time": 5,
+				"recipe": [
+					{ "qty": 13, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Hide_Dragonleather_C" },
+					{ "qty": 4, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 4, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Heavy Metal Boots",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nThough it doesnt exactly hinder movement, this armor was clearly made with a Pyrian's strength in mind. It's hard for an earthling to move around in, and it weighs a lot!\n\nHowever, it is drastically superior to Riot and Flak in protection value, and has double the durability...at the cost of at least double the weight!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/PrimalItemArmor_PyrHeavyMetalBoots.PrimalItemArmor_PyrHeavyMetalBoots_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseBoots.PrimalItemArmor_BaseBoots_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/Icon/HUD_Manticore_Boots_Colorized_MIC.HUD_Manticore_Boots_Colorized_MIC",
+			"type": "Equipment/Boots",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 8,
+			"stackSize": 1,
+			"durability": 240,
+			"crafting": {
+				"xp": 3.58,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 16, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 12, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 8, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 3.58,
+				"time": 5,
+				"recipe": [
+					{ "qty": 8, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 6, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 4, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Heavy Metal Gauntlets",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nThough it doesnt exactly hinder movement, this armor was clearly made with a Pyrian's strength in mind. It's hard for an earthling to move around in, and it weighs a lot!\n\nHowever, it is drastically superior to Riot and Flak in protection value, and has double the durability...at the cost of at least double the weight!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/PrimalItemArmor_PyrHeavyMetalGloves.PrimalItemArmor_PyrHeavyMetalGloves_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseGloves.PrimalItemArmor_BaseGloves_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/Icon/HUD_Manticore_Gloves_Colorized_MIC.HUD_Manticore_Gloves_Colorized_MIC",
+			"type": "Equipment/Gloves",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 5,
+			"stackSize": 1,
+			"durability": 240,
+			"crafting": {
+				"xp": 2.69,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 12, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 2.69,
+				"time": 5,
+				"recipe": [
+					{ "qty": 6, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 2.5, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Heavy Metal Helmet",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nThough it doesnt exactly hinder movement, this armor was clearly made with a Pyrian's strength in mind. It's hard for an earthling to move around in, and it weighs a lot!\n\nHowever, it is drastically superior to Riot and Flak in protection value, and has double the durability...at the cost of at least double the weight!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/PrimalItemArmor_PyrHeavyMetalHelmet.PrimalItemArmor_PyrHeavyMetalHelmet_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseHelmet.PrimalItemArmor_BaseHelmet_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/Icon/HUD_Manticore_Helmet_Colorized_MIC.HUD_Manticore_Helmet_Colorized_MIC",
+			"type": "Equipment/Hat",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 8,
+			"stackSize": 1,
+			"durability": 240,
+			"crafting": {
+				"xp": 4.41,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 14, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 6, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 4.41,
+				"time": 5,
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 7, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 3, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Heavy Metal Leggings",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nThough it doesnt exactly hinder movement, this armor was clearly made with a Pyrian's strength in mind. It's hard for an earthling to move around in, and it weighs a lot!\n\nHowever, it is drastically superior to Riot and Flak in protection value, and has double the durability...at the cost of at least double the weight!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/PrimalItemArmor_PyrHeavyMetalPants.PrimalItemArmor_PyrHeavyMetalPants_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BasePants.PrimalItemArmor_BasePants_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/Icon/HUD_Manticore_Pants_Colorized_MIC.HUD_Manticore_Pants_Colorized_MIC",
+			"type": "Equipment/Pants",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 25,
+			"stackSize": 1,
+			"durability": 240,
+			"crafting": {
+				"xp": 7.1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 32, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 14, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 7.1,
+				"time": 5,
+				"recipe": [
+					{ "qty": 16, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 7, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
+			"name": "Heavy Metal Chestpiece",
+			"description": "Provides heavy physical protection, but makes the elements harder to endure.\n\nThough it doesnt exactly hinder movement, this armor was clearly made with a Pyrian's strength in mind. It's hard for an earthling to move around in, and it weighs a lot!\n\nHowever, it is drastically superior to Riot and Flak in protection value, and has double the durability...at the cost of at least double the weight!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/PrimalItemArmor_PyrHeavyMetalShirt.PrimalItemArmor_PyrHeavyMetalShirt_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseShirt.PrimalItemArmor_BaseShirt_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Armors/HeavyMetal/Icon/HUD_Manticore_Shirt_Colorized_MIC.HUD_Manticore_Shirt_Colorized_MIC",
+			"type": "Equipment/Shirt",
+			"folders": [ "Armor", "Metal" ],
+			"weight": 25,
+			"stackSize": 1,
+			"durability": 240,
+			"crafting": {
+				"xp": 5.78,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 26, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 8, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 5.78,
+				"time": 5,
+				"recipe": [
+					{ "qty": 13, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 4, "type": "PrimalItemResource_Fibers_C" }
 				]
 			}
 		},
@@ -3185,6 +3712,16 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [ { "qty": 1, "type": "PrimalItemResource_BlackPearl_C" } ]
 			}
+		},
+		{
+			"name": "Dragonleather",
+			"description": "A thick piece of of dragon's hide. While an ARK Survivor will simply use this in substitute for normal leather, a Pyrian knows its true usage.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Dragonleather/PrimalItemResource_Hide_Dragonleather.PrimalItemResource_Hide_Dragonleather_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Hide.PrimalItemResource_Hide_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_ItemResource_Hide_Lv2_Wyvern.Icon_ItemResource_Hide_Lv2_Wyvern",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 1000
 		},
 		{
 			"name": "Mithril Ingot",
@@ -5795,20 +6332,15 @@
 		},
 		{
 			"name": "Everlast Drallion Gem",
-			"description": "The Drallion Gem of an Everlast Drallion. It burns angrily with a strange power. While special, you can also use this in place of a standard drallion gem.\n\n\"A dragon's hate and wrath are undying. Do you feel my hate for the undragon?\n\nOnce, I had it, until I met the Aramy Queen. What grants thee spite? \n\nAre you remembering, now? Are you becoming more attuned to my gifts? Is that why, now, in undeath, you persist past such normal mortal bounds?\n\nThou art remembering and progressing similar to thy dragon and undragon kin, but are becoming attuned to the dark and light. Walk the path carefully, my kin...\"",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/PrimalItemResource_DrallGemRed.PrimalItemResource_DrallGemRed_C",
-			"parent": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/PrimalItemResource_DrallionGem.PrimalItemResource_DrallionGem_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/EverlastDrallionGem.EverlastDrallionGem",
-			"type": "Resource",
-			"weight": 0.2,
-			"stackSize": 3000
+			"parent": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/PrimalItemResource_DrallionGem.PrimalItemResource_DrallionGem_C"
 		},
 		{
 			"name": "Drallion Gem",
 			"description": "A gem formed inside the body of a Drallion, formed from various impurities. It holds a strange power within. Highly sought after in magic.\n\n\"And so does my lineage progress down to even thee, my most distant of kin. Thou art not just an animal, but by my bloodline, royal in lineage. Thou cans't simply, by thy will, command nature and the elements, no different than the undragon. One does not need, as thy Great Kin prove, a body like the undragon to gain free will, and power.\n\nSo go forth unto the world my children, and evolve. Take our primal breath- the fire- as your tool, and learn. One day, perhaps ascending to a throne of your own amongst your Great Kin. Let my divine voice howl within your own, and show the world belongs to dragon as much as man.\"",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Drallion/Dead/PrimalItemResource_DrallionGem.PrimalItemResource_DrallionGem_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DrallionGem.DrallionGem",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewDrallGem.NewDrallGem",
 			"type": "Resource",
 			"weight": 0.2,
 			"stackSize": 3000
@@ -6463,222 +6995,6 @@
 			}
 		},
 		{
-			"name": "Chibi-Archaeopteryx",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Archaeopteryx.PrimalItemSkin_ChibiDino_Archaeopteryx_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "Chibi-Gallimimus",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Gallimimus.PrimalItemSkin_ChibiDino_Gallimimus_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "Chibi-Kairuku",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Kairuku.PrimalItemSkin_ChibiDino_Kairuku_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_Uncommon.ChibiIconMaterial_Inst_Uncommon",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "Chibi-Lovebird",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_LoveBird.PrimalItemSkin_ChibiDino_LoveBird_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst_VeryRare.ChibiIconMaterial_Inst_VeryRare",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "Chibi-Pelagornis",
-			"description": "Earn XP from Alpha creature kills when equipped, to increase its level and earn additional max-levels for your Survivor!",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Pelagornis.PrimalItemSkin_ChibiDino_Pelagornis_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/PrimalItemSkin_ChibiDino_Base.PrimalItemSkin_ChibiDino_Base_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/ChibiDinos/ChibiIconMaterial_Inst.ChibiIconMaterial_Inst",
-			"type": "Equipment/Shield",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1
-		},
-		{
-			"name": "BearHug Swim Bottom Skin",
-			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women.\n\nGuess that grumpy bruin was hoping for some honey.",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimPants_BearHug.PrimalItemSkin_Vday_SwimPants_BearHug_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
-			"icon": "/Game/Mods/Pyria/PrimalEarth/Human/Male/Outfits/Underwear_July4th/Icons/HUD_VDay22_Bottoms_BearHug_Icon_Colorized_MIC.HUD_VDay22_Bottoms_BearHug_Icon_Colorized_MIC",
-			"type": "Skin",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 3.2,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
-				]
-			}
-		},
-		{
-			"name": "Odd Couple Swim Bottom Skin",
-			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women.\n\nThey say true love sees but doesn't mind. Good for them!",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimPants_OddCouple.PrimalItemSkin_Vday_SwimPants_OddCouple_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
-			"icon": "/Game/Mods/Pyria/PrimalEarth/Human/Male/Outfits/Underwear_July4th/Icons/HUD_VDay22_Bottoms_OddCouple_Icon_Colorized_MIC.HUD_VDay22_Bottoms_OddCouple_Icon_Colorized_MIC",
-			"type": "Skin",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 3.2,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
-				]
-			}
-		},
-		{
-			"name": "Sauropod Heart Swim Bottom Skin",
-			"description": "You can use this to skin the appearance of pants into swim trunks on men or a bikini bottom on women.\n\nWhen they form that heart shape, you just feel the love.",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimPants_SauropodHeart.PrimalItemSkin_Vday_SwimPants_SauropodHeart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimPants.PrimalItemSkin_SummerSwimPants_C",
-			"icon": "/Game/Mods/Pyria/PrimalEarth/Human/Male/Outfits/Underwear_July4th/Icons/HUD_VDay22_Bottoms_SauropodHearts_Icon_Colorized_MIC.HUD_VDay22_Bottoms_SauropodHearts_Icon_Colorized_MIC",
-			"type": "Skin",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 3.2,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
-				]
-			}
-		},
-		{
-			"name": "BearHug Swim Top Skin",
-			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women.\n\nLove might bear all things, but all bears don't love everything.",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimShirt_Bearhug.PrimalItemSkin_Vday_SwimShirt_Bearhug_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
-			"icon": "/Game/Mods/Pyria/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_VDay22_Bra_BearHug_Icon_Colorized_MIC.HUD_VDay22_Bra_BearHug_Icon_Colorized_MIC",
-			"type": "Skin",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 5,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
-				]
-			}
-		},
-		{
-			"name": "Odd Couple Swim Top Skin",
-			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women.\n\nWho are we to deny their love? The heart wants what it wants.",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimShirt_OddCouple.PrimalItemSkin_Vday_SwimShirt_OddCouple_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
-			"icon": "/Game/Mods/Pyria/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_VDay22_Bra_OddCouple_Icon_Colorized_MIC.HUD_VDay22_Bra_OddCouple_Icon_Colorized_MIC",
-			"type": "Skin",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 5,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
-				]
-			}
-		},
-		{
-			"name": "Sauropod Heart Swim Top Skin",
-			"description": "You can use this to skin the appearance of a shirt into a bare chest on men or a bikini top on women.\n\nDon't you love it when they curve like that?",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_Vday_SwimShirt_SauropodHeart.PrimalItemSkin_Vday_SwimShirt_SauropodHeart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SummerSwimShirt_Base.PrimalItemSkin_SummerSwimShirt_Base_C",
-			"icon": "/Game/Mods/Pyria/PrimalEarth/Human/Female/Outfits/Underwear_July4th/Icon/Bra/HUD_VDay22_Bra_SauropodHearts_Icon_Colorized_MIC.HUD_VDay22_Bra_SauropodHearts_Icon_Colorized_MIC",
-			"type": "Skin",
-			"folders": [ "Holiday" ],
-			"weight": 0,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 5,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
-				]
-			}
-		},
-		{
-			"name": "\"Self Hug\" Emote",
-			"description": "Consume this to permanently unlock the \"Self Hug\" emote.\n\nRemember, your survival depends on loving yourself.",
-			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_UnlockEmote_SelfHug.PrimalItemConsumable_UnlockEmote_SelfHug_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
-			"icon": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Emotes/HUD_VDay22_Emote_SelfHug_Icon.HUD_VDay22_Emote_SelfHug_Icon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Holiday" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesChocolate_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_ValentinesDinoCandy_C" }
-				]
-			},
-			"statEffects": [
-				{
-					"stat": "health",
-					"value": 1,
-					"duration": 0.5
-				}
-			]
-		},
-		{
 			"name": "Dinosaur Feces",
 			"description": "Everyone poops.\nCan provide nitrogen to help crops grow in their plots.  Would be more efficient fertilizer if combined with thatch in a bin.",
 			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_DinoPoop.PrimalItemConsumable_DinoPoop_C",
@@ -6704,6 +7020,94 @@
 				"weight": 0.01,
 				"water": 0.1
 			}
+		},
+		{
+			"name": "Box o' Chocolates",
+			"description": "<RichColor Color=\"1, 0.5, 0.8, 1\">This chocolate's delicious, despite its origins. The Island's creatures LOVE it, as it fully heals them or advances their taming!</>",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/PrimalItemConsumable_ValentinesChocolate.PrimalItemConsumable_ValentinesChocolate_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/VDay_icon.VDay_icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 2.14,
+			"stackSize": 1,
+			"spoilsIn": 21600,
+			"statEffects": [
+				{
+					"stat": "health", "value": 100, "useItemQuality": true,
+					"pctOf": "max",
+					"pctAbsRange": { "min": 0, "max": 0 }
+				}
+			]
+		},
+		{
+			"name": "Valentines Dino Candy",
+			"description": "Has a curious effect when consumed by a dinosaur.",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/PrimalItemConsumable_ValentinesDinoCandy.PrimalItemConsumable_ValentinesDinoCandy_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/PrimalEarth/Structures/Christmas/Icons/HUD_ValentinesCandy_Colorize.HUD_ValentinesCandy_Colorize",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1
+		},
+		{
+			"name": "Bunny Egg",
+			"description": "Put it in a Cooking Pot to craft fun costumes or place on the ground as a festive decoration!",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_EasterEgg.PrimalItemStructure_EasterEgg_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/EasterEgg_Icon.EasterEgg_Icon",
+			"type": "Resource",
+			"weight": 4,
+			"stackSize": 100,
+			"spoilsIn": 1209600,
+			"structure": "/Game/Mods/Pyria/PrimalEarth/Structures/Halloween/Sign_EasterEgg.Sign_EasterEgg_C"
+		},
+		{
+			"name": "Stolen Headstone",
+			"description": "A headstone stolen from a graveyard.",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_HW_Grave.PrimalItemStructure_HW_Grave_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
+			"icon": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Structures/Icons/GraveStone2_Icon.GraveStone2_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Furniture", "Stone" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"structure": "/Game/Mods/Pyria/PrimalEarth/Structures/Halloween/StructureBP_Gravestone_HW.StructureBP_Gravestone_HW_C"
+		},
+		{
+			"name": "Pumpkin",
+			"description": "Decorate your base with this pumpkin. Can be \"carved\" with all manner of paints.",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_Pumpkin.PrimalItemStructure_Pumpkin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Pumpkin_Icon.Pumpkin_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Halloween" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"structure": "/Game/Mods/Pyria/PrimalEarth/Structures/Halloween/Sign_Pumpkin.Sign_Pumpkin_C"
+		},
+		{
+			"name": "Scarecrow",
+			"description": "Decorate your base with this scarecrow.  Guaranteed to scare the crows away.",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_Scarecrow.PrimalItemStructure_Scarecrow_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Scarecrow_Icon.Scarecrow_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Halloween" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"structure": "/Game/Mods/Pyria/PrimalEarth/Structures/Halloween/Structure_Scarecrow.Structure_Scarecrow_C"
+		},
+		{
+			"name": "Dinosaur Bone",
+			"description": "A very ancient looking bone, must be usefull for something!",
+			"bp": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ARKBone.PrimalItemResource_ARKBone_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/PrimalEarth/CoreBlueprints/Resources/Icons/ARKBone_Icon.ARKBone_Icon",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 200,
+			"spoilsIn": 2678400
 		},
 		{
 			"name": "Base Club",
