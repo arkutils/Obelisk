@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "350.5.1665173924",
+	"version": "350.5.1665424239",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -4642,7 +4642,7 @@
 					{ "name": "Slam", "interval": 10, "dmg": 105, "radius": 550, "stamina": 75 },
 					{ "name": "CatchTheseHANDS!!", "interval": 10, "dmg": 75, "radius": 550, "stamina": 125 },
 					{
-						"name": "Nails", "interval": 2, "dmg": 0, "radius": 0, "stamina": 75,
+						"name": "Nails", "interval": 2.5, "dmg": 0, "radius": 0, "stamina": 75,
 						"isProjectile": true
 					},
 					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
@@ -4654,7 +4654,66 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Bone Golem",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/BoneGolem/PyrBoneGolem_Character_bp_Wild.PyrBoneGolem_Character_bp_Wild_C",
+			"dinoNameTag": "RockElemental",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 360,
+			"dragWeight": 625,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1400 },
+				"swim": { "base": 626 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1400 },
+				"swim": { "base": 626 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Pawnches", "interval": 0.4, "dmg": 72, "radius": 550, "stamina": 0 },
+					{ "name": "Slam", "interval": 10, "dmg": 105, "radius": 550, "stamina": 75 },
+					{ "name": "CatchTheseHANDS!!", "interval": 10, "dmg": 80, "radius": 550, "stamina": 125 },
+					{
+						"name": "Nails", "interval": 2.5, "dmg": 0, "radius": 0, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BoneTeleport", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
 					}
 				],
 				"baseXP": 30

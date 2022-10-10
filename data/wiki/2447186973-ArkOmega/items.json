@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "350.5.1665284804",
+	"version": "350.5.1665408446",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -6935,6 +6935,26 @@
 			}
 		},
 		{
+			"name": "Blue Star",
+			"description": "Equip this star into the trophy slot of a Red Dwarf to convert it to a Blue Star, which will increase the greenhouse effect to 600% and can be powered with Element to provide power to nearby structures.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_BlueStar.PrimalItem_BlueStar_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/GunImpacts/Textures/flares/flarestar.flarestar",
+			"type": "Equipment/Trophy",
+			"flags": [ "preventCheatGive" ],
+			"folders": [ "Structure Upgrades" ],
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 2,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 20, "type": "PrimalItem_SoulShard_C" } ]
+			}
+		},
+		{
 			"name": "Tameable Boss Token",
 			"description": "A token used to summon a tameable boss from the beacon. Place this in the trophy slot, and your next summon is guaranteed to be a tameable boss.\n\nNOTE: This Token summons a random tameable boss, using the normal spawn weights to choose a variant.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_BossToken.PrimalItem_BossToken_C",
@@ -8269,11 +8289,11 @@
 			"structure": "/Game/Mods/ArkOmega/Structures/QuantumCompactor/QuantumCompactor.QuantumCompactor_C"
 		},
 		{
-			"name": "Bullshit structure",
-			"description": "",
+			"name": "Red Dwarf",
+			"description": "A small red star that can be placed to provide 300% greenhouse effect to nearby crop plots.\n\nCan be upgraded with the Blue Star module crafted in the Soul Grinder to increase it to 600% greenhouse effect, and it will also act as a wireless generator.",
 			"bp": "/Game/Mods/ArkOmega/Structures/RedDwarf/PrimalItemStructure_RedDwarf.PrimalItemStructure_RedDwarf_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/ArkOmega/Structures/OmegaAltar/hexen_altar_icon.hexen_altar_icon",
+			"icon": "/Game/Mods/ArkOmega/PrimalEarth/UI/Textures/Star_Icon.Star_Icon",
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 4,
@@ -8285,11 +8305,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 500, "type": "PrimalItem_Souls_C" },
-					{ "qty": 100, "type": "PrimalItem_GodEssence_C" },
-					{ "qty": 2500, "type": "PrimalItemResource_Stone_C" },
-					{ "qty": 100, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 500, "type": "PrimalItemResource_ChitinPaste_C" }
+					{ "qty": 10, "type": "PrimalItem_CosmicSoul_C" },
+					{ "qty": 50, "type": "PrimalItem_AlphaEssence_C" },
+					{ "qty": 100, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" }
 				]
 			},
 			"structure": "/Game/Mods/ArkOmega/Structures/RedDwarf/RedDwarf_Omega.RedDwarf_Omega_C"

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "350.5.1665173924",
+	"version": "350.5.1665424239",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -806,7 +806,7 @@
 				"recipe": [
 					{ "qty": 30, "type": "PrimalItemResource_ManaLight_C" },
 					{ "qty": 250, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 25, "type": "PrimalItemResource_BlackPearlDust_C" },
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Magicrystal_C" }
 				]
 			}
@@ -2588,6 +2588,33 @@
 			}
 		},
 		{
+			"name": "Create Bone Golem",
+			"description": "Use this to conjure and tame a Bone Golem, a powerful undead class creature. It has a unique teleportation ability that could come in handy...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaBoneGolem.PrimalItemConsumable_CreaBoneGolem_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SummonSentinel.SummonSentinel",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Summons", "Necromancy" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 200,
+				"time": 40,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1500, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 1250, "type": "PrimalItemResource_ManaDark_C" },
+					{ "qty": 600, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 5, "type": "PrimalItemResource_PyrLargeSkull_C" },
+					{ "qty": 100, "type": "PrimalItemResource_PyrSmolSkull_C" },
+					{ "qty": 300, "type": "PrimalItemResource_PyrMidBone_C" },
+					{ "qty": 50, "type": "PrimalItemResource_PyrBigBone_C" }
+				]
+			}
+		},
+		{
 			"name": "Create Dark Mana Reaper Drone",
 			"description": "Use an extensive dark magic spell to conjure up a loyal, permanent Dark Mana Reaper Drone. Takes a lot to craft, since you 're trying to make it permanent, and arent a dark paladin or etc....but, that doesn't mean you can't use it for good either! Kill one in the wild to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/PrimalItemConsumable_CreaDarkReap.PrimalItemConsumable_CreaDarkReap_C",
@@ -3266,6 +3293,144 @@
 			"type": "Resource",
 			"weight": 0.2,
 			"stackSize": 3000
+		},
+		{
+			"name": "Large Aged Bone",
+			"description": "A large bone, worn and hardened by time. Don't waste it for keratin- it has many prime uses. Especially to a necromancer...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/CreatureDrops/PrimalItemResource_PyrBigBone.PrimalItemResource_PyrBigBone_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/LargeBone.LargeBone",
+			"type": "Resource",
+			"folders": [ "Aged Bones" ],
+			"weight": 2.5,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 120,
+				"levelReq": 0,
+				"productCount": 3,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_Sauro_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Oil_C" }
+				]
+			}
+		},
+		{
+			"name": "Large Aged Skull",
+			"description": "A large Skull, worn and hardened by time. Don't waste it for keratin- it has many prime uses. Especially to a necromancer...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/CreatureDrops/PrimalItemResource_PyrLargeSkull.PrimalItemResource_PyrLargeSkull_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/LargeSkull.LargeSkull",
+			"type": "Resource",
+			"folders": [ "Aged Bones" ],
+			"weight": 5,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 60,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_ApexDrop_AlphaRex_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Oil_C" }
+				]
+			}
+		},
+		{
+			"name": "Medium Aged Bone",
+			"description": "A sizeable bone, worn and hardened by time. Don't waste it for keratin- it has many prime uses. Especially to a necromancer...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/CreatureDrops/PrimalItemResource_PyrMidBone.PrimalItemResource_PyrMidBone_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/MediumBone.MediumBone",
+			"type": "Resource",
+			"folders": [ "Aged Bones" ],
+			"weight": 0.5,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 60,
+				"levelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Oil_C" }
+				]
+			}
+		},
+		{
+			"name": "Medium Aged Skull",
+			"description": "A sizeable Skull, worn and hardened by time. Don't waste it for keratin- it has many prime uses. Especially to a necromancer...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/CreatureDrops/PrimalItemResource_PyrMidSkull.PrimalItemResource_PyrMidSkull_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/MediumSkull.MediumSkull",
+			"type": "Resource",
+			"folders": [ "Aged Bones" ],
+			"weight": 0.5,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 60,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Oil_C" }
+				]
+			}
+		},
+		{
+			"name": "Small Aged Bone",
+			"description": "A small bone, worn and hardened by time. Don't waste it for keratin- it has many prime uses. Especially to a necromancer...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/CreatureDrops/PrimalItemResource_PyrSmolBone.PrimalItemResource_PyrSmolBone_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/MediumBone.MediumBone",
+			"type": "Resource",
+			"folders": [ "Aged Bones" ],
+			"weight": 0.05,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 3,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 3, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Oil_C" }
+				]
+			}
+		},
+		{
+			"name": "Small Aged Skull",
+			"description": "A small skull, worn and hardened by time. Don't waste it for keratin- it has many prime uses. Especially to a necromancer...",
+			"bp": "/Game/Mods/Pyria/Alchemy/Mana/CreatureDrops/PrimalItemResource_PyrSmolSkull.PrimalItemResource_PyrSmolSkull_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/MediumBone.MediumBone",
+			"type": "Resource",
+			"folders": [ "Aged Bones" ],
+			"weight": 0.05,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Oil_C" }
+				]
+			}
 		},
 		{
 			"name": "Soul",
@@ -4290,7 +4455,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/ApexDrop_Sauro_Icon.ApexDrop_Sauro_Icon",
 			"type": "Structure",
-			"folders": [ "Decor", "Inuit" ],
+			"folders": [ "Structures", "Necromancy" ],
 			"weight": 100,
 			"stackSize": 100,
 			"crafting": {
@@ -4300,8 +4465,11 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1000, "type": "PrimalItemResource_Keratin_C" },
-					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_Sauro_C" }
+					{ "qty": 1500, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 25, "type": "PrimalItemResource_PyrBigBone_C" },
+					{ "qty": 500, "type": "PrimalItemResource_PyrMidBone_C" },
+					{ "qty": 750, "type": "PrimalItemResource_PyrSmolBone_C" },
+					{ "qty": 5, "type": "PrimalItemResource_ApexDrop_Sauro_C" }
 				]
 			},
 			"structure": "/Game/Mods/Pyria/Alchemy/Structures/Necromancy/BonePile/Structure_PyrBonePile.Structure_PyrBonePile_C"
@@ -5578,7 +5746,7 @@
 				"xp": 1.2,
 				"time": 1,
 				"levelReq": 0,
-				"productCount": 100,
+				"productCount": 150,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_SweetVeggieCake_C" } ]
 			}
