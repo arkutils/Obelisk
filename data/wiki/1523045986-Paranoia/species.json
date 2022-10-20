@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "349.27.1664841143",
+	"version": "351.5.1666238000",
 	"format": "4",
 	"mod": {
 		"id": "1523045986",
@@ -8,6 +8,46 @@
 		"title": "Additional Creatures 2: Paranoia!"
 	},
 	"species": [
+		{
+			"name": "Wendigo",
+			"bp": "/Game/Mods/Paranoia/Bosses/Wendigo/Wendigo_Character_BP.Wendigo_Character_BP_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 2500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2500 }
+			},
+			"staminaRates": { "sprint": -15 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "-FORTRAILER-", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 },
+					{ "name": "-FORTRAILER-", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 },
+					{ "name": "-FORTRAILER-", "interval": 0.4, "dmg": 180, "radius": 600, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 885 }
+		},
 		{
 			"name": "Akhlut",
 			"bp": "/Game/Mods/Paranoia/Cryptids/Ahklut/Akhlut_Character_BP.Akhlut_Character_BP_C",
@@ -564,7 +604,7 @@
 		{
 			"name": "Emela-Ntouka",
 			"bp": "/Game/Mods/Paranoia/Cryptids/EMELA/Emela_Character_BP.Emela_Character_BP_C",
-			"dinoNameTag": "Trike",
+			"dinoNameTag": "Emela",
 			"customTag": "Emela",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 330,
@@ -621,7 +661,7 @@
 		{
 			"name": "Alpha Emela-Ntouka",
 			"bp": "/Game/Mods/Paranoia/Cryptids/EMELA/Emela_Character_BP_Alpha.Emela_Character_BP_Alpha_C",
-			"dinoNameTag": "Trike",
+			"dinoNameTag": "Emela",
 			"customTag": "Emela",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 330,
@@ -676,7 +716,7 @@
 		{
 			"name": "Nigerien Firespitter",
 			"bp": "/Game/Mods/Paranoia/Cryptids/Firespitter/FireSpitter_character_BP.FireSpitter_character_BP_C",
-			"dinoNameTag": "RockDrake",
+			"dinoNameTag": "Firespitter",
 			"customTag": "Firespitter",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 400,
@@ -729,7 +769,7 @@
 		{
 			"name": "Alpha Nigerien Firespitter",
 			"bp": "/Game/Mods/Paranoia/Cryptids/Firespitter/FireSpitter_character_BP_Alpha.FireSpitter_character_BP_Alpha_C",
-			"dinoNameTag": "RockDrake",
+			"dinoNameTag": "Firespitter",
 			"customTag": "Firespitter",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 400,
@@ -780,7 +820,7 @@
 		{
 			"name": "Alpha Nigerien Firespitter",
 			"bp": "/Game/Mods/Paranoia/Cryptids/Firespitter/FireSpitter_character_BP_Alpha_Arcane.FireSpitter_character_BP_Alpha_Arcane_C",
-			"dinoNameTag": "RockDrake",
+			"dinoNameTag": "Firespitter",
 			"customTag": "Firespitter",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 400,
@@ -831,7 +871,7 @@
 		{
 			"name": "Arcane Nigerien Firespitter",
 			"bp": "/Game/Mods/Paranoia/Cryptids/Firespitter/FireSpitter_character_BP_Arcane.FireSpitter_character_BP_Arcane_C",
-			"dinoNameTag": "RockDrake",
+			"dinoNameTag": "Firespitter",
 			"customTag": "Firespitter",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 400,
@@ -935,7 +975,7 @@
 		{
 			"name": "Snallygaster",
 			"bp": "/Game/Mods/Paranoia/Cryptids/Snally/Snallygaster_character_bp.Snallygaster_character_bp_C",
-			"dinoNameTag": "Archae",
+			"dinoNameTag": "Snallygaster",
 			"customTag": "Snallygaster",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,
@@ -1006,7 +1046,7 @@
 		{
 			"name": "Snallygaster",
 			"bp": "/Game/Mods/Paranoia/Cryptids/Snally/Snallygaster_character_bp_Alpha.Snallygaster_character_bp_Alpha_C",
-			"dinoNameTag": "Archae",
+			"dinoNameTag": "Snallygaster",
 			"customTag": "Snallygaster",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,
@@ -1075,7 +1115,7 @@
 		{
 			"name": "Grimoire Snallygaster",
 			"bp": "/Game/Mods/Paranoia/Cryptids/Snally/Snallygaster_character_bp_Grimoire.Snallygaster_character_bp_Grimoire_C",
-			"dinoNameTag": "Archae",
+			"dinoNameTag": "Snallygaster",
 			"customTag": "Snallygaster",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,

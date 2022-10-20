@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "345.37.1653902498",
+	"version": "351.5.1666238417",
 	"format": "4",
 	"mod": {
 		"id": "1734595558",
@@ -8,487 +8,6 @@
 		"title": "Pyria: The Second Chapter"
 	},
 	"species": [
-		{
-			"name": "Kunoichi",
-			"bp": "/Game/Mods/Pyria2/Creatures/Mamono/Kunoichi/Kunoichi_Character_BP.Kunoichi_Character_BP_C",
-			"dinoNameTag": "",
-			"customTag": "Offhand",
-			"targetingTeamName": "",
-			"mass": 100,
-			"dragWeight": 35,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"isTameable"
-			],
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 2400 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 2400 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 90,
-				"attacks": [
-					{ "name": "Jutsu Jabs", "interval": 0.01, "dmg": 22, "radius": 240, "stamina": 0 },
-					{ "name": "Jutsu Dropkick", "interval": 11, "dmg": 30, "radius": 240, "stamina": 0 },
-					{ "name": "Jutsu Combo", "interval": 0.04, "dmg": 25, "radius": 240, "stamina": 0 },
-					{
-						"name": "KunaiStorm", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					},
-					{ "name": "EvadeAttacks: Jutsu", "interval": 3, "dmg": 25, "radius": 320, "stamina": 0 },
-					{ "name": "Ronin Slashes", "interval": 0.01, "dmg": 45, "radius": 240, "stamina": 0 },
-					{ "name": "Ronin MortalBlade", "interval": 9, "dmg": 47, "radius": 240, "stamina": 0 },
-					{ "name": "RogueBasicAttacks", "interval": 0.01, "dmg": 30, "radius": 320, "stamina": 0 },
-					{ "name": "RogueSpinAttack", "interval": 5, "dmg": 34, "radius": 320, "stamina": 0 },
-					{ "name": "RogueJumpAttacks", "interval": 8, "dmg": 34, "radius": 320, "stamina": 0 },
-					{ "name": "RogueAssasinate", "interval": 8, "dmg": 34, "radius": 320, "stamina": 0 },
-					{ "name": "RogueEvades", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 2 }
-		},
-		{
-			"name": "Lycan Bastion",
-			"bp": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Bastion/Bastion_Character_BP.Bastion_Character_BP_C",
-			"dinoNameTag": "Paladin",
-			"customTag": "",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 165,
-			"dragWeight": 500,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 24 },
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 800 },
-				"swim": { "base": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 800 },
-				"swim": { "base": 600 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 60, "radius": 350, "stamina": 0 },
-					{ "name": "Melee", "interval": 15, "dmg": 50, "radius": 300, "stamina": 0 },
-					{ "name": "Melee", "interval": 220, "dmg": 50, "radius": 300, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Paladin.DinoDropInventoryComponent_Pyria_Race_Paladin"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
-			"name": "Tveir Aurrean",
-			"bp": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Druden/Druden_Character_BP.Druden_Character_BP_C",
-			"dinoNameTag": "Paladin",
-			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 165,
-			"dragWeight": 120,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBossDino",
-				"isTameable"
-			],
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 1100 },
-				"swim": { "base": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 1100 },
-				"swim": { "base": 600 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "SwordSwings", "interval": 0.2, "dmg": 500, "radius": 220, "stamina": 0 },
-					{ "name": "Ranged", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "SMITE", "interval": 30, "dmg": 4850, "radius": 750, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Paladin.DinoDropInventoryComponent_Pyria_Race_Paladin"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
-			"name": "Lycan Glaiver",
-			"bp": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Glaiver/Glaiver_Character_BP.Glaiver_Character_BP_C",
-			"dinoNameTag": "Paladin",
-			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 165,
-			"dragWeight": 120,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 24 },
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 1600 },
-				"swim": { "base": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 1600 },
-				"swim": { "base": 600 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 42, "radius": 220, "stamina": 0 },
-					{ "name": "HitRider", "interval": 3, "dmg": 52, "radius": 120, "stamina": 0 },
-					{ "name": "BlockingAdvance", "interval": 15, "dmg": 42, "radius": 220, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Paladin.DinoDropInventoryComponent_Pyria_Race_Paladin"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
-			"name": "Lycan Templar",
-			"bp": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Templar/Templar_Character_BP.Templar_Character_BP_C",
-			"dinoNameTag": "Paladin",
-			"customTag": "Offhand",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 165,
-			"dragWeight": 120,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 24 },
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 800 },
-				"swim": { "base": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 800 },
-				"swim": { "base": 600 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "SingleSwing", "interval": 0.2, "dmg": 38, "radius": 220, "stamina": 0 },
-					{ "name": "ShieldStab", "interval": 3, "dmg": 45, "radius": 120, "stamina": 0 },
-					{ "name": "Spin2Win", "interval": 8, "dmg": 42, "radius": 220, "stamina": 0 },
-					{ "name": "HitterCombo", "interval": 5, "dmg": 48, "radius": 220, "stamina": 0 },
-					{ "name": "CancelCounter", "interval": 800, "dmg": 60, "radius": 220, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Paladin.DinoDropInventoryComponent_Pyria_Race_Paladin"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
-			"name": "Lycan Vanguard",
-			"bp": "/Game/Mods/Pyria2/Creatures/NearKin/ChaosFaction/Vanguard/Vanguard_Character_BP.Vanguard_Character_BP_C",
-			"dinoNameTag": "Paladin",
-			"customTag": "",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 165,
-			"dragWeight": 300,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 24 },
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 800 },
-				"swim": { "base": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 800 },
-				"swim": { "base": 600 }
-			},
-			"staminaRates": {
-				"sprint": -30,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 85, "radius": 250, "stamina": 0 },
-					{ "name": "Melee", "interval": 2, "dmg": 62, "radius": 250, "stamina": 350 },
-					{ "name": "HitRider", "interval": 15, "dmg": 160, "radius": 250, "stamina": 620 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Paladin.DinoDropInventoryComponent_Pyria_Race_Paladin"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
-			"name": "Briarwood Knight",
-			"bp": "/Game/Mods/Pyria2/Creatures/Undead/BriarKnight/BriarKnight_Character_BP.BriarKnight_Character_BP_C",
-			"dinoNameTag": "Withered",
-			"customTag": "Offhand",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore"
-			],
-			"leveling": { "mutagenCost": 24 },
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 1050 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 1050 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "MeleeBasic", "interval": 0.2, "dmg": 42, "radius": 320, "stamina": 0 },
-					{ "name": "MeleeAoE", "interval": 10, "dmg": 45, "radius": 320, "stamina": 0 },
-					{ "name": "MeleeKnockUp", "interval": 15, "dmg": 48, "radius": 320, "stamina": 0 },
-					{ "name": "RetreatingSlash", "interval": 18, "dmg": 45, "radius": 320, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
-			"name": "Wraith",
-			"bp": "/Game/Mods/Pyria2/Creatures/Undead/Wraith/Wraith_Character_BP.Wraith_Character_BP_C",
-			"dinoNameTag": "Withered",
-			"customTag": "Wiithered",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore"
-			],
-			"leveling": { "mutagenCost": 24 },
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 325, "stamina": 0 },
-					{
-						"name": "Projectile", "interval": 2, "dmg": 0, "radius": 0, "stamina": 25,
-						"isProjectile": true
-					},
-					{ "name": "Invis", "interval": 65, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "TestWarp", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{
-						"name": "AIProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
-					}
-				],
-				"baseXP": 3
-			}
-		},
 		{
 			"name": "Leslie, Echo of Monaia",
 			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Leslie_Character_BP.Leslie_Character_BP_C",
@@ -735,7 +254,7 @@
 			"name": "Leslie's Mitosis",
 			"bp": "/Game/Mods/Pyria2/Creatures/UniqueBosses/Leslie/Minions/Hydra_Character_BP_Leslie.Hydra_Character_BP_Leslie_C",
 			"dinoNameTag": "Dragon",
-			"customTag": "Wyvern",
+			"customTag": "HTPyria",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 4000,
 			"dragWeight": 800,
@@ -1152,64 +671,10 @@
 			}
 		},
 		{
-			"name": "Lesser Titan",
-			"bp": "/Game/Mods/Pyria2/Creatures/Unknown/LesserTitan/LesserTitan_Character_BP.LesserTitan_Character_BP_C",
-			"dinoNameTag": "RockElemental",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Herbivores_Large_Aggressive",
-			"mass": 50000,
-			"dragWeight": 5900,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isBossDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 1000, "sprint": 3000 }
-			},
-			"movementD": {
-				"walk": { "base": 1000, "sprint": 3000 }
-			},
-			"movementR": {
-				"walk": { "base": 1000, "sprint": 6840 }
-			},
-			"staminaRates": { "sprint": -90 },
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "ArmSlams", "interval": 0.4, "dmg": 940, "radius": 1000, "stamina": 0 },
-					{ "name": "BigArmSlam", "interval": 15, "dmg": 1800, "radius": 1000, "stamina": 0 },
-					{ "name": "BigLeap", "interval": 5, "dmg": 2500, "radius": 1000, "stamina": 0 },
-					{ "name": "FireBreath", "interval": 8, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "FireBreathRain", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": {
-				"engrams": [
-					"PrimalItemConsumable_ChosenOne_C",
-					"PrimalItemConsumable_ChosenOneCenter_C",
-					"PrimalItemConsumable_ChosenOneScorched_C",
-					"PrimalItemConsumable_ChosenOneAberration_C",
-					"PrimalItemConsumable_ChosenOneExtinction_C"
-				],
-				"baseXP": 90000
-			}
-		},
-		{
 			"name": "Arduros",
 			"bp": "/Game/Mods/Pyria2/Creatures/Wildlife/Arduros/Arduros_character_bp.Arduros_character_bp_C",
 			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
+			"customTag": "MTPyria",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 190,
 			"dragWeight": 200,
@@ -1279,7 +744,7 @@
 			"name": "Iridomex",
 			"bp": "/Game/Mods/Pyria2/Creatures/Wildlife/Iridomex/Iridomex_Character_bp.Iridomex_Character_bp_C",
 			"dinoNameTag": "Arthropleura",
-			"customTag": "Pyria",
+			"customTag": "MTPyria",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 400,
 			"dragWeight": 250,
@@ -1329,15 +794,14 @@
 			}
 		},
 		{
-			"name": "Magnaclava",
-			"bp": "/Game/Mods/Pyria2/Creatures/Wildlife/Magnaclava/Magnaclava_Character_bp.Magnaclava_Character_bp_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_High",
+			"name": "Reika",
+			"bp": "/Game/Mods/Pyria2/Creatures/Wildlife/Reika/Reika_Character_bp.Reika_Character_bp_C",
+			"dinoNameTag": "Scorpion",
+			"customTag": "HTPyria",
+			"targetingTeamName": "Carnivores_Medium",
 			"mass": 400,
-			"dragWeight": 250,
+			"dragWeight": 300,
 			"flags": [
-				"allowCarryFlyerDinos",
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
@@ -1352,11 +816,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 350, "sprint": 1225 },
+				"walk": { "base": 400, "sprint": 1200 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 350, "sprint": 1225 },
+				"walk": { "base": 400, "sprint": 1200 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -1367,13 +831,63 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Claws", "interval": 0.4, "dmg": 100, "radius": 320, "stamina": 0 },
-					{ "name": "ClawsPin", "interval": 10, "dmg": 160, "radius": 320, "stamina": 100 },
-					{ "name": "Tail", "interval": 15, "dmg": 160, "radius": 320, "stamina": 120 },
-					{ "name": "Maul", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "BreathAttack", "interval": 30, "dmg": 0, "radius": 0, "stamina": 250 },
-					{ "name": "Big Windup", "interval": 65, "dmg": 0, "radius": 0, "stamina": 300 },
-					{ "name": "Yeet", "interval": 65, "dmg": 0, "radius": 0, "stamina": 275 }
+					{ "name": "Tails", "interval": 0.4, "dmg": 62, "radius": 380, "stamina": 0 },
+					{ "name": "Spit", "interval": 7, "dmg": 0, "radius": 0, "stamina": 45 },
+					{ "name": "Pounce", "interval": 15, "dmg": 63, "radius": 250, "stamina": 45 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_MidMana.DinoDropInventoryComponent_Pyria_Creature_MidMana"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Geode Reika",
+			"bp": "/Game/Mods/Pyria2/Creatures/Wildlife/Reika/Reika_Character_bp_Geode.Reika_Character_bp_Geode_C",
+			"dinoNameTag": "Scorpion",
+			"customTag": "HTPyria",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 450,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1100 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1100 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Tails", "interval": 0.4, "dmg": 80, "radius": 380, "stamina": 0 },
+					{ "name": "Spit", "interval": 7, "dmg": 0, "radius": 0, "stamina": 45 },
+					{ "name": "Pounce", "interval": 15, "dmg": 63, "radius": 250, "stamina": 45 }
 				]
 			},
 			"death": {

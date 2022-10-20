@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "350.5.1665651714",
+	"version": "351.5.1666238314",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -1130,7 +1130,7 @@
 		},
 		{
 			"name": "Mega Dash Potion",
-			"description": "Grants any tame an incredible amount of stamina by GREATLY multiplying it's maximum stamina for 15 minutes before returning to normal. Has a hefty cooldown, and as penalty, instantly starves a tame on use. Defeat an ArchDemon to unlock this.",
+			"description": "Grants the consumer 100 stamina per second for 900 seconds. Defeat an Archdemon to unlock it.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_90sPotion.PrimalItemConsumable_90sPotion_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/MegaDashPotion.MegaDashPotion",
@@ -1148,19 +1148,11 @@
 				"recipe": [
 					{ "qty": 1000, "type": "PrimalItemResource_RareFlower_C" },
 					{ "qty": 1000, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_AirElement_C" },
+					{ "qty": 2000, "type": "PrimalItemResource_AirElement_C" },
 					{ "qty": 1000, "type": "PrimalItemConsumable_Berry_Stimberry_C" },
-					{ "qty": 500, "type": "PrimalItemResource_BlackPearlDust_C" },
-					{ "qty": 2000, "type": "PrimalItemResource_Mana_C" }
+					{ "qty": 500, "type": "PrimalItemResource_BlackPearlDust_C" }
 				]
-			},
-			"statEffects": [
-				{
-					"stat": "stamina", "value": 100000000, "useItemQuality": true,
-					"allowWhenFull": false,
-					"duration": 900
-				}
-			]
+			}
 		},
 		{
 			"name": "Coldblock Potion",
@@ -1728,7 +1720,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseBoots.PrimalItemArmor_BaseBoots_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC.HUD_Manticore_Boots_Colorized_MIC",
 			"type": "Equipment/Boots",
-			"folders": [ "Armor", "Chitin" ],
+			"folders": [ "Armor", "Dragonleather" ],
 			"weight": 3,
 			"stackSize": 1,
 			"durability": 150,
@@ -1761,7 +1753,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseGloves.PrimalItemArmor_BaseGloves_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC_2.HUD_Manticore_Boots_Colorized_MIC_2",
 			"type": "Equipment/Gloves",
-			"folders": [ "Armor", "Chitin" ],
+			"folders": [ "Armor", "Dragonleather" ],
 			"weight": 3,
 			"stackSize": 1,
 			"durability": 150,
@@ -1794,7 +1786,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseHelmet.PrimalItemArmor_BaseHelmet_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC_3.HUD_Manticore_Boots_Colorized_MIC_3",
 			"type": "Equipment/Hat",
-			"folders": [ "Armor", "Chitin" ],
+			"folders": [ "Armor", "Dragonleather" ],
 			"weight": 4,
 			"stackSize": 1,
 			"durability": 150,
@@ -1827,7 +1819,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BasePants.PrimalItemArmor_BasePants_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC_22.HUD_Manticore_Boots_Colorized_MIC_22",
 			"type": "Equipment/Pants",
-			"folders": [ "Armor", "Chitin" ],
+			"folders": [ "Armor", "Dragonleather" ],
 			"weight": 6,
 			"stackSize": 1,
 			"durability": 150,
@@ -1860,7 +1852,7 @@
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_BaseShirt.PrimalItemArmor_BaseShirt_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Armors/DragonLeather/Icon/HUD_Manticore_Boots_Colorized_MIC_4.HUD_Manticore_Boots_Colorized_MIC_4",
 			"type": "Equipment/Shirt",
-			"folders": [ "Armor", "Chitin" ],
+			"folders": [ "Armor", "Dragonleather" ],
 			"weight": 6,
 			"stackSize": 1,
 			"durability": 150,
@@ -3075,14 +3067,14 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemResource_CadaverBrain_C" },
 					{ "qty": 1, "type": "PrimalItemResource_CadaverHeart_C" },
-					{ "qty": 50, "type": "PrimalItemResource_CadaverFlesh_C" },
-					{ "qty": 30, "type": "PrimalItemResource_CadaverTissue_C" },
+					{ "qty": 15, "type": "PrimalItemResource_CadaverFlesh_C" },
+					{ "qty": 15, "type": "PrimalItemResource_CadaverTissue_C" },
 					{ "qty": 20, "type": "PrimalItemResource_ManaDark_C" },
-					{ "qty": 15, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 15, "type": "PrimalItemResource_CadaverMuscle_C" },
+					{ "qty": 1, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 5, "type": "PrimalItemResource_CadaverMuscle_C" },
 					{ "qty": 5, "type": "PrimalItemResource_Keratin_C" },
 					{ "qty": 250, "type": "PrimalItemConsumable_SpoiledMeat_C" },
-					{ "qty": 400, "type": "PrimalItemResource_Fibers_C" }
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" }
 				]
 			}
 		},
@@ -4122,14 +4114,14 @@
 			}
 		},
 		{
-			"name": "Dragonkin Kinship Rune",
-			"description": "A kinship rune specifically designed for all forms of dragonkin, and some other beasts. Harder to craft, but provides more protection. Compatible with Classic Flyers Wyverns and Griffins.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_DragonKinship.PrimalItemArmor_DragonKinship_C",
+			"name": "High-Tier Pyria Saddle",
+			"description": "Equip a Higher-tier Pyrian creature that is not an elemental or undead with this to ride it!\n\n(Supports: Dagon, Elemental Kaiser Bug, Hydra, Ikuchi, Reika)",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_HighTierPyriaSaddle.PrimalItemArmor_HighTierPyriaSaddle_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DragonkinKinshipRune.DragonkinKinshipRune",
+			"icon": "/Game/PrimalEarth/Dinos/Saber/Saddle/HUD_SaberSaddle_Colorize_MIC.HUD_SaberSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
-			"weight": 20,
+			"weight": 30,
 			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
@@ -4138,21 +4130,21 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 100, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Obsidian_C" },
-					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
+					{ "qty": 325, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MithrilIngot_C" }
 				]
 			}
 		},
 		{
-			"name": "Upgraded Dragonkin Kinship Rune",
-			"description": "A Dragonkin Kinship Rune upgraded with a Drallion Gem and Mana.\nDefeat an ArchDemon to unlock this engram.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_DragonKinship_UG.PrimalItemArmor_DragonKinship_UG_C",
+			"name": "High-Tier Pyria Saddle",
+			"description": "Equip a Higher-tier Pyrian creature that is not an elemental or undead with this to ride it!\n\n(Supports: Dagon, Elemental Kaiser Bug, Hydra, Ikuchi, Reika)",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_HighTierPyriaSaddle_UG.PrimalItemArmor_HighTierPyriaSaddle_UG_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UpgradedDragonkinKinshipRune.UpgradedDragonkinKinshipRune",
+			"icon": "/Game/PrimalEarth/Dinos/Saber/Saddle/HUD_SaberSaddle_Colorize_MIC.HUD_SaberSaddle_Colorize_MIC",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
-			"weight": 20,
+			"weight": 30,
 			"stackSize": 1,
 			"crafting": {
 				"xp": 17.6,
@@ -4161,21 +4153,19 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 100, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Magicrystal_C" },
-					{ "qty": 120, "type": "PrimalItemResource_BlackPearl_C" },
-					{ "qty": 120, "type": "PrimalItemResource_MithrilIngot_C" }
+					{ "qty": 325, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MithrilIngot_C" },
+					{ "qty": 0, "type": "PrimalItemResource_DrallionGem_C" }
 				]
 			}
 		},
 		{
 			"name": "Kinship Rune",
-			"description": "An enchanted rune that strengthens your mount, by strengthening the bond you have with it. Acts similar to a saddle, and is universally compatible with many of Pyria's creatures.",
+			"description": "An enchanted rune that strengthens your connection to your elemental. Thus, grants armor to it, similar to a saddle.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_Kinship.PrimalItemArmor_Kinship_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/KinshipRune.KinshipRune",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewKinshipRune.NewKinshipRune",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
@@ -4187,9 +4177,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 40, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Stone_C" },
 					{ "qty": 50, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Silicon_C" }
+					{ "qty": 50, "type": "PrimalItemResource_Magicrystal_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
 		},
@@ -4198,7 +4189,7 @@
 			"description": "An upgraded Kinship Rune, empowered by Mana and a Drallion Gem. Defeat an Ogre to unlock this engram.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_Kinship_UG.PrimalItemArmor_Kinship_UG_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/UpgradedKinshipRune.UpgradedKinshipRune",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewUGKinshipRune.NewUGKinshipRune",
 			"type": "Equipment/DinoSaddle",
 			"folders": [ "Saddles" ],
 			"weight": 20,
@@ -4210,12 +4201,105 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 40, "type": "PrimalItemResource_MithrilIngot_C" },
-					{ "qty": 50, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 75, "type": "PrimalItemResource_Metal_C" },
 					{ "qty": 50, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 100, "type": "PrimalItemResource_Magicrystal_C" },
+					{ "qty": 75, "type": "PrimalItemResource_Magicrystal_C" },
 					{ "qty": 1, "type": "PrimalItemResource_DrallionGem_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Silicon_C" }
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
+			"name": "Low-Tier Pyria Saddle",
+			"description": "Equip a Lower-tier Pyrian creature that is not an elemental or undead with this to ride it!\n\n(Supports: Bantu, Horoku, Cockatrice, Giant Shell Crabbeetle)",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_LowTierPyriaSaddle.PrimalItemArmor_LowTierPyriaSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Saber/Saddle/HUD_SaberSaddle_Colorize_MIC.HUD_SaberSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 30,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" }
+				]
+			}
+		},
+		{
+			"name": "Low-Tier Pyria Saddle",
+			"description": "Equip a Lower-tier Pyrian creature that is not an elemental or undead with this to ride it!\n\n(Supports: Bantu, Horoku, Cockatrice, Giant Shell Crabbeetle)",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_LowTierPyriaSaddle_UG.PrimalItemArmor_LowTierPyriaSaddle_UG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Saber/Saddle/HUD_SaberSaddle_Colorize_MIC.HUD_SaberSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 30,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 150, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 0, "type": "PrimalItemResource_DrallionGem_C" }
+				]
+			}
+		},
+		{
+			"name": "Mid-Tier Pyria Saddle",
+			"description": "Equip a Mid-tier Pyrian creature that is not an elemental or undead with this to ride it!\n\n(Supports: Drallion, Driger, Soldier Bug, Goliath, Shmerghazberg, Sulfurwyrm, Arduros, Iridomex, Dark Mana Seeker, Aura Seeker, Dark Reaper, Hellhound)",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_MidTierPyriaSaddle.PrimalItemArmor_MidTierPyriaSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Saber/Saddle/HUD_SaberSaddle_Colorize_MIC.HUD_SaberSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 30,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Mid-Tier Pyria Saddle",
+			"description": "Equip a Mid-tier Pyrian creature that is not an elemental or undead with this to ride it!\n\n(Supports: Drallion, Driger, Soldier Bug, Goliath, Shmerghazberg, Sulfurwyrm, Arduros, Iridomex, Dark Mana Seeker, Aura Seeker, Dark Reaper, Hellhound)",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_MidTierPyriaSaddle_UG.PrimalItemArmor_MidTierPyriaSaddle_UG_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Saber/Saddle/HUD_SaberSaddle_Colorize_MIC.HUD_SaberSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 30,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 0, "type": "PrimalItemResource_DrallionGem_C" }
 				]
 			}
 		},
