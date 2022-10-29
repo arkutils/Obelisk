@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "350.5.1665202463",
+	"version": "351.6.1667016777",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -1024,6 +1024,62 @@
 				"attacks": [ { "name": "CallForHelp", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 1 }
+		},
+		{
+			"name": "Andrewsarchus",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Andrewsarchus_Character_BP_Child.Andrewsarchus_Character_BP_Child_C",
+			"dinoNameTag": "Andrewsarchus",
+			"customTag": "Andrewsarchus",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 375,
+			"dragWeight": 250,
+			"variants": [ "Child" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1174.5 },
+				"swim": { "base": 750 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1174.5 },
+				"swim": { "base": 750 }
+			},
+			"movementR": {
+				"walk": { "base": 300, "sprint": 2466.4 },
+				"swim": { "base": 750 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 41,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 41, "radius": 200, "stamina": 0 },
+					{ "name": "Fire", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Toggle Minigun", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Back Kick", "interval": 2, "dmg": 14, "radius": 220, "stamina": 20 }
+				]
+			},
+			"death": { "baseXP": 5 }
 		},
 		{
 			"name": "Anglerfish",
@@ -3013,6 +3069,109 @@
 			}
 		},
 		{
+			"name": "Land Destroyer",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Dieties/LandDestroyer_Character_BP.LandDestroyer_Character_BP_C",
+			"dinoNameTag": "Trike",
+			"customTag": "Destroyer",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 3037.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 472.5, "sprint": 1417.5 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 540,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "None", "interval": 0.63, "dmg": 540, "radius": 430, "stamina": 0 },
+					{ "name": "Ram", "interval": 30, "dmg": 540, "radius": 430, "stamina": 0 },
+					{ "name": "Ram", "interval": 0.63, "dmg": 540, "radius": 600, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Land Protector",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Dieties/LandProtector_Character_BP.LandProtector_Character_BP_C",
+			"dinoNameTag": "Stego",
+			"customTag": "Protector",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 260,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 30 },
+			"cloning": {
+				"costBase": 725,
+				"costLevel": 55,
+				"timeBase": 5075,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 170, "sprint": 607.7 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 76.5, "sprint": 210.4 },
+				"swim": { "base": 135 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 540,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 540, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 540, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 540, "radius": 100, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 5 }
+		},
+		{
 			"name": "Jackpot",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Imp/Imp_Character_BP.Imp_Character_BP_C",
 			"dinoNameTag": "Jackpot",
@@ -4973,6 +5132,66 @@
 			}
 		},
 		{
+			"name": "Desmodus",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Desmodus_Character_BP_Child.Desmodus_Character_BP_Child_C",
+			"dinoNameTag": "Desmodus",
+			"customTag": "Desmodus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 149,
+			"variants": [ "Child" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 529.2 },
+				"fly": { "base": 850, "sprint": 1836 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 245, "sprint": 441 },
+				"fly": { "base": 850, "sprint": 1530 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 40, "radius": 500, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 500, "stamina": 40 },
+					{ "name": "Scream", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 100 },
+					{ "name": "ToggleLifeSteal", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 50 },
+					{ "name": "Grab Wild", "interval": 10, "dmg": 18, "radius": 500, "stamina": 40 },
+					{ "name": "Swipe", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Scream", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 1e-05 }
+				]
+			},
+			"death": { "baseXP": 3 }
+		},
+		{
 			"name": "Dilophosaur",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Dilo_Character_BP_Child.Dilo_Character_BP_Child_C",
 			"dinoNameTag": "Dilo",
@@ -5965,6 +6184,52 @@
 				]
 			},
 			"death": { "baseXP": 1 }
+		},
+		{
+			"name": "Fenrir",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Fenrir_Character_BP_Child.Fenrir_Character_BP_Child_C",
+			"dinoNameTag": "Fenrir Wolf",
+			"customTag": "Fenrir Wolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 180,
+			"variants": [ "Child" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 58 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 208, "sprint": 1156.5 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 249.6, "sprint": 1387.8 },
+				"swim": { "base": 288 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 180,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 50, "radius": 180, "stamina": 5 },
+					{ "name": "Ice_Bite", "interval": 15, "dmg": 70, "radius": 200, "stamina": 25 },
+					{ "name": "Ice_State", "interval": 45, "dmg": 35, "radius": 750, "stamina": 30 }
+				]
+			},
+			"death": { "baseXP": 6 }
 		},
 		{
 			"name": "Titanomyrma Soldier",
@@ -9182,7 +9447,7 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 20,
+				"defaultDmg": 24,
 				"defaultSwingRadius": 50,
 				"attacks": [ { "name": "Melee", "interval": 0.4, "dmg": 24, "radius": 190, "stamina": 0 } ]
 			},
