@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/species.json",
-	"version": "346.16.8991126",
+	"version": "352.6.9875140",
 	"format": "4",
 	"species": [
 		{
@@ -17598,16 +17598,7 @@
 					{ "name": "Grab", "interval": 8, "dmg": 1, "radius": 140, "stamina": 35 }
 				]
 			},
-			"death": {
-				"lootBagChance": 0.3,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
-					}
-				],
-				"baseXP": 5
-			}
+			"death": { "baseXP": 5 }
 		},
 		{
 			"name": "Manta",
@@ -44517,6 +44508,61 @@
 					}
 				],
 				"baseXP": 4
+			}
+		},
+		{
+			"name": "Carcharodontosaurus",
+			"bp": "/Game/PrimalEarth/Dinos/Carcharodontosaurus/Carcha_Character_BP.Carcha_Character_BP_C",
+			"dinoNameTag": "Carcha",
+			"customTag": "Carcha",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 950,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 99 },
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 60,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1120, "sprint": 2241.1 }
+			},
+			"movementD": {
+				"walk": { "base": 1120, "sprint": 2241.1 }
+			},
+			"staminaRates": { "sprint": -29 },
+			"attack": {
+				"defaultDmg": 440,
+				"defaultSwingRadius": 850,
+				"attacks": [
+					{ "name": "Bite", "interval": 0, "dmg": 528, "radius": 700, "stamina": 5 },
+					{ "name": "Tailspin", "interval": 1.25, "dmg": 384, "radius": 900, "stamina": 40 },
+					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge.DinoDropInventoryComponent_Carnivore_Huge"
+					}
+				],
+				"baseXP": 750
 			}
 		},
 		{
