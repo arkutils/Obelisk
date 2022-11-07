@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "348.7.1660069796",
+	"version": "352.6.1667780832",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -91,11 +91,11 @@
 		{
 			"name": "Anteosaurus",
 			"bp": "/Game/Mods/AC2/Anteo/Anteo_Character_BP.Anteo_Character_BP_C",
-			"dinoNameTag": "Purlovia",
+			"dinoNameTag": "Anteo",
 			"customTag": "Anteo",
 			"targetingTeamName": "Carnivores_Medium",
-			"mass": 444,
-			"dragWeight": 450,
+			"mass": 330,
+			"dragWeight": 350,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -106,40 +106,203 @@
 				"isCarnivore",
 				"isTameable"
 			],
-			"leveling": { "mutagenCost": 33 },
+			"leveling": { "mutagenCost": 67 },
 			"cloning": {
-				"costBase": 800,
+				"costBase": 1675,
 				"costLevel": 55,
-				"timeBase": 5600,
+				"timeBase": 11725,
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 95,
+				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 240, "sprint": 1200 },
-				"swim": { "base": 200 }
+				"walk": { "base": 157.5, "sprint": 1237.5 },
+				"swim": { "base": 210 }
 			},
 			"movementD": {
-				"walk": { "base": 240, "sprint": 1200 },
-				"swim": { "base": 200 }
+				"walk": { "base": 225, "sprint": 1237.5 },
+				"swim": { "base": 300 }
 			},
 			"staminaRates": {
 				"sprint": -14,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 36,
-				"defaultSwingRadius": 430,
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Melee Bite", "interval": 0.2, "dmg": 45, "radius": 350, "stamina": 0 },
-					{ "name": "Bleed Bite Combo", "interval": 6, "dmg": 45, "radius": 350, "stamina": 25 },
-					{ "name": "Roar", "interval": 6, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Slobber", "interval": 6, "dmg": 0, "radius": 0, "stamina": 300 }
+					{ "name": "Chomp", "interval": 0.76, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "Double Chomp", "interval": 10, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "HeadbuttParry", "interval": 5, "dmg": 25, "radius": 300, "stamina": 0 },
+					{ "name": "Slobber", "interval": 0.76, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.76, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
-			"death": { "baseXP": 7 }
+			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "R-Anteosaurus",
+			"bp": "/Game/Mods/AC2/Anteo/Anteo_Character_BP_Rockwell.Anteo_Character_BP_Rockwell_C",
+			"dinoNameTag": "Anteo",
+			"customTag": "Anteo",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 330,
+			"dragWeight": 350,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 157.5, "sprint": 1237.5 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 225, "sprint": 1237.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Chomp", "interval": 0.76, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "Double Chomp", "interval": 10, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "HeadbuttParry", "interval": 5, "dmg": 25, "radius": 300, "stamina": 0 },
+					{ "name": "Slobber", "interval": 0.76, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.76, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Scorched Anteosaurus",
+			"bp": "/Game/Mods/AC2/Anteo/Anteo_Character_BP_Scorched.Anteo_Character_BP_Scorched_C",
+			"dinoNameTag": "Anteo",
+			"customTag": "Anteo",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 330,
+			"dragWeight": 350,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 157.5, "sprint": 1237.5 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 225, "sprint": 1237.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Chomp", "interval": 0.76, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "Double Chomp", "interval": 10, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "HeadbuttParry", "interval": 5, "dmg": 25, "radius": 300, "stamina": 0 },
+					{ "name": "Slobber", "interval": 0.76, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.76, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "X-Anteosaurus",
+			"bp": "/Game/Mods/AC2/Anteo/Snow_Anteo_Character_BP.Snow_Anteo_Character_BP_C",
+			"dinoNameTag": "Anteo",
+			"customTag": "Anteo",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 330,
+			"dragWeight": 350,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 157.5, "sprint": 1237.5 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 225, "sprint": 1237.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Chomp", "interval": 0.76, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "Double Chomp", "interval": 10, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "HeadbuttParry", "interval": 5, "dmg": 25, "radius": 300, "stamina": 0 },
+					{ "name": "Slobber", "interval": 0.76, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.76, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Anthracosaurus",
@@ -2353,7 +2516,7 @@
 				"defaultSwingRadius": 260,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.2, "dmg": 40, "radius": 300, "stamina": 0 },
-					{ "name": "Claws", "interval": 5, "dmg": 35, "radius": 350, "stamina": 80 },
+					{ "name": "Claws", "interval": 5, "dmg": 42, "radius": 350, "stamina": 80 },
 					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -2405,7 +2568,7 @@
 				"defaultSwingRadius": 260,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.2, "dmg": 40, "radius": 300, "stamina": 0 },
-					{ "name": "Claws", "interval": 5, "dmg": 35, "radius": 350, "stamina": 80 },
+					{ "name": "Claws", "interval": 5, "dmg": 42, "radius": 350, "stamina": 80 },
 					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
