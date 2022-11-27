@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "346.11.1632454460",
+	"version": "354.4.1669513182",
 	"format": "4",
 	"mod": {
 		"id": "1999447172",
@@ -1777,7 +1777,7 @@
 			"description": "Toggles various dino orders\n\nPress \"Control\" to choose any mode or \"Right Click\" to cycle modes.",
 			"bp": "/Game/Mods/StructuresPlusMod/Items/CommandTool/PrimalItem_CommandToolSS.PrimalItem_CommandToolSS_C",
 			"parent": "/Game/Mods/StructuresPlusMod/Items/PrimalItemStructure_SSItemsBase.PrimalItemStructure_SSItemsBase_C",
-			"icon": "/Game/Mods/StructuresPlusMod/Items/CommandTool/Icon_CommandTool.Icon_CommandTool",
+			"icon": "/Game/Mods/StructuresPlusMod/Items/CommandTool/Icon_CommandTool_New.Icon_CommandTool_New",
 			"type": "Weapon",
 			"flags": [ "preventCheatGive" ],
 			"folders": [ "Misc" ],
@@ -1970,7 +1970,7 @@
 			"description": "- Fire to pick up or demolish items\n- Right click to toggle mode between pick up and demolish\n- Will not work if fired too quickly\n- Cannot equip for 5 seconds after accessing a Radial Menu",
 			"bp": "/Game/Mods/StructuresPlusMod/Items/RemoteDemolisher/PrimalItem_DemoGunSS.PrimalItem_DemoGunSS_C",
 			"parent": "/Game/Mods/StructuresPlusMod/Items/PrimalItemStructure_SSItemsBase.PrimalItemStructure_SSItemsBase_C",
-			"icon": "/Game/Mods/StructuresPlusMod/Items/RemoteDemolisher/Icon_DemoGun.Icon_DemoGun",
+			"icon": "/Game/Mods/StructuresPlusMod/Items/RemoteDemolisher/Icon_DemoGun_New.Icon_DemoGun_New",
 			"type": "Weapon",
 			"flags": [ "preventCheatGive" ],
 			"folders": [ "Misc" ],
@@ -2164,7 +2164,7 @@
 			"description": "- Has 5 modes (open, close, freeze, lock sides, unlock sides)\n- Right click to toggle mode\n\nNote: You can't freeze an open port hole and you can't open a frozen one(you need to close first)",
 			"bp": "/Game/Mods/StructuresPlusMod/Items/UnderwaterTool/PrimalItem_UnderwaterToolSS.PrimalItem_UnderwaterToolSS_C",
 			"parent": "/Game/Mods/StructuresPlusMod/Items/PrimalItemStructure_SSItemsBase.PrimalItemStructure_SSItemsBase_C",
-			"icon": "/Game/Mods/StructuresPlusMod/Items/UnderwaterTool/Icon_UnderwaterTool.Icon_UnderwaterTool",
+			"icon": "/Game/Mods/StructuresPlusMod/Items/UnderwaterTool/Icon_UnderwaterTool_New.Icon_UnderwaterTool_New",
 			"type": "Weapon",
 			"flags": [ "preventCheatGive" ],
 			"folders": [ "Misc" ],
@@ -6639,6 +6639,94 @@
 				"recipe": [ { "qty": 5, "type": "PrimalItemResource_Stone_C" } ]
 			},
 			"structure": "/Game/Mods/StructuresPlusMod/Pipes/Vertical/Stone/BP_PipeVertical_Stone.BP_PipeVertical_Stone_C"
+		},
+		{
+			"name": "Box o' Chocolates",
+			"description": "<RichColor Color=\"1, 0.5, 0.8, 1\">This chocolate's delicious, despite its origins. The Island's creatures LOVE it, as it fully heals them or advances their taming!</>",
+			"bp": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/PrimalItemConsumable_ValentinesChocolate.PrimalItemConsumable_ValentinesChocolate_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/VDay_icon.VDay_icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 2.14,
+			"stackSize": 1,
+			"spoilsIn": 21600,
+			"statEffects": [
+				{
+					"stat": "health", "value": 100, "useItemQuality": true,
+					"pctOf": "max",
+					"pctAbsRange": { "min": 0, "max": 0 }
+				}
+			]
+		},
+		{
+			"name": "Valentines Dino Candy",
+			"description": "Has a curious effect when consumed by a dinosaur.",
+			"bp": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Consumables/Vday/PrimalItemConsumable_ValentinesDinoCandy.PrimalItemConsumable_ValentinesDinoCandy_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/StructuresPlusMod/PrimalEarth/Structures/Christmas/Icons/HUD_ValentinesCandy_Colorize.HUD_ValentinesCandy_Colorize",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1
+		},
+		{
+			"name": "Bunny Egg",
+			"description": "Put it in a Cooking Pot to craft fun costumes or place on the ground as a festive decoration!",
+			"bp": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_EasterEgg.PrimalItemStructure_EasterEgg_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/EasterEgg_Icon.EasterEgg_Icon",
+			"type": "Resource",
+			"weight": 4,
+			"stackSize": 100,
+			"spoilsIn": 1209600,
+			"structure": "/Game/Mods/StructuresPlusMod/PrimalEarth/Structures/Halloween/Sign_EasterEgg.Sign_EasterEgg_C"
+		},
+		{
+			"name": "Stolen Headstone",
+			"description": "A headstone stolen from a graveyard.",
+			"bp": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_HW_Grave.PrimalItemStructure_HW_Grave_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
+			"icon": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Structures/Icons/GraveStone2_Icon.GraveStone2_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Furniture", "Stone" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"structure": "/Game/Mods/StructuresPlusMod/PrimalEarth/Structures/Halloween/StructureBP_Gravestone_HW.StructureBP_Gravestone_HW_C"
+		},
+		{
+			"name": "Pumpkin",
+			"description": "Decorate your base with this pumpkin. Can be \"carved\" with all manner of paints.",
+			"bp": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_Pumpkin.PrimalItemStructure_Pumpkin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Pumpkin_Icon.Pumpkin_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Halloween" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"structure": "/Game/Mods/StructuresPlusMod/PrimalEarth/Structures/Halloween/Sign_Pumpkin.Sign_Pumpkin_C"
+		},
+		{
+			"name": "Scarecrow",
+			"description": "Decorate your base with this scarecrow.  Guaranteed to scare the crows away.",
+			"bp": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_Scarecrow.PrimalItemStructure_Scarecrow_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Items/Structures/Icons/Scarecrow_Icon.Scarecrow_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Halloween" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"structure": "/Game/Mods/StructuresPlusMod/PrimalEarth/Structures/Halloween/Structure_Scarecrow.Structure_Scarecrow_C"
+		},
+		{
+			"name": "Dinosaur Bone",
+			"description": "A very ancient looking bone, must be usefull for something!",
+			"bp": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ARKBone.PrimalItemResource_ARKBone_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/StructuresPlusMod/PrimalEarth/CoreBlueprints/Resources/Icons/ARKBone_Icon.ARKBone_Icon",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 200,
+			"spoilsIn": 2678400
 		},
 		{
 			"name": "Generic Consumable",
