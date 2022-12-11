@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "350.5.1665950592",
+	"version": "354.6.1670707999",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -2337,6 +2337,16 @@
 			}
 		},
 		{
+			"name": "Ancient Essence",
+			"description": "Essence harvested from a Unique Group God.",
+			"bp": "/Game/Mods/ArkOmega/Items/Essence/PrimalItem_AncientEssence.PrimalItem_AncientEssence_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/Items/Essence/AncientEssence_Icon.AncientEssence_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 5000
+		},
+		{
 			"name": "Basic Essence",
 			"description": "Essence harvested from the Basic Tier.",
 			"bp": "/Game/Mods/ArkOmega/Items/Essence/PrimalItem_BasicEssence.PrimalItem_BasicEssence_C",
@@ -2497,6 +2507,16 @@
 			}
 		},
 		{
+			"name": "Saddle Token",
+			"description": "Consume to receive a unique saddle for the specific dino that this is for.",
+			"bp": "/Game/Mods/ArkOmega/Items/Gamble/PrimalItem_UniqueSaddleToken.PrimalItem_UniqueSaddleToken_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/Aberration_Implant_Icon_Alpha.Aberration_Implant_Icon_Alpha",
+			"type": "MiscConsumable/Food",
+			"weight": 1,
+			"stackSize": 1
+		},
+		{
 			"name": "Omega Glider Suit Skin",
 			"description": "When attached to a Chest Armor, the Glider Suit enables sailing through the air by double-tapping jump, while gaining speed by running and diving!",
 			"bp": "/Game/Mods/ArkOmega/Items/Glider/PrimalItemArmor_OmegaGlider.PrimalItemArmor_OmegaGlider_C",
@@ -2537,6 +2557,16 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [ { "qty": 10000, "type": "PrimalItemResource_Stone_C" } ]
 			}
+		},
+		{
+			"name": "Key",
+			"description": "A dynamic key used for many different key types",
+			"bp": "/Game/Mods/ArkOmega/Items/Keys/PrimalItem_DynamicKey.PrimalItem_DynamicKey_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Genesis2/Missions/ModularMission/Maze/Textures/HUD_MazeKey_Icon_Colorize_D.HUD_MazeKey_Icon_Colorize_D",
+			"type": "MiscConsumable/Food",
+			"weight": 0.01,
+			"stackSize": 1
 		},
 		{
 			"name": "Alpha Cosmic Kibble",
@@ -2880,7 +2910,7 @@
 		},
 		{
 			"name": "Alpha Unique Kibble",
-			"description": "A specially blended kibble aimed towards taming Alpha Unique creatures. Will also work to tame things below Alpha.",
+			"description": "A specially blended kibble aimed towards taming Alpha Unique creatures. \n\nAlpha Unique Kibble can be used to tame any dino that is alpha tier or below, whether or not it is unique.",
 			"bp": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_AlphaUnique.PrimalItemConsumable_Kibble_AlphaUnique_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_BetaUnique.PrimalItemConsumable_Kibble_BetaUnique_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Kibble/Icons/Alpha/Unique_Alpha_Kibble.Unique_Alpha_Kibble",
@@ -2899,19 +2929,18 @@
 					{ "qty": 10, "type": "PrimalItem_AlphaEssence_C" },
 					{ "qty": 10, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_RawPrimeMeat_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Egg_AlphaBase_C" },
-					{ "qty": 3, "type": "PrimalItem_ElementalSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_CosmicSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_EtherealSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_GuardianSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_MythicalSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_NatureSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_NightmareSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_RageSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_ResourceSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_SummonerSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_UnstableSoul_C" },
-					{ "qty": 3, "type": "PrimalItem_UtilitySoul_C" }
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaCosmic_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaElemental_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaEthereal_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaGuardian_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaMythical_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaNature_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaNightmare_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaRage_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaResource_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaSummoner_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaUnstable_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_AlphaUtility_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
@@ -3333,7 +3362,7 @@
 		},
 		{
 			"name": "Beta Unique Kibble",
-			"description": "A specially blended kibble aimed towards taming Beta Unique creatures. Will also work to tame things below Beta.",
+			"description": "A specially blended kibble aimed towards taming Beta Unique creatures. \n\nBeta Unique Kibble can be used to tame any dino that is beta tier or below, whether or not it is unique.",
 			"bp": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_BetaUnique.PrimalItemConsumable_Kibble_BetaUnique_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_Unique.PrimalItemConsumable_Kibble_Unique_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Kibble/Icons/Beta/Unique_Beta_Kibble.Unique_Beta_Kibble",
@@ -3352,19 +3381,18 @@
 					{ "qty": 10, "type": "PrimalItem_BetaEssence_C" },
 					{ "qty": 10, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_CookedMeat_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Egg_BetaBase_C" },
-					{ "qty": 2, "type": "PrimalItem_ElementalSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_CosmicSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_EtherealSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_GuardianSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_MythicalSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_NatureSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_NightmareSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_RageSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_ResourceSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_SummonerSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_UnstableSoul_C" },
-					{ "qty": 2, "type": "PrimalItem_UtilitySoul_C" }
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaCosmic_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaElemental_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaEthereal_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaGuardian_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaMythical_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaNature_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaNightmare_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaRage_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaResource_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaSummoner_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaUnstable_C" },
+					{ "qty": 2, "type": "PrimalItemConsumable_Egg_BetaUtility_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
@@ -4076,7 +4104,7 @@
 		},
 		{
 			"name": "Omega Unique Kibble",
-			"description": "A specially blended kibble aimed towards taming Omega Unique creatures. Will also work to tame things below Omega.",
+			"description": "A specially blended kibble aimed towards taming Omega Unique creatures. \n\nOmega Unique Kibble can be used to tame any dino that is omega tier or below, whether or not it is unique.",
 			"bp": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_OmegaUnique.PrimalItemConsumable_Kibble_OmegaUnique_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_UltimateUnique.PrimalItemConsumable_Kibble_UltimateUnique_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Kibble/Icons/Omega/Unique_Alpha_Absorbent_Icon.Unique_Alpha_Absorbent_Icon",
@@ -4095,19 +4123,18 @@
 					{ "qty": 10, "type": "PrimalItem_OmegaEssence_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_SweetVeggieCake_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_CookedPrimeMeat_Jerky_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Egg_OmegaBase_C" },
-					{ "qty": 6, "type": "PrimalItem_ElementalSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_CosmicSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_EtherealSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_GuardianSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_MythicalSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_NatureSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_NightmareSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_RageSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_ResourceSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_SummonerSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_UnstableSoul_C" },
-					{ "qty": 6, "type": "PrimalItem_UtilitySoul_C" }
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaCosmic_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaElemental_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaEthereal_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaGuardian_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaMythical_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaNature_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaNightmare_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaRage_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaResource_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaSummoner_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaUnstable_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaUtility_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
@@ -4529,7 +4556,7 @@
 		},
 		{
 			"name": "Prime Unique Kibble",
-			"description": "A specially blended kibble aimed towards taming Prime Unique creatures. Will also work to tame things below Prime.",
+			"description": "A specially blended kibble aimed towards taming Prime Unique creatures. \n\nPrime Unique Kibble can be used to tame any dino that is prime tier or below, whether or not it is unique.",
 			"bp": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_PrimeUnique.PrimalItemConsumable_Kibble_PrimeUnique_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_AlphaUnique.PrimalItemConsumable_Kibble_AlphaUnique_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Kibble/Icons/Prime/Unique_Absorbent_Icon.Unique_Absorbent_Icon",
@@ -4548,19 +4575,18 @@
 					{ "qty": 10, "type": "PrimalItem_PrimeEssence_C" },
 					{ "qty": 10, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_CookedPrimeMeat_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Egg_PrimeBase_C" },
-					{ "qty": 4, "type": "PrimalItem_ElementalSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_CosmicSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_EtherealSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_GuardianSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_MythicalSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_NatureSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_NightmareSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_RageSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_ResourceSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_SummonerSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_UnstableSoul_C" },
-					{ "qty": 4, "type": "PrimalItem_UtilitySoul_C" }
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeCosmic_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeElemental_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeEthereal_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeGuardian_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeMythical_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeNature_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeNightmare_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeRage_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeResource_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeSummoner_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeUnstable_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_PrimeUtility_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
@@ -5084,7 +5110,7 @@
 		},
 		{
 			"name": "Ultimate Unique Kibble",
-			"description": "A specially blended kibble aimed towards taming Ultimate Unique creatures. Will also work to tame things below Ultimate.",
+			"description": "A specially blended kibble aimed towards taming Ultimate Unique creatures. \n\nUltimate Unique Kibble can be used to tame any dino that is ultimate tier or below, whether or not it is unique.",
 			"bp": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_UltimateUnique.PrimalItemConsumable_Kibble_UltimateUnique_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_PrimeUnique.PrimalItemConsumable_Kibble_PrimeUnique_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Kibble/Icons/Ultimate/Unique_Beta_Absorbent_Icon.Unique_Beta_Absorbent_Icon",
@@ -5103,19 +5129,18 @@
 					{ "qty": 10, "type": "PrimalItem_UltimateEssence_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_SweetVeggieCake_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_CookedMeat_Jerky_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Egg_UltimateBase_C" },
-					{ "qty": 5, "type": "PrimalItem_ElementalSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_CosmicSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_EtherealSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_GuardianSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_MythicalSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_NatureSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_NightmareSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_RageSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_ResourceSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_SummonerSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_UnstableSoul_C" },
-					{ "qty": 5, "type": "PrimalItem_UtilitySoul_C" }
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateCosmic_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateElemental_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateEthereal_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateGuardian_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateMythical_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateNature_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateNightmare_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateRage_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateResource_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateSummoner_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateUnstable_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_UltimateUtility_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
@@ -5197,7 +5222,7 @@
 		},
 		{
 			"name": "Unique Kibble",
-			"description": "A specially blended kibble aimed towards taming Unique creatures.",
+			"description": "A specially blended kibble aimed towards taming Unique creatures.\n\nUnique Kibble can be used to tame any basic tier dino, whether or not it is unique.",
 			"bp": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_Unique.PrimalItemConsumable_Kibble_Unique_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_XSmall.PrimalItemConsumable_Kibble_Base_XSmall_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Kibble/Icons/Normal/Unique_Normal_Kibble.Unique_Normal_Kibble",
@@ -5216,19 +5241,18 @@
 					{ "qty": 10, "type": "PrimalItem_BasicEssence_C" },
 					{ "qty": 10, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_RawMeat_C" },
-					{ "qty": 10, "type": "PrimalItemConsumable_Egg_C" },
-					{ "qty": 1, "type": "PrimalItem_ElementalSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_CosmicSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_EtherealSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_GuardianSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_MythicalSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_NatureSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_NightmareSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_RageSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_ResourceSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_SummonerSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_UnstableSoul_C" },
-					{ "qty": 1, "type": "PrimalItem_UtilitySoul_C" }
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Elemental_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Cosmic_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Ethereal_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Guardian_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Mythical_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Nature_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Nightmare_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Rage_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Resource_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Summoner_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Unstable_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_Utility_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
@@ -5617,6 +5641,17 @@
 			"stackSize": 100
 		},
 		{
+			"name": "Max Experience Potion",
+			"description": "This potion will instantly max out your dino's experience level.",
+			"bp": "/Game/Mods/ArkOmega/Items/Potions/ExperiencePotions/PrimalItemConsumable_MaxEXP.PrimalItemConsumable_MaxEXP_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
+			"icon": "/Game/Mods/ArkOmega/Items/Potions/ExperiencePotions/MaxXP_Icon.MaxXP_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Potions", "Experience" ],
+			"weight": 0.1,
+			"stackSize": 100
+		},
+		{
 			"name": "Omega Experience Potion",
 			"description": "This potion will grant you 50x experience gain for 60 seconds.",
 			"bp": "/Game/Mods/ArkOmega/Items/Potions/ExperiencePotions/PrimalItemConsumable_OmegaEXP.PrimalItemConsumable_OmegaEXP_C",
@@ -5939,6 +5974,17 @@
 					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
 				]
 			}
+		},
+		{
+			"name": "Rainbow Poop",
+			"description": "Use this to gain 100% Magic Find for 15 seconds. ",
+			"bp": "/Game/Mods/ArkOmega/Items/Potions/RainbowPoop/PrimalItemConsumable_RainbowPoop.PrimalItemConsumable_RainbowPoop_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
+			"icon": "/Game/Mods/Ragnarok/Custom_Assets/Environment/Weather/Textures/T_Rainbow.T_Rainbow",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Potions" ],
+			"weight": 0.1,
+			"stackSize": 1000
 		},
 		{
 			"name": "Rampage Potion",
@@ -6348,6 +6394,17 @@
 			}
 		},
 		{
+			"name": "Quest Scroll",
+			"description": "Consume this item to accept the quest and add it to your quest log in the Guide.",
+			"bp": "/Game/Mods/ArkOmega/Items/Quests/PrimalItem_Quest.PrimalItem_Quest_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/PrimalEarth/CoreBlueprints/Weapons/Icons/Map_Icon.Map_Icon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.02,
+			"stackSize": 1
+		},
+		{
 			"name": "Omega Raft",
 			"description": "An alternative to the normal raft, this one has an inventory, can equip Raft Armor to improve its defenses, and has a custom slot for upgrades. \n\nIt is also more maneuverable, can sprint for double speed, and easier to control. ",
 			"bp": "/Game/Mods/ArkOmega/Items/Raft/PrimalItemOmegaRaft.PrimalItemOmegaRaft_C",
@@ -6597,6 +6654,28 @@
 			"stackSize": 1
 		},
 		{
+			"name": "Darkness Soul",
+			"description": "The soul of Darkness.\n\nUse this soul in the Omega Altar to summon the Deities of the matching affinity.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_DarknessSoul.PrimalItem_DarknessSoul_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/GodSoul_Icon.GodSoul_Icon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Unique Group God Soul",
+			"description": "Soul of one of the Unique Group Gods. \nCan Be used to turn your tame into an ancient tier, or to summon Zodiac.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_DietySoul.PrimalItem_DietySoul_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/GodSoul_Icon.GodSoul_Icon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
 			"name": "God Soul",
 			"description": "Soul of a fallen God. Used to summon something much worse.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_GodSoul.PrimalItem_GodSoul_C",
@@ -6631,7 +6710,7 @@
 		},
 		{
 			"name": "Paragon Breaker",
-			"description": "Dragging a Paragon Soul onto this item will create a Paragon Breaker for that species. You cannot drag a Paragon Soul onto this item inside of a dino's inventory, you must create the Paragon Breaker in the inventory of the player or a structure.\n\nYou can feed a Paragon Breaker to a creature that is Paragon level 30 or higher to continue increasing its Paragon Level.",
+			"description": "Dragging a Paragon Soul onto this item will create a Paragon Breaker for that species. You cannot drag a Paragon Soul onto this item inside of a dino's inventory, you must create the Paragon Breaker in the inventory of the player or a structure.\n\nYou can feed a Paragon Breaker to a creature that is Paragon level 50 or higher to continue increasing its Paragon Level.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_ParagonBreaker.PrimalItem_ParagonBreaker_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/TroodonWildDino_Icon.TroodonWildDino_Icon",
@@ -6712,7 +6791,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Light_Blue_Ring.Light_Blue_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6722,7 +6801,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Elemental_Ring.Elemental_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6732,7 +6811,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Ethereal_Ring.Ethereal_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6742,7 +6821,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Guardian_Ring.Guardian_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6752,7 +6831,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Lucky_Ring.Lucky_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6762,7 +6841,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Mythical_Ring.Mythical_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6772,7 +6851,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Nature_Ring.Nature_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6782,7 +6861,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Nightmare_Ring.Nightmare_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6803,7 +6882,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Raging_Ring.Raging_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6813,7 +6892,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Resource_Ring.Resource_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6834,7 +6913,7 @@
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Ethereal_Ring.Ethereal_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6844,7 +6923,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Summoner_Ring.Summoner_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6854,7 +6933,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Unstable_Ring.Unstable_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6864,7 +6943,7 @@
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/PrimalItem_Souls.PrimalItem_Souls_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/Utility_Ring.Utility_Ring",
 			"type": "MiscConsumable/Food",
-			"weight": 0.1,
+			"weight": 0.02,
 			"stackSize": 5000
 		},
 		{
@@ -6907,8 +6986,9 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "exact": true, "qty": 1, "type": "PrimalItem_UniqueGodSoul_C" },
-					{ "exact": true, "qty": 50, "type": "PrimalItem_ParagonShard_C" },
-					{ "qty": 100, "type": "PrimalItem_SoulShard_C" }
+					{ "exact": true, "qty": 25, "type": "PrimalItem_ParagonShard_C" },
+					{ "qty": 25, "type": "PrimalItem_SoulShard_C" },
+					{ "exact": true, "qty": 25, "type": "PrimalItem_AncientEssence_C" }
 				]
 			}
 		},
@@ -7313,7 +7393,7 @@
 		},
 		{
 			"name": "Ferox Candy",
-			"description": "Use any Omega soul from the group your Ferox is in to craft this to allow it to be transformed into a Brute Ferox.",
+			"description": "Use any Omega soul from the group your Ferox is in to craft this to allow it to be transformed into a Brute Ferox.\n\nDr. Jekyll is evolved into Mr. Hyde using Unstable Ferox Candy.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_FeroxCandy.PrimalItem_FeroxCandy_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_OmegaSoul.PrimalItem_OmegaSoul_C",
 			"icon": "/Game/Mods/ArkOmega/PrimalEarth/Structures/Christmas/Icons/ChristmasCandy_Icon.ChristmasCandy_Icon",
@@ -8020,7 +8100,7 @@
 		},
 		{
 			"name": "Egg Collector",
-			"description": "Place this near your dinos to collect any unfertilized eggs that are dropped on the ground. This will also prevent all unfertilized eggs from spoiling.\n\nThe Egg Collector will also passively generate eggs for dinos around in that are in stasis, but will not work with dinos that are attached to a Hitching Post.",
+			"description": "Place this near your dinos to collect any unfertilized eggs that are dropped on the ground. It will not collecto eggs for wild dinos! This will also prevent all unfertilized eggs from spoiling.\n\nThe Egg Collector can integrate female dinos into it. The dino will be destroyed, but the dino's egg type will be stored in the egg collector, being passively generated based on your server's egg laying rates settings. The default egg laying timer is sped up, and automatically includes both mate boosting and Oviraptor bonus without the need for either.\n\nEggselerator upgrade module crafted in the Soul Grinder can greatly speed up egg production rates. \n\nEgg layer data is preserved if the egg collector is picked up by hand (do not use pickup tools!).",
 			"bp": "/Game/Mods/ArkOmega/Structures/EggCollector/PrimalItemStructure_EggCollector.PrimalItemStructure_EggCollector_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Mods/ArkOmega/Structures/EggCollector/hexen_eggcollector_icon.hexen_eggcollector_icon",
@@ -8150,7 +8230,6 @@
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/Structures/ItemFrag/CharmFragments.CharmFragments",
 			"type": "MiscConsumable/Food",
-			"flags": [ "preventCheatGive" ],
 			"weight": 0.1,
 			"stackSize": 100
 		},
@@ -8159,9 +8238,8 @@
 			"description": "Small fragments of magical items, this item can be used to reroll the imbues on non-set armors in the Imbue Workbench.",
 			"bp": "/Game/Mods/ArkOmega/Structures/ItemFrag/PrimalItem_MagicFragment.PrimalItem_MagicFragment_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
-			"icon": "/Game/Mods/ArkOmega/Structures/ItemFrag/CharmFragments.CharmFragments",
+			"icon": "/Game/Mods/ArkOmega/Structures/ItemFrag/MagicFragments.MagicFragments",
 			"type": "MiscConsumable/Food",
-			"flags": [ "preventCheatGive" ],
 			"weight": 0.1,
 			"stackSize": 100
 		},
@@ -8293,7 +8371,7 @@
 			"description": "A small red star that can be placed to provide 300% greenhouse effect to nearby crop plots.\n\nCan be upgraded with the Blue Star module crafted in the Soul Grinder to increase it to 600% greenhouse effect, and it will also act as a wireless generator.",
 			"bp": "/Game/Mods/ArkOmega/Structures/RedDwarf/PrimalItemStructure_RedDwarf.PrimalItemStructure_RedDwarf_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
-			"icon": "/Game/Mods/ArkOmega/PrimalEarth/UI/Textures/Star_Icon.Star_Icon",
+			"icon": "/Game/Mods/ArkOmega/Structures/RedDwarf/RedDwarf_Icon.RedDwarf_Icon",
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 4,
@@ -8526,6 +8604,25 @@
 				"recipe": [ { "qty": 0, "type": "PrimalItemResource_Wood_C" } ]
 			},
 			"structure": "/Game/Mods/ArkOmega/Structures/UGGTrophy/Structure_UGGTrophy.Structure_UGGTrophy_C"
+		},
+		{
+			"name": "Darkness Trophy",
+			"description": "A massive trophy to prove that you have beaten Darkness.\n\nOr have you?",
+			"bp": "/Game/Mods/ArkOmega/Structures/UGGTrophy/ZodiacTrophy/PrimalItemStructure_DarknessTrophy.PrimalItemStructure_DarknessTrophy_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/ArkOmega/PrimalEarth/Effects/Textures/Seasonal/T_Star_01.T_Star_01",
+			"type": "Structure",
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 0, "type": "PrimalItemResource_Wood_C" } ]
+			},
+			"structure": "/Game/Mods/ArkOmega/Structures/UGGTrophy/ZodiacTrophy/Structure_DarknessTrophy.Structure_DarknessTrophy_C"
 		},
 		{
 			"name": "Zodiac Trophy",
