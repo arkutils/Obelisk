@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "354.6.1670886785",
+	"version": "355.6.1671739919",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -6549,29 +6549,29 @@
 		{
 			"name": "Herrerasaurus Venom",
 			"description": "Potent Herrerasaurus Venom. Outside of the body, it ferments, becoming similar to narcotic poison...",
-			"bp": "/Game/Mods/AC2/herrera/PrimalItemConsumable_Narcotic_HerVenom.PrimalItemConsumable_Narcotic_HerVenom_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Narcotic.PrimalItemConsumable_Narcotic_C",
+			"bp": "/Game/Mods/AC2/herrera/PrimalItemConsumable_HerVenom.PrimalItemConsumable_HerVenom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Berry_Narcoberry.PrimalItemConsumable_Berry_Narcoberry_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/ApexDropMegalania_Icon.ApexDropMegalania_Icon",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
+			"folders": [ "Consumables", "Berries" ],
 			"weight": 0.01,
 			"stackSize": 200,
-			"spoilsIn": 1,
-			"crafting": {
-				"xp": 2,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 5, "type": "PrimalItemConsumable_Berry_Narcoberry_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_SpoiledMeat_C" }
-				]
-			},
+			"spoilsIn": 300,
 			"statEffects": [
-				{ "stat": "torpidity", "value": 40, "useItemQuality": true, "duration": 8 },
-				{ "stat": "health", "value": 8, "useItemQuality": true, "duration": 0.5 }
-			]
+				{ "stat": "food", "value": 4, "useItemQuality": true, "duration": 3 },
+				{
+					"stat": "torpidity", "value": 7.5, "useItemQuality": true,
+					"allowWhenFull": false,
+					"duration": 3
+				}
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": -0.1,
+				"food": 0.1,
+				"weight": 0.01,
+				"water": 0.01
+			}
 		},
 		{
 			"name": "Australovenator Saddle",

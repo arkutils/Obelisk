@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "351.6.1666307258",
+	"version": "355.6.1671740311",
 	"format": "4",
 	"mod": {
 		"id": "1676159020",
@@ -119,6 +119,87 @@
 					}
 				],
 				"baseXP": 22
+			}
+		},
+		{
+			"name": "Dodo Wyvern",
+			"bp": "/Game/Mods/Aquaria/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 1000,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventCharacterBasing"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1300 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 1300 },
+				"fly": { "base": 3000, "sprint": 2000 },
+				"swim": { "base": 3000 }
+			},
+			"movementR": {
+				"walk": { "base": 1079 },
+				"fly": { "base": 2490, "sprint": 2905 },
+				"swim": { "base": 2490 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite (AI)", "interval": 1, "dmg": 600, "radius": 1000, "stamina": 10 },
+					{
+						"name": "Breathe_Lightning", "interval": 6.5, "dmg": 0, "radius": 0, "stamina": 125,
+						"isProjectile": true
+					},
+					{ "name": "Breathe_Fire", "interval": 5, "dmg": 0, "radius": 0, "stamina": 125 },
+					{
+						"name": "Breathe_Poison", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_FearEvolved.DinoDropInventoryComponent_Carnivore_Huge_FearEvolved"
+					}
+				],
+				"baseXP": 120
 			}
 		},
 		{

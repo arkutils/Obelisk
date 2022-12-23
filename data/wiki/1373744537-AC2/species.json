@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "354.4.1669849624",
+	"version": "355.6.1671739919",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -1147,14 +1147,15 @@
 				"defaultSwingRadius": 65,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.2, "dmg": 50, "radius": 400, "stamina": 0 },
-					{ "name": "Claws", "interval": 0.2, "dmg": 25, "radius": 300, "stamina": 0 },
+					{ "name": "Claws", "interval": 0.2, "dmg": 32, "radius": 300, "stamina": 0 },
 					{ "name": "ClawSpin", "interval": 10, "dmg": 40, "radius": 300, "stamina": -50 },
 					{ "name": "DriftRight", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "DriftRightOut", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Claws InRunning", "interval": 0.2, "dmg": 40, "radius": 400, "stamina": 0 },
 					{ "name": "Claws OutRunning", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "REEE", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Happi", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Happi", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "HeavySlash", "interval": 25, "dmg": 65, "radius": 320, "stamina": 100 }
 				]
 			},
 			"death": { "baseXP": 3 }
@@ -3181,6 +3182,47 @@
 			"death": { "baseXP": 30 }
 		},
 		{
+			"name": "Squalicorax",
+			"bp": "/Game/Mods/AC2/Squalicorax/Squalicorax_Character_BP.Squalicorax_Character_BP_C",
+			"dinoNameTag": "Salmon",
+			"customTag": "",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 32.5,
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable",
+				"canBeWildTrappedWithFishBasket",
+				"canBeTamedWithFishBasket"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 190, "sprint": 641.2 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 190, "sprint": 855 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 4,
+				"defaultSwingRadius": 78,
+				"attacks": [ { "name": "None", "interval": 0.4, "dmg": 25, "radius": 250, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
+		},
+		{
 			"name": "Stygimoloch",
 			"bp": "/Game/Mods/AC2/Stygi/AC2Stygi_Character_BP.AC2Stygi_Character_BP_C",
 			"dinoNameTag": "Pachy",
@@ -3220,7 +3262,7 @@
 				"attacks": [
 					{ "name": "Melee", "interval": 0.04, "dmg": 15, "radius": 250, "stamina": 0 },
 					{ "name": "Melee", "interval": 0.04, "dmg": 25, "radius": 250, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.04, "dmg": 25, "radius": 250, "stamina": 0 }
+					{ "name": "Melee", "interval": 0.04, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 5 }
@@ -5816,7 +5858,7 @@
 				"defaultSwingRadius": 185,
 				"attacks": [
 					{ "name": "None", "interval": 0.04, "dmg": 25, "radius": 250, "stamina": 0 },
-					{ "name": "None", "interval": 4, "dmg": 35, "radius": 280, "stamina": 0 },
+					{ "name": "None", "interval": 4, "dmg": 42, "radius": 280, "stamina": 0 },
 					{ "name": "None", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -6059,7 +6101,7 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.6, "dmg": 55, "radius": 300, "stamina": 0 },
 					{ "name": "Ram", "interval": 15, "dmg": 70, "radius": 600, "stamina": 280 },
-					{ "name": "Thrash", "interval": 12, "dmg": 40, "radius": 300, "stamina": 100 },
+					{ "name": "Thrash", "interval": 12, "dmg": 45, "radius": 300, "stamina": 100 },
 					{ "name": "RipNTear", "interval": 8, "dmg": 62, "radius": 300, "stamina": 50 },
 					{ "name": "Emote", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Jump", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 280 }
