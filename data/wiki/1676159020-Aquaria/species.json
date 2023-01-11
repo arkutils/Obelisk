@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "355.6.1671740311",
+	"version": "355.13.1673424471",
 	"format": "4",
 	"mod": {
 		"id": "1676159020",
@@ -494,6 +494,60 @@
 					{ "name": "Dash", "interval": 5, "dmg": 45, "radius": 450, "stamina": 200 },
 					{ "name": "Flail", "interval": 5, "dmg": 30, "radius": 450, "stamina": 0 },
 					{ "name": "Rawr", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 12 }
+		},
+		{
+			"name": "Dinichthys",
+			"bp": "/Game/Mods/Aquaria/fish/Dinichthys/Dinichthys_Character_bp.Dinichthys_Character_bp_C",
+			"dinoNameTag": "Dunkle",
+			"customTag": "Dinichthys",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 38 },
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 1000, "sprint": 4000 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "None", "interval": 0.2, "dmg": 42, "radius": 450, "stamina": 0 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 40, "radius": 450, "stamina": 0 },
+					{ "name": "FishRee", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ReallyFastNom", "interval": 0, "dmg": 25, "radius": 450, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 12 }
@@ -1260,7 +1314,7 @@
 		{
 			"name": "Orca",
 			"bp": "/Game/Mods/Aquaria/fish/Orca/Orca_Character_BP.Orca_Character_BP_C",
-			"dinoNameTag": "Orca",
+			"dinoNameTag": "Basilosaurus",
 			"customTag": "Orca",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 300,
@@ -1268,52 +1322,6 @@
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore",
-				"isWaterDino",
-				"dieIfLeftWater"
-			],
-			"leveling": { "mutagenCost": 38 },
-			"cloning": {
-				"costBase": 925,
-				"costLevel": 55,
-				"timeBase": 6475,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 600 }
-			},
-			"movementD": {
-				"walk": { "base": 675, "sprint": 1350 }
-			},
-			"staminaRates": { "sprint": -10 },
-			"attack": {
-				"defaultDmg": 40,
-				"defaultSwingRadius": 170,
-				"attacks": [
-					{ "name": "None", "interval": 0.2, "dmg": 52, "radius": 450, "stamina": 0 },
-					{ "name": "None", "interval": 0.2, "dmg": 1, "radius": 240, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 12 }
-		},
-		{
-			"name": "Orca",
-			"bp": "/Game/Mods/Aquaria/fish/Orca/Orca_Character_BP_Tameable.Orca_Character_BP_Tameable_C",
-			"dinoNameTag": "Orca",
-			"customTag": "Aquaria",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 300,
-			"dragWeight": 250,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
 				"isCarnivore",
 				"isWaterDino",
@@ -1332,10 +1340,10 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 600 }
+				"walk": { "base": 300, "sprint": 1500 }
 			},
 			"movementD": {
-				"walk": { "base": 675, "sprint": 1350 }
+				"walk": { "base": 300, "sprint": 1500 }
 			},
 			"staminaRates": { "sprint": -10 },
 			"attack": {
@@ -1343,7 +1351,7 @@
 				"defaultSwingRadius": 170,
 				"attacks": [
 					{ "name": "None", "interval": 0.2, "dmg": 52, "radius": 450, "stamina": 0 },
-					{ "name": "None", "interval": 0.2, "dmg": 1, "radius": 240, "stamina": 0 }
+					{ "name": "None", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 12 }
