@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "355.3.1671483090",
+	"version": "355.14.1674008918",
 	"format": "4",
 	"mod": {
 		"id": "2003934830",
@@ -2913,7 +2913,7 @@
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -14,
+				"sprint": -28,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -2966,7 +2966,7 @@
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -14,
+				"sprint": -28,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -3019,7 +3019,7 @@
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -14,
+				"sprint": -28,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -3075,7 +3075,7 @@
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -14,
+				"sprint": -28,
 				"swimOrFly": -3
 			},
 			"attack": {
@@ -4928,6 +4928,67 @@
 					}
 				],
 				"baseXP": 5
+			}
+		},
+		{
+			"name": "Pyroraptor",
+			"bp": "/Game/Mods/Beasts/Pyroraptor/BPs/Pyroraptor_Character_BP.Pyroraptor_Character_BP_C",
+			"dinoNameTag": "Pyroraptor",
+			"customTag": "Pyroraptor",
+			"targetingTeamName": "Carnivores_Small",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 27 },
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 50,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 180, "sprint": 504 }
+			},
+			"movementD": {
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 180, "sprint": 504 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 18,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Bite Add", "interval": 0.5, "dmg": 12, "radius": 65, "stamina": 0 },
+					{ "name": "Claw Add", "interval": 0.2, "dmg": 10, "radius": 65, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0.5, "dmg": 15, "radius": 300, "stamina": 30 },
+					{ "name": "Phoenix Flames", "interval": 15, "dmg": 0, "radius": 0, "stamina": 50 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Beasts/Pyroraptor/BPs/DinoDropInventoryComponent_Pyro.DinoDropInventoryComponent_Pyro"
+					}
+				],
+				"baseXP": 18
 			}
 		},
 		{
