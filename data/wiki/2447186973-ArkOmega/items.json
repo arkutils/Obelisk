@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "354.6.1670707999",
+	"version": "356.4.1674892418",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -6667,7 +6667,18 @@
 		{
 			"name": "Unique Group God Soul",
 			"description": "Soul of one of the Unique Group Gods. \nCan Be used to turn your tame into an ancient tier, or to summon Zodiac.",
-			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_DietySoul.PrimalItem_DietySoul_C",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_DeitySoul.PrimalItem_DeitySoul_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/GodSoul_Icon.GodSoul_Icon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Unique Group God Soul",
+			"description": "Soul of one of the Unique Group Gods. \nCan Be used to turn your tame into an ancient tier, or to summon Zodiac.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_EndlessSoul.PrimalItem_EndlessSoul_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/GodSoul_Icon.GodSoul_Icon",
 			"type": "MiscConsumable/Food",
@@ -6722,6 +6733,17 @@
 			"name": "Perfect Soul",
 			"description": "The soul of Perfect Zodiac.\n\nFeed this to any Ancient tier creature to make it a Zodiac variant.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_PerfectSoul.PrimalItem_PerfectSoul_C",
+			"parent": "/Script/ShooterGame.PrimalItem",
+			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/GodSoul_Icon.GodSoul_Icon",
+			"type": "MiscConsumable/Food",
+			"flags": [ "preventCheatGive" ],
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
+			"name": "Perfect Darkness Soul",
+			"description": "The soul of Perfect Darkness.\n\nFeed this to any Ancient or Endless tier tame with a 7th variant to give it the Darkness variant.",
+			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_PerfectSoul2.PrimalItem_PerfectSoul2_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/GodSoul_Icon.GodSoul_Icon",
 			"type": "MiscConsumable/Food",
@@ -7416,7 +7438,7 @@
 		},
 		{
 			"name": "Token of the Fallen God",
-			"description": "Feed this token to your Godlike/Ancient tame to remove its God powers and return it to an Omega tier.\n\nThis will also remove Group variant, reverting it to a random variant within that group.\nWill not remove Unique Group God variants.",
+			"description": "Feed this token to your Group variant to change its Tier back to Omega and give it a random variant within the same group.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_GodWipe.PrimalItem_GodWipe_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/UI/Textures/ExitIcon.ExitIcon",
@@ -7567,7 +7589,7 @@
 			"stackSize": 1,
 			"crafting": {
 				"xp": 2,
-				"time": 5,
+				"time": 0.1,
 				"levelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
@@ -8231,7 +8253,7 @@
 			"icon": "/Game/Mods/ArkOmega/Structures/ItemFrag/CharmFragments.CharmFragments",
 			"type": "MiscConsumable/Food",
 			"weight": 0.1,
-			"stackSize": 100
+			"stackSize": 1000
 		},
 		{
 			"name": "Magic Fragments",
@@ -8241,7 +8263,7 @@
 			"icon": "/Game/Mods/ArkOmega/Structures/ItemFrag/MagicFragments.MagicFragments",
 			"type": "MiscConsumable/Food",
 			"weight": 0.1,
-			"stackSize": 100
+			"stackSize": 1000
 		},
 		{
 			"name": "Set Fragments",
@@ -8250,9 +8272,8 @@
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/Structures/ItemFrag/SetFragments.SetFragments",
 			"type": "MiscConsumable/Food",
-			"flags": [ "preventCheatGive" ],
 			"weight": 0.1,
-			"stackSize": 100
+			"stackSize": 1000
 		},
 		{
 			"name": "Unique Fragments",
@@ -8261,9 +8282,8 @@
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/Structures/ItemFrag/UniqueFragments.UniqueFragments",
 			"type": "MiscConsumable/Food",
-			"flags": [ "preventCheatGive" ],
 			"weight": 0.1,
-			"stackSize": 100
+			"stackSize": 1000
 		},
 		{
 			"name": "Omega Altar",
@@ -8913,7 +8933,7 @@
 		},
 		{
 			"name": "Fortune",
-			"description": "A golden gilded sword of Luck and Power.\n\nDeals passive damage, bypassing nearly all forms of damage reduction or detection, with a 25% chance to deal double damage.",
+			"description": "A golden gilded sword of Luck and Power.\n\nDeals passive damage, bypassing nearly all forms of damage reduction or detection, with a 25% chance to deal double damage.\n\nRequires Engram to equip.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Fortune/PrimalItem_Fortune.PrimalItem_Fortune_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
 			"icon": "/Game/PrimalEarth/WeaponSword/HUD_SwordForged_Colorize_MIC.HUD_SwordForged_Colorize_MIC",
@@ -10535,6 +10555,44 @@
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/WarpBow/WeapWarpBow.WeapWarpBow_C"
+		},
+		{
+			"name": "Wyvern's Breath",
+			"description": "Powered by Elemental Souls, this flamethrower can have its element changed by holding R, choosing between the 6 elemental types.",
+			"bp": "/Game/Mods/ArkOmega/Weapons/WyvernBreath/PrimalItem_WyvernBreath.PrimalItem_WyvernBreath_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
+			"icon": "/Game/ScorchedEarth/Icons/Weapons/Materials/HUD_FlameThrower_Colorize_MIC.HUD_FlameThrower_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Firearms" ],
+			"weight": 1,
+			"stackSize": 1,
+			"durability": 40,
+			"crafting": {
+				"xp": 35,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 75, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 50, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 35, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Sulfur_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"repair": {
+				"xp": 35,
+				"time": 5,
+				"recipe": [
+					{ "qty": 37.5, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 17.5, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Sulfur_C" },
+					{ "qty": 7.5, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"weapon": "/Game/Mods/ArkOmega/Weapons/WyvernBreath/WeapWyvernBreath.WeapWyvernBreath_C"
 		}
 	]
 }

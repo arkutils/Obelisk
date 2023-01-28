@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "355.3.1670856446",
+	"version": "356.4.1674892418",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -573,7 +573,7 @@
 			"name": "Alpha Meganeura",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaDragonfly_Character_BP.MegaDragonfly_Character_BP_C",
 			"dinoNameTag": "Dragonfly",
-			"customTag": "Ant",
+			"customTag": "MegaDragonfly",
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
 			"mass": 50,
 			"dragWeight": 30,
@@ -611,6 +611,46 @@
 				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 50, "radius": 522, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 3 }
+		},
+		{
+			"name": "Alpha Shinehorn",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaLanternGoat_Character_BP.MegaLanternGoat_Character_BP_C",
+			"dinoNameTag": "Lantern Goat",
+			"customTag": "LanternGoat",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 80,
+			"dragWeight": 100,
+			"variants": [ "Alpha" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": { "mutagenCost": 6 },
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 287.3, "sprint": 1117.2 },
+				"swim": { "base": 324 }
+			},
+			"movementD": {
+				"walk": { "base": 252.7, "sprint": 532 },
+				"swim": { "base": 285 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 120,
+				"defaultSwingRadius": 50,
+				"attacks": [ { "name": "Melee", "interval": 0.4, "dmg": 120, "radius": 330, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Alpha Megalodon",
@@ -668,6 +708,71 @@
 					}
 				],
 				"baseXP": 750
+			}
+		},
+		{
+			"name": "Alpha Phoenix",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaPhoenix_Character_BP.MegaPhoenix_Character_BP_C",
+			"dinoNameTag": "Phoenix",
+			"customTag": "Phoenix",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 35,
+			"variants": [ "Alpha" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 82 },
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 220,
+				"timeBase": 14350,
+				"timeLevel": 1540
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 520, "sprint": 637 },
+				"fly": { "base": 1800, "sprint": 2205 },
+				"swim": { "base": 1800 }
+			},
+			"movementD": {
+				"walk": { "base": 520, "sprint": 910 },
+				"fly": { "base": 1800, "sprint": 3150 },
+				"swim": { "base": 1800 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 175,
+				"defaultSwingRadius": 185,
+				"attacks": [
+					{ "name": "Attack Bite", "interval": 0.6, "dmg": 175, "radius": 525, "stamina": 0 },
+					{
+						"name": "Fireball (Rider)", "interval": 4, "dmg": 0, "radius": 0, "stamina": 75,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
 			}
 		},
 		{
@@ -1278,7 +1383,10 @@
 			"attack": {
 				"defaultDmg": 30,
 				"defaultSwingRadius": 145,
-				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 30, "radius": 145, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "None", "interval": 0.55, "dmg": 30, "radius": 145, "stamina": 0 },
+					{ "name": "Shock - Tamed", "interval": 1, "dmg": 35, "radius": 1800, "stamina": 0 }
+				]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -1882,8 +1990,7 @@
 					{ "chance": 0.2702703, "min": 1, "max": 1 },
 					{ "chance": 0.1351351, "min": 1, "max": 1 },
 					{ "chance": 0.05405405, "min": 1, "max": 1 }
-				],
-				"maxExperience": 0
+				]
 			},
 			"falling": {
 				"dmgMult": 80,
@@ -3120,8 +3227,7 @@
 					{ "chance": 0.2702703, "min": 1, "max": 1 },
 					{ "chance": 0.1351351, "min": 1, "max": 1 },
 					{ "chance": 0.05405405, "min": 1, "max": 1 }
-				],
-				"maxExperience": 0
+				]
 			},
 			"falling": {
 				"dmgMult": 80,
@@ -3221,6 +3327,121 @@
 			}
 		},
 		{
+			"name": "God Of Destruction",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Deities/GodDestroyer_Character_BP.GodDestroyer_Character_BP_C",
+			"dinoNameTag": "Destroyer",
+			"customTag": "Destroyer",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 45000,
+			"flags": [
+				"allowRiding",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": { "mutagenCost": 99000001 },
+			"cloning": {
+				"costBase": 2500000000,
+				"costLevel": 5500000000,
+				"timeBase": 17500000000,
+				"timeLevel": 38500000000
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 585, "sprint": 877.5 },
+				"fly": { "base": 1200, "sprint": 1800 },
+				"swim": { "base": 1200 }
+			},
+			"movementD": {
+				"walk": { "base": 585, "sprint": 877.5 },
+				"fly": { "base": 1200, "sprint": 1800 },
+				"swim": { "base": 1200 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 1080,
+				"defaultSwingRadius": 540,
+				"attacks": [
+					{ "name": "ClawAndFangs", "interval": 0.75, "dmg": 540, "radius": 300, "stamina": 30 },
+					{ "name": "PoisonSting", "interval": 13, "dmg": 540, "radius": 135, "stamina": 30 },
+					{
+						"name": "PoisonBall_Air_Vs_Ground", "interval": 8, "dmg": 540, "radius": 120, "stamina": 30,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": { "baseXP": 3000 }
+		},
+		{
+			"name": "God of Protection",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Deities/GodProtector_Character_BP.GodProtector_Character_BP_C",
+			"dinoNameTag": "Protector",
+			"customTag": "Protector",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 200,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": { "mutagenCost": 68 },
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1800, "sprint": 2250 },
+				"fly": { "base": 12000 },
+				"swim": { "base": 4500 }
+			},
+			"movementD": {
+				"walk": { "base": 1800, "sprint": 2250 },
+				"fly": { "base": 12000 },
+				"swim": { "base": 4500 }
+			},
+			"movementR": {
+				"walk": { "base": 2025, "sprint": 2531.2 },
+				"fly": { "base": 13500 },
+				"swim": { "base": 5062.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 1080,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Claw", "interval": 1, "dmg": 1080, "radius": 750, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 1080, "radius": 750, "stamina": 60 },
+					{ "name": "DivingSwipe", "interval": 3, "dmg": 1080, "radius": 2250, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 1080, "radius": 2250, "stamina": 30 }
+				]
+			},
+			"death": {
+				"dossierId": 1221,
+				"baseXP": 3
+			}
+		},
+		{
 			"name": "Land Destroyer",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Deities/LandDestroyer_Character_BP.LandDestroyer_Character_BP_C",
 			"dinoNameTag": "Trike",
@@ -3228,15 +3449,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 225,
 			"dragWeight": 300,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isTameable"
-			],
+			"flags": [ "allowMountedWeaponry", "allowRiding", "canDrag", "isBigDino" ],
 			"leveling": { "mutagenCost": 24 },
 			"cloning": {
 				"costBase": 575,
@@ -3279,15 +3492,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 260,
 			"dragWeight": 250,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isTameable"
-			],
+			"flags": [ "allowMountedWeaponry", "allowRiding", "canDrag", "isBigDino" ],
 			"leveling": { "mutagenCost": 30 },
 			"cloning": {
 				"costBase": 725,
@@ -3329,13 +3534,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 300,
 			"dragWeight": 75,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore",
-				"isWaterDino"
-			],
+			"flags": [ "allowRiding", "canDrag", "isCarnivore", "isWaterDino" ],
 			"leveling": { "mutagenCost": 22 },
 			"cloning": {
 				"costBase": 525,
@@ -3374,15 +3573,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 300,
 			"dragWeight": 250,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore",
-				"isWaterDino",
-				"isTameable"
-			],
+			"flags": [ "allowRiding", "canDrag", "isCarnivore", "isWaterDino" ],
 			"leveling": { "mutagenCost": 38 },
 			"cloning": {
 				"costBase": 925,
@@ -3430,15 +3621,7 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1200,
 			"dragWeight": 45000,
-			"flags": [
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino",
-				"isTameable"
-			],
+			"flags": [ "canDrag", "isBigDino", "isCarnivore", "isFlyerDino" ],
 			"leveling": { "mutagenCost": 99000001 },
 			"cloning": {
 				"costBase": 2500000000,
@@ -3489,13 +3672,10 @@
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"isTameable"
+				"isFlyerDino"
 			],
 			"leveling": { "mutagenCost": 68 },
 			"cloning": {
@@ -3864,7 +4044,10 @@
 			"attack": {
 				"defaultDmg": 61,
 				"defaultSwingRadius": 165,
-				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 61, "radius": 200, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.25, "dmg": 61, "radius": 200, "stamina": 0 },
+					{ "name": "Eruption", "interval": 10, "dmg": 0, "radius": 0, "stamina": 500 }
+				]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -4404,10 +4587,7 @@
 					{ "name": "PunchRight", "interval": 0, "dmg": 5000, "radius": 1500, "stamina": 0 }
 				]
 			},
-			"death": {
-				"dossierId": 686,
-				"baseXP": 2
-			}
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Desert Titan",
@@ -6244,7 +6424,7 @@
 			"name": "Meganeura",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Dragonfly_Character_BP_Child.Dragonfly_Character_BP_Child_C",
 			"dinoNameTag": "Dragonfly",
-			"customTag": "Ant",
+			"customTag": "Dragonfly",
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
 			"mass": 50,
 			"dragWeight": 30,
@@ -10548,7 +10728,7 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 20,
+				"defaultDmg": 24,
 				"defaultSwingRadius": 50,
 				"attacks": [ { "name": "Melee", "interval": 0.4, "dmg": 24, "radius": 220, "stamina": 0 } ]
 			},
@@ -11561,8 +11741,7 @@
 					{ "chance": 0.2702703, "min": 1, "max": 1 },
 					{ "chance": 0.1351351, "min": 1, "max": 1 },
 					{ "chance": 0.05405405, "min": 1, "max": 1 }
-				],
-				"maxExperience": 0
+				]
 			},
 			"falling": {
 				"dmgMult": 80,
@@ -15380,7 +15559,10 @@
 			"attack": {
 				"defaultDmg": 61,
 				"defaultSwingRadius": 165,
-				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 61, "radius": 200, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.25, "dmg": 61, "radius": 200, "stamina": 0 },
+					{ "name": "Eruption", "interval": 10, "dmg": 0, "radius": 0, "stamina": 500 }
+				]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -16221,52 +16403,6 @@
 			}
 		},
 		{
-			"name": "DodoRex",
-			"bp": "/Game/Mods/ArkOmega/PrimalEarth/Dinos/DodoRex/DodoRex_Character_BP_FearEvolved.DodoRex_Character_BP_FearEvolved_C",
-			"dinoNameTag": "DodoRex",
-			"customTag": "DodoRex",
-			"targetingTeamName": "TargetOnlyPlayers",
-			"mass": 400,
-			"dragWeight": 1500,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"leveling": { "wildForcedLevel": 1 },
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 1300, "sprint": 2860 }
-			},
-			"movementD": {
-				"walk": { "base": 1300, "sprint": 2860 }
-			},
-			"staminaRates": { "sprint": -40 },
-			"attack": {
-				"defaultDmg": 666,
-				"defaultSwingRadius": 870,
-				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 666, "radius": 870, "stamina": 0 },
-					{ "name": "Flame", "interval": 9, "dmg": 0, "radius": 1, "stamina": 100 }
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_FearEvolved.DinoDropInventoryComponent_Carnivore_Huge_FearEvolved"
-					}
-				],
-				"baseXP": 30
-			}
-		},
-		{
 			"name": "Tek Mosasaurus",
 			"bp": "/Game/Mods/ArkOmega/PrimalEarth/Dinos/Mosasaurus/BionicMosa_Character_BP.BionicMosa_Character_BP_C",
 			"dinoNameTag": "Mosasaur",
@@ -16329,87 +16465,6 @@
 					}
 				],
 				"baseXP": 15
-			}
-		},
-		{
-			"name": "Dodo Wyvern",
-			"bp": "/Game/Mods/ArkOmega/ScorchedEarth/Dinos/DodoWyvern/DodoWyvern_Character_BP.DodoWyvern_Character_BP_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 800,
-			"dragWeight": 1000,
-			"flags": [
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isCarnivore",
-				"isFlyerDino",
-				"preventCharacterBasing"
-			],
-			"leveling": {
-				"wildLevelTable": [
-					{ "chance": 0.4, "min": 1, "max": 5 },
-					{ "chance": 0.2, "min": 6, "max": 12 },
-					{ "chance": 0.2, "min": 13, "max": 20 },
-					{ "chance": 0.2, "min": 21, "max": 38 }
-				],
-				"mutagenCost": 82
-			},
-			"cloning": {
-				"costBase": 2050,
-				"costLevel": 55,
-				"timeBase": 14350,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 1300 },
-				"fly": { "base": 3000, "sprint": 2000 },
-				"swim": { "base": 3000 }
-			},
-			"movementD": {
-				"walk": { "base": 1300 },
-				"fly": { "base": 3000, "sprint": 2000 },
-				"swim": { "base": 3000 }
-			},
-			"movementR": {
-				"walk": { "base": 1079 },
-				"fly": { "base": 2490, "sprint": 2905 },
-				"swim": { "base": 2490 }
-			},
-			"staminaRates": { "swimOrFly": -3 },
-			"attack": {
-				"defaultDmg": 160,
-				"defaultSwingRadius": 1200,
-				"attacks": [
-					{ "name": "Bite (AI)", "interval": 1, "dmg": 600, "radius": 1000, "stamina": 10 },
-					{
-						"name": "Breathe_Lightning", "interval": 6.5, "dmg": 0, "radius": 0, "stamina": 125,
-						"isProjectile": true
-					},
-					{ "name": "Breathe_Fire", "interval": 5, "dmg": 0, "radius": 0, "stamina": 125 },
-					{
-						"name": "Breathe_Poison", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
-						"isProjectile": true
-					}
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_FearEvolved.DinoDropInventoryComponent_Carnivore_Huge_FearEvolved"
-					}
-				],
-				"baseXP": 120
 			}
 		},
 		{
