@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "355.12.1672955615",
+	"version": "356.5.1675949309",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -10072,6 +10072,54 @@
 				]
 			},
 			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Dimorphodon",
+			"bp": "/Game/Mods/AE/Dinos/DragonPack/Creatures/DragonKing/Yggdrasil/Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Ygg.Dimorph_Character_BP_Aggressive_DragonBoss_Hard_Ygg_C",
+			"dinoNameTag": "Dimorph",
+			"customTag": "Dimorph",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 70,
+			"dragWeight": 70,
+			"variants": [ "Alpha", "Boss", "Minion" ],
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canMountOnHumans",
+				"isBossDino",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 2000, "sprint": 3600 },
+				"swim": { "base": 2000 }
+			},
+			"movementD": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 2000, "sprint": 3600 },
+				"swim": { "base": 2000 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 23,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 23, "radius": 200, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Desert Dragon",
@@ -27198,7 +27246,7 @@
 				"timeLevel": 38.5
 			},
 			"falling": {
-				"dmgMult": 5,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -43290,7 +43338,7 @@
 			}
 		},
 		{
-			"name": "Paraceratherium",
+			"name": "Giraffe",
 			"bp": "/Game/Mods/AE/Dinos/Special/Giraffe/AEGiraffe_Character_BP.AEGiraffe_Character_BP_C",
 			"dinoNameTag": "AE_Giraffe_Base",
 			"customTag": "Alpha_Wyvern",
@@ -45203,6 +45251,149 @@
 			}
 		},
 		{
+			"name": "Albino Mike",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/AlbinoMike/AlbinoMike_Character_BP.AlbinoMike_Character_BP_C",
+			"dinoNameTag": "Tapejara_AlbinoMike",
+			"customTag": "Tapejara",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 67
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1760 },
+				"fly": { "base": 1400, "sprint": 4928 },
+				"swim": { "base": 600, "sprint": 2112 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1600 },
+				"fly": { "base": 1400, "sprint": 4480 },
+				"swim": { "base": 600, "sprint": 1920 }
+			},
+			"movementR": {
+				"walk": { "base": 562.5, "sprint": 1800 },
+				"fly": { "base": 1575, "sprint": 5040 },
+				"swim": { "base": 675, "sprint": 2160 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32000,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 60000, "radius": 400, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 400, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0.6, "dmg": 72, "radius": 400, "stamina": 0 },
+					{ "name": "Laser", "interval": 1, "dmg": 0, "radius": 400, "stamina": 25 },
+					{ "name": "AOE", "interval": 0.6, "dmg": 60000, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Robot/DinoDropInventoryComponent_Robot.DinoDropInventoryComponent_Robot"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Amy The Amers",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/AmyTheAmers/Amy_Dodo_Character_BP.Amy_Dodo_Character_BP_C",
+			"dinoNameTag": "Amy_Dodo",
+			"customTag": "Alpha_Wyvern",
+			"targetingTeamName": "Herbivores",
+			"mass": 100000,
+			"dragWeight": 25,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 2
+			},
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1260 },
+				"swim": { "base": 600, "sprint": 1260 }
+			},
+			"movementD": {
+				"walk": { "base": 504, "sprint": 1323 },
+				"swim": { "base": 504, "sprint": 1323 }
+			},
+			"movementR": {
+				"walk": { "base": 504, "sprint": 1984.5 },
+				"swim": { "base": 504, "sprint": 1984.5 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 2400,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.25, "dmg": 75000, "radius": 360, "stamina": 5 },
+					{ "name": "Fireball", "interval": 0.25, "dmg": 75000, "radius": 360, "stamina": 5 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
 			"name": "Chewie Arch's buddy",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Arch/Shapeshifter_Small_Character_BP_Arch.Shapeshifter_Small_Character_BP_Arch_C",
 			"dinoNameTag": "Archie",
@@ -46730,6 +46921,73 @@
 			}
 		},
 		{
+			"name": "Dee Generate",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Dee/DeeGenerate_Owl_Character_BP.DeeGenerate_Owl_Character_BP_C",
+			"dinoNameTag": "Trib_Owl_Dee",
+			"customTag": "Owl",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 250,
+			"dragWeight": 250,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"allowRidingInWater",
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isFlyerDino",
+				"preventCharacterBasing",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 980 },
+				"fly": { "base": 600, "sprint": 2520 },
+				"swim": { "base": 300, "sprint": 840 }
+			},
+			"movementD": {
+				"walk": { "base": 420, "sprint": 1470 },
+				"fly": { "base": 720, "sprint": 3780 },
+				"swim": { "base": 360, "sprint": 1260 }
+			},
+			"movementR": {
+				"walk": { "base": 441, "sprint": 1543.5 },
+				"fly": { "base": 756, "sprint": 3969 },
+				"swim": { "base": 378, "sprint": 1323 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 75000,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.6, "dmg": 75000, "radius": 240, "stamina": 0 },
+					{ "name": "Encapsulate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "PredatorVision", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Beam", "interval": 15, "dmg": 0, "radius": 240, "stamina": 500 },
+					{ "name": "AOE", "interval": 0.6, "dmg": 75000, "radius": 240, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Eternal Dominus Ovis",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/DominusOvis/Dominus_Sheep_Character_BP.Dominus_Sheep_Character_BP_C",
 			"dinoNameTag": "Dominus_Sheep",
@@ -46872,7 +47130,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 20, "max": 38 } ],
+				"wildForcedLevel": 600,
 				"mutagenCost": 1
 			},
 			"cloning": {
@@ -46882,7 +47140,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 10,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -46894,20 +47152,22 @@
 				"swim": { "base": 600, "sprint": 945 }
 			},
 			"staminaRates": {
-				"sprint": -3,
-				"swimOrFly": -0.275
+				"sprint": -40,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 0,
 				"defaultSwingRadius": 600,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 4620, "radius": 600, "stamina": 20 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 75000, "radius": 600, "stamina": 20 },
 					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 22000, "radius": 0, "stamina": 0 },
-					{ "name": "Pounce_AOE", "interval": 0, "dmg": 22000, "radius": 0, "stamina": 0 },
-					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 4620, "radius": 900, "stamina": 20 },
-					{ "name": "Beam", "interval": 32, "dmg": 4800, "radius": 600, "stamina": 20 }
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 75000, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 75000, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 75000, "radius": 900, "stamina": 20 },
+					{ "name": "Beam", "interval": 32, "dmg": 75000, "radius": 600, "stamina": 20 },
+					{ "name": "AOE", "interval": 0.5, "dmg": 75000, "radius": 600, "stamina": 20 },
+					{ "name": "Minions", "interval": 0.5, "dmg": 75000, "radius": 600, "stamina": 20 }
 				]
 			},
 			"death": {
@@ -46928,6 +47188,61 @@
 				],
 				"baseXP": 2
 			}
+		},
+		{
+			"name": "DragonMstr Minion",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/DragonMstr/Microraptor_Character_BP_minion.Microraptor_Character_BP_minion_C",
+			"dinoNameTag": "Microraptor_minion",
+			"customTag": "Microraptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 70,
+			"dragWeight": 35,
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"canMountOnHumans",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 35
+			},
+			"cloning": {
+				"costBase": 850,
+				"costLevel": 55,
+				"timeBase": 5950,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 135, "sprint": 1125 },
+				"fly": { "base": 135, "sprint": 562.5 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 900 },
+				"fly": { "base": 150, "sprint": 450 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 3000, "radius": 120, "stamina": 0 },
+					{ "name": "AirAttack(Dismount)", "interval": 0.5, "dmg": 8, "radius": 290, "stamina": 0 },
+					{ "name": "GlideAttackStart", "interval": 4, "dmg": 8, "radius": 120, "stamina": 0 },
+					{ "name": "JumpAttack", "interval": 5, "dmg": 3000, "radius": 150, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Dreadmorph",
@@ -47783,13 +48098,16 @@
 			"mass": 10000,
 			"dragWeight": 120,
 			"flags": [
+				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
+				"flyerAllowRidingInCaves",
 				"isCarnivore",
+				"isFlyerDino",
 				"isTameable"
 			],
 			"leveling": {
@@ -47811,10 +48129,12 @@
 			},
 			"movementW": {
 				"walk": { "base": 223.2, "sprint": 1017.8 },
+				"fly": { "base": 480, "sprint": 2188.8 },
 				"swim": { "base": 240, "sprint": 1094.4 }
 			},
 			"movementD": {
 				"walk": { "base": 223.2, "sprint": 1017.8 },
+				"fly": { "base": 480, "sprint": 2188.8 },
 				"swim": { "base": 240, "sprint": 1094.4 }
 			},
 			"staminaRates": {
@@ -47867,7 +48187,7 @@
 				]
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -47926,7 +48246,7 @@
 				]
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -47985,7 +48305,7 @@
 				]
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -48152,7 +48472,7 @@
 			],
 			"leveling": { "wildForcedLevel": 600 },
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -48185,6 +48505,90 @@
 					}
 				],
 				"baseXP": 20
+			}
+		},
+		{
+			"name": "River Princess",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/LethargicMob/RiverPrincess_Character_BP.RiverPrincess_Character_BP_C",
+			"dinoNameTag": "River_Princess",
+			"customTag": "Direwolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 58
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 223.2, "sprint": 1017.8 },
+				"fly": { "base": 480, "sprint": 2188.8 },
+				"swim": { "base": 240, "sprint": 1094.4 }
+			},
+			"movementD": {
+				"walk": { "base": 223.2, "sprint": 1017.8 },
+				"fly": { "base": 480, "sprint": 2188.8 },
+				"swim": { "base": 240, "sprint": 1094.4 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 75000,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "None", "interval": 0.08, "dmg": 75000, "radius": 160, "stamina": 5 },
+					{ "name": "Howl", "interval": 180, "dmg": 0, "radius": 0, "stamina": 35 },
+					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 },
+					{
+						"name": "Melee", "interval": 5, "dmg": 75000, "radius": 1300, "stamina": 0,
+						"isProjectile": true
+					},
+					{
+						"name": "Melee", "interval": 5, "dmg": 7500, "radius": 1300, "stamina": 0,
+						"isProjectile": true
+					},
+					{
+						"name": "Melee", "interval": 5, "dmg": 7500, "radius": 1300, "stamina": 0,
+						"isProjectile": true
+					},
+					{
+						"name": "Melee", "interval": 5, "dmg": 7500, "radius": 1300, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 6
 			}
 		},
 		{
@@ -48317,7 +48721,8 @@
 					{ "name": "Bite", "interval": 0.4, "dmg": 750000, "radius": 300, "stamina": 0 },
 					{ "name": "Rawr", "interval": 3, "dmg": 750000, "radius": 300, "stamina": 0 },
 					{ "name": "Rawr", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Rawr", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Rawr", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "AOE", "interval": 1, "dmg": 75000, "radius": 300, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -48406,6 +48811,71 @@
 			}
 		},
 		{
+			"name": "MiniNinja",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/MiniNinja/Tamed/MiniNinja_Character_BP_Tamed.MiniNinja_Character_BP_Tamed_C",
+			"dinoNameTag": "MiniNinja_Tamed",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 3000,
+			"dragWeight": 550,
+			"variants": [ "Tamed" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 1
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"fly": { "base": 3000, "sprint": 6000 },
+				"swim": { "base": 300, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"fly": { "base": 3000, "sprint": 6000 },
+				"swim": { "base": 300, "sprint": 1500 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 75000,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 75000, "radius": 300, "stamina": 0 },
+					{ "name": "Rawr", "interval": 3, "dmg": 75000, "radius": 300, "stamina": 0 },
+					{ "name": "Rawr", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Rawr", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "AOE", "interval": 1, "dmg": 75000, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 400
+			}
+		},
+		{
 			"name": "Morph's Death From Below",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Morpheus/DeathFromBelow_Character_BP.DeathFromBelow_Character_BP_C",
 			"dinoNameTag": "Morpheus_Tribute",
@@ -48433,7 +48903,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -48470,6 +48940,506 @@
 					}
 				],
 				"baseXP": 6
+			}
+		},
+		{
+			"name": "Evo Dragon",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Morpheus/DragonEvos/ArkDragon/Evo_Dragon_Character_BP.Evo_Dragon_Character_BP_C",
+			"dinoNameTag": "Evo_Dragon",
+			"customTag": "Dragon",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 1000,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 15, "max": 19 },
+					{ "chance": 0.5, "min": 20, "max": 30 }
+				],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 2400 },
+				"fly": { "base": 3000, "sprint": 4950 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 2400 },
+				"fly": { "base": 3000, "sprint": 4950 },
+				"swim": { "base": 3000 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 800,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 1500, "radius": 1200, "stamina": 30 },
+					{ "name": "Flame", "interval": 15, "dmg": 0, "radius": 1200, "stamina": 100 },
+					{ "name": "Flame2", "interval": 15, "dmg": 0, "radius": 1200, "stamina": 100 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 1200, "stamina": 100 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 200
+			}
+		},
+		{
+			"name": "Evo Chinese Dragon",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Morpheus/DragonEvos/ChineseDragon/Evo_ChineseDragon_Character_BP.Evo_ChineseDragon_Character_BP_C",
+			"dinoNameTag": "Evo_Chinese_Dragon",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 3000,
+			"dragWeight": 1000,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"flyerAllowRidingInCaves",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 42 } ],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 2000 },
+				"fly": { "base": 600, "sprint": 2400 },
+				"swim": { "base": 1600, "sprint": 5120 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2000 },
+				"fly": { "base": 600, "sprint": 2400 },
+				"swim": { "base": 1600, "sprint": 5120 }
+			},
+			"staminaRates": {
+				"sprint": -60,
+				"swimOrFly": 0
+			},
+			"attack": {
+				"defaultDmg": 115,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 1750, "radius": 400, "stamina": 0 },
+					{ "name": "SplosionofBOOM", "interval": 30, "dmg": 2000, "radius": 700, "stamina": 0 },
+					{ "name": "SparkRoar", "interval": 20, "dmg": 750, "radius": 400, "stamina": 0 },
+					{ "name": "BodyShock", "interval": 10, "dmg": 500, "radius": 600, "stamina": 0 },
+					{ "name": "Manashot", "interval": 20, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Evo Desert Dragon",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Morpheus/DragonEvos/DesertDragon/Evo_DesertDragon_Character_BP.Evo_DesertDragon_Character_BP_C",
+			"dinoNameTag": "Evo_Desert Dragon",
+			"customTag": "Dimorph",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 70,
+			"dragWeight": 70,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canMountOnHumans",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 29 },
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 2300,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 2300, "radius": 200, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Evo DragonSnake",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Morpheus/DragonEvos/DragonSnake/Evo_DragonSnake_Character_BP.Evo_DragonSnake_Character_BP_C",
+			"dinoNameTag": "DragonSnake",
+			"customTag": "Basilisk",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 425,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 78
+			},
+			"cloning": {
+				"costBase": 1950,
+				"costLevel": 55,
+				"timeBase": 13650,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1008 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1680 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 76000,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.67, "dmg": 76000, "radius": 500, "stamina": 10 },
+					{
+						"name": "Ranged", "interval": 8, "dmg": 76000, "radius": 600, "stamina": 65,
+						"isProjectile": true
+					},
+					{ "name": "Gaze", "interval": 20, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Ranged", "interval": 8, "dmg": 76000, "radius": 600, "stamina": 65 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Basilisk.DinoDropInventoryComponent_Carnivore_Large_Basilisk"
+					}
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Evo Forest Dragon",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Morpheus/DragonEvos/ForestDragon/Evo_ForestDragon_Character_BP.Evo_ForestDragon_Character_BP_C",
+			"dinoNameTag": "Evo_Forest_Dragon",
+			"customTag": "DragonKing",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 3000,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 60, "max": 60 } ],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 850, "sprint": 2125 }
+			},
+			"movementD": {
+				"walk": { "base": 850, "sprint": 4250 }
+			},
+			"staminaRates": { "sprint": -760 },
+			"attack": {
+				"defaultDmg": 120,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 1150, "radius": 560, "stamina": 0 },
+					{ "name": "Bite", "interval": 45, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite", "interval": 45, "dmg": 380, "radius": 1230, "stamina": 0 },
+					{ "name": "Bite", "interval": 120, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "Bite", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": { "baseXP": 400 }
+		},
+		{
+			"name": "Evo Mountain Dragon",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Morpheus/DragonEvos/MountainDragon/Evo_MountainDragon_Character_BP.Evo_MountainDragon_Character_BP_C",
+			"dinoNameTag": "Mountain_Dragon_AE_Base",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 3000,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 42 } ],
+				"mutagenCost": 1
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"fly": { "base": 3000, "sprint": 6000 },
+				"swim": { "base": 300, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"fly": { "base": 3000, "sprint": 6000 },
+				"swim": { "base": 300, "sprint": 1500 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 120,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 565, "radius": 300, "stamina": 0 },
+					{ "name": "Rawr", "interval": 3, "dmg": 240, "radius": 300, "stamina": 0 },
+					{ "name": "Rawr", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Rawr", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 400
+			}
+		},
+		{
+			"name": "Evo Polar Dragon",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Morpheus/DragonEvos/PolarDragon/Evo_PolarDragon_Character_BP.Evo_PolarDragon_Character_BP_C",
+			"dinoNameTag": "Evo_PolarDragon",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 3000,
+			"dragWeight": 550,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 30, "max": 42 } ],
+				"mutagenCost": 1
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"fly": { "base": 3000, "sprint": 6000 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 3500 },
+				"fly": { "base": 3000, "sprint": 6000 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 120,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 400, "radius": 450, "stamina": 0 },
+					{ "name": "Rawr", "interval": 0.4, "dmg": 200, "radius": 300, "stamina": 0 },
+					{ "name": "Rawr", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "Rawr", "interval": 15, "dmg": 0, "radius": 0, "stamina": 160,
+						"isProjectile": true
+					},
+					{ "name": "Rawr", "interval": 5, "dmg": 0, "radius": 0, "stamina": 160 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 400
+			}
+		},
+		{
+			"name": "Evo Ultima Dragon",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Morpheus/DragonEvos/UltimaDragon/Evo_UltimaDragon_Character_BP.Evo_UltimaDragon_Character_BP_C",
+			"dinoNameTag": "Evo_DragonTrike",
+			"customTag": "Dragon",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1500,
+			"dragWeight": 1000,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1000, "sprint": 3000 },
+				"fly": { "base": 2500, "sprint": 4125 },
+				"swim": { "base": 2500 }
+			},
+			"movementD": {
+				"walk": { "base": 1000, "sprint": 3000 },
+				"fly": { "base": 2500, "sprint": 4125 },
+				"swim": { "base": 2500 }
+			},
+			"staminaRates": {
+				"sprint": -22,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 5000, "radius": 1200, "stamina": 30 },
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 5000, "radius": 1200, "stamina": 30 },
+					{ "name": "Wing", "interval": 2, "dmg": 5000, "radius": 2500, "stamina": 30 },
+					{ "name": "Flame", "interval": 15, "dmg": 0, "radius": 1200, "stamina": 100 },
+					{
+						"name": "Flame", "interval": 10, "dmg": 0, "radius": 1200, "stamina": 100,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge.DinoDropInventoryComponent_Carnivore_Huge"
+					}
+				],
+				"baseXP": 3000
 			}
 		},
 		{
@@ -49006,6 +49976,77 @@
 				]
 			},
 			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "Raven",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Raven/Raven_Character_BP.Raven_Character_BP_C",
+			"dinoNameTag": "Raven",
+			"customTag": "Argent",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 190,
+			"dragWeight": 150,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 68
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 485 },
+				"fly": { "base": 750, "sprint": 909.4 },
+				"swim": { "base": 750, "sprint": 909.4 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 900 },
+				"fly": { "base": 750, "sprint": 1687.5 },
+				"swim": { "base": 750, "sprint": 1687.5 }
+			},
+			"movementR": {
+				"walk": { "base": 437, "sprint": 983.2 },
+				"fly": { "base": 819.4, "sprint": 1843.6 },
+				"swim": { "base": 819.4, "sprint": 1843.6 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 75000,
+				"defaultSwingRadius": 210,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 75000, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 4, "dmg": 12, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 4, "dmg": 12, "radius": 300, "stamina": 120 },
+					{ "name": "None", "interval": 0.6, "dmg": 75000, "radius": 240, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Argentavis.DinoDropInventoryComponent_Carnivore_Large_Argentavis"
+					}
+				],
+				"baseXP": 7
+			}
 		},
 		{
 			"name": "Simpleton",
@@ -49697,6 +50738,71 @@
 					}
 				],
 				"baseXP": 200
+			}
+		},
+		{
+			"name": "Wicked MegaPithecus",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Wicked/Gorilla/WickedGorilla_Character_BP.WickedGorilla_Character_BP_C",
+			"dinoNameTag": "Megapithecus_Wicked",
+			"customTag": "Megapithecus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 1
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 575, "sprint": 2300 },
+				"swim": { "base": 345 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 2000 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 76000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 1, "dmg": 76000, "radius": 600, "stamina": 30 },
+					{ "name": "Proj", "interval": 1, "dmg": 0, "radius": 600, "stamina": 30 },
+					{
+						"name": "ThrowRock", "interval": 11, "dmg": 0, "radius": 1200, "stamina": 300,
+						"isProjectile": true
+					},
+					{
+						"name": "Fireball", "interval": 30, "dmg": 10, "radius": 1, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Mystical/DinoDropInventoryComponent_Immortal_hard.DinoDropInventoryComponent_Immortal_hard"
+					}
+				],
+				"baseXP": 5
 			}
 		},
 		{
