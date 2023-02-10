@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "356.3.1674614859",
+	"version": "356.5.1675723744",
 	"format": "4",
 	"mod": {
 		"id": "2003934830",
@@ -5969,6 +5969,52 @@
 		{
 			"name": "Venenosaurus",
 			"bp": "/Game/Mods/Beasts/Venenosaurus/BPs/Venenosaurus_Character_BP.Venenosaurus_Character_BP_C",
+			"dinoNameTag": "Venenosaurus",
+			"customTag": "Venenosaurus",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 380,
+			"dragWeight": 300,
+			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isTameable" ],
+			"leveling": { "mutagenCost": 36 },
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 13,
+				"defaultSwingRadius": 185,
+				"attacks": [
+					{
+						"name": "Spit", "interval": 0.63, "dmg": 16, "radius": 2000, "stamina": 80,
+						"isProjectile": true
+					},
+					{ "name": "Tail", "interval": 0.63, "dmg": 27, "radius": 280, "stamina": 15 },
+					{ "name": "Stomp", "interval": 1.5, "dmg": 33, "radius": 280, "stamina": 30 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Aberrant Venenosaurus",
+			"bp": "/Game/Mods/Beasts/Venenosaurus/BPs/Venenosaurus_Character_BP_Aberrant.Venenosaurus_Character_BP_Aberrant_C",
 			"dinoNameTag": "Venenosaurus",
 			"customTag": "Venenosaurus",
 			"targetingTeamName": "Herbivores_Medium",
