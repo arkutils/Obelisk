@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "356.5.1675401434",
+	"version": "356.11.1676147951",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -42636,6 +42636,84 @@
 			}
 		},
 		{
+			"name": "Alpha Dinopithecus",
+			"bp": "/Game/Mods/Trex/LostIsland/Dinos/Dinopithecus/Alpha/AlphaDinopithecus_Character_BP_ADO.AlphaDinopithecus_Character_BP_ADO_C",
+			"dinoNameTag": "Dinopithecus",
+			"customTag": "AlphaDinopithecus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 325,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 5, "max": 10 },
+					{ "chance": 0.2702703, "min": 12, "max": 24 },
+					{ "chance": 0.1351351, "min": 26, "max": 40 },
+					{ "chance": 0.05405405, "min": 42, "max": 60 }
+				],
+				"maxExperience": 22213960,
+				"levelCapOffset": 50,
+				"mutagenCost": 68
+			},
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 6200
+			},
+			"movementW": {
+				"walk": { "base": 510, "sprint": 1606.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 510, "sprint": 1785 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 900,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 900, "radius": 350, "stamina": 0 },
+					{ "name": "Melee", "interval": 1, "dmg": 650, "radius": 500, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 650, "radius": 180, "stamina": 0 },
+					{
+						"name": "Throw Boulder", "interval": 15, "dmg": 0, "radius": 0, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "BattlecryCry", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BattlecryAttack", "interval": 30, "dmg": 500, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1225,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Medium_Alpha.DinoDropInventoryComponent_Carnivore_Medium_Alpha"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
 			"name": "Dinopithecus",
 			"bp": "/Game/Mods/Trex/LostIsland/Dinos/Dinopithecus/Dinopithecus_Character_BP_Child.Dinopithecus_Character_BP_Child_C",
 			"dinoNameTag": "Dinopithecus",
@@ -42711,6 +42789,135 @@
 					}
 				],
 				"baseXP": 3
+			}
+		},
+		{
+			"name": "Supreme Dinopithecus King Boss",
+			"bp": "/Game/Mods/Trex/LostIsland/Dinos/Dinopithecus/Tribute/SuperDinopithecus_Character_BP_Boss.SuperDinopithecus_Character_BP_Boss_C",
+			"dinoNameTag": "Dinopithecus",
+			"customTag": "AlphaDinopithecus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 3200 },
+				"swim": { "base": 150 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 3200 },
+				"swim": { "base": 150 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 27500,
+				"defaultSwingRadius": 700,
+				"attacks": [
+					{ "name": "Claw", "interval": 0.5, "dmg": 27500, "radius": 700, "stamina": 30 },
+					{
+						"name": "Grenade", "interval": 10, "dmg": 0, "radius": 600, "stamina": 30,
+						"isProjectile": true
+					},
+					{ "name": "Bite", "interval": 6, "dmg": 25000, "radius": 600, "stamina": 30 },
+					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 600, "stamina": 0 },
+					{
+						"name": "EMB", "interval": 3, "dmg": 0, "radius": 600, "stamina": 30,
+						"isProjectile": true
+					},
+					{ "name": "Pound", "interval": 60, "dmg": 20000, "radius": 700, "stamina": 30 },
+					{ "name": "AOE attack", "interval": 60, "dmg": 20000, "radius": 700, "stamina": 100 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Trex/LostIsland/Dinos/Dinopithecus/Tribute/DinoDropInventoryComponent_BossDinopithec.DinoDropInventoryComponent_BossDinopithec"
+					}
+				],
+				"engrams": [ "PrimalItem_Transform_SupremeDinopithec_C" ],
+				"baseXP": 3000
+			}
+		},
+		{
+			"name": "Supreme Dinopithecus King",
+			"bp": "/Game/Mods/Trex/LostIsland/Dinos/Dinopithecus/Tribute/SupremeDinopithecus_Character_BP.SupremeDinopithecus_Character_BP_C",
+			"dinoNameTag": "Dinopithecus",
+			"customTag": "AlphaDinopithecus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 3200 },
+				"swim": { "base": 150 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 3200 },
+				"swim": { "base": 150 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 7500,
+				"defaultSwingRadius": 700,
+				"attacks": [
+					{ "name": "Claw", "interval": 0.5, "dmg": 7500, "radius": 700, "stamina": 30 },
+					{
+						"name": "Grenade", "interval": 10, "dmg": 0, "radius": 600, "stamina": 30,
+						"isProjectile": true
+					},
+					{ "name": "Bite", "interval": 6, "dmg": 6000, "radius": 600, "stamina": 30 },
+					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 600, "stamina": 0 },
+					{
+						"name": "EMB", "interval": 3, "dmg": 0, "radius": 600, "stamina": 30,
+						"isProjectile": true
+					},
+					{ "name": "Pound", "interval": 20, "dmg": 5000, "radius": 700, "stamina": 30 },
+					{ "name": "AOE attack", "interval": 60, "dmg": 5000, "radius": 700, "stamina": 100 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Trex/Ubers/Dinopithecus/DinoDropInventoryComponent_UberDinopithec.DinoDropInventoryComponent_UberDinopithec"
+					}
+				],
+				"baseXP": 3000
 			}
 		},
 		{
