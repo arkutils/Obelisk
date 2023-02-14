@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "356.5.1675373582",
+	"version": "356.11.1676323618",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -1115,6 +1115,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"doStepDamage",
 				"isBigDino",
 				"isCarnivore",
 				"isTameable"
@@ -1458,8 +1459,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 52, "radius": 300, "stamina": 0 },
-					{ "name": "Headbutt", "interval": 15, "dmg": 62, "radius": 300, "stamina": 80 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 52, "radius": 300, "stamina": 0 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 62, "radius": 300, "stamina": 80 },
 					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -1510,8 +1511,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 52, "radius": 300, "stamina": 0 },
-					{ "name": "Headbutt", "interval": 15, "dmg": 62, "radius": 300, "stamina": 80 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 52, "radius": 300, "stamina": 0 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 62, "radius": 300, "stamina": 80 },
 					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -1560,8 +1561,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 125, "radius": 600, "stamina": 0 },
-					{ "name": "Headbutt", "interval": 15, "dmg": 140, "radius": 300, "stamina": 80 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 125, "radius": 600, "stamina": 0 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 140, "radius": 300, "stamina": 80 },
 					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -1620,8 +1621,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.2, "dmg": 125, "radius": 600, "stamina": 0 },
-					{ "name": "Headbutt", "interval": 15, "dmg": 140, "radius": 300, "stamina": 80 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 125, "radius": 600, "stamina": 0 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 140, "radius": 300, "stamina": 80 },
 					{ "name": "Roar", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -2552,6 +2553,60 @@
 				]
 			},
 			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Ouranosaurus",
+			"bp": "/Game/Mods/AC2/Ourano/Ourano_Character_BP.Ourano_Character_BP_C",
+			"dinoNameTag": "Iguanodon",
+			"customTag": "Ourano",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 330,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.8, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 67
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 119, "sprint": 1530 }
+			},
+			"movementD": {
+				"walk": { "base": 170, "sprint": 1530 }
+			},
+			"staminaRates": { "sprint": -25 },
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Headbutt", "interval": 0.1, "dmg": 25, "radius": 300, "stamina": 0 },
+					{ "name": "Stomp", "interval": 5, "dmg": 32, "radius": 300, "stamina": 50 },
+					{ "name": "Roar", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ActivateReserves", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "DeactivateReserves", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Oxalaia",
@@ -4480,9 +4535,9 @@
 				"defaultSwingRadius": 260,
 				"attacks": [
 					{ "name": "TailDirectional", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
-					{ "name": "TailSlam", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.2, "dmg": 38, "radius": 450, "stamina": 0 },
-					{ "name": "TailSpecial", "interval": 10, "dmg": 65, "radius": 450, "stamina": 50 },
+					{ "name": "TailSlam", "interval": 0.2, "dmg": 50, "radius": 450, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.2, "dmg": 25, "radius": 450, "stamina": 0 },
+					{ "name": "TailSpecial", "interval": 10, "dmg": 68, "radius": 450, "stamina": 50 },
 					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -4533,9 +4588,9 @@
 				"defaultSwingRadius": 260,
 				"attacks": [
 					{ "name": "TailDirectional", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
-					{ "name": "TailSlam", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.2, "dmg": 38, "radius": 450, "stamina": 0 },
-					{ "name": "TailSpecial", "interval": 10, "dmg": 65, "radius": 450, "stamina": 50 },
+					{ "name": "TailSlam", "interval": 0.2, "dmg": 50, "radius": 450, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.2, "dmg": 25, "radius": 450, "stamina": 0 },
+					{ "name": "TailSpecial", "interval": 10, "dmg": 68, "radius": 450, "stamina": 50 },
 					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -5374,7 +5429,7 @@
 				"defaultDmg": 42,
 				"defaultSwingRadius": 450,
 				"attacks": [
-					{ "name": "Tail", "interval": 0.4, "dmg": 30, "radius": 480, "stamina": 0 },
+					{ "name": "Tail", "interval": 0.4, "dmg": 35, "radius": 480, "stamina": 0 },
 					{ "name": "Bite", "interval": 5, "dmg": 20, "radius": 480, "stamina": 0 },
 					{ "name": "RawrXD", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -5423,7 +5478,7 @@
 				"defaultDmg": 42,
 				"defaultSwingRadius": 450,
 				"attacks": [
-					{ "name": "Tail", "interval": 0.4, "dmg": 30, "radius": 480, "stamina": 0 },
+					{ "name": "Tail", "interval": 0.4, "dmg": 35, "radius": 480, "stamina": 0 },
 					{ "name": "Bite", "interval": 5, "dmg": 20, "radius": 480, "stamina": 0 },
 					{ "name": "RawrXD", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
