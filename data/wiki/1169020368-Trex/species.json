@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "356.11.1676147951",
+	"version": "356.11.1676753029",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -41697,6 +41697,67 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Indoraptor",
+			"bp": "/Game/Mods/Trex/IndoRaptor/IndoRaptor_Character_BP.IndoRaptor_Character_BP_C",
+			"dinoNameTag": "MutaRaptor",
+			"customTag": "MutaRaptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 580, "sprint": 1200.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 580, "sprint": 1334 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 100, "stamina": 10 },
+					{ "name": "Pounce", "interval": 10, "dmg": 25, "radius": 450, "stamina": 10 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 20, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
 			"name": "Alpha Indominus Rex",
 			"bp": "/Game/Mods/Trex/IndomRex/Alpha/AlphaIndom_Character_BP_Tamed_ADO.AlphaIndom_Character_BP_Tamed_ADO_C",
 			"dinoNameTag": "AlphaIndom",
@@ -42792,7 +42853,7 @@
 			}
 		},
 		{
-			"name": "Supreme Dinopithecus King Boss",
+			"name": "Odracir, the Supreme Dinopithecus King Boss",
 			"bp": "/Game/Mods/Trex/LostIsland/Dinos/Dinopithecus/Tribute/SuperDinopithecus_Character_BP_Boss.SuperDinopithecus_Character_BP_Boss_C",
 			"dinoNameTag": "Dinopithecus",
 			"customTag": "AlphaDinopithecus",
@@ -42813,12 +42874,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 800, "sprint": 3200 },
-				"swim": { "base": 150 }
+				"walk": { "base": 1500, "sprint": 2250 },
+				"swim": { "base": 500 }
 			},
 			"movementD": {
-				"walk": { "base": 800, "sprint": 3200 },
-				"swim": { "base": 150 }
+				"walk": { "base": 1500, "sprint": 2250 },
+				"swim": { "base": 500 }
 			},
 			"staminaRates": {
 				"sprint": -7,
@@ -42856,7 +42917,7 @@
 			}
 		},
 		{
-			"name": "Supreme Dinopithecus King",
+			"name": "Odracir, (TBF's) Supreme Dinopithecus King",
 			"bp": "/Game/Mods/Trex/LostIsland/Dinos/Dinopithecus/Tribute/SupremeDinopithecus_Character_BP.SupremeDinopithecus_Character_BP_C",
 			"dinoNameTag": "Dinopithecus",
 			"customTag": "AlphaDinopithecus",
@@ -43182,7 +43243,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43236,7 +43297,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43290,7 +43351,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43341,7 +43402,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43395,16 +43456,16 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -43430,7 +43491,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Small_Alpha.DinoDropInventoryComponent_Carnivore_Small_Alpha"
 					}
 				],
 				"baseXP": 2
@@ -43449,7 +43510,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43503,7 +43564,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43557,7 +43618,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43608,7 +43669,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43779,7 +43840,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43833,7 +43894,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43887,7 +43948,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -43935,16 +43996,16 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -43970,7 +44031,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Small_Alpha.DinoDropInventoryComponent_Carnivore_Small_Alpha"
 					}
 				],
 				"baseXP": 2
@@ -43989,7 +44050,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44043,7 +44104,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44097,7 +44158,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44260,7 +44321,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44314,7 +44375,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44365,7 +44426,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44419,7 +44480,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44470,16 +44531,16 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -44502,7 +44563,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Small_Alpha.DinoDropInventoryComponent_Carnivore_Small_Alpha"
 					}
 				],
 				"baseXP": 2
@@ -44521,7 +44582,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44575,7 +44636,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44626,7 +44687,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44680,7 +44741,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44860,7 +44921,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44914,7 +44975,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -44968,7 +45029,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45022,7 +45083,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45073,16 +45134,16 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -45108,7 +45169,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Small_Alpha.DinoDropInventoryComponent_Carnivore_Small_Alpha"
 					}
 				],
 				"baseXP": 2
@@ -45127,7 +45188,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45181,7 +45242,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45235,7 +45296,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45289,7 +45350,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45474,16 +45535,16 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -45509,7 +45570,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Small_Alpha.DinoDropInventoryComponent_Carnivore_Small_Alpha"
 					}
 				],
 				"baseXP": 2
@@ -45528,7 +45589,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45579,7 +45640,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45633,7 +45694,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45684,7 +45745,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45735,7 +45796,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45786,7 +45847,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45840,7 +45901,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -45891,7 +45952,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46185,16 +46246,16 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -46220,7 +46281,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Small_Alpha.DinoDropInventoryComponent_Carnivore_Small_Alpha"
 					}
 				],
 				"baseXP": 2
@@ -46239,7 +46300,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46293,7 +46354,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46348,7 +46409,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46402,7 +46463,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46453,7 +46514,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46507,7 +46568,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46562,7 +46623,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46616,7 +46677,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46795,16 +46856,16 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -46830,7 +46891,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Small_Alpha.DinoDropInventoryComponent_Carnivore_Small_Alpha"
 					}
 				],
 				"baseXP": 2
@@ -46849,7 +46910,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46903,7 +46964,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -46954,7 +47015,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47009,7 +47070,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47063,7 +47124,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47230,16 +47291,16 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -47262,7 +47323,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Small_Alpha.DinoDropInventoryComponent_Carnivore_Small_Alpha"
 					}
 				],
 				"baseXP": 2
@@ -47281,7 +47342,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47335,7 +47396,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47389,7 +47450,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47440,7 +47501,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47494,7 +47555,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47548,7 +47609,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47690,16 +47751,16 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"movementD": {
-				"walk": { "base": 325, "sprint": 650 },
-				"swim": { "base": 300 }
+				"walk": { "base": 350, "sprint": 875 },
+				"swim": { "base": 450 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -47741,7 +47802,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47788,7 +47849,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47835,7 +47896,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47882,7 +47943,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47933,7 +47994,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -47980,7 +48041,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
@@ -48027,7 +48088,7 @@
 				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
 			},
 			"falling": {
-				"dmgMult": 165,
+				"dmgMult": 1.5,
 				"maxSpeed": 1200
 			},
 			"movementW": {
