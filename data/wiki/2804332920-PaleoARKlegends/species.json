@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "356.5.1669246008",
+	"version": "356.12.1677311339",
 	"format": "4",
 	"mod": {
 		"id": "2804332920",
@@ -9,7 +9,7 @@
 	},
 	"species": [
 		{
-			"name": "Alpha Evolved Tyrannosaur",
+			"name": "Alpha Evotyrannus",
 			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/EvolvedRex/AlphaVersion/MegaNeoRex_Character_BP.MegaNeoRex_Character_BP_C",
 			"dinoNameTag": "Elite Rex",
 			"customTag": "Rex",
@@ -53,7 +53,7 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.3, "dmg": 170, "radius": 450, "stamina": 0 },
 					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Stomp", "interval": 5, "dmg": 170, "radius": 1200, "stamina": 100 }
+					{ "name": "Stomp", "interval": 5, "dmg": 100, "radius": 1200, "stamina": 100 }
 				]
 			},
 			"death": {
@@ -68,7 +68,7 @@
 			}
 		},
 		{
-			"name": "Evolved Tyrannosaur",
+			"name": "Evotyrannus",
 			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/EvolvedRex/NeoRex_character_BP.NeoRex_character_BP_C",
 			"dinoNameTag": "PodRex",
 			"customTag": "PodRex",
@@ -307,6 +307,64 @@
 			}
 		},
 		{
+			"name": "Paleo ARK Andrewsarchus",
+			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoAndrew/Andrewsarchus_Character_BP_Paleo.Andrewsarchus_Character_BP_Paleo_C",
+			"dinoNameTag": "Andrewsarchus",
+			"customTag": "Andrewsarchus",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 375,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1174.5 },
+				"swim": { "base": 750 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1174.5 },
+				"swim": { "base": 750 }
+			},
+			"movementR": {
+				"walk": { "base": 300, "sprint": 2466.4 },
+				"swim": { "base": 750 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 28,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 41, "radius": 200, "stamina": 0 },
+					{ "name": "Fire", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Toggle Minigun", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Back Kick", "interval": 2, "dmg": 14, "radius": 220, "stamina": 20 }
+				]
+			},
+			"death": {
+				"dossierId": 1227,
+				"baseXP": 5
+			}
+		},
+		{
 			"name": "Paleo ARK Baryonyx",
 			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoBary/Baryonyx_Character_BP_Paleo.Baryonyx_Character_BP_Paleo_C",
 			"dinoNameTag": "Baryonyx",
@@ -394,11 +452,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 425, "sprint": 892.5 },
+				"walk": { "base": 425, "sprint": 1487.5 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 425, "sprint": 1190 },
+				"walk": { "base": 425, "sprint": 1275 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -461,8 +519,8 @@
 				"defaultDmg": 80,
 				"defaultSwingRadius": 180,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 80, "radius": 180, "stamina": 0 },
-					{ "name": "Gore", "interval": 0.5, "dmg": 80, "radius": 190, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.6, "dmg": 80, "radius": 110, "stamina": 0 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 80, "radius": 120, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -470,7 +528,7 @@
 				"lootBags": [
 					{
 						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_MegaCarno.DinoDropInventoryComponent_Carnivore_MegaCarno"
+						"item": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoCarno/DinoDropInventoryComponent_Carnivore_MegaPaleoCarno.DinoDropInventoryComponent_Carnivore_MegaPaleoCarno"
 					}
 				],
 				"baseXP": 460
@@ -603,7 +661,7 @@
 			"dinoNameTag": "PaleoKentro",
 			"customTag": "PaleoKentro",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 200,
+			"mass": 260,
 			"dragWeight": 250,
 			"flags": [
 				"allowMountedWeaponry",
@@ -624,15 +682,15 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 1068.7 },
+				"walk": { "base": 225, "sprint": 1187.5 },
 				"swim": { "base": 270 }
 			},
 			"movementD": {
-				"walk": { "base": 225, "sprint": 1068.7 },
+				"walk": { "base": 225, "sprint": 1187.5 },
 				"swim": { "base": 270 }
 			},
 			"movementR": {
-				"walk": { "base": 225, "sprint": 855 },
+				"walk": { "base": 225, "sprint": 950 },
 				"swim": { "base": 270 }
 			},
 			"staminaRates": {
@@ -644,8 +702,9 @@
 				"defaultSwingRadius": 250,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.5, "dmg": 12, "radius": 275, "stamina": 5 },
-					{ "name": "TailSwipe", "interval": 1, "dmg": 42, "radius": 275, "stamina": 0 },
-					{ "name": "TailSlam", "interval": 1, "dmg": 42, "radius": 250, "stamina": 0 }
+					{ "name": "TailSwipe (Rider)", "interval": 1, "dmg": 42, "radius": 275, "stamina": 0 },
+					{ "name": "TailSlam", "interval": 1, "dmg": 42, "radius": 250, "stamina": 0 },
+					{ "name": "Tail swing (AI ONLY)", "interval": 1, "dmg": 42, "radius": 275, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 5 }
@@ -743,7 +802,7 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 363, "sprint": 1138.5 },
+				"walk": { "base": 363, "sprint": 1089 },
 				"swim": { "base": 495 }
 			},
 			"movementD": {
@@ -1048,7 +1107,10 @@
 			"attack": {
 				"defaultDmg": 29,
 				"defaultSwingRadius": 160,
-				"attacks": [ { "name": "Bite", "interval": 0.2, "dmg": 29, "radius": 160, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 29, "radius": 160, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.2, "dmg": 29, "radius": 160, "stamina": 0 }
+				]
 			},
 			"death": {
 				"lootBagChance": 0.3,
@@ -1238,6 +1300,69 @@
 					}
 				],
 				"baseXP": 18
+			}
+		},
+		{
+			"name": "Paleo ARK Thylacoleo",
+			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoThyla/Thylacoleo_Character_BP_Paleo.Thylacoleo_Character_BP_Paleo_C",
+			"dinoNameTag": "Thylacoleo",
+			"customTag": "Thylacoleo",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 180,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 51 },
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 184, "sprint": 1150 },
+				"swim": { "base": 480 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 1150 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Claw", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "Release", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 30, "radius": 0, "stamina": 0 },
+					{ "name": "Maul", "interval": 0, "dmg": 40, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_Thylaco.DinoDropInventoryComponent_Carnivore_Medium_Thylaco"
+					}
+				],
+				"baseXP": 5
 			}
 		},
 		{
