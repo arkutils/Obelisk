@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "356.5.1675400968",
+	"version": "357.3.1677745075",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -5452,6 +5452,51 @@
 			"stackSize": 5000
 		},
 		{
+			"name": "Candy Corn",
+			"description": "A strange looking piece of candy corn.\n\nYou probably shouldn't eat this, who knows what may come out of the other end.",
+			"bp": "/Game/Mods/ArkOmega/Items/MudCake/CandyCorn/PrimalItemConsumable_CandyCake.PrimalItemConsumable_CandyCake_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable_BuffingSoup.PrimalItemConsumableEatable_BuffingSoup_C",
+			"icon": "/Game/Mods/ArkOmega/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/CandyCorn_Icon.CandyCorn_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemConsumable_Egg_OmegaBase_C" },
+					{ "exact": true, "qty": 1, "type": "PrimalItemConsumable_SweetVeggieCake_C" },
+					{ "exact": true, "qty": 50, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
+					{ "exact": true, "qty": 10, "type": "PrimalItem_OmegaEssence_C" },
+					{ "qty": 10, "type": "PrimalItem_MagicFragment_C" }
+				]
+			}
+		},
+		{
+			"name": "Unstable Candy Corn",
+			"description": "A really wierd looking candy corn. You can tell that this is going to wreck havoc on you just from the smell.\n\nThis will be the same as eating 8 pieces of Candy Corn at once. That much candy will give you a stomach ache, you better have a potion nearby.",
+			"bp": "/Game/Mods/ArkOmega/Items/MudCake/CandyCorn/PrimalItemConsumable_CandyCakeFull.PrimalItemConsumable_CandyCakeFull_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable_BuffingSoup.PrimalItemConsumableEatable_BuffingSoup_C",
+			"icon": "/Game/Mods/ArkOmega/Items/MudCake/CandyCorn/UnstableCandyCorn_Icon.UnstableCandyCorn_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "exact": true, "qty": 8, "type": "PrimalItemConsumable_CandyCake_C" },
+					{ "exact": true, "qty": 160, "type": "PrimalItem_SoulShard_C" }
+				]
+			}
+		},
+		{
 			"name": "Mud Cake Slice",
 			"description": "One slice of a delicious cake made out of mud!\nWait, that isn't mud.\nYou probably shouldn't eat this, who knows what may come out of the other end.",
 			"bp": "/Game/Mods/ArkOmega/Items/MudCake/PrimalItemConsumable_MudCake.PrimalItemConsumable_MudCake_C",
@@ -5467,10 +5512,10 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_UnstableWater_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_UnstableSteak_C" },
+					{ "exact": true, "qty": 1, "type": "PrimalItemConsumable_Egg_OmegaBase_C" },
+					{ "exact": true, "qty": 1, "type": "PrimalItemConsumable_UnstableSteak_C" },
 					{ "qty": 50, "type": "PrimalItemConsumable_Fertilizer_Compost_C" },
-					{ "qty": 10, "type": "PrimalItem_OmegaEssence_C" }
+					{ "exact": true, "qty": 10, "type": "PrimalItem_OmegaEssence_C" }
 				]
 			}
 		},
@@ -5489,7 +5534,10 @@
 				"levelReq": 0,
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "exact": true, "qty": 8, "type": "PrimalItemConsumable_MudCake_C" } ]
+				"recipe": [
+					{ "exact": true, "qty": 8, "type": "PrimalItemConsumable_MudCake_C" },
+					{ "qty": 80, "type": "PrimalItem_SoulShard_C" }
+				]
 			}
 		},
 		{
@@ -8122,7 +8170,7 @@
 		},
 		{
 			"name": "Egg Collector",
-			"description": "Place this near your dinos to collect any unfertilized eggs that are dropped on the ground. It will not collecto eggs for wild dinos! This will also prevent all unfertilized eggs from spoiling.\n\nThe Egg Collector can integrate female dinos into it. The dino will be destroyed, but the dino's egg type will be stored in the egg collector, being passively generated based on your server's egg laying rates settings. The default egg laying timer is sped up, and automatically includes both mate boosting and Oviraptor bonus without the need for either.\n\nEggselerator upgrade module crafted in the Soul Grinder can greatly speed up egg production rates. \n\nEgg layer data is preserved if the egg collector is picked up by hand (do not use pickup tools!).",
+			"description": "Place this near your dinos to collect any unfertilized eggs that are dropped on the ground. It will not collecto eggs for wild dinos! This will also prevent all unfertilized eggs from spoiling.\n\nThe Egg Collector can integrate female dinos into it. The dino will be destroyed, but the dino's egg type will be stored in the egg collector, being passively generated based on your server's egg laying rates settings. The default egg laying timer is sped up, and automatically includes both mate boosting and Oviraptor bonus without the need for either.\n\nEggselerator upgrade module crafted in the Soul Grinder can greatly speed up egg production rates. \n\nEgg layer data is preserved if the egg collector is picked up by hand (do not use pickup tools!).\n\nDespite the fact that the egg collector will not pick up eggs from wild dinos, it must still be placed near a base of at least 10 structures to ensure that players aren't spamming them all over the map.",
 			"bp": "/Game/Mods/ArkOmega/Structures/EggCollector/PrimalItemStructure_EggCollector.PrimalItemStructure_EggCollector_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Mods/ArkOmega/Structures/EggCollector/hexen_eggcollector_icon.hexen_eggcollector_icon",
@@ -9641,7 +9689,7 @@
 		},
 		{
 			"name": "Omega Metal Knockout Arrow",
-			"description": "An armor-piercing arrow infused with Beta Essence.\nBase Damage: 2080\nInitial Torpor: 37740\nTorpor Over 5 Seconds: 18720\nTotal Torpor Potential: 56160\n\nNumbers are multiplied by Weapon Quality %.",
+			"description": "An armor-piercing arrow infused with Omega Essence.\nBase Damage: 2080\nInitial Torpor: 37740\nTorpor Over 5 Seconds: 18720\nTotal Torpor Potential: 56160\n\nNumbers are multiplied by Weapon Quality %.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/MetalTranqArrows/PrimalItemAmmo_CompoundOmegaKnockoutArrow.PrimalItemAmmo_CompoundOmegaKnockoutArrow_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
 			"icon": "/Game/Mods/ArkOmega/Weapons/MetalTranqArrows/OmegaMetalKnockoutArrow_Icon.OmegaMetalKnockoutArrow_Icon",
