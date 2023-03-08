@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.3.1677745075",
+	"version": "357.4.1678083286",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -6396,29 +6396,6 @@
 			}
 		},
 		{
-			"name": "Vampire Potion",
-			"description": "For 3 minutes, your player will be healed for 100% of the damage it deals.",
-			"bp": "/Game/Mods/ArkOmega/Items/Potions/VampirePotion/PrimalItemConsumable_VampirePotion.PrimalItemConsumable_VampirePotion_C",
-			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
-			"icon": "/Game/Mods/ArkOmega/Items/Potions/VampirePotion/Vampire_PotionIcon.Vampire_PotionIcon",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Potions" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 2,
-				"time": 3,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 10, "type": "PrimalItem_NightmareSoul_C" },
-					{ "qty": 10, "type": "PrimalItem_AlphaEssence_C" },
-					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
-				]
-			}
-		},
-		{
 			"name": "Wake-Up Potion",
 			"description": "This potion will instantly wake up any sleeping player. For creatures, it will restore 10% of their maximum torpor per second.",
 			"bp": "/Game/Mods/ArkOmega/Items/Potions/WakeUpPotion/PrimalItemConsumable_WakePotion.PrimalItemConsumable_WakePotion_C",
@@ -6540,6 +6517,29 @@
 				]
 			},
 			"statEffects": [ { "stat": "torpidity", "value": 320, "useItemQuality": true, "duration": 64 } ]
+		},
+		{
+			"name": "Ancient Sedative",
+			"description": "These powerful sedatives provide 256x the torpor of Narcotics. ",
+			"bp": "/Game/Mods/ArkOmega/Items/Sedatives/PrimalItemConsumable_AncientSedative_ArkOmega.PrimalItemConsumable_AncientSedative_ArkOmega_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/ArkOmega/Items/Sedatives/AncientSedative_Icon.AncientSedative_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Sedatives" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 256,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItem_AncientEssence_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Narcotic_C" }
+				]
+			},
+			"statEffects": [ { "stat": "torpidity", "value": 10240, "useItemQuality": true, "duration": 2048 } ]
 		},
 		{
 			"name": "Beta Sedative",
@@ -7467,7 +7467,7 @@
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_FeroxCandy.PrimalItem_FeroxCandy_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_OmegaSoul.PrimalItem_OmegaSoul_C",
 			"icon": "/Game/Mods/ArkOmega/PrimalEarth/Structures/Christmas/Icons/ChristmasCandy_Icon.ChristmasCandy_Icon",
-			"type": "Equipment/Trophy",
+			"type": "MiscConsumable/Food",
 			"flags": [ "preventCheatGive" ],
 			"weight": 0.5,
 			"stackSize": 1,
@@ -9102,296 +9102,34 @@
 			"weapon": "/Game/Mods/ArkOmega/Weapons/HadesTorch/WeapHadesTorch.WeapHadesTorch_C"
 		},
 		{
-			"name": "Knockout Spear Bolt",
-			"description": "A massive steel harpoon bolt infused with Basic Essence.\nBase Damage: 92.5\nInitial Torpor: 1665\nTorpor Over 5 Seconds: 832.5\nTotal Torpor Potential: 2497.5\n\nNumbers are multiplied by 0.43 when fired outside of water.\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/PrimalItemAmmo_HarpoonKnockout.PrimalItemAmmo_HarpoonKnockout_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/HarpoonKnockout_Icon.HarpoonKnockout_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Spear Bolts" ],
-			"weight": 0.4,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 9.3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_Sedative_ArkOmega_C" }
-				]
-			}
-		},
-		{
-			"name": "Alpha Knockout Spear Bolt",
-			"description": "A massive steel harpoon bolt infused with Alpha Essence.\nBase Damage: 370\nInitial Torpor: 6660\nTorpor Over 5 Seconds: 3330\nTotal Torpor Potential: 9990\n\nNumbers are multiplied by 0.43 when fired outside of water.\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/PrimalItemAmmo_HarpoonKnockoutAlpha.PrimalItemAmmo_HarpoonKnockoutAlpha_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/HarpoonKnockoutAlpha_Icon.HarpoonKnockoutAlpha_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Spear Bolts" ],
-			"weight": 0.4,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 9.3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_AlphaSedative_ArkOmega_C" }
-				]
-			}
-		},
-		{
-			"name": "Beta Knockout Spear Bolt",
-			"description": "A massive steel harpoon bolt infused with Beta Essence.\nBase Damage: 185\nInitial Torpor: 3330\nTorpor Over 5 Seconds: 1665\nTotal Torpor Potential: 4995\n\nNumbers are multiplied by 0.43 when fired outside of water.\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/PrimalItemAmmo_HarpoonKnockoutBeta.PrimalItemAmmo_HarpoonKnockoutBeta_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/HarpoonKnockoutBeta_Icon.HarpoonKnockoutBeta_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Spear Bolts" ],
-			"weight": 0.4,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 9.3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_BetaSedative_ArkOmega_C" }
-				]
-			}
-		},
-		{
-			"name": "Godlike Knockout Spear Bolt",
-			"description": "A massive steel harpoon bolt infused with God Essence.\nBase Damage: 5920\nInitial Torpor: 106560\nTorpor Over 5 Seconds: 53280\nTotal Torpor Potential: 159840\n\nNumbers are multiplied by 0.43 when fired outside of water.\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/PrimalItemAmmo_HarpoonKnockoutGodlike.PrimalItemAmmo_HarpoonKnockoutGodlike_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/HarpoonKnockoutGodlike_Icon.HarpoonKnockoutGodlike_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Spear Bolts" ],
-			"weight": 0.4,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 9.3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_GodlikeSedative_ArkOmega_C" }
-				]
-			}
-		},
-		{
-			"name": "Omega Knockout Spear Bolt",
-			"description": "A massive steel harpoon bolt infused with Omega Essence.\nBase Damage: 2960\nInitial Torpor: 53280\nTorpor Over 5 Seconds: 26640\nTotal Torpor Potential: 79920\n\nNumbers are multiplied by 0.43 when fired outside of water.\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/PrimalItemAmmo_HarpoonKnockoutOmega.PrimalItemAmmo_HarpoonKnockoutOmega_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/HarpoonKnockoutOmega_Icon.HarpoonKnockoutOmega_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Spear Bolts" ],
-			"weight": 0.4,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 9.3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_OmegaSedative_ArkOmega_C" }
-				]
-			}
-		},
-		{
-			"name": "Prime Knockout Spear Bolt",
-			"description": "A massive steel harpoon bolt infused with Prime Essence.\nBase Damage: 740\nInitial Torpor: 13320\nTorpor Over 5 Seconds: 6660\nTotal Torpor Potential: 19980\n\nNumbers are multiplied by 0.43 when fired outside of water.\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/PrimalItemAmmo_HarpoonKnockoutPrime.PrimalItemAmmo_HarpoonKnockoutPrime_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/HarpoonKnockoutPrime_Icon.HarpoonKnockoutPrime_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Spear Bolts" ],
-			"weight": 0.4,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 9.3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_PrimeSedative_ArkOmega_C" }
-				]
-			}
-		},
-		{
-			"name": "Ultimate Knockout Spear Bolt",
-			"description": "A massive steel harpoon bolt infused with Ultimate Essence.\nBase Damage: 1480\nInitial Torpor: 26640\nTorpor Over 5 Seconds: 13320\nTotal Torpor Potential: 39960\n\nNumbers are multiplied by 0.43 when fired outside of water.\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/PrimalItemAmmo_HarpoonKnockoutUltimate.PrimalItemAmmo_HarpoonKnockoutUltimate_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/HarpoonTranqs/HarpoonKnockoutUltimate_Icon.HarpoonKnockoutUltimate_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Spear Bolts" ],
-			"weight": 0.4,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 9.3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_UltimateSedative_ArkOmega_C" }
-				]
-			}
-		},
-		{
 			"name": "Alpha Healing Dart",
-			"description": "An altered version of the tranq dart, used to deliver an Alpha Healing Potion to the target.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/HealingDarts/PrimalItemAmmo_AlphaHealingDart.PrimalItemAmmo_AlphaHealingDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/AlphaKnockoutDart_Icon.AlphaKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Healing Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "exact": true, "qty": 3, "type": "PrimalItemConsumable_AlphaPotion_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C"
 		},
 		{
 			"name": "Beta Healing Dart",
-			"description": "An altered version of the tranq dart, used to deliver a Beta Healing Potion to the target.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/HealingDarts/PrimalItemAmmo_BetaHealingDart.PrimalItemAmmo_BetaHealingDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/BetaKnockoutDart_Icon.BetaKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Healing Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "exact": true, "qty": 3, "type": "PrimalItemConsumable_BetaPotion_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C"
 		},
 		{
 			"name": "Healing Dart",
-			"description": "An altered version of the tranq dart, used to deliver a Healing Potion to the target.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/HealingDarts/PrimalItemAmmo_HealingDart.PrimalItemAmmo_HealingDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/KnockoutDart_Icon.KnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Healing Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "exact": true, "qty": 3, "type": "PrimalItemConsumable_BasicPotion_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C"
 		},
 		{
 			"name": "Omega Healing Dart",
-			"description": "An altered version of the tranq dart, used to deliver an Omega Healing Potion to the target.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/HealingDarts/PrimalItemAmmo_OmegaHealingDart.PrimalItemAmmo_OmegaHealingDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/OmegaKnockoutDart_Icon.OmegaKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Healing Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "exact": true, "qty": 3, "type": "PrimalItemConsumable_OmegaPotion_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C"
 		},
 		{
 			"name": "Prime Healing Dart",
-			"description": "An altered version of the tranq dart, used to deliver a Prime Healing Potion to the target.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/HealingDarts/PrimalItemAmmo_PrimeHealingDart.PrimalItemAmmo_PrimeHealingDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/PrimeKnockoutDart_Icon.PrimeKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Healing Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "exact": true, "qty": 3, "type": "PrimalItemConsumable_PrimePotion_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C"
 		},
 		{
 			"name": "Ultimate Healing Dart",
-			"description": "An altered version of the tranq dart, used to deliver an Ultimate Healing Potion to the target.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/HealingDarts/PrimalItemAmmo_UltimateHealingDart.PrimalItemAmmo_UltimateHealingDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/UltimateKnockoutDart_Icon.UltimateKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Healing Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "exact": true, "qty": 3, "type": "PrimalItemConsumable_UltimatePotion_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C"
 		},
 		{
 			"name": "Heartsong Arrow",
@@ -9618,6 +9356,28 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_CompoundBowArrow_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_AlphaSedative_ArkOmega_C" }
+				]
+			}
+		},
+		{
+			"name": "Ancient Metal Knockout Arrow",
+			"description": "An armor-piercing arrow infused with Ancient Essence.\nBase Damage: 8320\nInitial Torpor: 149760\nTorpor Over 5 Seconds: 74880\nTotal Torpor Potential: 224640\n\nNumbers are multiplied by Weapon Quality %.",
+			"bp": "/Game/Mods/ArkOmega/Weapons/MetalTranqArrows/PrimalItemAmmo_CompoundAncientKnockoutArrow.PrimalItemAmmo_CompoundAncientKnockoutArrow_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/ArkOmega/Weapons/MetalTranqArrows/AncientMetalKnockoutArrow_Icon.AncientMetalKnockoutArrow_Icon",
+			"type": "Ammo",
+			"folders": [ "Tranqs", "Metal Arrows" ],
+			"weight": 0.4,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 0.024,
+				"time": 0.5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemAmmo_CompoundBowArrow_C" },
+					{ "qty": 3, "type": "PrimalItemConsumable_AncientSedative_ArkOmega_C" }
 				]
 			}
 		},
@@ -10118,6 +9878,28 @@
 			}
 		},
 		{
+			"name": "Ancient Knockout Arrow",
+			"description": "An arrow infused with Ancient Essence.\nBase Damage: 1280\nInitial Torpor: 23040\nTorpor Over 5 Seconds: 22520\nTotal Torpor Potential: 34560\n\nNumbers are multiplied by Weapon Quality %.\nNumbers are multiplied by 1.75 for Compound Bow.\nNumbers are multiplied by 1.35 for Crossbow and Warp Bow.",
+			"bp": "/Game/Mods/ArkOmega/Weapons/TranqArrows/PrimalItemAmmo_AncientArrowKnockout.PrimalItemAmmo_AncientArrowKnockout_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
+			"icon": "/Game/Mods/ArkOmega/Weapons/TranqArrows/AncientKnockoutArrow_Icon.AncientKnockoutArrow_Icon",
+			"type": "Ammo",
+			"folders": [ "Tranqs", "Arrows" ],
+			"weight": 0.2,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 0.05,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_AncientSedative_ArkOmega_C" }
+				]
+			}
+		},
+		{
 			"name": "Knockout Arrow",
 			"description": "An arrow infused with Basic Essence.\nBase Damage: 10\nInitial Torpor: 180\nTorpor Over 5 Seconds: 90\nTotal Torpor Potential: 270\n\nNumbers are multiplied by Weapon Quality %.\nNumbers are multiplied by 1.75 for Compound Bow.\nNumbers are multiplied by 1.35 for Crossbow and Warp Bow.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/TranqArrows/PrimalItemAmmo_ArrowKnockout.PrimalItemAmmo_ArrowKnockout_C",
@@ -10246,167 +10028,6 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
 					{ "qty": 1, "type": "PrimalItemConsumable_UltimateSedative_ArkOmega_C" }
-				]
-			}
-		},
-		{
-			"name": "Alpha Knockout Dart",
-			"description": "A tranq dart infused with Alpha Essence.\nBase Damage: 156\nInitial Torpor: 2808\nTorpor Over 5 Seconds: 1404\nTotal Torpor Potential: 4212\n\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/TranqDarts/PrimalItemAmmo_AlphaKnockoutDart.PrimalItemAmmo_AlphaKnockoutDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/AlphaKnockoutDart_Icon.AlphaKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_AlphaSedative_ArkOmega_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
-		},
-		{
-			"name": "Beta Knockout Dart",
-			"description": "A tranq dart infused with Beta Essence.\nBase Damage: 78\nInitial Torpor: 1404\nTorpor Over 5 Seconds: 702\nTotal Torpor Potential: 2106\n\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/TranqDarts/PrimalItemAmmo_BetaKnockoutDart.PrimalItemAmmo_BetaKnockoutDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/BetaKnockoutDart_Icon.BetaKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_BetaSedative_ArkOmega_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
-		},
-		{
-			"name": "Godlike Knockout Dart",
-			"description": "A tranq dart infused with God Essence.\nBase Damage: 2496\nInitial Torpor: 44928\nTorpor Over 5 Seconds: 22464\nTotal Torpor Potential: 67392\n\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/TranqDarts/PrimalItemAmmo_GodlikeKnockoutDart.PrimalItemAmmo_GodlikeKnockoutDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/GodlikeKnockoutDart_Icon.GodlikeKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_GodlikeSedative_ArkOmega_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
-		},
-		{
-			"name": "Knockout Dart",
-			"description": "A tranq dart infused with Basic Essence.\nBase Damage: 39\nInitial Torpor: 702\nTorpor Over 5 Seconds: 351\nTotal Torpor Potential: 1053\n\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/TranqDarts/PrimalItemAmmo_KnockoutDart.PrimalItemAmmo_KnockoutDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/KnockoutDart_Icon.KnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_Sedative_ArkOmega_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
-		},
-		{
-			"name": "Omega Knockout Dart",
-			"description": "A tranq dart infused with Omega Essence.\nBase Damage: 1248\nInitial Torpor: 22464\nTorpor Over 5 Seconds: 11232\nTotal Torpor Potential: 33696\n\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/TranqDarts/PrimalItemAmmo_OmegaKnockoutDart.PrimalItemAmmo_OmegaKnockoutDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/OmegaKnockoutDart_Icon.OmegaKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_OmegaSedative_ArkOmega_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
-		},
-		{
-			"name": "Prime Knockout Dart",
-			"description": "A tranq dart infused with Prime Essence.\nBase Damage: 312\nInitial Torpor: 5616\nTorpor Over 5 Seconds: 2808\nTotal Torpor Potential: 8424\n\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/TranqDarts/PrimalItemAmmo_PrimeKnockoutDart.PrimalItemAmmo_PrimeKnockoutDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/PrimeKnockoutDart_Icon.PrimeKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_PrimeSedative_ArkOmega_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
-				]
-			}
-		},
-		{
-			"name": "Ultimate Knockout Dart",
-			"description": "A tranq dart infused with Ultimate Essence.\nBase Damage: 624\nInitial Torpor: 11232\nTorpor Over 5 Seconds: 5616\nTotal Torpor Potential: 16848\n\nNumbers are multiplied by Weapon Quality %.",
-			"bp": "/Game/Mods/ArkOmega/Weapons/TranqDarts/PrimalItemAmmo_UltimateKnockoutDart.PrimalItemAmmo_UltimateKnockoutDart_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/Mods/ArkOmega/Weapons/TranqDarts/UltimateKnockoutDart_Icon.UltimateKnockoutDart_Icon",
-			"type": "Ammo",
-			"folders": [ "Tranqs", "Darts" ],
-			"weight": 0.2,
-			"stackSize": 1000,
-			"crafting": {
-				"xp": 0.05,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumable_UltimateSedative_ArkOmega_C" },
-					{ "qty": 2, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_SimpleRifleBullet_C" }
 				]
 			}
 		},
