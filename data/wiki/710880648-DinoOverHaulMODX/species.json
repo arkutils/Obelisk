@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.4.1678255522",
+	"version": "357.4.1678325172",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -30731,6 +30731,72 @@
 				"defaultDmg": 700,
 				"defaultSwingRadius": 215,
 				"attacks": [ { "name": "Attack", "interval": 0.1, "dmg": 7500, "radius": 1000, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Poison Golem Prime WILD",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Queen/PoisonGolem_Character_BP_PRIME_WILD_TITAN.PoisonGolem_Character_BP_PRIME_WILD_TITAN_C",
+			"dinoNameTag": "RockElemental",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"variants": [ "Boss" ],
+			"flags": [
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"cloning": {
+				"costBase": 8750000,
+				"costLevel": 44000,
+				"timeBase": 61250000,
+				"timeLevel": 308000
+			},
+			"falling": {
+				"dmgMult": 5,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 345, "sprint": 1821.6 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1440 }
+			},
+			"staminaRates": { "sprint": -5 },
+			"attack": {
+				"defaultDmg": 200,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 1, "dmg": 15000, "radius": 1200, "stamina": 30 },
+					{
+						"name": "ThrowRock", "interval": 10, "dmg": 75, "radius": 1200, "stamina": 100,
+						"isProjectile": true
+					},
+					{ "name": "Swipe", "interval": 3, "dmg": 9000, "radius": 1200, "stamina": 35 },
+					{
+						"name": "LavaExplosion", "interval": 15, "dmg": 500, "radius": 600, "stamina": 800,
+						"isProjectile": true
+					},
+					{ "name": "Summon Hydra", "interval": 35, "dmg": 1, "radius": 0, "stamina": 0 },
+					{
+						"name": "ThrowRock Far", "interval": 6, "dmg": 75, "radius": 1200, "stamina": 100,
+						"isProjectile": true
+					},
+					{ "name": "Melee Attack", "interval": 12, "dmg": 25000, "radius": 1200, "stamina": 30 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/DinoOverHaulMODX/AlphaDINOS/AlphaDinoDrop/DinoDropInventoryComponent_PRIME_DM_WILD.DinoDropInventoryComponent_PRIME_DM_WILD"
+					}
+				],
+				"baseXP": 100
 			}
 		},
 		{
