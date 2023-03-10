@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.4.1678083286",
+	"version": "357.4.1678350769",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -620,9 +620,12 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 100,
+				"defaultDmg": 75,
 				"defaultSwingRadius": 522,
-				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 100, "radius": 522, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.3, "dmg": 75, "radius": 348, "stamina": 0 },
+					{ "name": "Melee", "interval": 1.5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
 			},
 			"death": { "baseXP": 3 }
 		},
@@ -723,6 +726,57 @@
 				],
 				"baseXP": 750
 			}
+		},
+		{
+			"name": "Alpha Otter",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaOtter_Character_BP.MegaOtter_Character_BP_C",
+			"dinoNameTag": "Otter",
+			"customTag": "Otter",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 70,
+			"dragWeight": 35,
+			"variants": [ "Alpha" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 84 },
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 688.5, "sprint": 1032.8 },
+				"swim": { "base": 1012.5 }
+			},
+			"movementD": {
+				"walk": { "base": 510, "sprint": 765 },
+				"swim": { "base": 750 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 75,
+				"defaultSwingRadius": 960,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.3, "dmg": 75, "radius": 300, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Alpha Phoenix",
@@ -12540,9 +12594,9 @@
 			},
 			"attack": {
 				"defaultDmg": 10,
-				"defaultSwingRadius": 240,
+				"defaultSwingRadius": 480,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.3, "dmg": 10, "radius": 100, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.3, "dmg": 10, "radius": 200, "stamina": 0 },
 					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
