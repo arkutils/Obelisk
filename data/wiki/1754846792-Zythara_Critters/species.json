@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.3.1677764858",
+	"version": "357.4.1678517540",
 	"format": "4",
 	"mod": {
 		"id": "1754846792",
@@ -980,11 +980,11 @@
 			},
 			"attack": {
 				"defaultDmg": 225,
-				"defaultSwingRadius": 190,
+				"defaultSwingRadius": 750,
 				"attacks": [
-					{ "name": "Bite Left", "interval": 0.55, "dmg": 225, "radius": 190, "stamina": 0 },
-					{ "name": "Bite Right", "interval": 0.55, "dmg": 225, "radius": 190, "stamina": 0 },
-					{ "name": "Bite Heavy", "interval": 0.55, "dmg": 475, "radius": 190, "stamina": 0 },
+					{ "name": "Bite Left", "interval": 0.55, "dmg": 225, "radius": 750, "stamina": 0 },
+					{ "name": "Bite Right", "interval": 0.55, "dmg": 225, "radius": 750, "stamina": 0 },
+					{ "name": "Bite Heavy", "interval": 0.55, "dmg": 475, "radius": 750, "stamina": 0 },
 					{ "name": "Grab Prey", "interval": 1.5, "dmg": 2, "radius": 1200, "stamina": 25 }
 				]
 			},
@@ -1107,12 +1107,12 @@
 			},
 			"staminaRates": { "sprint": -25 },
 			"attack": {
-				"defaultDmg": 88,
+				"defaultDmg": 112,
 				"defaultSwingRadius": 1200,
 				"attacks": [
-					{ "name": "ClawLft", "interval": 0.1, "dmg": 88, "radius": 350, "stamina": 0 },
-					{ "name": "ClawRit", "interval": 0.1, "dmg": 88, "radius": 350, "stamina": 0 },
-					{ "name": "SweepAttack", "interval": 1, "dmg": 70, "radius": 400, "stamina": 0 }
+					{ "name": "ClawLft", "interval": 0.1, "dmg": 112, "radius": 350, "stamina": 0 },
+					{ "name": "ClawRit", "interval": 0.1, "dmg": 112, "radius": 350, "stamina": 0 },
+					{ "name": "SweepAttack", "interval": 1, "dmg": 105, "radius": 400, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 50 }
@@ -2880,11 +2880,11 @@
 			},
 			"attack": {
 				"defaultDmg": 225,
-				"defaultSwingRadius": 190,
+				"defaultSwingRadius": 750,
 				"attacks": [
-					{ "name": "Bite Left", "interval": 0.55, "dmg": 225, "radius": 190, "stamina": 0 },
-					{ "name": "Bite Right", "interval": 0.55, "dmg": 225, "radius": 190, "stamina": 0 },
-					{ "name": "Bite Heavy", "interval": 0.55, "dmg": 475, "radius": 190, "stamina": 0 },
+					{ "name": "Bite Left", "interval": 0.55, "dmg": 225, "radius": 750, "stamina": 0 },
+					{ "name": "Bite Right", "interval": 0.55, "dmg": 225, "radius": 750, "stamina": 0 },
+					{ "name": "Bite Heavy", "interval": 0.55, "dmg": 475, "radius": 750, "stamina": 0 },
 					{ "name": "Grab Prey", "interval": 1.5, "dmg": 2, "radius": 1200, "stamina": 25 }
 				]
 			},
@@ -4576,6 +4576,77 @@
 					}
 				],
 				"baseXP": 100
+			}
+		},
+		{
+			"name": "Tek Velonasaur",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_Velo/Spindles_Character_BP_Robot.Spindles_Character_BP_Robot_C",
+			"dinoNameTag": "Velonasaur",
+			"customTag": "Velonasaur",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 225,
+			"dragWeight": 200,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 33
+			},
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 505, "crouch": 300, "sprint": 909 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 277.8, "crouch": 165, "sprint": 799.9 },
+				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Melee", "interval": 0, "dmg": 32, "radius": 350, "stamina": 0 },
+					{ "name": "MinigunDirected", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5 },
+					{ "name": "MinigunAOE", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5 },
+					{ "name": "MinigunModeAIActicate", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "MinigunModeAIDeactivate", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin180Right", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin180Left", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.01,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small_Dilo.DinoDropInventoryComponent_Carnivore_Small_Dilo"
+					}
+				],
+				"baseXP": 1
 			}
 		},
 		{
