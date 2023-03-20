@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.4.1678993392",
+	"version": "357.4.1679236349",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -2985,9 +2985,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 100, "type": "PrimalItemResource_FlameShard_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_Potion_Evolve_ADO_C" }
+					{ "qty": 25, "type": "PrimalItemResource_FlameShard_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Element_C" }
 				]
 			}
 		},
@@ -3009,8 +3008,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 25, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_Potion_Evolve_ADO_C" },
-					{ "qty": 100, "type": "PrimalItemResource_SnowShard_C" }
+					{ "qty": 25, "type": "PrimalItemResource_SnowShard_C" }
 				]
 			}
 		},
@@ -3031,9 +3029,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 100, "type": "PrimalItemResource_PoisonShard_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_Potion_Evolve_ADO_C" }
+					{ "qty": 25, "type": "PrimalItemResource_PoisonShard_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Element_C" }
 				]
 			}
 		},
@@ -3064,9 +3061,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 100, "type": "PrimalItemResource_ShockShard_C" },
-					{ "qty": 25, "type": "PrimalItemResource_Element_C" },
-					{ "qty": 1, "type": "PrimalItemConsumable_Potion_Evolve_ADO_C" }
+					{ "qty": 25, "type": "PrimalItemResource_ShockShard_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Element_C" }
 				]
 			}
 		},
@@ -5158,6 +5154,137 @@
 			}
 		},
 		{
+			"name": "Alpha Carcharodonto Saddle",
+			"description": "Equip a Alpha Carcharodontosaurus with this to ride it.",
+			"bp": "/Game/Mods/Trex/Dinos/Carcha/Alpha/PrimalItemArmor_Alpha_CarchaSaddle.PrimalItemArmor_Alpha_CarchaSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Carcharodontosaurus/Saddle/Textures/HUD_CarcharodontosaurusSaddle_Icon_MIC.HUD_CarcharodontosaurusSaddle_Icon_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 300,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 750, "type": "PrimalItemResource_AHide_ADO_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Steel_ADO_C" },
+					{ "qty": 150, "type": "PrimalItemResource_AChitin_ADO_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Alpha Carcharodontosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Trex/Dinos/Carcha/Alpha/PrimalItemConsumable_Egg_Alpha_Carcha_Fert_ADO.PrimalItemConsumable_Egg_Alpha_Carcha_Fert_ADO_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carcha.PrimalItemConsumable_Egg_Carcha_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carcha.HUD_DinoEgg_MIC_Inst_Carcha",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Trex/Dinos/Carcha/Alpha/Alpha_Carcha_Character_BP_ADO.Alpha_Carcha_Character_BP_ADO_C",
+				"temperature": { "min": 37, "max": 39 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Alpha Evolution",
+			"description": "This item allow you to transform your Flame Carcharodontosaurus to Alpha one",
+			"bp": "/Game/Mods/Trex/Dinos/Carcha/Alpha/PrimalItem_Transform_AlphaCarcha.PrimalItem_Transform_AlphaCarcha_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/PrimalEarth/Dinos/Carcharodontosaurus/Icons/ArkG_ConditionIcons_Carcharo_Bloodrage.ArkG_ConditionIcons_Carcharo_Bloodrage",
+			"type": "MiscConsumable/Food",
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 300,
+				"time": 25,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 35, "type": "PrimalItemResource_Evo_Tribute_C" },
+					{ "qty": 40, "type": "PrimalItemConsumable_Potion_Evolve_ADO_C" },
+					{ "qty": 50, "type": "PrimalItemResource_ApexDrop_Carcha_scales_C" },
+					{ "qty": 1, "type": "PrimalItemResource_EvolveMatrix_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Flame Carcharodontosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Trex/Dinos/Carcha/Fire/PrimalItemConsumable_Egg_Fire_Carcha_Fert_ADO.PrimalItemConsumable_Egg_Fire_Carcha_Fert_ADO_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carcha.PrimalItemConsumable_Egg_Carcha_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carcha.HUD_DinoEgg_MIC_Inst_Carcha",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Trex/Dinos/Carcha/Fire/Fire_Carcha_Character_BP_ADO.Fire_Carcha_Character_BP_ADO_C",
+				"temperature": { "min": 37, "max": 39 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Poison Carcharodontosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Trex/Dinos/Carcha/Poison/PrimalItemConsumable_Egg_P_Carcha_Fert_ADO.PrimalItemConsumable_Egg_P_Carcha_Fert_ADO_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carcha.PrimalItemConsumable_Egg_Carcha_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carcha.HUD_DinoEgg_MIC_Inst_Carcha",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Trex/Dinos/Carcha/Poison/Poison_Carcha_Character_BP_ADO.Poison_Carcha_Character_BP_ADO_C",
+				"temperature": { "min": 37, "max": 39 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Fertilized Carcharodontosaurus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/Trex/Dinos/Carcha/PrimalItemConsumable_Egg_Carcha_Fertilized_ADO.PrimalItemConsumable_Egg_Carcha_Fertilized_ADO_C",
@@ -5175,6 +5302,98 @@
 			],
 			"egg": {
 				"dinoClass": "/Game/Mods/Trex/Dinos/Carcha/Carcha_Character_BP_ADO.Carcha_Character_BP_ADO_C",
+				"temperature": { "min": 37, "max": 39 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Carcharodontosaurus Scales",
+			"description": "Ingredient for Carcha Evolutions",
+			"bp": "/Game/Mods/Trex/Dinos/Carcha/PrimalItemResource_ApexDrop_Carcha_scales.PrimalItemResource_ApexDrop_Carcha_scales_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Trex/Dinos/Carcha/ApexDropCarchaScales_Icon.ApexDropCarchaScales_Icon",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 100
+		},
+		{
+			"name": "Random Elemental Evolution",
+			"description": "This item allow you to transform your creature to elemental one - it is a random chance",
+			"bp": "/Game/Mods/Trex/Dinos/Carcha/PrimalItem_Transform_RandomCarcha.PrimalItem_Transform_RandomCarcha_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/Trex/Icons/Evolve_icon.Evolve_icon",
+			"type": "MiscConsumable/Food",
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 100,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItemConsumable_Potion_Evolve_ADO_C" },
+					{ "qty": 25, "type": "PrimalItemResource_Evo_Tribute_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_PoisonMagicPotion_ADO_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_IceMagicPotion_ADO_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_ShockMagicPotion_ADO_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_FlameMagicPotion_ADO_C" },
+					{ "qty": 25, "type": "PrimalItemResource_ApexDrop_Carcha_scales_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Shock Carcharodontosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Trex/Dinos/Carcha/Shock/PrimalItemConsumable_Egg_Shock_Carcha_Fert_ADO.PrimalItemConsumable_Egg_Shock_Carcha_Fert_ADO_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carcha.PrimalItemConsumable_Egg_Carcha_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carcha.HUD_DinoEgg_MIC_Inst_Carcha",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Trex/Dinos/Carcha/Shock/Shock_Carcha_Character_BP_ADO.Shock_Carcha_Character_BP_ADO_C",
+				"temperature": { "min": 37, "max": 39 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Snow Carcharodontosaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides exceptional nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Trex/Dinos/Carcha/Snow/PrimalItemConsumable_Egg_Ice_Carcha_Fert_ADO.PrimalItemConsumable_Egg_Ice_Carcha_Fert_ADO_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Carcha.PrimalItemConsumable_Egg_Carcha_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Carcha.HUD_DinoEgg_MIC_Inst_Carcha",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 40,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 120, "useItemQuality": true, "duration": 30 },
+				{ "stat": "health", "value": 150, "useItemQuality": true, "duration": 37.5 },
+				{ "stat": "stamina", "value": 120, "useItemQuality": true, "duration": 30 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Trex/Dinos/Carcha/Snow/Ice_Carcha_Character_BP_ADO.Ice_Carcha_Character_BP_ADO_C",
 				"temperature": { "min": 37, "max": 39 }
 			},
 			"cooking": {
@@ -12339,7 +12558,7 @@
 			}
 		},
 		{
-			"name": "Alpha Evolution",
+			"name": "Alpha Therizinosaur Evolution",
 			"description": "This item allow you to transform your Normal Therizinosaur to Alpha one",
 			"bp": "/Game/Mods/Trex/Dinos/Therizino/Alpha/PrimalItem_Transform_AlphaTheryzino.PrimalItem_Transform_AlphaTheryzino_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
