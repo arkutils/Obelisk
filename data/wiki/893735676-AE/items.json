@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "356.5.1675949309",
+	"version": "357.5.1679775865",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -3951,6 +3951,7 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
+					{ "qty": 1040, "type": "PrimalItemResource_Hide_Fabled_C" },
 					{ "qty": 690, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 650, "type": "PrimalItemResource_ChitinOrKeratin_C" },
 					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" }
@@ -21549,7 +21550,7 @@
 		},
 		{
 			"name": "Alpha Wyvern Saddle",
-			"description": "Equip this on ANY DINO to ride it that has a saddle slot.",
+			"description": "Equip this on ANY DINO to ride it that has a saddle slot. Except Spacewhale and space dolphin these WILL cause crashes.",
 			"bp": "/Game/Mods/AE/Items/Saddles/Alphas/PrimalItemArmor_Alpha_WyvernSaddle.PrimalItemArmor_Alpha_WyvernSaddle_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
 			"icon": "/Game/Mods/AE/Items/Saddles/Alphas/Icons/HUD_QuetzSaddle_Colorize_MIC.HUD_QuetzSaddle_Colorize_MIC",
@@ -26591,6 +26592,24 @@
 			"spoilsIn": 2678400
 		},
 		{
+			"name": "Magic Charcoal",
+			"description": "Drag it into Raw Meat to INSTANTLY create Cooked Meat!",
+			"bp": "/Game/Mods/AE/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_MagicCharcoal.PrimalItemResource_MagicCharcoal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Resources/Icons/Charcoal_Icon.Charcoal_Icon",
+			"type": "Resource",
+			"weight": 0.25,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Wood_C" } ]
+			}
+		},
+		{
 			"name": "Diplocaulus Egg",
 			"description": "Eat it to gain tremendous nourishment, or use it in recipies, or...",
 			"bp": "/Game/Mods/AE/PrimalEarth/Test/PrimalItemConsumable_Egg_Diplocaulus.PrimalItemConsumable_Egg_Diplocaulus_C",
@@ -29308,6 +29327,29 @@
 				]
 			},
 			"structure": "/Game/Mods/AE/Structures/FertMaker/StorageBox_AE-FertMaker.StorageBox_AE-FertMaker_C"
+		},
+		{
+			"name": "Eternal Dino Finder Terminal ",
+			"description": "As per the Find My Dino mod by Cadwah, After placing the structure, you have to set the minimum distance, hold the curor over the buttons and after this click on it, releasing the hold wont do anything\n\nAfter this use the \"Get Dinos\" option\nAnd then go to \"Select Dino\", an list with all dinos on the distance will appear (may be a lot making very hard to read their names), select the one you are looking for\nAfter this use the now new option that appears on the structure \"Teleport\"\nAnd the Dino you selected will appear",
+			"bp": "/Game/Mods/AE/Structures/FindMyDino/Terminal/PrimalItemStructure_Terminal_FMD.PrimalItemStructure_Terminal_FMD_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKLargeTeleporter_Icon.TEKLargeTeleporter_Icon",
+			"type": "Structure",
+			"folders": [ "FindMyDino", "Terminal" ],
+			"weight": 4,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 7.25,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"structure": "/Game/Mods/AE/Structures/FindMyDino/Terminal/Terminal_FMD.Terminal_FMD_C"
 		},
 		{
 			"name": "Eternal Gas Collector",
