@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.5.1679676412",
+	"version": "357.5.1680156706",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -3023,6 +3023,74 @@
 			"structure": "/Game/Mods/AC2/Items/SPEKTOR/GenomeAssembly/StorageBox_GenomeAssembly.StorageBox_GenomeAssembly_C"
 		},
 		{
+			"name": "Carbon",
+			"description": "With the help of the Transpotion Anvil, small traces of carbon can be extracted from charcoal.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/SteelMaker/PrimalItemResource_CarbonAuto.PrimalItemResource_CarbonAuto_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
+			"icon": "/Game/Mods/AC2/Items/Icons/Carbon_Icon.Carbon_Icon",
+			"type": "Resource",
+			"folders": [ "Resources" ],
+			"weight": 1,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 0.1,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemResource_Charcoal_C" } ]
+			},
+			"structure": "/Game/Mods/AC2/Items/Gunsmith/StorageBox_TranspositionAnvil_BP.StorageBox_TranspositionAnvil_BP_C"
+		},
+		{
+			"name": "Steel Ingot",
+			"description": "Refined steel that proves to be a very durable alloy and is great from crafting military grade weapons.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/SteelMaker/PrimalItemResource_SteelIngotAuto.PrimalItemResource_SteelIngotAuto_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
+			"icon": "/Game/Mods/AC2/Items/Icons/StealIngot_Icon.StealIngot_Icon",
+			"type": "Resource",
+			"folders": [ "Resources" ],
+			"weight": 1,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 1,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemResource_Metal_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Carbon_C" }
+				]
+			}
+		},
+		{
+			"name": "Steel Forger",
+			"description": "Automatic structure that when powered, automates the steel process.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/SteelMaker/PrimalItemStructure_SteelCrafter.PrimalItemStructure_SteelCrafter_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/ChemistryTable_Icon.ChemistryTable_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 33,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 250, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 65, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"structure": "/Game/Mods/AC2/Items/SPEKTOR/SteelMaker/StorageBox_SteelCrafter.StorageBox_SteelCrafter_C"
+		},
+		{
 			"name": "Gasball to Gasoline",
 			"description": "A chemical process which can turn Congealed Gas Balls into Gasoline.",
 			"bp": "/Game/Mods/AC2/Items/SPEKTOR/Table/PrimalItemResource_GasballToGas.PrimalItemResource_GasballToGas_C",
@@ -3066,6 +3134,52 @@
 				]
 			},
 			"structure": "/Game/Mods/AC2/Items/SPEKTOR/Table/StorageBox_CAA.StorageBox_CAA_C"
+		},
+		{
+			"name": "Tungsten",
+			"description": "With the help of the Transpotion Anvil, small traces of Tungsten can be extracted from the ARKs metal ores.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/TungstenExtractor/PrimalItemResource_TungstenAuto.PrimalItemResource_TungstenAuto_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
+			"icon": "/Game/Mods/AC2/Items/Icons/tungsten-raw.tungsten-raw",
+			"type": "Resource",
+			"folders": [ "Resources" ],
+			"weight": 2,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 14, "type": "PrimalItemResource_Metal_C" } ]
+			},
+			"structure": "/Game/Mods/AC2/Items/Gunsmith/StorageBox_TranspositionAnvil_BP.StorageBox_TranspositionAnvil_BP_C"
+		},
+		{
+			"name": "Tungsten Extractor",
+			"description": "Automatic structure that when powered, automates the tungsten process. Tungsten is drastically faster.",
+			"bp": "/Game/Mods/AC2/Items/SPEKTOR/TungstenExtractor/PrimalItemStructure_TungstenExtractor.PrimalItemStructure_TungstenExtractor_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/ChemistryTable_Icon.ChemistryTable_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Crafting" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 33,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 250, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 65, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Electronics_C" }
+				]
+			},
+			"structure": "/Game/Mods/AC2/Items/SPEKTOR/TungstenExtractor/StorageBox_TungstenExtractor.StorageBox_TungstenExtractor_C"
 		},
 		{
 			"name": "Huntsman's Boomerang",
