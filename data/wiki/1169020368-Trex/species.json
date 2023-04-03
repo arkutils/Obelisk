@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.11.1680287727",
+	"version": "357.11.1680434574",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -1384,6 +1384,54 @@
 				]
 			},
 			"death": { "baseXP": 10 }
+		},
+		{
+			"name": "FroggyDog",
+			"bp": "/Game/Mods/Trex/Aberrant/Dinos/LanternPug/Tribute/SupremeLanternPug_Character_BP_ADO.SupremeLanternPug_Character_BP_ADO_C",
+			"dinoNameTag": "Pug",
+			"customTag": "LanternPug",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 95,
+			"dragWeight": 1000,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "canMountOnHumans" ],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 60, "max": 60 } ],
+				"mutagenCost": 6
+			},
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 765, "sprint": 2700 },
+				"swim": { "base": 765 }
+			},
+			"movementD": {
+				"walk": { "base": 450, "sprint": 1800 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 7500,
+				"defaultSwingRadius": 50,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.4, "dmg": 7500, "radius": 180, "stamina": 0 },
+					{ "name": "Melee", "interval": 25, "dmg": 50, "radius": 360, "stamina": 20 },
+					{ "name": "AOE", "interval": 15, "dmg": 7500, "radius": 670, "stamina": 20 },
+					{ "name": "Minions", "interval": 60, "dmg": 0, "radius": 670, "stamina": 20 },
+					{ "name": "roll", "interval": 10, "dmg": 7500, "radius": 670, "stamina": 20 }
+				]
+			},
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "FroggyDog Boss",
@@ -32595,6 +32643,72 @@
 			}
 		},
 		{
+			"name": "Mouse, the Tribute Wolf",
+			"bp": "/Game/Mods/Trex/Dinos/Wolf/Tribute/SupremeDirewolf_Character_BP_ADO.SupremeDirewolf_Character_BP_ADO_C",
+			"dinoNameTag": "Direwolf",
+			"customTag": "Direwolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 750,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 10, "max": 60 } ],
+				"mutagenCost": 58
+			},
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 1,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 2736 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 2736 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 7500,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "None", "interval": 0.08, "dmg": 7500, "radius": 160, "stamina": 5 },
+					{ "name": "Howl", "interval": 180, "dmg": 0, "radius": 0, "stamina": 35 },
+					{ "name": "Howl", "interval": 30, "dmg": 7500, "radius": 1000, "stamina": 250 },
+					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 500 },
+					{ "name": "Sniff", "interval": 0.08, "dmg": 7500, "radius": 160, "stamina": 250 },
+					{ "name": "Meteor Shower", "interval": 60, "dmg": 7500, "radius": 160, "stamina": 500 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 50
+			}
+		},
+		{
 			"name": "Evil Mouse, the Supreme Wolf",
 			"bp": "/Game/Mods/Trex/Dinos/Wolf/Tribute/SupremeDirewolf_Character_BP_Boss.SupremeDirewolf_Character_BP_Boss_C",
 			"dinoNameTag": "Direwolf",
@@ -38120,6 +38234,56 @@
 			"death": { "baseXP": 6 }
 		},
 		{
+			"name": "Dmac, the Supreme Fenrir",
+			"bp": "/Game/Mods/Trex/Fjordur/Dinos/Fenrir/Tribute/SupremeFenrir_Character_BP.SupremeFenrir_Character_BP_C",
+			"dinoNameTag": "Fenrir Wolf",
+			"customTag": "Fenrir Wolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 1000,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 60, "max": 60 } ],
+				"mutagenCost": 58
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 360, "sprint": 2001.6 },
+				"swim": { "base": 440 }
+			},
+			"movementD": {
+				"walk": { "base": 432, "sprint": 2401.9 },
+				"swim": { "base": 528 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 7500,
+				"defaultSwingRadius": 180,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 7500, "radius": 360, "stamina": 5 },
+					{ "name": "Ice_Bite", "interval": 15, "dmg": 7500, "radius": 360, "stamina": 50 },
+					{ "name": "Ice_State", "interval": 45, "dmg": 7500, "radius": 750, "stamina": 30 },
+					{ "name": "Spawn Minions", "interval": 45, "dmg": 0, "radius": 750, "stamina": 30 },
+					{ "name": "Snow Breath", "interval": 15, "dmg": 2000, "radius": 750, "stamina": 30 },
+					{ "name": "AOE Attack", "interval": 15, "dmg": 7500, "radius": 750, "stamina": 100 }
+				]
+			},
+			"death": { "baseXP": 6 }
+		},
+		{
 			"name": "Tmac, the Supreme Fenrir Boss",
 			"bp": "/Game/Mods/Trex/Fjordur/Dinos/Fenrir/Tribute/SupremeFenrir_Character_BP_Boss.SupremeFenrir_Character_BP_Boss_C",
 			"dinoNameTag": "Fenrir Wolf",
@@ -43383,6 +43547,70 @@
 					}
 				],
 				"baseXP": 3
+			}
+		},
+		{
+			"name": "Odracir, (TBF's) Supreme Dinopithecus King",
+			"bp": "/Game/Mods/Trex/LostIsland/Dinos/Dinopithecus/Tribute/SupremeDinopithecus_Character_BP.SupremeDinopithecus_Character_BP_C",
+			"dinoNameTag": "Dinopithecus",
+			"customTag": "AlphaDinopithecus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1600, "sprint": 3200 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 1600, "sprint": 3200 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 7500,
+				"defaultSwingRadius": 700,
+				"attacks": [
+					{ "name": "Claw", "interval": 0.5, "dmg": 7500, "radius": 700, "stamina": 30 },
+					{
+						"name": "Grenade", "interval": 10, "dmg": 5000, "radius": 600, "stamina": 30,
+						"isProjectile": true
+					},
+					{ "name": "Bite", "interval": 6, "dmg": 6000, "radius": 600, "stamina": 30 },
+					{ "name": "Roar", "interval": 1, "dmg": 5000, "radius": 600, "stamina": 0 },
+					{
+						"name": "EMB", "interval": 3, "dmg": 5000, "radius": 600, "stamina": 30,
+						"isProjectile": true
+					},
+					{ "name": "Pound", "interval": 20, "dmg": 5000, "radius": 700, "stamina": 30 },
+					{ "name": "AOE attack", "interval": 60, "dmg": 5000, "radius": 700, "stamina": 100 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Trex/Ubers/Dinopithecus/DinoDropInventoryComponent_UberDinopithec.DinoDropInventoryComponent_UberDinopithec"
+					}
+				],
+				"baseXP": 3000
 			}
 		},
 		{
