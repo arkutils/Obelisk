@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.5.1680194451",
+	"version": "357.11.1680660828",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -5540,6 +5540,65 @@
 			}
 		},
 		{
+			"name": "Fenrisúlfr X",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaMegaDinos/Fenrir_Character_BP_X.Fenrir_Character_BP_X_C",
+			"dinoNameTag": "Fenrir Wolf",
+			"customTag": "Fenrir Wolf",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 800,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1497.6, "sprint": 5204.2 },
+				"swim": { "base": 432 }
+			},
+			"movementD": {
+				"walk": { "base": 1497.6, "sprint": 4163.3 },
+				"swim": { "base": 432 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 200,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 7500, "radius": 900, "stamina": 5 },
+					{ "name": "Ice_Bite", "interval": 10, "dmg": 7500, "radius": 1000, "stamina": 25 },
+					{ "name": "Ice_State", "interval": 30, "dmg": 15000, "radius": 2250, "stamina": 30 },
+					{ "name": "Ice_Breath", "interval": 15, "dmg": 1000, "radius": 0, "stamina": 30 },
+					{ "name": "Ice_Spikes", "interval": 22.5, "dmg": 3750, "radius": 1500, "stamina": 30 },
+					{ "name": "Bite", "interval": 11, "dmg": 18000, "radius": 1250, "stamina": 5 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Fjordur/Boss/DinoDropInventoryComponent_FenrirBoss_Hard.DinoDropInventoryComponent_FenrirBoss_Hard"
+					}
+				],
+				"engrams": [ "PrimalItem_WeaponTekSword_C" ],
+				"baseXP": 500
+			}
+		},
+		{
 			"name": "Mega Electrophorus X",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaMegaDinos/FlyerEel_Character_BP_MEGA.FlyerEel_Character_BP_MEGA_C",
 			"dinoNameTag": "MegaEel",
@@ -9180,8 +9239,9 @@
 				"defaultSwingRadius": 180,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.5, "dmg": 575, "radius": 500, "stamina": 10 },
-					{ "name": "Ice_Bite", "interval": 15, "dmg": 5000, "radius": 500, "stamina": 500 },
-					{ "name": "Ice_State", "interval": 45, "dmg": 100, "radius": 1000, "stamina": 250 }
+					{ "name": "Ice_Bite", "interval": 15, "dmg": 5000, "radius": 500, "stamina": 1000 },
+					{ "name": "Ice_State", "interval": 45, "dmg": 100, "radius": 1000, "stamina": 250 },
+					{ "name": "Ice_Breath", "interval": 5, "dmg": 20, "radius": 0, "stamina": 30 }
 				]
 			},
 			"death": { "baseXP": 6 }
@@ -10191,7 +10251,7 @@
 						"name": "EarthQuake", "interval": 10, "dmg": 500, "radius": 600, "stamina": 1000,
 						"isProjectile": true
 					},
-					{ "name": "Ancient", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Ancient", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "ChestPound", "interval": 10, "dmg": 0, "radius": 0, "stamina": 1000 },
 					{ "name": "Melee Attack Big", "interval": 30, "dmg": 5000, "radius": 2500, "stamina": 500 }
 				]

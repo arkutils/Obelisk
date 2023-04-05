@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.4.1678517540",
+	"version": "357.11.1680668333",
 	"format": "4",
 	"mod": {
 		"id": "1754846792",
@@ -1075,8 +1075,8 @@
 		{
 			"name": "Trovant",
 			"bp": "/Game/Mods/Zythara_Critters/AO/RockCrab_Character_BP_AO.RockCrab_Character_BP_AO_C",
-			"dinoNameTag": "Defender",
-			"customTag": "Defender",
+			"dinoNameTag": "Trovant",
+			"customTag": "Trovant",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
 			"dragWeight": 1000,
@@ -2390,7 +2390,7 @@
 			}
 		},
 		{
-			"name": "Corrupt Griffin",
+			"name": "Corrupted Griffin",
 			"bp": "/Game/Mods/Zythara_Critters/Creatures/Corrupt_Griffin/Griffin_Character_BP_corrupt.Griffin_Character_BP_corrupt_C",
 			"dinoNameTag": "Griffin Corrupt",
 			"customTag": "Griffin",
@@ -3226,6 +3226,124 @@
 				],
 				"baseXP": 6
 			}
+		},
+		{
+			"name": "Tek Equus",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_Equus/Equus_Character_BP_Robot.Equus_Character_BP_Robot_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Equus",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 175,
+			"dragWeight": 125,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 45
+			},
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"swim": { "base": 390 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 965.2 },
+				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.4, "dmg": 9, "radius": 220, "stamina": 10 },
+					{ "name": "BuckKick", "interval": 0.4, "dmg": 11, "radius": 220, "stamina": 100 },
+					{ "name": "Whinney", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 1 }
+		},
+		{
+			"name": "Tek Unicorn",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_Equus/Equus_Character_BP_Unicorn_Robot.Equus_Character_BP_Unicorn_Robot_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Equus",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 175,
+			"dragWeight": 125,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 45
+			},
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"swim": { "base": 390 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 965.2 },
+				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.4, "dmg": 9, "radius": 220, "stamina": 10 },
+					{ "name": "BuckKick", "interval": 0.4, "dmg": 11, "radius": 220, "stamina": 100 },
+					{ "name": "Whinney", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Tek Griffin",
@@ -4241,6 +4359,62 @@
 			}
 		},
 		{
+			"name": "Tek Astrocetus",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_SpaceWhale/SpaceWhale_Character_BP_Robot.SpaceWhale_Character_BP_Robot_C",
+			"dinoNameTag": "Space Whale",
+			"customTag": "Space Whale",
+			"targetingTeamName": "",
+			"mass": 2000,
+			"dragWeight": 4000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"maxExperience": 22213960,
+				"levelCapOffset": 50,
+				"mutagenCost": 99
+			},
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"fly": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"fly": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": { "swimOrFly": -0.185 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 29, "radius": 750, "stamina": 84 },
+					{ "name": "None", "interval": 0, "dmg": 75, "radius": 1000, "stamina": 150 },
+					{ "name": "Hyperdrive", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Tek Astrodelphis",
 			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_Spacedolphin/SpaceDolphin_Character_BP_robot.SpaceDolphin_Character_BP_robot_C",
 			"dinoNameTag": "Astrodelphis",
@@ -4897,10 +5071,52 @@
 			}
 		},
 		{
+			"name": "Tek Meganeura",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_dragonfly/Dragonfly_Character_BP_Robot.Dragonfly_Character_BP_Robot_C",
+			"dinoNameTag": "Dragonfly",
+			"customTag": "Ant",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 50,
+			"dragWeight": 30,
+			"flags": [ "canBeDragged", "isFlyerDino" ],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				]
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 175, "sprint": 525 },
+				"fly": { "base": 185, "sprint": 555 },
+				"swim": { "base": 185 }
+			},
+			"movementD": {
+				"walk": { "base": 175, "sprint": 525 },
+				"fly": { "base": 185, "sprint": 555 },
+				"swim": { "base": 185 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 10, "radius": 145, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 3 }
+		},
+		{
 			"name": "Trovant",
 			"bp": "/Game/Mods/Zythara_Critters/Creatures/Rock_Crab/RockCrab_Character_BP.RockCrab_Character_BP_C",
-			"dinoNameTag": "Defender",
-			"customTag": "Defender",
+			"dinoNameTag": "Trovant",
+			"customTag": "Trovant",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
 			"dragWeight": 1000,
