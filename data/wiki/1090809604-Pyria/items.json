@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.5.1680228552",
+	"version": "357.12.1681020738",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -4229,6 +4229,16 @@
 			}
 		},
 		{
+			"name": "Coal",
+			"description": "A mineral known as a fuel source and highly valued. You could use it in a similar manner as Sparkpowder",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/PyriaCoal/PrimalItemResource_PyriaCoal.PrimalItemResource_PyriaCoal_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Sparkpowder.PrimalItemResource_Sparkpowder_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Coal.Icon_Coal",
+			"type": "Resource",
+			"weight": 0.25,
+			"stackSize": 1000
+		},
+		{
 			"name": "Pyrian Basilisk Saddle",
 			"description": "A Basilisk saddle made from materials that can be easily assembled in Pyria, without Abberation. Used for both normal Basilisk as well as Glacial Basilisk",
 			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/PrimalItemArmor_BasiliskSaddlePyria.PrimalItemArmor_BasiliskSaddlePyria_C",
@@ -5024,6 +5034,34 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [ { "qty": 1000, "type": "PrimalItemResource_Mana_C" } ]
 			}
+		},
+		{
+			"name": "Gelragarian Mine",
+			"description": "Natural talented laborers by heart and nature, Gelragarians are just as at home in mines as a dwarf! \n\nFind a large patch of land to get to work, then make sure the lads get what they want, and they'll mine what you want!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Structures/Automation/GelraMine/PrimalItemStructure_PyrGelraMine.PrimalItemStructure_PyrGelraMine_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Genesis/Icons/Buffs/Condition_AutoRepair_Icon.Condition_AutoRepair_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Automation" ],
+			"weight": 250,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 6.25,
+				"time": 120,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2500, "type": "PrimalItemResource_Stone_C" },
+					{ "qty": 35, "type": "PrimalItem_WeaponMetalPick_C" },
+					{ "qty": 11, "type": "PrimalItemStructure_GelragarianSmithy_C" },
+					{ "qty": 1, "type": "PrimalItemStructure_Forge_C" },
+					{ "qty": 1, "type": "PrimalItemStructure_AnvilBench_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 12, "type": "PrimalItemStructure_StoneFloor_C" }
+				]
+			},
+			"structure": "/Game/Mods/Pyria/Alchemy/Structures/Necromancy/CharnelPit/StorageBox_PyrCharnelPit.StorageBox_PyrCharnelPit_C"
 		},
 		{
 			"name": "Bone Pile",

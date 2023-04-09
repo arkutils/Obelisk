@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.5.1680228552",
+	"version": "357.12.1681020738",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -2515,10 +2515,8 @@
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
-				"isBigDino",
-				"isTameable"
+				"isBigDino"
 			],
 			"leveling": {
 				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
@@ -5607,6 +5605,90 @@
 					{ "name": "Sword", "interval": 1, "dmg": 35, "radius": 325, "stamina": 5 },
 					{ "name": "BigSword", "interval": 12, "dmg": 80, "radius": 240, "stamina": 5 }
 				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Flaming Skeleton",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/FlaminBones/FlamingSkeleton_Character_BP.FlamingSkeleton_Character_BP_C",
+			"dinoNameTag": "SkeletalUndead",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 100,
+			"dragWeight": 125,
+			"flags": [ "canBeDragged", "isCarnivore" ],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
+				"mutagenCost": 79
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 0,
+				"timeBase": 13825,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 2000
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1080 },
+				"swim": { "base": 175 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1080 },
+				"swim": { "base": 175 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [ { "name": "Sword", "interval": 1, "dmg": 5, "radius": 325, "stamina": 5 } ]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Flaming Skeleton (E)",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/FlaminBones/FlamingSkeleton_Character_BP_HordeEvent.FlamingSkeleton_Character_BP_HordeEvent_C",
+			"dinoNameTag": "SkeletalUndead",
+			"customTag": "Offhand",
+			"targetingTeamName": "TargetOnlyPlayers",
+			"mass": 100,
+			"dragWeight": 125,
+			"flags": [ "canBeDragged", "isCarnivore" ],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
+				"mutagenCost": 79
+			},
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 0,
+				"timeBase": 13825,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 2000
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1080 },
+				"swim": { "base": 175 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1080 },
+				"swim": { "base": 175 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [ { "name": "Sword", "interval": 1, "dmg": 5, "radius": 325, "stamina": 5 } ]
 			},
 			"death": { "baseXP": 2 }
 		},
