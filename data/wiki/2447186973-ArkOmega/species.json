@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.4.1678350769",
+	"version": "357.12.1681113258",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -4653,6 +4653,62 @@
 			"death": { "baseXP": 3000 }
 		},
 		{
+			"name": "Carcharodontosaurus",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Carcha_Character_BP_Child.Carcha_Character_BP_Child_C",
+			"dinoNameTag": "Carcha",
+			"customTag": "Carcha",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 950,
+			"variants": [ "Child" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 99 },
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 60,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1120, "sprint": 2241.1 }
+			},
+			"movementD": {
+				"walk": { "base": 1120, "sprint": 2241.1 }
+			},
+			"staminaRates": { "sprint": -29 },
+			"attack": {
+				"defaultDmg": 98,
+				"defaultSwingRadius": 850,
+				"attacks": [
+					{ "name": "Bite", "interval": 0, "dmg": 98, "radius": 700, "stamina": 5 },
+					{ "name": "Tailspin", "interval": 1.25, "dmg": 71, "radius": 900, "stamina": 40 }
+				]
+			},
+			"death": {
+				"dossierId": 1230,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Gigant.DinoDropInventoryComponent_Carnivore_Huge_Gigant"
+					}
+				],
+				"baseXP": 750
+			}
+		},
+		{
 			"name": "Carnotaurus",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Carno_Character_BP_Child.Carno_Character_BP_Child_C",
 			"dinoNameTag": "Carno",
@@ -5738,7 +5794,7 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.1, "dmg": 10, "radius": 120, "stamina": 0 },
 					{
-						"name": "None", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0,
+						"name": "None", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
 					}
 				]
@@ -6747,6 +6803,60 @@
 				]
 			},
 			"death": { "baseXP": 6 }
+		},
+		{
+			"name": "Fjordhawk",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Fjordhawk_Character_BP_Child.Fjordhawk_Character_BP_Child_C",
+			"dinoNameTag": "Fjordhawk",
+			"customTag": "Fjordhawk",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 140,
+			"dragWeight": 70,
+			"variants": [ "Child" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 31 },
+			"cloning": {
+				"costBase": 750,
+				"costLevel": 55,
+				"timeBase": 5250,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 125, "sprint": 162.5 },
+				"fly": { "base": 900, "sprint": 1170 },
+				"swim": { "base": 900, "sprint": 1170 }
+			},
+			"movementD": {
+				"walk": { "base": 125, "sprint": 162.5 },
+				"fly": { "base": 900, "sprint": 1170 },
+				"swim": { "base": 900, "sprint": 1170 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 16,
+				"defaultSwingRadius": 170,
+				"attacks": [ { "name": "Bite", "interval": 0.1, "dmg": 16, "radius": 250, "stamina": 0 } ]
+			},
+			"death": {
+				"dossierId": 1229,
+				"baseXP": 3
+			}
 		},
 		{
 			"name": "Titanomyrma Soldier",
@@ -16572,7 +16682,7 @@
 				"defaultSwingRadius": 185,
 				"attacks": [
 					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 280, "stamina": 0 },
-					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 280, "stamina": 0 }
+					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 560, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 4 }

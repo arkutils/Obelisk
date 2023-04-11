@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.4.1678421623",
+	"version": "357.12.1681113258",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -3392,7 +3392,7 @@
 					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaResource_C" },
 					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaSummoner_C" },
 					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaUnstable_C" },
-					{ "qty": 2, "type": "PrimalItemConsumable_Egg_BetaUtility_C" }
+					{ "qty": 1, "type": "PrimalItemConsumable_Egg_BetaUtility_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
@@ -7466,7 +7466,7 @@
 			"description": "Use any Omega soul from the group your Ferox is in to craft this to allow it to be transformed into a Brute Ferox.\n\nDr. Jekyll is evolved into Mr. Hyde using Unstable Ferox Candy.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_FeroxCandy.PrimalItem_FeroxCandy_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_OmegaSoul.PrimalItem_OmegaSoul_C",
-			"icon": "/Game/Mods/ArkOmega/PrimalEarth/Structures/Christmas/Icons/ChristmasCandy_Icon.ChristmasCandy_Icon",
+			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/ChristmasCandy_Icon.ChristmasCandy_Icon",
 			"type": "MiscConsumable/Food",
 			"flags": [ "preventCheatGive" ],
 			"weight": 0.5,
@@ -7486,7 +7486,7 @@
 		},
 		{
 			"name": "Token of the Fallen God",
-			"description": "Feed this token to your Group variant to change its Tier back to Omega and give it a random variant within the same group.",
+			"description": "Feed this token to your Group variant to change its Tier back to Omega and give it a random variant within the same group. This will not give it a 7th variant as the Group variant does not contain 7th variants.\n\nThis only works on group variants. It does not work on Zodiac, Darkness, or Unique Group God variants.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_GodWipe.PrimalItem_GodWipe_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/PrimalEarth/UI/Textures/ExitIcon.ExitIcon",
@@ -8752,8 +8752,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 50, "type": "PrimalItemResource_Stone_C" },
-					{ "qty": 30, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Hide_C" }
+					{ "qty": 100, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 250, "type": "PrimalItemResource_Fibers_C" }
 				]
 			},
 			"structure": "/Game/Mods/ArkOmega/Structures/UpgradeBench/StorageBox_OmegaUpgradeBench.StorageBox_OmegaUpgradeBench_C"
@@ -8784,7 +8784,7 @@
 		},
 		{
 			"name": "Void Vacuum",
-			"description": "Uses the powerful vacuum of space to draw in and hold any loose items dropped nearby. Will also collect items from bag drops. \n\nUses Souls for power.",
+			"description": "Uses the powerful vacuum of space to draw in and hold any loose items dropped nearby. Will also collect items from bag drops. ",
 			"bp": "/Game/Mods/ArkOmega/Structures/VoidVacuum/PrimalItemStructure_VoidVacuum.PrimalItemStructure_VoidVacuum_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Mods/ArkOmega/Structures/VoidVacuum/hexen_void_icon.hexen_void_icon",
@@ -8808,7 +8808,7 @@
 		},
 		{
 			"name": "Boomstick",
-			"description": "A club capable of spontaneous explosions, dealing damage in a wide area.",
+			"description": "A club capable of area explosions, dealing damage in a wide area.\n\nThe fuse must be lit on the Boomstick using right click (secondary attack) in order for it to be able to explode during attack.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Boomstick/PrimalItem_Boomstick.PrimalItem_Boomstick_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
 			"icon": "/Game/PrimalEarth/WeaponWoodClub/HUD_Club_Colorize.HUD_Club_Colorize",
@@ -8981,7 +8981,7 @@
 		},
 		{
 			"name": "Fortune",
-			"description": "A golden gilded sword of Luck and Power.\n\nDeals passive damage, bypassing nearly all forms of damage reduction or detection, with a 25% chance to deal double damage.\n\nRequires Engram to equip.",
+			"description": "A golden gilded sword of Luck and Power.\n\nDeals piercing damage, bypassing some dino's natural defenses, with a 25% chance to crit for double damage.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Fortune/PrimalItem_Fortune.PrimalItem_Fortune_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
 			"icon": "/Game/PrimalEarth/WeaponSword/HUD_SwordForged_Colorize_MIC.HUD_SwordForged_Colorize_MIC",
@@ -9673,7 +9673,7 @@
 		},
 		{
 			"name": "Outburst",
-			"description": "Boom clap, the sound of my heart,\nthe beat goes on and on and on and on and...",
+			"description": "A weapon of explosions, this crossbow fires arrows that explode and deal area damage on impact.\n\nHold R after equipping to choose the type of essence used as ammo. The higher the tier, the more powerful the shot.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Outburst/PrimalItem_Outburst.PrimalItem_Outburst_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
 			"icon": "/Game/PrimalEarth/WeaponCrossbow/Materials/HUD_Crossbow_Colorize_MIC.HUD_Crossbow_Colorize_MIC",
