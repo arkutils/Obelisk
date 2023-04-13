@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.12.1681085971",
+	"version": "357.13.1681371358",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -1014,7 +1014,7 @@
 				"defaultDmg": 25,
 				"defaultSwingRadius": 120,
 				"attacks": [
-					{ "name": "None", "interval": 0.1, "dmg": 25, "radius": 125, "stamina": 0 },
+					{ "name": "None", "interval": 0.1, "dmg": 25, "radius": 225, "stamina": 0 },
 					{
 						"name": "None", "interval": 12, "dmg": 25, "radius": 0, "stamina": 0,
 						"isProjectile": true
@@ -1672,8 +1672,8 @@
 				"defaultDmg": 880,
 				"defaultSwingRadius": 900,
 				"attacks": [
-					{ "name": "Bite", "interval": 1, "dmg": 880, "radius": 900, "stamina": 75 },
-					{ "name": "Bite Gnash", "interval": 6, "dmg": 1425, "radius": 900, "stamina": 250 },
+					{ "name": "Bite", "interval": 1, "dmg": 880, "radius": 1000, "stamina": 75 },
+					{ "name": "Bite Gnash", "interval": 6, "dmg": 1425, "radius": 1000, "stamina": 250 },
 					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -6250,7 +6250,7 @@
 					{ "name": "ClawAndFangs", "interval": 0.75, "dmg": 28000, "radius": 2200, "stamina": 5 },
 					{ "name": "PoisonSting", "interval": 8, "dmg": 20000, "radius": 1500, "stamina": 15 },
 					{
-						"name": "PoisonAttack", "interval": 8, "dmg": 400, "radius": 900, "stamina": 100,
+						"name": "PoisonAttack", "interval": 21, "dmg": 400, "radius": 900, "stamina": 100,
 						"isProjectile": true
 					},
 					{ "name": "PoisonAttackAir", "interval": 14, "dmg": 0, "radius": 0, "stamina": 100 },
@@ -10744,8 +10744,8 @@
 				"defaultDmg": 12,
 				"defaultSwingRadius": 90,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.1, "dmg": 75, "radius": 90, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.1, "dmg": 50, "radius": 90, "stamina": 0 }
+					{ "name": "Melee", "interval": 0.2, "dmg": 75, "radius": 100, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.1, "dmg": 50, "radius": 110, "stamina": 0 }
 				]
 			}
 		},
@@ -20153,7 +20153,7 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 26,
+				"defaultDmg": 75,
 				"defaultSwingRadius": 450,
 				"attacks": [
 					{ "name": "WebLeft", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
@@ -30187,7 +30187,13 @@
 			"mass": 5000,
 			"dragWeight": 1050,
 			"variants": [ "Boss" ],
-			"flags": [ "canBeDragged", "isBigDino", "isBossDino", "isWaterDino" ],
+			"flags": [
+				"canBeDragged",
+				"isBigDino",
+				"isBossDino",
+				"isFlyerDino",
+				"isWaterDino"
+			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
