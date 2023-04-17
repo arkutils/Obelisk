@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "356.12.1677371137",
+	"version": "357.14.1681699692",
 	"format": "4",
 	"mod": {
 		"id": "2804332920",
@@ -425,6 +425,63 @@
 			}
 		},
 		{
+			"name": "Paleo ARK Carcharodontosaurus",
+			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoCarcha/Carcha_Character_BP_Paleo.Carcha_Character_BP_Paleo_C",
+			"dinoNameTag": "Carcha",
+			"customTag": "Carcha",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 99 },
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 60,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 805, "sprint": 1530.3 }
+			},
+			"movementD": {
+				"walk": { "base": 805, "sprint": 1530.3 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 850,
+				"attacks": [
+					{ "name": "Bite", "interval": 0, "dmg": 50, "radius": 525, "stamina": 5 },
+					{ "name": "Tailspin", "interval": 1.25, "dmg": 50, "radius": 675, "stamina": 40 },
+					{ "name": "Speedboost Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "RP Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1230,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Gigant.DinoDropInventoryComponent_Carnivore_Huge_Gigant"
+					}
+				],
+				"baseXP": 750
+			}
+		},
+		{
 			"name": "Paleo ARK Carnotaurus",
 			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoCarno/Carno_Character_BP_Paleo.Carno_Character_BP_Paleo_C",
 			"dinoNameTag": "Carno",
@@ -452,11 +509,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 425, "sprint": 1859.4 },
+				"walk": { "base": 425, "sprint": 2125 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 425, "sprint": 1593.8 },
+				"walk": { "base": 425, "sprint": 1700 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -817,10 +874,10 @@
 				"defaultDmg": 12,
 				"defaultSwingRadius": 100,
 				"attacks": [
-					{ "name": "Melee", "interval": 2, "dmg": 45, "radius": 250, "stamina": 5 },
+					{ "name": "Melee", "interval": 0.1, "dmg": 45, "radius": 250, "stamina": 5 },
 					{ "name": "AlertPulse", "interval": 0, "dmg": 0, "radius": 0, "stamina": 15 },
 					{ "name": "Frighten", "interval": 120, "dmg": 0, "radius": 0, "stamina": 80 },
-					{ "name": "Tail Swipe", "interval": 0.5, "dmg": 15, "radius": 250, "stamina": 5 }
+					{ "name": "Tail Swipe", "interval": 5, "dmg": 15, "radius": 250, "stamina": 5 }
 				]
 			},
 			"death": { "baseXP": 1 }
@@ -1414,6 +1471,66 @@
 				]
 			},
 			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Paleo ARK Tropeognathus",
+			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoTropeo/Tropeognathus_Character_BP_Paleo.Tropeognathus_Character_BP_Paleo_C",
+			"dinoNameTag": "Tropeognathus",
+			"customTag": "Tropeognathus",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 539 },
+				"fly": { "base": 700, "sprint": 1540 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 735, "sprint": 245 },
+				"fly": { "base": 2100, "sprint": 700 },
+				"swim": { "base": 900 }
+			},
+			"movementR": {
+				"walk": { "base": 826.9, "sprint": 275.6 },
+				"fly": { "base": 2362.5, "sprint": 787.5 },
+				"swim": { "base": 1012.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 }
+				]
+			},
+			"death": {
+				"dossierId": 1223,
+				"baseXP": 3
+			}
 		},
 		{
 			"name": "Tarbosaurus",
