@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.14.1681689999",
+	"version": "357.14.1681858676",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -10959,7 +10959,8 @@
 				"defaultSwingRadius": 500,
 				"attacks": [
 					{ "name": "Wild Melee", "interval": 0.7, "dmg": 1600, "radius": 900, "stamina": 3 },
-					{ "name": "Tamed Melee", "interval": 0.22, "dmg": 2100, "radius": 900, "stamina": 3 }
+					{ "name": "Tamed Melee", "interval": 0.22, "dmg": 2100, "radius": 900, "stamina": 3 },
+					{ "name": "Roar Knockdown", "interval": 12, "dmg": 10, "radius": 1, "stamina": 0 }
 				]
 			}
 		},
@@ -11079,7 +11080,8 @@
 					{ "name": "Wild Melee", "interval": 0.22, "dmg": 13500, "radius": 1200, "stamina": 3 },
 					{ "name": "Tamed Melee", "interval": 3, "dmg": 17500, "radius": 1200, "stamina": 3 },
 					{ "name": "None", "interval": 0, "dmg": 0, "radius": 260, "stamina": 600 },
-					{ "name": "Wild Melee", "interval": 6, "dmg": 6000, "radius": 900, "stamina": 3 }
+					{ "name": "Wild Melee", "interval": 6, "dmg": 6000, "radius": 900, "stamina": 3 },
+					{ "name": "Roar Knockdown", "interval": 12, "dmg": 10, "radius": 1, "stamina": 0 }
 				]
 			}
 		},
@@ -16455,15 +16457,12 @@
 			"name": "ApexDodo Wyvern Prime WILD",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/WildNonTammablePrimeDinos/DodoWyvern_Character_BP_PRIME_WILD.DodoWyvern_Character_BP_PRIME_WILD_C",
 			"dinoNameTag": "PrimeWyvern",
-			"customTag": "PrimeWyvern",
+			"customTag": "",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
 			"dragWeight": 1000,
 			"variants": [ "Boss" ],
 			"flags": [
-				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
-				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"doStepDamage",
@@ -16472,12 +16471,6 @@
 				"isCarnivore",
 				"isFlyerDino"
 			],
-			"cloning": {
-				"costBase": 62500,
-				"costLevel": 330,
-				"timeBase": 437500,
-				"timeLevel": 2310
-			},
 			"falling": {
 				"dmgMult": 5,
 				"maxSpeed": 1550
@@ -16488,13 +16481,8 @@
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 700, "sprint": 721.9 },
-				"fly": { "base": 1750, "sprint": 1203.1 },
-				"swim": { "base": 1100 }
-			},
-			"movementR": {
 				"walk": { "base": 700, "sprint": 1443.8 },
-				"fly": { "base": 1750, "sprint": 2406.2 },
+				"fly": { "base": 1750, "sprint": 2406.3 },
 				"swim": { "base": 1100 }
 			},
 			"staminaRates": {
@@ -16502,7 +16490,7 @@
 				"swimOrFly": -0.475
 			},
 			"attack": {
-				"defaultDmg": 250,
+				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
 				"attacks": [
 					{ "name": "Bite (AI)", "interval": 1, "dmg": 9500, "radius": 1000, "stamina": 10 },
@@ -17255,25 +17243,16 @@
 			"dragWeight": 1000,
 			"variants": [ "Boss" ],
 			"flags": [
-				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
-				"canDrag",
 				"doStepDamage",
 				"isBigDino",
 				"isBossDino",
 				"isCarnivore",
 				"isFlyerDino"
 			],
-			"cloning": {
-				"costBase": 80000,
-				"costLevel": 330,
-				"timeBase": 560000,
-				"timeLevel": 2310
-			},
 			"falling": {
-				"dmgMult": 1,
+				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -17292,7 +17271,7 @@
 			},
 			"attack": {
 				"defaultDmg": 750,
-				"defaultSwingRadius": 1200,
+				"defaultSwingRadius": 90,
 				"attacks": [
 					{ "name": "ClawAndFangs", "interval": 0.1, "dmg": 5000, "radius": 900, "stamina": 5 },
 					{ "name": "FireAttack", "interval": 4, "dmg": 25, "radius": 900, "stamina": 150 },
@@ -17313,7 +17292,7 @@
 						"item": "/Game/Mods/DinoOverHaulMODX/AlphaDINOS/AlphaDinoDrop/DinoDropInventoryComponent_PRIME_Manticore_WILD.DinoDropInventoryComponent_PRIME_Manticore_WILD"
 					}
 				],
-				"baseXP": 1500
+				"baseXP": 1000
 			}
 		},
 		{
@@ -17327,7 +17306,6 @@
 			"variants": [ "Boss" ],
 			"flags": [
 				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
@@ -17375,7 +17353,7 @@
 						"item": "/Game/Mods/DinoOverHaulMODX/AlphaDINOS/AlphaDinoDrop/DinoDropInventoryComponent_PRIME_Manticore_WILD.DinoDropInventoryComponent_PRIME_Manticore_WILD"
 					}
 				],
-				"baseXP": 1750
+				"baseXP": 1250
 			}
 		},
 		{
@@ -17443,21 +17421,16 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 190,
 			"dragWeight": 35,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"flyerAllowRidingInCaves",
+				"isBossDino",
 				"isCarnivore",
 				"isFlyerDino"
 			],
-			"leveling": {
-				"wildLevelTable": [
-					{ "chance": 0.6428571, "min": 225, "max": 250 },
-					{ "chance": 0.3571429, "min": 250, "max": 250 }
-				],
-				"mutagenCost": 2377
-			},
 			"cloning": {
 				"costBase": 60000,
 				"costLevel": 275,
@@ -17635,7 +17608,6 @@
 				"allowRiding",
 				"canDrag",
 				"doStepDamage",
-				"isAmphibious",
 				"isBigDino",
 				"isBossDino",
 				"isCarnivore"
@@ -17819,7 +17791,6 @@
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
-				"isAmphibious",
 				"isBigDino",
 				"isBossDino",
 				"isCarnivore",
@@ -17887,7 +17858,6 @@
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
-				"isAmphibious",
 				"isBigDino",
 				"isBossDino",
 				"isCarnivore",
@@ -17952,7 +17922,6 @@
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
-				"isAmphibious",
 				"isBigDino",
 				"isBossDino",
 				"isCarnivore",
@@ -18015,7 +17984,6 @@
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
-				"isAmphibious",
 				"isBigDino",
 				"isBossDino",
 				"isCarnivore",
@@ -18072,7 +18040,6 @@
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
-				"isAmphibious",
 				"isBigDino",
 				"isBossDino",
 				"isCarnivore",
