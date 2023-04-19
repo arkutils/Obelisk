@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.12.1681113258",
+	"version": "357.14.1681716001",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -6449,11 +6449,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 52, "sprint": 260 },
+				"walk": { "base": 156, "sprint": 780 },
 				"swim": { "base": 200 }
 			},
 			"movementD": {
-				"walk": { "base": 52, "sprint": 260 },
+				"walk": { "base": 156, "sprint": 780 },
 				"swim": { "base": 200 }
 			},
 			"staminaRates": {
@@ -8037,6 +8037,68 @@
 			}
 		},
 		{
+			"name": "Carchonychus",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Carchonychus/Carchonychus_Character_BP.Carchonychus_Character_BP_C",
+			"dinoNameTag": "Deinonychus",
+			"customTag": "Deinonychus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 960, "sprint": 2592 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 960, "sprint": 2880 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -29,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 128,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 128, "radius": 350, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 128, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 128, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1222,
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
 			"name": "Carnice Wyvern",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/CarniceWyvern/CarniceWyvern_Character_BP.CarniceWyvern_Character_BP_C",
 			"dinoNameTag": "Carnice",
@@ -9036,6 +9098,63 @@
 						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small_Chupa.DinoDropInventoryComponent_Carnivore_Small_Chupa"
 					}
 				]
+			}
+		},
+		{
+			"name": "Alpha Neurodon",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Hybrids/Neurodon/MegaNeurodon_Character_BP.MegaNeurodon_Character_BP_C",
+			"dinoNameTag": "Elite Mega",
+			"customTag": "Megalodon",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"variants": [ "Alpha" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 38 },
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 570.4 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2070 },
+				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 235,
+				"defaultSwingRadius": 190,
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 235, "radius": 190, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Mega_Megalodon.DinoDropInventoryComponent_Carnivore_Mega_Megalodon"
+					}
+				],
+				"baseXP": 750
 			}
 		},
 		{
