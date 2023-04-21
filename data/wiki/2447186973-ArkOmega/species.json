@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.14.1681716001",
+	"version": "357.14.1681967408",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -963,6 +963,78 @@
 					}
 				],
 				"baseXP": 885
+			}
+		},
+		{
+			"name": "Alpha Rock Drake",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaRockDrake_Character_BP.MegaRockDrake_Character_BP_C",
+			"dinoNameTag": "RockDrake",
+			"customTag": "RockDrake",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 345,
+			"dragWeight": 425,
+			"variants": [ "Alpha" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 10,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 975, "sprint": 2730 },
+				"swim": { "base": 600, "sprint": 840 }
+			},
+			"movementD": {
+				"walk": { "base": 975, "sprint": 3071.2 },
+				"swim": { "base": 600, "sprint": 945 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 300,
+				"defaultSwingRadius": 600,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 300, "radius": 900, "stamina": 20 },
+					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 1200, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 750, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 300, "radius": 1350, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_RockDrake.DinoDropInventoryComponent_Carnivore_Large_RockDrake"
+					}
+				],
+				"baseXP": 2
 			}
 		},
 		{
