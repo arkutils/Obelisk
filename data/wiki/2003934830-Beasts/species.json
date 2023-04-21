@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.5.1680231259",
+	"version": "357.14.1681745937",
 	"format": "4",
 	"mod": {
 		"id": "2003934830",
@@ -3042,11 +3042,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1305 },
+				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 425 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1305 },
+				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 425 }
 			},
 			"staminaRates": {
@@ -3107,11 +3107,76 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1305 },
+				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 425 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1305 },
+				"walk": { "base": 320, "sprint": 960 },
+				"swim": { "base": 425 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 22, "radius": 1000, "stamina": 0 },
+					{
+						"name": "Ranged", "interval": 8, "dmg": 0, "radius": 0, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Claw Attack", "interval": 0.2, "dmg": 32, "radius": 1000, "stamina": 0 },
+					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Beasts/Massospondylus/BPs/DinoDropInventoryComponent_Massospondylus.DinoDropInventoryComponent_Massospondylus"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Paleo Massospondylus",
+			"bp": "/Game/Mods/Beasts/Massospondylus/BPs/Massospondylus_Character_BP_Paleo.Massospondylus_Character_BP_Paleo_C",
+			"dinoNameTag": "Massospondylus",
+			"customTag": "Massospondylus",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 200,
+			"dragWeight": 600,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 30 },
+			"cloning": {
+				"costBase": 725,
+				"costLevel": 55,
+				"timeBase": 5075,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 320, "sprint": 960 },
+				"swim": { "base": 425 }
+			},
+			"movementD": {
+				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 425 }
 			},
 			"staminaRates": {
@@ -3172,11 +3237,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1305 },
+				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 425 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1305 },
+				"walk": { "base": 320, "sprint": 960 },
 				"swim": { "base": 425 }
 			},
 			"staminaRates": {
@@ -4775,6 +4840,524 @@
 				],
 				"baseXP": 2
 			}
+		},
+		{
+			"name": "Alpha Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/MegaParaxenisaurus_Character_BP.MegaParaxenisaurus_Character_BP_C",
+			"dinoNameTag": "Elite Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 60, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 34, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.5,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Beasts/Paraxenisaurus/BPs/DinoDropInventoryComponent_Duck.DinoDropInventoryComponent_Duck"
+					}
+				],
+				"baseXP": 700
+			}
+		},
+		{
+			"name": "Alpha Aberrant Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/MegaParaxenisaurus_Character_BP_Aberrant.MegaParaxenisaurus_Character_BP_Aberrant_C",
+			"dinoNameTag": "Elite Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 60, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 34, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.5,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Beasts/Paraxenisaurus/BPs/DinoDropInventoryComponent_Duck.DinoDropInventoryComponent_Duck"
+					}
+				],
+				"baseXP": 700
+			}
+		},
+		{
+			"name": "Alpha X-Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/MegaParaxenisaurus_Character_BP_Bog.MegaParaxenisaurus_Character_BP_Bog_C",
+			"dinoNameTag": "Elite Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 60, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 34, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.5,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Beasts/Paraxenisaurus/BPs/DinoDropInventoryComponent_Duck.DinoDropInventoryComponent_Duck"
+					}
+				],
+				"baseXP": 700
+			}
+		},
+		{
+			"name": "Alpha R-Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/MegaParaxenisaurus_Character_BP_Eden.MegaParaxenisaurus_Character_BP_Eden_C",
+			"dinoNameTag": "Elite Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 60, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 34, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.5,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Beasts/Paraxenisaurus/BPs/DinoDropInventoryComponent_Duck.DinoDropInventoryComponent_Duck"
+					}
+				],
+				"baseXP": 700
+			}
+		},
+		{
+			"name": "Alpha Paleo Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/MegaParaxenisaurus_Character_BP_Paleo.MegaParaxenisaurus_Character_BP_Paleo_C",
+			"dinoNameTag": "Elite Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 60, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 34, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.5,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Beasts/Paraxenisaurus/BPs/DinoDropInventoryComponent_Duck.DinoDropInventoryComponent_Duck"
+					}
+				],
+				"baseXP": 700
+			}
+		},
+		{
+			"name": "Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/Paraxenisaurus_Character_BP.Paraxenisaurus_Character_BP_C",
+			"dinoNameTag": "Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 30, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 17, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "Aberrant Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/Paraxenisaurus_Character_BP_Aberrant.Paraxenisaurus_Character_BP_Aberrant_C",
+			"dinoNameTag": "Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 30, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 17, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "X-Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/Paraxenisaurus_Character_BP_Bog.Paraxenisaurus_Character_BP_Bog_C",
+			"dinoNameTag": "Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"mutagenCost": 52
+			},
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 30, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 17, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "R-Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/Paraxenisaurus_Character_BP_Eden.Paraxenisaurus_Character_BP_Eden_C",
+			"dinoNameTag": "Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 30, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 17, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "Paleo Paraxenisaurus",
+			"bp": "/Game/Mods/Beasts/Paraxenisaurus/BPs/Paraxenisaurus_Character_BP_Paleo.Paraxenisaurus_Character_BP_Paleo_C",
+			"dinoNameTag": "Paraxenisaurus",
+			"customTag": "Paraxenisaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1500 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.15, "dmg": 30, "radius": 250, "stamina": 10 },
+					{ "name": "Melee Claws", "interval": 0.15, "dmg": 17, "radius": 250, "stamina": 15 },
+					{ "name": "Catch Fish", "interval": 0.15, "dmg": 0, "radius": 800, "stamina": 10 },
+					{ "name": "Ally Call", "interval": 60, "dmg": 0, "radius": 0, "stamina": 20 }
+				]
+			},
+			"death": { "baseXP": 5 }
 		},
 		{
 			"name": "Pinacosaurus",
