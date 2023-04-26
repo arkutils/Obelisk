@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.11.1680668333",
+	"version": "357.14.1682481287",
 	"format": "4",
 	"mod": {
 		"id": "1754846792",
@@ -483,6 +483,49 @@
 					}
 				],
 				"baseXP": 6
+			}
+		},
+		{
+			"name": "Geodog",
+			"bp": "/Game/Mods/Zythara_Critters/AO/Geodog_Character_BP_AO.Geodog_Character_BP_AO_C",
+			"dinoNameTag": "Geodog",
+			"customTag": "Geodog",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "wildForcedLevel": 1 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 510, "sprint": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 450 }
+			},
+			"staminaRates": { "sprint": -25 },
+			"attack": {
+				"defaultDmg": 105,
+				"defaultSwingRadius": 1200,
+				"attacks": [ { "name": "Melee", "interval": 0.4, "dmg": 95, "radius": 300, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Zythara_Critters/Items/Saddles/Loot/DinoDropInventoryComponent_Geodog.DinoDropInventoryComponent_Geodog"
+					}
+				],
+				"baseXP": 3000
 			}
 		},
 		{
@@ -1115,7 +1158,16 @@
 					{ "name": "SweepAttack", "interval": 1, "dmg": 105, "radius": 400, "stamina": 0 }
 				]
 			},
-			"death": { "baseXP": 50 }
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Zythara_Critters/Items/Saddles/Loot/DinoDropInventoryComponent_Trovant.DinoDropInventoryComponent_Trovant"
+					}
+				],
+				"baseXP": 50
+			}
 		},
 		{
 			"name": "Skeletal Rock Drake",
@@ -2790,6 +2842,49 @@
 			}
 		},
 		{
+			"name": "Geodog",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Geodog/Geodog_Character_BP.Geodog_Character_BP_C",
+			"dinoNameTag": "Geodog",
+			"customTag": "Geodog",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "wildForcedLevel": 1 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 510, "sprint": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 450 }
+			},
+			"staminaRates": { "sprint": -4 },
+			"attack": {
+				"defaultDmg": 65,
+				"defaultSwingRadius": 1200,
+				"attacks": [ { "name": "Melee", "interval": 0.4, "dmg": 55, "radius": 300, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Zythara_Critters/Items/Saddles/Loot/DinoDropInventoryComponent_Geodog.DinoDropInventoryComponent_Geodog"
+					}
+				],
+				"baseXP": 3000
+			}
+		},
+		{
 			"name": "Alpha Featherlight",
 			"bp": "/Game/Mods/Zythara_Critters/Creatures/MegaFeatherlight/MegaLanternBird_Character_BP.MegaLanternBird_Character_BP_C",
 			"dinoNameTag": "Elite Lantern Bird",
@@ -3633,6 +3728,64 @@
 				],
 				"baseXP": 12
 			}
+		},
+		{
+			"name": "Tek Pegomastax",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_Pego/Pegomastax_Character_BP_robot.Pegomastax_Character_BP_robot_C",
+			"dinoNameTag": "Pegomastax",
+			"customTag": "Pegomastax",
+			"targetingTeamName": "TargetOnlyPlayers",
+			"mass": 50,
+			"dragWeight": 20,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 29
+			},
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 110, "sprint": 473 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 110, "sprint": 473 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 3,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 10, "radius": 90, "stamina": 0 },
+					{ "name": "Pick-pocket", "interval": 4, "dmg": 1, "radius": 80, "stamina": 0 },
+					{ "name": "Jump", "interval": 3, "dmg": 10, "radius": 120, "stamina": 0 },
+					{ "name": "Roar", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 0.5 }
 		},
 		{
 			"name": "Tek Ravager",
@@ -5155,7 +5308,16 @@
 					{ "name": "SweepAttack", "interval": 1, "dmg": 70, "radius": 400, "stamina": 0 }
 				]
 			},
-			"death": { "baseXP": 50 }
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Zythara_Critters/Items/Saddles/Loot/DinoDropInventoryComponent_Trovant.DinoDropInventoryComponent_Trovant"
+					}
+				],
+				"baseXP": 50
+			}
 		},
 		{
 			"name": "Skeletal Argentavis",
