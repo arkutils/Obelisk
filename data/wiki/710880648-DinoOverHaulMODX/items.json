@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.14.1682108466",
+	"version": "357.15.1682737580",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -1476,6 +1476,16 @@
 			"stackSize": 1
 		},
 		{
+			"name": "Prime Compy",
+			"description": "Use This to gain your Prime Mega Compy  -- DinoOverhaul!",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_TriggerSpawners/PrimalItem_Trig_PrimeMegaCompy.PrimalItem_Trig_PrimeMegaCompy_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/PrimeMegaCompy_ICON.PrimeMegaCompy_ICON",
+			"type": "Structure",
+			"weight": 0.5,
+			"stackSize": 1
+		},
+		{
 			"name": "Starter Dino 1",
 			"description": "Use This to gain your evolve  -- DinoOverhaul!",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_TriggerSpawners/PrimalItem_Trig_StarterDino1.PrimalItem_Trig_StarterDino1_C",
@@ -2199,6 +2209,24 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [ { "qty": 1, "type": "PrimalItemResource_CorruptCrystal_C" } ]
+			}
+		},
+		{
+			"name": "DOX Corruption Crystal Dust",
+			"description": "Break Corruption Shard down into 6 fragements/dust\n\n- Uses: For Prime Mega Compy, Primal Golem/Pith\n",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemConsumable_CCD.PrimalItemConsumable_CCD_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/CCS2CCD_Icon.CCS2CCD_Icon",
+			"type": "Resource",
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_CorruptCrystalShard_C" } ]
 			}
 		},
 		{
@@ -3303,8 +3331,18 @@
 			}
 		},
 		{
+			"name": "Corruption Crystal Dust (CCD)",
+			"description": "- Used to allow Prime Mega Compy to summon up to 4 Prime WILDs\n- Used to increase Primal Golems DMG/DEF\n- Used to increase Primal Piths DMG/DEF\n\n- Convert CCS into CCD\nRatio: 1:6",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_CorruptCrystalDust.PrimalItemResource_CorruptCrystalDust_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/CCDust_Icon.CCDust_Icon",
+			"type": "Resource",
+			"weight": 0.1,
+			"stackSize": 250
+		},
+		{
 			"name": "Corruption Crystal Shard (CCS)",
-			"description": "- Combine 25 to make 1 Corruption Crystal (Use DOX Crafting Station)\n\n- Convert 3 to make 1 Prime Kibble (Use DOX Crafting Station)\n\n- Can be used in DOX Mining Forge to harvest Element Shards (2500-5000 element shards per 1 CCS) Auto converts every 1k Element Shards into 20 Element",
+			"description": "- Combine 25 to make 1 Corruption Crystal (Use DOX Crafting Station)\n- Convert 3 to make 1 Prime Kibble (Use DOX Crafting Station)\n- Convert 1 into 6 Corruption Crystal Dust (CCD) (Use DOX Crafting Station)\n\n- Can be used in DOX Mining Forge to harvest Element Shards (2500-5000 element shards per 1 CCS) Auto converts every 1k Element Shards into 20 Element",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_CorruptCrystalShard.PrimalItemResource_CorruptCrystalShard_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/PurpleStoneShard_ICON.PurpleStoneShard_ICON",
@@ -3456,7 +3494,7 @@
 		},
 		{
 			"name": "Pure Corruption Crystal",
-			"description": "Only Prime Ferox/Reaper gain defense/damage increase from this stone, place on Tool Belt -- DinoOverhaul X\n\n- Can be used to enable element shard mining in DOX Mining Forge",
+			"description": "Only Prime Ferox/Reaper/Mega Compy gain defense/damage increase from this stone, place on Tool Belt -- DinoOverhaul X\n\n- Can be used to enable element shard mining in DOX Mining Forge",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_PureCorruptCrystal.PrimalItemResource_PureCorruptCrystal_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/PurePurpleStone_ICON.PurePurpleStone_ICON",
