@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "351.6.1666358758",
+	"version": "357.15.1682518886",
 	"format": "4",
 	"mod": {
 		"id": "2869411055",
@@ -48,6 +48,30 @@
 			"stackSize": 100,
 			"spoilsIn": 1209600,
 			"structure": "/Game/Mods/SDinoVariants/PrimalEarth/Structures/Halloween/Sign_EasterEgg.Sign_EasterEgg_C"
+		},
+		{
+			"name": "Stolen Headstone",
+			"description": "A headstone stolen from a graveyard.",
+			"bp": "/Game/Mods/SDinoVariants/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_HW_Grave.PrimalItemStructure_HW_Grave_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructure_BaseSign.PrimalItemStructure_BaseSign_C",
+			"icon": "/Game/Mods/SDinoVariants/PrimalEarth/CoreBlueprints/Items/Structures/Icons/GraveStone2_Icon.GraveStone2_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Furniture", "Stone" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"structure": "/Game/Mods/SDinoVariants/PrimalEarth/Structures/Halloween/StructureBP_Gravestone_HW.StructureBP_Gravestone_HW_C"
+		},
+		{
+			"name": "Pumpkin",
+			"description": "Decorate your base with this pumpkin. Can be \"carved\" with all manner of paints.",
+			"bp": "/Game/Mods/SDinoVariants/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_Pumpkin.PrimalItemStructure_Pumpkin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/Mods/SDinoVariants/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/Pumpkin_Icon.Pumpkin_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Halloween" ],
+			"weight": 0.5,
+			"stackSize": 100,
+			"structure": "/Game/Mods/SDinoVariants/PrimalEarth/Structures/Halloween/Sign_Pumpkin.Sign_Pumpkin_C"
 		},
 		{
 			"name": "Scarecrow",
@@ -101,7 +125,7 @@
 			}
 		},
 		{
-			"name": "Fertilized X-Ankylo Egg",
+			"name": "Fertilized S-Ankylo Egg",
 			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/SDinoVariants/Variants/Ankylo/PrimalItemConsumable_Egg_Ankylo_Fertilized_Svartalfheim.PrimalItemConsumable_Egg_Ankylo_Fertilized_Svartalfheim_C",
 			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Ankylo.PrimalItemConsumable_Egg_Ankylo_C",
@@ -343,6 +367,34 @@
 			"egg": {
 				"dinoClass": "/Game/Mods/SDinoVariants/Variants/Rex/S_Rex_Character_BP.S_Rex_Character_BP_C",
 				"temperature": { "min": 32, "max": 34 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized S-Rock Drake Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/SDinoVariants/Variants/RockDrake/PrimalItemConsumable_Egg_S-RockDrake_Fertilized.PrimalItemConsumable_Egg_S-RockDrake_Fertilized_C",
+			"parent": "/Game/Aberration/Dinos/RockDrake/PrimalItemConsumable_Egg_RockDrake.PrimalItemConsumable_Egg_RockDrake_C",
+			"icon": "/Game/Mods/SDinoVariants/Variants/RockDrake/RockDrakeEgg_Icon.RockDrakeEgg_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 50,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/SDinoVariants/Variants/RockDrake/S-RockDrake_Character_BP.S-RockDrake_Character_BP_C",
+				"temperature": { "min": -90, "max": -80 }
 			},
 			"cooking": {
 				"health": 0.8,

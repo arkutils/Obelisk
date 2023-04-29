@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "355.3.1671458793",
+	"version": "357.15.1682518886",
 	"format": "4",
 	"mod": {
 		"id": "2869411055",
@@ -196,6 +196,101 @@
 			}
 		},
 		{
+			"name": "S-Doedicurus",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Doedicurus/S-Doed_Character_BP.S-Doed_Character_BP_C",
+			"dinoNameTag": "Doed",
+			"customTag": "Doed",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 160,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 83 },
+			"cloning": {
+				"costBase": 2075,
+				"costLevel": 55,
+				"timeBase": 14525,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 142,
+				"attacks": [
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 32, "radius": 142, "stamina": 0 },
+					{ "name": "None", "interval": 0.67, "dmg": 16, "radius": 142, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 32, "radius": 142, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 7 }
+		},
+		{
+			"name": "S-Fenrir",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Fenrir/S-Fenrir_Character_BP.S-Fenrir_Character_BP_C",
+			"dinoNameTag": "Fenrir Wolf",
+			"customTag": "Fenrir Wolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 180,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 58 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 208, "sprint": 1156.5 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 249.6, "sprint": 1387.8 },
+				"swim": { "base": 288 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 180,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 50, "radius": 180, "stamina": 5 },
+					{ "name": "Ice_Bite", "interval": 15, "dmg": 70, "radius": 200, "stamina": 25 },
+					{ "name": "Ice_State", "interval": 45, "dmg": 35, "radius": 750, "stamina": 30 }
+				]
+			},
+			"death": { "baseXP": 6 }
+		},
+		{
 			"name": "S-Maewing",
 			"bp": "/Game/Mods/SDinoVariants/Variants/Maewing/S_MilkGlider_Character_BP.S_MilkGlider_Character_BP_C",
 			"dinoNameTag": "Maewing",
@@ -298,6 +393,135 @@
 			}
 		},
 		{
+			"name": "S-Reaper Queen",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Reaper/S-Xenomorph_Character_BP_Female.S-Xenomorph_Character_BP_Female_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Female" ],
+			"flags": [ "allowRiding", "canDrag", "doStepDamage", "preventNeuter" ],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1350, "sprint": 3240 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2880 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 105, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 65, "radius": 1400, "stamina": 15 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 1, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 10, "dmg": 10, "radius": 800, "stamina": 0 },
+					{ "name": "Roar", "interval": 60, "dmg": 5, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 100, "stamina": 5 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_ReaperQueen.DinoDropInventoryComponent_Carnivore_ReaperQueen"
+					}
+				],
+				"baseXP": 800
+			}
+		},
+		{
+			"name": "S-Reaper King",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Reaper/S-Xenomorph_Character_BP_Male_Tamed.S-Xenomorph_Character_BP_Male_Tamed_C",
+			"dinoNameTag": "Xenomorph",
+			"customTag": "Reaper King",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"variants": [ "Male", "Tamed" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"levelCapOffset": 50,
+				"mutagenCost": 93
+			},
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 699, "sprint": 1782.5 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1584.4 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 466, "sprint": 1346.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 65,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 75, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 48, "radius": 1000, "stamina": 30 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 10, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 52, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 200, "stamina": 5 }
+				]
+			},
+			"death": { "baseXP": 18 }
+		},
+		{
 			"name": "S-Rex",
 			"bp": "/Game/Mods/SDinoVariants/Variants/Rex/S_Rex_Character_BP.S_Rex_Character_BP_C",
 			"dinoNameTag": "Rex",
@@ -360,6 +584,155 @@
 					}
 				],
 				"baseXP": 30
+			}
+		},
+		{
+			"name": "S-Rock Drake",
+			"bp": "/Game/Mods/SDinoVariants/Variants/RockDrake/S-RockDrake_Character_BP.S-RockDrake_Character_BP_C",
+			"dinoNameTag": "RockDrake",
+			"customTag": "RockDrake",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 345,
+			"dragWeight": 425,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 10,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 650, "sprint": 1820 },
+				"swim": { "base": 600, "sprint": 840 }
+			},
+			"movementD": {
+				"walk": { "base": 650, "sprint": 2047.5 },
+				"swim": { "base": 600, "sprint": 945 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 600,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 60, "radius": 600, "stamina": 20 },
+					{ "name": "Toggle Climbing", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Toggle Camo", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_DirectHit", "interval": 0, "dmg": 240, "radius": 0, "stamina": 0 },
+					{ "name": "Pounce_AOE", "interval": 0, "dmg": 150, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 60, "radius": 900, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_RockDrake.DinoDropInventoryComponent_Carnivore_Large_RockDrake"
+					}
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "S-Shadowmane",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Shadowmane/S-LionfishLion_Character_BP.S-LionfishLion_Character_BP_C",
+			"dinoNameTag": "Lionfish Lion",
+			"customTag": "LionfishLion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 350,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"levelCapOffset": 50,
+				"mutagenCost": 95
+			},
+			"cloning": {
+				"costBase": 2375,
+				"costLevel": 55,
+				"timeBase": 16625,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 375, "sprint": 1500 },
+				"swim": { "base": 500, "sprint": 1400 }
+			},
+			"movementD": {
+				"walk": { "base": 375, "sprint": 1875 },
+				"swim": { "base": 500, "sprint": 1750 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "RightClickMeleeComboAdjustIndex", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Female Activate Stealth", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Male Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 80, "radius": 0, "stamina": 0 },
+					{ "name": "TriggerSoloCloak", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildTeleport", "interval": 1.2, "dmg": 35, "radius": 400, "stamina": 25 },
+					{ "name": "Bite", "interval": 1.2, "dmg": 35, "radius": 400, "stamina": 25 },
+					{ "name": "BiteFinisher", "interval": 1.2, "dmg": 35, "radius": 400, "stamina": 25 },
+					{ "name": "Teleport", "interval": 0, "dmg": 50, "radius": 0, "stamina": 0 },
+					{ "name": "MeleeCombo1", "interval": 0.2, "dmg": 47, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo2", "interval": 0.2, "dmg": 43, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo3", "interval": 0.2, "dmg": 44, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo4", "interval": 0.2, "dmg": 46, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo5", "interval": 0.2, "dmg": 45, "radius": 400, "stamina": 0 },
+					{ "name": "MeleeCombo6", "interval": 0.2, "dmg": 48, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Genesis2/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_LionfishLion.DinoDropInventoryComponent_Carnivore_Medium_LionfishLion"
+					}
+				],
+				"baseXP": 5
 			}
 		},
 		{
