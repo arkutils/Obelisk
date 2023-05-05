@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.14.1681745937",
+	"version": "357.15.1682712826",
 	"format": "4",
 	"mod": {
 		"id": "2003934830",
@@ -1263,6 +1263,29 @@
 			}
 		},
 		{
+			"name": "Genyodectes Friend",
+			"description": "Give a baby Genyodectes this if you want to train it to be tolerant towards others, but loose Lone Wolf. (Put the item in its inventory when it is a baby, then consume it)",
+			"bp": "/Game/Mods/Beasts/Genyodectes/BPs/PrimalItemConsumable_GenyTeddyBear.PrimalItemConsumable_GenyTeddyBear_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/PrimalEarth/UI/EventIcons/HUD_TeddyBearGrenade_Icon.HUD_TeddyBearGrenade_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 300, "type": "PrimalItemResource_Fibers_C" }
+				]
+			}
+		},
+		{
 			"name": "Genyodectes Helmet",
 			"description": "With this equipped, Genyodectes hits harder, takes less damage, and harvests more resources!",
 			"bp": "/Game/Mods/Beasts/Genyodectes/Saddle/PrimalItemArmor_GenyodectesHelmet.PrimalItemArmor_GenyodectesHelmet_C",
@@ -2333,7 +2356,7 @@
 			}
 		},
 		{
-			"name": "Fertilized aberrant Mapusaurus Egg",
+			"name": "Fertilized Aberrant Mapusaurus Egg",
 			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
 			"bp": "/Game/Mods/Beasts/Mapusaurus/BPs/PrimalItemConsumable_Egg_Mapu_FertilizedAberrant.PrimalItemConsumable_Egg_Mapu_FertilizedAberrant_C",
 			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Yuty.PrimalItemConsumable_Egg_Yuty_C",
@@ -2350,6 +2373,34 @@
 			],
 			"egg": {
 				"dinoClass": "/Game/Mods/Beasts/Mapusaurus/BPs/Mapusaurus_Character_BP_Aberrant.Mapusaurus_Character_BP_Aberrant_C",
+				"temperature": { "min": 32, "max": 34 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Asgardian Mapusaurus Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Beasts/Mapusaurus/BPs/PrimalItemConsumable_Egg_Mapu_FertilizedAsgardian.PrimalItemConsumable_Egg_Mapu_FertilizedAsgardian_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Yuty.PrimalItemConsumable_Egg_Yuty_C",
+			"icon": "/Game/Mods/Beasts/Mapusaurus/Textures/HUD_DinoEgg_MIC_Inst_Mapu.HUD_DinoEgg_MIC_Inst_Mapu",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 15,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Beasts/Mapusaurus/BPs/Mapusaurus_Character_BP_Asgardian.Mapusaurus_Character_BP_Asgardian_C",
 				"temperature": { "min": 32, "max": 34 }
 			},
 			"cooking": {
