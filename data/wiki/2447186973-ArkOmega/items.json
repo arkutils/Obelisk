@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.15.1683029058",
+	"version": "357.18.1683354231",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -202,6 +202,44 @@
 					{ "qty": 250, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Stone_C" }
 				]
+			}
+		},
+		{
+			"name": "Material Prevention Skin",
+			"description": "Use this skin on your saddle to prevent your dino from having its skin changed by its variant and/or tier.\n\nThe dino will need to be cryopodded or soul balled after being given the saddle and released to reset its skin. This will not remove an existing skin from a dino.",
+			"bp": "/Game/Mods/ArkOmega/Armor/Saddles/PrimalItemArmor_SkinPrevention.PrimalItemArmor_SkinPrevention_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
+			"icon": "/Game/PrimalEarth/Test/icon_paintbrush_D.icon_paintbrush_D",
+			"type": "Skin",
+			"folders": [ "Saddles" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 1, "type": "PrimalItem_GodWipe_C" } ]
+			}
+		},
+		{
+			"name": "Unprotection Skin Skin",
+			"description": "Use this skin on your saddle to prevent your dino from being able to receive the Protection buff from Absorbent and Guardian bubbles.",
+			"bp": "/Game/Mods/ArkOmega/Armor/Saddles/PrimalItemArmor_UnprotectionSkin.PrimalItemArmor_UnprotectionSkin_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemSkinGeneric.PrimalItemSkinGeneric_C",
+			"icon": "/Game/Extinction/Icons/Buffs/MekShieldVulnerable_Icon.MekShieldVulnerable_Icon",
+			"type": "Skin",
+			"folders": [ "Saddles" ],
+			"weight": 0,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 1000, "type": "PrimalItem_GuardianSoul_C" } ]
 			}
 		},
 		{
@@ -7151,26 +7189,6 @@
 			}
 		},
 		{
-			"name": "Tameable Boss Token",
-			"description": "A token used to summon a tameable boss from the beacon. Place this in the trophy slot, and your next summon is guaranteed to be a tameable boss.\n\nNOTE: This Token summons a random tameable boss, using the normal spawn weights to choose a variant.",
-			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_BossToken.PrimalItem_BossToken_C",
-			"parent": "/Script/ShooterGame.PrimalItem",
-			"icon": "/Game/Mods/ArkOmega/Items/Souls/Tokens/BasicToken.BasicToken",
-			"type": "Equipment/Trophy",
-			"flags": [ "preventCheatGive" ],
-			"folders": [ "Tokens" ],
-			"weight": 0.5,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 2,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "exact": true, "qty": 50, "type": "PrimalItem_SoulShard_C" } ]
-			}
-		},
-		{
 			"name": "Dino Mind WIpe",
 			"description": "Use this to Mind Wipe your dino back to its base tamed level, and return all of the level up points back to redistribute them as needed.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_DinoMindWipe.PrimalItem_DinoMindWipe_C",
@@ -7340,7 +7358,7 @@
 		},
 		{
 			"name": "Unique God Token",
-			"description": "Use this in the God Egg to summon a Unique God.\n\nThe Unique God summoned by this token will be decided by the Paragon Soul used to craft it. ",
+			"description": "Use this in the God Egg to summon a Unique God. This god will drop a soul that lets you upgrade the corresponding unique dino to Godlike.\n\nThe Unique God summoned by this token will be decided by the Paragon Soul used to craft it. ",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_UniqueGodToken.PrimalItem_UniqueGodToken_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_SpeciesSoul.PrimalItem_SpeciesSoul_C",
 			"icon": "/Game/OldAssets/UI/Chat/ChatLog_Icon_Star.ChatLog_Icon_Star",
