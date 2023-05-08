@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.14.1682203587",
+	"version": "357.18.1683573751",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -4166,6 +4166,35 @@
 			"stackSize": 1000
 		},
 		{
+			"name": "Copper Ingot",
+			"description": "Created by refining Copper ore in a forge of a Pyrian race. Brass and Bronze may not be as exactly durable as Iron or Steel, but it's damn well close, and lighter as well!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Bronze/PrimalItemResource_PyrCopperIngot.PrimalItemResource_PyrCopperIngot_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_BronzeIngot.Icon_BronzeIngot",
+			"type": "Resource",
+			"folders": [ "Special Order" ],
+			"weight": 0.5,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 30,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemResource_PyrCopperOre_C" } ]
+			}
+		},
+		{
+			"name": "Copper Ore",
+			"description": "A metal both Pyrians and ancient Earthlings are rather fond of for metalworking. A Pyrian smith should be able to work with this.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Bronze/PrimalItemResource_PyrCopperOre.PrimalItemResource_PyrCopperOre_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_CopperOre.Icon_CopperOre",
+			"type": "Resource",
+			"weight": 1.5,
+			"stackSize": 1000
+		},
+		{
 			"name": "Dragonleather",
 			"description": "A thick piece of of dragon's hide. While an ARK Survivor will simply use this in substitute for normal leather, a Pyrian knows its true usage.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Dragonleather/PrimalItemResource_Hide_Dragonleather.PrimalItemResource_Hide_Dragonleather_C",
@@ -4180,7 +4209,7 @@
 			"description": "Created by refining Mithril ore in a forge of a Pyrian race. This metal is phenomenally durable, yet light.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Mithril/PrimalItemResource_MithrilIngot.PrimalItemResource_MithrilIngot_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Craftable.PrimalItemResource_Craftable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_SilverIngot.Icon_SilverIngot",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_MithrilIngot.Icon_MithrilIngot",
 			"type": "Resource",
 			"folders": [ "Special Order" ],
 			"weight": 0.25,
@@ -4199,7 +4228,7 @@
 			"description": "A metal from Pyria, seeming to be a natural composite of titanium and silver. Used with Magicrystal for powerful, fine craft in gear. A Pyrian smith should be able to work with this.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Mithril/PrimalItemResource_MithrilOre.PrimalItemResource_MithrilOre_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Silver.Icon_Silver",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_MithrilOre.Icon_MithrilOre",
 			"type": "Resource",
 			"weight": 1,
 			"stackSize": 1000
@@ -4267,6 +4296,155 @@
 			"type": "Resource",
 			"weight": 0.25,
 			"stackSize": 1000
+		},
+		{
+			"name": "Pyrian Carno Combat Saddle",
+			"description": "Equip a Carno with this to ride it. Grants slightly better defense.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/ArmorySaddles/Carno/PrimalItemArmor_PyrCarnoCombatSaddle.PrimalItemArmor_PyrCarnoCombatSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Carno/Carno_Saddle/HUD_CarnoSaddle_Colorize_MIC.HUD_CarnoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Pyrian Armory" ],
+			"weight": 25,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 72.4,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 320, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 170, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 15, "type": "PrimalItemResource_PyrCopperIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Heavy Armored Carno Saddle",
+			"description": "Equip a Carno with this to ride it. Lowers movement speed by 15% and weighs twice as much, but provides base double armor, and immunity to bleeding and stuns.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/ArmorySaddles/Carno/PrimalItemArmor_PyrCarnoHeavyArmorSaddle.PrimalItemArmor_PyrCarnoHeavyArmorSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Carno/Carno_Saddle/HUD_CarnoSaddle_Colorize_MIC.HUD_CarnoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Pyrian Armory" ],
+			"weight": 40,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 72.4,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 320, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 170, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 75, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 25, "type": "PrimalItemResource_PyrCopperIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Carno Traveler Saddle",
+			"description": "Equip a Carno with this to ride it. Makes resources weigh 25% less!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/ArmorySaddles/Carno/PrimalItemArmor_PyrCarnoTravelerSaddle.PrimalItemArmor_PyrCarnoTravelerSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Carno/Carno_Saddle/HUD_CarnoSaddle_Colorize_MIC.HUD_CarnoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Pyrian Armory" ],
+			"weight": 25,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 72.4,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 320, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 170, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 5, "type": "PrimalItemResource_PyrCopperIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Megatherium Combat Saddle",
+			"description": "Equip a Megatherium with this to ride it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/ArmorySaddles/Megatherium/PrimalItemArmor_PyrMegatheriumCombatSaddle.PrimalItemArmor_PyrMegatheriumCombatSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Megatherium/Saddle/HUD_MegatheriumSaddle_Colorize_MIC.HUD_MegatheriumSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Pyrian Armory" ],
+			"weight": 25,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 22.2,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 325, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 130, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 55, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 22, "type": "PrimalItemResource_PyrCopperIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Megatherium Heavy Armor Saddle",
+			"description": "Equip a Megatherium with this to ride it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/ArmorySaddles/Megatherium/PrimalItemArmor_PyrMegatheriumHeavyArmorSaddle.PrimalItemArmor_PyrMegatheriumHeavyArmorSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Megatherium/Saddle/HUD_MegatheriumSaddle_Colorize_MIC.HUD_MegatheriumSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Pyrian Armory" ],
+			"weight": 40,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 22.2,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 325, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 130, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 110, "type": "PrimalItemResource_GelraIngot_C" },
+					{ "qty": 35, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 35, "type": "PrimalItemResource_PyrCopperIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Pyrian Megatherium Traveler Saddle",
+			"description": "Equip a Megatherium with this to ride it.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Saddle/ArmorySaddles/Megatherium/PrimalItemArmor_PyrMegatheriumTravelerSaddle.PrimalItemArmor_PyrMegatheriumTravelerSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Megatherium/Saddle/HUD_MegatheriumSaddle_Colorize_MIC.HUD_MegatheriumSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles", "Pyrian Armory" ],
+			"weight": 25,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 22.2,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 325, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 130, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
+					{ "qty": 55, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_PyrCopperIngot_C" }
+				]
+			}
 		},
 		{
 			"name": "Pyrian Basilisk Saddle",
@@ -4364,7 +4542,8 @@
 					{ "qty": 285, "type": "PrimalItemResource_Hide_C" },
 					{ "qty": 125, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 110, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 55, "type": "PrimalItemResource_GelraIngot_C" }
+					{ "qty": 55, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 15, "type": "PrimalItemResource_PyrCopperIngot_C" }
 				]
 			}
 		},
@@ -5092,7 +5271,7 @@
 		{
 			"name": "Gelragarian Mine",
 			"description": "Natural talented laborers by heart and nature, Gelragarians are just as at home in mines as a dwarf! \n\nFind a large patch of land to get to work, then make sure the lads get what they want, and they'll mine what you want!",
-			"bp": "/Game/Mods/Pyria/Alchemy/Structures/Automation/GelraMine/PrimalItemStructure_PyrGelraMine.PrimalItemStructure_PyrGelraMine_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/Structures/Automation/GelraMine/PrimalItemStructure_PyrGelragarianMine.PrimalItemStructure_PyrGelragarianMine_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Genesis/Icons/Buffs/Condition_AutoRepair_Icon.Condition_AutoRepair_Icon",
 			"type": "Structure",
@@ -5115,7 +5294,7 @@
 					{ "qty": 12, "type": "PrimalItemStructure_StoneFloor_C" }
 				]
 			},
-			"structure": "/Game/Mods/Pyria/Alchemy/Structures/Automation/GelraMine/StorageBox_PyrGelraMine.StorageBox_PyrGelraMine_C"
+			"structure": "/Game/Mods/Pyria/Alchemy/Structures/Automation/GelraMine/StorageBox_PyrGelragarianMine.StorageBox_PyrGelragarianMine_C"
 		},
 		{
 			"name": "Bone Pile",
