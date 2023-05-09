@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.15.1682997061",
+	"version": "357.18.1683583226",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -6293,12 +6293,12 @@
 			},
 			"movementW": {
 				"walk": { "base": 750, "sprint": 1687.5 },
-				"fly": { "base": 1600, "sprint": 3600 },
+				"fly": { "base": 1700, "sprint": 3825 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
 				"walk": { "base": 750, "sprint": 1125 },
-				"fly": { "base": 1600, "sprint": 2400 },
+				"fly": { "base": 1700, "sprint": 2550 },
 				"swim": { "base": 1100 }
 			},
 			"staminaRates": {
@@ -7548,7 +7548,7 @@
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Bigfoot",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 600,
+			"mass": 400,
 			"dragWeight": 600,
 			"flags": [
 				"allowRiding",
@@ -9624,7 +9624,7 @@
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Kong",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 600,
+			"mass": 400,
 			"dragWeight": 600,
 			"flags": [
 				"allowRiding",
@@ -13928,7 +13928,7 @@
 		{
 			"name": "Prime Mega Compy",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/UniquePrimeDinos/Compy_Character_BP_PRIME_X.Compy_Character_BP_PRIME_X_C",
-			"dinoNameTag": "PrimeCompy",
+			"dinoNameTag": "PrimeCompyX",
 			"customTag": "MegaCompy",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 499,
@@ -14781,7 +14781,7 @@
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Kong",
 			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 600,
+			"mass": 400,
 			"dragWeight": 600,
 			"flags": [
 				"allowRiding",
@@ -16529,7 +16529,7 @@
 				"swim": { "base": 750 }
 			},
 			"movementD": {
-				"walk": { "base": 110, "sprint": 962.5 },
+				"walk": { "base": 110, "sprint": 550 },
 				"swim": { "base": 412.5 }
 			},
 			"staminaRates": {
@@ -16545,7 +16545,16 @@
 					{ "name": "None", "interval": 40, "dmg": 0, "radius": 260, "stamina": 600 }
 				]
 			},
-			"death": { "baseXP": 50 }
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/DinoOverHaulMODX/AlphaDINOS/AlphaDinoDrop/DinoDropInventoryComponent_PRIME_Direbear_WILD.DinoDropInventoryComponent_PRIME_Direbear_WILD"
+					}
+				],
+				"baseXP": 50
+			}
 		},
 		{
 			"name": "ApexDodo Wyvern Prime WILD",
@@ -16776,6 +16785,82 @@
 					}
 				],
 				"baseXP": 1600
+			}
+		},
+		{
+			"name": "Primal Elemental Golem WILD",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/WildNonTammablePrimeDinos/ElementalGolem_Character_BP_PRIME_WILD.ElementalGolem_Character_BP_PRIME_WILD_C",
+			"dinoNameTag": "PrimeRockElemental",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBossDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"cloning": {
+				"costBase": 12500000,
+				"costLevel": 66000,
+				"timeBase": 87500000,
+				"timeLevel": 462000
+			},
+			"falling": {
+				"dmgMult": 5,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 440, "sprint": 1056 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 960 }
+			},
+			"staminaRates": { "sprint": -30 },
+			"attack": {
+				"defaultDmg": 438,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 1, "dmg": 1075, "radius": 1200, "stamina": 25 },
+					{ "name": "RockAttacks4-5-6", "interval": 6, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Swipe", "interval": 3, "dmg": 400, "radius": 600, "stamina": 50 },
+					{ "name": "Ancient Summon", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "ThrowRock Lava", "interval": 6, "dmg": 75, "radius": 1200, "stamina": 0,
+						"isProjectile": true
+					},
+					{
+						"name": "ThrowRock Poison", "interval": 6, "dmg": 75, "radius": 1200, "stamina": 1500,
+						"isProjectile": true
+					},
+					{
+						"name": "ThrowRock", "interval": 10, "dmg": 120, "radius": 1200, "stamina": 375,
+						"isProjectile": true
+					},
+					{
+						"name": "LavaExplosion", "interval": 12, "dmg": 500, "radius": 600, "stamina": 1500,
+						"isProjectile": true
+					},
+					{
+						"name": "PoisonExplosion", "interval": 12, "dmg": 500, "radius": 600, "stamina": 800,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/DinoOverHaulMODX/AlphaDINOS/AlphaDinoDrop/DinoDropInventoryComponent_PRIME_WILD.DinoDropInventoryComponent_PRIME_WILD"
+					}
+				],
+				"baseXP": 50
 			}
 		},
 		{
@@ -17071,7 +17156,6 @@
 					{ "name": "Melee", "interval": 0.4, "dmg": 1500, "radius": 500, "stamina": 10 },
 					{ "name": "BuckKick", "interval": 3, "dmg": 6750, "radius": 600, "stamina": 100 },
 					{ "name": "Whinney", "interval": 15, "dmg": 5, "radius": 5000, "stamina": 25 },
-					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
 					{
 						"name": "Flames Explosion", "interval": 10, "dmg": 0, "radius": 0, "stamina": 1000,
 						"isProjectile": true
@@ -17145,7 +17229,7 @@
 			"dinoNameTag": "PrimeKingKong",
 			"customTag": "PrimeKingKong",
 			"targetingTeamName": "Herbivores",
-			"mass": 5000,
+			"mass": 400,
 			"dragWeight": 600,
 			"variants": [ "Boss" ],
 			"flags": [
@@ -17351,12 +17435,12 @@
 			},
 			"movementW": {
 				"walk": { "base": 750, "sprint": 1237.5 },
-				"fly": { "base": 1500, "sprint": 2475 },
+				"fly": { "base": 1600, "sprint": 2640 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
 				"walk": { "base": 750, "sprint": 1125 },
-				"fly": { "base": 1500, "sprint": 2250 },
+				"fly": { "base": 1600, "sprint": 2400 },
 				"swim": { "base": 1100 }
 			},
 			"staminaRates": {
@@ -17415,12 +17499,12 @@
 			},
 			"movementW": {
 				"walk": { "base": 750, "sprint": 1237.5 },
-				"fly": { "base": 1500, "sprint": 2475 },
+				"fly": { "base": 1600, "sprint": 2640 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
 				"walk": { "base": 750, "sprint": 1125 },
-				"fly": { "base": 1500, "sprint": 2250 },
+				"fly": { "base": 1600, "sprint": 2400 },
 				"swim": { "base": 1100 }
 			},
 			"staminaRates": {
@@ -17436,7 +17520,8 @@
 					{ "name": "IceBarbGroundAttack", "interval": 8, "dmg": 175, "radius": 900, "stamina": 300 },
 					{ "name": "IceBarbsAir", "interval": 12, "dmg": 0, "radius": 0, "stamina": 100 },
 					{ "name": "IceBreath PRIME", "interval": 30, "dmg": 25, "radius": 900, "stamina": 200 },
-					{ "name": "ClawAndFangs", "interval": 0.1, "dmg": 5000, "radius": 900, "stamina": 5 }
+					{ "name": "ClawAndFangs", "interval": 0.1, "dmg": 5000, "radius": 900, "stamina": 5 },
+					{ "name": "IceBarbGroundAttack Far", "interval": 18, "dmg": 175, "radius": 900, "stamina": 300 }
 				]
 			},
 			"death": {
@@ -18064,7 +18149,6 @@
 			"targetingTeamName": "Carnivores_High",
 			"mass": 800,
 			"dragWeight": 555,
-			"variants": [ "Boss" ],
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowRiding",
@@ -18073,10 +18157,12 @@
 				"canDrag",
 				"doStepDamage",
 				"isBigDino",
-				"isBossDino",
 				"isCarnivore",
 				"isFlyerDino"
 			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 260, "max": 260 } ]
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -28750,6 +28836,84 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Android",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/Summoner/SummonedMinions/Bot_WithBow_BP_MOD.Bot_WithBow_BP_MOD_C",
+			"dinoNameTag": "",
+			"customTag": "",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 100,
+			"dragWeight": 35,
+			"leveling": {
+				"wildLevelTable": []
+			},
+			"falling": {
+				"dmgMult": 165,
+				"maxSpeed": 1200
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 100,
+				"defaultSwingRadius": 0,
+				"attacks": [
+					{
+						"name": "BowAttack", "interval": 1.25, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Android",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/Summoner/SummonedMinions/Bot_WithTekRifle_BP_MOD.Bot_WithTekRifle_BP_MOD_C",
+			"dinoNameTag": "",
+			"customTag": "",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 100,
+			"dragWeight": 35,
+			"leveling": {
+				"wildLevelTable": []
+			},
+			"falling": {
+				"dmgMult": 165,
+				"maxSpeed": 1200
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 0,
+				"attacks": [
+					{
+						"name": "RifleAttack", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "ApexChalicotherium",
 			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/Summoner/SummonedMinions/Chalico_Character_BP_Summon.Chalico_Character_BP_Summon_C",
 			"dinoNameTag": "Chalico",
@@ -28954,82 +29118,6 @@
 				"attacks": [
 					{
 						"name": "RifleAttack", "interval": 1.5, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
-				]
-			},
-			"death": { "baseXP": 2 }
-		},
-		{
-			"name": "Corrupt Android",
-			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/Summoner/SummonedMinions/CorruptRockwell_WithBow_Character_BP_MOD.CorruptRockwell_WithBow_Character_BP_MOD_C",
-			"dinoNameTag": "CorruptSurvivor",
-			"customTag": "",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 100,
-			"dragWeight": 35,
-			"variants": [ "Boss" ],
-			"flags": [ "isBossDino" ],
-			"falling": {
-				"dmgMult": 165,
-				"maxSpeed": 1200
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 525 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 350, "sprint": 525 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 100,
-				"defaultSwingRadius": 0,
-				"attacks": [
-					{
-						"name": "BowAttack", "interval": 0.75, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
-				]
-			},
-			"death": { "baseXP": 2 }
-		},
-		{
-			"name": "Android",
-			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/Summoner/SummonedMinions/CorruptRockwell_WithTekRifle_Character_BP_MOD.CorruptRockwell_WithTekRifle_Character_BP_MOD_C",
-			"dinoNameTag": "CorruptSurvivor",
-			"customTag": "",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 100,
-			"dragWeight": 35,
-			"variants": [ "Boss" ],
-			"flags": [ "isBossDino" ],
-			"falling": {
-				"dmgMult": 165,
-				"maxSpeed": 1200
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 525 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 350, "sprint": 525 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -4,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 0,
-				"attacks": [
-					{
-						"name": "RifleAttack", "interval": 0.75, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
 					}
 				]
