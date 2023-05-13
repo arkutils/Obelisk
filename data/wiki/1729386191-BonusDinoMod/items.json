@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "356.5.1675791338",
+	"version": "357.18.1683922895",
 	"format": "4",
 	"mod": {
 		"id": "1729386191",
@@ -67,6 +67,17 @@
 			"weight": 0,
 			"stackSize": 1000,
 			"spoilsIn": 1
+		},
+		{
+			"name": "Hunt Point (Admin)",
+			"description": "Signifies a significant kill for your Albertosaurus. Use it to unlock skills and features. Cannot be transferred between Albertosauruses and cannnot be removed from their inventory.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/PrimalItemResource_HuntPoint_Admin.PrimalItemResource_HuntPoint_Admin_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Alberta/Items/PrimalItemResource_HuntPoint.PrimalItemResource_HuntPoint_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Teeth_Icon.Teeth_Icon",
+			"type": "Resource",
+			"weight": 0,
+			"stackSize": 1000,
+			"spoilsIn": 3600
 		},
 		{
 			"name": "Albertosaurus Saddle",
@@ -758,6 +769,281 @@
 				"food": 0.8,
 				"weight": 0.3,
 				"water": 0.01
+			}
+		},
+		{
+			"name": "Inostrancevia Saddle (KC)",
+			"description": "Equip an Inostrancevia with this to ride it.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/PrimalItemArmor_KamiInostranSaddle.PrimalItemArmor_KamiInostranSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Baryonyx/Baryonyx_Saddle/HUD_BaryonyxSaddle_Colorize_MIC.HUD_BaryonyxSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 225, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 350, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Inostrancevia Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/PrimalItemConsumable_Egg_KamiInostran_Fertilized.PrimalItemConsumable_Egg_KamiInostran_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Megalosaurus.PrimalItemConsumable_Egg_Megalosaurus_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Megalosaurus.HUD_DinoEgg_MIC_Inst_Megalosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/KamiInostran_Character_BP.KamiInostran_Character_BP_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized R-Inostrancevia Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/PrimalItemConsumable_Egg_KamiInostran_Fertilized_Eden.PrimalItemConsumable_Egg_KamiInostran_Fertilized_Eden_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/PrimalItemConsumable_Egg_KamiInostran_Fertilized.PrimalItemConsumable_Egg_KamiInostran_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Megalosaurus.HUD_DinoEgg_MIC_Inst_Megalosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/KamiInostran_Character_BP_Eden.KamiInostran_Character_BP_Eden_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Scorched Inostrancevia Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/PrimalItemConsumable_Egg_KamiInostran_Fertilized_Scorched.PrimalItemConsumable_Egg_KamiInostran_Fertilized_Scorched_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/PrimalItemConsumable_Egg_KamiInostran_Fertilized.PrimalItemConsumable_Egg_KamiInostran_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Megalosaurus.HUD_DinoEgg_MIC_Inst_Megalosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/KamiInostran_Character_BP_Scorched.KamiInostran_Character_BP_Scorched_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized X-Inostrancevia Egg",
+			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/PrimalItemConsumable_Egg_KamiInostran_Fertilized_Snow.PrimalItemConsumable_Egg_KamiInostran_Fertilized_Snow_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/PrimalItemConsumable_Egg_KamiInostran_Fertilized.PrimalItemConsumable_Egg_KamiInostran_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Megalosaurus.HUD_DinoEgg_MIC_Inst_Megalosaurus",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Snow_KamiInostran_Character_BP.Snow_KamiInostran_Character_BP_C",
+				"temperature": { "min": 26, "max": 32 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Challenger Mindset",
+			"description": "Inostrancevia deals 15% more damage to, and takes 15% less, from bosses, mission dinos, and alphas. Ino heals and gains increased XP after killing one. \n\nCANNOT BE USED WITH OTHER MINDSET ABILITIES.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoChallenger.PrimalItemConsumable_InoChallenger_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoMoodBase.PrimalItemConsumable_InoMoodBase_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Condition_Befriended_Icon.Condition_Befriended_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemArtifactGeneric_C" } ]
+			}
+		},
+		{
+			"name": "Collector Mindset",
+			"description": "Makes items weigh 30% less in the inventory of Inostrancevia. Black Pearls, Gems, Silica Pearls, Element Shards, Element Dust, and Mutagel are given a 3.5x harvest multiplier.\n\nCANNOT BE USED WITH OTHER MINDSET ABILITIES.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoCollector.PrimalItemConsumable_InoCollector_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoMoodBase.PrimalItemConsumable_InoMoodBase_C",
+			"icon": "/Game/Aberration/Icons/Resources/Gem2_Icon.Gem2_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemArtifactGeneric_C" } ]
+			}
+		},
+		{
+			"name": "Estute Mindset",
+			"description": "Killing anything above 550 drag weight grants 1.5x xp for 5 minutes to self and allies. Killing an Alpha grants 2x XP for 30 minutes. Killing a boss grants 4x XP for an hour.\n\nCANNOT BE USED WITH OTHER MINDSET ABILITIES.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoEstute.PrimalItemConsumable_InoEstute_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoMoodBase.PrimalItemConsumable_InoMoodBase_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/StatusIcon_NoteFoundGreyOutline.StatusIcon_NoteFoundGreyOutline",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemArtifactGeneric_C" } ]
+			}
+		},
+		{
+			"name": "Frenzied Mindset",
+			"description": "Makes Inostrancevia deal 25% more damage when above 75% HP. After dealing damage for a set amount of time, heal for a time.\n\nCANNOT BE USED WITH OTHER MINDSET ABILITIES.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoFrenzied.PrimalItemConsumable_InoFrenzied_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoMoodBase.PrimalItemConsumable_InoMoodBase_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/ConditionFixate_Icon.ConditionFixate_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemArtifactGeneric_C" } ]
+			}
+		},
+		{
+			"name": "Ino Base Ability",
+			"description": "THE INO IS POGGING?!",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoMoodBase.PrimalItemConsumable_InoMoodBase_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/Genesis/Icons/Buffs/Condition_MissionArea_Icon.Condition_MissionArea_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemArtifactGeneric_C" } ]
+			}
+		},
+		{
+			"name": "Survivor Mindset",
+			"description": "Upon killing any target, Inostrancevia takes 25% less damage and heals over time. \n\nCANNOT BE USED WITH OTHER MINDSET ABILITIES.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoSurvivor.PrimalItemConsumable_InoSurvivor_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoMoodBase.PrimalItemConsumable_InoMoodBase_C",
+			"icon": "/Game/Extinction/Dinos/Mek/Icon_MekShield.Icon_MekShield",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemArtifactGeneric_C" } ]
+			}
+		},
+		{
+			"name": "Traveler Mindset",
+			"description": "Makes Inostrancevia 25% faster overall, but reduces attack and defence by 15% each. \n\nCANNOT BE USED WITH OTHER MINDSET ABILITIES.",
+			"bp": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoTraveler.PrimalItemConsumable_InoTraveler_C",
+			"parent": "/Game/Mods/BonusDinoMod/Dinos/Inostrancevia/Tailoring/Items/PrimalItemConsumable_InoMoodBase.PrimalItemConsumable_InoMoodBase_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/Spyglass_Icon.Spyglass_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0,
+			"stackSize": 100,
+			"spoilsIn": 2,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemArtifactGeneric_C" } ]
 			}
 		},
 		{
