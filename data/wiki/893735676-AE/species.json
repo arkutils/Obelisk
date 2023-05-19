@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.14.1681700117",
+	"version": "357.18.1684433285",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -49226,12 +49226,10 @@
 			"dragWeight": 450,
 			"flags": [
 				"allowRiding",
-				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
 				"isAmphibious",
-				"preventNeuter",
-				"isTameable"
+				"preventNeuter"
 			],
 			"leveling": {
 				"wildLevelTable": [
@@ -49285,12 +49283,10 @@
 			"dragWeight": 450,
 			"flags": [
 				"allowRiding",
-				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
 				"isAmphibious",
-				"preventNeuter",
-				"isTameable"
+				"preventNeuter"
 			],
 			"leveling": { "wildForcedLevel": 600 },
 			"falling": {
@@ -50466,6 +50462,70 @@
 			}
 		},
 		{
+			"name": "Omni Evo Raptor",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Omniwrath/Raptor_Character_BP_Omni_1.Raptor_Character_BP_Omni_1_C",
+			"dinoNameTag": "Raptor_Omni_1",
+			"customTag": "Raptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 24
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 993.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1104 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 156,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 156, "radius": 65, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 156, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 200, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
 			"name": "SkyRider",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Pegasi/AE_Pegasus_Character_BP2.AE_Pegasus_Character_BP2_C",
 			"dinoNameTag": "AE_Pegasus",
@@ -50996,6 +51056,81 @@
 					}
 				],
 				"baseXP": 7
+			}
+		},
+		{
+			"name": "Rocky",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/RockyX/RockyX_Direbear_Character_BP_AE.RockyX_Direbear_Character_BP_AE_C",
+			"dinoNameTag": "Rocky_X_Troll",
+			"customTag": "Alpha_Direbear",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 330,
+			"dragWeight": 295,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 0.2,
+				"costLevel": 5.5,
+				"timeBase": 1.7,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 213.8, "sprint": 1442.8 },
+				"swim": { "base": 450, "sprint": 3037.5 }
+			},
+			"movementD": {
+				"walk": { "base": 156.8, "sprint": 1724.3 },
+				"swim": { "base": 330, "sprint": 3630 }
+			},
+			"movementR": {
+				"walk": { "base": 156.8, "sprint": 3931.4 },
+				"swim": { "base": 330, "sprint": 8276.4 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 1650,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "None", "interval": 0.22, "dmg": 1500, "radius": 260, "stamina": 0 },
+					{ "name": "None", "interval": 0.22, "dmg": 1650, "radius": 260, "stamina": 0 },
+					{ "name": "None", "interval": 0.22, "dmg": 0, "radius": 260, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 4
 			}
 		},
 		{
@@ -56424,6 +56559,65 @@
 		},
 		{
 			"name": "Ankylosaurus",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Ankylo_Character_BP_AE1.Ankylo_Character_BP_AE1_C",
+			"dinoNameTag": "Anky_AE_V",
+			"customTag": "Anky",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 160,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 93 },
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 30, "radius": 250, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Vanilla/DinoDropInventoryComponent_Vanilla_Remap.DinoDropInventoryComponent_Vanilla_Remap"
+					}
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Ankylosaurus",
 			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Ankylo_Character_BP_AE_NoHarvest.Ankylo_Character_BP_AE_NoHarvest_C",
 			"dinoNameTag": "Anky_NoHarvest",
 			"customTag": "Anky",
@@ -56481,6 +56675,56 @@
 				],
 				"baseXP": 6
 			}
+		},
+		{
+			"name": "Aberrant Ankylosaurus",
+			"bp": "/Game/Mods/AE/Dinos/Vanilla/Remaps_New/Ankylo_Character_BP_Aberrant.Ankylo_Character_BP_Aberrant_C",
+			"dinoNameTag": "Anky",
+			"customTag": "Anky",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 160,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 93 },
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 30, "radius": 250, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 6 }
 		},
 		{
 			"name": "Titanomyrma Drone",
