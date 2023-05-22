@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.18.1684630248",
+	"version": "357.18.1684717258",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -11449,6 +11449,47 @@
 		},
 		{
 			"name": "Snow Ball",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/Prime_Minions/GorillaMega_Character_BP_Minion_Freeze_HR.GorillaMega_Character_BP_Minion_Freeze_HR_C",
+			"dinoNameTag": "",
+			"customTag": "",
+			"targetingTeamName": "TargetOnlyPlayers",
+			"mass": 100,
+			"dragWeight": 70,
+			"variants": [ "Boss", "Minion" ],
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isBossDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 4200 },
+				"fly": { "base": 700, "sprint": 8400 },
+				"swim": { "base": 700 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 700 },
+				"fly": { "base": 700, "sprint": 1400 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 1000,
+				"defaultSwingRadius": 215,
+				"attacks": [ { "name": "Attack", "interval": 0.1, "dmg": 5000, "radius": 2000, "stamina": 0 } ]
+			}
+		},
+		{
+			"name": "Snow Ball",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/Prime_Minions/GorillaMega_Character_BP_Minion_HR.GorillaMega_Character_BP_Minion_HR_C",
 			"dinoNameTag": "",
 			"customTag": "",
@@ -15931,6 +15972,73 @@
 			"death": { "baseXP": 500 }
 		},
 		{
+			"name": "Unique Prime Ice Wyvern",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/UniquePrimeDinos/WyvernIce_Character_BP_PRIME_U.WyvernIce_Character_BP_PRIME_U_C",
+			"dinoNameTag": "PrimeWyvern",
+			"customTag": "PrimeWyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 750,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 215, "max": 250 } ],
+				"mutagenCost": 2377
+			},
+			"cloning": {
+				"costBase": 60000,
+				"costLevel": 660,
+				"timeBase": 420000,
+				"timeLevel": 4620
+			},
+			"falling": {
+				"dmgMult": 5,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 597.7 },
+				"fly": { "base": 1850, "sprint": 1068.4 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 597.7 },
+				"fly": { "base": 1850, "sprint": 1068.4 },
+				"swim": { "base": 1100 }
+			},
+			"movementR": {
+				"walk": { "base": 690, "sprint": 1195.4 },
+				"fly": { "base": 1850, "sprint": 2136.8 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 200,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 375, "radius": 850, "stamina": 10 },
+					{ "name": "IceFlame", "interval": 6, "dmg": 0, "radius": 0, "stamina": 125 },
+					{ "name": "Ice Spike", "interval": 8, "dmg": 0, "radius": 0, "stamina": 750 },
+					{ "name": "IceHydra", "interval": 8, "dmg": 0, "radius": 0, "stamina": 2500 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 750, "radius": 850, "stamina": 10 },
+					{ "name": "SnowBallFreeze", "interval": 8, "dmg": 0, "radius": 0, "stamina": 1500 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Unique Lightning Wyvern Prime",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/UniquePrimeDinos/WyvernLightning_Character_BP_PRIME_U.WyvernLightning_Character_BP_PRIME_U_C",
 			"dinoNameTag": "PrimeWyvern",
@@ -16740,7 +16848,7 @@
 				"defaultDmg": 0,
 				"defaultSwingRadius": 90,
 				"attacks": [
-					{ "name": "Bite (AI)", "interval": 1, "dmg": 9500, "radius": 1000, "stamina": 10 },
+					{ "name": "Bite (AI)", "interval": 1, "dmg": 12500, "radius": 1000, "stamina": 10 },
 					{
 						"name": "Breathe_Lightning", "interval": 6, "dmg": 0, "radius": 0, "stamina": 125,
 						"isProjectile": true
@@ -16750,7 +16858,7 @@
 						"name": "Breathe_Poison", "interval": 9, "dmg": 0, "radius": 0, "stamina": 20,
 						"isProjectile": true
 					},
-					{ "name": "Breathe_Fire", "interval": 26, "dmg": 0, "radius": 0, "stamina": 125 }
+					{ "name": "Breathe_Fire", "interval": 22, "dmg": 0, "radius": 0, "stamina": 125 }
 				]
 			},
 			"death": {
