@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.18.1684790093",
+	"version": "357.18.1685161904",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -1488,9 +1488,9 @@
 				"defaultSwingRadius": 900,
 				"attacks": [
 					{ "name": "Spino Bite", "interval": 0.75, "dmg": 200, "radius": 900, "stamina": 30 },
-					{ "name": "Flame", "interval": 13, "dmg": 0, "radius": 900, "stamina": 250 },
 					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 900, "stamina": 250 },
-					{ "name": "AI Flame", "interval": 4, "dmg": 0, "radius": 900, "stamina": 250 },
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 900, "stamina": 250 },
+					{ "name": "AI Flame", "interval": 4, "dmg": 0, "radius": 900, "stamina": 1 },
 					{ "name": "Spino Bite AI", "interval": 0.75, "dmg": 1000, "radius": 900, "stamina": 30 }
 				]
 			},
@@ -1553,9 +1553,9 @@
 				"defaultSwingRadius": 900,
 				"attacks": [
 					{ "name": "Spino Bite", "interval": 0.75, "dmg": 1150, "radius": 2000, "stamina": 30 },
-					{ "name": "Flame", "interval": 13, "dmg": 0, "radius": 900, "stamina": 250 },
 					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 900, "stamina": 250 },
-					{ "name": "AI Flame", "interval": 4, "dmg": 0, "radius": 900, "stamina": 250 }
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 900, "stamina": 250 },
+					{ "name": "AI Flame", "interval": 4, "dmg": 0, "radius": 900, "stamina": 1 }
 				]
 			},
 			"death": { "baseXP": 75 }
@@ -5123,7 +5123,13 @@
 			"mass": 500,
 			"dragWeight": 625,
 			"variants": [ "Boss" ],
-			"flags": [ "canBeDragged", "canBeTorpid", "doStepDamage", "isBossDino" ],
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isBossDino",
+				"isCarnivore"
+			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5180,7 +5186,13 @@
 			"mass": 499,
 			"dragWeight": 999,
 			"variants": [ "Boss" ],
-			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isBossDino" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBossDino",
+				"isCarnivore"
+			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5298,6 +5310,7 @@
 				"doStepDamage",
 				"isBigDino",
 				"isBossDino",
+				"isCarnivore",
 				"isFlyerDino"
 			],
 			"falling": {
@@ -5522,7 +5535,7 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.6, "dmg": 35000, "radius": 870, "stamina": 0 },
 					{ "name": "Flame", "interval": 3, "dmg": 0, "radius": 1, "stamina": 100 },
-					{ "name": "FireBall", "interval": 3.5, "dmg": 0, "radius": 300, "stamina": 100 },
+					{ "name": "FireBall", "interval": 3.5, "dmg": 500, "radius": 300, "stamina": 0 },
 					{ "name": "FireBall", "interval": 5, "dmg": 0, "radius": 300, "stamina": 100 }
 				]
 			},
@@ -5793,7 +5806,8 @@
 					{ "name": "Bite - UnTamed", "interval": 1, "dmg": 20000, "radius": 1600, "stamina": 0 },
 					{ "name": "Shock - UnTamed", "interval": 10, "dmg": 37500, "radius": 3750, "stamina": 0 },
 					{ "name": "Shock - Tamed", "interval": 3, "dmg": 5, "radius": 1000, "stamina": 0 },
-					{ "name": "Shock - Minions", "interval": 12, "dmg": 37500, "radius": 3750, "stamina": 0 }
+					{ "name": "Shock - Minions", "interval": 13, "dmg": 37500, "radius": 3750, "stamina": 0 },
+					{ "name": "Shock Orb", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -6432,7 +6446,7 @@
 			"mass": 499,
 			"dragWeight": 420,
 			"variants": [ "Boss" ],
-			"flags": [ "canBeDragged", "isBossDino" ],
+			"flags": [ "canBeDragged", "isBossDino", "isCarnivore" ],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6485,7 +6499,13 @@
 			"mass": 1200,
 			"dragWeight": 35,
 			"variants": [ "Boss" ],
-			"flags": [ "canBeDragged", "canBeTorpid", "doStepDamage", "isBossDino" ],
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"doStepDamage",
+				"isBossDino",
+				"isCarnivore"
+			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6537,7 +6557,13 @@
 			"mass": 1000,
 			"dragWeight": 575,
 			"variants": [ "Boss" ],
-			"flags": [ "canBeDragged", "doStepDamage", "isBigDino", "isBossDino" ],
+			"flags": [
+				"canBeDragged",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6556,7 +6582,7 @@
 			},
 			"attack": {
 				"defaultDmg": 500,
-				"defaultSwingRadius": 350,
+				"defaultSwingRadius": 750,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.75, "dmg": 12500, "radius": 750, "stamina": 0 },
 					{ "name": "Melee", "interval": 11, "dmg": 15000, "radius": 750, "stamina": 0 }
@@ -11122,7 +11148,7 @@
 			"attack": {
 				"defaultDmg": 36,
 				"defaultSwingRadius": 220,
-				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 575, "radius": 500, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 975, "radius": 750, "stamina": 0 } ]
 			}
 		},
 		{
@@ -11567,7 +11593,7 @@
 			"attack": {
 				"defaultDmg": 50,
 				"defaultSwingRadius": 215,
-				"attacks": [ { "name": "Attack", "interval": 0.1, "dmg": 999, "radius": 1200, "stamina": 0 } ]
+				"attacks": [ { "name": "Attack", "interval": 0.1, "dmg": 999, "radius": 1350, "stamina": 0 } ]
 			}
 		},
 		{
@@ -13888,7 +13914,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -13955,7 +13981,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -14025,7 +14051,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -14079,7 +14105,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -14123,10 +14149,11 @@
 				"allowRidingInWater",
 				"canBeDragged",
 				"canBeTorpid",
-				"canDrag"
+				"canDrag",
+				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 225, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 250, "max": 265 } ],
 				"mutagenCost": 4951
 			},
 			"cloning": {
@@ -14176,7 +14203,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 200 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 200 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -14246,7 +14273,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"falling": {
@@ -14300,7 +14327,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -14361,7 +14388,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
 				"mutagenCost": 3169
 			},
 			"cloning": {
@@ -14425,7 +14452,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -14484,7 +14511,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 3169
 			},
 			"cloning": {
@@ -14544,7 +14571,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 3169
 			},
 			"cloning": {
@@ -14603,7 +14630,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
 				"mutagenCost": 3169
 			},
 			"cloning": {
@@ -14660,7 +14687,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
 				"maxExperience": 22213960,
 				"levelCapOffset": 50,
 				"mutagenCost": 4159
@@ -14724,7 +14751,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 3169
 			},
 			"cloning": {
@@ -14790,7 +14817,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -14861,7 +14888,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -14919,7 +14946,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -14977,7 +15004,7 @@
 				"isBigDino"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -15024,7 +15051,7 @@
 			"dragWeight": 1000,
 			"flags": [ "allowRiding", "canDrag", "doStepDamage", "isCarnivore" ],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 3169
 			},
 			"cloning": {
@@ -15089,7 +15116,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -15152,7 +15179,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
 				"levelCapOffset": 50,
 				"mutagenCost": 2377
 			},
@@ -15233,7 +15260,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
 				"mutagenCost": 4753
 			},
 			"cloning": {
@@ -15302,7 +15329,7 @@
 				"isFlyerDino"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 3169
 			},
 			"cloning": {
@@ -15366,7 +15393,7 @@
 				"isFlyerDino"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 3169
 			},
 			"cloning": {
@@ -15426,7 +15453,7 @@
 				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -15489,7 +15516,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -15554,7 +15581,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -15620,7 +15647,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 220, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 250, "max": 265 } ],
 				"mutagenCost": 5941
 			},
 			"cloning": {
@@ -15685,7 +15712,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
 				"mutagenCost": 4654
 			},
 			"cloning": {
@@ -15743,7 +15770,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
 				"mutagenCost": 3961
 			},
 			"cloning": {
@@ -15807,7 +15834,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -15866,7 +15893,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
 				"mutagenCost": 4654
 			},
 			"cloning": {
@@ -15932,7 +15959,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -15992,7 +16019,7 @@
 				"isFlyerDino"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -16059,7 +16086,7 @@
 				"isFlyerDino"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -16132,7 +16159,7 @@
 				"isFlyerDino"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -16202,7 +16229,7 @@
 				"isFlyerDino"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
@@ -16268,7 +16295,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
 				"mutagenCost": 3169
 			},
 			"cloning": {
@@ -16327,7 +16354,7 @@
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 115, "max": 250 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 125, "max": 250 } ],
 				"mutagenCost": 2377
 			},
 			"cloning": {
