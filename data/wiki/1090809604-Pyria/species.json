@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.18.1683643983",
+	"version": "357.18.1685311701",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -3079,6 +3079,190 @@
 			}
 		},
 		{
+			"name": "The General",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_General.Squatch_Character_BP_General_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Offhand",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 300,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": {
+				"wildForcedLevel": 30,
+				"maxExperience": 0
+			},
+			"falling": {
+				"dmgMult": 1,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 325, "sprint": 1950 },
+				"swim": { "base": 500 }
+			},
+			"movementD": {
+				"walk": { "base": 325, "sprint": 1950 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Sweeps", "interval": 3, "dmg": 75, "radius": 350, "stamina": 0 },
+					{ "name": "Stabs", "interval": 0.4, "dmg": 95, "radius": 350, "stamina": 0 },
+					{ "name": "GreaterStab", "interval": 18, "dmg": 145, "radius": 350, "stamina": 0 },
+					{
+						"name": "MonkeThrow", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "MonkeJump", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Punch", "interval": 8, "dmg": 70, "radius": 350, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Squatch Warrior (Great Mace)",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_GreatMace.Squatch_Character_BP_GreatMace_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Offhand",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 255,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 38 }
+				]
+			},
+			"falling": {
+				"dmgMult": 1,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 500 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0, "dmg": 85, "radius": 350, "stamina": 0 },
+					{ "name": "Empty", "interval": 15, "dmg": 105, "radius": 350, "stamina": 250 },
+					{ "name": "BeegSmash", "interval": 20, "dmg": 110, "radius": 350, "stamina": 250 },
+					{ "name": "Empty", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "MonkeJump", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Savage Squatch",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_Savage.Squatch_Character_BP_Savage_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Offhand",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 255,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 38 }
+				]
+			},
+			"falling": {
+				"dmgMult": 1,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 2220 },
+				"swim": { "base": 500 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 2220 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "BasicMelee", "interval": 0, "dmg": 50, "radius": 300, "stamina": 0 },
+					{ "name": "Advancing", "interval": 15, "dmg": 75, "radius": 300, "stamina": 250 },
+					{ "name": "HeavierAttacks", "interval": 15, "dmg": 75, "radius": 300, "stamina": 150 },
+					{ "name": "Spin", "interval": 0, "dmg": 55, "radius": 300, "stamina": 0 },
+					{ "name": "MonkeJump", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Squatch Warrior",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_Warrior.Squatch_Character_BP_Warrior_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Offhand",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 255,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 38 }
+				]
+			},
+			"falling": {
+				"dmgMult": 1,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 500 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "BasicStrikes", "interval": 0, "dmg": 50, "radius": 350, "stamina": 0 },
+					{ "name": "YeetJump", "interval": 15, "dmg": 65, "radius": 350, "stamina": 225 },
+					{ "name": "Tantrum", "interval": 15, "dmg": 55, "radius": 350, "stamina": 0 },
+					{ "name": "RetreatSlash", "interval": 15, "dmg": 55, "radius": 350, "stamina": 100 },
+					{ "name": "MonkeJump", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Tibur",
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Tibur/Tibur_Character_BP.Tibur_Character_BP_C",
 			"dinoNameTag": "Gelragarian",
@@ -3493,8 +3677,7 @@
 				"canBeDragged",
 				"canDrag",
 				"isCarnivore",
-				"isWaterDino",
-				"isTameable"
+				"isWaterDino"
 			],
 			"leveling": {
 				"wildLevelTable": [
@@ -5724,6 +5907,9 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ]
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -9795,8 +9981,7 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"isCarnivore",
-				"isTameable"
+				"isCarnivore"
 			],
 			"leveling": { "mutagenCost": 24 },
 			"cloning": {
