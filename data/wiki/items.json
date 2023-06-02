@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/items.json",
-	"version": "355.3.10136424",
+	"version": "358.3.11382644",
 	"format": "4",
 	"items": [
 		{
@@ -12449,6 +12449,31 @@
 					{ "qty": 130, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 100, "type": "PrimalItemResource_ChitinPaste_C" },
 					{ "qty": 60, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Rhyniognatha Saddle",
+			"description": "Equip a Rhyniognatha with this to ride it.",
+			"bp": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_RhynioSaddle.PrimalItemArmor_RhynioSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Rhyniognatha/Saddle/Textures/HUD_RhyniognathaSaddle_Icon_MIC.HUD_RhyniognathaSaddle_Icon_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 25,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 150, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 30, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 150, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Polymer_C" }
 				]
 			}
 		},
@@ -35211,6 +35236,35 @@
 			"type": "Resource",
 			"weight": 1,
 			"stackSize": 100
+		},
+		{
+			"name": "Rhyniognatha Pheromone",
+			"description": "Feeding this to any creature will mark it as a host for egg-laying Rhyniognatha.",
+			"bp": "/Game/PrimalEarth/Dinos/Rhyniognatha/Impregnation/PrimalItemConsumableEatable_RhynioPheromone.PrimalItemConsumableEatable_RhynioPheromone_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/PrimalEarth/Dinos/Rhyniognatha/Icons/ArkG_TGAItems_RyhnioPheromone.ArkG_TGAItems_RyhnioPheromone",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 1,
+			"spoilsIn": 28800
+		},
+		{
+			"name": "Resin",
+			"description": "Hardened sticky Rhyniognatha secretion.",
+			"bp": "/Game/PrimalEarth/Dinos/Rhyniognatha/Resin/PrimalItemResource_Resin.PrimalItemResource_Resin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Rhyniognatha/Icons/ArkG_TGAItems_RyhnioResine.ArkG_TGAItems_RyhnioResine",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 1, "type": "PrimalItemResource_Sap_C" } ]
+			}
 		},
 		{
 			"name": "Tropeognathus Saddle",

@@ -1,6 +1,6 @@
 {
 	"$schema": ".schema/species.json",
-	"version": "355.16.10320134",
+	"version": "358.3.11382644",
 	"format": "4",
 	"species": [
 		{
@@ -52866,6 +52866,86 @@
 					}
 				],
 				"baseXP": 30
+			}
+		},
+		{
+			"name": "Rhyniognatha",
+			"bp": "/Game/PrimalEarth/Dinos/Rhyniognatha/Rhynio_Character_BP.Rhynio_Character_BP_C",
+			"dinoNameTag": "Rhynio",
+			"customTag": "Rhynio",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"leveling": { "mutagenCost": 98 },
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 1000, "sprint": 3750 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 1000, "sprint": 3750 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.6, "dmg": 55, "radius": 300, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 300, "stamina": 60 },
+					{ "name": "Taunt", "interval": 30, "dmg": 0, "radius": 0, "stamina": 60 },
+					{
+						"name": "Resin Ball", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Glob", "interval": 4, "dmg": 0, "radius": 0, "stamina": 7.5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Bomb", "interval": 8, "dmg": 0, "radius": 0, "stamina": 10,
+						"isProjectile": true
+					},
+					{ "name": "Impregnate", "interval": 30, "dmg": 55, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1231,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/Dinos/Rhyniognatha/DinoDropInventoryComponent_Carnivore_Rhynio.DinoDropInventoryComponent_Carnivore_Rhynio"
+					}
+				],
+				"baseXP": 3
 			}
 		},
 		{
