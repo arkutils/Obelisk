@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.15.1683080827",
+	"version": "358.6.1686201558",
 	"format": "4",
 	"mod": {
 		"id": "2804332920",
@@ -713,6 +713,72 @@
 			}
 		},
 		{
+			"name": "Giganotosaurus",
+			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoGiga/PA_Giga_Character_BP.PA_Giga_Character_BP_C",
+			"dinoNameTag": "PaleoGiga",
+			"customTag": "PaleoGiga",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 10, "max": 30 },
+					{ "chance": 0.2702703, "min": 10, "max": 25 },
+					{ "chance": 0.1351351, "min": 20, "max": 25 },
+					{ "chance": 0.05405405, "min": 30, "max": 30 }
+				],
+				"mutagenCost": 99
+			},
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 60,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 805, "sprint": 1690.5 }
+			},
+			"movementD": {
+				"walk": { "base": 805, "sprint": 1690.5 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 440,
+				"defaultSwingRadius": 600,
+				"attacks": [
+					{ "name": "Bite", "interval": 1, "dmg": 1000, "radius": 550, "stamina": 10 },
+					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (WILD)", "interval": 0.5, "dmg": 1000, "radius": 600, "stamina": 0 },
+					{ "name": "Sniff", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Rear-up", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Stomp", "interval": 7.5, "dmg": 600, "radius": 750, "stamina": 150 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge.DinoDropInventoryComponent_Carnivore_Huge"
+					}
+				],
+				"baseXP": 750
+			}
+		},
+		{
 			"name": "Paleo ARK Kentrosaur",
 			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoKentro/Kentro_Character_BP_Paleo.Kentro_Character_BP_Paleo_C",
 			"dinoNameTag": "PaleoKentro",
@@ -832,6 +898,56 @@
 			}
 		},
 		{
+			"name": "Paleo ARK Moschops",
+			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoMoschops/Moschops_Character_BP_Paleo.Moschops_Character_BP_Paleo_C",
+			"dinoNameTag": "Moschops",
+			"customTag": "PaleoMoschops",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 95,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 51 },
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 770 },
+				"swim": { "base": 220 }
+			},
+			"movementD": {
+				"walk": { "base": 140, "sprint": 770 },
+				"swim": { "base": 220 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 25,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "BiteMelee", "interval": 0.67, "dmg": 32, "radius": 280, "stamina": 0 },
+					{ "name": "HarvestCorpseMelee", "interval": 0.67, "dmg": 32, "radius": 320, "stamina": 0 },
+					{ "name": "HarvestTreeMelee", "interval": 0.67, "dmg": 32, "radius": 320, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 6 }
+		},
+		{
 			"name": "Paleo ARK Parasaur",
 			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoPara/Para_Character_BP_Paleo.Para_Character_BP_Paleo_C",
 			"dinoNameTag": "Para",
@@ -884,7 +1000,7 @@
 		},
 		{
 			"name": "Alpha Paleo ARK Raptor",
-			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoRaptor/MegaRaptor_Character_BP_Paleo.MegaRaptor_Character_BP_Paleo_C",
+			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoRaptor/Alpha/MegaRaptor_Character_BP_Paleo.MegaRaptor_Character_BP_Paleo_C",
 			"dinoNameTag": "Elite Raptor",
 			"customTag": "Raptor",
 			"targetingTeamName": "Carnivores_Medium",
