@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.18.1685311701",
+	"version": "358.6.1686441792",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -1167,10 +1167,10 @@
 		},
 		{
 			"name": "Nature Element",
-			"description": "The Element of Nature is normally associated with aspects like beauty, growth, and maternal instict. \n\nAs such, it ranks among the best of elements for healing magic, alongside Light and Water.",
+			"description": "The Element of Nature is normally associated with aspects like beauty, growth, and maternal instict. As such, it ranks among the best of elements for healing magic, alongside Light and Water.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/Elements/PrimalItemResource_NatureElement.PrimalItemResource_NatureElement_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Element_Wind.Icon_Element_Wind",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Fertilizer_Huge.Icon_Fertilizer_Huge",
 			"type": "Resource",
 			"folders": [ "Mana Manipulation", "Elements" ],
 			"weight": 0,
@@ -1182,7 +1182,7 @@
 				"productCount": 30,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
+					{ "qty": 100, "type": "PrimalItemConsumable_Veggie_Base_C" },
 					{ "qty": 10, "type": "PrimalItemResource_Mana_C" }
 				]
 			}
@@ -5210,7 +5210,7 @@
 		},
 		{
 			"name": "Begin Animus",
-			"description": "Command given by Alchitects to their Constructs, forcing the animated hulks into movement. Cannot be used by the same individual at the same time as Shaper of Mediums.",
+			"description": "Command given by Alchitects to their Constructs, forcing the animated hulks into movement. Cannot be used by the same individual at the same time as Shaper of Mediums.\n\n///Spell Statistics:\n-Flat Spell\n-5 Stamina per Sec\n+15 HP Per sec to Allied Constructs\n+15 Stamina per sec to allied constructs\n+10% movement speed to allied constructs",
 			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Construct/BeginAnimus/PrimalItemConsumable_BeginAnimus.PrimalItemConsumable_BeginAnimus_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/gear-hammer.gear-hammer",
@@ -5233,7 +5233,7 @@
 		},
 		{
 			"name": "Shaper Of Mediums",
-			"description": "Invocation Aura-Command by Alchitects to their Constructs, forcing the animated hulks into movement. Cannot be used by the same individual at the same time as Begin Animus.",
+			"description": "Invocation Aura-Command by Alchitects to their Constructs, forcing the animated hulks into movement. Cannot be used by the same individual at the same time as Begin Animus.\n\n///Spell Statistics:\n-Flat Spell\n-5 Stamina per Sec\n+15% Resistance to allied constructs\n+15% Melee to allied constructs",
 			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Construct/ShaperOfMediums/PrimalItemConsumable_ShaperOfMediums.PrimalItemConsumable_ShaperOfMediums_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/gear-hammer.gear-hammer",
@@ -5255,13 +5255,35 @@
 			}
 		},
 		{
+			"name": "Spell: Grand Radia",
+			"description": "An extremely potent healing spell of nature that requires great focus to maintain. An adept caster able to wield this spell is a very welcome addition to any party.\n\nStatistics:\n-Stamina Cost per sec: 25% Fortitude Stat + 1\n-Healing Rate per sec: (Fortitude Stat x 4) + 40. Cannot exced 1100 HP per sec.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Healing/PrimalItemConsumable_GrandRadia.PrimalItemConsumable_GrandRadia_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/StaffHead_FollowCropBoost.StaffHead_FollowCropBoost",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Spells", "Healing" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1000, "type": "PrimalItemResource_NatureElement_C" },
+					{ "qty": 1000, "type": "PrimalItemResource_Mana_C" }
+				]
+			}
+		},
+		{
 			"name": "Spell: Quench",
-			"description": "A water spell that requires advanced skill to cast and maintain. Formulate large amounts of your own mana into water element, which slowly is absorbed into your body over a long period of time, providing nourishment. However, if you jump in water or it rains, the spell breaks.\n\nStatistics:\n+10 Water per Sec\n-Deactivates in rain or underwater",
+			"description": "A water spell that requires advanced skill to cast and maintain. Formulate large amounts of your own mana into water element, which slowly is absorbed into your body over a long period of time, providing nourishment. However, if you jump in water or it rains, the spell breaks.\n\nStatistics:\n+10 Water per Sec\n-Deactivates in rain or underwater\n-Not effected by fortitude or stamina",
 			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Healing/PrimalItemConsumable_Quenched.PrimalItemConsumable_Quenched_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Water_Icon.Water_Icon",
 			"type": "MiscConsumable/Food",
-			"folders": [ "Spells", "SelfHelp" ],
+			"folders": [ "Spells", "Self Help" ],
 			"weight": 0,
 			"stackSize": 100,
 			"crafting": {
@@ -5277,8 +5299,30 @@
 			}
 		},
 		{
+			"name": "Spell: Radia",
+			"description": "A healing spell of nature that requires great focus to maintain. An adept caster able to wield this spell is a welcome addition to any party.\n\nStatistics:\n-Stamina Cost per sec: 10% Fortitude Stat + 1, cannot exceed 50 stam per sec.\n-Healing Rate: (Fortitude stat x 2.9) + 20 HP per sec. Cannot Exceed 500 HP per sec.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Healing/PrimalItemConsumable_Radia.PrimalItemConsumable_Radia_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/StaffHead_FollowCropBoost.StaffHead_FollowCropBoost",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Spells", "Healing" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 500, "type": "PrimalItemResource_NatureElement_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Mana_C" }
+				]
+			}
+		},
+		{
 			"name": "Danse Macabre",
-			"description": "Invocation of Danse Macabre, command to the dead given by the Goddess of Death, Belit-Sherri. Cannot be cast at the same time as Vigor Mortis by the same wielder. Commonly used by Necromancers to buff their hoard.\n\n+15 HP an Stamina per sec to all allied undead.",
+			"description": "Invocation of Danse Macabre, command to the dead given by the Goddess of Death, Belit-Sherri. Cannot be cast at the same time as Vigor Mortis by the same wielder. Commonly used by Necromancers to buff their hoard.\n\n///Spell Statistics:\n-Flat Spell\n-5 Stamina per Sec\n+15 HP an Stamina per sec to all allied undead.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Necromancy/DanseMacabre/PrimalItemConsumable_DanseMacabre.PrimalItemConsumable_DanseMacabre_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/vampire-cape.vampire-cape",
@@ -5301,7 +5345,7 @@
 		},
 		{
 			"name": "Vigor Mortis",
-			"description": "Invocation of Vigor Mortis, command to the dead given by the Goddess of Death, Belit-Sherri. Cannot be cast at the same time as Vigor Mortis by the same wielder. Commonly used by Necromancers to buff their hoard.\n\n+12% Melee\n+5% Resistance",
+			"description": "Invocation of Vigor Mortis, command to the dead given by the Goddess of Death, Belit-Sherri. Cannot be cast at the same time as Vigor Mortis by the same wielder. Commonly used by Necromancers to buff their hoard.\n\n///Spell Statistics:\n-Flat Spell\n-5 Stamina per Sec\n+12% Melee to allied undead\n+5% Resistance to allied undead",
 			"bp": "/Game/Mods/Pyria/Alchemy/Spells/Necromancy/VigorMortis/PrimalItemConsumable_VigorMortis.PrimalItemConsumable_VigorMortis_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/skeleton.skeleton",
@@ -5339,6 +5383,74 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [ { "qty": 1000, "type": "PrimalItemResource_Mana_C" } ]
+			}
+		},
+		{
+			"name": "Spell: Forge of Earth",
+			"description": "An extremely potent skill that blends Fire and Earth mana together to form an active crucible on the armor of one's allies. Should both caster and ally withstand the costs, it is a potent effect.\n\nStatistics:\n-Flat Spell\n-Lasts 120 seconds, until stamina wears out.\n-8 Stamina per sec\n-Gives the \"Crucible Forge\" buff to Allies within 3200 units every 5 seconds\n\nBuff Statistics:\n-Lasts 15 Seconds\n-Restores 10 Durability per sec to all armor.\n-Restores 50 Durability per sec to all armor.\n-Increases resistance by 5%\n-Reduces Hyperthermic insulation by 300",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/RepairSpells/PrimalItemConsumable_ForgeOfEarth.PrimalItemConsumable_ForgeOfEarth_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_RefinedObsidianBlock.Icon_RefinedObsidianBlock",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Spells", "Buffing" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2500, "type": "PrimalItemResource_EarthElement_C" },
+					{ "qty": 2500, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 600, "type": "PrimalItemResource_Mana_C" }
+				]
+			}
+		},
+		{
+			"name": "Spell: Mending Will",
+			"description": "A support-based Earth spell. While close-ranged, it draws Earth Mana from the enviroment into the equipment of nearby allies at a short interval, steadily repairing gear. \n\nStatistics:\n-Flat Spell\n-Lasts 60 seconds, until stamina wears out.\n-5 Stamina per sec\n-Gives the \"Lesser Mending\" buff to Allies within 3200 units every 2.5 seconds\n\nBuff Statistics:\n-Lasts 5 Seconds\n-Restores 5 Durability per sec to all armor.\n-Restores 25 Durability per sec to all armor.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/RepairSpells/PrimalItemConsumable_MendingWill.PrimalItemConsumable_MendingWill_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/StructuresPlusMod/_Widgets/Images/Icon_Repair.Icon_Repair",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Spells", "Buffing" ],
+			"weight": 0,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1000, "type": "PrimalItemResource_EarthElement_C" },
+					{ "qty": 600, "type": "PrimalItemResource_Mana_C" }
+				]
+			}
+		},
+		{
+			"name": "Rune of Repair",
+			"description": "A runestone that, when crushed, unleashes Earth elemental magic that repairs your equipment, but not weapons.\n\n///Effects\n+5 Durability Per Sec to Armor over 60 seconds\n+25 Durability per sec to Offhand equipment over 60 seconds. ",
+			"bp": "/Game/Mods/Pyria/Alchemy/Spells/RuneOfRepair/PrimalItemConsumable_RuneOfRepair.PrimalItemConsumable_RuneOfRepair_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/RuneOfRepair.RuneOfRepair",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Player Runes" ],
+			"weight": 1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 500, "type": "PrimalItemResource_EarthElement_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Mana_C" },
+					{ "qty": 50, "type": "PrimalItemResource_Magicrystal_C" }
+				]
 			}
 		},
 		{
