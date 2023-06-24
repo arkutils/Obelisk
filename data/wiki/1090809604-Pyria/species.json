@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.6.1686441792",
+	"version": "358.6.1687569964",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -3173,6 +3173,55 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Squatch Huntsman",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_Huntsman.Squatch_Character_BP_Huntsman_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Offhand",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 255,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 38 }
+				]
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 500 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "MonkeSpear", "interval": 0.4, "dmg": 45, "radius": 350, "stamina": 0 },
+					{
+						"name": "YeetSpear", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "Empty", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Empty", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "MonkeJump", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Savage Squatch",
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_Savage.Squatch_Character_BP_Savage_C",
 			"dinoNameTag": "Bigfoot",
@@ -5638,6 +5687,122 @@
 				]
 			},
 			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Infernal Dreadmare",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Dreadmare/Dreadmare_Character_BP_Fire.Dreadmare_Character_BP_Fire_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Dreadmare",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 112,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 225, "sprint": 1800 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 225, "sprint": 1800 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "BackKick", "interval": 0.2, "dmg": 35, "radius": 250, "stamina": 125 },
+					{ "name": "RearAoE", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_SmallMana.DinoDropInventoryComponent_Pyria_Creature_SmallMana"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Dreadmare",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Dreadmare/Dreadmare_Character_BP_Rotted.Dreadmare_Character_BP_Rotted_C",
+			"dinoNameTag": "Equus",
+			"customTag": "LTPyria",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 112,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 225, "sprint": 1800 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 225, "sprint": 1800 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "BackKick", "interval": 0.2, "dmg": 35, "radius": 250, "stamina": 125 },
+					{ "name": "RearAoE", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_SmallMana.DinoDropInventoryComponent_Pyria_Creature_SmallMana"
+					}
+				],
+				"baseXP": 3
+			}
 		},
 		{
 			"name": "Fallen",
@@ -9989,7 +10154,15 @@
 				"canDrag",
 				"isCarnivore"
 			],
-			"leveling": { "mutagenCost": 24 },
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 24
+			},
 			"cloning": {
 				"costBase": 575,
 				"costLevel": 55,
@@ -10181,6 +10354,149 @@
 					{
 						"chance": 1,
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Erythrosuchus",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Erythro/PyriaErythro_Character_BP.PyriaErythro_Character_BP_C",
+			"dinoNameTag": "Purlovia",
+			"customTag": "PyriaErythro",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 330,
+			"dragWeight": 400,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 67
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 182, "sprint": 1105 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 1105 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 62, "radius": 470, "stamina": 0 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 50, "radius": 470, "stamina": 0 },
+					{ "name": "Stomp", "interval": 15, "dmg": 72, "radius": 470, "stamina": 100 },
+					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Jump", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 150 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Tamed Erythrosuchus",
+			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Erythro/PyriaErythro_Character_BP_WildTamed.PyriaErythro_Character_BP_WildTamed_C",
+			"dinoNameTag": "Purlovia",
+			"customTag": "PyriaErythro",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 330,
+			"dragWeight": 400,
+			"variants": [ "Tamed" ],
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 67
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 182, "sprint": 1105 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 1105 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 62, "radius": 470, "stamina": 0 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 50, "radius": 470, "stamina": 0 },
+					{ "name": "Stomp", "interval": 15, "dmg": 72, "radius": 470, "stamina": 100 },
+					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Jump", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 150 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
 					}
 				],
 				"baseXP": 30
