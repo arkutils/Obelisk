@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.18.1683354231",
+	"version": "358.6.1687623867",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -2300,11 +2300,22 @@
 		},
 		{
 			"name": "Magic Charm",
-			"description": "Magical items that offer special bonuses that can't often be found elsewhere. Equip these in the offhand slot to gain the bonuses listed.",
+			"description": "Magical items that offer special bonuses that can't often be found elsewhere. Equip these in the Chart slot to gain the bonuses listed.",
 			"bp": "/Game/Mods/ArkOmega/Items/Charms/PrimalItemArmor_Charm.PrimalItemArmor_Charm_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmorGeneric.PrimalItemArmorGeneric_C",
 			"icon": "/Game/Mods/ArkOmega/PrimalEarth/Test_Craig/Artifact_Icon.Artifact_Icon",
-			"type": "Equipment/Shield",
+			"type": "Equipment/Trophy",
+			"folders": [ "Armor", "Accessories" ],
+			"weight": 0.1,
+			"stackSize": 1
+		},
+		{
+			"name": "Medallion",
+			"description": "Medallion Test",
+			"bp": "/Game/Mods/ArkOmega/Items/Charms/PrimalItemArmor_Medallion.PrimalItemArmor_Medallion_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemCostumeGeneric.PrimalItemCostumeGeneric_C",
+			"icon": "/Game/Mods/ArkOmega/Items/Charms/Medallion_ICon.Medallion_Icon",
+			"type": "Equipment/Costume",
 			"folders": [ "Armor", "Accessories" ],
 			"weight": 0.1,
 			"stackSize": 1
@@ -3511,39 +3522,6 @@
 			}
 		},
 		{
-			"name": "Boss Kibble",
-			"description": "A powerful kibble, capable of taming Broodmother, Megapithecus, Dodorex, Dodowyvern, Manticore, and Dragon.",
-			"bp": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_Boss.PrimalItemConsumable_Kibble_Boss_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_XSmall.PrimalItemConsumable_Kibble_Base_XSmall_C",
-			"icon": "/Game/Mods/ArkOmega/Items/Kibble/Icons/Boss_Kibble.Boss_Kibble",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 86400,
-			"crafting": {
-				"xp": 1,
-				"time": 1,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 3, "type": "PrimalItem_BossEssence_C" },
-					{ "qty": 3, "type": "PrimalItemConsumable_SweetVeggieCake_C" },
-					{ "qty": 3, "type": "PrimalItemConsumable_CookedPrimeMeat_Jerky_C" },
-					{ "qty": 3, "type": "PrimalItemConsumable_Egg_OmegaBase_C" },
-					{ "qty": 3, "type": "PrimalItem_Souls_C" }
-				]
-			},
-			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
-			"cooking": {
-				"health": 0.01,
-				"stamina": 3,
-				"food": 2.25,
-				"weight": 0.05,
-				"water": -1
-			}
-		},
-		{
 			"name": "Cosmic Kibble",
 			"description": "A specially blended kibble aimed towards taming Cosmic creatures.",
 			"bp": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_Cosmic.PrimalItemConsumable_Kibble_Cosmic_C",
@@ -3670,25 +3648,6 @@
 					{ "qty": 1, "type": "PrimalItem_GuardianSoul_C" }
 				]
 			},
-			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
-			"cooking": {
-				"health": 0.01,
-				"stamina": 3,
-				"food": 2.25,
-				"weight": 0.05,
-				"water": -1
-			}
-		},
-		{
-			"name": "Lucky Kibble",
-			"description": "A specially blended kibble aimed towards taming Lucky creatures.\n\nCan tame all tiers.",
-			"bp": "/Game/Mods/ArkOmega/Items/Kibble/PrimalItemConsumable_Kibble_Lucky.PrimalItemConsumable_Kibble_Lucky_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_Base_XSmall.PrimalItemConsumable_Kibble_Base_XSmall_C",
-			"icon": "/Game/Mods/ArkOmega/Items/Kibble/Icons/Normal/Unique_Normal_Kibble.Unique_Normal_Kibble",
-			"type": "MiscConsumable/Food",
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 86400,
 			"statEffects": [ { "stat": "food", "value": 16, "useItemQuality": true, "duration": 3.2 } ],
 			"cooking": {
 				"health": 0.01,
@@ -5402,9 +5361,9 @@
 		},
 		{
 			"name": "Mek Module",
-			"description": "Powerup module for Meks.\n\nThe module can be assigned a variant, and ranked up through Tiers. ",
+			"description": "Powerup module for Meks.\n\nThe module is assigned a variant based on which boss soul is used to craft it, and can ranked up through Tiers. ",
 			"bp": "/Game/Mods/ArkOmega/Items/MekPieces/PrimalItem_MekModule.PrimalItem_MekModule_C",
-			"parent": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_GodSoul.PrimalItem_GodSoul_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_BossSoul.PrimalItem_BossSoul_C",
 			"icon": "/Game/Extinction/Icons/Saddles/MegaMekTransformModule_Icon.MegaMekTransformModule_Icon",
 			"type": "Equipment/Costume",
 			"flags": [ "preventCheatGive" ],
@@ -5417,7 +5376,7 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "exact": true, "qty": 1, "type": "PrimalItem_GodSoul_C" },
+					{ "exact": true, "qty": 1, "type": "PrimalItem_BossSoul_C" },
 					{ "qty": 1, "type": "PrimalItem_MekPieces_C" }
 				]
 			}
@@ -5577,6 +5536,32 @@
 					{ "qty": 80, "type": "PrimalItem_SoulShard_C" }
 				]
 			}
+		},
+		{
+			"name": "Dimensional Network",
+			"description": "This device links players into certain global functions. ",
+			"bp": "/Game/Mods/ArkOmega/Items/Network/PrimalItem_DimensionalNetwork.PrimalItem_DimensionalNetwork_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItem_WeaponCompass.PrimalItem_WeaponCompass_C",
+			"icon": "/Game/Mods/FjordurOfficial/Assets/Teleports/PortalWhite_Icon.PortalWhite_Icon",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Explosive" ],
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 53,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItem_EtherealSoul_C" },
+					{ "qty": 5, "type": "PrimalItem_OmegaEssence_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 50, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
+			},
+			"weapon": "/Game/Mods/ArkOmega/Items/Network/WeapDimNetwork.WeapDimNetwork_C"
 		},
 		{
 			"name": "Anti-Gravity Potion",
@@ -5772,7 +5757,7 @@
 		},
 		{
 			"name": "Endless Fortitude Potion",
-			"description": "Protects you from the weather, by making you nearly immune to hot and cold.\n\nLasts until death.",
+			"description": "Protects you from the weather, by making you nearly immune to hot and cold.\n\nLasts until death.\n\nDoes not work outside of the No-Tame game mode.",
 			"bp": "/Game/Mods/ArkOmega/Items/Potions/FortitudePotion/PrimalItemConsumable_EndlessFortitudePotion.PrimalItemConsumable_EndlessFortitudePotion_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Potions/FortitudePotion/Fortitude_PotionIcon.Fortitude_PotionIcon",
@@ -6039,6 +6024,29 @@
 			}
 		},
 		{
+			"name": "Endless Magic Find Potion",
+			"description": "Use this to gain 100% Magic Find.\n\nLasts until death.\n\nDoes not work outside of the No-Tame game mode.",
+			"bp": "/Game/Mods/ArkOmega/Items/Potions/MagicFindPotion/PrimalItemConsumable_EndlessMagicPotion.PrimalItemConsumable_EndlessMagicPotion_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
+			"icon": "/Game/Mods/ArkOmega/Items/Potions/MagicFindPotion/Magic_PotionIcon.Magic_PotionIcon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Potions" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 2,
+				"time": 3,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemConsumable_MagicPotion_C" },
+					{ "qty": 5, "type": "PrimalItem_OmegaEssence_C" },
+					{ "qty": 10, "type": "PrimalItem_ParagonShard_C" }
+				]
+			}
+		},
+		{
 			"name": "Magic Find Potion",
 			"description": "Use this to gain 100% Magic Find for 90 seconds. ",
 			"bp": "/Game/Mods/ArkOmega/Items/Potions/MagicFindPotion/PrimalItemConsumable_MagicPotion.PrimalItemConsumable_MagicPotion_C",
@@ -6082,6 +6090,24 @@
 					{ "qty": 5, "type": "PrimalItem_AlphaEssence_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
 				]
+			}
+		},
+		{
+			"name": "Omega Mutagen",
+			"description": "Rare substance with aggravating and mutagentic properties, modified to work on Ark Omega's creatures.\n\nMutagen cost is ",
+			"bp": "/Game/Mods/ArkOmega/Items/Potions/OmegaMutagen/PrimalItemConsumable_Mutagen_Omega.PrimalItemConsumable_Mutagen_Omega_C",
+			"parent": "/Game/Genesis2/CoreBlueprints/Environment/Mutagen/PrimalItemConsumable_Mutagen.PrimalItemConsumable_Mutagen_C",
+			"icon": "/Game/Genesis2/Icons/Items/HUD_GEN2_Mutagen_Icon.HUD_GEN2_Mutagen_Icon",
+			"type": "MiscConsumable/Other",
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 200, "type": "PrimalItemConsumable_Mutagel_C" } ]
 			}
 		},
 		{
@@ -6143,7 +6169,7 @@
 		},
 		{
 			"name": "Endless Spiritual Potion",
-			"description": "Makes you ignore weight and stamina, and move faster.\n\nLasts until death.",
+			"description": "Makes you ignore weight and stamina, and move faster.\n\nLasts until death.\n\nDoes not work outside of the No-Tame game mode.",
 			"bp": "/Game/Mods/ArkOmega/Items/Potions/SpiritualPotion/PrimalItemConsumable_EndlessSpiritualPotion.PrimalItemConsumable_EndlessSpiritualPotion_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Potions/SpiritualPotion/Spiritual_PotionIcon.Spiritual_PotionIcon",
@@ -6862,7 +6888,7 @@
 			"stackSize": 1
 		},
 		{
-			"name": "Perfect Soul",
+			"name": "Perfect Zodiac Soul",
 			"description": "The soul of Perfect Zodiac.\n\nFeed this to any Ancient tier creature to make it a Zodiac variant.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_PerfectSoul.PrimalItem_PerfectSoul_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
@@ -7208,7 +7234,7 @@
 		},
 		{
 			"name": "Eggselerator",
-			"description": "Equipping the Eggselerator in the trophy slot of an Egg Collector will rapidly increase the rate that it is able to generate eggs from surrounding creatures.",
+			"description": "Equipping the Eggselerator in the trophy slot of an Egg Collector will rapidly increase the rate that it is able to generate eggs from integrated creatures by 250%.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_Eggselerator.PrimalItem_Eggselerator_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/PrimalEarth/Test/EggIcon.EggIcon",
@@ -7228,7 +7254,7 @@
 		},
 		{
 			"name": "Ferox Candy",
-			"description": "Use any Omega soul from the group your Ferox is in to craft this to allow it to be transformed into a Brute Ferox.\n\nDr. Jekyll is evolved into Mr. Hyde using Unstable Ferox Candy.",
+			"description": "Feed this to your Ferox to allow it to be transformed into a Brute Ferox.\n\nThe group of Ferox Candy is determined by the Omega Soul used to craft it. It must be the same group as your Ferox for it to consume it.  \n\nDr. Jekyll is evolved into Mr. Hyde using Unstable Ferox Candy.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/Tokens/PrimalItem_FeroxCandy.PrimalItem_FeroxCandy_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_OmegaSoul.PrimalItem_OmegaSoul_C",
 			"icon": "/Game/PrimalEarth/Structures/Christmas/Icons/ChristmasCandy_Icon.ChristmasCandy_Icon",
@@ -7512,41 +7538,6 @@
 				"recipe": [
 					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
 					{ "qty": 4, "type": "PrimalItemResource_Fibers_C" }
-				]
-			}
-		},
-		{
-			"name": "Tek Shield",
-			"description": "Highly advanced shield made of pure energy",
-			"bp": "/Game/Mods/ArkOmega/PrimalEarth/CoreBlueprints/Items/Armor/Shields/PrimalItemArmor_TekShield.PrimalItemArmor_TekShield_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Shields/PrimalItemArmor_Shield.PrimalItemArmor_Shield_C",
-			"icon": "/Game/PrimalEarth/WeaponRiotShieldTransparent/HUD_TransparentRiotShield_Colorize_MIC.HUD_TransparentRiotShield_Colorize_MIC",
-			"type": "Equipment/Shield",
-			"folders": [ "Armor", "Shields" ],
-			"weight": 30,
-			"stackSize": 1,
-			"durability": 2300,
-			"crafting": {
-				"xp": 78,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 200, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 120, "type": "PrimalItemResource_Silicon_C" },
-					{ "qty": 40, "type": "PrimalItemResource_MetalIngot_C" }
-				]
-			},
-			"repair": {
-				"xp": 78,
-				"time": 5,
-				"recipe": [
-					{ "qty": 60, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 100, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 60, "type": "PrimalItemResource_Silicon_C" },
-					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" }
 				]
 			}
 		},
@@ -7935,7 +7926,7 @@
 		},
 		{
 			"name": "Egg Collector",
-			"description": "Place this near your dinos to collect any unfertilized eggs that are dropped on the ground. It will not collecto eggs for wild dinos! This will also prevent all unfertilized eggs from spoiling.\n\nThe Egg Collector can integrate female dinos into it. The dino will be destroyed, but the dino's egg type will be stored in the egg collector, being passively generated based on your server's egg laying rates settings. The default egg laying timer is sped up, and automatically includes both mate boosting and Oviraptor bonus without the need for either.\n\nEggselerator upgrade module crafted in the Soul Grinder can greatly speed up egg production rates. \n\nEgg layer data is preserved if the egg collector is picked up by hand (do not use pickup tools!).\n\nDespite the fact that the egg collector will not pick up eggs from wild dinos, it must still be placed near a base of at least 10 structures to ensure that players aren't spamming them all over the map.",
+			"description": "Place this near your dinos to collect any unfertilized eggs that are dropped on the ground. It will not collect eggs for wild dinos! This will also prevent all unfertilized eggs from spoiling.\n\nThe Egg Collector can integrate female dinos into it. The dino will be destroyed, but the dino's egg type will be stored in the egg collector, being passively generated based on your server's egg laying rates settings. The default egg laying timer is sped up, and automatically includes both mate boosting and Oviraptor bonus without the need for either. Vanilla and non-Ark Omega dinos can be integrated to produce the generic \"Dinosaur Egg\" which can be used to craft base tier Ark Omega kibble.\n\nEggselerator upgrade module crafted in the Soul Grinder can greatly speed up egg production rates. \n\nEgg layer data is preserved if the egg collector is picked up by hand (do not use pickup tools!) and will remain intact if you place the egg collector in another location or transfer it to another server. \n\nDespite the fact that the egg collector will not pick up eggs from wild dinos, it must still be placed near a base of at least 10 structures to ensure that players aren't spamming them all over the map.",
 			"bp": "/Game/Mods/ArkOmega/Structures/EggCollector/PrimalItemStructure_EggCollector.PrimalItemStructure_EggCollector_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/Mods/ArkOmega/Structures/EggCollector/hexen_eggcollector_icon.hexen_eggcollector_icon",
@@ -7950,9 +7941,9 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 10, "type": "PrimalItemResource_MetalIngot_C" },
 					{ "qty": 10, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 30, "type": "PrimalItemResource_ChitinPaste_C" }
+					{ "qty": 10, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
 			},
 			"structure": "/Game/Mods/ArkOmega/Structures/EggCollector/EggCollector.EggCollector_C"
@@ -9101,6 +9092,32 @@
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Inversion/WeapInversion.WeapInversion_C"
 		},
 		{
+			"name": "Judgement",
+			"description": "Cuts through metal and armor when infused with Element, and supports a Charge Attack. Equipping requires learning this Tekgram",
+			"bp": "/Game/Mods/ArkOmega/Weapons/Judgement/PrimalItem_WeaponJudgement.PrimalItem_WeaponJudgement_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
+			"icon": "/Game/PrimalEarth/TekTier/TekSword/HUD_TekSwordColorize_MIC.HUD_TekSwordColorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Melee" ],
+			"weight": 15,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 180,
+				"time": 15,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 75, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 100, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 40, "type": "PrimalItemResource_Element_C" },
+					{ "exact": true, "qty": 50, "type": "PrimalItem_OmegaEssence_C" },
+					{ "exact": true, "qty": 300, "type": "PrimalItem_UtilitySoul_C" }
+				]
+			},
+			"weapon": "/Game/Mods/ArkOmega/Weapons/Judgement/WeapJudgement.WeapJudgement_C"
+		},
+		{
 			"name": "Knockout Club",
 			"description": "A more effective club. Cheap, great at dealing torpor, and with a 6% chance of stunning the target.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/KnockoutClub/PrimalItem_WeaponKnockoutClub.PrimalItem_WeaponKnockoutClub_C",
@@ -9383,6 +9400,42 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_CompoundBowArrow_C" },
 					{ "qty": 3, "type": "PrimalItemConsumable_UltimateSedative_ArkOmega_C" }
+				]
+			}
+		},
+		{
+			"name": "Mind's Eye",
+			"description": "A shoulder mounted Ethereal weapon with configurable targeting and firing modes. Consumes Ethereal Souls for ammunition.",
+			"bp": "/Game/Mods/ArkOmega/Weapons/MindsEye/PrimalItemArmor_Mindseye.PrimalItemArmor_Mindseye_C",
+			"parent": "/Game/Genesis/Items/Armor/PrimalItemArmor_ShoulderCannon.PrimalItemArmor_ShoulderCannon_C",
+			"icon": "/Game/Genesis/Weapons/ShoulderCannon/Icon/HUD_ShoulderCannon_Icon.HUD_ShoulderCannon_Icon",
+			"type": "Equipment/Shield",
+			"folders": [ "Weapons", "Tek" ],
+			"weight": 15,
+			"stackSize": 1,
+			"durability": 100,
+			"crafting": {
+				"xp": 50,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 240, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 900, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 240, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 100, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			},
+			"repair": {
+				"xp": 100,
+				"time": 5,
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 500, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 50, "type": "PrimalItemResource_BlackPearl_C" }
 				]
 			}
 		},
