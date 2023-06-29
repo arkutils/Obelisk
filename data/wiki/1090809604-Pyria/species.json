@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.6.1687569964",
+	"version": "358.6.1687974878",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -2672,6 +2672,64 @@
 			"death": { "baseXP": 30 }
 		},
 		{
+			"name": "Darkwood Golem",
+			"bp": "/Game/Mods/Pyria/Creatures/Elemental/TreeGolem/NatureGolem_Character_BP_Darkwood.NatureGolem_Character_BP_Darkwood_C",
+			"dinoNameTag": "RockElemental",
+			"customTag": "PyrElemental",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 1000,
+			"dragWeight": 550,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 2100 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 2100 }
+			},
+			"staminaRates": { "sprint": -25 },
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Punch", "interval": 0.4, "dmg": 160, "radius": 400, "stamina": 0 },
+					{ "name": "Kick", "interval": 15, "dmg": 165, "radius": 400, "stamina": 0 },
+					{ "name": "Stomp", "interval": 8, "dmg": 180, "radius": 400, "stamina": 0 },
+					{ "name": "PickUp", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "PutAway", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WeaponSwings", "interval": 0.4, "dmg": 350, "radius": 500, "stamina": 0 },
+					{ "name": "AdvancingSwing", "interval": 10, "dmg": 360, "radius": 500, "stamina": 0 },
+					{ "name": "SpinSwing", "interval": 18, "dmg": 450, "radius": 500, "stamina": 0 },
+					{ "name": "AoE", "interval": 30, "dmg": 0, "radius": 0, "stamina": 125 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "GolemYeet", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 185 },
+					{ "name": "DoubleArmSwing", "interval": 18, "dmg": 65, "radius": 450, "stamina": 185 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Creatures/Undead/Wraith/DinoDropInventoryComponent_Carnivore_Large_GSBoss2.DinoDropInventoryComponent_Carnivore_Large_GSBoss2"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
 			"name": "Hardwood Golem",
 			"bp": "/Game/Mods/Pyria/Creatures/Elemental/TreeGolem/NatureGolem_Character_BP_Hardwood.NatureGolem_Character_BP_Hardwood_C",
 			"dinoNameTag": "RockElemental",
@@ -2952,65 +3010,6 @@
 					}
 				],
 				"baseXP": 3
-			}
-		},
-		{
-			"name": "Quinkan",
-			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Quinkan/Quinkan_Character_BP.Quinkan_Character_BP_C",
-			"dinoNameTag": "Chupacabra",
-			"customTag": "Pyria",
-			"targetingTeamName": "Herbivores_Medium",
-			"mass": 195,
-			"dragWeight": 120,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 58 },
-			"cloning": {
-				"costBase": 1450,
-				"costLevel": 55,
-				"timeBase": 10150,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 288, "sprint": 1152 },
-				"swim": { "base": 240 }
-			},
-			"movementD": {
-				"walk": { "base": 288, "sprint": 1152 },
-				"swim": { "base": 240 }
-			},
-			"staminaRates": {
-				"sprint": -24,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 33,
-				"defaultSwingRadius": 160,
-				"attacks": [
-					{ "name": "None", "interval": 0.08, "dmg": 15, "radius": 200, "stamina": 5 },
-					{ "name": "None", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 0 },
-					{ "name": "None", "interval": 0.08, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": {
-				"lootBagChance": 0.3,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
-					}
-				],
-				"baseXP": 6
 			}
 		},
 		{
@@ -5750,7 +5749,7 @@
 			"name": "Dreadmare",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Dreadmare/Dreadmare_Character_BP_Rotted.Dreadmare_Character_BP_Rotted_C",
 			"dinoNameTag": "Equus",
-			"customTag": "LTPyria",
+			"customTag": "Dreadmare",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 165,
 			"dragWeight": 112,
