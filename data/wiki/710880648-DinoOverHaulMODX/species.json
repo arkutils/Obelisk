@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.6.1687544196",
+	"version": "358.7.1688083721",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -11344,7 +11344,7 @@
 				"defaultDmg": 500,
 				"defaultSwingRadius": 870,
 				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 5000, "radius": 870, "stamina": 0 },
+					{ "name": "None", "interval": 0.6, "dmg": 7500, "radius": 1100, "stamina": 0 },
 					{ "name": "Flame", "interval": 12, "dmg": 0, "radius": 1, "stamina": 100 },
 					{ "name": "FireBall", "interval": 10, "dmg": 0, "radius": 300, "stamina": 100 }
 				]
@@ -12065,47 +12065,6 @@
 			"movementD": {
 				"walk": { "base": 350, "sprint": 577.5 },
 				"fly": { "base": 700, "sprint": 1155 },
-				"swim": { "base": 700 }
-			},
-			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 50,
-				"defaultSwingRadius": 215,
-				"attacks": [ { "name": "Attack", "interval": 0.1, "dmg": 150, "radius": 1250, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Mega Spider Web",
-			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/Prime_Minions/MegaSpiderWeb_Character_BP_Minion.MegaSpiderWeb_Character_BP_Minion_C",
-			"dinoNameTag": "",
-			"customTag": "",
-			"targetingTeamName": "TargetOnlyPlayers",
-			"mass": 100,
-			"dragWeight": 70,
-			"variants": [ "Boss", "Minion" ],
-			"flags": [
-				"canBeDragged",
-				"canDrag",
-				"isBossDino",
-				"isCarnivore",
-				"isFlyerDino",
-				"isTameable"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 350, "sprint": 4532.5 },
-				"fly": { "base": 700, "sprint": 9065 },
-				"swim": { "base": 700 }
-			},
-			"movementD": {
-				"walk": { "base": 350, "sprint": 647.5 },
-				"fly": { "base": 700, "sprint": 1295 },
 				"swim": { "base": 700 }
 			},
 			"staminaRates": {
@@ -30508,6 +30467,52 @@
 			}
 		},
 		{
+			"name": "Vulnerable Hydra",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Bat/WeakenHydra_BP.WeakenHydra_BP_C",
+			"dinoNameTag": "",
+			"customTag": "",
+			"targetingTeamName": "TargetOnlyPlayers",
+			"mass": 100,
+			"dragWeight": 70,
+			"variants": [ "Boss" ],
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isBossDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1, "sprint": 11.5 },
+				"fly": { "base": 1, "sprint": 11.5 },
+				"swim": { "base": 1 }
+			},
+			"movementD": {
+				"walk": { "base": 1, "sprint": 1.6 },
+				"fly": { "base": 1, "sprint": 1.6 },
+				"swim": { "base": 1 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 750,
+				"defaultSwingRadius": 215,
+				"attacks": [
+					{
+						"name": "Attack", "interval": 10, "dmg": 1, "radius": 1, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			}
+		},
+		{
 			"name": "TITAN Dragon",
 			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Dragon/Dragon_Character_BP_TITAN.Dragon_Character_BP_TITAN_C",
 			"dinoNameTag": "TITANDragon",
@@ -31421,6 +31426,36 @@
 			}
 		},
 		{
+			"name": "Queen Egg",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Queen/QueenEgg_Character_BP_MOD.QueenEgg_Character_BP_MOD_C",
+			"dinoNameTag": "Ant",
+			"customTag": "Ant",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 5000,
+			"flags": [ "canBeDragged" ],
+			"leveling": { "wildForcedLevel": 1 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 0 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 0 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 8, "radius": 90, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 1 }
+		},
+		{
 			"name": "TITAN Brood Queen",
 			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Queen/Queen_Character_BP_TITAN.Queen_Character_BP_TITAN_C",
 			"dinoNameTag": "TITANUberspider",
@@ -31635,6 +31670,36 @@
 			"death": { "baseXP": 1 }
 		},
 		{
+			"name": "Turkey Egg",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Turkey/TurkeyEgg_Character_BP_MOD.TurkeyEgg_Character_BP_MOD_C",
+			"dinoNameTag": "Ant",
+			"customTag": "Ant",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 5000,
+			"flags": [ "canBeDragged" ],
+			"leveling": { "wildForcedLevel": 1 },
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 0 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 0 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 8, "radius": 90, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 1 }
+		},
+		{
 			"name": "TITAN Turkey",
 			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Turkey/Turkey_Character_BP_TITAN.Turkey_Character_BP_TITAN_C",
 			"dinoNameTag": "TITANTurkey",
@@ -31678,6 +31743,50 @@
 					}
 				],
 				"baseXP": 6000
+			}
+		},
+		{
+			"name": "ApexDire Bear Prime Vanguard",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Turkey/Turkey_Direbear_Character_BP_Minion.Turkey_Direbear_Character_BP_Minion_C",
+			"dinoNameTag": "Direbear",
+			"customTag": "Direbear",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"variants": [ "Boss", "Minion" ],
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 575, "sprint": 4312.5 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 316.3, "sprint": 2767.2 },
+				"swim": { "base": 440 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 1250,
+				"defaultSwingRadius": 500,
+				"attacks": [
+					{ "name": "Wild Melee", "interval": 0.22, "dmg": 13500, "radius": 1200, "stamina": 3 },
+					{ "name": "Tamed Melee", "interval": 3, "dmg": 17500, "radius": 1200, "stamina": 3 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 260, "stamina": 600 },
+					{ "name": "Wild Melee", "interval": 6, "dmg": 6000, "radius": 900, "stamina": 3 },
+					{ "name": "Roar Knockdown", "interval": 12, "dmg": 10, "radius": 1, "stamina": 0 }
+				]
 			}
 		},
 		{
