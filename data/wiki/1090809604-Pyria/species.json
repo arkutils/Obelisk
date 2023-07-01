@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.6.1687974878",
+	"version": "358.7.1688145067",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -5714,11 +5714,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 1800 },
+				"walk": { "base": 250, "sprint": 2000 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 225, "sprint": 1800 },
+				"walk": { "base": 250, "sprint": 2000 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -5772,11 +5772,69 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 1800 },
+				"walk": { "base": 250, "sprint": 2000 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 225, "sprint": 1800 },
+				"walk": { "base": 250, "sprint": 2000 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "BackKick", "interval": 0.2, "dmg": 35, "radius": 250, "stamina": 125 },
+					{ "name": "RearAoE", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_SmallMana.DinoDropInventoryComponent_Pyria_Creature_SmallMana"
+					}
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Toxic Dreadmare",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Dreadmare/Dreadmare_Character_BP_Toxic.Dreadmare_Character_BP_Toxic_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Dreadmare",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 112,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250, "sprint": 2000 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 250, "sprint": 2000 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
