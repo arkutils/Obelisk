@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.9.1689443098",
+	"version": "358.9.1690145744",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -13335,7 +13335,7 @@
 			"dinoNameTag": "Wyvern",
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivores_High",
-			"mass": 100,
+			"mass": 800,
 			"dragWeight": 555,
 			"variants": [ "Minion" ],
 			"flags": [
@@ -15202,7 +15202,7 @@
 			"name": "Unique ApexShadowmane Prime",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/UniquePrimeDinos/LionfishLion_Character_BP_PRIME_U.LionfishLion_Character_BP_PRIME_U_C",
 			"dinoNameTag": "Lionfish Lion",
-			"customTag": "LionfishLion",
+			"customTag": "*",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 265,
 			"dragWeight": 350,
@@ -28944,7 +28944,7 @@
 					{ "name": "Claw", "interval": 4, "dmg": 50000, "radius": 1600, "stamina": 0 },
 					{ "name": "Blizzard", "interval": 14, "dmg": 0, "radius": 670, "stamina": 0 },
 					{ "name": "Roar", "interval": 45, "dmg": 0, "radius": 670, "stamina": 0 },
-					{ "name": "Bite", "interval": 16, "dmg": 25000, "radius": 1500, "stamina": 0 }
+					{ "name": "Bite", "interval": 16, "dmg": 50000, "radius": 1750, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -31065,6 +31065,10 @@
 					{
 						"name": "RoarLeech", "interval": 90, "dmg": 50, "radius": 5000, "stamina": 0,
 						"isProjectile": true
+					},
+					{
+						"name": "Tail Spikes 360 Range", "interval": 20, "dmg": 0, "radius": 8500, "stamina": 0,
+						"isProjectile": true
 					}
 				]
 			},
@@ -31196,6 +31200,51 @@
 			"death": { "baseXP": 500 }
 		},
 		{
+			"name": "Corrupted Bat Overlord",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Overlord/FlyingMonkey_Character_BP_Overlord_Corrupt.FlyingMonkey_Character_BP_Overlord_Corrupt_C",
+			"dinoNameTag": "BatM",
+			"customTag": "",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 70,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isBossDino",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 2887.5 },
+				"fly": { "base": 800, "sprint": 6600 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 577.5 },
+				"fly": { "base": 800, "sprint": 1320 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.475
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 215,
+				"attacks": [
+					{ "name": "Attack", "interval": 0.2, "dmg": 10500, "radius": 2600, "stamina": 0 },
+					{ "name": "Attack", "interval": 6, "dmg": 9000, "radius": 2600, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 500 }
+		},
+		{
 			"name": "Uber Flying Monkey Minion",
 			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Overlord/FlyingMonkey_Character_BP_Uber.FlyingMonkey_Character_BP_Uber_C",
 			"dinoNameTag": "BatM",
@@ -31239,6 +31288,85 @@
 				]
 			},
 			"death": { "baseXP": 75 }
+		},
+		{
+			"name": "Mega Manticore Clone",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Overlord/Manticore_Character_BP_MEGA_Corrupt.Manticore_Character_BP_MEGA_Corrupt_C",
+			"dinoNameTag": "MegaManticore",
+			"customTag": "MegaManticore",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 1000,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 1687.5 },
+				"fly": { "base": 1700, "sprint": 3825 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 750, "sprint": 1125 },
+				"fly": { "base": 1700, "sprint": 2550 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.475
+			},
+			"attack": {
+				"defaultDmg": 150,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "ClawAndFangs", "interval": 0.75, "dmg": 28000, "radius": 2200, "stamina": 5 },
+					{ "name": "PoisonSting", "interval": 8, "dmg": 20000, "radius": 1500, "stamina": 15 },
+					{
+						"name": "PoisonAttack", "interval": 21, "dmg": 400, "radius": 900, "stamina": 100,
+						"isProjectile": true
+					},
+					{ "name": "PoisonAttackAir", "interval": 14, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "FireAttack Prime", "interval": 5, "dmg": 25, "radius": 900, "stamina": 150 },
+					{
+						"name": "FireBalls", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100,
+						"isProjectile": true
+					},
+					{
+						"name": "FireBalls Long Range", "interval": 9, "dmg": 0, "radius": 0, "stamina": 100,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/DinoOverHaulMODX/AlphaMegaDinos/AlphaMegaDinoDrop/DinoDropInventoryComponent_Manticore_MEGA.DinoDropInventoryComponent_Manticore_MEGA"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_TekGloves_C",
+					"PrimalItemArmor_TekHelmet_C",
+					"PrimalItemArmor_TekBoots_C",
+					"PrimalItemArmor_TekShirt_C",
+					"PrimalItemArmor_TekPants_C",
+					"PrimalItemStructure_TekGenerator_C"
+				],
+				"baseXP": 2750
+			}
 		},
 		{
 			"name": "Overlord Bee Vanguard",
@@ -31392,84 +31520,6 @@
 				"defaultDmg": 700,
 				"defaultSwingRadius": 215,
 				"attacks": [ { "name": "Attack", "interval": 0.1, "dmg": 3000, "radius": 1000, "stamina": 0 } ]
-			}
-		},
-		{
-			"name": "Mega Reaper Clone",
-			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Overlord/Xeno_Character_BP_Corrupt.Xeno_Character_BP_Corrupt_C",
-			"dinoNameTag": "MegaXenomorph",
-			"customTag": "Reaper King",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 1250,
-			"dragWeight": 1050,
-			"variants": [ "Boss" ],
-			"flags": [
-				"allowRiding",
-				"canDrag",
-				"doStepDamage",
-				"isBigDino",
-				"isBossDino",
-				"isCarnivore",
-				"preventNeuter"
-			],
-			"cloning": {
-				"costBase": 2325,
-				"costLevel": 55,
-				"timeBase": 16275,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 1,
-				"maxSpeed": 2800
-			},
-			"movementW": {
-				"walk": { "base": 900, "sprint": 1980 }
-			},
-			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 }
-			},
-			"staminaRates": { "sprint": -40 },
-			"attack": {
-				"defaultDmg": 65,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteAttack", "interval": 0.7, "dmg": 25000, "radius": 1200, "stamina": 5 },
-					{
-						"name": "Web Attack", "interval": 12, "dmg": 1, "radius": 600, "stamina": 50,
-						"isProjectile": true
-					},
-					{ "name": "Tail swipe", "interval": 3, "dmg": 30000, "radius": 1850, "stamina": 30 },
-					{
-						"name": "Tail spike", "interval": 8, "dmg": 1, "radius": 600, "stamina": 0,
-						"isProjectile": true
-					},
-					{
-						"name": "Tail spike Poison", "interval": 13, "dmg": 1, "radius": 600, "stamina": 0,
-						"isProjectile": true
-					},
-					{ "name": "Roar", "interval": 60, "dmg": 5, "radius": 0, "stamina": 15 },
-					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 5, "radius": 100, "stamina": 5 },
-					{ "name": "BiteAttack", "interval": 8, "dmg": 45000, "radius": 1100, "stamina": 5 },
-					{
-						"name": "Tail spike Poison", "interval": 13, "dmg": 1, "radius": 600, "stamina": 0,
-						"isProjectile": true
-					}
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/DinoOverHaulMODX/AlphaMegaDinos/AlphaMegaDinoDrop/DinoDropInventoryComponent_Reaper_Mega.DinoDropInventoryComponent_Reaper_Mega"
-					}
-				],
-				"engrams": [
-					"PrimalItemStructure_TekGenerator_C",
-					"PrimalItemStructure_TurretTek_C",
-					"PrimalItemStructure_TekCloningChamber_C"
-				],
-				"baseXP": 3500
 			}
 		},
 		{

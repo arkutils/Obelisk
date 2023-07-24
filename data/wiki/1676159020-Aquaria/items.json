@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "357.13.1681407858",
+	"version": "358.9.1690158145",
 	"format": "4",
 	"mod": {
 		"id": "1676159020",
@@ -187,6 +187,29 @@
 				"food": 0.8,
 				"weight": 0.3,
 				"water": 0.01
+			}
+		},
+		{
+			"name": "Edestus Saddle",
+			"description": "Equip a Edestus with this to ride it.",
+			"bp": "/Game/Mods/Aquaria/FIsh/Edestus/PrimalItemArmor_EdestusSaddle.PrimalItemArmor_EdestusSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Kaprosuchus/Saddle/HUD_KaproSaddle_Colorize_MIC.HUD_KaproSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 17.6,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 240, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 270, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 120, "type": "PrimalItemResource_ChitinPaste_C" }
+				]
 			}
 		},
 		{
@@ -395,6 +418,58 @@
 					{ "qty": 270, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 120, "type": "PrimalItemResource_ChitinPaste_C" }
 				]
+			}
+		},
+		{
+			"name": "Raw Squid Meat",
+			"description": "Eating raw food will SLIGHTLY sate hunger, but is unhealthy for humans.  This excellent cut spoils very quickly. Most wild carnivores love this meat.\n\nSquid meat is a delicacy, even most piscivores know that! While it'll cook into normal cooked prime fish, use this to tame piscivores- and most general carnivores- with increased affinity. Will tame specific piscivores in my (shadlos) mods with affinity equal or greater to their own kibble!",
+			"bp": "/Game/Mods/Aquaria/FIsh/Humboldt/PrimalItemConsumable_RawPrimeMeat_SquidMeat.PrimalItemConsumable_RawPrimeMeat_SquidMeat_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawPrimeMeat_Fish.PrimalItemConsumable_RawPrimeMeat_Fish_C",
+			"icon": "/Game/Mods/Aquaria/FIsh/Humboldt/Squid.Squid",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Meat" ],
+			"weight": 0.05,
+			"stackSize": 1000,
+			"spoilsIn": 560,
+			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C",
+			"statEffects": [
+				{ "stat": "food", "value": 10, "useItemQuality": true, "duration": 2 },
+				{ "stat": "health", "value": -1.5, "useItemQuality": true, "duration": 0.375 }
+			],
+			"cooking": {
+				"health": 0.24,
+				"stamina": 0.01,
+				"food": 0.2,
+				"weight": 0.02,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Humboldt Squid Egg",
+			"description": "Eat it to gain tremendous nourishment",
+			"bp": "/Game/Mods/Aquaria/FIsh/Humboldt/PrimalItemConsumable_UnderwaterEgg_HumboldtSquid.PrimalItemConsumable_UnderwaterEgg_HumboldtSquid_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_UnderwaterEgg.PrimalItemConsumable_UnderwaterEgg_C",
+			"icon": "/Game/PrimalEarth/Items/FishEgg/HUD_FishEgg_Colorize_MIC_Eel.HUD_FishEgg_Colorize_MIC_Eel",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 3,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "health", "value": 30, "useItemQuality": true, "duration": 7.5 },
+				{ "stat": "stamina", "value": 30, "useItemQuality": true, "duration": 7.5 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Aquaria/FIsh/Humboldt/Humboldt_Character_BP.Humboldt_Character_BP_C",
+				"temperature": { "min": -75, "max": 75 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
