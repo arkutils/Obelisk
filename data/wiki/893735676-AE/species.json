@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.9.1689213924",
+	"version": "358.9.1690605508",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -30002,6 +30002,58 @@
 			"name": "Ghost Raptor",
 			"bp": "/Game/Mods/AE/Dinos/Ghost/Raptor/Ghost_Raptor_Character_BP.Ghost_Raptor_Character_BP_C",
 			"dinoNameTag": "Ghost_Raptor",
+			"customTag": "PackDino",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [ "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 1500,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 1500, "radius": 65, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Ghost Raptor",
+			"bp": "/Game/Mods/AE/Dinos/Ghost/Raptor/Ghost_Raptor_Character_BP_New.Ghost_Raptor_Character_BP_New_C",
+			"dinoNameTag": "Ghost_Raptor",
 			"customTag": "Raptor",
 			"targetingTeamName": "Carnivores_Medium",
 			"mass": 165,
@@ -30026,7 +30078,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -30044,10 +30096,15 @@
 			"attack": {
 				"defaultDmg": 1500,
 				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 1500, "radius": 65, "stamina": 0 } ]
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 1500, "radius": 65, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 1000, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 2000, "radius": 180, "stamina": 0 }
+				]
 			},
 			"death": {
-				"lootBagChance": 1,
+				"lootBagChance": 0.3,
 				"lootBags": [
 					{
 						"chance": 0.5,
@@ -34739,12 +34796,7 @@
 				"isFlyerDino",
 				"isTameable"
 			],
-			"leveling": {
-				"xpRamp": "Player",
-				"maxExperience": 100000,
-				"maxTameLevels": 74,
-				"mutagenCost": 1
-			},
+			"leveling": { "mutagenCost": 1 },
 			"cloning": {
 				"costBase": 2.5,
 				"costLevel": 5.5,
@@ -34766,8 +34818,8 @@
 				"swim": { "base": 1500 }
 			},
 			"staminaRates": {
-				"sprint": -5,
-				"swimOrFly": -0.3
+				"sprint": -22,
+				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 510,
@@ -34796,6 +34848,13 @@
 			},
 			"death": {
 				"dossierId": 100,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Primal_Fear_Bosses/LootSets/Vanilla/DinoDropInventoryComponent_PFBVanilla.DinoDropInventoryComponent_PFBVanilla"
+					}
+				],
 				"baseXP": 1500
 			}
 		},
@@ -43227,12 +43286,6 @@
 				],
 				"mutagenCost": 93
 			},
-			"cloning": {
-				"costBase": 2325,
-				"costLevel": 55,
-				"timeBase": 16275,
-				"timeLevel": 385
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -43263,6 +43316,78 @@
 				"lootBags": [
 					{
 						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Robot/DinoDropInventoryComponent_Robot.DinoDropInventoryComponent_Robot"
+					}
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Robot Ankylo",
+			"bp": "/Game/Mods/AE/Dinos/Robot/Robot_Anky/Robot_Ankylo_Character_BP_AE2.Robot_Ankylo_Character_BP_AE2_C",
+			"dinoNameTag": "AE_Robot_Anky",
+			"customTag": "Anky",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 160,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 0.2,
+				"costLevel": 0.55,
+				"timeBase": 1.7,
+				"timeLevel": 3.85
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 4000,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 4000, "radius": 370, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 4000, "radius": 250, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Robot/DinoDropInventoryComponent_Robot.DinoDropInventoryComponent_Robot"
+					},
+					{
+						"chance": 0.333333333,
+						"item": "/Game/Mods/AE/Dinos/Robot/DinoDropInventoryComponent_Robot.DinoDropInventoryComponent_Robot"
+					},
+					{
+						"chance": 0.333333333,
 						"item": "/Game/Mods/AE/Dinos/Robot/DinoDropInventoryComponent_Robot.DinoDropInventoryComponent_Robot"
 					}
 				],
@@ -47624,7 +47749,7 @@
 				"timeLevel": 385
 			},
 			"falling": {
-				"dmgMult": 80,
+				"dmgMult": 0,
 				"maxSpeed": 1550
 			},
 			"movementW": {
@@ -47643,11 +47768,11 @@
 				"defaultDmg": 7500,
 				"defaultSwingRadius": 360,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.1, "dmg": 35, "radius": 640, "stamina": 10 },
-					{ "name": "Roll", "interval": 10, "dmg": 4500, "radius": 640, "stamina": 95 },
-					{ "name": "Lunge", "interval": 1, "dmg": 4500, "radius": 840, "stamina": 125 },
-					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 4500, "radius": 640, "stamina": 30 },
-					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 4500, "radius": 640, "stamina": 35 }
+					{ "name": "Melee", "interval": 0.1, "dmg": 7500, "radius": 640, "stamina": 10 },
+					{ "name": "Roll", "interval": 10, "dmg": 7500, "radius": 640, "stamina": 95 },
+					{ "name": "Lunge", "interval": 1, "dmg": 7500, "radius": 840, "stamina": 125 },
+					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 7500, "radius": 640, "stamina": 30 },
+					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 7500, "radius": 640, "stamina": 35 }
 				]
 			},
 			"death": {
@@ -47674,17 +47799,14 @@
 			"mass": 80,
 			"dragWeight": 25,
 			"flags": [
+				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"canMountOnHumans",
 				"isTameable"
 			],
 			"leveling": {
-				"wildLevelTable": [
-					{ "chance": 0.5, "min": 18, "max": 25 },
-					{ "chance": 0.5, "min": 25, "max": 40 }
-				],
+				"wildForcedLevel": 600,
 				"mutagenCost": 24
 			},
 			"cloning": {
@@ -47698,22 +47820,22 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 60, "sprint": 504 },
-				"swim": { "base": 300 }
+				"walk": { "base": 180, "sprint": 1512 },
+				"swim": { "base": 600, "sprint": 5040 }
 			},
 			"movementD": {
-				"walk": { "base": 60, "sprint": 240 },
-				"swim": { "base": 300 }
+				"walk": { "base": 180, "sprint": 720 },
+				"swim": { "base": 600, "sprint": 2400 }
 			},
 			"staminaRates": {
-				"sprint": -4,
+				"sprint": -40,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 750,
+				"defaultDmg": 75000,
 				"defaultSwingRadius": 50,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 750, "radius": 95, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 75000, "radius": 285, "stamina": 0 },
 					{
 						"name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
 						"isProjectile": true
@@ -51141,6 +51263,68 @@
 				],
 				"baseXP": 3
 			}
+		},
+		{
+			"name": "Redstaffs Runner",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Pav/PavQuetz_Character_BP_AE.PavQuetz_Character_BP_AE_C",
+			"dinoNameTag": "AE_Robot_Quetz",
+			"customTag": "Quetz",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 200,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1197, "sprint": 2872.8 },
+				"fly": { "base": 1995, "sprint": 4788 },
+				"swim": { "base": 1995, "sprint": 4788 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 1710 },
+				"fly": { "base": 1500, "sprint": 2850 },
+				"swim": { "base": 1500, "sprint": 2850 }
+			},
+			"movementR": {
+				"walk": { "base": 801, "sprint": 1445.8 },
+				"fly": { "base": 1335, "sprint": 2409.7 },
+				"swim": { "base": 1335, "sprint": 2409.7 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 75000,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 75000, "radius": 720, "stamina": 16 },
+					{ "name": "None", "interval": 1, "dmg": 75000, "radius": 370, "stamina": 80 },
+					{ "name": "None", "interval": 0.6, "dmg": 75000, "radius": 720, "stamina": 16 }
+				]
+			},
+			"death": { "baseXP": 18 }
 		},
 		{
 			"name": "SkyRider",

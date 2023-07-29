@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.9.1689259174",
+	"version": "358.9.1690578010",
 	"format": "4",
 	"mod": {
 		"id": "2212177129",
@@ -1889,7 +1889,7 @@
 			"death": { "baseXP": 3 }
 		},
 		{
-			"name": "Mantiflux",
+			"name": "Kyanosflux",
 			"bp": "/Game/Mods/Hybridthing/DungMant/Dungman_Character_BP.Dungman_Character_BP_C",
 			"dinoNameTag": "Mantiflux",
 			"customTag": "Mantiflux",
@@ -1953,21 +1953,14 @@
 			}
 		},
 		{
-			"name": "Mantiflux",
+			"name": "Rogue Kyanosflux",
 			"bp": "/Game/Mods/Hybridthing/DungMant/Rogue/RogueDungman_Character_BP.RogueDungman_Character_BP_C",
 			"dinoNameTag": "Mantiflux",
 			"customTag": "Mantis",
 			"targetingTeamName": "Herbivores_Large_Aggressive",
 			"mass": 222,
 			"dragWeight": 190,
-			"flags": [
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isCarnivore",
-				"isTameable"
-			],
+			"flags": [ "allowRiding", "canBeDragged", "canDrag", "isCarnivore" ],
 			"leveling": { "mutagenCost": 27 },
 			"cloning": {
 				"costBase": 650,
@@ -2006,7 +1999,7 @@
 				]
 			},
 			"death": {
-				"lootBagChance": 0.3,
+				"lootBagChance": 1,
 				"lootBags": [
 					{
 						"chance": 1,
@@ -2616,16 +2609,16 @@
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
-				"sprint": -20,
+				"sprint": -7,
 				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 42,
 				"defaultSwingRadius": 110,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 214, "radius": 110, "stamina": 0 },
-					{ "name": "Gore", "interval": 0.5, "dmg": 85, "radius": 350, "stamina": 0 },
-					{ "name": "None", "interval": 3, "dmg": 145, "radius": 500, "stamina": 45 },
+					{ "name": "Bite", "interval": 0.6, "dmg": 214, "radius": 250, "stamina": 0 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 85, "radius": 170, "stamina": 0 },
+					{ "name": "None", "interval": 3, "dmg": 145, "radius": 650, "stamina": 45 },
 					{ "name": "None", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -4630,7 +4623,7 @@
 			"name": "Pantheranubis",
 			"bp": "/Game/Mods/Hybridthing/OperationHybrids/OperationAnubis/OperationAnubis_Character_BP.OperationAnubis_Character_BP_C",
 			"dinoNameTag": "OPAnubis",
-			"customTag": "LionfishLion",
+			"customTag": "OPAnubis",
 			"targetingTeamName": "Robot_Aggressive",
 			"mass": 400,
 			"dragWeight": 360,
@@ -4669,9 +4662,9 @@
 				"defaultDmg": 42,
 				"defaultSwingRadius": 110,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 200, "radius": 250, "stamina": 0 },
-					{ "name": "Slash", "interval": 1, "dmg": 178, "radius": 440, "stamina": 15 },
-					{ "name": "Grind", "interval": 6, "dmg": 375, "radius": 440, "stamina": 35 },
+					{ "name": "Bite", "interval": 0.6, "dmg": 150, "radius": 250, "stamina": 0 },
+					{ "name": "Slash", "interval": 1, "dmg": 169, "radius": 440, "stamina": 15 },
+					{ "name": "Grind", "interval": 6, "dmg": 340, "radius": 440, "stamina": 35 },
 					{ "name": "Roar", "interval": 70, "dmg": 375, "radius": 250, "stamina": 0 }
 				]
 			},
@@ -4791,7 +4784,73 @@
 						"isProjectile": true
 					},
 					{ "name": "None", "interval": 3, "dmg": 198, "radius": 250, "stamina": 0 },
-					{ "name": "HumpAttack", "interval": 65, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "HumpAttack", "interval": 65, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 153, "radius": 300, "stamina": 15 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Ultimavenator",
+			"bp": "/Game/Mods/Hybridthing/OperationHybrids/Visit/Flyer/Final/VisitorFinal_Character_BP.VisitorFinal_Character_BP_C",
+			"dinoNameTag": "VisiFlyer",
+			"customTag": "VisiFlyer",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 222,
+			"dragWeight": 580,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 27 },
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 425, "sprint": 892.5 },
+				"swim": { "base": 400, "sprint": 840 }
+			},
+			"movementD": {
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 400, "sprint": 1120 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 65, "radius": 360, "stamina": 0 },
+					{
+						"name": "Gore", "interval": 15, "dmg": 43, "radius": 120, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "None", "interval": 4, "dmg": 63, "radius": 400, "stamina": 0 },
+					{ "name": "None", "interval": 70, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 8, "dmg": 45, "radius": 700, "stamina": 20 }
 				]
 			},
 			"death": {
@@ -4836,18 +4895,18 @@
 			},
 			"movementW": {
 				"walk": { "base": 150, "sprint": 412.5 },
-				"fly": { "base": 550, "sprint": 1512.5 },
-				"swim": { "base": 550 }
+				"fly": { "base": 670, "sprint": 1842.5 },
+				"swim": { "base": 670 }
 			},
 			"movementD": {
 				"walk": { "base": 150, "sprint": 474.4 },
-				"fly": { "base": 550, "sprint": 1739.4 },
-				"swim": { "base": 550 }
+				"fly": { "base": 670, "sprint": 2118.9 },
+				"swim": { "base": 670 }
 			},
 			"movementR": {
 				"walk": { "base": 157.5, "sprint": 450.8 },
-				"fly": { "base": 577.5, "sprint": 1652.9 },
-				"swim": { "base": 577.5 }
+				"fly": { "base": 703.5, "sprint": 2013.5 },
+				"swim": { "base": 703.5 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -4928,6 +4987,68 @@
 					{
 						"chance": 1,
 						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Therizinosaur",
+			"bp": "/Game/Mods/Hybridthing/OperationHybrids/Visit/Slicer/Big/VisitorSlicerF_Character_BP.VisitorSlicerF_Character_BP_C",
+			"dinoNameTag": "Therizinosaurus",
+			"customTag": "Therizinosaurus",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 94 },
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 466, "sprint": 978.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 466, "sprint": 1109.1 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "ClawAttack", "interval": 0.4, "dmg": 52, "radius": 225, "stamina": 0 },
+					{ "name": "ClawHarvest", "interval": 0.4, "dmg": 5, "radius": 250, "stamina": 0 },
+					{ "name": "BiteHarvest", "interval": 4, "dmg": 52, "radius": 225, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_TickleChicken.DinoDropInventoryComponent_Carnivore_TickleChicken"
 					}
 				],
 				"baseXP": 18
@@ -7739,7 +7860,6 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"isCarnivore",
 				"isTameable"
 			],
 			"leveling": { "mutagenCost": 27 },

@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.6.1687569661",
+	"version": "358.9.1690576738",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -2580,6 +2580,64 @@
 				]
 			},
 			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "Ogre Darner",
+			"bp": "/Game/Mods/AC2/OgreDarner/OgreDarner_Character_BP.OgreDarner_Character_BP_C",
+			"dinoNameTag": "Dragonfly",
+			"customTag": "Darner",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 330,
+			"dragWeight": 250,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 450, "sprint": 918 },
+				"fly": { "base": 1600, "sprint": 2284.8 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 450, "sprint": 1530 },
+				"fly": { "base": 1600, "sprint": 3808 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -15
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "ClawAttacks", "interval": 0.7, "dmg": 25, "radius": 300, "stamina": 0 },
+					{ "name": "GrabAttacks", "interval": 15, "dmg": 5, "radius": 300, "stamina": 0 },
+					{ "name": "Ree", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "DodgeLeft", "interval": 0.7, "dmg": 0, "radius": 0, "stamina": 225 },
+					{ "name": "DodgeRight", "interval": 0.7, "dmg": 0, "radius": 0, "stamina": 225 },
+					{ "name": "BugMunch", "interval": 0.7, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "BugKill", "interval": 0.7, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
 		},
 		{
 			"name": "Ouranosaurus",
