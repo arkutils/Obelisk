@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.15.1682518886",
+	"version": "358.9.1687204735",
 	"format": "4",
 	"mod": {
 		"id": "2869411055",
@@ -122,6 +122,131 @@
 			"death": { "baseXP": 6 }
 		},
 		{
+			"name": "S-Baryonyx",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Baryonix/S-Baryonyx_Character_BP.S-Baryonyx_Character_BP_C",
+			"dinoNameTag": "Baryonyx",
+			"customTag": "Baryonyx",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1470 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1323 }
+			},
+			"movementR": {
+				"walk": { "base": 400, "sprint": 1164.2 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.15, "dmg": 35, "radius": 250, "stamina": 0 },
+					{ "name": "SwimStun", "interval": 7, "dmg": 25, "radius": 300, "stamina": 20 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "S-Ravager",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Cavewolf/S-CaveWolf_Character_BP.S-CaveWolf_Character_BP_C",
+			"dinoNameTag": "CaveWolf",
+			"customTag": "CaveWolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 26 },
+			"cloning": {
+				"costBase": 625,
+				"costLevel": 55,
+				"timeBase": 4375,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1950
+			},
+			"movementW": {
+				"walk": { "base": 240, "sprint": 924 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 240, "sprint": 924 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 33,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 5 },
+					{ "name": "Claw", "interval": 0.22, "dmg": 25, "radius": 200, "stamina": 0 },
+					{ "name": "Howl", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 0 },
+					{ "name": "BiteBelow", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 5 },
+					{ "name": "Bite Above", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 5 },
+					{ "name": "ClawBelow", "interval": 0.22, "dmg": 33, "radius": 200, "stamina": 0 },
+					{ "name": "ClawAbove", "interval": 0.22, "dmg": 33, "radius": 200, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.08, "dmg": 25, "radius": 200, "stamina": 5 },
+					{ "name": "Bite Jump", "interval": 3, "dmg": 25, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 6
+			}
+		},
+		{
 			"name": "S-Magmasaur",
 			"bp": "/Game/Mods/SDinoVariants/Variants/Cherufe/S_Cherufe_Character_BP.S_Cherufe_Character_BP_C",
 			"dinoNameTag": "LavaLizard",
@@ -193,6 +318,67 @@
 					}
 				],
 				"baseXP": 120
+			}
+		},
+		{
+			"name": "S-Deinonychus",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Deinonychus/S-Deinonychus_Character_BP.S-Deinonychus_Character_BP_C",
+			"dinoNameTag": "Deinonychus",
+			"customTag": "Deinonychus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 1296 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1440 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 30, "radius": 350, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 30, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 30, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1222,
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
 			}
 		},
 		{
@@ -736,6 +922,69 @@
 			}
 		},
 		{
+			"name": "S-Thylacoleo",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Thylacoleo/S-Thylacoleo_Character_BP.S-Thylacoleo_Character_BP_C",
+			"dinoNameTag": "Thylacoleo",
+			"customTag": "Thylacoleo",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 180,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 51 },
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 184, "sprint": 1150 },
+				"swim": { "base": 480 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 1150 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Claw", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "Release", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 30, "radius": 0, "stamina": 0 },
+					{ "name": "Maul", "interval": 0, "dmg": 40, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_Thylaco.DinoDropInventoryComponent_Carnivore_Medium_Thylaco"
+					}
+				],
+				"baseXP": 5
+			}
+		},
+		{
 			"name": "S-Triceratops",
 			"bp": "/Game/Mods/SDinoVariants/Variants/Trike/S_Trike_Character_BP.S_Trike_Character_BP_C",
 			"dinoNameTag": "Trike",
@@ -839,6 +1088,69 @@
 				]
 			},
 			"death": { "baseXP": 1 }
+		},
+		{
+			"name": "S-Velonasaur",
+			"bp": "/Game/Mods/SDinoVariants/Variants/Velonasaur/S-Spindles_Character_BP.S-Spindles_Character_BP_C",
+			"dinoNameTag": "Velonasaur",
+			"customTag": "Velonasaur",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 225,
+			"dragWeight": 200,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 505, "crouch": 300, "sprint": 909 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 277.8, "crouch": 165, "sprint": 799.9 },
+				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 400,
+				"attacks": [
+					{ "name": "Melee", "interval": 0, "dmg": 32, "radius": 350, "stamina": 0 },
+					{ "name": "MinigunDirected", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5 },
+					{ "name": "MinigunAOE", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5 },
+					{ "name": "MinigunModeAIActicate", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "MinigunModeAIDeactivate", "interval": 3, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin180Right", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spin180Left", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.01,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small_Dilo.DinoDropInventoryComponent_Carnivore_Small_Dilo"
+					}
+				],
+				"baseXP": 1
+			}
 		}
 	]
 }
