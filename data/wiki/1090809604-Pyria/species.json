@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.9.1690333702",
+	"version": "358.9.1690844934",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -3083,10 +3083,10 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_General.Squatch_Character_BP_General_C",
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Offhand",
-			"targetingTeamName": "",
+			"targetingTeamName": "Herbivores_Medium",
 			"mass": 100,
 			"dragWeight": 300,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
 			"leveling": {
 				"wildForcedLevel": 30,
 				"maxExperience": 0
@@ -3129,10 +3129,10 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_GreatMace.Squatch_Character_BP_GreatMace_C",
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Offhand",
-			"targetingTeamName": "",
+			"targetingTeamName": "Herbivores_Medium",
 			"mass": 100,
 			"dragWeight": 255,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
 			"leveling": {
 				"wildLevelTable": [
 					{ "chance": 0.5405405, "min": 1, "max": 5 },
@@ -3175,10 +3175,10 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_Huntsman.Squatch_Character_BP_Huntsman_C",
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Offhand",
-			"targetingTeamName": "",
+			"targetingTeamName": "Herbivores_Medium",
 			"mass": 100,
 			"dragWeight": 255,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
 			"leveling": {
 				"wildLevelTable": [
 					{ "chance": 0.5405405, "min": 1, "max": 5 },
@@ -3224,10 +3224,10 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_Savage.Squatch_Character_BP_Savage_C",
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Offhand",
-			"targetingTeamName": "",
+			"targetingTeamName": "Herbivores_Medium",
 			"mass": 100,
 			"dragWeight": 255,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
 			"leveling": {
 				"wildLevelTable": [
 					{ "chance": 0.5405405, "min": 1, "max": 5 },
@@ -3266,14 +3266,60 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Squatch Warrior (Spear)",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_Spear.Squatch_Character_BP_Spear_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Offhand",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 100,
+			"dragWeight": 255,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 38 }
+				]
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 500 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1650 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Swings", "interval": 5, "dmg": 45, "radius": 350, "stamina": 0 },
+					{ "name": "Stab", "interval": 0.4, "dmg": 55, "radius": 350, "stamina": 0 },
+					{ "name": "ParrySlap", "interval": 20, "dmg": 50, "radius": 400, "stamina": 0 },
+					{ "name": "Empty", "interval": 15, "dmg": 55, "radius": 400, "stamina": 100 },
+					{ "name": "MonkeJump", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Squatch Warrior",
 			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Squatch_Character_BP_Warrior.Squatch_Character_BP_Warrior_C",
 			"dinoNameTag": "Bigfoot",
 			"customTag": "Offhand",
-			"targetingTeamName": "",
+			"targetingTeamName": "Herbivores_Medium",
 			"mass": 100,
 			"dragWeight": 255,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
 			"leveling": {
 				"wildLevelTable": [
 					{ "chance": 0.5405405, "min": 1, "max": 5 },
@@ -8421,10 +8467,11 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.5, "dmg": 32, "radius": 260, "stamina": 0 },
-					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 32, "radius": 350, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 250, "stamina": 0 },
+					{ "name": "Laser", "interval": 10, "dmg": 0, "radius": 200, "stamina": 150 },
 					{
-						"name": "FuckoffShotgun", "interval": 10, "dmg": 0, "radius": 200, "stamina": 120,
+						"name": "Shot", "interval": 10, "dmg": 0, "radius": 200, "stamina": 225,
 						"isProjectile": true
 					}
 				]
@@ -8490,10 +8537,7 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.5, "dmg": 42, "radius": 350, "stamina": 0 },
 					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
-					{
-						"name": "FuckoffShotgun", "interval": 4, "dmg": 0, "radius": 200, "stamina": 120,
-						"isProjectile": true
-					}
+					{ "name": "FuckoffShotgun", "interval": 4, "dmg": 0, "radius": 200, "stamina": 180 }
 				]
 			},
 			"death": {
@@ -8510,8 +8554,8 @@
 		{
 			"name": "Dark Mana Seeker",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/AuraSeeker/DarkSeeker_Character_BP_Tamed.DarkSeeker_Character_BP_Tamed_C",
-			"dinoNameTag": "Wyvern",
-			"customTag": "Wyvern",
+			"dinoNameTag": "Seeker",
+			"customTag": "MTPyria",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 165,
 			"dragWeight": 85,
@@ -8558,8 +8602,9 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.5, "dmg": 32, "radius": 350, "stamina": 0 },
 					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 200, "stamina": 0 },
+					{ "name": "Laser", "interval": 10, "dmg": 0, "radius": 200, "stamina": 150 },
 					{
-						"name": "FuckoffShotgun", "interval": 10, "dmg": 0, "radius": 200, "stamina": 120,
+						"name": "Shot", "interval": 10, "dmg": 0, "radius": 200, "stamina": 225,
 						"isProjectile": true
 					}
 				]
