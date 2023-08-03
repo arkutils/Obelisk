@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "355.3.1597323120",
+	"version": "358.10.1690909595",
 	"format": "4",
 	"mod": {
 		"id": "1405944717",
@@ -10052,47 +10052,43 @@
 			}
 		},
 		{
-			"name": "GachaClaus",
-			"bp": "/Game/Mods/Project_Evolution/Extinction/Dinos/Gacha/Gacha_Claus_Character_BP.Gacha_Claus_Character_BP_C",
-			"dinoNameTag": "Gacha",
-			"customTag": "Gacha",
+			"name": "Bunny Dodo",
+			"bp": "/Game/Mods/Project_Evolution/PrimalEarth/Dinos/Dodo/Dodo_Character_BP_Bunny.Dodo_Character_BP_Bunny_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "Dodo",
 			"targetingTeamName": "Herbivores",
-			"mass": 400,
-			"dragWeight": 350,
-			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid" ],
-			"leveling": { "mutagenCost": 62 },
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "canMountOnHumans" ],
+			"leveling": { "mutagenCost": 2 },
 			"cloning": {
-				"costBase": 1550,
-				"costLevel": 55,
-				"timeBase": 10850,
-				"timeLevel": 385
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
 			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 750 },
-				"swim": { "base": 200 }
+				"walk": { "base": 65, "sprint": 136.5 },
+				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 750 },
-				"swim": { "base": 200 }
+				"walk": { "base": 45.5, "sprint": 95.5 },
+				"swim": { "base": 210 }
 			},
 			"staminaRates": {
-				"sprint": -10,
+				"sprint": -4,
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 0,
-				"defaultSwingRadius": 150,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.67, "dmg": 32, "radius": 200, "stamina": 0 },
-					{ "name": "MeleeSmash", "interval": 0.7, "dmg": 30, "radius": 150, "stamina": 0 },
-					{ "name": "Gather", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
 			},
-			"death": { "baseXP": 2 }
+			"death": { "baseXP": 0.5 }
 		},
 		{
 			"name": "Tek Mosasaurus",
@@ -10157,6 +10153,54 @@
 					}
 				],
 				"baseXP": 15
+			}
+		},
+		{
+			"name": "Bunny Oviraptor",
+			"bp": "/Game/Mods/Project_Evolution/PrimalEarth/Dinos/Oviraptor/BunnyOviraptor_Character_BP.BunnyOviraptor_Character_BP_C",
+			"dinoNameTag": "Ovi",
+			"customTag": "Ovi",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 90,
+			"dragWeight": 40,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isCarnivore" ],
+			"leveling": { "mutagenCost": 60 },
+			"cloning": {
+				"costBase": 1500,
+				"costLevel": 55,
+				"timeBase": 10500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 320, "sprint": 902.4 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 208, "sprint": 674.5 },
+				"swim": { "base": 195 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 115,
+				"attacks": [ { "name": "None", "interval": 0.1, "dmg": 12, "radius": 115, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.01,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small_Dilo.DinoDropInventoryComponent_Carnivore_Small_Dilo"
+					}
+				],
+				"baseXP": 2
 			}
 		}
 	]
