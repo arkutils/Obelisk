@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.10.1691523601",
+	"version": "358.10.1691898323",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -10314,6 +10314,79 @@
 				]
 			},
 			"death": { "baseXP": 1000 }
+		},
+		{
+			"name": "Prime Manticore X",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/Manticore_Character_BP_X.Manticore_Character_BP_X_C",
+			"dinoNameTag": "Manticore",
+			"customTag": "Manticore",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 1000,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 150, "max": 250 } ],
+				"mutagenCost": 4555
+			},
+			"cloning": {
+				"costBase": 115000,
+				"costLevel": 440,
+				"timeBase": 805000,
+				"timeLevel": 3080
+			},
+			"falling": {
+				"dmgMult": 1,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 1237.5 },
+				"fly": { "base": 1500, "sprint": 2475 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 750, "sprint": 1125 },
+				"fly": { "base": 1500, "sprint": 2250 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.475
+			},
+			"attack": {
+				"defaultDmg": 150,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "ClawAndFangs", "interval": 0.5, "dmg": 450, "radius": 900, "stamina": 5 },
+					{ "name": "PoisonBreath", "interval": 4, "dmg": 25, "radius": 900, "stamina": 200 },
+					{ "name": "Golems", "interval": 8, "dmg": 175, "radius": 900, "stamina": 800 },
+					{
+						"name": "PoisonAttackAir", "interval": 9, "dmg": 0, "radius": 0, "stamina": 1250,
+						"isProjectile": true
+					},
+					{ "name": "Ancient Summon", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/DinoOverHaulMODX/AlphaDINOS/AlphaDinoDrop/DinoDropInventoryComponent_Manticore_ALPHA.DinoDropInventoryComponent_Manticore_ALPHA"
+					}
+				],
+				"baseXP": 200
+			}
 		},
 		{
 			"name": "Apex Mantis Prime",

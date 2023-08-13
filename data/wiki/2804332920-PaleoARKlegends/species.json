@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.8.1688737642",
+	"version": "358.10.1691887336",
 	"format": "4",
 	"mod": {
 		"id": "2804332920",
@@ -710,6 +710,73 @@
 					}
 				],
 				"baseXP": 1
+			}
+		},
+		{
+			"name": "(EVO) Giganotosaurus",
+			"bp": "/Game/Mods/PaleoARKlegends/PaleoVariants/PaleoGiga/PA_Giga_Character_BP.PA_Giga_Character_BP_C",
+			"dinoNameTag": "PaleoGiga",
+			"customTag": "PaleoGiga",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 10, "max": 30 },
+					{ "chance": 0.2702703, "min": 10, "max": 25 },
+					{ "chance": 0.1351351, "min": 20, "max": 25 },
+					{ "chance": 0.05405405, "min": 30, "max": 30 }
+				],
+				"mutagenCost": 99
+			},
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 60,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 805, "sprint": 1690.5 }
+			},
+			"movementD": {
+				"walk": { "base": 805, "sprint": 1690.5 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 300,
+				"defaultSwingRadius": 600,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 1000, "radius": 550, "stamina": 7.5 },
+					{ "name": "Roar", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (WILD)", "interval": 0.5, "dmg": 1000, "radius": 600, "stamina": 10 },
+					{ "name": "Rage Stomp", "interval": 0.1, "dmg": 600, "radius": 750, "stamina": 250 },
+					{ "name": "Tailswipe LEFT", "interval": 5, "dmg": 500, "radius": 600, "stamina": 150 },
+					{ "name": "Tailswipe RIGHT", "interval": 5, "dmg": 500, "radius": 600, "stamina": 150 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Gigant.DinoDropInventoryComponent_Carnivore_Huge_Gigant"
+					}
+				],
+				"baseXP": 750
 			}
 		},
 		{
