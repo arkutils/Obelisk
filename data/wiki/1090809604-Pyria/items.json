@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "358.10.1690917070",
+	"version": "358.10.1691994642",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -943,7 +943,7 @@
 			"description": "A Pyrian tranq arrow further improved with Cnidaria Toxin. Equivalent to a shocking tranq dart.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PyriaTranqs/HiArrow/PrimalItemAmmo_ArrowPyriaImprovedTranq.PrimalItemAmmo_ArrowPyriaImprovedTranq_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/TranqArrow_Icon.TranqArrow_Icon",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BetterPyriaTranqArrow.BetterPyriaTranqArrow",
 			"type": "Ammo",
 			"folders": [ "Weapons", "Ammo" ],
 			"weight": 0.05,
@@ -956,7 +956,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_ArrowPyriaTranq_C" },
-					{ "qty": 15, "type": "PrimalItemConsumable_JellyVenom_C" }
+					{ "qty": 5, "type": "PrimalItemConsumable_JellyVenom_C" }
 				]
 			}
 		},
@@ -965,7 +965,7 @@
 			"description": "Embued with Dreamcap Mushrooms, this arrow is the equivalent of a Tranq Dart.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PyriaTranqs/NormArrow/PrimalItemAmmo_ArrowPyriaTranq.PrimalItemAmmo_ArrowPyriaTranq_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
-			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/TranqArrow_Icon.TranqArrow_Icon",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/PyriaTranqArrow.PyriaTranqArrow",
 			"type": "Ammo",
 			"folders": [ "Weapons", "Ammo" ],
 			"weight": 0.05,
@@ -978,7 +978,7 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_ArrowTranq_C" },
-					{ "qty": 15, "type": "PrimalItemConsumable_SomnoticMushroom_C" }
+					{ "qty": 5, "type": "PrimalItemConsumable_SomnoticMushroom_C" }
 				]
 			}
 		},
@@ -1257,7 +1257,7 @@
 			"name": "Mega Dash Potion",
 			"description": "Grants the consumer 100 stamina per second for 900 seconds. Defeat an Archdemon to unlock it.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_90sPotion.PrimalItemConsumable_90sPotion_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/MegaDashPotion.MegaDashPotion",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
@@ -1271,11 +1271,12 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 1000, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 2000, "type": "PrimalItemResource_AirElement_C" },
-					{ "qty": 1000, "type": "PrimalItemConsumable_Berry_Stimberry_C" },
-					{ "qty": 500, "type": "PrimalItemResource_BlackPearlDust_C" }
+					{ "qty": 500, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 500, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 1000, "type": "PrimalItem_TempestBulb_C" },
+					{ "qty": 500, "type": "PrimalItemConsumable_Managrass_C" },
+					{ "qty": 500, "type": "PrimalItemConsumable_Stimulant_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" }
 				]
 			}
 		},
@@ -1283,6 +1284,261 @@
 			"name": "Coldblock Potion",
 			"description": "A potion that blocks out all external cold for 15 minutes. Cannot be used with Heatblock potion: will completely cancel effects.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_ColdBlock.PrimalItemConsumable_ColdBlock_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewHeatblock.NewHeatblock",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemConsumable_RimeOrchid_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_WaterbellLilly_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Managrass_C" }
+				]
+			}
+		},
+		{
+			"name": "Self-Blizzard Potion",
+			"description": "A potion that blocks out all external cold for 15 minutes. Cannot be used with Heatblock potion: will completely cancel effects. This potion will even prevent against freezing. Defeat a Diorex to unlock this.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_ColdBlockUltra.PrimalItemConsumable_ColdBlockUltra_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewSelfBlizzard.NewSelfBlizzard",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1000, "type": "PrimalItemConsumable_RimeOrchid_C" },
+					{ "qty": 500, "type": "PrimalItemConsumable_WaterbellLilly_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_Managrass_C" }
+				]
+			}
+		},
+		{
+			"name": "Light's Blessing",
+			"description": "An elixir embewed with holy energy. Cures most forms of Dark-based Ailments (DarkBlight, Blood Curse, Fell Curse), and protects against them for a minute afterward.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_DivineCure.PrimalItemConsumable_DivineCure_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DivineAuraPotion.DivineAuraPotion",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 25, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 25, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_LuminousGourd_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_TwilightFern_C" }
+				]
+			}
+		},
+		{
+			"name": "Grand Elixir",
+			"description": "Heals 250 HP per second for 30 seconds.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GrandElixir.PrimalItemConsumable_GrandElixir_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewGrandElixir.NewGrandElixir",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 5, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 25, "type": "PrimalItemConsumable_VitaFruit_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_Managrass_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_BulbsaiOrchid_C" }
+				]
+			},
+			"statEffects": [ { "stat": "health", "value": 500, "useItemQuality": true, "duration": 20 } ]
+		},
+		{
+			"name": "Great Elixir",
+			"description": "Heals 80 HP pers second for 10 seconds.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GreatElixir.PrimalItemConsumable_GreatElixir_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewGreatElix.NewGreatElix",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 10, "type": "PrimalItemConsumable_VitaFruit_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_Managrass_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" }
+				]
+			}
+		},
+		{
+			"name": "Heatblock Potion",
+			"description": "A potion that blocks out all external heat for 15 minutes. Cannot be used with Coldblock potion: will completely cancel effects.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_HeatBlock.PrimalItemConsumable_HeatBlock_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewColdBlock.NewColdBlock",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 100, "type": "PrimalItemConsumable_FireLotus_C" },
+					{ "qty": 25, "type": "PrimalItemConsumable_Managrass_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" }
+				]
+			}
+		},
+		{
+			"name": "Self-Inferno Potion",
+			"description": "A rare, extremely upgraded version of the Heatblock potion. Though its effect does not last as long, it prevents the user from being set aflame in almost any way! DISCLAIMER: will not prevent against lava, and wont work with Heat or Coldblock potions. Defeat a Diorex to unlock this engram. ",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_HeatBlockUltra.PrimalItemConsumable_HeatBlockUltra_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewSelfInferno.NewSelfInferno",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1000, "type": "PrimalItemConsumable_FireLotus_C" },
+					{ "qty": 500, "type": "PrimalItemConsumable_Managrass_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" }
+				]
+			}
+		},
+		{
+			"name": "Light Elixir",
+			"description": "Heals 200 health in 10 seconds. A good item to use for players with lower health caps.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_LightElixir.PrimalItemConsumable_LightElixir_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewLightElix.NewLightElix",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemConsumable_VitaFruit_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Managrass_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" }
+				]
+			}
+		},
+		{
+			"name": "High Elixir",
+			"description": "Heals 25% of health over 60 seconds. A must-have for prolonged combat. Defeat an Ogre, or any sort of Pyrian \"alpha\" creature to unlock this.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_MaxElixir.PrimalItemConsumable_MaxElixir_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewHighElixir.NewHighElixir",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 15, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 15, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_VitaFruit_C" },
+					{ "qty": 80, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" },
+					{ "qty": 25, "type": "PrimalItemConsumable_Managrass_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_BulbsaiOrchid_C" }
+				]
+			}
+		},
+		{
+			"name": "Oxylast Potion",
+			"description": "Consuming this potion drastically increases one's oxygen. It also increases your base swimming speed. This effect lasts roughly 30 minutes. Perfect prepping for underwater dives on primitive servers.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_OxyLast.PrimalItemConsumable_OxyLast_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/OxylastPotion.OxylastPotion",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Apothecary" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 2,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 15, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 15, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 150, "type": "PrimalItemConsumable_WaterbellLilly_C" },
+					{ "qty": 100, "type": "PrimalItemConsumable_Mushroom_Aquatic_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" }
+				]
+			},
+			"statEffects": [ { "stat": "health", "value": 500, "useItemQuality": true, "duration": 20 } ]
+		},
+		{
+			"name": "Potion Base",
+			"description": "This potion is base as fuck",
+			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewHeatblock.NewHeatblock",
 			"type": "MiscConsumable/Food",
@@ -1304,293 +1560,10 @@
 			}
 		},
 		{
-			"name": "Self-Blizzard Potion",
-			"description": "A potion that blocks out all external cold for 15 minutes. Cannot be used with Heatblock potion: will completely cancel effects. This potion will even prevent against freezing. Defeat a Diorex to unlock this.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_ColdBlockUltra.PrimalItemConsumable_ColdBlockUltra_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewSelfBlizzard.NewSelfBlizzard",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 725, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 1000, "type": "PrimalItemResource_WaterElement_C" },
-					{ "qty": 75, "type": "PrimalItemResource_BlackPearlDust_C" }
-				]
-			}
-		},
-		{
-			"name": "Divine Aura Potion",
-			"description": "An extremely rare potion. Ingesting it casts the \"Divine Aura\" Spell: making your aura similar to theirs temporarily. It can help in granting immunity to environmental hazzards.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_DivineAura.PrimalItemConsumable_DivineAura_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DivineAuraPotion.DivineAuraPotion",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 200, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 200, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 420, "type": "PrimalItemResource_Silicon_C" },
-					{ "qty": 600, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 200, "type": "PrimalItemResource_BlackPearlDust_C" },
-					{ "qty": 600, "type": "PrimalItemResource_Mana_C" }
-				]
-			}
-		},
-		{
-			"name": "Light's Blessing",
-			"description": "An elixir embewed with holy energy. Cures most forms of Dark-based Ailments (DarkBlight, Blood Curse, Fell Curse), and protects against them for a minute afterward.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_DivineCure.PrimalItemConsumable_DivineCure_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/DivineAuraPotion.DivineAuraPotion",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 45, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 45, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 160, "type": "PrimalItemConsumable_Berry_Azulberry_C" },
-					{ "qty": 160, "type": "PrimalItemResource_ManaLight_C" }
-				]
-			}
-		},
-		{
-			"name": "Grand Elixir",
-			"description": "Heals 250 HP per second for 30 seconds.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GrandElixir.PrimalItemConsumable_GrandElixir_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewGrandElixir.NewGrandElixir",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 2,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 30, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 30, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 160, "type": "PrimalItemConsumable_Berry_Tintoberry_C" }
-				]
-			},
-			"statEffects": [ { "stat": "health", "value": 500, "useItemQuality": true, "duration": 20 } ]
-		},
-		{
-			"name": "Great Elixir",
-			"description": "Heals 80 HP pers second for 10 seconds.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_GreatElixir.PrimalItemConsumable_GreatElixir_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewGreatElix.NewGreatElix",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 2,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 15, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 15, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 80, "type": "PrimalItemConsumable_Berry_Tintoberry_C" }
-				]
-			}
-		},
-		{
-			"name": "Heatblock Potion",
-			"description": "A potion that blocks out all external heat for 15 minutes. Cannot be used with Coldblock potion: will completely cancel effects.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_HeatBlock.PrimalItemConsumable_HeatBlock_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewColdBlock.NewColdBlock",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 300, "type": "PrimalItemResource_Mana_C" },
-					{ "qty": 100, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 25, "type": "PrimalItemResource_BlackPearl_C" }
-				]
-			}
-		},
-		{
-			"name": "Self-Inferno Potion",
-			"description": "A rare, extremely upgraded version of the Heatblock potion. Though its effect does not last as long, it prevents the user from being set aflame in almost any way! DISCLAIMER: will not prevent against lava, and wont work with Heat or Coldblock potions. Defeat a Diorex to unlock this engram. ",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_HeatBlockUltra.PrimalItemConsumable_HeatBlockUltra_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewSelfInferno.NewSelfInferno",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 1000, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 75, "type": "PrimalItemResource_BlackPearlDust_C" },
-					{ "qty": 725, "type": "PrimalItemResource_Mana_C" }
-				]
-			}
-		},
-		{
-			"name": "Light Elixir",
-			"description": "Heals 200 health in 10 seconds. A good item to use for players with lower health caps.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_LightElixir.PrimalItemConsumable_LightElixir_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewLightElix.NewLightElix",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 5, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 5, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 40, "type": "PrimalItemConsumable_Berry_Tintoberry_C" }
-				]
-			}
-		},
-		{
-			"name": "High Elixir",
-			"description": "Heals 25% of health over 60 seconds. A must-have for prolonged combat. Defeat an Ogre, or any sort of Pyrian \"alpha\" creature to unlock this.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_MaxElixir.PrimalItemConsumable_MaxElixir_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NewHighElixir.NewHighElixir",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 2,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 40, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 40, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 80, "type": "PrimalItemConsumable_Berry_Tintoberry_C" },
-					{ "qty": 80, "type": "PrimalItemConsumable_Berry_Mejoberry_C" }
-				]
-			}
-		},
-		{
-			"name": "Num Num Steak",
-			"description": "A super-tasty cut of meat wrapped in meat with the right seasonings. The only meat an herbivore will WANT to eat. Can only be used on tames, but it'll restore a large amount of their hunger. Good for ravenous critters like Giganotosaurus or Daeodon, in the right situations!",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_NomSteak.PrimalItemConsumable_NomSteak_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NumNumSteak.NumNumSteak",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Frafted Foods" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 5, "type": "PrimalItemConsumable_CookedMeat_C" },
-					{ "qty": 50, "type": "PrimalItemConsumable_Berry_Tintoberry_C" },
-					{ "qty": 30, "type": "PrimalItemConsumable_Seed_Mejoberry_C" },
-					{ "qty": 15, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
-					{ "qty": 15, "type": "PrimalItemConsumable_Veggie_Savoroot_C" },
-					{ "qty": 5, "type": "PrimalItemConsumable_CookedPrimeMeat_C" },
-					{ "qty": 5, "type": "PrimalItemConsumable_CookedLambChop_C" }
-				]
-			},
-			"statEffects": [
-				{
-					"stat": "food", "value": 5000, "useItemQuality": true,
-					"forceUseOnDino": true,
-					"allowWhenFull": false,
-					"duration": 5
-				}
-			]
-		},
-		{
-			"name": "Oxylast Potion",
-			"description": "Consuming this potion drastically increases one's oxygen. It also increases your base swimming speed. This effect lasts roughly 30 minutes. Perfect prepping for underwater dives on primitive servers.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_OxyLast.PrimalItemConsumable_OxyLast_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/OxylastPotion.OxylastPotion",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Apothecary" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 2,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 15, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 10, "type": "PrimalItemResource_RareMushroom_C" },
-					{ "qty": 250, "type": "PrimalItemResource_WaterElement_C" }
-				]
-			},
-			"statEffects": [ { "stat": "health", "value": 500, "useItemQuality": true, "duration": 20 } ]
-		},
-		{
 			"name": "Serene Mind Potion",
 			"description": "This potion puts one into a focused, metatative state for a decent amount of time. In this state, survivors find their efficiency in doing skills increase, as well as heightened focus across survivors and creatures as well. Prevents even the angriest of creatures from raging.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_SereneMind.PrimalItemConsumable_SereneMind_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SereneMindPotion.SereneMindPotion",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
@@ -1604,35 +1577,12 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 250, "type": "PrimalItemResource_ManaLight_C" },
-					{ "qty": 450, "type": "PrimalItemResource_BlackPearlDust_C" },
-					{ "qty": 500, "type": "PrimalItemResource_WaterElement_C" },
-					{ "qty": 500, "type": "PrimalItemResource_Mana_C" }
-				]
-			}
-		},
-		{
-			"name": "Hidden Potion",
-			"description": "A potion that temporarily makes all skittish creatures oblivious to your presence unless you get right up to them. Might be useful for some passive tames...",
-			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_SkittishSneak.PrimalItemConsumable_SkittishSneak_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/HiddenPotion.HiddenPotion",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Drugs" ],
-			"weight": 0.1,
-			"stackSize": 100,
-			"spoilsIn": 120000,
-			"crafting": {
-				"xp": 1,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 125, "type": "PrimalItemResource_EarthElement_C" },
-					{ "qty": 125, "type": "PrimalItemResource_WaterElement_C" },
-					{ "qty": 25, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 25, "type": "PrimalItemResource_RareMushroom_C" }
+					{ "qty": 25, "type": "PrimalItemConsumable_Managrass_C" },
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" },
+					{ "qty": 100, "type": "PrimalItemConsumable_WaterbellLilly_C" },
+					{ "qty": 25, "type": "PrimalItemConsumable_Mushroom_Aquatic_C" },
+					{ "qty": 5, "type": "PrimalItem_TempestBulb_C" },
+					{ "qty": 25, "type": "PrimalItemConsumable_RimeOrchid_C" }
 				]
 			}
 		},
@@ -1640,7 +1590,7 @@
 			"name": "Taming Elixir",
 			"description": "Reduces the food of a KO'd creature a set amount. Helps assist taming.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_TamLixir.PrimalItemConsumable_TamLixir_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"parent": "/Game/Mods/Pyria/Alchemy/Apothecary/PrimalItemConsumable_PyriaBasePotion.PrimalItemConsumable_PyriaBasePotion_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/TamingElixir.TamingElixir",
 			"type": "MiscConsumable/Food",
 			"folders": [ "Apothecary" ],
@@ -1654,10 +1604,12 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 20, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 120, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
-					{ "qty": 30, "type": "PrimalItemResource_RareFlower_C" },
-					{ "qty": 30, "type": "PrimalItemResource_RareMushroom_C" }
+					{ "qty": 1, "type": "PrimalItemResource_GlassBottlePyria_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_SanguineLotus_C" },
+					{ "qty": 5, "type": "PrimalItemResource_RareFlower_C" },
+					{ "qty": 5, "type": "PrimalItemResource_RareMushroom_C" },
+					{ "qty": 15, "type": "PrimalItemConsumable_BulbsaiOrchid_C" },
+					{ "qty": 5, "type": "PrimalItemResource_CommonMushroom_C" }
 				]
 			},
 			"statEffects": [ { "stat": "food", "value": -4, "useItemQuality": true, "duration": 3 } ]
@@ -4171,6 +4123,42 @@
 			"stackSize": 1000
 		},
 		{
+			"name": "Num Num Steak",
+			"description": "A super-tasty cut of meat wrapped in meat with the right seasonings. The only meat an herbivore will WANT to eat. Can only be used on tames, but it'll restore a large amount of their hunger. Good for ravenous critters like Giganotosaurus or Daeodon, in the right situations!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Consumables/NumNum/PrimalItemConsumable_NomSteak.PrimalItemConsumable_NomSteak_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/NumNumSteak.NumNumSteak",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Frafted Foods" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 120000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemConsumable_CookedMeat_C" },
+					{ "qty": 50, "type": "PrimalItemConsumable_Berry_Tintoberry_C" },
+					{ "qty": 30, "type": "PrimalItemConsumable_Seed_Mejoberry_C" },
+					{ "qty": 15, "type": "PrimalItemConsumable_Veggie_Longrass_C" },
+					{ "qty": 15, "type": "PrimalItemConsumable_Veggie_Savoroot_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_CookedPrimeMeat_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_CookedLambChop_C" }
+				]
+			},
+			"statEffects": [
+				{
+					"stat": "food", "value": 5000, "useItemQuality": true,
+					"forceUseOnDino": true,
+					"allowWhenFull": false,
+					"duration": 5
+				}
+			]
+		},
+		{
 			"name": "Golem Booster",
 			"description": "A harnessed Shattered Colossus core. This should be able to supercharge any type of golem...",
 			"bp": "/Game/Mods/Pyria/Alchemy/Crafteds/Augments/PrimalItemConsumable_GolemBooster.PrimalItemConsumable_GolemBooster_C",
@@ -5780,9 +5768,399 @@
 			"stackSize": 1000
 		},
 		{
+			"name": "Aggeravic Mushroom Spores",
+			"description": "Spores that can grow Aggeravic Mushrooms!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/AggeravicMushroom/PrimalItemConsumable_Seed_AggeravicMushroom.PrimalItemConsumable_Seed_AggeravicMushroom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed7_Icon.Seed7_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Aquatic Mushroom Spores",
+			"description": "Spores that can grow Aquatic Mushrooms!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/AquaticMushroom/PrimalItemConsumable_Seed_AquaticMushroom.PrimalItemConsumable_Seed_AquaticMushroom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed7_Icon.Seed7_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Bulbsai Orchid",
+			"description": "Whimsically-named plant due to its strange appearance. A thick, protective bulb shields a bonsai-like, tree-like growth upon which fragrant flowers bloom.\n\nThe flowers are what is valued, as it has an innate connection with Nature element. Dryads and Alraune are fond of Orchids and Bonsai, so this plant is among the many common to their homes.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/BulbsaiOrchid/PrimalItemConsumable_BulbsaiOrchid.PrimalItemConsumable_BulbsaiOrchid_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BulbsaiOrchid_Icon.BulbsaiOrchid_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.01,
+			"stackSize": 1000,
+			"spoilsIn": 1800,
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
+			"name": "Bulbsai Orchid Seeds",
+			"description": "Seeds that can grow Bulbsai Orchids!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/BulbsaiOrchid/PrimalItemConsumable_Seed_BulbsaiOrchid.PrimalItemConsumable_Seed_BulbsaiOrchid_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed2_Icon.Seed2_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fire Lotus",
+			"description": "A bright, blazing flower with the inherent power of fire. While often harvested and drained of its fluids for apothecary, the bold will use it as an ingredient in cooking. It's comparible in spiciness to several of the hottest peppers on the earthling Scoville Scale.\n\nNom with caution, survivor.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/FireLilly/PrimalItemConsumable_FireLotus.PrimalItemConsumable_FireLotus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/FireLotus_Icon.FireLotus_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.01,
+			"stackSize": 1000,
+			"spoilsIn": 1800,
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
+			"name": "Fire Lotus Seeds",
+			"description": "Seeds that can grow Fire Lotuses!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/FireLilly/PrimalItemConsumable_Seed_FireLotus.PrimalItemConsumable_Seed_FireLotus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed4_Icon.Seed4_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Luminous Gourd",
+			"description": "This strange plant absorbs sunlight in the day, converting it to Light Mana that it then uses to cause the flesh of its fruit to illuminate at night, drawing insects to pollinate it.\n\nIt's got a bland taste, but is often used for said Light Mana in alchemy and apothecary.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/LuminousGourd/PrimalItemConsumable_LuminousGourd.PrimalItemConsumable_LuminousGourd_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/LuminousGourd_Icon.LuminousGourd_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.5,
+			"stackSize": 1000,
+			"spoilsIn": 1800,
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
+			"name": "Luminous Gourd Seeds",
+			"description": "Seeds that can grow Luminous Gourds!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/LuminousGourd/PrimalItemConsumable_Seed_LuminousGourd.PrimalItemConsumable_Seed_LuminousGourd_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed5_Icon.Seed5_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Managrass",
+			"description": "Grass that passively, innocently absorbs ambient mana from the environment, making it succulent. It's edible as-is, though Pyrians also use it in elixirs and foods. \n\nSo don't feel weirded out if you suddenly see some of your recruits munching grass. It's effectively potato chips to them.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/ManaGrass/PrimalItemConsumable_Managrass.PrimalItemConsumable_Managrass_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/ManaGrass_ICon.ManaGrass_ICon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.01,
+			"stackSize": 1000,
+			"spoilsIn": 1800,
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
+			"name": "Managrass Seeds",
+			"description": "Seeds that can grow Managrass!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/ManaGrass/PrimalItemConsumable_Seed_Managrass.PrimalItemConsumable_Seed_Managrass_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed9_Icon.Seed9_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Mushroom Tree Spores",
+			"description": "Spores that can grow a Mushroom Tree!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/MushroomTree/PrimalItemConsumable_Seed_PyrMushroomTree.PrimalItemConsumable_Seed_PyrMushroomTree_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed7_Icon.Seed7_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Rime Orchid",
+			"description": "Flowers commonly found in tundra environments, with latent Ice elemental properties.\n\nPyrians often munch these as a form of breath mint. Though munching too much without an Ice elemental resistance of some kind can lead to brain freeze.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/RimeOrchid/PrimalItemConsumable_RimeOrchid.PrimalItemConsumable_RimeOrchid_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/RimeOrchid_Item.RimeOrchid_Item",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.01,
+			"stackSize": 1000,
+			"spoilsIn": 1800,
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
+			"name": "Rime Orchid Seeds",
+			"description": "Seeds that can grow Rime Orchids!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/RimeOrchid/PrimalItemConsumable_Seed_RimeOrchid.PrimalItemConsumable_Seed_RimeOrchid_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed6_Icon.Seed6_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Sanguine Lotus",
+			"description": "This flower has sharp petals whose tips contain an anticoagulant. Unknowing herbivores who eat this will find their mouth, throat, and stomach soon sliced to ribbons.\n\nValued in Pyrian medicines, though, as a blood thinner.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/SanguineLotus/PrimalItemConsumable_SanguineLotus.PrimalItemConsumable_SanguineLotus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/SanguineLotus_Icon.SanguineLotus_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.01,
+			"stackSize": 1000,
+			"spoilsIn": 1800,
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
+			"name": "Sanguine Lotus Seeds",
+			"description": "Seeds that can grow Sanguine Lotuses!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/SanguineLotus/PrimalItemConsumable_Seed_SanguineLotus.PrimalItemConsumable_Seed_SanguineLotus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed3_Icon.Seed3_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Dreamcap Mushroom Spores",
 			"description": "Spores that can grow Dreamcap Mushrooms!",
-			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/SomnoticShroom/PrimalItemConsumable_Seed_SomnoticSpores.PrimalItemConsumable_Seed_SomnoticSpores_C",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/SomnoticShroom/PrimalItemConsumable_Seed_SomnoticMushroom.PrimalItemConsumable_Seed_SomnoticMushroom_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Resource/Crops/SomnoticShroom/PyriaSporesIcon.PyriaSporesIcon",
 			"type": "MiscConsumable/Food",
@@ -5835,6 +6213,205 @@
 			}
 		},
 		{
+			"name": "Tempest Bulb Seeds",
+			"description": "Seeds that can grow Tempest Bulbs!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/TempestBulb/PrimalItemConsumable_Seed_TempestBulb.PrimalItemConsumable_Seed_TempestBulb_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed8_Icon.Seed8_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Tempest Bulb",
+			"description": "This plant produces a bulbous sac for its fruit that contains a sparkling, clear bluish liquid, seemingly in constant motion by a current. If bitten into, it releases a large puff of air with the force of a water balloon, most of the liquid evaporating on contact with air.\n\nIt can be carefully pricked and the fluid drained to avoid this. This liquid is often used in alchemy rather than cooking, and the fresh scent of the liquid is also used within a form of air freshener used by Pyrians.\n\nThey're also just prone to yeet these things at each other like water balloons as well.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/TempestBulb/PrimalItem_TempestBulb.PrimalItem_TempestBulb_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmolessConsumeSelf_Spoils.PrimalItemWeaponGenericAmmolessConsumeSelf_Spoils_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/TempestBulb_Icon.TempestBulb_Icon",
+			"type": "Weapon",
+			"weight": 0.05,
+			"stackSize": 1000,
+			"spoilsIn": 1800,
+			"weapon": "/Game/Mods/Pyria/Alchemy/Resource/Crops/TempestBulb/WeapTempestBulb.WeapTempestBulb_C"
+		},
+		{
+			"name": "Twilight Fern Seeds",
+			"description": "Seeds that can grow Twilight Ferns!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/TwilightFern/PrimalItemConsumable_Seed_TwilightFern.PrimalItemConsumable_Seed_TwilightFern_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed1_Icon.Seed1_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Twilight Fern",
+			"description": "Normally, it is impossible to grow plants with Light or Dark affinities in environments where the opposite is high in the ambient environment.\n\nYet this strange plant- which has only been seen now, here on the arks- seems to flourish in either, and is the only known natural instance in Pyria where Light and Dark mana seem to be co-existing peacefully, without spiraling into Chaos element. As such, it is of high value to both apothecary and alchemy, as well as general scholarly research.\n\nIt's said this plant grows in the wake of a powerful Nephilim known as the \"Twilight Angel\".",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/TwilightFern/PrimalItemConsumable_TwilightFern.PrimalItemConsumable_TwilightFern_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/TwilightFern_Icon.TwilightFern_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.01,
+			"stackSize": 1000,
+			"spoilsIn": 1800,
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
+			"name": "Vitafruit Tree Seeds",
+			"description": "Seeds that can grow a Vitafruit Tree!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/VitaFruit/PrimalItemConsumable_Seed_VitaFruitTree.PrimalItemConsumable_Seed_VitaFruitTree_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Seed4_Icon.Seed4_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Vitafruit",
+			"description": "A bright red, citrus-like fruit with a very sweet taste and full of proteins that help promote recovery. Can be eaten raw, but are often prepared in elixirs and stews.\n\nIf you put these in the inventory of an herbivore or omnivore (sentients, robots and elementals not supported), they will auto-eat these and gain a healing buff every 15 seconds.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/VitaFruit/PrimalItemConsumable_VitaFruit.PrimalItemConsumable_VitaFruit_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Veggie_Base.PrimalItemConsumable_Veggie_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/VitaFruit_Icon.VitaFruit_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crops" ],
+			"weight": 0.1,
+			"stackSize": 1000,
+			"spoilsIn": 300,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "water", "value": 10, "useItemQuality": true, "duration": 5 },
+				{
+					"stat": "health",
+					"value": 30,
+					"forceUseOnDino": true,
+					"duration": 10
+				}
+			],
+			"cooking": {
+				"health": 0.055,
+				"stamina": 0.01,
+				"food": 0.06,
+				"weight": 0.02,
+				"water": 0.5
+			}
+		},
+		{
+			"name": "Waterbell Lilly Seeds",
+			"description": "Seeds that can grow Waterbell Lillies!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/WaterBellLilly/PrimalItemConsumable_Seed_WaterbellLilly.PrimalItemConsumable_Seed_WaterbellLilly_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Seeds/PrimalItemConsumable_Seed_BaseVeggie.PrimalItemConsumable_Seed_BaseVeggie_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Icons/AmarberrySeed_Icon.AmarberrySeed_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Farming", "Seeds" ],
+			"weight": 0.04,
+			"stackSize": 100,
+			"spoilsIn": 0,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 2, "type": "PrimalItemConsumable_Seed_BaseBerry_C" } ]
+			},
+			"statEffects": [ { "stat": "food", "value": 0.8, "useItemQuality": true, "duration": 1 } ],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.01,
+				"weight": 0.01,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Waterbell Lilly",
+			"description": "A calm, serene flower with latent Water elemental properties. Often used in alchemies, Pyrians often nibble the succulent petals of these as a form of relaxant.",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Crops/WaterBellLilly/PrimalItemConsumable_WaterbellLilly.PrimalItemConsumable_WaterbellLilly_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Berry_Base.PrimalItemConsumable_Berry_Base_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Waterbell_Icon.Waterbell_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Berries" ],
+			"weight": 0.01,
+			"stackSize": 1000,
+			"spoilsIn": 1800,
+			"statEffects": [
+				{ "stat": "food", "value": 1.5, "useItemQuality": true, "duration": 3 },
+				{ "stat": "water", "value": 0.2, "useItemQuality": true, "duration": 3 }
+			],
+			"cooking": {
+				"health": 0.01,
+				"stamina": 0.01,
+				"food": 0.0525,
+				"weight": 0.01,
+				"water": 0.035
+			}
+		},
+		{
 			"name": "Dragonleather",
 			"description": "A thick piece of of dragon's hide. While an ARK Survivor will simply use this in substitute for normal leather, a Pyrian knows its true usage.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Resource/Dragonleather/PrimalItemResource_Hide_Dragonleather.PrimalItemResource_Hide_Dragonleather_C",
@@ -5843,6 +6420,29 @@
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 1000
+		},
+		{
+			"name": "Fertile Mud",
+			"description": "Mud mixed together with bonemeal and charcoal to further mix and strengthen its nutrients!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/FertileMud/PrimalItemConsumable_Fertilizer_FertileMud.PrimalItemConsumable_Fertilizer_FertileMud_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Fertilizer_Compost.PrimalItemConsumable_Fertilizer_Compost_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/Icon_Fertilizer_Small.Icon_Fertilizer_Small",
+			"type": "MiscConsumable/Other",
+			"folders": [ "Consumables", "Feces" ],
+			"weight": 0.1,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 0,
+				"time": 1800,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 50, "type": "PrimalItemResource_Clay_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ChitinOrKeratin_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Charcoal_C" }
+				]
+			}
 		},
 		{
 			"name": "Polished Aquamarine",
@@ -6104,6 +6704,24 @@
 			"type": "Resource",
 			"weight": 0.01,
 			"stackSize": 1000
+		},
+		{
+			"name": "Glass Bottle",
+			"description": "Useful for containing and crafting potions",
+			"bp": "/Game/Mods/Pyria/Alchemy/Resource/GlassBottle/PrimalItemResource_GlassBottlePyria.PrimalItemResource_GlassBottlePyria_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Icons/GlassJar_Icon.GlassJar_Icon",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 1000,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 5, "type": "PrimalItemResource_Crystal_C" } ]
+			}
 		},
 		{
 			"name": "Loamy Soil",
@@ -7903,6 +8521,40 @@
 				]
 			},
 			"weapon": "/Game/Mods/Pyria/Alchemy/Weapon/Hidden/WeapRulersBladeTroop.WeapRulersBladeTroop_C"
+		},
+		{
+			"name": "Keratin Sickle",
+			"description": "A curved tool ideal for harvesting fiber from seed plants. Also useful for delicately shearing off slices of Prime Fish!",
+			"bp": "/Game/Mods/Pyria/Alchemy/Weapon/KeratinSickle/PrimalItem_WeaponKeratinSickle_Pyria.PrimalItem_WeaponKeratinSickle_Pyria_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSickle.PrimalItem_WeaponSickle_C",
+			"icon": "/Game/Mods/Pyria/Alchemy/Weapon/KeratinSickle/Tex/HUD_KeratinSickle_SamKO_Colorize_MIC.HUD_KeratinSickle_SamKO_Colorize_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Melee" ],
+			"weight": 2,
+			"stackSize": 1,
+			"durability": 100,
+			"crafting": {
+				"xp": 0.7,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 2, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 2, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"repair": {
+				"xp": 0.7,
+				"time": 5,
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 10, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"weapon": "/Game/Mods/Pyria/Alchemy/Weapon/KeratinSickle/WeapKeratinSickle_Pyria.WeapKeratinSickle_Pyria_C"
 		},
 		{
 			"name": "Magicrystal Pike",

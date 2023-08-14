@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.9.1690605508",
+	"version": "358.10.1691991018",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -49039,6 +49039,86 @@
 			"death": { "baseXP": 4 }
 		},
 		{
+			"name": "Robot Wyvern",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/JJStreet/ABionicWyvern_Character_BP.ABionicWyvern_Character_BP_C",
+			"dinoNameTag": "Wyvern_Robot_JJ",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 555,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"allowRidingInWater",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000, "sprint": 3465 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000, "sprint": 3465 }
+			},
+			"movementR": {
+				"walk": { "base": 572.7, "sprint": 1157.5 },
+				"fly": { "base": 2490, "sprint": 3355.3 },
+				"swim": { "base": 2490, "sprint": 5032.9 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 32000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 62000, "radius": 495, "stamina": 10 },
+					{ "name": "Rainbow Meteor", "interval": 5, "dmg": 0, "radius": 0, "stamina": 160 },
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 160 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 62000, "radius": 2000, "stamina": 2 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AE/Dinos/Robot/DinoDropInventoryComponent_Robot.DinoDropInventoryComponent_Robot"
+					}
+				],
+				"baseXP": 120
+			}
+		},
+		{
 			"name": "BlackieDon",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Kangaroo/MegaJump_Blackiedon_Character_BP.MegaJump_Blackiedon_Character_BP_C",
 			"dinoNameTag": "BlackieDon",
@@ -51265,9 +51345,9 @@
 			}
 		},
 		{
-			"name": "Redstaffs Runner",
+			"name": "Pavilon, Awa'hili",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/Pav/PavQuetz_Character_BP_AE.PavQuetz_Character_BP_AE_C",
-			"dinoNameTag": "AE_Robot_Quetz",
+			"dinoNameTag": "AE_Pavs_Quetz",
 			"customTag": "Quetz",
 			"targetingTeamName": "Herbivores",
 			"mass": 190,
@@ -53040,11 +53120,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 130, "sprint": 273 },
+				"walk": { "base": 600, "sprint": 1260 },
 				"swim": { "base": 600 }
 			},
 			"movementD": {
-				"walk": { "base": 130, "sprint": 273 },
+				"walk": { "base": 600, "sprint": 1260 },
 				"swim": { "base": 600 }
 			},
 			"staminaRates": {
@@ -53055,24 +53135,32 @@
 				"defaultDmg": 75000,
 				"defaultSwingRadius": 105,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.25, "dmg": 75000, "radius": 105, "stamina": 0 },
-					{ "name": "Meteor", "interval": 30, "dmg": 75000, "radius": 160, "stamina": 500 }
+					{ "name": "Melee", "interval": 0.25, "dmg": 750000, "radius": 525, "stamina": 0 },
+					{ "name": "Meteor", "interval": 30, "dmg": 750000, "radius": 590, "stamina": 500 }
 				]
 			},
 			"death": {
 				"lootBagChance": 1,
 				"lootBags": [
 					{
-						"chance": 0.333333333,
+						"chance": 0.2,
 						"item": "/Game/Mods/AE/Dinos/Special/Turkey/DinoDropInventoryComponent_Turkey.DinoDropInventoryComponent_Turkey"
 					},
 					{
-						"chance": 0.333333333,
+						"chance": 0.2,
 						"item": "/Game/Mods/AE/Dinos/Special/Turkey/DinoDropInventoryComponent_Turkey.DinoDropInventoryComponent_Turkey"
 					},
 					{
-						"chance": 0.333333333,
+						"chance": 0.2,
 						"item": "/Game/Mods/AE/Dinos/Special/Turkey/DinoDropInventoryComponent_Turkey.DinoDropInventoryComponent_Turkey"
+					},
+					{
+						"chance": 0.2,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+					},
+					{
+						"chance": 0.2,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
 					}
 				],
 				"engrams": [ "PrimalItemConsumable_Eternal_Unlock_Achievments_C" ],
