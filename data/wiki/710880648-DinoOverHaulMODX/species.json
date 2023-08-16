@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.10.1691898323",
+	"version": "358.11.1692150258",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -10351,12 +10351,12 @@
 			},
 			"movementW": {
 				"walk": { "base": 750, "sprint": 1237.5 },
-				"fly": { "base": 1500, "sprint": 2475 },
+				"fly": { "base": 1400, "sprint": 2310 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
 				"walk": { "base": 750, "sprint": 1125 },
-				"fly": { "base": 1500, "sprint": 2250 },
+				"fly": { "base": 1400, "sprint": 2100 },
 				"swim": { "base": 1100 }
 			},
 			"staminaRates": {
@@ -10368,13 +10368,14 @@
 				"defaultSwingRadius": 1200,
 				"attacks": [
 					{ "name": "ClawAndFangs", "interval": 0.5, "dmg": 450, "radius": 900, "stamina": 5 },
-					{ "name": "PoisonBreath", "interval": 4, "dmg": 25, "radius": 900, "stamina": 200 },
+					{ "name": "PoisonBreath", "interval": 4, "dmg": 25, "radius": 900, "stamina": 250 },
 					{ "name": "Golems", "interval": 8, "dmg": 175, "radius": 900, "stamina": 800 },
 					{
-						"name": "PoisonAttackAir", "interval": 9, "dmg": 0, "radius": 0, "stamina": 1250,
+						"name": "PoisonAttackAir", "interval": 9, "dmg": 0, "radius": 0, "stamina": 1575,
 						"isProjectile": true
 					},
-					{ "name": "Ancient Summon", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Ancient Summon", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 18, "dmg": 0, "radius": 0, "stamina": 2500 }
 				]
 			},
 			"death": {
@@ -10762,10 +10763,7 @@
 						"name": "ThrowRock", "interval": 10, "dmg": 120, "radius": 1200, "stamina": 375,
 						"isProjectile": true
 					},
-					{
-						"name": "LavaExplosion", "interval": 12, "dmg": 500, "radius": 600, "stamina": 1500,
-						"isProjectile": true
-					},
+					{ "name": "Meteor Strike", "interval": 18, "dmg": 0, "radius": 0, "stamina": 1250 },
 					{
 						"name": "PoisonExplosion", "interval": 12, "dmg": 500, "radius": 600, "stamina": 800,
 						"isProjectile": true
@@ -18483,17 +18481,17 @@
 			},
 			"movementW": {
 				"walk": { "base": 690, "sprint": 1681.9 },
-				"fly": { "base": 1750, "sprint": 2843.8 },
+				"fly": { "base": 1650, "sprint": 2681.3 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
 				"walk": { "base": 690, "sprint": 2186.4 },
-				"fly": { "base": 1750, "sprint": 3696.9 },
+				"fly": { "base": 1650, "sprint": 3485.6 },
 				"swim": { "base": 1100 }
 			},
 			"movementR": {
 				"walk": { "base": 690, "sprint": 4372.8 },
-				"fly": { "base": 1750, "sprint": 7393.8 },
+				"fly": { "base": 1650, "sprint": 6971.2 },
 				"swim": { "base": 1100 }
 			},
 			"staminaRates": {
@@ -18617,40 +18615,6 @@
 				],
 				"baseXP": 700
 			}
-		},
-		{
-			"name": "ApexZomdodo Prime Minion",
-			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/WildNonTammablePrimeDinos/ZombieDodo_Character_BP_PRIME_HORDE.ZombieDodo_Character_BP_PRIME_HORDE_C",
-			"dinoNameTag": "PrimeDodo",
-			"customTag": "PrimeDodo",
-			"targetingTeamName": "Carnivores_High",
-			"mass": 500,
-			"dragWeight": 500,
-			"variants": [ "Boss" ],
-			"flags": [ "allowRiding", "isBossDino" ],
-			"falling": {
-				"dmgMult": 10,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 500 },
-				"swim": { "base": 500 }
-			},
-			"movementD": {
-				"walk": { "base": 500 },
-				"swim": { "base": 500 }
-			},
-			"staminaRates": { "swimOrFly": -3 },
-			"attack": {
-				"defaultDmg": 100,
-				"defaultSwingRadius": 600,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.25, "dmg": 900, "radius": 700, "stamina": 0 },
-					{ "name": "Minions", "interval": 8, "dmg": 0, "radius": 0, "stamina": 500 },
-					{ "name": "Taunt Rage", "interval": 25, "dmg": 350, "radius": 750, "stamina": 100 }
-				]
-			},
-			"death": { "baseXP": 500 }
 		},
 		{
 			"name": "ApexZomdodo Prime WILD",
@@ -30482,7 +30446,7 @@
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 215,
-				"attacks": [ { "name": "Attack", "interval": 0.5, "dmg": 10000, "radius": 1200, "stamina": 0 } ]
+				"attacks": [ { "name": "Attack", "interval": 0.5, "dmg": 12500, "radius": 1200, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -30609,7 +30573,7 @@
 				"defaultSwingRadius": 215,
 				"attacks": [
 					{
-						"name": "Attack", "interval": 10, "dmg": 1, "radius": 1, "stamina": 0,
+						"name": "Attack", "interval": 2, "dmg": 1, "radius": 1, "stamina": 0,
 						"isProjectile": true
 					}
 				]
@@ -30655,7 +30619,7 @@
 				"defaultSwingRadius": 215,
 				"attacks": [
 					{
-						"name": "Attack", "interval": 10, "dmg": 1, "radius": 1, "stamina": 0,
+						"name": "Attack", "interval": 1, "dmg": 1, "radius": 1, "stamina": 0,
 						"isProjectile": true
 					}
 				]
@@ -31129,7 +31093,7 @@
 				"defaultSwingRadius": 90,
 				"attacks": [
 					{ "name": "Bite", "interval": 1, "dmg": 200000, "radius": 5000, "stamina": 0 },
-					{ "name": "TailSlap", "interval": 5, "dmg": 270000, "radius": 9500, "stamina": 0 },
+					{ "name": "TailSlap", "interval": 5, "dmg": 270000, "radius": 12500, "stamina": 0 },
 					{
 						"name": "TailSpikes", "interval": 6, "dmg": 0, "radius": 8500, "stamina": 0,
 						"isProjectile": true
@@ -31311,8 +31275,8 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 215,
 				"attacks": [
-					{ "name": "Attack", "interval": 0.2, "dmg": 10500, "radius": 2600, "stamina": 0 },
-					{ "name": "Attack", "interval": 6, "dmg": 9000, "radius": 2600, "stamina": 0 }
+					{ "name": "Attack", "interval": 0.2, "dmg": 10500, "radius": 2800, "stamina": 0 },
+					{ "name": "Attack", "interval": 6, "dmg": 12000, "radius": 3000, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 500 }
