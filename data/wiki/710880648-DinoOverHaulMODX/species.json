@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.11.1692150258",
+	"version": "358.11.1692578761",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -5274,7 +5274,7 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.5, "dmg": 18000, "radius": 2000, "stamina": 0 },
 					{ "name": "None", "interval": 11, "dmg": 325, "radius": 600, "stamina": 0 },
-					{ "name": "None", "interval": 8, "dmg": 13500, "radius": 2000, "stamina": 0 }
+					{ "name": "None", "interval": 8, "dmg": 28000, "radius": 2000, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -5335,8 +5335,8 @@
 				"defaultDmg": 350,
 				"defaultSwingRadius": 600,
 				"attacks": [
-					{ "name": "None", "interval": 0.5, "dmg": 45000, "radius": 1500, "stamina": 0 },
-					{ "name": "None", "interval": 16, "dmg": 325, "radius": 600, "stamina": 0 },
+					{ "name": "None", "interval": 0.5, "dmg": 45000, "radius": 2000, "stamina": 0 },
+					{ "name": "None", "interval": 13, "dmg": 325, "radius": 600, "stamina": 0 },
 					{ "name": "None", "interval": 8, "dmg": 65000, "radius": 2000, "stamina": 0 }
 				]
 			},
@@ -8664,6 +8664,7 @@
 				"allowMountedWeaponry",
 				"allowRiding",
 				"allowRidingInWater",
+				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
@@ -10953,7 +10954,7 @@
 				"defaultDmg": 150,
 				"defaultSwingRadius": 195,
 				"attacks": [
-					{ "name": "None", "interval": 0.6, "dmg": 1250, "radius": 500, "stamina": 0 },
+					{ "name": "None", "interval": 0.6, "dmg": 1500, "radius": 750, "stamina": 0 },
 					{ "name": "None", "interval": 1, "dmg": 25, "radius": 275, "stamina": 120 }
 				]
 			}
@@ -15546,6 +15547,80 @@
 			"death": { "baseXP": 1000 }
 		},
 		{
+			"name": "Unique Prime Manticore X",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/UniquePrimeDinos/Manticore_Character_BP_X_U.Manticore_Character_BP_X_U_C",
+			"dinoNameTag": "Manticore",
+			"customTag": "Manticore",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 1000,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 175, "max": 250 } ],
+				"mutagenCost": 4555
+			},
+			"cloning": {
+				"costBase": 115000,
+				"costLevel": 440,
+				"timeBase": 805000,
+				"timeLevel": 3080
+			},
+			"falling": {
+				"dmgMult": 1,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 750, "sprint": 1237.5 },
+				"fly": { "base": 1400, "sprint": 2310 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 750, "sprint": 1125 },
+				"fly": { "base": 1400, "sprint": 2100 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.475
+			},
+			"attack": {
+				"defaultDmg": 150,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "ClawAndFangs", "interval": 0.5, "dmg": 475, "radius": 900, "stamina": 5 },
+					{ "name": "PoisonBreath", "interval": 4, "dmg": 25, "radius": 900, "stamina": 250 },
+					{ "name": "Golems", "interval": 8, "dmg": 175, "radius": 900, "stamina": 800 },
+					{
+						"name": "PoisonAttackAir", "interval": 9, "dmg": 0, "radius": 0, "stamina": 1575,
+						"isProjectile": true
+					},
+					{ "name": "Ancient Summon", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 18, "dmg": 0, "radius": 0, "stamina": 2500 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/DinoOverHaulMODX/AlphaDINOS/AlphaDinoDrop/DinoDropInventoryComponent_Manticore_ALPHA.DinoDropInventoryComponent_Manticore_ALPHA"
+					}
+				],
+				"baseXP": 200
+			}
+		},
+		{
 			"name": "Unique Apex Mantis Prime",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/UniquePrimeDinos/Mantis_Character_BP_PRIME_U.Mantis_Character_BP_PRIME_U_C",
 			"dinoNameTag": "PrimeMantis",
@@ -16457,6 +16532,7 @@
 				"allowMountedWeaponry",
 				"allowRiding",
 				"allowRidingInWater",
+				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
@@ -16530,8 +16606,8 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 315, "sprint": 706.4 },
-				"fly": { "base": 700, "sprint": 1569.7 },
+				"walk": { "base": 315, "sprint": 815.1 },
+				"fly": { "base": 700, "sprint": 1811.3 },
 				"swim": { "base": 700 }
 			},
 			"movementD": {
@@ -16554,7 +16630,7 @@
 				"attacks": [
 					{ "name": "None", "interval": 0.6, "dmg": 1275, "radius": 1000, "stamina": 0 },
 					{ "name": "None", "interval": 0, "dmg": 50, "radius": 300, "stamina": 120 },
-					{ "name": "None", "interval": 15, "dmg": 0, "radius": 0, "stamina": 750 }
+					{ "name": "None", "interval": 18, "dmg": 0, "radius": 0, "stamina": 750 }
 				]
 			},
 			"death": {
@@ -19079,6 +19155,7 @@
 				"allowMountedWeaponry",
 				"allowRiding",
 				"allowRidingInWater",
+				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
 				"doStepDamage",
@@ -24241,8 +24318,8 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 1, "dmg": 15000, "radius": 6750, "stamina": 30 },
 					{ "name": "Grab", "interval": 1, "dmg": 75, "radius": 1000, "stamina": 60 },
-					{ "name": "DivingSwipe", "interval": 3, "dmg": 1250, "radius": 2000, "stamina": 25 },
-					{ "name": "DiveBomb", "interval": 2, "dmg": 12500, "radius": 2500, "stamina": 500 },
+					{ "name": "DivingSwipe", "interval": 6, "dmg": 20000, "radius": 2000, "stamina": 25 },
+					{ "name": "DiveBomb", "interval": 2, "dmg": 15000, "radius": 2500, "stamina": 500 },
 					{ "name": "Barrel", "interval": 7, "dmg": 12500, "radius": 7500, "stamina": 0 },
 					{ "name": "Fear Roar", "interval": 23, "dmg": 1, "radius": 1, "stamina": 0 },
 					{ "name": "Barrel HUGE", "interval": 18, "dmg": 25000, "radius": 8000, "stamina": 0 },
@@ -30747,6 +30824,39 @@
 			}
 		},
 		{
+			"name": "",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Loot_Tag.TITAN_Loot_Tag_C",
+			"dinoNameTag": "",
+			"customTag": "",
+			"targetingTeamName": "",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [ "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": {
+				"xpRamp": "Player",
+				"maxExperience": 100000,
+				"maxTameLevels": 74
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 0 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 0 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": { "swimOrFly": -0.3 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "TITAN Manticore",
 			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_Manticore/Manticore_Character_BP_TITAN.Manticore_Character_BP_TITAN_C",
 			"dinoNameTag": "TITANManticore",
@@ -31368,20 +31478,20 @@
 				"defaultDmg": 150,
 				"defaultSwingRadius": 1200,
 				"attacks": [
-					{ "name": "ClawAndFangs", "interval": 0.75, "dmg": 28000, "radius": 2500, "stamina": 5 },
+					{ "name": "ClawAndFangs", "interval": 0.75, "dmg": 35000, "radius": 3200, "stamina": 5 },
 					{ "name": "PoisonSting", "interval": 8, "dmg": 20000, "radius": 1500, "stamina": 15 },
 					{
 						"name": "PoisonAttack", "interval": 21, "dmg": 400, "radius": 900, "stamina": 100,
 						"isProjectile": true
 					},
 					{ "name": "PoisonAttackAir", "interval": 14, "dmg": 0, "radius": 0, "stamina": 100 },
-					{ "name": "FireAttack Prime", "interval": 5, "dmg": 25, "radius": 900, "stamina": 150 },
+					{ "name": "FireAttack Prime", "interval": 6, "dmg": 25, "radius": 900, "stamina": 150 },
 					{
-						"name": "FireBalls", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100,
+						"name": "FireBalls", "interval": 12, "dmg": 0, "radius": 0, "stamina": 100,
 						"isProjectile": true
 					},
 					{
-						"name": "FireBalls Long Range", "interval": 9, "dmg": 0, "radius": 0, "stamina": 100,
+						"name": "FireBalls Long Range", "interval": 16, "dmg": 0, "radius": 0, "stamina": 100,
 						"isProjectile": true
 					}
 				]
@@ -31932,9 +32042,9 @@
 				"defaultDmg": 1000,
 				"defaultSwingRadius": 999,
 				"attacks": [
-					{ "name": "Melee", "interval": 1.75, "dmg": 50000, "radius": 2500, "stamina": 0 },
+					{ "name": "Melee", "interval": 1.5, "dmg": 50000, "radius": 2500, "stamina": 0 },
 					{ "name": "Melee", "interval": 8, "dmg": 85000, "radius": 2500, "stamina": 0 },
-					{ "name": "Melee", "interval": 12, "dmg": 55000, "radius": 2500, "stamina": 0 }
+					{ "name": "Melee", "interval": 12, "dmg": 75000, "radius": 2500, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -31969,12 +32079,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 575, "sprint": 4312.5 },
-				"swim": { "base": 800 }
+				"walk": { "base": 575, "sprint": 4743.7 },
+				"swim": { "base": 1000 }
 			},
 			"movementD": {
-				"walk": { "base": 316.3, "sprint": 2767.2 },
-				"swim": { "base": 440 }
+				"walk": { "base": 316.3, "sprint": 1581.3 },
+				"swim": { "base": 550 }
 			},
 			"staminaRates": {
 				"sprint": -14,
@@ -31984,10 +32094,10 @@
 				"defaultDmg": 1250,
 				"defaultSwingRadius": 500,
 				"attacks": [
-					{ "name": "Wild Melee", "interval": 0.22, "dmg": 13500, "radius": 1200, "stamina": 3 },
+					{ "name": "Wild Melee", "interval": 0.22, "dmg": 15000, "radius": 2250, "stamina": 3 },
 					{ "name": "Tamed Melee", "interval": 3, "dmg": 17500, "radius": 1200, "stamina": 3 },
 					{ "name": "None", "interval": 0, "dmg": 0, "radius": 260, "stamina": 600 },
-					{ "name": "Wild Melee", "interval": 6, "dmg": 6000, "radius": 900, "stamina": 3 },
+					{ "name": "Wild Melee", "interval": 13, "dmg": 35000, "radius": 900, "stamina": 3 },
 					{ "name": "Roar Knockdown", "interval": 12, "dmg": 10, "radius": 1, "stamina": 0 }
 				]
 			}
