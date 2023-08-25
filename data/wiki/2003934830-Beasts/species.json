@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.6.1686250638",
+	"version": "358.11.1692983778",
 	"format": "4",
 	"mod": {
 		"id": "2003934830",
@@ -107,10 +107,10 @@
 				"defaultDmg": 8,
 				"defaultSwingRadius": 170,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 27, "radius": 170, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 27, "radius": 350, "stamina": 0 },
 					{ "name": "Roar Additive", "interval": 1, "dmg": 0, "radius": 170, "stamina": 10 },
 					{ "name": "Roar Fully", "interval": 1, "dmg": 0, "radius": 170, "stamina": 10 },
-					{ "name": "Jump Kick", "interval": 2, "dmg": 33, "radius": 170, "stamina": 10 }
+					{ "name": "Jump Kick", "interval": 2, "dmg": 33, "radius": 300, "stamina": 10 }
 				]
 			},
 			"death": {
@@ -175,10 +175,10 @@
 				"defaultDmg": 8,
 				"defaultSwingRadius": 170,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 27, "radius": 170, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 27, "radius": 350, "stamina": 0 },
 					{ "name": "Roar Additive", "interval": 1, "dmg": 0, "radius": 170, "stamina": 10 },
 					{ "name": "Roar Fully", "interval": 1, "dmg": 0, "radius": 170, "stamina": 10 },
-					{ "name": "Jump Kick", "interval": 2, "dmg": 33, "radius": 170, "stamina": 10 }
+					{ "name": "Jump Kick", "interval": 2, "dmg": 33, "radius": 300, "stamina": 10 }
 				]
 			},
 			"death": {
@@ -244,10 +244,10 @@
 				"defaultDmg": 8,
 				"defaultSwingRadius": 170,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 27, "radius": 170, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 27, "radius": 350, "stamina": 0 },
 					{ "name": "Roar Additive", "interval": 1, "dmg": 0, "radius": 170, "stamina": 10 },
 					{ "name": "Roar Fully", "interval": 1, "dmg": 0, "radius": 170, "stamina": 10 },
-					{ "name": "Jump Kick", "interval": 2, "dmg": 33, "radius": 170, "stamina": 10 }
+					{ "name": "Jump Kick", "interval": 2, "dmg": 33, "radius": 300, "stamina": 10 }
 				]
 			},
 			"death": {
@@ -313,10 +313,10 @@
 				"defaultDmg": 8,
 				"defaultSwingRadius": 170,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 27, "radius": 170, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 27, "radius": 350, "stamina": 0 },
 					{ "name": "Roar Additive", "interval": 1, "dmg": 0, "radius": 170, "stamina": 10 },
 					{ "name": "Roar Fully", "interval": 1, "dmg": 0, "radius": 170, "stamina": 10 },
-					{ "name": "Jump Kick", "interval": 2, "dmg": 33, "radius": 170, "stamina": 10 }
+					{ "name": "Jump Kick", "interval": 2, "dmg": 33, "radius": 300, "stamina": 10 }
 				]
 			},
 			"death": {
@@ -2524,6 +2524,171 @@
 				],
 				"baseXP": 4
 			}
+		},
+		{
+			"name": "Koolasuchus",
+			"bp": "/Game/Mods/Beasts/Koolasuchus/BPs/Koolasuchus_Character_BP.Koolasuchus_Character_BP_C",
+			"dinoNameTag": "Koolasuchus",
+			"customTag": "Koolasuchus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 300,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isAmphibious",
+				"isCarnivore",
+				"isWaterDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 41 },
+			"cloning": {
+				"costBase": 1000,
+				"costLevel": 55,
+				"timeBase": 7000,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 640 },
+				"swim": { "base": 467.2, "sprint": 1537.9 }
+			},
+			"movementD": {
+				"walk": { "base": 140, "sprint": 640 },
+				"swim": { "base": 467.2, "sprint": 1537.9 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.3, "dmg": 40, "radius": 200, "stamina": 10 },
+					{ "name": "GrabChomp", "interval": 2, "dmg": 10, "radius": 400, "stamina": 50 },
+					{ "name": "ShakePrey", "interval": 0.2, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "ThrowPrey", "interval": 0.2, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "Eat", "interval": 0.3, "dmg": 40, "radius": 200, "stamina": 10 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "Aberrant Koolasuchus",
+			"bp": "/Game/Mods/Beasts/Koolasuchus/BPs/Koolasuchus_Character_BP_Aberrant.Koolasuchus_Character_BP_Aberrant_C",
+			"dinoNameTag": "Koolasuchus",
+			"customTag": "Koolasuchus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 300,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isAmphibious",
+				"isCarnivore",
+				"isWaterDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 41 },
+			"cloning": {
+				"costBase": 1000,
+				"costLevel": 55,
+				"timeBase": 7000,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 640 },
+				"swim": { "base": 467.2, "sprint": 1537.9 }
+			},
+			"movementD": {
+				"walk": { "base": 140, "sprint": 640 },
+				"swim": { "base": 467.2, "sprint": 1537.9 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.3, "dmg": 40, "radius": 200, "stamina": 10 },
+					{ "name": "GrabChomp", "interval": 2, "dmg": 10, "radius": 400, "stamina": 50 },
+					{ "name": "ShakePrey", "interval": 0.2, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "ThrowPrey", "interval": 0.2, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "Eat", "interval": 0.3, "dmg": 40, "radius": 200, "stamina": 10 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
+			"name": "R-Koolasuchus",
+			"bp": "/Game/Mods/Beasts/Koolasuchus/BPs/Koolasuchus_Character_BP_Eden.Koolasuchus_Character_BP_Eden_C",
+			"dinoNameTag": "Koolasuchus",
+			"customTag": "Koolasuchus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 300,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isAmphibious",
+				"isCarnivore",
+				"isWaterDino",
+				"isTameable"
+			],
+			"leveling": {
+				"maxExperience": 22213960,
+				"mutagenCost": 41
+			},
+			"cloning": {
+				"costBase": 1000,
+				"costLevel": 55,
+				"timeBase": 7000,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 640 },
+				"swim": { "base": 467.2, "sprint": 1537.9 }
+			},
+			"movementD": {
+				"walk": { "base": 140, "sprint": 640 },
+				"swim": { "base": 467.2, "sprint": 1537.9 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.3, "dmg": 40, "radius": 200, "stamina": 10 },
+					{ "name": "GrabChomp", "interval": 2, "dmg": 10, "radius": 400, "stamina": 50 },
+					{ "name": "ShakePrey", "interval": 0.2, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "ThrowPrey", "interval": 0.2, "dmg": 40, "radius": 200, "stamina": 0 },
+					{ "name": "Eat", "interval": 0.3, "dmg": 40, "radius": 200, "stamina": 10 }
+				]
+			},
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Lirainosaurus",
@@ -6360,7 +6525,7 @@
 				"isCarnivore",
 				"isTameable"
 			],
-			"leveling": { "mutagenCost": 27 },
+			"leveling": { "mutagenCost": 4950000001 },
 			"falling": {
 				"dmgMult": 50,
 				"maxSpeed": 1550
