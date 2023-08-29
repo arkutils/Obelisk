@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.9.1690157738",
+	"version": "358.11.1693253248",
 	"format": "4",
 	"mod": {
 		"id": "1652120435",
@@ -609,11 +609,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 450, "sprint": 1800 },
+				"walk": { "base": 525, "sprint": 2100 },
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 1800 },
+				"walk": { "base": 525, "sprint": 2100 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -624,10 +624,67 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Slaps", "interval": 0.4, "dmg": 85, "radius": 525, "stamina": 0 },
-					{ "name": "Slam", "interval": 5, "dmg": 150, "radius": 525, "stamina": 100 },
-					{ "name": "Uppercut", "interval": 10, "dmg": 100, "radius": 525, "stamina": 100 },
-					{ "name": "Spin", "interval": 10, "dmg": 70, "radius": 525, "stamina": 100 },
+					{ "name": "Slaps", "interval": 0.4, "dmg": 100, "radius": 525, "stamina": 0 },
+					{ "name": "Slam", "interval": 10, "dmg": 150, "radius": 525, "stamina": 100 },
+					{ "name": "Uppercut", "interval": 15, "dmg": 150, "radius": 525, "stamina": 100 },
+					{ "name": "Spin", "interval": 18, "dmg": 100, "radius": 525, "stamina": 100 },
+					{ "name": "RawrMf", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/AtlasPort/Item/Mythos/DinoDropInventoryComponent_Mythos_Large.DinoDropInventoryComponent_Mythos_Large"
+					}
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Mongrel Cyclops",
+			"bp": "/Game/Mods/AtlasPort/Critter/Cyclops/ACyclops_Character_bp_Smart.ACyclops_Character_bp_Smart_C",
+			"dinoNameTag": "Monkey",
+			"customTag": "Offhand",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ]
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 525, "sprint": 2100 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 525, "sprint": 2100 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Slaps", "interval": 0.4, "dmg": 50, "radius": 525, "stamina": 0 },
+					{ "name": "Spin", "interval": 18, "dmg": 50, "radius": 525, "stamina": 100 },
 					{ "name": "RawrMf", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -1213,11 +1270,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 300, "sprint": 1350 },
+				"walk": { "base": 300, "sprint": 1650 },
 				"swim": { "base": 900 }
 			},
 			"movementD": {
-				"walk": { "base": 300, "sprint": 1350 },
+				"walk": { "base": 300, "sprint": 1650 },
 				"swim": { "base": 900 }
 			},
 			"staminaRates": {
@@ -1228,10 +1285,12 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "Claws", "interval": 0.4, "dmg": 45, "radius": 200, "stamina": 0 },
-					{ "name": "Scream", "interval": 30, "dmg": 50, "radius": 600, "stamina": 0 },
-					{ "name": "Proj", "interval": 10, "dmg": 0, "radius": 0, "stamina": 100 },
-					{ "name": "Noodles", "interval": 180, "dmg": 0, "radius": 0, "stamina": 200 }
+					{ "name": "Claws", "interval": 0.4, "dmg": 45, "radius": 300, "stamina": 0 },
+					{ "name": "Scream", "interval": 30, "dmg": 25, "radius": 700, "stamina": 0 },
+					{
+						"name": "Proj", "interval": 4, "dmg": 0, "radius": 0, "stamina": 100,
+						"isProjectile": true
+					}
 				]
 			},
 			"death": {
@@ -1244,99 +1303,6 @@
 				],
 				"baseXP": 30
 			}
-		},
-		{
-			"name": "Apophis Rattlesnake",
-			"bp": "/Game/Mods/AtlasPort/Critter/Gorgon/ARattler_Character_bp_Minion.ARattler_Character_bp_Minion_C",
-			"dinoNameTag": "Titanboa",
-			"customTag": "Naga",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 400,
-			"dragWeight": 300,
-			"variants": [ "Minion" ],
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isAmphibious",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 1650 },
-				"swim": { "base": 700 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 1650 },
-				"swim": { "base": 700 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 400, "stamina": 0 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 25 },
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 30 }
-		},
-		{
-			"name": "Naga",
-			"bp": "/Game/Mods/AtlasPort/Critter/Gorgon/Naga_Character_bp_Minion.Naga_Character_bp_Minion_C",
-			"dinoNameTag": "Titanboa",
-			"customTag": "Naga",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 400,
-			"dragWeight": 300,
-			"variants": [ "Minion" ],
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isAmphibious",
-				"isBigDino",
-				"isCarnivore"
-			],
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 1800 },
-				"swim": { "base": 900, "sprint": 5400 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 1800 },
-				"swim": { "base": 900, "sprint": 5400 }
-			},
-			"staminaRates": {
-				"sprint": -40,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 30, "radius": 400, "stamina": 0 },
-					{ "name": "Spittle", "interval": 10, "dmg": 0, "radius": 240, "stamina": 180 },
-					{ "name": "Tails", "interval": 10, "dmg": 20, "radius": 450, "stamina": 50 },
-					{ "name": "Rawr", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 30 }
 		},
 		{
 			"name": "Savage Hammerhead",
@@ -2246,7 +2212,7 @@
 				"defaultDmg": 45,
 				"defaultSwingRadius": 300,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 40, "radius": 400, "stamina": 0 },
+					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 45, "radius": 400, "stamina": 0 },
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 25 },
 					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -2971,11 +2937,74 @@
 				"defaultSwingRadius": 1200,
 				"attacks": [
 					{ "name": "Tentaslap", "interval": 0, "dmg": 45, "radius": 1200, "stamina": 10 },
-					{ "name": "Grab Prey", "interval": 1.5, "dmg": 15, "radius": 1200, "stamina": 25 },
+					{ "name": "Grab Prey", "interval": 1.5, "dmg": 2, "radius": 1200, "stamina": 25 },
+					{ "name": "Ink", "interval": 60, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Crush Prey", "interval": 0, "dmg": 55, "radius": 0, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
 					{
-						"name": "Ink", "interval": 60, "dmg": 0, "radius": 0, "stamina": 50,
-						"isProjectile": true
-					},
+						"chance": 1,
+						"item": "/Game/PrimalEarth/Dinos/Tusoteuthis/DinoDropInventoryComponent_Carnivore_Tusoteuthis.DinoDropInventoryComponent_Carnivore_Tusoteuthis"
+					}
+				],
+				"baseXP": 100
+			}
+		},
+		{
+			"name": "Allseer Squid",
+			"bp": "/Game/Mods/AtlasPort/Critter/Squid/AtlasSquid_Character_BP_Gary.AtlasSquid_Character_BP_Gary_C",
+			"dinoNameTag": "AtlasSquid",
+			"customTag": "Tusoteuthis",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 1500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 87 },
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 5000, "sprint": 25000 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 5000, "sprint": 25000 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 5000, "sprint": 22500 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Tentaslap", "interval": 0, "dmg": 45, "radius": 1200, "stamina": 10 },
+					{ "name": "Grab Prey", "interval": 1.5, "dmg": 2, "radius": 1200, "stamina": 25 },
+					{ "name": "Ink", "interval": 60, "dmg": 0, "radius": 0, "stamina": 50 },
 					{ "name": "Crush Prey", "interval": 0, "dmg": 55, "radius": 0, "stamina": 10 }
 				]
 			},
