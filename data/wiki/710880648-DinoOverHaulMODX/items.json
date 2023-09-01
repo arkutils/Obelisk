@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "358.11.1692977695",
+	"version": "358.11.1693504133",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -1948,14 +1948,14 @@
 			"stackSize": 1
 		},
 		{
-			"name": "Summon OL Flyby",
-			"description": "",
+			"name": "Overlord Summoner",
+			"description": "- Use To Summon Overlord Flyby!",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_TriggerSpawners/PrimalItem_Trigger_OverlordPassby_Spawn.PrimalItem_Trigger_OverlordPassby_Spawn_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
 			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/TITANOverlord_ICON.TITANOverlord_ICON",
 			"type": "Structure",
 			"weight": 0.5,
-			"stackSize": 1
+			"stackSize": 5
 		},
 		{
 			"name": "Evolved Penguin Summoning Artifact",
@@ -12094,6 +12094,31 @@
 			"type": "Resource",
 			"weight": 0.1,
 			"stackSize": 200
+		},
+		{
+			"name": "Common Mushroom",
+			"description": "This mushroom can be found pretty much everywhere. It's tasty, and heals you slowly over time. Great in recipes!",
+			"bp": "/Game/Mods/DinoOverHaulMODX/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_CommonMushroom.PrimalItemResource_CommonMushroom_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/PrimalEarth/Test_Craig/RareMushroom_Icon.RareMushroom_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.2,
+			"stackSize": 100,
+			"spoilsIn": 25920,
+			"statEffects": [
+				{
+					"stat": "food", "value": 3, "useItemQuality": true,
+					"pctOf": "max",
+					"pctAbsRange": { "min": 0, "max": 0 },
+					"duration": 0.2
+				}
+			],
+			"cooking": {
+				"health": 0.05,
+				"stamina": 0.2,
+				"food": 0.1,
+				"weight": 0.1
+			}
 		},
 		{
 			"name": "Doedicurus Enhanced Saddle",
