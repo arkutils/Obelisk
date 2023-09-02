@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.11.1692469456",
+	"version": "358.11.1693620638",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -11194,45 +11194,67 @@
 			"customTag": "Wyvern",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 800,
-			"dragWeight": 755,
+			"dragWeight": 416,
 			"flags": [
 				"allowFlyerLandedRider",
-				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"doStepDamage",
 				"flyerAllowRidingInCaves",
 				"isBigDino",
 				"isCarnivore",
-				"isFlyerDino",
-				"isTameable"
+				"isFlyerDino"
 			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 1, "max": 5 },
+					{ "chance": 0.2, "min": 6, "max": 12 },
+					{ "chance": 0.2, "min": 13, "max": 20 },
+					{ "chance": 0.2, "min": 21, "max": 38 }
+				],
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 500, "sprint": 1500 },
-				"fly": { "base": 1200, "sprint": 3600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
 			},
 			"movementD": {
-				"walk": { "base": 500, "sprint": 1500 },
-				"fly": { "base": 1200, "sprint": 3600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementR": {
+				"walk": { "base": 572.7, "sprint": 1157.5 },
+				"fly": { "base": 2490, "sprint": 3355.3 },
+				"swim": { "base": 2490 }
 			},
 			"staminaRates": {
-				"sprint": -2,
-				"swimOrFly": 0
+				"sprint": -6,
+				"swimOrFly": -0.275
 			},
 			"attack": {
-				"defaultDmg": 45,
-				"defaultSwingRadius": 300,
+				"defaultDmg": 160,
+				"defaultSwingRadius": 1200,
 				"attacks": [
-					{ "name": "BiteNomFury", "interval": 0.4, "dmg": 80, "radius": 220, "stamina": 0 },
-					{ "name": "IceSpears", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Bombs", "interval": 15, "dmg": 0, "radius": 0, "stamina": 430 }
+					{ "name": "Bite", "interval": 0.5, "dmg": 80, "radius": 495, "stamina": 10 },
+					{ "name": "Steam", "interval": 12, "dmg": 0, "radius": 0, "stamina": 20 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 60, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 80, "radius": 614, "stamina": 10 },
+					{ "name": "Bombas", "interval": 15, "dmg": 0, "radius": 0, "stamina": 100 }
 				]
 			},
 			"death": {
@@ -11243,7 +11265,7 @@
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Creature_LargeMana.DinoDropInventoryComponent_Pyria_Creature_LargeMana"
 					}
 				],
-				"baseXP": 30
+				"baseXP": 120
 			}
 		},
 		{

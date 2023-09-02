@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "358.11.1692469638",
+	"version": "358.11.1693620173",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -34,6 +34,29 @@
 				"food": 0.8,
 				"weight": 0.3,
 				"water": 0.01
+			}
+		},
+		{
+			"name": "Aerosteon Saddle",
+			"description": "Equip a Aerosteon with this to ride it.",
+			"bp": "/Game/Mods/AC2/Aerosteon/PrimalItemArmor_BloodyAerosSaddle.PrimalItemArmor_BloodyAerosSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 86,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 380, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
+				]
 			}
 		},
 		{
@@ -2356,7 +2379,7 @@
 			"parent": "/Game/Genesis/CoreBlueprints/Items/PrimalItemConsumable_Lootcrate.PrimalItemConsumable_Lootcrate_C",
 			"icon": "/Game/Genesis/Icons/Items/HUD_LootCrateRed_Icon.HUD_LootCrateRed_Icon",
 			"type": "MiscConsumable/Food",
-			"weight": 75,
+			"weight": 25,
 			"stackSize": 1
 		},
 		{
@@ -2366,7 +2389,7 @@
 			"parent": "/Game/Genesis/CoreBlueprints/Items/PrimalItemConsumable_Lootcrate.PrimalItemConsumable_Lootcrate_C",
 			"icon": "/Game/Genesis/Icons/Items/HUD_LootCrateGreen_Icon.HUD_LootCrateGreen_Icon",
 			"type": "MiscConsumable/Food",
-			"weight": 75,
+			"weight": 25,
 			"stackSize": 1,
 			"crafting": {
 				"xp": 1,
@@ -5647,6 +5670,85 @@
 			}
 		},
 		{
+			"name": "Tarchia Saddle",
+			"description": "Equip a Tarchia with this to ride it.",
+			"bp": "/Game/Mods/AC2/Tarchia/PrimalItemArmor_TarchiaSaddle.PrimalItemArmor_TarchiaSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Pachyrhinosaurus/Saddle/HUD_PachyrhinoSaddle_Colorize_MIC.HUD_PachyrhinoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 22.2,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 210, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "Fertilized Tarchia Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Tarchia/PrimalItemConsumable_Egg_Tarchia_Fertilized.PrimalItemConsumable_Egg_Tarchia_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Stego.PrimalItemConsumable_Egg_Stego_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego.HUD_DinoEgg_MIC_Inst_Stego",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Tarchia/Tarchia_Character_BP.Tarchia_Character_BP_C",
+				"temperature": { "min": 22, "max": 28 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized R-Tarchia Egg",
+			"description": "Tremendously nourishing by itself, this egg provides regular nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Tarchia/PrimalItemConsumable_Egg_Tarchia_Fertilized_Eden.PrimalItemConsumable_Egg_Tarchia_Fertilized_Eden_C",
+			"parent": "/Game/Mods/AC2/Tarchia/PrimalItemConsumable_Egg_Tarchia_Fertilized.PrimalItemConsumable_Egg_Tarchia_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Stego.HUD_DinoEgg_MIC_Inst_Stego",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 12,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
+				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Tarchia/Tarchia_Character_BP_Eden.Tarchia_Character_BP_Eden_C",
+				"temperature": { "min": 22, "max": 28 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
 			"name": "Torosaurus Saddle",
 			"description": "Equip a Torosaurus with this to ride it.",
 			"bp": "/Game/Mods/AC2/Torosaurus/PrimalItemArmor_ToroSaddle.PrimalItemArmor_ToroSaddle_C",
@@ -6473,7 +6575,7 @@
 				"recipe": [
 					{ "qty": 210, "type": "PrimalItemResource_Hide_C" },
 					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 50, "type": "PrimalItemResource_Wood_C" }
+					{ "qty": 25, "type": "PrimalItemResource_MetalIngot_C" }
 				]
 			}
 		},
@@ -7199,6 +7301,34 @@
 			],
 			"egg": {
 				"dinoClass": "/Game/Mods/AC2/lovenator/Australoven_Character_BP.Australoven_Character_BP_C",
+				"temperature": { "min": 29, "max": 35 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Fertilized Aberrant Australovenator Egg",
+			"description": "",
+			"bp": "/Game/Mods/AC2/lovenator/PrimalItemConsumable_Egg_Australo_Fertilized_Aberrant.PrimalItemConsumable_Egg_Australo_Fertilized_Aberrant_C",
+			"parent": "/Game/Mods/AC2/lovenator/PrimalItemConsumable_Egg_Australo_Fertilized.PrimalItemConsumable_Egg_Australo_Fertilized_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Baryonyx.HUD_DinoEgg_MIC_Inst_Baryonyx",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 7,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/lovenator/Australoven_Character_BP_Aberrant.Australoven_Character_BP_Aberrant_C",
 				"temperature": { "min": 29, "max": 35 }
 			},
 			"cooking": {

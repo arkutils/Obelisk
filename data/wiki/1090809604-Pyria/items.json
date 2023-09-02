@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "358.11.1692469456",
+	"version": "358.11.1693620638",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -647,14 +647,14 @@
 			}
 		},
 		{
-			"name": "Bazelnade Fire Arrow",
-			"description": "An arrow embued with Fire elemental magic and Bazel Crystals. Can only be used from a crossbow. When fired, the element re-forms the explosive Bazel crystals midflight. This takes away the fire debuff, but causes the projectile to launch and detonate violently with sheer pinpoint explosive power. Heavy, but Excellent for concussion tames.",
+			"name": "Steamburst Arrow",
+			"description": "An arrow embued with Fire elemental magic and Steamburst. Can only be used from a crossbow. Unique properties of the Arrow's construction reduce the scalding effect to none and midigate its damage to structures. Heavy, but Excellent for concussion tames.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_ArrowBazel.PrimalItemAmmo_ArrowBazel_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowBase.PrimalItemAmmo_ArrowBase_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BazelnadeFireArrow.BazelnadeFireArrow",
 			"type": "Ammo",
 			"folders": [ "Alchitect", "Weapons", "Ammo" ],
-			"weight": 3,
+			"weight": 1.5,
 			"stackSize": 100,
 			"crafting": {
 				"xp": 0.05,
@@ -665,7 +665,8 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
 					{ "qty": 15, "type": "PrimalItemResource_Magicrystal_C" },
-					{ "qty": 250, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 100, "type": "PrimalItemResource_FireElement_C" },
+					{ "qty": 50, "type": "PrimalItemResource_WaterElement_C" },
 					{ "qty": 50, "type": "PrimalItemResource_Bazelcrystal_C" }
 				]
 			}
@@ -888,30 +889,6 @@
 				"recipe": [
 					{ "qty": 1, "type": "PrimalItemAmmo_ArrowStone_C" },
 					{ "qty": 5, "type": "PrimalItemResource_TriceVenom_C" }
-				]
-			}
-		},
-		{
-			"name": "Bazel Crystal Spear Bolt",
-			"description": "A fearsome spear bolt, with a Bazel Crystal carefully attached at the head. Fired from a Boom Cannon, it is devastatingly powerful.",
-			"bp": "/Game/Mods/Pyria/Alchemy/Ammo/PrimalItemAmmo_BallistaArrowBazel.PrimalItemAmmo_BallistaArrowBazel_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Base.PrimalItemAmmo_Base_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BazelSpearBolt.BazelSpearBolt",
-			"type": "Ammo",
-			"folders": [ "Alchitect", "Weapons", "Ammo" ],
-			"weight": 0.5,
-			"stackSize": 100,
-			"crafting": {
-				"xp": 9.3,
-				"time": 5,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 35, "type": "PrimalItemResource_Bazelcrystal_C" },
-					{ "qty": 500, "type": "PrimalItemResource_FireElement_C" },
-					{ "qty": 30, "type": "PrimalItemResource_Magicrystal_C" },
-					{ "qty": 1, "type": "PrimalItemAmmo_BallistaArrow_C" }
 				]
 			}
 		},
@@ -8409,48 +8386,6 @@
 			"structure": "/Game/Mods/Pyria/Alchemy/Structures/Weaponized/ArcaneGravityWell/Structure_PyrGravityWell.Structure_PyrGravityWell_C"
 		},
 		{
-			"name": "Boom Cannon",
-			"description": "Said to be developed by a alchitect who arrived from an advanced time. Uses fire element and pressure to launch explosive Bazel Crystal-tipped bolts with extreme effectiveness",
-			"bp": "/Game/Mods/Pyria/Alchemy/Weapon/Boom/PrimalItem_WeaponHarpoonBazel.PrimalItem_WeaponHarpoonBazel_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
-			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BoomCannon.BoomCannon",
-			"type": "Weapon",
-			"folders": [ "Alchitect", "Weapons", "Ranged" ],
-			"weight": 15,
-			"stackSize": 1,
-			"durability": 100,
-			"crafting": {
-				"xp": 9,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 30, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 40, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 150, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 70, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 600, "type": "PrimalItemResource_FireElement_C" }
-				]
-			},
-			"repair": {
-				"xp": 9,
-				"time": 5,
-				"recipe": [
-					{ "qty": 15, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 20, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 10, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 125, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 75, "type": "PrimalItemResource_ChitinPaste_C" },
-					{ "qty": 35, "type": "PrimalItemResource_Polymer_C" },
-					{ "qty": 300, "type": "PrimalItemResource_FireElement_C" }
-				]
-			},
-			"weapon": "/Game/Mods/Pyria/Alchemy/Ammo/Weap/WeapHarpoonBazel.WeapHarpoonBazel_C"
-		},
-		{
 			"name": "Ruler'sBlade",
 			"description": "A sword that was once owned by a gelragarian king.\n\nUntil a marauder beheaded him with it.",
 			"bp": "/Game/Mods/Pyria/Alchemy/Weapon/Hidden/PrimalItem_WeaponRulersBlade.PrimalItem_WeaponRulersBlade_C",
@@ -10790,8 +10725,8 @@
 			}
 		},
 		{
-			"name": "Bazel Crystal",
-			"description": "The crystals that grow on the underside of Eldritch Hailfire Wyverns, and are dislodged as projectiles by the mighty wyvern. Explosive: handle with care. A Powerful source of fire element, it can also be weaponized. Named after a species of wyvern said to behave similar to the Eldritch....",
+			"name": "Steamburst Crystal",
+			"description": "The crystals that grow on the underside of Eldritch Hailfire Wyverns, and are dislodged as projectiles by the wyvern. Explosive: handle with care, as the slighest crack can strigger an explosion.",
 			"bp": "/Game/Mods/Pyria/Creatures/Wildlife/Hailfire/PrimalItemResource_Bazelcrystal.PrimalItemResource_Bazelcrystal_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
 			"icon": "/Game/Mods/Pyria/Alchemy/Icons/BazelCrystal.BazelCrystal",
