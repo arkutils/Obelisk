@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.11.1693504133",
+	"version": "358.11.1694019960",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -30651,6 +30651,62 @@
 					}
 				],
 				"baseXP": 6500
+			}
+		},
+		{
+			"name": "TITAN Ice Diablo (TEST ONLY)",
+			"bp": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITAN_IceDiablo/IceKaiju_Character_BP_TITAN.IceKaiju_Character_BP_TITAN_C",
+			"dinoNameTag": "IceTitan",
+			"customTag": "IceKaiju",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 1000,
+			"dragWeight": 3000,
+			"variants": [ "Boss" ],
+			"flags": [ "allowRiding", "doStepDamage", "isBigDino", "isBossDino" ],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 1050 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 1050 }
+			},
+			"staminaRates": { "sprint": -4 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "GroundSlam", "interval": 30, "dmg": 50000, "radius": 3750, "stamina": 200 },
+					{ "name": "FootStompRit", "interval": 0, "dmg": 25000, "radius": 3000, "stamina": 200 },
+					{ "name": "IceBreath", "interval": 15, "dmg": 0, "radius": 5000, "stamina": 0 },
+					{ "name": "FootStompLft", "interval": 0, "dmg": 25000, "radius": 3000, "stamina": 200 },
+					{ "name": "TailSwipeRit", "interval": 0, "dmg": 75000, "radius": 2000, "stamina": 100 },
+					{ "name": "TailSwipeLft", "interval": 0, "dmg": 75000, "radius": 0, "stamina": 0 },
+					{ "name": "Leap Attack", "interval": 5, "dmg": 99000, "radius": 0, "stamina": 0 },
+					{ "name": "FootstompRearRit", "interval": 0, "dmg": 50000, "radius": 3750, "stamina": 200 },
+					{ "name": "FootstompRearLft ", "interval": 0, "dmg": 50000, "radius": 3750, "stamina": 200 },
+					{
+						"name": "IceSpear", "interval": 0, "dmg": 1000, "radius": 2000, "stamina": 0,
+						"isProjectile": true
+					},
+					{ "name": "TurnTailSwipeLft", "interval": 0, "dmg": 15000, "radius": 0, "stamina": 0 },
+					{ "name": "TurnTailSwipeLft", "interval": 0, "dmg": 15000, "radius": 7500, "stamina": 0 },
+					{ "name": "LiquidBomb", "interval": 0, "dmg": 1500, "radius": 2000, "stamina": 0 },
+					{ "name": "LeapAttackFinish", "interval": 0, "dmg": 99000, "radius": 10000, "stamina": 0 },
+					{ "name": "AngryAttack", "interval": 0, "dmg": 50000, "radius": 12500, "stamina": 200 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/DinoOverHaulMODX/DinoBP/TITANdinos/TITANinvDrop/DinoDropInventoryComponent_Carnivore_TITAN_Rodan.DinoDropInventoryComponent_Carnivore_TITAN_Rodan"
+					}
+				],
+				"baseXP": 2
 			}
 		},
 		{
