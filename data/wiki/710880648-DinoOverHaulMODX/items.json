@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "358.11.1693504133",
+	"version": "358.11.1694377240",
 	"format": "4",
 	"mod": {
 		"id": "710880648",
@@ -2470,6 +2470,16 @@
 			"statEffects": [ { "stat": "food", "value": 500, "useItemQuality": true, "duration": 5 } ]
 		},
 		{
+			"name": "Corruption",
+			"description": "Force feed to \"Apex\" tiered dino, gain 5min of 20% damage/damage reduction!\n\n- NOTE: Does not work on Prime Dinos and above (SEE ADDITIONAL USE BELOW)\n\n-- Can be force-fed to Dinop X, creates 1-2 CCS\n-- Can be used to attempt evo from Prime ---> Unique Prime: Place in Primes Inventory --> punch or shoot tame causing harm --> corruption consumed --> evo attempted! ",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemConsumable_Corruption.PrimalItemConsumable_Corruption_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableEatable.PrimalItemConsumableEatable_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Chaos_ICON.Chaos_ICON",
+			"type": "MiscConsumable/Food",
+			"weight": 0.1,
+			"stackSize": 10
+		},
+		{
 			"name": "DOX Mindwipe",
 			"description": "Resets Player or Dino Levels - DinoOverhaul X",
 			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemConsumable_DinoMindwipeElixir.PrimalItemConsumable_DinoMindwipeElixir_C",
@@ -2515,6 +2525,24 @@
 				"food": 0.8,
 				"weight": 0.3,
 				"water": 0.01
+			}
+		},
+		{
+			"name": "DOX Fragmented Artifacts",
+			"description": "- When used, gain corruption consumable or a 25% chance Prime Summoning Artifact!\n\nNOTE: Fractured Artifacts drop from non boss dinos w/ \"Corruption Festers\" Buff ",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemConsumable_Fractured_Artifacts.PrimalItemConsumable_Fractured_Artifacts_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Fractured_Artifacts1_ICONS.Fractured_Artifacts1_ICONS",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 10,
+			"crafting": {
+				"xp": 1,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 10, "type": "PrimalItemResource_Artifact_Fragment_Base_C" } ]
 			}
 		},
 		{
@@ -3568,6 +3596,106 @@
 			"type": "Resource",
 			"weight": 5,
 			"stackSize": 25
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_1.PrimalItemResource_Artifact_Fragment_1_C",
+			"parent": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Artifact_Frag_1_ICON.Artifact_Frag_1_ICON",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_2.PrimalItemResource_Artifact_Fragment_2_C",
+			"parent": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Artifact_Frag_2_ICON.Artifact_Frag_2_ICON",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_3.PrimalItemResource_Artifact_Fragment_3_C",
+			"parent": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Artifact_Frag_3_ICON.Artifact_Frag_3_ICON",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_4.PrimalItemResource_Artifact_Fragment_4_C",
+			"parent": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Artifact_Frag_4_ICON.Artifact_Frag_4_ICON",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_5.PrimalItemResource_Artifact_Fragment_5_C",
+			"parent": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Artifact_Frag_5_ICON.Artifact_Frag_5_ICON",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_6.PrimalItemResource_Artifact_Fragment_6_C",
+			"parent": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Artifact_Frag_6_ICON.Artifact_Frag_6_ICON",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_7.PrimalItemResource_Artifact_Fragment_7_C",
+			"parent": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Artifact_Frag_7_ICON.Artifact_Frag_7_ICON",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_8.PrimalItemResource_Artifact_Fragment_8_C",
+			"parent": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Artifact_Frag_8_ICON.Artifact_Frag_8_ICON",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_9.PrimalItemResource_Artifact_Fragment_9_C",
+			"parent": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Artifact_Frag_9_ICON.Artifact_Frag_9_ICON",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
+		},
+		{
+			"name": "Fragmented Artifact",
+			"description": "Mix & match to make new item -- DinoOverhaul X\n\n- Craft at DOX Crafting Station",
+			"bp": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/PrimalItemResource_Artifact_Fragment_Base.PrimalItemResource_Artifact_Fragment_Base_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/DinoOverHaulMODX/AlphaPrimeDINOS/PrimeResources/AlphaPrime_ICONs_Textures/Fractured_Artifacts1_ICONS.Fractured_Artifacts1_ICONS",
+			"type": "Resource",
+			"weight": 0.01,
+			"stackSize": 99
 		},
 		{
 			"name": "DOX Corruption Crystal (CC)",
@@ -18909,6 +19037,31 @@
 				]
 			},
 			"weapon": "/Game/Mods/DinoOverHaulMODX/WeaponM/TekBowV2/WeapTekBow_MOD.WeapTekBow_MOD_C"
+		},
+		{
+			"name": "DinoP X Tek Stun Grenade",
+			"description": "Sticks to targets with a powerful Tek Explosion after 3 seconds.",
+			"bp": "/Game/Mods/DinoOverHaulMODX/WeaponM/TekGrenade_X/PrimalItem_DinoP_TekGrenade.PrimalItem_DinoP_TekGrenade_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmolessConsumeSelf.PrimalItemWeaponGenericAmmolessConsumeSelf_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/TEKGrenade_Icon.TEKGrenade_Icon",
+			"type": "Weapon",
+			"weight": 0.75,
+			"stackSize": 10,
+			"crafting": {
+				"xp": 20,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 5, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 5, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 8, "type": "PrimalItemResource_CorruptCrystalDust_C" },
+					{ "qty": 15, "type": "PrimalItemResource_TitaniumIngot_C" },
+					{ "qty": 15, "type": "PrimalItemResource_TungstenIngot_C" }
+				]
+			},
+			"weapon": "/Game/Mods/DinoOverHaulMODX/WeaponM/TekGrenade_X/Weap_DinoP_TekGrenade.Weap_DinoP_TekGrenade_C"
 		},
 		{
 			"name": "DOX Tek Rifle V2",
