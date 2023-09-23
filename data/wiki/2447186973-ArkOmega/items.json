@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "358.8.1688621034",
+	"version": "358.11.1695446237",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -5542,7 +5542,7 @@
 			"description": "This device links players into certain global functions. \n\nThe middle mouse button activates Admin Mode for anyone with Admin access, allowing you to see all Respawn Points, tames, and players. ",
 			"bp": "/Game/Mods/ArkOmega/Items/Network/PrimalItem_DimensionalNetwork.PrimalItem_DimensionalNetwork_C",
 			"parent": "/Game/PrimalEarth/Test/PrimalItem_WeaponCompass.PrimalItem_WeaponCompass_C",
-			"icon": "/Game/Mods/FjordurOfficial/Assets/Teleports/PortalWhite_Icon.PortalWhite_Icon",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Misc/Icons/PortalBlue_Icon.PortalBlue_Icon",
 			"type": "Weapon",
 			"weight": 0.5,
 			"stackSize": 1,
@@ -5656,7 +5656,7 @@
 		},
 		{
 			"name": "Elemental Resistance Potion",
-			"description": "This potion will reduce all elemental damage taken by 75% for 60 seconds.",
+			"description": "This potion will reduce all elemental damage taken by 75% for 30 seconds.",
 			"bp": "/Game/Mods/ArkOmega/Items/Potions/EleResPotion/PrimalItemConsumable_EleResPotion.PrimalItemConsumable_EleResPotion_C",
 			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
 			"icon": "/Game/Mods/ArkOmega/Items/Potions/EleResPotion/EleRes_PotionIcon.EleRes_PotionIcon",
@@ -6064,6 +6064,29 @@
 				"recipe": [
 					{ "qty": 25, "type": "PrimalItem_LuckySoul_C" },
 					{ "qty": 125, "type": "PrimalItem_AlphaEssence_C" },
+					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
+				]
+			}
+		},
+		{
+			"name": "Nature Resistance Potion",
+			"description": "This potion will reduce all nature damage taken by 75% for 30 seconds.",
+			"bp": "/Game/Mods/ArkOmega/Items/Potions/NatureResPotion/PrimalItemConsumable_NatResPotion.PrimalItemConsumable_NatResPotion_C",
+			"parent": "/Game/Mods/ArkOmega/Items/Potions/HealingPotions/PrimalItemConsumable_BasePotion.PrimalItemConsumable_BasePotion_C",
+			"icon": "/Game/Mods/ArkOmega/Items/Potions/FortitudePotion/Fortitude_PotionIcon.Fortitude_PotionIcon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Potions" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 2,
+				"time": 3,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItem_NatureSoul_C" },
+					{ "qty": 5, "type": "PrimalItem_BasicEssence_C" },
 					{ "qty": 1, "type": "PrimalItemResource_Crystal_C" }
 				]
 			}
@@ -6888,7 +6911,7 @@
 		},
 		{
 			"name": "Perfect Zodiac Soul",
-			"description": "The soul of Perfect Zodiac.\n\nFeed this to any Ancient tier creature to make it a Zodiac variant.",
+			"description": "The soul of Perfect Zodiac.\n\nFeed this to any Endless tier creature to make it a Zodiac variant.",
 			"bp": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/PrimalItem_PerfectSoul.PrimalItem_PerfectSoul_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/Items/Souls/GodSouls/GodSoul_Icon.GodSoul_Icon",
@@ -7656,7 +7679,7 @@
 		},
 		{
 			"name": "God Module",
-			"description": "With this module equipped in the trophy slot of your Gauntlet Beacon, you can summon Gods from Boss Souls.",
+			"description": "With this module equipped in the trophy slot of your Gauntlet Beacon, you can summon Gods from Boss Souls.\n\nEquip the module, and then choose God Summon in the Soul Type.",
 			"bp": "/Game/Mods/ArkOmega/Structures/BossBeacon/PrimalItem_GodModule.PrimalItem_GodModule_C",
 			"parent": "/Script/ShooterGame.PrimalItem",
 			"icon": "/Game/Mods/ArkOmega/PrimalEarth/CoreBlueprints/Items/Artifacts/Icons/CubeArtifact_Icon.CubeArtifact_Icon",
@@ -8141,6 +8164,32 @@
 			"structure": "/Game/Mods/ArkOmega/Structures/OmegaBeacon/StorageBox_OmegaBeacon.StorageBox_OmegaBeacon_C"
 		},
 		{
+			"name": "Omega Protection Forcefield",
+			"description": "Generates a forcefield that makes all structures within unable to be damaged. ",
+			"bp": "/Game/Mods/ArkOmega/Structures/OmegaShield/PrimalItemStructure_OmegaTekShield.PrimalItemStructure_OmegaTekShield_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKShieldGenerator_Icon.TEKShieldGenerator_Icon",
+			"type": "Structure",
+			"folders": [ "Structures", "Misc" ],
+			"weight": 4,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 33,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 75, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 5000, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 600, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 150, "type": "PrimalItemResource_BlackPearl_C" },
+					{ "qty": 800, "type": "PrimalItemResource_Polymer_C" }
+				]
+			},
+			"structure": "/Game/Mods/ArkOmega/Structures/OmegaShield/StorageBox_OmegaTekShield.StorageBox_OmegaTekShield_C"
+		},
+		{
 			"name": "Omega Workbench",
 			"description": "Craft most of Ark Omega's items here!",
 			"bp": "/Game/Mods/ArkOmega/Structures/OmegaWorkbench/PrimalItemStructure_OmegaWorkBench.PrimalItemStructure_OmegaWorkBench_C",
@@ -8337,7 +8386,7 @@
 		},
 		{
 			"name": "Soul Furnace",
-			"description": "A structure specifically designed to burn souls for heat. This Furnace has the ability to do the tasks of many other structures. It can cook meat, smelt metal, make jerky, gasoline, charcoal, and even sweet veggie cakes.\n\nBurns Souls for energy. Can be upgraded with the Soul Furnace Intensifier crafted in the Soul Grinder to make make everything craft instantly.",
+			"description": "A structure specifically designed to burn souls for heat. This Furnace has the ability to do the tasks of many other structures. It can cook meat, smelt metal, make jerky, gasoline, charcoal, and even sweet veggie cakes.\n\nBurns Souls for energy. Can be upgraded with the Soul Furnace Intensifier crafted in the Soul Grinder to make everything craft instantly.",
 			"bp": "/Game/Mods/ArkOmega/Structures/SoulFurnace/PrimalItemStructure_SoulFurnace.PrimalItemStructure_SoulFurnace_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/Icons/TEKShieldGenerator_Icon.TEKShieldGenerator_Icon",
@@ -8386,15 +8435,15 @@
 			"structure": "/Game/Mods/ArkOmega/Structures/SoulGrinder/StorageBox_SoulGrinder.StorageBox_SoulGrinder_C"
 		},
 		{
-			"name": "Soul Magnet",
-			"description": "This structure will let you choose certain types of dynamic souls to pull into its inventory, removing the need for you to dig endlessly through storages to find them.",
-			"bp": "/Game/Mods/ArkOmega/Structures/SoulMagnet/PrimalItemStructure_SoulMagnet.PrimalItemStructure_SoulMagnet_C",
+			"name": "Resource Collector",
+			"description": "This structure lets you integrate tames from the Resource group (excluding Uniques and the Group Variant) in order to passively produce those resources. \n\nThe integrated resources will remain when picked up by hand. ",
+			"bp": "/Game/Mods/ArkOmega/Structures/SoulMagnet/PrimalItemStructure_ResourceCollector.PrimalItemStructure_ResourceCollector_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Structures/BuildingBases/PrimalItemStructureGeneric.PrimalItemStructureGeneric_C",
 			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/ConditionGroggy_Icon.ConditionGroggy_Icon",
 			"type": "Structure",
 			"folders": [ "Structures" ],
 			"weight": 4,
-			"stackSize": 100,
+			"stackSize": 1,
 			"crafting": {
 				"xp": 6.25,
 				"time": 5,
@@ -8402,8 +8451,8 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 10, "type": "PrimalItem_SummonerSoul_C" },
-					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" },
+					{ "qty": 10, "type": "PrimalItem_ResourceSoul_C" },
+					{ "qty": 10, "type": "PrimalItem_PrimeEssence_C" },
 					{ "qty": 100, "type": "PrimalItemResource_Metal_C" }
 				]
 			},
@@ -8562,8 +8611,34 @@
 			"structure": "/Game/Mods/ArkOmega/Structures/VoidVacuum/VoidVacuum.VoidVacuum_C"
 		},
 		{
+			"name": "Big Bang",
+			"description": "A bow infused with Cosmic power, it can instantly cause Supernova explosions in the target area by consuming Cosmic Souls. It can also fire various arrow projectiles. ",
+			"bp": "/Game/Mods/ArkOmega/Weapons/BigBang/PrimalItem_BigBang.PrimalItem_BigBang_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericGun.PrimalItemWeaponGenericGun_C",
+			"icon": "/Game/Genesis2/Icons/Weapons/HUD_Gen2_TekBow_MIC.HUD_Gen2_TekBow_MIC",
+			"type": "Weapon",
+			"folders": [ "Weapons", "Tek" ],
+			"weight": 12,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 5,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 300, "type": "PrimalItem_CosmicSoul_C" },
+					{ "qty": 50, "type": "PrimalItem_OmegaEssence_C" },
+					{ "qty": 750, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 60, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 100, "type": "PrimalItemResource_Crystal_C" }
+				]
+			},
+			"weapon": "/Game/Mods/ArkOmega/Weapons/BigBang/WeapBigBang.WeapBigBang_C"
+		},
+		{
 			"name": "Boomstick",
-			"description": "A club capable of area explosions, dealing damage in a wide area.\n\nThe fuse must be lit on the Boomstick using right click (secondary attack) in order for it to be able to explode during attack.",
+			"description": "A club capable of area explosions, dealing damage in a wide area.\n\nThe fuse must be lit on the Boomstick using left Control (secondary melee attack) in order for it to be able to explode during attack.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Boomstick/PrimalItem_Boomstick.PrimalItem_Boomstick_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
 			"icon": "/Game/PrimalEarth/WeaponWoodClub/HUD_Club_Colorize.HUD_Club_Colorize",
@@ -8604,11 +8679,36 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 500, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 100, "type": "PrimalItem_SummonerSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_SummonerSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/ClonerStaff/WeapClonerStaff.WeapClonerStaff_C"
+		},
+		{
+			"name": "Coffer",
+			"description": "An old box said to contain some unruly creatures. Use it to summon them. The minions last 15 seconds, and the weapon can be used every 30 seconds. Consumes 10 Summoner Souls per use. \n\nPermanent item, cannot be broken and is not consumed on use.",
+			"bp": "/Game/Mods/ArkOmega/Weapons/Coffer/PrimalItem_Coffer.PrimalItem_Coffer_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseHatchet.PrimalItem_WeaponBaseHatchet_C",
+			"icon": "/Game/Mods/ArkOmega/PrimalEarth/Test_Craig/StorageBoxSmall_TempIcon.StorageBoxSmall_TempIcon",
+			"type": "Weapon",
+			"folders": [ "Weapons" ],
+			"weight": 2,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 6,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 300, "type": "PrimalItem_SummonerSoul_C" },
+					{ "qty": 50, "type": "PrimalItem_OmegaEssence_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Wood_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			},
+			"weapon": "/Game/Mods/ArkOmega/Weapons/Coffer/WeapCoffer.WeapCoffer_C"
 		},
 		{
 			"name": "Cosmic Grenade",
@@ -8702,8 +8802,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "exact": true, "qty": 400, "type": "PrimalItemResource_Metal_C" },
-					{ "qty": 100, "type": "PrimalItem_RageSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_RageSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Eviscerators/WeapEvis.WeapEvis_C"
@@ -8735,8 +8835,33 @@
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Flashbang/WeapFlashbang.WeapFlashbang_C"
 		},
 		{
+			"name": "Force Shield",
+			"description": "Absorbs damage from the front when activated. \n\nIt can consume Guardian Souls to reflect ranged attacks back at attackers, and to create an Absorbent Bubble to protect allies. ",
+			"bp": "/Game/Mods/ArkOmega/Weapons/ForceShield/PrimalItemArmor_ForceShield.PrimalItemArmor_ForceShield_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_Base_Tek.PrimalItemArmor_Base_Tek_C",
+			"icon": "/Game/PrimalEarth/TekTier/TekShield/HUD_TekShieldColorize_MIC.HUD_TekShieldColorize_MIC",
+			"type": "Equipment/Shield",
+			"folders": [ "Armor", "Tek" ],
+			"weight": 30,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 35,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 300, "type": "PrimalItem_GuardianSoul_C" },
+					{ "qty": 50, "type": "PrimalItem_OmegaEssence_C" },
+					{ "qty": 900, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 70, "type": "PrimalItemResource_Element_C" },
+					{ "qty": 100, "type": "PrimalItemResource_BlackPearl_C" }
+				]
+			}
+		},
+		{
 			"name": "Fortune",
-			"description": "A golden gilded sword of Luck and Power.\n\nDeals piercing damage, bypassing some dino's natural defenses, with a 25% chance to crit for double damage.",
+			"description": "A golden gilded sword of Luck and Power.\n\nThere is a 25% chance to crit for double damage.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Fortune/PrimalItem_Fortune.PrimalItem_Fortune_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
 			"icon": "/Game/PrimalEarth/WeaponSword/HUD_SwordForged_Colorize_MIC.HUD_SwordForged_Colorize_MIC",
@@ -8810,7 +8935,7 @@
 		},
 		{
 			"name": "Gravitron",
-			"description": "A blunt weapon made out of just the right amount of alloys and Anti-matter.\n\nRight click will cause Gravitron to pull enemies towards you.",
+			"description": "A blunt weapon made out of just the right amount of alloys and Anti-matter.\n\nLeft control (secondary melee attack) will cause Gravitron to pull enemies towards you.",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Gravitron/PrimalItem_Gravitron.PrimalItem_Gravitron_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseHatchet.PrimalItem_WeaponBaseHatchet_C",
 			"icon": "/Game/PrimalEarth/WeaponMetalAxe/HUD_MetalAxe_Colorize_MIC.HUD_MetalAxe_Colorize_MIC",
@@ -8826,8 +8951,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 250, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 100, "type": "PrimalItem_CosmicSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_CosmicSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Gravitron/WeapGravitron.WeapGravitron_C"
@@ -9035,8 +9160,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 500, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 100, "type": "PrimalItem_MythicalSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_MythicalSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Heartsong/WeapHeartsong.WeapHeartsong_C"
@@ -9083,16 +9208,16 @@
 				"productCount": 1,
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
-					{ "qty": 100, "type": "PrimalItem_GuardianSoul_C" },
+					{ "qty": 30, "type": "PrimalItem_GuardianSoul_C" },
 					{ "qty": 500, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Inversion/WeapInversion.WeapInversion_C"
 		},
 		{
 			"name": "Judgement",
-			"description": "Cuts through metal and armor when infused with Element, and supports a Charge Attack. Equipping requires learning this Tekgram",
+			"description": "Cuts through metal and armor when infused with Utility Souls, and supports a Charge Attack. Equipping requires learning this Tekgram",
 			"bp": "/Game/Mods/ArkOmega/Weapons/Judgement/PrimalItem_WeaponJudgement.PrimalItem_WeaponJudgement_C",
 			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C",
 			"icon": "/Game/PrimalEarth/TekTier/TekSword/HUD_TekSwordColorize_MIC.HUD_TekSwordColorize_MIC",
@@ -9171,6 +9296,33 @@
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Laser/WeapOmegaLaser.WeapOmegaLaser_C"
+		},
+		{
+			"name": "Lucky Lantern",
+			"description": "Weaponized Luck that damages and cripples enemies. \n\nPowered by Lucky Souls, this weapon will target enemies, dealing damage and applying the Crippled debuff, which reduces their melee damage output by 50%.",
+			"bp": "/Game/Mods/ArkOmega/Weapons/LuckyLantern/PrimalItem_LuckyLantern.PrimalItem_LuckyLantern_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeapon_StoresCharge.PrimalItemWeapon_StoresCharge_C",
+			"icon": "/Game/Aberration/WeaponRadioactiveLanternCharge/HUD_Lantern_Charge_Colorize.HUD_Lantern_Charge_Colorize",
+			"type": "Weapon",
+			"folders": [ "Weapons" ],
+			"weight": 6,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 6.6,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemResource_Polymer_C" },
+					{ "qty": 130, "type": "PrimalItemResource_MetalIngot_C" },
+					{ "qty": 120, "type": "PrimalItemResource_Electronics_C" },
+					{ "qty": 80, "type": "PrimalItemResource_Gem_Element_C" },
+					{ "exact": true, "qty": 50, "type": "PrimalItem_OmegaEssence_C" },
+					{ "exact": true, "qty": 300, "type": "PrimalItem_LuckySoul_C" }
+				]
+			},
+			"weapon": "/Game/Mods/ArkOmega/Weapons/LuckyLantern/WeaponLuckyLantern.WeaponLuckyLantern_C"
 		},
 		{
 			"name": "Lurkers",
@@ -9506,8 +9658,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 500, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 100, "type": "PrimalItem_UnstableSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_UnstableSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Outburst/WeapOutburst.WeapOutburst_C"
@@ -9554,8 +9706,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 1000, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 100, "type": "PrimalItem_NatureSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_NatureSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/PlagueFork/WeapPlaguefork.WeapPlaguefork_C"
@@ -9632,8 +9784,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 1500, "type": "PrimalItemResource_Stone_C" },
-					{ "qty": 100, "type": "PrimalItem_ResourceSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_ResourceSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Shatter/WeapShatter.WeapShatter_C"
@@ -9749,8 +9901,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 1500, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 100, "type": "PrimalItem_ElementalSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_ElementalSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Stormbringer/WeapStormbringer.WeapStormbringer_C"
@@ -9974,8 +10126,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 250, "type": "PrimalItemResource_Crystal_C" },
-					{ "qty": 100, "type": "PrimalItem_EtherealSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_EtherealSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Translocator/WeapTranslocator.WeapTranslocator_C"
@@ -9998,8 +10150,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 200, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 100, "type": "PrimalItem_NightmareSoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_NightmareSoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/UndeadSword/WeapUndeadSword.WeapUndeadSword_C"
@@ -10022,8 +10174,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 200, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 100, "type": "PrimalItem_UtilitySoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_UtilitySoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/UtilityShotgun/WeapEggsecutionerShotgun.WeapEggsecutionerShotgun_C"
@@ -10096,8 +10248,8 @@
 				"skillQualityMult": { "min": 0, "max": 0.05 },
 				"recipe": [
 					{ "qty": 500, "type": "PrimalItemResource_MetalIngot_C" },
-					{ "qty": 100, "type": "PrimalItem_LuckySoul_C" },
-					{ "qty": 300, "type": "PrimalItem_PrimeEssence_C" }
+					{ "qty": 30, "type": "PrimalItem_LuckySoul_C" },
+					{ "qty": 100, "type": "PrimalItem_PrimeEssence_C" }
 				]
 			},
 			"weapon": "/Game/Mods/ArkOmega/Weapons/Wabbajack/WeapWabbajack.WeapWabbajack_C"
