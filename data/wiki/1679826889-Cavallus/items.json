@@ -1,0 +1,387 @@
+{
+	"$schema": "../.schema/items.json",
+	"version": "358.11.1684656674",
+	"format": "4",
+	"mod": {
+		"id": "1679826889",
+		"tag": "Cavallus",
+		"title": "Caballus Custom Map - The Equestrian Land"
+	},
+	"items": [
+		{
+			"name": "Adonis Hide",
+			"description": "You are a champion - Adonis Hide. Use to craft a Shimmer Pegasus.",
+			"bp": "/Game/Mods/Cavallus/CaballusBoss/BPs/PrimalItemResource_AdonisHide.PrimalItemResource_AdonisHide_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Cavallus/CaballusBoss/BPs/Hide_Icon_Adonis.Hide_Icon_Adonis",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 1
+		},
+		{
+			"name": "Icarus Hide",
+			"description": "You are a champion - Icarus Hide. Use to craft a Shimmer Pegasus.",
+			"bp": "/Game/Mods/Cavallus/CaballusBoss/BPs/PrimalItemResource_IcarusHide.PrimalItemResource_IcarusHide_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Cavallus/CaballusBoss/BPs/Hide_Icon_Icarus.Hide_Icon_Icarus",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 1
+		},
+		{
+			"name": "Rih Hide",
+			"description": "You are a champion - Rih Hide. Use to craft a Shimmer Pegasus.",
+			"bp": "/Game/Mods/Cavallus/CaballusBoss/BPs/PrimalItemResource_RihHide.PrimalItemResource_RihHide_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Cavallus/CaballusBoss/BPs/Hide_Icon_Rih.Hide_Icon_Rih",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 1
+		},
+		{
+			"name": "Shimmer Pegasus Spawner",
+			"description": "Use this item to spawn a Shimmer Pegasus!",
+			"bp": "/Game/Mods/Cavallus/CaballusBoss/BPs/PrimalItem_DinoSpawner_ShimmerPegasus.PrimalItem_DinoSpawner_ShimmerPegasus_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Unicorn/ShimmerUnicorn/T_UnicornHornPride_01_D.T_UnicornHornPride_01_D",
+			"type": "MiscConsumable/Food",
+			"weight": 100,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 50,
+				"levelReq": 75,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemResource_IcarusHide_C" },
+					{ "qty": 1, "type": "PrimalItemResource_AdonisHide_C" },
+					{ "qty": 0, "type": "PrimalItemResource_RihHide_C" }
+				]
+			}
+		},
+		{
+			"name": "Summon\nTriumvirate",
+			"description": "Summon Icarus, Adonis and Rih - gods of Caballus!",
+			"bp": "/Game/Mods/Cavallus/CaballusBoss/PrimalItem_BossTribute_IAR.PrimalItem_BossTribute_IAR_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/Adventure/ShimmerElement_Icon.ShimmerElement_Icon",
+			"type": "MiscConsumable/Food",
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 75,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 10, "type": "PrimalItemResource_ShimmerElement_C" } ]
+			}
+		},
+		{
+			"name": "Horse Shoe",
+			"description": "A horse shoe and a small pile of Scrap Metal. Can be reused.",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/Adventure/PrimalItemResource_Horseshoe.PrimalItemResource_Horseshoe_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/Adventure/Horseshoe_Icon.Horseshoe_Icon",
+			"type": "Resource",
+			"weight": 1,
+			"stackSize": 200,
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 15,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 4, "type": "PrimalItemResource_MetalIngot_C" } ]
+			}
+		},
+		{
+			"name": "Shimmer Element",
+			"description": "A strange, highly advanced material humming with a mystherious energy of Caballus itself. Dissolves when transferred across ARKs.",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/Adventure/PrimalItemResource_ShimmerElement.PrimalItemResource_ShimmerElement_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/Adventure/ShimmerElement_Icon.ShimmerElement_Icon",
+			"type": "Resource",
+			"folders": [ "Tek" ],
+			"weight": 0.01,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 0,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "exact": true, "qty": 100, "type": "PrimalItemResource_ElementShard_C" } ]
+			}
+		},
+		{
+			"name": "Adventure\nPortal ",
+			"description": "Use this to generate a portal to the secret Adventure. No Tames are allowed!",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/Adventure/Teleporter/PrimalItem_BossTribute_Adventure.PrimalItem_BossTribute_Adventure_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Cloth/PrimalItem_BossTributeGeneric.PrimalItem_BossTributeGeneric_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/Adventure/Teleporter/IconPferd.IconPferd",
+			"type": "MiscConsumable/Food",
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 0.01,
+				"levelReq": 75,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 120, "type": "PrimalItemConsumable_Veggie_Rockarrot_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactSE_01_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactSE_02_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactSE_03_C" },
+					{ "qty": 10, "type": "PrimalItemResource_ApexDrop_ShimmerGriffin_C" },
+					{ "qty": 15, "type": "PrimalItemResource_Horseshoe_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_DinoPoopUnicorn_C" },
+					{ "qty": 10, "type": "PrimalItemConsumable_Veggie_Apple_C" }
+				]
+			}
+		},
+		{
+			"name": "Portal BACK Home",
+			"description": "Use this to generate a portal back home from the adventure. You are a hero! Only useable from the inner adventure. You find the needed Artifacts IN the adventure!",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/Adventure/Teleporter/PrimalItem_BossTribute_Adventure_Back.PrimalItem_BossTribute_Adventure_Back_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Cloth/PrimalItem_BossTributeGeneric.PrimalItem_BossTributeGeneric_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/Adventure/Teleporter/IconPferdBack.IconPferdBack",
+			"type": "MiscConsumable/Food",
+			"weight": 0.5,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 0.01,
+				"levelReq": 75,
+				"productCount": 0,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 1, "type": "PrimalItemArtifactAB_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactAB_2_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactAB_3_C" },
+					{ "qty": 1, "type": "PrimalItemArtifactAB_4_C" }
+				]
+			}
+		},
+		{
+			"name": "Apple",
+			"description": "This apple seems to thrive near mammals, and not dinosaurs.  As such, it can be found mostly on Trees. It seems to be important for another thing...",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/Caves/Apples/PrimalItemConsumable_Veggie_Apple.PrimalItemConsumable_Veggie_Apple_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumable_Veggie_Base.PrimalItemConsumable_Veggie_Base_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/Caves/Apples/AppleIcon.AppleIcon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Crops" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"spoilsIn": 300,
+			"statEffects": [
+				{ "stat": "food", "value": 20, "useItemQuality": true, "duration": 5 },
+				{ "stat": "water", "value": 10, "useItemQuality": true, "duration": 5 }
+			],
+			"cooking": {
+				"health": 0.055,
+				"stamina": 0.01,
+				"food": 0.06,
+				"weight": 0.02,
+				"water": 0.5
+			}
+		},
+		{
+			"name": "Csikos God Spawner",
+			"description": "Use this item to spawn a Csikos god horse!",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/PrimalItem_DinoSpawner_CsikosGod.PrimalItem_DinoSpawner_CsikosGod_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/CsikosDiamond.CsikosDiamond",
+			"type": "MiscConsumable/Food",
+			"weight": 100,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 50,
+				"levelReq": 90,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItem_Resource_CsikosGem_C" },
+					{ "qty": 2500, "type": "PrimalItemResource_Obsidian_C" },
+					{ "qty": 1500, "type": "PrimalItemResource_Pelt_C" },
+					{ "qty": 1250, "type": "PrimalItemConsumable_RawMeat_C" },
+					{ "qty": 0, "type": "PrimalItemArtifact_Extinction_DesertKaiju_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Gem_Element_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Keratin_C" }
+				]
+			}
+		},
+		{
+			"name": "Huns God Spawner",
+			"description": "Use this item to spawn a Huns god horse!",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/PrimalItem_DinoSpawner_HunsGod.PrimalItem_DinoSpawner_HunsGod_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/HunsDiamond.HunsDiamond",
+			"type": "MiscConsumable/Food",
+			"weight": 100,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 50,
+				"levelReq": 90,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItem_Resource_HunsGem_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_Extinction_ForestKaiju_C" },
+					{ "qty": 2500, "type": "PrimalItemResource_Sap_C" },
+					{ "qty": 1500, "type": "PrimalItemResource_Pelt_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 1250, "type": "PrimalItemConsumable_RawMeat_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Gem_Fertile_C" }
+				]
+			}
+		},
+		{
+			"name": "Scythen God Spawner",
+			"description": "Use this item to spawn a Huns god horse!",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/PrimalItem_DinoSpawner_ScythenGod.PrimalItem_DinoSpawner_ScythenGod_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/PrimalItem_Base.PrimalItem_Base_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/ScythenDiamond.ScythenDiamond",
+			"type": "MiscConsumable/Food",
+			"weight": 100,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 1,
+				"time": 50,
+				"levelReq": 90,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 20, "type": "PrimalItem_Resource_ScythenGem_C" },
+					{ "qty": 1, "type": "PrimalItemArtifact_Extinction_IceKaiju_C" },
+					{ "qty": 2500, "type": "PrimalItemResource_Crystal_C" },
+					{ "qty": 1500, "type": "PrimalItemResource_Pelt_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Keratin_C" },
+					{ "qty": 1250, "type": "PrimalItemConsumable_RawMeat_C" },
+					{ "qty": 500, "type": "PrimalItemResource_Gem_BioLum_C" }
+				]
+			}
+		},
+		{
+			"name": "Csikos Diamond",
+			"description": "A really rare Diamond of the Csikos equestrian nation. This strange Gem has many unique properties that make it ideal for crafting something special.",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/PrimalItem_Resource_CsikosGem.PrimalItem_Resource_CsikosGem_C",
+			"parent": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemResource_Gem_Element.PrimalItemResource_Gem_Element_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/CsikosDiamond.CsikosDiamond",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 100
+		},
+		{
+			"name": "Huns Diamond",
+			"description": "A really rare Diamond of the Huns equestrian nation. This strange Gem has many unique properties that make it ideal for crafting something special.",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/PrimalItem_Resource_HunsGem.PrimalItem_Resource_HunsGem_C",
+			"parent": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemResource_Gem_Element.PrimalItemResource_Gem_Element_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/HunsDiamond.HunsDiamond",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 100
+		},
+		{
+			"name": "Scythians Diamond",
+			"description": "A really rare Diamond of the Scythians equestrian nation. This strange Gem has many unique properties that make it ideal for crafting something special.",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/PrimalItem_Resource_ScythenGem.PrimalItem_Resource_ScythenGem_C",
+			"parent": "/Game/Aberration/CoreBlueprints/Resources/PrimalItemResource_Gem_Element.PrimalItemResource_Gem_Element_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Equus/GodHorses/ScythenDiamond.ScythenDiamond",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 100
+		},
+		{
+			"name": "ShimmerGriffin Feather",
+			"description": "This trophy proves your worth as a hunter.",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Griffin/ShimmerGriffin/PrimalItemResource_ApexDrop_ShimmerGriffin.PrimalItemResource_ApexDrop_ShimmerGriffin_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResourceGeneric.PrimalItemResourceGeneric_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Griffin/ShimmerGriffin/GriffinFeather_Icon.GriffinFeather_Icon",
+			"type": "Resource",
+			"weight": 0.5,
+			"stackSize": 100
+		},
+		{
+			"name": "Fertilized Wyvern Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Ice_Wyvern/CAB_Item_Egg_Wyvern_Fertilized_Ice.CAB_Item_Egg_Wyvern_Fertilized_Ice_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Wyvern_Fertilized.PrimalItemConsumable_Egg_Wyvern_Fertilized_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Ice_Wyvern/CAB_IceWyvern_Egg.CAB_IceWyvern_Egg",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 50,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "health", "value": 35, "useItemQuality": true, "duration": 8.75 },
+				{ "stat": "stamina", "value": 35, "useItemQuality": true, "duration": 8.75 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Ice_Wyvern/Caballus_Wyvern_Override_Ice.Caballus_Wyvern_Override_Ice_C",
+				"temperature": { "min": 80, "max": 90 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Shimmer Unicorn Animal Feces",
+			"description": "Unicorns poop pride!\nCan provide nitrogen to help crops grow in their plots.  Would be more efficient fertilizer if combined with thatch in a bin. Can be eaten as well. Yummy!",
+			"bp": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Unicorn/ShimmerUnicorn/PrimalItemConsumable_DinoPoopUnicorn.PrimalItemConsumable_DinoPoopUnicorn_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumablePoop.PrimalItemConsumablePoop_C",
+			"icon": "/Game/Mods/Cavallus/CustomAssets/SpawnBlueprints/Unicorn/ShimmerUnicorn/DinoPoopPride_Icon.DinoPoopPride_Icon",
+			"type": "MiscConsumable/Other",
+			"folders": [ "Consumables", "Feces" ],
+			"weight": 1.5,
+			"stackSize": 1,
+			"spoilsIn": 1200,
+			"statEffects": [
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{
+					"stat": "food", "value": 50, "useItemQuality": true,
+					"allowWhenFull": false,
+					"duration": 1
+				}
+			],
+			"cooking": {
+				"health": 0.1,
+				"stamina": 0.1,
+				"food": 0.1,
+				"weight": 0.01,
+				"water": 0.1
+			}
+		},
+		{
+			"name": "Lasso",
+			"description": "An easily-crafted ranged tool that can ensnare and pull a target. Can only be wielded when riding a horse",
+			"bp": "/Game/Mods/Cavallus/GSRP2/Creatures/Horse/Lasso/PrimalItem_WeaponLasso_GSRP2.PrimalItem_WeaponLasso_GSRP2_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemWeaponGenericAmmolessConsumeSelf.PrimalItemWeaponGenericAmmolessConsumeSelf_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/Weapons/Icons/Lasso_Icon.Lasso_Icon",
+			"type": "Weapon",
+			"weight": 3,
+			"stackSize": 10,
+			"crafting": {
+				"xp": 0.6,
+				"time": 0.75,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 4, "type": "PrimalItemResource_Thatch_C" },
+					{ "qty": 6, "type": "PrimalItemResource_Fibers_C" }
+				]
+			},
+			"weapon": "/Game/Mods/Cavallus/GSRP2/Creatures/Horse/Lasso/WeapLasso_GSRP2.WeapLasso_GSRP2_C"
+		}
+	]
+}

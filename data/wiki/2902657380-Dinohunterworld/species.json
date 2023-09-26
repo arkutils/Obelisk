@@ -1,0 +1,6859 @@
+{
+	"$schema": "../.schema/species.json",
+	"version": "358.11.1674629012",
+	"format": "4",
+	"mod": {
+		"id": "2902657380",
+		"tag": "Dinohunterworld",
+		"title": "Dino Hunter World"
+	},
+	"species": [
+		{
+			"name": "Prédateur Ultime",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/BOSS/Basilisk_Character_BP_DHW.Basilisk_Character_BP_DHW_C",
+			"dinoNameTag": "UberBasilisk",
+			"customTag": "UberBasilisk",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 400,
+			"dragWeight": 425,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore",
+				"isRaidDino"
+			],
+			"cloning": {
+				"costBase": 1950,
+				"costLevel": 55,
+				"timeBase": 13650,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 1008 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 600, "sprint": 1680 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Melee", "interval": 1, "dmg": 110, "radius": 275, "stamina": 10 },
+					{
+						"name": "Ranged", "interval": 10, "dmg": 55, "radius": 300, "stamina": 65,
+						"isProjectile": true
+					},
+					{ "name": "Gaze", "interval": 10, "dmg": 0, "radius": 0, "stamina": 50 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Dinohunterworld/Dinos/BOSS/DinoDropInventoryComponent_LavaGolem_jackson_Dhw.DinoDropInventoryComponent_LavaGolem_jackson_Dhw"
+					}
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Tek Parasaur",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Electronic/BionicPara_E_Character_BP.BionicPara_E_Character_BP_C",
+			"dinoNameTag": "Para",
+			"customTag": "Parasaur",
+			"targetingTeamName": "Herbivores",
+			"mass": 200,
+			"dragWeight": 125,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 15
+			},
+			"cloning": {
+				"costBase": 350,
+				"costLevel": 38.5,
+				"timeBase": 2450,
+				"timeLevel": 269.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 916.5 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 458.3 },
+				"swim": { "base": 337.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 100,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 12, "radius": 100, "stamina": 5 },
+					{ "name": "AlertPulse", "interval": 0, "dmg": 0, "radius": 0, "stamina": 15 },
+					{ "name": "Frighten", "interval": 120, "dmg": 0, "radius": 0, "stamina": 80 }
+				]
+			},
+			"death": {
+				"engrams": [ "PrimalItemAmmo_HealArrow_DHW_C" ],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Tek Quetzal",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Electronic/BionicQuetz_E_Character_BP.BionicQuetz_E_Character_BP_C",
+			"dinoNameTag": "Quetz",
+			"customTag": "Quetz",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 98
+			},
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 478.8, "sprint": 1149.1 },
+				"fly": { "base": 665, "sprint": 1596 },
+				"swim": { "base": 665 }
+			},
+			"movementD": {
+				"walk": { "base": 360, "sprint": 684 },
+				"fly": { "base": 500, "sprint": 950 },
+				"swim": { "base": 500 }
+			},
+			"movementR": {
+				"walk": { "base": 320.4, "sprint": 578.3 },
+				"fly": { "base": 445, "sprint": 803.2 },
+				"swim": { "base": 445 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.185
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 32, "radius": 720, "stamina": 16 },
+					{ "name": "None", "interval": 1, "dmg": 32, "radius": 370, "stamina": 80 }
+				]
+			},
+			"death": {
+				"engrams": [ "PrimalItemAmmo_StarvArrow_DHW_C" ],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Tek Raptor",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Electronic/BionicRaptor_E_Character_BP.BionicRaptor_E_Character_BP_C",
+			"dinoNameTag": "Raptor",
+			"customTag": "Raptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 24
+			},
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 993.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1104 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 20, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"engrams": [ "PrimalItemAmmo_StunArrow_DHW_C" ],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Tek Rex",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Electronic/BionicRex_E_Character_BP.BionicRex_E_Character_BP_C",
+			"dinoNameTag": "Rex",
+			"customTag": "Rex",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 87
+			},
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 515, "sprint": 736.4 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 515, "sprint": 1104.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 },
+					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (AI)", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Rex.DinoDropInventoryComponent_Carnivore_Huge_Rex"
+					}
+				],
+				"engrams": [ "PrimalItemAmmo_SArrow_DHW_C" ],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Tek Stegosaurus",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Electronic/BionicStego_E_Character_BP.BionicStego_E_Character_BP_C",
+			"dinoNameTag": "Stego",
+			"customTag": "Stego",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 260,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 30
+			},
+			"cloning": {
+				"costBase": 725,
+				"costLevel": 55,
+				"timeBase": 5075,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 170, "sprint": 607.7 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 76.5, "sprint": 210.4 },
+				"swim": { "base": 135 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [ "PrimalItemAmmo_percu_Arrow_DHW_C" ],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Evo Coelacanth",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Montable/Coelacanthe/Coel_Character_BP_evo.Coel_Character_BP_evo_C",
+			"dinoNameTag": "Evo Coel",
+			"customTag": "",
+			"targetingTeamName": "Herbivore_Water",
+			"mass": 100,
+			"dragWeight": 25,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable",
+				"canBeWildTrappedWithFishBasket",
+				"canBeTamedWithFishBasket"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 252 },
+				"swim": { "base": 150 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 252 },
+				"swim": { "base": 150 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 67,
+				"attacks": [ { "name": "None", "interval": 1, "dmg": 5, "radius": 67, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [ "PrimalItemStructure_FishBasket_C" ],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Evo Compy",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Montable/Compy/Compy_Character_BP_evo.Compy_Character_BP_evo_C",
+			"dinoNameTag": "Compy",
+			"customTag": "Compy",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 50,
+			"dragWeight": 20,
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": { "mutagenCost": 8 },
+			"cloning": {
+				"costBase": 175,
+				"costLevel": 55,
+				"timeBase": 1225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 336 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 336 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": 5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 4,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.1, "dmg": 4, "radius": 90, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.1, "dmg": 4, "radius": 90, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 0.5 }
+		},
+		{
+			"name": "Evo Hyene",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Montable/Hyene/Hyaenodon_Character_BP_evo.Hyaenodon_Character_BP_evo_C",
+			"dinoNameTag": "Hyaenodon",
+			"customTag": "Hyaenodon",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 222,
+			"dragWeight": 40,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 5, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 4
+			},
+			"cloning": {
+				"costBase": 87.5,
+				"costLevel": 55,
+				"timeBase": 612.5,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 924 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 140, "sprint": 924 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 13,
+				"defaultSwingRadius": 275,
+				"attacks": [
+					{ "name": "Bite Additive", "interval": 0.3, "dmg": 15, "radius": 200, "stamina": 10 },
+					{ "name": "Jump", "interval": 5, "dmg": 15, "radius": 100, "stamina": 10 },
+					{ "name": "Crackle", "interval": 15, "dmg": 0, "radius": 0, "stamina": 10 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Evo Ichthyornis",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Montable/Ichthyornis/Ichthyornis_Character_BP_evo.Ichthyornis_Character_BP_evo_C",
+			"dinoNameTag": "Ichthyornis",
+			"customTag": "Ichthyornis",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 140,
+			"dragWeight": 70,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 31 },
+			"cloning": {
+				"costBase": 750,
+				"costLevel": 55,
+				"timeBase": 5250,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 75, "sprint": 97.5 },
+				"fly": { "base": 600, "sprint": 780 },
+				"swim": { "base": 330, "sprint": 429 }
+			},
+			"movementD": {
+				"walk": { "base": 75, "sprint": 97.5 },
+				"fly": { "base": 600, "sprint": 780 },
+				"swim": { "base": 330, "sprint": 429 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 16,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Grab", "interval": 0.1, "dmg": 1, "radius": 250, "stamina": 0 },
+					{ "name": "Bite", "interval": 2, "dmg": 5, "radius": 250, "stamina": 0 },
+					{ "name": "Steal", "interval": 0.1, "dmg": 10, "radius": 250, "stamina": 0 },
+					{ "name": "Chew", "interval": 2, "dmg": 24, "radius": 100, "stamina": 0 },
+					{ "name": "Attack Dive", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Wild Dive", "interval": 90, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 3 }
+		},
+		{
+			"name": "Evo Dodo",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Montable/dodo/Dodo_Character_BP_evo.Dodo_Character_BP_evo_C",
+			"dinoNameTag": "Evo Dodo",
+			"customTag": "Dodo",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 2 },
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 1,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65, "sprint": 136.5 },
+				"fly": { "base": 600, "sprint": 1260 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5, "sprint": 95.5 },
+				"fly": { "base": 420, "sprint": 882 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
+		},
+		{
+			"name": "Evo Kentrosaurus",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Montable/kentrosaure/Kentro_Character_BP_evo.Kentro_Character_BP_evo_C",
+			"dinoNameTag": "Kentro",
+			"customTag": "Kentro",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 200,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 38 },
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 10, "radius": 200, "stamina": 0 },
+					{ "name": "TailSwipe", "interval": 0.5, "dmg": 42, "radius": 125, "stamina": 0 },
+					{ "name": "TailSlam", "interval": 0.5, "dmg": 42, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 5 }
+		},
+		{
+			"name": "Evo loutre",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Montable/loutre/Otter_Character_BP_evo.Otter_Character_BP_evo_C",
+			"dinoNameTag": "Evo Otter",
+			"customTag": "Otter",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 70,
+			"dragWeight": 35,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 84 },
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 229.5, "sprint": 344.3 },
+				"swim": { "base": 337.5 }
+			},
+			"movementD": {
+				"walk": { "base": 170, "sprint": 255 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 28,
+				"defaultSwingRadius": 240,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.3, "dmg": 10, "radius": 100, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Evo Lystrosaurus",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Montable/lystrosaure/Lystro_Character_BP_evo.Lystro_Character_BP_evo_C",
+			"dinoNameTag": "Evo Lystro",
+			"customTag": "Lystro",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 34 },
+			"cloning": {
+				"costBase": 825,
+				"costLevel": 27.5,
+				"timeBase": 5775,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 60, "sprint": 126 },
+				"swim": { "base": 120 }
+			},
+			"movementD": {
+				"walk": { "base": 42, "sprint": 88.2 },
+				"swim": { "base": 84 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 6,
+				"defaultSwingRadius": 105,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 6, "radius": 105, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
+		},
+		{
+			"name": "Evo Troodon",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Montable/troodon/Troodon_Character_BP_evo.Troodon_Character_BP_evo_C",
+			"dinoNameTag": "Troodon",
+			"customTag": "Troodon",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 816 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 7,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Attack With Debuff", "interval": 0.25, "dmg": 7, "radius": 110, "stamina": 0 },
+					{ "name": "Jump", "interval": 5, "dmg": 7, "radius": 110, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.01,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small_Dilo.DinoDropInventoryComponent_Carnivore_Small_Dilo"
+					}
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Voleur de nid",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/OviraptorLoot_E_Character_BP.OviraptorLoot_E_Character_BP_C",
+			"dinoNameTag": "Ovi",
+			"customTag": "Ovi",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 90,
+			"dragWeight": 40,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 60 },
+			"cloning": {
+				"costBase": 1500,
+				"costLevel": 55,
+				"timeBase": 10500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 320, "sprint": 902.4 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 208, "sprint": 674.5 },
+				"swim": { "base": 195 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 115,
+				"attacks": [ { "name": "None", "interval": 0.1, "dmg": 12, "radius": 115, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_MilkGliderSaddle_C",
+					"PrimalItemArmor_DeinonychusSaddle_C",
+					"PrimalItemArmor_OwlSaddle_C",
+					"PrimalItemArmor_MantisSaddle_C",
+					"PrimalItemArmor_TropeSaddle_C",
+					"PrimalItemArmor_SpindlesSaddle_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Dodo  Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/01_Dodo_Character_BP.01_Dodo_Character_BP_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "Dodo",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 2 },
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 65, "sprint": 136.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 45.5, "sprint": 95.5 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Dinohunterworld/Dinos/Autre/Inventory/DinoDropInventoryComponent_Dodo_DHW.DinoDropInventoryComponent_Dodo_DHW"
+					}
+				],
+				"engrams": [
+					"PrimalItem_WeaponStoneHatchet_C",
+					"PrimalItemStructure_Campfire_C",
+					"PrimalItem_WeaponSpear_C",
+					"PrimalItemConsumable_WaterskinCraftable_C",
+					"PrimalItemArmor_ClothBoots_DHW_C",
+					"PrimalItemArmor_ClothGloves_DHW_C",
+					"PrimalItemArmor_ClothHelmet_DHW_C",
+					"PrimalItemArmor_ClothPants_DHW_C",
+					"PrimalItemArmor_ClothShirt_DHW_C",
+					"PrimalItemArmor_LegendaryBoots_DHW_C",
+					"PrimalItem_dodo_DHW_C"
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Trilobite Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/02_Trilobite_Character.02_Trilobite_Character_C",
+			"dinoNameTag": "Trilobite",
+			"customTag": "Trilobite",
+			"targetingTeamName": "Herbivore_Water",
+			"mass": 50,
+			"dragWeight": 30,
+			"flags": [
+				"canBeDragged",
+				"isAmphibious",
+				"isTameable",
+				"canBeWildTrappedWithFishBasket",
+				"canBeTamedWithFishBasket"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 70, "sprint": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 70, "sprint": 210 }
+			},
+			"staminaRates": { "sprint": -5 },
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 90
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_ClothBoots_C",
+					"PrimalItemArmor_ClothGloves_C",
+					"PrimalItemArmor_ClothHelmet_C",
+					"PrimalItemArmor_ClothPants_C",
+					"PrimalItemArmor_ClothShirt_C",
+					"PrimalItem_FishBasketFilled_C",
+					"PrimalItem_Trilo_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Coelacanth  Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/03_Coel_Character_BP.03_Coel_Character_BP_C",
+			"dinoNameTag": "Coel",
+			"customTag": "",
+			"targetingTeamName": "Herbivore_Water",
+			"mass": 100,
+			"dragWeight": 25,
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable",
+				"canBeWildTrappedWithFishBasket",
+				"canBeTamedWithFishBasket"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 252 },
+				"swim": { "base": 150 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 252 },
+				"swim": { "base": 150 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 67,
+				"attacks": [ { "name": "None", "interval": 1, "dmg": 5, "radius": 67, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_ThatchCeiling_C",
+					"PrimalItemStructure_ThatchDoor_C",
+					"PrimalItemStructure_ThatchWallWithDoor_C",
+					"PrimalItemStructure_ThatchFloor_C",
+					"PrimalItemStructure_ThatchWall_C",
+					"PrimalItem_FishBasketFilled_C",
+					"PrimalItem_Coel_DHW_C"
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Lystrosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/04_Lystro_Character_BP.04_Lystro_Character_BP_C",
+			"dinoNameTag": "Lystro",
+			"customTag": "Lystro",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"flags": [ "canBeDragged", "canBeTorpid", "canDrag", "isTameable" ],
+			"leveling": { "mutagenCost": 34 },
+			"cloning": {
+				"costBase": 825,
+				"costLevel": 27.5,
+				"timeBase": 5775,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 60, "sprint": 126 },
+				"swim": { "base": 120 }
+			},
+			"movementD": {
+				"walk": { "base": 42, "sprint": 88.2 },
+				"swim": { "base": 84 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 6,
+				"defaultSwingRadius": 105,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 6, "radius": 105, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_SleepingBag_Hide_C",
+					"PrimalItemStructure_StorageBox_Small_C",
+					"PrimalItemStructure_WoodSign_C",
+					"PrimalItem_WeaponSlingshot_C",
+					"PrimalItem_Lystro_DHW_C"
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Moschops Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/05_Moschops_Character_BP.05_Moschops_Character_BP_C",
+			"dinoNameTag": "Moschops",
+			"customTag": "Moschops",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 95,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 51 },
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 115, "sprint": 517.5 },
+				"swim": { "base": 220 }
+			},
+			"movementD": {
+				"walk": { "base": 115, "sprint": 517.5 },
+				"swim": { "base": 220 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 25,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "BiteMelee", "interval": 0.67, "dmg": 32, "radius": 280, "stamina": 0 },
+					{ "name": "HarvestCorpseMelee", "interval": 0.67, "dmg": 32, "radius": 320, "stamina": 0 },
+					{ "name": "HarvestTreeMelee", "interval": 0.67, "dmg": 32, "radius": 320, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_ThatchWall_Sloped_Right_C",
+					"PrimalItemStructure_ThatchWall_Sloped_Left_C",
+					"PrimalItemStructure_ThatchRoof_C",
+					"PrimalItem_BloodExtractor_C",
+					"PrimalItem_Moshops_DHW_C"
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Ichthyosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/06_Dolphin_Character_BP.06_Dolphin_Character_BP_C",
+			"dinoNameTag": "Dolphin",
+			"customTag": "Dolphin",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 75,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 66 },
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 720 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 1350, "sprint": 2376 },
+				"swim": { "base": 1350 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 140,
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 15, "radius": 140, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_DolphinSaddle_C",
+					"PrimalItemResource_Sparkpowder_C",
+					"PrimalItemStructure_MortarAndPestle_C",
+					"PrimalItemConsumable_Narcotic_C",
+					"PrimalItem_dolphin_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Oviraptor Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/07_Oviraptor_Character_BP.07_Oviraptor_Character_BP_C",
+			"dinoNameTag": "Ovi",
+			"customTag": "Ovi",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 90,
+			"dragWeight": 40,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 60 },
+			"cloning": {
+				"costBase": 1500,
+				"costLevel": 55,
+				"timeBase": 10500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 320, "sprint": 902.4 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 208, "sprint": 674.5 },
+				"swim": { "base": 195 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 115,
+				"attacks": [ { "name": "None", "interval": 0.1, "dmg": 12, "radius": 115, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.01,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small_Dilo.DinoDropInventoryComponent_Carnivore_Small_Dilo"
+					}
+				],
+				"engrams": [
+					"PrimalItem_WeaponSpyglass_C",
+					"PrimalItemStructure_Flag_Single_C",
+					"PrimalItemStructure_Bed_Simple_C",
+					"PrimalItemStructure_StandingTorch_C",
+					"PrimalItem_Oviraptor_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Ovis Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/08_Sheep_Character_BP.08_Sheep_Character_BP_C",
+			"dinoNameTag": "Sheep",
+			"customTag": "Sheep",
+			"targetingTeamName": "Herbivores",
+			"mass": 148,
+			"dragWeight": 70,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 79 },
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 70, "sprint": 520 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 468 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 65,
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 5, "radius": 88, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItem_WeaponStoneClub_C",
+					"PrimalItem_WeaponCompass_C",
+					"PrimalItemStructure_Flag_C",
+					"PrimalItemStructure_CookingPot_C",
+					"PrimalItem_sheep_DHW_C",
+					"PrimalItem_0_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Phiomia Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/09_Phiomia_Character_BP.09_Phiomia_Character_BP_C",
+			"dinoNameTag": "Phiomia",
+			"customTag": "Phiomia",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 48 },
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 915.7 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 555 }
+			},
+			"staminaRates": { "sprint": -20 },
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 10, "radius": 160, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Dinohunterworld/Dinos/Autre/Inventory/DinoDropInventoryComponent_phiomia_DHW.DinoDropInventoryComponent_phiomia_DHW"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_PhiomiaSaddle_C",
+					"PrimalItem_WeaponPaintbrush_C",
+					"PrimalItem_WeaponBola_C",
+					"PrimalItemStructure_TrainingDummy_C",
+					"PrimalItemArmor_HideBoots_DHW_C",
+					"PrimalItemArmor_HideGloves_DHW_C",
+					"PrimalItemArmor_HideHelmet_DHW_C",
+					"PrimalItemArmor_HidePants_DHW_C",
+					"PrimalItemArmor_HideShirt_DHW_C",
+					"PrimalItemArmor_LegendaryGloves_DHW_C",
+					"PrimalItem_Phiomia_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Parasaur Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/10_Para_Character_BP.10_Para_Character_BP_C",
+			"dinoNameTag": "Para",
+			"customTag": "Parasaur",
+			"targetingTeamName": "Herbivores",
+			"mass": 200,
+			"dragWeight": 125,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 15 },
+			"cloning": {
+				"costBase": 350,
+				"costLevel": 38.5,
+				"timeBase": 2450,
+				"timeLevel": 269.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 916.5 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 458.3 },
+				"swim": { "base": 337.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 100,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 12, "radius": 100, "stamina": 5 },
+					{ "name": "AlertPulse", "interval": 0, "dmg": 0, "radius": 0, "stamina": 15 },
+					{ "name": "Frighten", "interval": 120, "dmg": 0, "radius": 0, "stamina": 80 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemAmmo_ArrowStone_C",
+					"PrimalItem_WeaponBow_C",
+					"PrimalItemStructure_CropPlot_Small_C",
+					"PrimalItemStructure_StorageBox_SmallAmo1_DHW_C",
+					"PrimalItemArmor_ParaSaddle_C",
+					"PrimalItemAmmo_ArrowStone_C",
+					"PrimalItem_Para_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Titanomyrma Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/11_Ant_Character_BP.11_Ant_Character_BP_C",
+			"dinoNameTag": "Ant",
+			"customTag": "Ant",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 50,
+			"dragWeight": 30,
+			"flags": [ "canBeDragged" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 67, "sprint": 194.3 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 67, "sprint": 194.3 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 7,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 7, "radius": 90, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_WoodDoor_C",
+					"PrimalItemStructure_WoodWallWithDoor_C",
+					"PrimalItemStructure_WoodCeiling_C",
+					"PrimalItemStructure_WoodFloor_C",
+					"PrimalItemStructure_WoodWall_C",
+					"PrimalItem_Ant_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Compy Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/12_Compy_Character_BP.12_Compy_Character_BP_C",
+			"dinoNameTag": "Compy",
+			"customTag": "Compy",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 50,
+			"dragWeight": 20,
+			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isTameable" ],
+			"leveling": { "mutagenCost": 8 },
+			"cloning": {
+				"costBase": 175,
+				"costLevel": 55,
+				"timeBase": 1225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 336 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 336 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": 5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 4,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.1, "dmg": 4, "radius": 90, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.1, "dmg": 4, "radius": 90, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_TriCeiling_Wood_C",
+					"PrimalItemStructure_TriFoundation_Wood_C",
+					"PrimalItemStructure_WoodFenceFoundation_C",
+					"PrimalItemStructure_FenceSupport_Wood_C",
+					"PrimalItemConsumable_Stimulant_C",
+					"PrimalItemStructure_AnvilBench_DHW_C",
+					"PrimalItem_Compy_DHW_C"
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Meganeura Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/13_Dragonfly_Character_BP.13_Dragonfly_Character_BP_C",
+			"dinoNameTag": "Dragonfly",
+			"customTag": "Ant",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 50,
+			"dragWeight": 30,
+			"flags": [ "canBeDragged", "isFlyerDino" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 175, "sprint": 525 },
+				"fly": { "base": 185, "sprint": 555 },
+				"swim": { "base": 185 }
+			},
+			"movementD": {
+				"walk": { "base": 175, "sprint": 525 },
+				"fly": { "base": 185, "sprint": 555 },
+				"swim": { "base": 185 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 10, "radius": 145, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_WoodRamp_C",
+					"PrimalItemStructure_Ramp_Wood_C",
+					"PrimalItemStructure_WoodWall_Sloped_Right_C",
+					"PrimalItemStructure_WoodWall_Sloped_Left_C",
+					"PrimalItem_Dragonfly_DHW_C"
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Piranha Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/14_Piranha_Character_BP.14_Piranha_Character_BP_C",
+			"dinoNameTag": "Piranha",
+			"customTag": "",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 100,
+			"dragWeight": 21,
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable",
+				"canBeWildTrappedWithFishBasket",
+				"canBeTamedWithFishBasket"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250, "sprint": 1000 },
+				"swim": { "base": 150 }
+			},
+			"movementD": {
+				"walk": { "base": 250, "sprint": 1000 },
+				"swim": { "base": 150 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 22,
+				"defaultSwingRadius": 80,
+				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 22, "radius": 80, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_WoodShield_C",
+					"PrimalItemStructure_WoodPillar_C",
+					"PrimalItemStructure_WoodCage_C",
+					"PrimalItemStructure_WoodSpikeWall_C",
+					"PrimalItem_FishBasketFilled_C",
+					"PrimalItem_Piranha_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Salmon Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/15_Salmon_Character_Aberrant.15_Salmon_Character_Aberrant_C",
+			"dinoNameTag": "Salmon",
+			"customTag": "",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 100,
+			"dragWeight": 32.5,
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable",
+				"canBeWildTrappedWithFishBasket",
+				"canBeTamedWithFishBasket"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 190, "sprint": 399 },
+				"swim": { "base": 190 }
+			},
+			"movementD": {
+				"walk": { "base": 190, "sprint": 399 },
+				"swim": { "base": 190 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 4,
+				"defaultSwingRadius": 78,
+				"attacks": [ { "name": "None", "interval": 1, "dmg": 4, "radius": 78, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemResource_ChitinPaste_C",
+					"PrimalItemStructure_Wardrums_C",
+					"PrimalItemStructure_WoodTrapdoor_C",
+					"PrimalItemStructure_WoodLadder_C",
+					"PrimalItem_FishBasketFilled_C",
+					"PrimalItem_Saumon_DHW_C"
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Bousier Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/16_DungBeetle_Character_BP.16_DungBeetle_Character_BP_C",
+			"dinoNameTag": "Beetle",
+			"customTag": "Beetle",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 90,
+			"dragWeight": 90,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 90 },
+			"cloning": {
+				"costBase": 2250,
+				"costLevel": 27.5,
+				"timeBase": 15750,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 52, "sprint": 260 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 52, "sprint": 260 },
+				"swim": { "base": 200 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 140,
+				"attacks": [ { "name": "Melee", "interval": 0.1, "dmg": 5, "radius": 140, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_WoodCeilingWithTrapdoor_C",
+					"PrimalItemStructure_WoodRailing_C",
+					"PrimalItemStructure_TriRoof_Wood_C",
+					"PrimalItemStructure_WoodRoof_C",
+					"PrimalItem_Dungbeetle_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Achatina Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/17_Achatina_Character_BP.17_Achatina_Character_BP_C",
+			"dinoNameTag": "Achatina",
+			"customTag": "Achatina",
+			"targetingTeamName": "Herbivore_Small",
+			"mass": 50,
+			"dragWeight": 50,
+			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isTameable" ],
+			"leveling": { "mutagenCost": 69 },
+			"cloning": {
+				"costBase": 1725,
+				"costLevel": 55,
+				"timeBase": 12075,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 50 }
+			},
+			"movementD": {
+				"walk": { "base": 50 }
+			},
+			"staminaRates": {},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_WoodWindow_C",
+					"PrimalItemStructure_WoodCatwalk_C",
+					"PrimalItemStructure_WoodWallWithWindow_C",
+					"PrimalItemStructure_WoodStairs_C",
+					"PrimalItem_Achatina_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Kairuku Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/18_Kairuku_E_Character_BP.18_Kairuku_E_Character_BP_C",
+			"dinoNameTag": "Kairu",
+			"customTag": "Kairu",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 35,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 42 },
+			"cloning": {
+				"costBase": 1025,
+				"costLevel": 27.5,
+				"timeBase": 7175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 70, "sprint": 147 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 38.5, "sprint": 80.8 },
+				"swim": { "base": 247.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 105,
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 8, "radius": 105, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_HideShirt_C",
+					"PrimalItemArmor_HideBoots_C",
+					"PrimalItemArmor_HideGloves_C",
+					"PrimalItemArmor_HideHelmet_C",
+					"PrimalItemArmor_HidePants_C",
+					"PrimalItem_Kairuku_DHW_C",
+					"PrimalItem_1_DHW_C"
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Ichthyornis Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/19_Ichthyornis_Character_BP.19_Ichthyornis_Character_BP_C",
+			"dinoNameTag": "Ichthyornis",
+			"customTag": "Ichthyornis",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 140,
+			"dragWeight": 70,
+			"flags": [
+				"allowFlyerLandedRider",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 31 },
+			"cloning": {
+				"costBase": 750,
+				"costLevel": 55,
+				"timeBase": 5250,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 75, "sprint": 97.5 },
+				"fly": { "base": 600, "sprint": 780 },
+				"swim": { "base": 330, "sprint": 429 }
+			},
+			"movementD": {
+				"walk": { "base": 75, "sprint": 97.5 },
+				"fly": { "base": 600, "sprint": 780 },
+				"swim": { "base": 330, "sprint": 429 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 16,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Grab", "interval": 0.1, "dmg": 1, "radius": 250, "stamina": 0 },
+					{ "name": "Bite", "interval": 2, "dmg": 5, "radius": 250, "stamina": 0 },
+					{ "name": "Steal", "interval": 0.1, "dmg": 10, "radius": 250, "stamina": 0 },
+					{ "name": "Chew", "interval": 2, "dmg": 24, "radius": 100, "stamina": 0 },
+					{ "name": "Attack Dive", "interval": 7, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Wild Dive", "interval": 90, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemResource_Gunpowder_C",
+					"PrimalItemStructure_CompostBin_C",
+					"PrimalItem_WeaponFlareGun_C",
+					"PrimalItemStructure_LargeWall_Wood_C",
+					"PrimalItem_Ichthyornis_DHW_C"
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Dilophosaur Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/20_Dilo_Character_BP.20_Dilo_Character_BP_C",
+			"dinoNameTag": "Dilo",
+			"customTag": "",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 70,
+			"dragWeight": 35,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 13 },
+			"cloning": {
+				"costBase": 300,
+				"costLevel": 27.5,
+				"timeBase": 2100,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 360 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 66, "sprint": 198 },
+				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "None", "interval": 0.1, "dmg": 10, "radius": 120, "stamina": 0 },
+					{
+						"name": "None", "interval": 12, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 0.01,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small_Dilo.DinoDropInventoryComponent_Carnivore_Small_Dilo"
+					}
+				],
+				"engrams": [
+					"PrimalItemStructure_RopeLadder_C",
+					"PrimalItemStructure_Furniture_Gravestone_C",
+					"PrimalItemStructure_StorageBox_Large_C",
+					"PrimalItemConsumable_BugRepellant_C",
+					"PrimalItem_Dilo_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Carbonemys Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/21_Turtle_Character_BP.21_Turtle_Character_BP_C",
+			"dinoNameTag": "Turtle",
+			"customTag": "Turtle",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 225,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 64 },
+			"cloning": {
+				"costBase": 1600,
+				"costLevel": 55,
+				"timeBase": 11200,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 100, "sprint": 220 },
+				"swim": { "base": 265 }
+			},
+			"movementD": {
+				"walk": { "base": 100, "sprint": 220 },
+				"swim": { "base": 265 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 13,
+				"defaultSwingRadius": 185,
+				"attacks": [ { "name": "None", "interval": 0.25, "dmg": 13, "radius": 185, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_TurtleSaddle_C",
+					"PrimalItemRaft_C",
+					"PrimalItemStructure_StonePipeIntake_C",
+					"PrimalItemStructure_StonePipeTap_C",
+					"PrimalItem_Carbo_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Pachy Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/22_Pachy_Character_BP.22_Pachy_Character_BP_C",
+			"dinoNameTag": "Pachy",
+			"customTag": "Pachy",
+			"targetingTeamName": "Herbivores",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 13 },
+			"cloning": {
+				"costBase": 300,
+				"costLevel": 44,
+				"timeBase": 2100,
+				"timeLevel": 308
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 546 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 173, "sprint": 519 },
+				"swim": { "base": 259.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 65,
+				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 10, "radius": 65, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_PachySaddle_C",
+					"PrimalItemStructure_StonePipeStraight_C",
+					"PrimalItemStructure_StonePipeIncline_C",
+					"PrimalItemStructure_StonePipeVertical_C",
+					"PrimalItem_Pachy_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Cnidaria Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/23_Cnidaria_Character_BP.23_Cnidaria_Character_BP_C",
+			"dinoNameTag": "Cnidaria",
+			"customTag": "",
+			"targetingTeamName": "Carnivore_Water_PlayerOrTamed",
+			"mass": 100,
+			"dragWeight": 21,
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"movementD": {
+				"walk": { "base": 250 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": { "swimOrFly": -3 },
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "Melee", "interval": 0.15, "dmg": 30, "radius": 200, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_PipeFlex_Stone_C",
+					"PrimalItemStructure_StonePipeIntersection_C",
+					"PrimalItemStructure_WaterTank_C",
+					"PrimalItem_WeaponFishingRod_C",
+					"PrimalItem_Cnidaria_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Loutre Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/24_Otter_Character_BP.24_Otter_Character_BP_C",
+			"dinoNameTag": "Otter",
+			"customTag": "Otter",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 70,
+			"dragWeight": 35,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 84 },
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 229.5, "sprint": 344.3 },
+				"swim": { "base": 337.5 }
+			},
+			"movementD": {
+				"walk": { "base": 170, "sprint": 255 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 28,
+				"defaultSwingRadius": 240,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.3, "dmg": 10, "radius": 100, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_DoubleDoor_Wood_C",
+					"PrimalItemStructure_WoodGate_C",
+					"PrimalItemStructure_DoubleDoorframe_Wood_C",
+					"PrimalItemStructure_WoodGateframe_C",
+					"PrimalItem_Loutre_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Dimetrodon Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/25_Dimetro_Character_BP.25_Dimetro_Character_BP_C",
+			"dinoNameTag": "Dimetro",
+			"customTag": "Dimetro",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 220,
+			"dragWeight": 170,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 9 },
+			"cloning": {
+				"costBase": 200,
+				"costLevel": 27.5,
+				"timeBase": 1400,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 110, "sprint": 253 },
+				"swim": { "base": 250 }
+			},
+			"movementD": {
+				"walk": { "base": 110, "sprint": 253 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "Melee", "interval": 0.1, "dmg": 20, "radius": 180, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"engrams": [
+					"PrimalItemStructure_PreservingBin_C",
+					"PrimalItemStructure_FeedingTrough_C",
+					"PrimalItemConsumable_CureLow_C",
+					"PrimalItemStructure_WoodSign_Wall_C",
+					"PrimalItem_dimetrodon_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Archaeopteryx Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/26_Archa_Character_BP.26_Archa_Character_BP_C",
+			"dinoNameTag": "Archa",
+			"customTag": "Archa",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 50,
+			"dragWeight": 50,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 14 },
+			"cloning": {
+				"costBase": 325,
+				"costLevel": 38.5,
+				"timeBase": 2275,
+				"timeLevel": 269.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 588 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 105, "sprint": 411.6 },
+				"swim": { "base": 210 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 5,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_WoodSign_Large_C",
+					"PrimalItemStructure_Furniture_WoodChair_C",
+					"PrimalItemStructure_Furniture_WoodTable_C",
+					"PrimalItemStructure_Furniture_WoodBench_C",
+					"PrimalItem_Archa_DHW_C",
+					"PrimalItem_2_DHW_C"
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Triceratops Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/27_Trike_Character_BP.27_Trike_Character_BP_C",
+			"dinoNameTag": "Trike",
+			"customTag": "Trike",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 94.5, "sprint": 283.5 },
+				"swim": { "base": 189 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "None", "interval": 0.63, "dmg": 32, "radius": 430, "stamina": 0 },
+					{ "name": "Ram", "interval": 30, "dmg": 32, "radius": 430, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_TrikeSaddle_C",
+					"PrimalItemStructure_AnvilBench_C",
+					"PrimalItemStructure_Forge_C",
+					"PrimalItem_WeaponMetalHatchet_C",
+					"PrimalItem_WeaponMetalPick_C",
+					"PrimalItem_Trike_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Mesopithecus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/28_Monkey_Character_BP.28_Monkey_Character_BP_C",
+			"dinoNameTag": "Monkey",
+			"customTag": "Monkey",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 80,
+			"dragWeight": 25,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 27.5,
+				"timeBase": 4025,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 60, "sprint": 504 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 60, "sprint": 240 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 50,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.4, "dmg": 12, "radius": 95, "stamina": 0 },
+					{
+						"name": "ThrowPoop", "interval": 4, "dmg": 0, "radius": 0, "stamina": 0,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_Bookshelf_C",
+					"PrimalItemStructure_PaintingCanvas_C",
+					"PrimalItemStructure_WallTorch_C",
+					"PrimalItem_WeaponScissors_C",
+					"PrimalItem_Mesopethicus_DHW_C",
+					"PrimalItem_3_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Pegomastax Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/29_Pegomastax_Character_BP.29_Pegomastax_Character_BP_C",
+			"dinoNameTag": "Pegomastax",
+			"customTag": "Pegomastax",
+			"targetingTeamName": "TargetOnlyPlayers",
+			"mass": 50,
+			"dragWeight": 20,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 29 },
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 110, "sprint": 473 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 110, "sprint": 473 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 3,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 10, "radius": 90, "stamina": 0 },
+					{ "name": "Pick-pocket", "interval": 4, "dmg": 1, "radius": 80, "stamina": 0 },
+					{ "name": "Jump", "interval": 3, "dmg": 10, "radius": 120, "stamina": 0 },
+					{ "name": "Roar", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemConsumableBuff_Parachute_C",
+					"PrimalItem_WeaponAlarmTrap_C",
+					"PrimalItemStructure_TrophyWall_C",
+					"PrimalItemAmmo_ArrowTranq_C",
+					"PrimalItemStructure_StorageBox_SmallAmo2_DHW_C",
+					"PrimalItem_Pego_DHW_C"
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Kentrosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/30_Kentro_Character_BP.30_Kentro_Character_BP_C",
+			"dinoNameTag": "Kentro",
+			"customTag": "Kentro",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 200,
+			"dragWeight": 250,
+			"flags": [ "allowMountedWeaponry", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": { "mutagenCost": 38 },
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 600 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 10, "radius": 200, "stamina": 0 },
+					{ "name": "TailSwipe", "interval": 0.5, "dmg": 42, "radius": 125, "stamina": 0 },
+					{ "name": "TailSlam", "interval": 0.5, "dmg": 42, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_FurBoots_C",
+					"PrimalItemArmor_FurGloves_C",
+					"PrimalItemArmor_FurHelmet_C",
+					"PrimalItemArmor_FurPants_C",
+					"PrimalItemArmor_FurShirt_C",
+					"PrimalItem_Kentro_DHW_C"
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Titanoboa Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/31_BoaFrill_Character_BP.31_BoaFrill_Character_BP_C",
+			"dinoNameTag": "Titanboa",
+			"customTag": "",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 110,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 225, "sprint": 378 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 225, "sprint": 630 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 110,
+				"attacks": [ { "name": "Melee", "interval": 0.67, "dmg": 30, "radius": 110, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Boa.DinoDropInventoryComponent_Carnivore_Large_Boa"
+					}
+				],
+				"engrams": [
+					"PrimalItemStructure_TriCeiling_Stone_C",
+					"PrimalItemStructure_Ramp_Stone_C",
+					"PrimalItemStructure_TriFoundation_Stone_C",
+					"PrimalItem_GasGrenade_C",
+					"PrimalItem_Boa_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Raptor Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/32_Raptor_Character_BP.32_Raptor_Character_BP_C",
+			"dinoNameTag": "Raptor",
+			"customTag": "Raptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 993.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1104 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 65, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 10, "radius": 300, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0.2, "dmg": 20, "radius": 180, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_RaptorSaddle_C",
+					"PrimalItemStructure_StoneWallWithDoor_C",
+					"PrimalItemStructure_StoneCeiling_C",
+					"PrimalItemStructure_StoneWall_C",
+					"PrimalItemStructure_StoneFloor_C",
+					"PrimalItemStructure_StoneDoor_C",
+					"PrimalItem_Raptor_DHW_C"
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Hesperornis Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/33_Hesperornis_Character_BP.33_Hesperornis_Character_BP_C",
+			"dinoNameTag": "Hesperornis",
+			"customTag": "Hesperornis",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 50,
+			"dragWeight": 70,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isAmphibious",
+				"isCarnivore",
+				"isWaterDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 26 },
+			"cloning": {
+				"costBase": 625,
+				"costLevel": 55,
+				"timeBase": 4375,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 125, "sprint": 187.5 },
+				"fly": { "base": 450, "sprint": 675 },
+				"swim": { "base": 210, "sprint": 420 }
+			},
+			"movementD": {
+				"walk": { "base": 125, "sprint": 187.5 },
+				"fly": { "base": 450, "sprint": 675 },
+				"swim": { "base": 210, "sprint": 420 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Land Bite", "interval": 0.2, "dmg": 1, "radius": 50, "stamina": 0 },
+					{ "name": "dive", "interval": 10, "dmg": 0, "radius": 105, "stamina": 0 },
+					{ "name": "Dive Bite", "interval": 0.2, "dmg": 25, "radius": 100, "stamina": 0 },
+					{ "name": "Atop Water Bite", "interval": 0.2, "dmg": 10, "radius": 150, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_StoneFenceFoundation_C",
+					"PrimalItemStructure_FenceSupport_Stone_C",
+					"PrimalItemStructure_StonePillar_C",
+					"PrimalItemStructure_TrophyBase_C",
+					"PrimalItem_Hesperornis_DHW_C"
+				],
+				"baseXP": 0.5
+			}
+		},
+		{
+			"name": "Dimorphodon Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/34_Dimorph_Character_BP.34_Dimorph_Character_BP_C",
+			"dinoNameTag": "Dimorph",
+			"customTag": "Dimorph",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 70,
+			"dragWeight": 70,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canMountOnHumans",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 29 },
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 23,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 23, "radius": 200, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItem_WeaponPike_C",
+					"PrimalItem_WeaponCrossbow_C",
+					"PrimalItem_WeaponMagnifyingGlass_C",
+					"PrimalItemConsumable_WaterJarCraftable_C",
+					"PrimalItem_Dimorph_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Gigantopithecus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/35_Bigfoot_Character_BP.35_Bigfoot_Character_BP_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Bigfoot",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 198,
+			"dragWeight": 150,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 36 },
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 195, "sprint": 682.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 1023.8 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Punch", "interval": 0.15, "dmg": 40, "radius": 110, "stamina": 0 },
+					{ "name": "Throw", "interval": 0.1, "dmg": 60, "radius": 110, "stamina": 0 },
+					{ "name": "Harvest", "interval": 3.5, "dmg": 40, "radius": 130, "stamina": 0 },
+					{ "name": "Grab Dino", "interval": 3.5, "dmg": 40, "radius": 130, "stamina": 0 },
+					{ "name": "Throw Dino", "interval": 0.1, "dmg": 60, "radius": 110, "stamina": 0 },
+					{ "name": "JumpPunch", "interval": 0.15, "dmg": 40, "radius": 110, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_StoneCeilingWithTrapdoor_C",
+					"PrimalItemStructure_StoneTrapdoor_C",
+					"PrimalItemStructure_StoneWindow_C",
+					"PrimalItemStructure_StoneWallWithWindow_C",
+					"PrimalItem_Bigfoot_DHW_C"
+				],
+				"baseXP": 20
+			}
+		},
+		{
+			"name": "Direwolf Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/36_Direwolf_Character_BP.36_Direwolf_Character_BP_C",
+			"dinoNameTag": "Direwolf",
+			"customTag": "Direwolf",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 58 },
+			"cloning": {
+				"costBase": 1450,
+				"costLevel": 55,
+				"timeBase": 10150,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 223.2, "sprint": 1017.8 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 223.2, "sprint": 1017.8 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 33,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "None", "interval": 0.08, "dmg": 33, "radius": 160, "stamina": 5 },
+					{ "name": "Howl", "interval": 180, "dmg": 0, "radius": 0, "stamina": 35 },
+					{ "name": "Sniff", "interval": 0.5, "dmg": 0, "radius": 0, "stamina": 85 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"engrams": [
+					"PrimalItemStructure_CropPlot_Medium_C",
+					"PrimalItemStructure_StoneWall_Sloped_Left_C",
+					"PrimalItemStructure_StoneWall_Sloped_Right_C",
+					"PrimalItemStructure_StoneRoof_C",
+					"PrimalItem_Direwolf_DHW_C"
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Hyaenodon Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/37_Hyaenodon_Character_BP.37_Hyaenodon_Character_BP_C",
+			"dinoNameTag": "Hyaenodon",
+			"customTag": "Hyaenodon",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 222,
+			"dragWeight": 40,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 5, "max": 5 },
+					{ "chance": 0.2702703, "min": 6, "max": 12 },
+					{ "chance": 0.1351351, "min": 13, "max": 20 },
+					{ "chance": 0.05405405, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 4
+			},
+			"cloning": {
+				"costBase": 87.5,
+				"costLevel": 55,
+				"timeBase": 612.5,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 140, "sprint": 924 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 140, "sprint": 924 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 13,
+				"defaultSwingRadius": 275,
+				"attacks": [
+					{ "name": "Bite Additive", "interval": 0.3, "dmg": 15, "radius": 200, "stamina": 10 },
+					{ "name": "Jump", "interval": 5, "dmg": 15, "radius": 100, "stamina": 10 },
+					{ "name": "Crackle", "interval": 15, "dmg": 0, "radius": 0, "stamina": 10 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_HyaenodonSaddle_C",
+					"PrimalItemStructure_TriRoof_Stone_C",
+					"PrimalItemStructure_StoneGateframe_C",
+					"PrimalItemStructure_StoneGate_C",
+					"PrimalItem_Hyenodon_DHW_C"
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Equus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/38_Equus_Character_BP.38_Equus_Character_BP_C",
+			"dinoNameTag": "Equus",
+			"customTag": "Equus",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 175,
+			"dragWeight": 125,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 45 },
+			"cloning": {
+				"costBase": 1100,
+				"costLevel": 55,
+				"timeBase": 7700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 292.5, "sprint": 1158.3 },
+				"swim": { "base": 390 }
+			},
+			"movementD": {
+				"walk": { "base": 292.5, "sprint": 965.2 },
+				"swim": { "base": 390 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 170,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.4, "dmg": 9, "radius": 220, "stamina": 10 },
+					{ "name": "BuckKick", "interval": 0.4, "dmg": 11, "radius": 220, "stamina": 100 },
+					{ "name": "Whinney", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_EquusSaddle_C",
+					"PrimalItemStructure_StoneRailing_C",
+					"PrimalItemStructure_BearTrap_C",
+					"PrimalItemStructure_Fireplace_C",
+					"PrimalItem_equus_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Reine abeille Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/39_Bee_Queen_Character_BP.39_Bee_Queen_Character_BP_C",
+			"dinoNameTag": "Bee",
+			"customTag": "Bee",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 50,
+			"dragWeight": 30,
+			"flags": [ "canBeDragged", "isFlyerDino", "isTameable" ],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 1 },
+					{ "chance": 0.2702703, "min": 1, "max": 1 },
+					{ "chance": 0.1351351, "min": 1, "max": 1 },
+					{ "chance": 0.05405405, "min": 1, "max": 1 }
+				],
+				"maxExperience": 0
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 67 },
+				"fly": { "base": 300 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 100.5 },
+				"fly": { "base": 450 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": { "swimOrFly": 0 },
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 90
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_StoneStairs_C",
+					"PrimalItem_WeaponHandcuffs_C",
+					"PrimalItem_WeaponPoisonTrap_C",
+					"PrimalItemStructure_LargeWall_Stone_C",
+					"PrimalItem_Bee_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Anglerfish Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/40_Angler_Character_BP.40_Angler_Character_BP_C",
+			"dinoNameTag": "Angler",
+			"customTag": "Angler",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 18 },
+			"cloning": {
+				"costBase": 425,
+				"costLevel": 55,
+				"timeBase": 2975,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 570.4 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 1840 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -8,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 145,
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 30, "radius": 145, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"engrams": [
+					"PrimalItemAmmo_BallistaArrow_C",
+					"PrimalItemStructure_MetalSpikeWall_C",
+					"PrimalItemStructure_TurretBallista_C",
+					"PrimalItem_WeaponSickle_C",
+					"PrimalItemStructure_StorageBox_SmallAmo3_DHW_C",
+					"PrimalItem_Angler_DHW_C"
+				],
+				"baseXP": 8
+			}
+		},
+		{
+			"name": "Electrophorus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/41_Eel_Character_BP.41_Eel_Character_BP_C",
+			"dinoNameTag": "Eel",
+			"customTag": "Eel",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 14 },
+			"cloning": {
+				"costBase": 325,
+				"costLevel": 55,
+				"timeBase": 2275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 920 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 1840 },
+				"swim": { "base": 800 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 35,
+				"defaultSwingRadius": 145,
+				"attacks": [
+					{ "name": "Bite - Tamed", "interval": 1, "dmg": 3, "radius": 200, "stamina": 0 },
+					{ "name": "Bite - UnTamed", "interval": 1, "dmg": 15, "radius": 200, "stamina": 0 },
+					{ "name": "Shock - UnTamed", "interval": 10, "dmg": 35, "radius": 1000, "stamina": 0 },
+					{ "name": "Shock - Tamed", "interval": 3, "dmg": 5, "radius": 1000, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"engrams": [
+					"PrimalItemStructure_TurretCatapult_C",
+					"PrimalItemStructure_StoneCeilingWithTrapdoorGiant_C",
+					"PrimalItemStructure_StoneCeilingDoorGiant_C",
+					"PrimalItemStructure_BearTrap_Large_C",
+					"PrimalItem_eel_DHW_C"
+				],
+				"baseXP": 8
+			}
+		},
+		{
+			"name": "Pulmonoscorpius Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/42_Scorpion_Character_BP.42_Scorpion_Character_BP_C",
+			"dinoNameTag": "Scorpion",
+			"customTag": "Scorpion",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 120,
+			"dragWeight": 110,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 420 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 420 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "None", "interval": 0.1, "dmg": 15, "radius": 160, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_ScorpionSaddle_C",
+					"PrimalItemStructure_DoubleDoor_Stone_C",
+					"PrimalItemStructure_DoubleDoorframe_Stone_C",
+					"PrimalItem_scorpion_DHW_C",
+					"PrimalItem_WeaponSword_C"
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Procoptodon Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/43_Procoptodon_Character_BP.43_Procoptodon_Character_BP_C",
+			"dinoNameTag": "Kangaroo",
+			"customTag": "Kangaroo",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 300,
+			"dragWeight": 410,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 32 },
+			"cloning": {
+				"costBase": 775,
+				"costLevel": 55,
+				"timeBase": 5425,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2600
+			},
+			"movementW": {
+				"walk": { "base": 850, "sprint": 1785 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 850, "sprint": 1785 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 190,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.01, "dmg": 20, "radius": 190, "stamina": 0 },
+					{ "name": "Kick", "interval": 0.01, "dmg": 20, "radius": 360, "stamina": 0 },
+					{ "name": "PickUp", "interval": 0.01, "dmg": 20, "radius": 250, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_ProcoptodonSaddle_C",
+					"PrimalItemStructure_StoneGateframe_Large_C",
+					"PrimalItemStructure_StoneGateLarge_C",
+					"PrimalItem_WeaponLance_C",
+					"PrimalItem_Procoptodon_DHW_C",
+					"PrimalItem_4_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Diplocaulus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/44_Diplocaulus_Character_BP.44_Diplocaulus_Character_BP_C",
+			"dinoNameTag": "Diplocaulus",
+			"customTag": "Diplocaulus",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 41 },
+			"cloning": {
+				"costBase": 1000,
+				"costLevel": 55,
+				"timeBase": 7000,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 70, "sprint": 357 },
+				"swim": { "base": 267, "sprint": 980.4 }
+			},
+			"movementD": {
+				"walk": { "base": 122.5, "sprint": 357 },
+				"swim": { "base": 467.2, "sprint": 980.4 }
+			},
+			"movementR": {
+				"walk": { "base": 306.2, "sprint": 892.5 },
+				"swim": { "base": 1168, "sprint": 2451 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [ { "name": "Bite", "interval": 0.3, "dmg": 10, "radius": 134, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_GhillieBoots_C",
+					"PrimalItemArmor_GhillieGloves_C",
+					"PrimalItemArmor_GhillieHelmet_C",
+					"PrimalItemArmor_GhilliePants_C",
+					"PrimalItemArmor_GhillieShirt_C",
+					"PrimalItem_Diplocaulus_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Pachyrhinosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/45_Pachyrhino_Character_BP.45_Pachyrhino_Character_BP_C",
+			"dinoNameTag": "Pachyrhinosaurus",
+			"customTag": "Pachyrhino",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 225,
+			"dragWeight": 200,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 21 },
+			"cloning": {
+				"costBase": 500,
+				"costLevel": 55,
+				"timeBase": 3500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 161, "sprint": 563.5 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 632.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "Head Attack", "interval": 1, "dmg": 28, "radius": 200, "stamina": 0 },
+					{ "name": "Camo Cloud", "interval": 15, "dmg": 10, "radius": 200, "stamina": 75 },
+					{ "name": "Rage Cloud", "interval": 15, "dmg": 10, "radius": 200, "stamina": 75 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_PachyrhinoSaddle_C",
+					"PrimalItemStructure_Toilet_C",
+					"PrimalItemStructure_TreePlatform_Wood_C",
+					"PrimalItemWeaponAttachment_Scope_C",
+					"PrimalItem_Pachyrhino_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Stegosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/46_Stego_Character_BP.46_Stego_Character_BP_C",
+			"dinoNameTag": "Stego",
+			"customTag": "Stego",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 260,
+			"dragWeight": 250,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 30 },
+			"cloning": {
+				"costBase": 725,
+				"costLevel": 55,
+				"timeBase": 5075,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 170, "sprint": 607.7 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 76.5, "sprint": 210.4 },
+				"swim": { "base": 135 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 450,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 42, "radius": 500, "stamina": 0 },
+					{ "name": "ImpalingTailWhip", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 },
+					{ "name": "Backplate", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "ThrowImpliedTarget", "interval": 0.5, "dmg": 42, "radius": 100, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_StegoSaddle_C",
+					"PrimalItemStructure_Cannon_C",
+					"PrimalItemStructure_CropPlot_Large_C",
+					"PrimalItemAmmo_CannonBall_C",
+					"PrimalItemStructure_StorageBox_SmallAmo5_DHW_C",
+					"PrimalItem_Stego_DHW_C"
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Manta Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/47_Manta_Character_BP.47_Manta_Character_BP_C",
+			"dinoNameTag": "Manta",
+			"customTag": "Manta",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 75,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 22 },
+			"cloning": {
+				"costBase": 525,
+				"costLevel": 55,
+				"timeBase": 3675,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 780 },
+				"swim": { "base": 600, "sprint": 780 }
+			},
+			"movementD": {
+				"walk": { "base": 1350, "sprint": 2700 },
+				"swim": { "base": 1350, "sprint": 2700 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 28,
+				"defaultSwingRadius": 300,
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 28, "radius": 300, "stamina": -10 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_MantaSaddle_C",
+					"PrimalItemAmmo_SimpleBullet_C",
+					"PrimalItem_WeaponGun_C",
+					"PrimalItemStructure_TreeTap_C",
+					"PrimalItemStructure_StorageBox_SmallAmo4_DHW_C",
+					"PrimalItem_Manta_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Gallimimus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/48_Galli_Character_BP.48_Galli_Character_BP_C",
+			"dinoNameTag": "Galli",
+			"customTag": "Galli",
+			"targetingTeamName": "Herbivores",
+			"mass": 200,
+			"dragWeight": 410,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 36 },
+			"cloning": {
+				"costBase": 875,
+				"costLevel": 55,
+				"timeBase": 6125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 825, "sprint": 2305 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 825, "sprint": 2189.8 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 170,
+				"attacks": [ { "name": "Melee", "interval": 0.4, "dmg": 8, "radius": 170, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_Gallimimus_C",
+					"PrimalItem_WeaponOneShotRifle_C",
+					"PrimalItem_WeaponOneShotRifle_C",
+					"PrimalItemAmmo_TranqDart_C",
+					"PrimalItem_Gali_DHW_C",
+					"PrimalItemStructure_StorageBox_SmallAmo6_DHW_C",
+					"PrimalItemStructure_StorageBox_SmallAmo11_DHW_C",
+					"PrimalItemAmmo_SimpleRifleBullet_C",
+					"PrimalItem_5_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Iguanodon Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/49_Iguanodon_Character_BP.49_Iguanodon_Character_BP_C",
+			"dinoNameTag": "Iguanodon",
+			"customTag": "Iguanodon",
+			"targetingTeamName": "Herbivores",
+			"mass": 200,
+			"dragWeight": 125,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 212.5, "sprint": 1062.5 },
+				"swim": { "base": 382.5 }
+			},
+			"movementD": {
+				"walk": { "base": 287.5, "sprint": 1437.5 },
+				"swim": { "base": 517.5 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 12,
+				"defaultSwingRadius": 100,
+				"attacks": [
+					{ "name": "Melee_Biped", "interval": 0.4, "dmg": 25, "radius": 150, "stamina": 0 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar_Biped", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_IguanodonSaddle_C",
+					"PrimalItemStructure_BeerBarrel_C",
+					"PrimalItemConsumableMiracleGro_C",
+					"PrimalItem_WeaponGrenade_C",
+					"PrimalItem_Iguanodon_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Onyc Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/50_Bat_Character_BP.50_Bat_Character_BP_C",
+			"dinoNameTag": "Bat",
+			"customTag": "Onyc",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 35,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 3 },
+			"cloning": {
+				"costBase": 50,
+				"costLevel": 55,
+				"timeBase": 350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 350, "sprint": 577.5 },
+				"fly": { "base": 350, "sprint": 577.5 },
+				"swim": { "base": 350 }
+			},
+			"movementD": {
+				"walk": { "base": 350, "sprint": 577.5 },
+				"fly": { "base": 350, "sprint": 577.5 },
+				"swim": { "base": 350 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 35,
+				"defaultSwingRadius": 185,
+				"attacks": [ { "name": "Attack", "interval": 0.4, "dmg": 35, "radius": 185, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_ChitinBoots_C",
+					"PrimalItemArmor_ChitinGloves_C",
+					"PrimalItemArmor_ChitinHelmet_C",
+					"PrimalItemArmor_ChitinPants_C",
+					"PrimalItemArmor_ChitinShirt_C",
+					"PrimalItem_bat_DHW_C"
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Megaloceros Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/51_Stag_Character_BP.51_Stag_Character_BP_C",
+			"dinoNameTag": "Stag",
+			"customTag": "Stag",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 37 },
+			"cloning": {
+				"costBase": 900,
+				"costLevel": 55,
+				"timeBase": 6300,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 900 },
+				"swim": { "base": 225 }
+			},
+			"movementD": {
+				"walk": { "base": 170, "sprint": 1020 },
+				"swim": { "base": 255 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 250,
+				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 30, "radius": 250, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_StagSaddle_C",
+					"PrimalItem_WeaponShotgun_C",
+					"PrimalItemAmmo_SimpleShotgunBullet_C",
+					"PrimalItemStructure_StorageBox_SmallAmo7_DHW_C",
+					"PrimalItem_Stag_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Mammoth Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/52_Mammoth_Character_BP.52_Mammoth_Character_BP_C",
+			"dinoNameTag": "Mammoth",
+			"customTag": "Mammoth",
+			"targetingTeamName": "Herbivores",
+			"mass": 340,
+			"dragWeight": 400,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 62 },
+			"cloning": {
+				"costBase": 1550,
+				"costLevel": 55,
+				"timeBase": 10850,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 360 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 500,
+				"attacks": [
+					{ "name": "Tusk Attacks", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 },
+					{ "name": "Trunk Grab", "interval": 1.5, "dmg": 0, "radius": 500, "stamina": 0 },
+					{ "name": "Trumpet", "interval": 60, "dmg": 0, "radius": 0, "stamina": 200 },
+					{ "name": "Swimming Attack", "interval": 1, "dmg": 48, "radius": 500, "stamina": 20 },
+					{ "name": "Stomp", "interval": 1.5, "dmg": 69, "radius": 800, "stamina": 40 },
+					{ "name": "Carried Tusk Swipe", "interval": 0.5, "dmg": 48, "radius": 500, "stamina": 20 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_MammothSaddle_C",
+					"PrimalItemArmor_MetalShield_C",
+					"PrimalItem_PoisonGrenade_C",
+					"PrimalItem_Mammoth_DHW_C"
+				],
+				"baseXP": 8
+			}
+		},
+		{
+			"name": "Terror Bird Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/53_TerrorBird_Character_BP.53_TerrorBird_Character_BP_C",
+			"dinoNameTag": "TerrorBird",
+			"customTag": "TerrorBird",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 37 },
+			"cloning": {
+				"costBase": 900,
+				"costLevel": 55,
+				"timeBase": 6300,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 229.8, "sprint": 1080.2 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 255.4, "sprint": 1200.2 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 18,
+				"defaultSwingRadius": 110,
+				"attacks": [ { "name": "Melee", "interval": 0.05, "dmg": 18, "radius": 110, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_TerrorBirdSaddle_C",
+					"PrimalItemStructure_MetalPipeIntake_C",
+					"PrimalItemStructure_MetalPipeTap_C",
+					"PrimalItem_Terror_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Diplodocus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/54_Diplodocus_Character_BP.54_Diplodocus_Character_BP_C",
+			"dinoNameTag": "Diplo",
+			"customTag": "Diplo",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 384,
+			"dragWeight": 575,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 1350 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 300, "sprint": 1350 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 1000,
+				"attacks": [ { "name": "melee", "interval": 0.1, "dmg": 60, "radius": 650, "stamina": 10 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Sauro.DinoDropInventoryComponent_Carnivore_Huge_Sauro"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_DiplodocusSaddle_C",
+					"PrimalItemStructure_MetalPipeVertical_C",
+					"PrimalItemStructure_MetalPipeIncline_C",
+					"PrimalItemStructure_MetalPipeStraight_C",
+					"PrimalItemStructure_MetalPipeIntersection_C",
+					"PrimalItemStructure_PipeFlex_Metal_C",
+					"PrimalItem_Diplo_DHW_C"
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Doedicurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/55_Doed_Character_BP.55_Doed_Character_BP_C",
+			"dinoNameTag": "Doed",
+			"customTag": "Doed",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 160,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 83 },
+			"cloning": {
+				"costBase": 2075,
+				"costLevel": 55,
+				"timeBase": 14525,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 86, "sprint": 258 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 142,
+				"attacks": [
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 32, "radius": 142, "stamina": 0 },
+					{ "name": "None", "interval": 0.67, "dmg": 16, "radius": 142, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 32, "radius": 142, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_DoedSaddle_C",
+					"PrimalItemWeaponAttachment_Silencer_C",
+					"PrimalItemStructure_WaterTankMetal_C",
+					"PrimalItem_Doed_DHW_C"
+				],
+				"baseXP": 7
+			}
+		},
+		{
+			"name": "Sarco Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/56_Sarco_Character_BP.56_Sarco_Character_BP_C",
+			"dinoNameTag": "Sarco",
+			"customTag": "Sarco",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 220,
+			"dragWeight": 200,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 23 },
+			"cloning": {
+				"costBase": 550,
+				"costLevel": 55,
+				"timeBase": 3850,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 437.4 },
+				"swim": { "base": 750, "sprint": 1093.5 }
+			},
+			"movementD": {
+				"walk": { "base": 165, "sprint": 601.4 },
+				"swim": { "base": 825, "sprint": 1503.6 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 35,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.1, "dmg": 35, "radius": 160, "stamina": 10 },
+					{ "name": "Roll", "interval": 10, "dmg": 45, "radius": 160, "stamina": 95 },
+					{ "name": "Lunge", "interval": 1, "dmg": 40, "radius": 210, "stamina": 125 },
+					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 35, "radius": 160, "stamina": 30 },
+					{ "name": "MeleeLeft", "interval": 0.1, "dmg": 35, "radius": 160, "stamina": 35 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Sarco.DinoDropInventoryComponent_Carnivore_Large_Sarco"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_SarcoSaddle_C",
+					"PrimalItemStructure_GreenhouseCeiling_C",
+					"PrimalItemStructure_GreenhouseDoor_C",
+					"PrimalItemStructure_GreenhouseRoof_C",
+					"PrimalItemStructure_GreenhouseWall_C",
+					"PrimalItemStructure_GreenhouseWallWithDoor_C",
+					"PrimalItem_Sarco_DHW_C"
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Ankylosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/57_Ankylo_Character_BP.57_Ankylo_Character_BP_C",
+			"dinoNameTag": "Anky",
+			"customTag": "Anky",
+			"targetingTeamName": "Herbivores",
+			"mass": 300,
+			"dragWeight": 160,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 93 },
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 264 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -3,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 370,
+				"attacks": [
+					{ "name": "WalkingAndSwimmingTail", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.67, "dmg": 30, "radius": 250, "stamina": 0 },
+					{ "name": "NotWalkingNotSwimmingTailAttack", "interval": 0.67, "dmg": 50, "radius": 370, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [ "PrimalItemArmor_AnkyloSaddle_C", "PrimalItem_WeaponHarpoon_C", "PrimalItem_WeaponTripwireC4_C", "PrimalItem_Ankylo_DHW_C" ],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Sabertooth Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/58_Saber_Character_BP.58_Saber_Character_BP_C",
+			"dinoNameTag": "Sabertooth",
+			"customTag": "Sabertooth",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 49 },
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 25,
+				"maxSpeed": 1850
+			},
+			"movementW": {
+				"walk": { "base": 230, "sprint": 920 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 1150 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 207, "sprint": 1035 },
+				"swim": { "base": 270 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 29,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 29, "radius": 160, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_SaberSaddle_C",
+					"PrimalItemStructure_GreenhouseWall_Sloped_Left_C",
+					"PrimalItemStructure_GreenhouseWall_Sloped_Right_C",
+					"PrimalItem_Saber_DHW_C"
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Pteranodon Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/59_Ptero_Character_BP.59_Ptero_Character_BP_C",
+			"dinoNameTag": "Ptera",
+			"customTag": "Ptera",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 79 },
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 260, "sprint": 715 },
+				"fly": { "base": 600, "sprint": 1650 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 822.2 },
+				"fly": { "base": 600, "sprint": 1897.5 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 273, "sprint": 781.3 },
+				"fly": { "base": 630, "sprint": 1803.1 },
+				"swim": { "base": 630 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
+					{ "name": "Barrel Roll", "interval": 0.6, "dmg": 50, "radius": 260, "stamina": 90 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_PteroSaddle_C",
+					"PrimalItemStructure_GreenhouseRoof_C",
+					"PrimalItemStructure_GreenhouseWindow_C",
+					"PrimalItemStructure_TriRoof_Greenhouse_C",
+					"PrimalItem_Ptera_DHW_C"
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Microraptor Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/60_Microraptor_Character_BP.60_Microraptor_Character_BP_C",
+			"dinoNameTag": "Microraptor",
+			"customTag": "Microraptor",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 70,
+			"dragWeight": 35,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 35 },
+			"cloning": {
+				"costBase": 850,
+				"costLevel": 55,
+				"timeBase": 5950,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 135, "sprint": 1125 },
+				"fly": { "base": 135, "sprint": 562.5 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 150, "sprint": 900 },
+				"fly": { "base": 150, "sprint": 450 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 8, "radius": 120, "stamina": 0 },
+					{ "name": "AirAttack(Dismount)", "interval": 0.5, "dmg": 8, "radius": 290, "stamina": 0 },
+					{ "name": "GlideAttackStart", "interval": 4, "dmg": 8, "radius": 120, "stamina": 0 },
+					{ "name": "JumpAttack", "interval": 5, "dmg": 8, "radius": 150, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_MetalWall_C",
+					"PrimalItemStructure_MetalFloor_C",
+					"PrimalItemStructure_MetalWallWithDoor_C",
+					"PrimalItemStructure_MetalDoor_C",
+					"PrimalItemStructure_MetalCeiling_C",
+					"PrimalItem_Microraptor_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Troodon Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/61_Troodon_E_Character_BP.61_Troodon_E_Character_BP_C",
+			"dinoNameTag": "Troodon",
+			"customTag": "Troodon",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 816 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 7,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Attack With Debuff", "interval": 0.25, "dmg": 7, "radius": 110, "stamina": 0 },
+					{ "name": "Jump", "interval": 5, "dmg": 7, "radius": 110, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.01,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small_Dilo.DinoDropInventoryComponent_Carnivore_Small_Dilo"
+					}
+				],
+				"engrams": [
+					"PrimalItemStructure_MetalRailing_C",
+					"PrimalItemStructure_MetalWindow_C",
+					"PrimalItemStructure_MetalWallWithWindow_C",
+					"PrimalItemStructure_MetalPillar_C",
+					"PrimalItem_Troodon_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Eurypterid Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/62_Euryp_Character.62_Euryp_Character_C",
+			"dinoNameTag": "Euryp",
+			"customTag": "Euryp",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 50,
+			"dragWeight": 30,
+			"flags": [ "isWaterDino" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 90, "sprint": 405 }
+			},
+			"movementD": {
+				"walk": { "base": 90, "sprint": 405 }
+			},
+			"staminaRates": { "sprint": -5 },
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 175,
+				"attacks": [ { "name": "Melee", "interval": 0.3, "dmg": 7, "radius": 175, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_TriCeiling_Metal_C",
+					"PrimalItemStructure_TriFoundation_Metal_C",
+					"PrimalItemStructure_MetalSign_Large_C",
+					"PrimalItemStructure_MetalStairs_C",
+					"PrimalItem_Euryp_DHW_C",
+					"PrimalItem_6_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Kaprosuchus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/63_Kaprosuchus_Character_BP.63_Kaprosuchus_Character_BP_C",
+			"dinoNameTag": "Kaprosuchus",
+			"customTag": "Kaprosuchus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 410,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 41 },
+			"cloning": {
+				"costBase": 1000,
+				"costLevel": 55,
+				"timeBase": 7000,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 180, "sprint": 675 },
+				"swim": { "base": 220, "sprint": 552.8 }
+			},
+			"movementD": {
+				"walk": { "base": 180, "sprint": 675 },
+				"swim": { "base": 220, "sprint": 552.8 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 120,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.5, "dmg": 25, "radius": 140, "stamina": 0 },
+					{ "name": "LeapAttack", "interval": 5, "dmg": 45, "radius": 140, "stamina": 80 },
+					{ "name": "Grab", "interval": 8, "dmg": 1, "radius": 140, "stamina": 35 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_KaprosuchusSaddle_C",
+					"PrimalItemStructure_MetalWall_Sloped_Left_C",
+					"PrimalItemStructure_MetalWall_Sloped_Right_C",
+					"PrimalItemStructure_MetalRoof_C",
+					"PrimalItem_Kapro_DHW_C"
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Araneo Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/64_SpiderS_Character_BP.64_SpiderS_Character_BP_C",
+			"dinoNameTag": "Spider",
+			"customTag": "Spider",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 90,
+			"dragWeight": 90,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 5 },
+			"cloning": {
+				"costBase": 100,
+				"costLevel": 55,
+				"timeBase": 700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 200, "sprint": 400 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 160, "sprint": 320 },
+				"swim": { "base": 160 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 145,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.3, "dmg": 10, "radius": 145, "stamina": 0 },
+					{
+						"name": "Web Cone", "interval": 12, "dmg": 0, "radius": 0, "stamina": 30,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_SpiderSaddle_C",
+					"PrimalItemStructure_Ramp_Metal_C",
+					"PrimalItemStructure_MetalRamp_C",
+					"PrimalItemStructure_MetalCatwalk_C",
+					"PrimalItem_Spider_DH__C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Purlovia Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/65_Purlovia_Character_BP.65_Purlovia_Character_BP_C",
+			"dinoNameTag": "Purlovia",
+			"customTag": "Purlovia",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 230, "sprint": 1035 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 1035 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 36,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.6, "dmg": 32, "radius": 280, "stamina": 0 },
+					{ "name": "Surprise Attack Short", "interval": 0.5, "dmg": 32, "radius": 400, "stamina": 0 },
+					{ "name": "Surprise Attack Medium", "interval": 0.5, "dmg": 32, "radius": 130, "stamina": 0 },
+					{ "name": "Surprise Attack Long", "interval": 0.5, "dmg": 32, "radius": 130, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemResource_Polymer_C",
+					"PrimalItemStructure_MetalTrapdoor_C",
+					"PrimalItemStructure_MetalCeilingWithTrapdoor_C",
+					"PrimalItemResource_Electronics_C",
+					"PrimalItem_Purlovia_DHW_C"
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Beelzebufo Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/66_Toad_Character_BP.66_Toad_Character_BP_C",
+			"dinoNameTag": "Toad",
+			"customTag": "Toad",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 120,
+			"dragWeight": 110,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 57 },
+			"cloning": {
+				"costBase": 1425,
+				"costLevel": 55,
+				"timeBase": 9975,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 66,
+				"maxSpeed": 1770
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 800 },
+				"swim": { "base": 700 }
+			},
+			"movementD": {
+				"walk": { "base": 340, "sprint": 680 },
+				"swim": { "base": 595 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 144,
+				"attacks": [
+					{ "name": "None", "interval": 0.1, "dmg": 12, "radius": 144, "stamina": 0 },
+					{ "name": "None", "interval": 0.1, "dmg": 20, "radius": 144, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_ToadSaddle_C",
+					"PrimalItemStructure_TriRoof_Metal_C",
+					"PrimalItemAmmo_GrapplingHook_C",
+					"PrimalItemStructure_FenceSupport_Metal_C",
+					"PrimalItemStructure_StorageBox_SmallAmo8_DHW_C",
+					"PrimalItem_Toad_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Ammonite Savante",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/67_Ammonite_Character.67_Ammonite_Character_C",
+			"dinoNameTag": "Ammonite",
+			"customTag": "Ammonite",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 50,
+			"dragWeight": 30,
+			"flags": [ "allowRiding", "isWaterDino", "dieIfLeftWater" ],
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 340.2 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 540 }
+			},
+			"staminaRates": { "sprint": -5 },
+			"attack": {
+				"defaultDmg": 8,
+				"defaultSwingRadius": 175,
+				"attacks": [ { "name": "CallForHelp", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemStructure_MetalLadder_C",
+					"PrimalItemStructure_MetalSign_Wall_C",
+					"PrimalItemStructure_LamppostOmni_C",
+					"PrimalItem_Ammonite_DHW_C",
+					"PrimalItemStructure_Lamppost_C",
+					"PrimalItem_7_DHW_C"
+				],
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Chalicotherium Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/68_Chalico_Character_BP.68_Chalico_Character_BP_C",
+			"dinoNameTag": "Chalico",
+			"customTag": "Chalico",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 225,
+			"dragWeight": 300,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 28 },
+			"cloning": {
+				"costBase": 675,
+				"costLevel": 55,
+				"timeBase": 4725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 210, "sprint": 850.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 210, "sprint": 850.5 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 36,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "Melee Hand", "interval": 1, "dmg": 36, "radius": 400, "stamina": 0 },
+					{
+						"name": "Throw Boulder", "interval": 5, "dmg": 32, "radius": 400, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "Melee Bite", "interval": 0.63, "dmg": 32, "radius": 400, "stamina": 0 },
+					{
+						"name": "Throw Mud", "interval": 3, "dmg": 32, "radius": 400, "stamina": 75,
+						"isProjectile": true
+					},
+					{
+						"name": "Throw Snow", "interval": 3, "dmg": 32, "radius": 400, "stamina": 75,
+						"isProjectile": true
+					},
+					{
+						"name": "Throw Mud Friendly", "interval": 3, "dmg": 32, "radius": 400, "stamina": 75,
+						"isProjectile": true
+					},
+					{
+						"name": "Throw Snow Friendly", "interval": 3, "dmg": 32, "radius": 400, "stamina": 75,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_ChalicoSaddle_C",
+					"PrimalItemStructure_Fabricator_C",
+					"PrimalItemStructure_LargeWall_Metal_C",
+					"PrimalItem_Chalico_DHW_C"
+				],
+				"baseXP": 6
+			}
+		},
+		{
+			"name": "Pelagornis Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/69_Pela_Character_BP.69_Pela_Character_BP_C",
+			"dinoNameTag": "Pela",
+			"customTag": "Pela",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 120,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 44 },
+			"cloning": {
+				"costBase": 1075,
+				"costLevel": 55,
+				"timeBase": 7525,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 132, "sprint": 229.6 },
+				"fly": { "base": 600, "sprint": 1043.5 },
+				"swim": { "base": 330, "sprint": 573.9 }
+			},
+			"movementD": {
+				"walk": { "base": 132, "sprint": 264 },
+				"fly": { "base": 600, "sprint": 1200 },
+				"swim": { "base": 330, "sprint": 660 }
+			},
+			"movementR": {
+				"walk": { "base": 126.7, "sprint": 248.4 },
+				"fly": { "base": 576, "sprint": 1129 },
+				"swim": { "base": 316.8, "sprint": 620.9 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 16,
+				"defaultSwingRadius": 170,
+				"attacks": [ { "name": "None", "interval": 0.6, "dmg": 16, "radius": 170, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_PelaSaddle_C",
+					"PrimalItemStructure_PowerCableIncline_C",
+					"PrimalItemStructure_PowerCableStraight_C",
+					"PrimalItemStructure_PowerCableVertical_C",
+					"PrimalItemStructure_Wire_Flex_C",
+					"PrimalItemStructure_PowerCableIntersection_C",
+					"PrimalItem_Pela_DHW_C"
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Ours sinistre Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/70_Direbear_Character_BP.70_Direbear_Character_BP_C",
+			"dinoNameTag": "Direbear",
+			"customTag": "Direbear",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 330,
+			"dragWeight": 295,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 66 },
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 142.5, "sprint": 961.9 },
+				"swim": { "base": 270 }
+			},
+			"movementD": {
+				"walk": { "base": 104.5, "sprint": 1149.5 },
+				"swim": { "base": 198 }
+			},
+			"movementR": {
+				"walk": { "base": 104.5, "sprint": 2620.9 },
+				"swim": { "base": 198 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 55,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "None", "interval": 0.22, "dmg": 50, "radius": 260, "stamina": 0 },
+					{ "name": "None", "interval": 0.22, "dmg": 65, "radius": 260, "stamina": 0 },
+					{ "name": "None", "interval": 0.22, "dmg": 0, "radius": 260, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_DireBearSaddle_C",
+					"PrimalItemStructure_PowerOutlet_C",
+					"PrimalItemStructure_PowerGenerator_C",
+					"PrimalItemStructure_Bed_Modern_C",
+					"PrimalItem_Direbear_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Dunkleosteus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/71_Dunkle_Character_BP.71_Dunkle_Character_BP_C",
+			"dinoNameTag": "Dunkle",
+			"customTag": "Dunkle",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 44 },
+			"cloning": {
+				"costBase": 1075,
+				"costLevel": 55,
+				"timeBase": 7525,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 546, "sprint": 928.2 },
+				"swim": { "base": 546 }
+			},
+			"movementD": {
+				"walk": { "base": 713.7, "sprint": 1213.3 },
+				"swim": { "base": 713.7 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 350,
+				"attacks": [ { "name": "None", "interval": 0.33, "dmg": 60, "radius": 350, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_DunkleosteusSaddle_C",
+					"PrimalItemStructure_MetalSign_C",
+					"PrimalItem_Camera_C",
+					"PrimalItemConsumable_CanteenCraftable_C",
+					"PrimalItem_Dunkleo_DHW_C"
+				],
+				"baseXP": 12
+			}
+		},
+		{
+			"name": "Carnotaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/72_Carno_Character_BP.72_Carno_Character_BP_C",
+			"dinoNameTag": "Carno",
+			"customTag": "Carno",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 27 },
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 425, "sprint": 892.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 35, "radius": 110, "stamina": 0 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 35, "radius": 120, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_CarnoSaddle_C",
+					"PrimalItemStructure_DoubleDoor_Greenhouse_C",
+					"PrimalItemStructure_DoubleDoorframe_Greenhouse_C",
+					"PrimalItem_WeaponSprayPaint_C",
+					"PrimalItem_Carno_DHW_C"
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Paraceratherium Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/73_Paracer_Character_BP.73_Paracer_Character_BP_C",
+			"dinoNameTag": "Paracer",
+			"customTag": "Paracer",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 360,
+			"dragWeight": 600,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 66 },
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 715 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -12,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 550,
+				"attacks": [ { "name": "melee", "interval": 0.375, "dmg": 45, "radius": 550, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_Paracer_Saddle_C",
+					"PrimalItemArmor_ParacerSaddle_Platform_C",
+					"PrimalItemStructure_Grill_C",
+					"PrimalItem_Paracer_DHW_C"
+				],
+				"baseXP": 12
+			}
+		},
+		{
+			"name": "Megalodon Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/74_Megalodon_Character_BP.74_Megalodon_Character_BP_C",
+			"dinoNameTag": "Mega",
+			"customTag": "Megalodon",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 38 },
+			"cloning": {
+				"costBase": 925,
+				"costLevel": 55,
+				"timeBase": 6475,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 570.4 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 2070 },
+				"swim": { "base": 900 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 190,
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 40, "radius": 190, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Mega.DinoDropInventoryComponent_Carnivore_Huge_Mega"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_MegalodonSaddle_C",
+					"PrimalItemRadio_C",
+					"PrimalItemStructure_WarMap_C",
+					"PrimalItemAmmo_ChainBola_C",
+					"PrimalItem_Megalodon_DHW_C"
+				],
+				"baseXP": 12
+			}
+		},
+		{
+			"name": "Baryonyx Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/75_Baryonyx_Character_BP.75_Baryonyx_Character_BP_C",
+			"dinoNameTag": "Baryonyx",
+			"customTag": "Baryonyx",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 210,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 52 },
+			"cloning": {
+				"costBase": 1300,
+				"costLevel": 55,
+				"timeBase": 9100,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 400, "sprint": 1470 }
+			},
+			"movementD": {
+				"walk": { "base": 400, "sprint": 1323 }
+			},
+			"movementR": {
+				"walk": { "base": 400, "sprint": 1164.2 }
+			},
+			"staminaRates": { "sprint": -6 },
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.15, "dmg": 35, "radius": 250, "stamina": 0 },
+					{ "name": "SwimStun", "interval": 7, "dmg": 25, "radius": 300, "stamina": 20 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_BaryonyxSaddle_C",
+					"PrimalItem_WeaponEmptyCryopod_C",
+					"PrimalItemStructure_CryoFridge_C",
+					"PrimalItem_WeaponGPS_C",
+					"PrimalItem_Baryonyx_DHW_C"
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Thylacoleo Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/76_Thylacoleo_Character_BP.76_Thylacoleo_Character_BP_C",
+			"dinoNameTag": "Thylacoleo",
+			"customTag": "Thylacoleo",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 180,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 51 },
+			"cloning": {
+				"costBase": 1250,
+				"costLevel": 55,
+				"timeBase": 8750,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 1900
+			},
+			"movementW": {
+				"walk": { "base": 184, "sprint": 1150 },
+				"swim": { "base": 480 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 1150 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Claw", "interval": 0.2, "dmg": 40, "radius": 250, "stamina": 0 },
+					{ "name": "Release", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 160, "stamina": 0 },
+					{ "name": "Pounce", "interval": 0, "dmg": 30, "radius": 0, "stamina": 0 },
+					{ "name": "Maul", "interval": 0, "dmg": 40, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium_Thylaco.DinoDropInventoryComponent_Carnivore_Medium_Thylaco"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_ThylacoSaddle_C",
+					"PrimalItemStructure_MetalGate_C",
+					"PrimalItemStructure_MetalGateframe_C",
+					"PrimalItemWeaponAttachment_Flashlight_C",
+					"PrimalItem_Thyla_DHW_C"
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Megatherium Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/77_Megatherium_Character_BP.77_Megatherium_Character_BP_C",
+			"dinoNameTag": "Megatherium",
+			"customTag": "Megatherium",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 330,
+			"dragWeight": 295,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 224, "sprint": 1280 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 320, "sprint": 960 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "ClawOrBite", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Slam", "interval": 0.22, "dmg": 49, "radius": 500, "stamina": 0 },
+					{ "name": "Claw", "interval": 0.4, "dmg": 32, "radius": 300, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 32, "radius": 300, "stamina": 0 },
+					{ "name": "Water Bite", "interval": 0.4, "dmg": 32, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_MegatheriumSaddle_C",
+					"PrimalItemStructure_DoubleDoor_Metal_C",
+					"PrimalItemStructure_DoubleDoorframe_Metal_C",
+					"PrimalItemStructure_Keypad_C",
+					"PrimalItem_Megaterium_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Woolly Rhino Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/78_Rhino_Character_BP.78_Rhino_Character_BP_C",
+			"dinoNameTag": "Rhino",
+			"customTag": "Rhino",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 330,
+			"dragWeight": 375,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 40 },
+			"cloning": {
+				"costBase": 975,
+				"costLevel": 55,
+				"timeBase": 6825,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 138.8, "sprint": 936.6 },
+				"swim": { "base": 225 }
+			},
+			"movementD": {
+				"walk": { "base": 101.8, "sprint": 1119.3 },
+				"swim": { "base": 165 }
+			},
+			"movementR": {
+				"walk": { "base": 101.8, "sprint": 2238.6 },
+				"swim": { "base": 165 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 430,
+				"attacks": [ { "name": "None", "interval": 0.22, "dmg": 40, "radius": 430, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Rhino.DinoDropInventoryComponent_Rhino"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_RhinoSaddle_C",
+					"PrimalItemStructure_MetalTrapdoorGiant_C",
+					"PrimalItemStructure_MetalCeilingWithTrapdoorGiant_C",
+					"PrimalItemMotorboat_C",
+					"PrimalItem_Rhino_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Arthropluera Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/79_Arthro_Character_BP.79_Arthro_Character_BP_C",
+			"dinoNameTag": "Arthro",
+			"customTag": "Arthro",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 160,
+			"dragWeight": 110,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 21 },
+			"cloning": {
+				"costBase": 500,
+				"costLevel": 55,
+				"timeBase": 3500,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 225, "sprint": 486 },
+				"swim": { "base": 400 }
+			},
+			"movementD": {
+				"walk": { "base": 225, "sprint": 394.9 },
+				"swim": { "base": 400 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 18,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.67, "dmg": 18, "radius": 160, "stamina": 0 },
+					{
+						"name": "Ranged", "interval": 8, "dmg": 0, "radius": 0, "stamina": 20,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Dinohunterworld/Dinos/Autre/Inventory/DinoDropInventoryComponent_arthro_DHW.DinoDropInventoryComponent_arthro_DHW"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_ArthroSaddle_C",
+					"PrimalItemArmor_MetalBoots_C",
+					"PrimalItemArmor_MetalGloves_C",
+					"PrimalItemArmor_MetalHelmet_C",
+					"PrimalItemArmor_MetalShirt_C",
+					"PrimalItemArmor_MetalPants_C",
+					"PrimalItemArmor_ChitinBoots_DHW_C",
+					"PrimalItemArmor_ChitinGloves_DHW_C",
+					"PrimalItemArmor_ChitinHelmet_DHW_C",
+					"PrimalItemArmor_ChitinPants_DHW_C",
+					"PrimalItemArmor_ChitinShirt_DHW_C",
+					"PrimalItemArmor_LegendaryPants_DHW_C",
+					"PrimalItem_Arthro_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Tapejara Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/80_Tapejara_Character_BP.80_Tapejara_Character_BP_C",
+			"dinoNameTag": "Tapejara",
+			"customTag": "Tapejara",
+			"targetingTeamName": "Herbivores_Medium_Aggressive",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 862.4 },
+				"fly": { "base": 700, "sprint": 2464 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 245, "sprint": 392 },
+				"fly": { "base": 700, "sprint": 1120 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 275.6, "sprint": 441 },
+				"fly": { "base": 787.5, "sprint": 1260 },
+				"swim": { "base": 337.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Bite II", "interval": 1, "dmg": 18, "radius": 200, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_TapejaraSaddle_C",
+					"PrimalItem_WeaponMachinedShotgun_C",
+					"PrimalItem_WeaponMachinedPistol_C",
+					"PrimalItemAmmo_AdvancedBullet_C",
+					"PrimalItemStructure_StorageBox_SmallAmo9_DHW_C",
+					"PrimalItem_8_DHW_C",
+					"PrimalItem_Tapejara_DHW_C"
+				],
+				"baseXP": 3
+			}
+		},
+		{
+			"name": "Megalosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/81_Megalosaurus_Character_BP.81_Megalosaurus_Character_BP_C",
+			"dinoNameTag": "Megalosaurus",
+			"customTag": "Megalosaurus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 222,
+			"dragWeight": 410,
+			"flags": [
+				"allowCarryFlyerDinos",
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 35 },
+			"cloning": {
+				"costBase": 850,
+				"costLevel": 55,
+				"timeBase": 5950,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 270, "sprint": 1092 },
+				"swim": { "base": 135 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1260 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Bite (Night)", "interval": 0.2, "dmg": 94, "radius": 220, "stamina": 5 },
+					{ "name": "GrabChomp (Night)  (Player)", "interval": 3, "dmg": 1, "radius": 200, "stamina": 30 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 110, "stamina": 5 },
+					{ "name": "ShakePrey  (Night)", "interval": 2, "dmg": 100, "radius": 0, "stamina": 5 },
+					{ "name": "Bite (Day)", "interval": 0.2, "dmg": 75, "radius": 220, "stamina": 45 },
+					{ "name": "GrabChomp (Day) (Player)", "interval": 5, "dmg": 1, "radius": 200, "stamina": 50 },
+					{ "name": "ShakePrey  (Day)", "interval": 3, "dmg": 80, "radius": 0, "stamina": 10 },
+					{ "name": "GrabChomp (Night) (AI)", "interval": 3, "dmg": 13, "radius": 220, "stamina": 30 },
+					{ "name": "GrabChomp (Day) (AI)", "interval": 5, "dmg": 10, "radius": 220, "stamina": 50 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_MegalosaurusSaddle_C",
+					"PrimalItemStructure_MetalTrapdoorGiant_C",
+					"PrimalItemStructure_MetalCeilingWithTrapdoorGiant_C",
+					"PrimalItemWeaponAttachment_Laser_C",
+					"PrimalItem_Megalosaurus_DHW_C"
+				],
+				"baseXP": 25
+			}
+		},
+		{
+			"name": "Daeodon Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/82_Daeodon_Character_BP.82_Daeodon_Character_BP_C",
+			"dinoNameTag": "Daeodon",
+			"customTag": "Daeodon",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 160, "sprint": 848 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 160, "sprint": 848 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 29,
+				"defaultSwingRadius": 160,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 29, "radius": 160, "stamina": 0 },
+					{ "name": "Group Healing", "interval": 0.4, "dmg": 29, "radius": 160, "stamina": 10 },
+					{ "name": "Group Healing Wild", "interval": 20, "dmg": 29, "radius": 160, "stamina": 10 },
+					{ "name": "Passive Healing", "interval": 0.4, "dmg": 29, "radius": 160, "stamina": 10 },
+					{ "name": "Short Attack Healing", "interval": 0.4, "dmg": 29, "radius": 160, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_DaeodonSaddle_C",
+					"PrimalItemStructure_MetalGate_Large_C",
+					"PrimalItemStructure_MetalGateframe_Large_C",
+					"PrimalItemAmmo_AdvancedRifleBullet_C",
+					"PrimalItem_WeaponRifle_C",
+					"PrimalItemStructure_StorageBox_SmallAmo10_DHW_C",
+					"PrimalItem_Daeodon_DHW_C"
+				],
+				"baseXP": 5
+			}
+		},
+		{
+			"name": "Basilosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/83_Basilosaurus_Character_BP.83_Basilosaurus_Character_BP_C",
+			"dinoNameTag": "Basilosaurus",
+			"customTag": "Basilosaurus",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 12000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 75 },
+			"cloning": {
+				"costBase": 1875,
+				"costLevel": 55,
+				"timeBase": 13125,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 420 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 675, "sprint": 1350 },
+				"swim": { "base": 675 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 100,
+				"defaultSwingRadius": 650,
+				"attacks": [
+					{ "name": "lunge", "interval": 0.3, "dmg": 47, "radius": 650, "stamina": 0 },
+					{ "name": "BlowAir", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Basilo.DinoDropInventoryComponent_Basilo"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_BasiloSaddle_C",
+					"PrimalItemStructure_IceBox_C",
+					"PrimalItemStructure_AirConditioner_C",
+					"PrimalItemArmor_MinersHelmet_C",
+					"PrimalItem_Basilo_DHW_C"
+				],
+				"baseXP": 15
+			}
+		},
+		{
+			"name": "Castoroides Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/84_Beaver_Character_BP.84_Beaver_Character_BP_C",
+			"dinoNameTag": "Beaver",
+			"customTag": "Beaver",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 300,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isAmphibious",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 84 },
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 160, "sprint": 561.6 },
+				"swim": { "base": 700 }
+			},
+			"movementD": {
+				"walk": { "base": 160, "sprint": 432 },
+				"swim": { "base": 700 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 28,
+				"defaultSwingRadius": 240,
+				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 28, "radius": 240, "stamina": 0 } ]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_BeaverSaddle_C",
+					"PrimalItemStructure_TreePlatform_Metal_C",
+					"PrimalItemStructure_Grinder_C",
+					"PrimalItem_Castor_DHW_C"
+				],
+				"baseXP": 4
+			}
+		},
+		{
+			"name": "Argentavis Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/85_Argent_Character_BP.85_Argent_Character_BP_C",
+			"dinoNameTag": "Argent",
+			"customTag": "Argent",
+			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
+			"mass": 190,
+			"dragWeight": 150,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 68 },
+			"cloning": {
+				"costBase": 1700,
+				"costLevel": 55,
+				"timeBase": 11900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 260, "sprint": 315.3 },
+				"fly": { "base": 600, "sprint": 727.5 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 260, "sprint": 585 },
+				"fly": { "base": 600, "sprint": 1350 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 284, "sprint": 639.1 },
+				"fly": { "base": 655.5, "sprint": 1474.9 },
+				"swim": { "base": 655.5 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 25,
+				"defaultSwingRadius": 210,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 25, "radius": 240, "stamina": 0 },
+					{ "name": "GrabClaws", "interval": 4, "dmg": 12, "radius": 400, "stamina": 120 },
+					{ "name": "GrabBeak", "interval": 4, "dmg": 12, "radius": 300, "stamina": 120 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Argentavis.DinoDropInventoryComponent_Carnivore_Large_Argentavis"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_ArgentavisSaddle_C",
+					"PrimalItem_WeaponC4_C",
+					"PrimalItemStructure_Turret_C",
+					"PrimalItemC4Ammo_C",
+					"PrimalItemStructure_StorageBox_SmallAmo12_DHW_C",
+					"PrimalItem_85Argentavis_DHW_C"
+				],
+				"baseXP": 7
+			}
+		},
+		{
+			"name": "Allosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/86_Allo_Character_BP.86_Allo_Character_BP_C",
+			"dinoNameTag": "Allo",
+			"customTag": "Allo",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 222,
+			"dragWeight": 285,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 53 },
+			"cloning": {
+				"costBase": 1325,
+				"costLevel": 55,
+				"timeBase": 9275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 650, "sprint": 1404 }
+			},
+			"movementD": {
+				"walk": { "base": 650, "sprint": 1579.5 }
+			},
+			"staminaRates": { "sprint": -22 },
+			"attack": {
+				"defaultDmg": 35,
+				"defaultSwingRadius": 275,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 35, "radius": 275, "stamina": 10 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 25, "radius": 275, "stamina": 30 },
+					{ "name": "Roar", "interval": 0.5, "dmg": 35, "radius": 0, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 35, "radius": 275, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_Allo.DinoDropInventoryComponent_Carnivore_Large_Allo"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_AlloSaddle_C",
+					"PrimalItemTransGPSAmmo_C",
+					"PrimalItem_WeaponTransGPS_C",
+					"PrimalItemStructure_ElevatorPlatformSmall_C",
+					"PrimalItem_Allo_DHW_C"
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Therizinosaur Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/87_Therizino_Character_BP.87_Therizino_Character_BP_C",
+			"dinoNameTag": "Therizinosaurus",
+			"customTag": "Therizinosaurus",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 94 },
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 466, "sprint": 978.6 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 466, "sprint": 1304.8 },
+				"swim": { "base": 300 }
+			},
+			"movementR": {
+				"walk": { "base": 466, "sprint": 1109.1 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 52,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "ClawAttack", "interval": 0.4, "dmg": 52, "radius": 225, "stamina": 0 },
+					{ "name": "ClawHarvest", "interval": 0.4, "dmg": 5, "radius": 250, "stamina": 0 },
+					{ "name": "BiteHarvest", "interval": 4, "dmg": 52, "radius": 225, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_TickleChicken.DinoDropInventoryComponent_Carnivore_TickleChicken"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_TherizinosaurusSaddle_C",
+					"PrimalItemStructure_ElevatorTrackBase_C",
+					"PrimalItemStructure_ElevatorPlatfromMedium_C",
+					"PrimalItemStructure_ElevatorPlatformLarge_C",
+					"PrimalItem_Theri_DHW_C"
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Spino Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/88_Spino_Character_BP.88_Spino_Character_BP_C",
+			"dinoNameTag": "Spino",
+			"customTag": "Spino",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 40, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Dinohunterworld/Dinos/Autre/Inventory/DinoDropInventoryComponent_Carnivore_Huge_Spino_DHW.DinoDropInventoryComponent_Carnivore_Huge_Spino_DHW"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_SpinoSaddle_C",
+					"PrimalItemArmor_ScubaBoots_Flippers_C",
+					"PrimalItemArmor_ScubaHelmet_Goggles_C",
+					"PrimalItemArmor_ScubaPants_C",
+					"PrimalItemArmor_ScubaShirt_SuitWithTank_C",
+					"PrimalItemArmor_MetalBoots_DHW_C",
+					"PrimalItemArmor_MetalGloves_DHW_C",
+					"PrimalItemArmor_MetalHelmet_DHW_C",
+					"PrimalItemArmor_MetalPants_DHW_C",
+					"PrimalItemArmor_MetalShirt_DHW_C",
+					"PrimalItemArmor_LegendaryHelmet_DHW_C",
+					"PrimalItem_Spino_DHW_C"
+				],
+				"baseXP": 60
+			}
+		},
+		{
+			"name": "Megalania Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/89_Megalania_Character_BP.89_Megalania_Character_BP_C",
+			"dinoNameTag": "Megalania",
+			"customTag": "Megalania",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 85 },
+			"cloning": {
+				"costBase": 2125,
+				"costLevel": 55,
+				"timeBase": 14875,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 10,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 250, "sprint": 625 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 312.5, "sprint": 500 },
+				"swim": { "base": 375 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 10, "radius": 275, "stamina": 20 },
+					{ "name": "Detach", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (Climbing)", "interval": 0.5, "dmg": 10, "radius": 275, "stamina": 20 },
+					{ "name": "Claw", "interval": 1, "dmg": 16, "radius": 300, "stamina": 30 },
+					{ "name": "Bite (Swimming)", "interval": 0.5, "dmg": 10, "radius": 275, "stamina": 20 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_MegalaniaSaddle_C",
+					"PrimalItemAmmo_TranqSpearBolt_C",
+					"PrimalItemStructure_StorageBox_Huge_C",
+					"PrimalItemWeaponAttachment_HoloScope_C",
+					"PrimalItemStructure_StorageBox_SmallAmo13_DHW_C",
+					"PrimalItem_Megalania_DHW_C",
+					"PrimalItem_9_DHW_C"
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Brontosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/90_Sauropod_Character_BP.90_Sauropod_Character_BP_C",
+			"dinoNameTag": "Bronto",
+			"customTag": "Bronto",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 500,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 79 },
+			"cloning": {
+				"costBase": 1975,
+				"costLevel": 55,
+				"timeBase": 13825,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 150, "sprint": 607.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 180, "sprint": 405 },
+				"swim": { "base": 360 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 1000,
+				"attacks": [
+					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 700, "stamina": 0 },
+					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 900, "stamina": 0 },
+					{ "name": "melee", "interval": 1.2, "dmg": 60, "radius": 1000, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Sauro.DinoDropInventoryComponent_Carnivore_Huge_Sauro"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_SauroSaddle_C",
+					"PrimalItemArmor_SauroSaddle_Platform_C",
+					"PrimalItem_WeaponCompoundBow_C",
+					"PrimalItemAmmo_CompoundBowArrow_C",
+					"PrimalItemAmmo_CompoundBowArrow_C",
+					"PrimalItemStructure_StorageBox_SmallAmo14_DHW_C",
+					"PrimalItem_Bronto_DHW_C"
+				],
+				"baseXP": 22
+			}
+		},
+		{
+			"name": "Rex Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/91_Rex_Character_BP.91_Rex_Character_BP_C",
+			"dinoNameTag": "Rex",
+			"customTag": "Rex",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 87 },
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 515, "sprint": 736.4 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 515, "sprint": 1104.7 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 },
+					{ "name": "Roar", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Bite (AI)", "interval": 0.4, "dmg": 62, "radius": 300, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Rex.DinoDropInventoryComponent_Carnivore_Huge_Rex"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_RexSaddle_C",
+					"PrimalItemStructure_IndustrialForge_C",
+					"PrimalItemAmmo_AdvancedSniperBullet_C",
+					"PrimalItem_WeaponMachinedSniper_C",
+					"PrimalItemStructure_StorageBox_SmallAmo15_DHW_C",
+					"PrimalItem_Rex_DHW_C"
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Plesiosaur Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/92_Plesiosaur_Character_BP.92_Plesiosaur_Character_BP_C",
+			"dinoNameTag": "Plesiosaur",
+			"customTag": "Plesiosaur",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 43 },
+			"cloning": {
+				"costBase": 1050,
+				"costLevel": 55,
+				"timeBase": 7350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 1200 },
+				"swim": { "base": 800 }
+			},
+			"movementD": {
+				"walk": { "base": 1800, "sprint": 3600 },
+				"swim": { "base": 1800 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 60,
+				"defaultSwingRadius": 250,
+				"attacks": [ { "name": "None", "interval": 0.55, "dmg": 75, "radius": 250, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Fireworks.DinoDropInventoryComponent_Fireworks"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_PlesiaSaddle_C",
+					"PrimalItemArmor_PlesiSaddle_Platform_C",
+					"PrimalItemStructure_ChemBench_C",
+					"PrimalItemResource_SubstrateAbsorbent_C",
+					"PrimalItemArmor_GasMask_C",
+					"PrimalItem_Plesio_DHW_C"
+				],
+				"baseXP": 15
+			}
+		},
+		{
+			"name": "Yutyrannus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/93_Yutyrannus_Character_BP.93_Yutyrannus_Character_BP_C",
+			"dinoNameTag": "Yutyrannus",
+			"customTag": "Yutyrannus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 94 },
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 1610 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 1610 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 55, "radius": 500, "stamina": 10 },
+					{ "name": "Fear", "interval": 1, "dmg": 1, "radius": 1500, "stamina": 250 },
+					{ "name": "Courage", "interval": 1, "dmg": 1, "radius": 1500, "stamina": 250 },
+					{ "name": "CourageToFollowers", "interval": 25, "dmg": 1, "radius": 1500, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Yuty.DinoDropInventoryComponent_Carnivore_Huge_Yuty"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_YutySaddle_C",
+					"PrimalItemArmor_NightVisionGoggles_C",
+					"PrimalItem_WeaponRocketLauncher_C",
+					"PrimalItemAmmo_Rocket_C",
+					"PrimalItemStructure_StorageBox_SmallAmo16_DHW_C",
+					"PrimalItem_Yutyrannus_DHW_C"
+				],
+				"baseXP": 30
+			}
+		},
+		{
+			"name": "Quetzal Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/94_Quetz_Character_BP.94_Quetz_Character_BP_C",
+			"dinoNameTag": "Quetz",
+			"customTag": "Quetz",
+			"targetingTeamName": "Herbivores",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 98 },
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 478.8, "sprint": 1149.1 },
+				"fly": { "base": 665, "sprint": 1596 },
+				"swim": { "base": 665 }
+			},
+			"movementD": {
+				"walk": { "base": 360, "sprint": 684 },
+				"fly": { "base": 500, "sprint": 950 },
+				"swim": { "base": 500 }
+			},
+			"movementR": {
+				"walk": { "base": 320.4, "sprint": 578.3 },
+				"fly": { "base": 445, "sprint": 803.2 },
+				"swim": { "base": 445 }
+			},
+			"staminaRates": {
+				"sprint": -7,
+				"swimOrFly": -0.185
+			},
+			"attack": {
+				"defaultDmg": 32,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "None", "interval": 0.6, "dmg": 32, "radius": 720, "stamina": 16 },
+					{ "name": "None", "interval": 1, "dmg": 32, "radius": 370, "stamina": 80 }
+				]
+			},
+			"death": {
+				"engrams": [
+					"PrimalItemArmor_QuetzSaddle_C",
+					"PrimalItemArmor_QuetzSaddle_Platform_C",
+					"PrimalItemStructure_IndustrialCookingPot_C",
+					"PrimalItemAmmo_AggroTranqDart_C",
+					"PrimalItemArmor_TransparentRiotShield_C",
+					"PrimalItem_Quetzal_DHW_C"
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Mosasaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/95_Mosa_Character_BP.95_Mosa_Character_BP_C",
+			"dinoNameTag": "Mosasaur",
+			"customTag": "Mosasaur",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 899,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 88 },
+			"cloning": {
+				"costBase": 2200,
+				"costLevel": 55,
+				"timeBase": 15400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1100, "sprint": 1540 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 1760, "sprint": 3520 },
+				"swim": { "base": 1760 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 100,
+				"defaultSwingRadius": 930,
+				"attacks": [ { "name": "None", "interval": 0.3, "dmg": 100, "radius": 930, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Fireworks.DinoDropInventoryComponent_Fireworks"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_MosaSaddle_C",
+					"PrimalItemArmor_MosaSaddle_Platform_C",
+					"PrimalItemStructure_SeaMine_C",
+					"PrimalItemStructure_TurretMinigun_C",
+					"PrimalItemAmmo_RefinedTranqDart_C",
+					"PrimalItem_Mosa_DHW_C",
+					"PrimalItem_clé_DHW_C"
+				],
+				"baseXP": 15
+			}
+		},
+		{
+			"name": "Tusoteuthis Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/96_Tusoteuthis_Character_BP.96_Tusoteuthis_Character_BP_C",
+			"dinoNameTag": "Tusoteuthis",
+			"customTag": "Tusoteuthis",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 1500,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 87 },
+			"cloning": {
+				"costBase": 2175,
+				"costLevel": 55,
+				"timeBase": 15225,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 5000, "sprint": 7500 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 5000, "sprint": 7500 },
+				"swim": { "base": 600 }
+			},
+			"movementR": {
+				"walk": { "base": 5000, "sprint": 6750 },
+				"swim": { "base": 600 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Tentaslap", "interval": 0, "dmg": 65, "radius": 1200, "stamina": 10 },
+					{ "name": "Grab Prey", "interval": 1.5, "dmg": 2, "radius": 1200, "stamina": 25 },
+					{ "name": "Ink", "interval": 60, "dmg": 0, "radius": 0, "stamina": 50 },
+					{ "name": "Crush Prey", "interval": 0, "dmg": 100, "radius": 0, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/Dinos/Tusoteuthis/DinoDropInventoryComponent_Carnivore_Tusoteuthis.DinoDropInventoryComponent_Carnivore_Tusoteuthis"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_TusoSaddle_C",
+					"PrimalItemArmor_RiotBoots_C",
+					"PrimalItemArmor_RiotGloves_C",
+					"PrimalItemArmor_RiotHelmet_C",
+					"PrimalItemArmor_RiotPants_C",
+					"PrimalItemArmor_RiotShirt_C",
+					"PrimalItem_Tuso_DHW_C"
+				],
+				"baseXP": 100
+			}
+		},
+		{
+			"name": "Giganotosaurus Savant",
+			"bp": "/Game/Mods/Dinohunterworld/Dinos/Savant/97_Gigant_Character_BP.97_Gigant_Character_BP_C",
+			"dinoNameTag": "Gigant",
+			"customTag": "Gigant",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 950,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 99 },
+			"cloning": {
+				"costBase": 2475,
+				"costLevel": 55,
+				"timeBase": 17325,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 60,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 1050, "sprint": 1681.7 }
+			},
+			"movementD": {
+				"walk": { "base": 1050, "sprint": 1681.7 }
+			},
+			"staminaRates": { "sprint": -29 },
+			"attack": {
+				"defaultDmg": 300,
+				"defaultSwingRadius": 850,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 1000, "radius": 850, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Dinohunterworld/Dinos/Autre/Inventory/DinoDropInventoryComponent_Carnivore_Huge_Gigant_DHW.DinoDropInventoryComponent_Carnivore_Huge_Gigant_DHW"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_GigantSaddle_C",
+					"PrimalItem_WeaponProd_C",
+					"PrimalItemStructure_TurretRocket_C",
+					"PrimalItemStructure_HeavyTurret_C",
+					"PrimalItemArmor_Legendaryshirt_DHW_C",
+					"PrimalItemArmor_RiotBoots_DHW_C",
+					"PrimalItemArmor_RiotGloves_DHW_C",
+					"PrimalItemArmor_RiotHelmet_DHW_C",
+					"PrimalItemArmor_RiotPants_DHW_C",
+					"PrimalItemArmor_RiotShirt_DHW_C",
+					"PrimalItem_Gigano_DHW_C"
+				],
+				"baseXP": 200
+			}
+		}
+	]
+}
