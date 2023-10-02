@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.11.1695446237",
+	"version": "358.17.1696230212",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -4418,6 +4418,70 @@
 					"PrimalItem_Spawner_HoverSkiff_C"
 				],
 				"baseXP": 2
+			}
+		},
+		{
+			"name": "Spino",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Miniboss/Ottersaurus_Character_BP_Omega.Ottersaurus_Character_BP_Omega_C",
+			"dinoNameTag": "Ottersaurus",
+			"customTag": "Ottersaurus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 500,
+			"dragWeight": 550,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"movementD": {
+				"walk": { "base": 452, "sprint": 1717.6 },
+				"swim": { "base": 1100 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 50,
+				"defaultSwingRadius": 420,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 40, "radius": 420, "stamina": 10 },
+					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
+					{ "name": "Roar", "interval": 6, "dmg": 0, "radius": 0, "stamina": 160 },
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Spino.DinoDropInventoryComponent_Carnivore_Huge_Spino"
+					}
+				],
+				"baseXP": 60
 			}
 		},
 		{
