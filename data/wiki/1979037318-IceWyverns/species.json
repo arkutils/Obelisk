@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.11.1695151363",
+	"version": "358.17.1696373342",
 	"format": "4",
 	"mod": {
 		"id": "1979037318",
@@ -7481,7 +7481,6 @@
 				"isBigDino",
 				"isCarnivore",
 				"isFlyerDino",
-				"preventCharacterBasing",
 				"isTameable"
 			],
 			"leveling": {
@@ -7621,18 +7620,20 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1050, "sprint": 3003 }
+				"walk": { "base": 840, "sprint": 2100 }
 			},
 			"movementD": {
-				"walk": { "base": 1050, "sprint": 3003 }
+				"walk": { "base": 840, "sprint": 2100 }
 			},
 			"staminaRates": { "sprint": -25 },
 			"attack": {
 				"defaultDmg": 300,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 600, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 225, "radius": 500, "stamina": 350 },
+					{ "name": "None", "interval": 1, "dmg": 260, "radius": 500, "stamina": 350 }
 				]
 			},
 			"death": {
@@ -7675,18 +7676,20 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1050, "sprint": 3003 }
+				"walk": { "base": 840, "sprint": 2100 }
 			},
 			"movementD": {
-				"walk": { "base": 1050, "sprint": 3003 }
+				"walk": { "base": 840, "sprint": 2100 }
 			},
 			"staminaRates": { "sprint": -25 },
 			"attack": {
 				"defaultDmg": 300,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 600, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "TailSlam", "interval": 1, "dmg": 225, "radius": 500, "stamina": 350 },
+					{ "name": "Stomp", "interval": 30, "dmg": 260, "radius": 500, "stamina": 350 }
 				]
 			},
 			"death": {
@@ -7729,18 +7732,20 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1050, "sprint": 3003 }
+				"walk": { "base": 840, "sprint": 2100 }
 			},
 			"movementD": {
-				"walk": { "base": 1050, "sprint": 3003 }
+				"walk": { "base": 840, "sprint": 2100 }
 			},
 			"staminaRates": { "sprint": -50 },
 			"attack": {
 				"defaultDmg": 300,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 600, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "TailSlam", "interval": 1, "dmg": 225, "radius": 500, "stamina": 350 },
+					{ "name": "Stomp", "interval": 30, "dmg": 260, "radius": 500, "stamina": 350 }
 				]
 			},
 			"death": {
@@ -7783,18 +7788,20 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1050, "sprint": 3003 }
+				"walk": { "base": 840, "sprint": 2100 }
 			},
 			"movementD": {
-				"walk": { "base": 1050, "sprint": 3003 }
+				"walk": { "base": 840, "sprint": 2100 }
 			},
 			"staminaRates": { "sprint": -50 },
 			"attack": {
 				"defaultDmg": 300,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 850, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 120, "radius": 600, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "TailSlam", "interval": 1, "dmg": 225, "radius": 500, "stamina": 350 },
+					{ "name": "Stomp", "interval": 30, "dmg": 260, "radius": 500, "stamina": 350 }
 				]
 			},
 			"death": {
@@ -12301,6 +12308,86 @@
 					}
 				],
 				"baseXP": 30
+			}
+		},
+		{
+			"name": "Rhyniognatha",
+			"bp": "/Game/Mods/IceWyverns/InnerData/Rhynio/Rhynio_Character_BP_Shad.Rhynio_Character_BP_Shad_C",
+			"dinoNameTag": "Rhynio",
+			"customTag": "Rhynio",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"leveling": { "mutagenCost": 98 },
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 950, "sprint": 2968.8 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 950, "sprint": 2968.8 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.6, "dmg": 62, "radius": 300, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 300, "stamina": 60 },
+					{ "name": "Taunt", "interval": 30, "dmg": 0, "radius": 0, "stamina": 60 },
+					{
+						"name": "Resin Ball", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Glob", "interval": 4, "dmg": 0, "radius": 0, "stamina": 7.5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Bomb", "interval": 8, "dmg": 0, "radius": 0, "stamina": 10,
+						"isProjectile": true
+					},
+					{ "name": "Impregnate", "interval": 30, "dmg": 55, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1231,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/Dinos/Rhyniognatha/DinoDropInventoryComponent_Carnivore_Rhynio.DinoDropInventoryComponent_Carnivore_Rhynio"
+					}
+				],
+				"baseXP": 3
 			}
 		},
 		{
