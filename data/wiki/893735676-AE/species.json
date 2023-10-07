@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.10.1691991018",
+	"version": "358.17.1696662074",
 	"format": "4",
 	"mod": {
 		"id": "893735676",
@@ -6440,6 +6440,96 @@
 					}
 				],
 				"baseXP": 96
+			}
+		},
+		{
+			"name": "Eternal Alpha Rhyniognatha",
+			"bp": "/Game/Mods/AE/Dinos/Alpha/Rhynio/Rhynio_Character_BP_Alpha.Rhynio_Character_BP_Alpha_C",
+			"dinoNameTag": "Rhynio_Alpha_AE",
+			"customTag": "Rhynio",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 950, "sprint": 2375 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 950, "sprint": 2375 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 1500,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.6, "dmg": 1500, "radius": 300, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 300, "stamina": 60 },
+					{ "name": "Taunt", "interval": 30, "dmg": 0, "radius": 0, "stamina": 60 },
+					{
+						"name": "Resin Ball", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Glob", "interval": 4, "dmg": 0, "radius": 0, "stamina": 7.5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Bomb", "interval": 8, "dmg": 0, "radius": 0, "stamina": 10,
+						"isProjectile": true
+					},
+					{ "name": "Impregnate", "interval": 30, "dmg": 1500, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1231,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/PrimalEarth/Dinos/Rhyniognatha/DinoDropInventoryComponent_Carnivore_Rhynio.DinoDropInventoryComponent_Carnivore_Rhynio"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 3
 			}
 		},
 		{
@@ -24538,24 +24628,24 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 65,
+				"defaultDmg": 6500000,
 				"defaultSwingRadius": 1200,
 				"attacks": [
-					{ "name": "BiteAttack", "interval": 0.7, "dmg": 450000, "radius": 2400, "stamina": 0 },
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 4500000, "radius": 2400, "stamina": 0 },
 					{
-						"name": "Web Attack", "interval": 25, "dmg": 32000, "radius": 2400, "stamina": 7500,
+						"name": "Web Attack", "interval": 25, "dmg": 3200000, "radius": 2400, "stamina": 7500,
 						"isProjectile": true
 					},
 					{ "name": "Tail Explosion", "interval": 30, "dmg": 1900000, "radius": 10000, "stamina": 15000 },
 					{
-						"name": "Tail spike", "interval": 10, "dmg": 32000, "radius": 2400, "stamina": 4500,
+						"name": "Tail spike", "interval": 10, "dmg": 3200000, "radius": 2400, "stamina": 4500,
 						"isProjectile": true
 					},
 					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 2400, "stamina": 0 },
 					{ "name": "Fireballs", "interval": 10, "dmg": 0, "radius": 0, "stamina": 15000 },
 					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 16000, "radius": 800, "stamina": 5 },
-					{ "name": "Tail swipe", "interval": 4, "dmg": 900000, "radius": 4000, "stamina": 30 },
-					{ "name": "Summon Minions", "interval": 20, "dmg": 11700, "radius": 1500, "stamina": 0 }
+					{ "name": "Tail swipe", "interval": 4, "dmg": 9000000, "radius": 4000, "stamina": 30 },
+					{ "name": "Summon Minions", "interval": 20, "dmg": 1170000, "radius": 1500, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -24563,27 +24653,27 @@
 				"lootBags": [
 					{
 						"chance": 0.166666667,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
 					},
 					{
 						"chance": 0.166666667,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
 					},
 					{
 						"chance": 0.166666667,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
 					},
 					{
 						"chance": 0.166666667,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
 					},
 					{
 						"chance": 0.166666667,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
 					},
 					{
 						"chance": 0.166666667,
-						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossGod.DinoDropInventoryComponent_EndBossGod"
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
 					}
 				],
 				"engrams": [
@@ -46657,6 +46747,374 @@
 			"death": { "baseXP": 0.5 }
 		},
 		{
+			"name": "DH Allosaurus",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/August/Alpha_Allo_Character_BP_DHlv2.Alpha_Allo_Character_BP_DHlv2_C",
+			"dinoNameTag": "Alpha_Allo",
+			"customTag": "Alpha_Allo",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 222,
+			"dragWeight": 440,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 15, "max": 19 },
+					{ "chance": 0.5, "min": 20, "max": 30 }
+				],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 975, "sprint": 2106 }
+			},
+			"movementD": {
+				"walk": { "base": 975, "sprint": 2369.2 }
+			},
+			"staminaRates": { "sprint": -22 },
+			"attack": {
+				"defaultDmg": 1050,
+				"defaultSwingRadius": 412.5,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 1050, "radius": 412.5, "stamina": 10 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 750, "radius": 412.5, "stamina": 30 },
+					{ "name": "Roar", "interval": 0.5, "dmg": 1050, "radius": 0, "stamina": 0 },
+					{ "name": "Bite", "interval": 0.5, "dmg": 1050, "radius": 412.5, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 108
+			}
+		},
+		{
+			"name": "DH Carno",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/August/Carno_Character_BP_DH1.Carno_Character_BP_DH1_C",
+			"dinoNameTag": "Carno_DHEvo1",
+			"customTag": "Carno",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildForcedLevel": 600,
+				"mutagenCost": 27
+			},
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 425, "sprint": 892.5 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 425, "sprint": 1190 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 42,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 35, "radius": 110, "stamina": 0 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 35, "radius": 120, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large.DinoDropInventoryComponent_Carnivore_Large"
+					}
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "DH DodoReaper",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/August/DH_DodoReaper_Character_BP_lvl4.DH_DodoReaper_Character_BP_lvl4_C",
+			"dinoNameTag": "DH_Dodoreaper",
+			"customTag": "IndominusDodoReaper",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 385,
+			"dragWeight": 525,
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"preventNeuter",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5, "min": 13, "max": 20 },
+					{ "chance": 0.5, "min": 21, "max": 30 }
+				],
+				"mutagenCost": 93
+			},
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 699, "sprint": 2621.2 },
+				"swim": { "base": 675, "sprint": 2531.2 }
+			},
+			"movementD": {
+				"walk": { "base": 1165, "sprint": 2330 },
+				"swim": { "base": 1125, "sprint": 2250 }
+			},
+			"movementR": {
+				"walk": { "base": 1165, "sprint": 2796 },
+				"swim": { "base": 1125, "sprint": 2700 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 4100,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 4500, "radius": 600, "stamina": 5 },
+					{
+						"name": "Web Attack", "interval": 7, "dmg": 3500, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Tail swipe", "interval": 6, "dmg": 4100, "radius": 1000, "stamina": 30 },
+					{
+						"name": "Tail spike", "interval": 5, "dmg": 3500, "radius": 600, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 3500, "radius": 600, "stamina": 0 },
+					{ "name": "Roar", "interval": 70, "dmg": 4500, "radius": 0, "stamina": 15 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 3200, "radius": 200, "stamina": 5 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 18
+			}
+		},
+		{
+			"name": "Dark Hierophant",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/August/DarkHierophant_Character_BP_Tamed.DarkHierophant_Character_BP_Tamed_C",
+			"dinoNameTag": "DarkHierophant_tamed",
+			"customTag": "DarkHierophant",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 525,
+			"variants": [ "Boss", "Tamed" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBossDino",
+				"isCarnivore",
+				"preventNeuter"
+			],
+			"cloning": {
+				"costBase": 2325,
+				"costLevel": 55,
+				"timeBase": 16275,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 20,
+				"maxSpeed": 2800
+			},
+			"movementW": {
+				"walk": { "base": 2796, "sprint": 4613.4 },
+				"swim": { "base": 1800, "sprint": 2970 }
+			},
+			"movementD": {
+				"walk": { "base": 1864, "sprint": 4100.8 },
+				"swim": { "base": 1200, "sprint": 2640 }
+			},
+			"movementR": {
+				"walk": { "base": 1864, "sprint": 3485.7 },
+				"swim": { "base": 1200, "sprint": 2244 }
+			},
+			"staminaRates": {
+				"sprint": -40,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 650000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "BiteAttack", "interval": 0.7, "dmg": 750000, "radius": 2400, "stamina": 0 },
+					{
+						"name": "Web Attack", "interval": 25, "dmg": 320000, "radius": 2400, "stamina": 7500,
+						"isProjectile": true
+					},
+					{ "name": "Tail Explosion", "interval": 30, "dmg": 190000, "radius": 10000, "stamina": 15000 },
+					{
+						"name": "Tail spike", "interval": 10, "dmg": 320000, "radius": 2400, "stamina": 4500,
+						"isProjectile": true
+					},
+					{ "name": "Impregnation", "interval": 5, "dmg": 10, "radius": 2400, "stamina": 0 },
+					{ "name": "Fireballs", "interval": 10, "dmg": 0, "radius": 0, "stamina": 15000 },
+					{ "name": "HatchlingBiteAttack", "interval": 0.7, "dmg": 16000, "radius": 800, "stamina": 5 },
+					{ "name": "Tail swipe", "interval": 4, "dmg": 900000, "radius": 4000, "stamina": 30 },
+					{ "name": "Summon Minions", "interval": 20, "dmg": 117000, "radius": 1500, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.166666667,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
+					},
+					{
+						"chance": 0.166666667,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
+					},
+					{
+						"chance": 0.166666667,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
+					},
+					{
+						"chance": 0.166666667,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
+					},
+					{
+						"chance": 0.166666667,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
+					},
+					{
+						"chance": 0.166666667,
+						"item": "/Game/Mods/AE/Dinos/EndBoss/DinoDropInventoryComponent_EndBossDHloot.DinoDropInventoryComponent_EndBossDHloot"
+					}
+				],
+				"baseXP": 5500
+			}
+		},
+		{
+			"name": "DH Giganotosaurus",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/August/Gigant_Character_BP_DHlvl3.Gigant_Character_BP_DHlvl3_C",
+			"dinoNameTag": "Prime_Gigant_DHLv3",
+			"customTag": "Alpha_Gigant",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 400,
+			"dragWeight": 4000,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 20, "max": 30 } ],
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 0.55,
+				"timeBase": 17.5,
+				"timeLevel": 3.85
+			},
+			"falling": {
+				"dmgMult": 3,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 2362.5, "sprint": 3783.8 }
+			},
+			"movementD": {
+				"walk": { "base": 2362.5, "sprint": 3783.8 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 4800,
+				"defaultSwingRadius": 850,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 4800, "radius": 850, "stamina": 0 },
+					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Gnash", "interval": 0.4, "dmg": 4800, "radius": 850, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Alpha/DinoDropInventoryComponent_Alpha.DinoDropInventoryComponent_Alpha"
+					}
+				],
+				"baseXP": 4800
+			}
+		},
+		{
 			"name": "Mini Overlord",
 			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/BaconMinion_Character_BP.BaconMinion_Character_BP_C",
 			"dinoNameTag": "Bacon_Overlord",
@@ -47487,15 +47945,15 @@
 				"defaultDmg": 450000,
 				"defaultSwingRadius": 3000,
 				"attacks": [
-					{ "name": "Melee Attack", "interval": 1, "dmg": 450000, "radius": 1700, "stamina": 25 },
-					{ "name": "Explosion Attack", "interval": 20, "dmg": 900000, "radius": 7500, "stamina": 25 },
+					{ "name": "Melee Attack", "interval": 1, "dmg": 75000, "radius": 1700, "stamina": 25 },
+					{ "name": "Explosion Attack", "interval": 2, "dmg": 1200000, "radius": 7500, "stamina": 25 },
 					{
-						"name": "ThrowRock", "interval": 11, "dmg": 450000, "radius": 3600, "stamina": 75,
+						"name": "ThrowRock", "interval": 2, "dmg": 900000, "radius": 3600, "stamina": 75,
 						"isProjectile": true
 					},
-					{ "name": "Swipe", "interval": 3, "dmg": 350000, "radius": 1800, "stamina": 25 },
+					{ "name": "Swipe", "interval": 3, "dmg": 700000, "radius": 1800, "stamina": 25 },
 					{ "name": "Summon Minions", "interval": 20, "dmg": 1, "radius": 1500, "stamina": 0 },
-					{ "name": "Knock Out Fliers", "interval": 30, "dmg": 450000, "radius": 15000, "stamina": 25 }
+					{ "name": "Knock Out Fliers", "interval": 5, "dmg": 900000, "radius": 15000, "stamina": 25 }
 				]
 			},
 			"death": {
@@ -47715,6 +48173,71 @@
 				]
 			},
 			"death": { "baseXP": 5500 }
+		},
+		{
+			"name": "Bacon Overlord's Daddy V2",
+			"bp": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/V2/BaconOverlord_Character_BP2.BaconOverlord_Character_BP2_C",
+			"dinoNameTag": "Bacon_Overlord_BossV2",
+			"customTag": "RockElemental",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1000,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canDrag",
+				"doStepDamage",
+				"isCarnivore"
+			],
+			"leveling": {
+				"wildForcedLevel": 1200,
+				"mutagenCost": 1
+			},
+			"cloning": {
+				"costBase": 2.5,
+				"costLevel": 5.5,
+				"timeBase": 17.5,
+				"timeLevel": 38.5
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 1920 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 1920 }
+			},
+			"staminaRates": { "sprint": -25 },
+			"attack": {
+				"defaultDmg": 40000000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Melee Attack", "interval": 1, "dmg": 7500000, "radius": 550, "stamina": 25 },
+					{
+						"name": "ThrowRock", "interval": 11, "dmg": 8000000, "radius": 1200, "stamina": 75,
+						"isProjectile": true
+					},
+					{ "name": "Swipe", "interval": 3, "dmg": 7500000, "radius": 600, "stamina": 25 },
+					{ "name": "Summon Minions", "interval": 3, "dmg": 0, "radius": 0, "stamina": 250 },
+					{ "name": "TargetProj", "interval": 15, "dmg": 0, "radius": 0, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/DinoDropInventoryComponent_EndBossBaconSdaddy.DinoDropInventoryComponent_EndBossBaconSdaddy"
+					},
+					{
+						"chance": 0.5,
+						"item": "/Game/Mods/AE/Dinos/Special/Tributes/BaconOverlord/MegaVersion/DinoDropInventoryComponent_EndBossBaconSdaddy.DinoDropInventoryComponent_EndBossBaconSdaddy"
+					}
+				],
+				"baseXP": 50
+			}
 		},
 		{
 			"name": "Grand Sarco",
