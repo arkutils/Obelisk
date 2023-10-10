@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1696230212",
+	"version": "358.17.1696837901",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -694,6 +694,55 @@
 			}
 		},
 		{
+			"name": "Alpha Dodo",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaDodo_Character_BP.MegaDodo_Character_BP_C",
+			"dinoNameTag": "Dodo",
+			"customTag": "Dodo",
+			"targetingTeamName": "Herbivores",
+			"mass": 50,
+			"dragWeight": 25,
+			"variants": [ "Alpha" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"allowRidingInWater",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 2 },
+			"cloning": {
+				"costBase": 25,
+				"costLevel": 27.5,
+				"timeBase": 175,
+				"timeLevel": 192.5
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 120, "sprint": 240 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 120, "sprint": 240 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": 10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 180,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 45, "radius": 180, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 0.5 }
+		},
+		{
 			"name": "Alpha Meganeura",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaDragonfly_Character_BP.MegaDragonfly_Character_BP_C",
 			"dinoNameTag": "Dragonfly",
@@ -1149,6 +1198,69 @@
 					{
 						"chance": 1,
 						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_RockDrake.DinoDropInventoryComponent_Carnivore_Large_RockDrake"
+					}
+				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Alpha Araneo",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaSpiderS_Character_BP.MegaSpiderS_Character_BP_C",
+			"dinoNameTag": "Spider",
+			"customTag": "Spider",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 90,
+			"dragWeight": 90,
+			"variants": [ "Alpha" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 5 },
+			"cloning": {
+				"costBase": 100,
+				"costLevel": 55,
+				"timeBase": 700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 300, "sprint": 600 },
+				"swim": { "base": 200 }
+			},
+			"movementD": {
+				"walk": { "base": 240, "sprint": 480 },
+				"swim": { "base": 160 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 100,
+				"defaultSwingRadius": 218,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.3, "dmg": 100, "radius": 218, "stamina": 0 },
+					{
+						"name": "Web Cone", "interval": 12, "dmg": 0, "radius": 0, "stamina": 30,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
 					}
 				],
 				"baseXP": 2
@@ -4421,13 +4533,14 @@
 			}
 		},
 		{
-			"name": "Spino",
+			"name": "Ottersaurus",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Boss/Miniboss/Ottersaurus_Character_BP_Omega.Ottersaurus_Character_BP_Omega_C",
 			"dinoNameTag": "Ottersaurus",
 			"customTag": "Ottersaurus",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 500,
 			"dragWeight": 550,
+			"variants": [ "Boss" ],
 			"flags": [
 				"allowRiding",
 				"canBeDragged",
@@ -4436,16 +4549,9 @@
 				"doStepDamage",
 				"isAmphibious",
 				"isBigDino",
-				"isCarnivore",
-				"isTameable"
+				"isBossDino",
+				"isCarnivore"
 			],
-			"leveling": { "mutagenCost": 67 },
-			"cloning": {
-				"costBase": 1675,
-				"costLevel": 55,
-				"timeBase": 11725,
-				"timeLevel": 385
-			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -4463,14 +4569,14 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 50,
+				"defaultDmg": 1080,
 				"defaultSwingRadius": 420,
 				"attacks": [
-					{ "name": "Spino Bite", "interval": 0.75, "dmg": 40, "radius": 420, "stamina": 10 },
+					{ "name": "Spino Bite", "interval": 0.75, "dmg": 1080, "radius": 420, "stamina": 10 },
 					{ "name": "Change Stance", "interval": 0, "dmg": 0, "radius": 100, "stamina": 0 },
 					{ "name": "Roar", "interval": 6, "dmg": 0, "radius": 0, "stamina": 160 },
-					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 },
-					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 60, "radius": 420, "stamina": 12 }
+					{ "name": "Spino Swipe Right", "interval": 0.75, "dmg": 1080, "radius": 420, "stamina": 12 },
+					{ "name": "Spino Swipe Left", "interval": 0.75, "dmg": 1080, "radius": 420, "stamina": 12 }
 				]
 			},
 			"death": {
@@ -6880,9 +6986,9 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 5,
-				"defaultSwingRadius": 90,
-				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 5, "radius": 90, "stamina": 0 } ]
+				"defaultDmg": 6,
+				"defaultSwingRadius": 120,
+				"attacks": [ { "name": "Melee", "interval": 0.25, "dmg": 6, "radius": 120, "stamina": 0 } ]
 			},
 			"death": { "baseXP": 0.5 }
 		},
@@ -10475,7 +10581,7 @@
 			},
 			"attack": {
 				"defaultDmg": 67,
-				"defaultSwingRadius": 90,
+				"defaultSwingRadius": 120,
 				"attacks": [
 					{ "name": "Melee", "interval": 0.9, "dmg": 67, "radius": 150, "stamina": 0 },
 					{ "name": "Roar", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 }
@@ -15293,7 +15399,60 @@
 				"swimOrFly": -3
 			},
 			"attack": {
-				"defaultDmg": 36,
+				"defaultDmg": 32,
+				"defaultSwingRadius": 430,
+				"attacks": [
+					{ "name": "Melee Bite", "interval": 0.6, "dmg": 32, "radius": 280, "stamina": 0 },
+					{ "name": "Surprise Attack Short", "interval": 0.5, "dmg": 32, "radius": 400, "stamina": 0 },
+					{ "name": "Surprise Attack Medium", "interval": 0.5, "dmg": 32, "radius": 130, "stamina": 0 },
+					{ "name": "Surprise Attack Long", "interval": 0.5, "dmg": 32, "radius": 130, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 6 }
+		},
+		{
+			"name": "Snow Purlovia",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Purlovia_Character_BP_Polar_Child.Purlovia_Character_BP_Polar_Child_C",
+			"dinoNameTag": "Purlovia",
+			"customTag": "Purlovia",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 225,
+			"dragWeight": 300,
+			"variants": [ "Child" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"allowRidingInWater",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 33 },
+			"cloning": {
+				"costBase": 800,
+				"costLevel": 55,
+				"timeBase": 5600,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 230, "sprint": 1035 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 230, "sprint": 1035 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -14,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 32,
 				"defaultSwingRadius": 430,
 				"attacks": [
 					{ "name": "Melee Bite", "interval": 0.6, "dmg": 32, "radius": 280, "stamina": 0 },
@@ -15629,6 +15788,88 @@
 					}
 				],
 				"baseXP": 4
+			}
+		},
+		{
+			"name": "Rhyniognatha",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Rhynio_Character_BP_Child.Rhynio_Character_BP_Child_C",
+			"dinoNameTag": "Rhynio",
+			"customTag": "Rhynio",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 500,
+			"variants": [ "Child" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 98 },
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 950, "sprint": 2375 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 950, "sprint": 2375 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 55,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.6, "dmg": 55, "radius": 300, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 300, "stamina": 60 },
+					{ "name": "Taunt", "interval": 30, "dmg": 0, "radius": 0, "stamina": 60 },
+					{
+						"name": "Resin Ball", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Glob", "interval": 4, "dmg": 0, "radius": 0, "stamina": 7.5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Bomb", "interval": 8, "dmg": 0, "radius": 0, "stamina": 10,
+						"isProjectile": true
+					},
+					{ "name": "Impregnate", "interval": 30, "dmg": 55, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1231,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/Dinos/Rhyniognatha/DinoDropInventoryComponent_Carnivore_Rhynio.DinoDropInventoryComponent_Carnivore_Rhynio"
+					}
+				],
+				"baseXP": 3
 			}
 		},
 		{
