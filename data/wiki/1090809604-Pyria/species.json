@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.11.1695406261",
+	"version": "358.17.1697371762",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -1774,9 +1774,9 @@
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 35, "radius": 250, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.4, "dmg": 35, "radius": 250, "stamina": 0 },
-					{ "name": "Melee", "interval": 15, "dmg": 35, "radius": 250, "stamina": 0 }
+					{ "name": "Melee", "interval": 0.4, "dmg": 15, "radius": 250, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 15, "radius": 250, "stamina": 0 },
+					{ "name": "Melee", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 3 }
@@ -1819,14 +1819,14 @@
 				"walk": { "base": 200 },
 				"swim": { "base": 300 }
 			},
-			"staminaRates": { "swimOrFly": 0 },
+			"staminaRates": { "swimOrFly": -3 },
 			"attack": {
 				"defaultDmg": 15,
 				"defaultSwingRadius": 65,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.4, "dmg": 35, "radius": 250, "stamina": 0 },
-					{ "name": "Melee", "interval": 0.4, "dmg": 35, "radius": 250, "stamina": 0 },
-					{ "name": "Melee", "interval": 15, "dmg": 35, "radius": 250, "stamina": 0 }
+					{ "name": "Melee", "interval": 0.4, "dmg": 15, "radius": 250, "stamina": 0 },
+					{ "name": "Melee", "interval": 0.4, "dmg": 15, "radius": 250, "stamina": 0 },
+					{ "name": "Melee", "interval": 15, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 3 }
@@ -3076,6 +3076,58 @@
 					}
 				],
 				"baseXP": 3
+			}
+		},
+		{
+			"name": "Warlord Grungyr, Champion of Unktehila",
+			"bp": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Enemy/Grungyr/Squatch_Character_BP_Grungyr.Squatch_Character_BP_Grungyr_C",
+			"dinoNameTag": "Bigfoot",
+			"customTag": "Offhand",
+			"targetingTeamName": "TargetOnlyPlayers",
+			"mass": 100,
+			"dragWeight": 300,
+			"variants": [ "Boss" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isBossDino" ],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 325, "sprint": 1950 },
+				"swim": { "base": 500 }
+			},
+			"movementD": {
+				"walk": { "base": 325, "sprint": 1950 },
+				"swim": { "base": 500 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "SwordSwings", "interval": 0, "dmg": 200, "radius": 350, "stamina": 0 },
+					{ "name": "TornadoSpin", "interval": 250, "dmg": 250, "radius": 350, "stamina": 250 },
+					{ "name": "ImpalePlayer", "interval": 60, "dmg": 1, "radius": 350, "stamina": 0 },
+					{ "name": "ChargeWeapon", "interval": 500, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "MonkeJump", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "SummonArmy", "interval": 80, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Teleport", "interval": 200, "dmg": 200, "radius": 350, "stamina": 500 },
+					{ "name": "TeleportSlam", "interval": 120, "dmg": 500, "radius": 400, "stamina": 0 },
+					{ "name": "BeegSlam", "interval": 300, "dmg": 500, "radius": 350, "stamina": 500 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Enemy/Grungyr/DinoDropInventoryComponent_Carnivore_Large_GSBossGrungyr.DinoDropInventoryComponent_Carnivore_Large_GSBossGrungyr"
+					}
+				],
+				"baseXP": 2
 			}
 		},
 		{
