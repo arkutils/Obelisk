@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1696837901",
+	"version": "358.17.1697907008",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -894,6 +894,52 @@
 			}
 		},
 		{
+			"name": "Alpha Maewing",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaMilkGlider_Character_BP.MegaMilkGlider_Character_BP_C",
+			"dinoNameTag": "Maewing",
+			"customTag": "Maewing",
+			"targetingTeamName": "Herbivores_Medium",
+			"mass": 300,
+			"dragWeight": 300,
+			"variants": [ "Alpha" ],
+			"flags": [ "allowRiding", "canBeDragged", "canBeTorpid", "isTameable" ],
+			"leveling": { "mutagenCost": 32 },
+			"cloning": {
+				"costBase": 775,
+				"costLevel": 55,
+				"timeBase": 5425,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 468.8, "sprint": 1718.8 },
+				"swim": { "base": 750, "sprint": 2750 }
+			},
+			"movementD": {
+				"walk": { "base": 468.8, "sprint": 1718.8 },
+				"swim": { "base": 750, "sprint": 2750 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.275
+			},
+			"attack": {
+				"defaultDmg": 100,
+				"defaultSwingRadius": 285,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.01, "dmg": 100, "radius": 285, "stamina": 0 },
+					{ "name": "BellyFlop", "interval": 0.01, "dmg": 100, "radius": 75, "stamina": 50 },
+					{ "name": "PickUp", "interval": 0.01, "dmg": 100, "radius": 600, "stamina": 0 },
+					{ "name": "Dive Bomb", "interval": 2, "dmg": 250, "radius": 1350, "stamina": 0 },
+					{ "name": "Fly Bite", "interval": 0.01, "dmg": 100, "radius": 375, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Alpha Otter",
 			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaOtter_Character_BP.MegaOtter_Character_BP_C",
 			"dinoNameTag": "Otter",
@@ -1200,6 +1246,61 @@
 						"item": "/Game/Aberration/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Large_RockDrake.DinoDropInventoryComponent_Carnivore_Large_RockDrake"
 					}
 				],
+				"baseXP": 2
+			}
+		},
+		{
+			"name": "Alpha Sinomacrops",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaSinomacrops_Character_BP.MegaSinomacrops_Character_BP_C",
+			"dinoNameTag": "Sino",
+			"customTag": "Sino",
+			"targetingTeamName": "Herbivores",
+			"mass": 70,
+			"dragWeight": 60,
+			"variants": [ "Alpha" ],
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canMountOnHumans",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 29 },
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 48, "sprint": 192 },
+				"fly": { "base": 450, "sprint": 1125 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 48, "sprint": 192 },
+				"fly": { "base": 450, "sprint": 1125 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 75,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 75, "radius": 300, "stamina": 0 },
+					{ "name": "Scream", "interval": 60, "dmg": 0, "radius": 300, "stamina": 12 }
+				]
+			},
+			"death": {
+				"dossierId": 1226,
 				"baseXP": 2
 			}
 		},
@@ -1663,6 +1764,64 @@
 					}
 				],
 				"baseXP": 890
+			}
+		},
+		{
+			"name": "Alpha Yutyrannus",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaYutyrannus_Character_BP.MegaYutyrannus_Character_BP_C",
+			"dinoNameTag": "Yutyrannus",
+			"customTag": "Yutyrannus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 5000,
+			"dragWeight": 500,
+			"variants": [ "Alpha" ],
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 94 },
+			"cloning": {
+				"costBase": 2350,
+				"costLevel": 55,
+				"timeBase": 16450,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 700, "sprint": 1610 }
+			},
+			"movementD": {
+				"walk": { "base": 700, "sprint": 1610 }
+			},
+			"staminaRates": { "sprint": -40 },
+			"attack": {
+				"defaultDmg": 275,
+				"defaultSwingRadius": 135,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 275, "radius": 750, "stamina": 10 },
+					{ "name": "Fear", "interval": 1, "dmg": 1, "radius": 2250, "stamina": 250 },
+					{ "name": "Courage", "interval": 1, "dmg": 1, "radius": 2250, "stamina": 250 },
+					{ "name": "CourageToFollowers", "interval": 25, "dmg": 1, "radius": 2250, "stamina": 0 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Yuty.DinoDropInventoryComponent_Carnivore_Huge_Yuty"
+					}
+				],
+				"baseXP": 30
 			}
 		},
 		{
@@ -15426,7 +15585,8 @@
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
-				"isCarnivore"
+				"isCarnivore",
+				"isTameable"
 			],
 			"leveling": { "mutagenCost": 33 },
 			"cloning": {
