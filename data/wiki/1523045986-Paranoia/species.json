@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "357.4.1679444826",
+	"version": "358.17.1698793027",
 	"format": "4",
 	"mod": {
 		"id": "1523045986",
@@ -1199,17 +1199,18 @@
 		{
 			"name": "Bunyip",
 			"bp": "/Game/Mods/Paranoia/Cryptids/bunyip/Bunyip_Character_BP.Bunyip_Character_BP_C",
-			"dinoNameTag": "Megatherium",
+			"dinoNameTag": "Bunyip",
 			"customTag": "Bunyip",
 			"targetingTeamName": "Carnivore_Water",
 			"mass": 330,
-			"dragWeight": 550,
+			"dragWeight": 800,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canBeTorpid",
 				"canDrag",
+				"doStepDamage",
 				"isAmphibious",
 				"isBigDino",
 				"isCarnivore",
@@ -1230,28 +1231,91 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 280, "sprint": 1360 },
-				"swim": { "base": 560 }
+				"walk": { "base": 385, "sprint": 1320 },
+				"swim": { "base": 700, "sprint": 1920 }
 			},
 			"movementD": {
-				"walk": { "base": 400, "sprint": 1360 },
-				"swim": { "base": 800 }
+				"walk": { "base": 550, "sprint": 2200 },
+				"swim": { "base": 1000, "sprint": 3200 }
 			},
 			"staminaRates": {
-				"sprint": -14,
+				"sprint": -75,
 				"swimOrFly": -3
 			},
 			"attack": {
 				"defaultDmg": 45,
-				"defaultSwingRadius": 260,
+				"defaultSwingRadius": 500,
 				"attacks": [
-					{ "name": "ClawOrBite", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Slam", "interval": 5, "dmg": 64, "radius": 500, "stamina": 0 },
-					{ "name": "Claw", "interval": 0.4, "dmg": 54, "radius": 350, "stamina": 0 },
-					{ "name": "Bite", "interval": 0.4, "dmg": 54, "radius": 380, "stamina": 0 },
-					{ "name": "Water Bite", "interval": 30, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Water Bite", "interval": 0.4, "dmg": 54, "radius": 400, "stamina": 0 },
-					{ "name": "Water Bite", "interval": 0.4, "dmg": 54, "radius": 400, "stamina": 0 }
+					{ "name": "Bite", "interval": 0.4, "dmg": 70, "radius": 500, "stamina": 0 },
+					{ "name": "Claws", "interval": 5, "dmg": 60, "radius": 500, "stamina": 0 },
+					{ "name": "Tail", "interval": 10, "dmg": 100, "radius": 500, "stamina": 125 },
+					{ "name": "SumoStompLeft", "interval": 20, "dmg": 180, "radius": 500, "stamina": 175 },
+					{ "name": "SumoStompRight", "interval": 10, "dmg": 180, "radius": 500, "stamina": 175 },
+					{ "name": "ThrashRight", "interval": 10, "dmg": 130, "radius": 500, "stamina": 225 },
+					{ "name": "ThrashLeft", "interval": 10, "dmg": 130, "radius": 500, "stamina": 225 },
+					{ "name": "Roars", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
+			"name": "Dreamtime Bunyip",
+			"bp": "/Game/Mods/Paranoia/Cryptids/bunyip/Bunyip_Character_BP_Dreamtime.Bunyip_Character_BP_Dreamtime_C",
+			"dinoNameTag": "Bunyip",
+			"customTag": "Bunyip",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 330,
+			"dragWeight": 800,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isAmphibious",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
+				"mutagenCost": 67
+			},
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 385, "sprint": 1320 },
+				"swim": { "base": 700, "sprint": 1920 }
+			},
+			"movementD": {
+				"walk": { "base": 550, "sprint": 2200 },
+				"swim": { "base": 1000, "sprint": 3200 }
+			},
+			"staminaRates": {
+				"sprint": -75,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 500,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.4, "dmg": 70, "radius": 500, "stamina": 0 },
+					{ "name": "Claws", "interval": 5, "dmg": 60, "radius": 500, "stamina": 0 },
+					{ "name": "Tail", "interval": 10, "dmg": 100, "radius": 500, "stamina": 125 },
+					{ "name": "SumoStompLeft", "interval": 20, "dmg": 180, "radius": 500, "stamina": 175 },
+					{ "name": "SumoStompRight", "interval": 10, "dmg": 180, "radius": 500, "stamina": 175 },
+					{ "name": "ThrashRight", "interval": 10, "dmg": 130, "radius": 500, "stamina": 225 },
+					{ "name": "ThrashLeft", "interval": 10, "dmg": 130, "radius": 500, "stamina": 225 },
+					{ "name": "Roars", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
 			"death": { "baseXP": 4 }
