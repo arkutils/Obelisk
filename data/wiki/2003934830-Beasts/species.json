@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.11.1692983778",
+	"version": "358.17.1699137788",
 	"format": "4",
 	"mod": {
 		"id": "2003934830",
@@ -912,6 +912,70 @@
 					}
 				],
 				"baseXP": 1
+			}
+		},
+		{
+			"name": "Dolichorhynchops",
+			"bp": "/Game/Mods/Beasts/Dolichorhynchops/BPs/Dolichorhynchops_Character_BP.Dolichorhynchops_Character_BP_C",
+			"dinoNameTag": "Dolichorhynchops",
+			"customTag": "Dolichorhynchops",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 75,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable",
+				"canBeWildTrappedWithFishBasket"
+			],
+			"leveling": { "mutagenCost": 66 },
+			"cloning": {
+				"costBase": 1650,
+				"costLevel": 55,
+				"timeBase": 11550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 600, "sprint": 720 },
+				"swim": { "base": 600 }
+			},
+			"movementD": {
+				"walk": { "base": 1350, "sprint": 2376 },
+				"swim": { "base": 1350 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 20,
+				"defaultSwingRadius": 140,
+				"attacks": [
+					{ "name": "Bite Add", "interval": 0.4, "dmg": 20, "radius": 250, "stamina": 10 },
+					{ "name": "Jump Air", "interval": 0, "dmg": 0, "radius": 0, "stamina": 10 },
+					{ "name": "Roar", "interval": 0.4, "dmg": 0, "radius": 0, "stamina": 5 },
+					{ "name": "BuckFeedResponse", "interval": 0.4, "dmg": 0, "radius": 300, "stamina": 0 },
+					{ "name": "Bite Full", "interval": 0.4, "dmg": 20, "radius": 250, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Beasts/Dolichorhynchops/BPs/DinoDropInventoryComponent_Doli.DinoDropInventoryComponent_Doli"
+					}
+				],
+				"baseXP": 4
 			}
 		},
 		{
@@ -4159,7 +4223,7 @@
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
 			"mass": 50,
 			"dragWeight": 20,
-			"flags": [ "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isTameable" ],
 			"leveling": { "mutagenCost": 8 },
 			"cloning": {
 				"costBase": 175,
@@ -4210,7 +4274,7 @@
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
 			"mass": 50,
 			"dragWeight": 20,
-			"flags": [ "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isTameable" ],
 			"leveling": { "mutagenCost": 8 },
 			"cloning": {
 				"costBase": 175,
@@ -4261,7 +4325,7 @@
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
 			"mass": 50,
 			"dragWeight": 20,
-			"flags": [ "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isTameable" ],
 			"leveling": { "mutagenCost": 8 },
 			"cloning": {
 				"costBase": 175,
@@ -4312,7 +4376,7 @@
 			"targetingTeamName": "Carnivores_Medium_TargetPlayerOrTamed",
 			"mass": 50,
 			"dragWeight": 20,
-			"flags": [ "canBeDragged", "canBeTorpid", "isTameable" ],
+			"flags": [ "canBeDragged", "canBeTorpid", "canMountOnHumans", "isTameable" ],
 			"leveling": { "mutagenCost": 8 },
 			"cloning": {
 				"costBase": 175,
