@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1697371762",
+	"version": "358.17.1700355701",
 	"format": "4",
 	"mod": {
 		"id": "1090809604",
@@ -3113,10 +3113,10 @@
 					{ "name": "ImpalePlayer", "interval": 60, "dmg": 1, "radius": 350, "stamina": 0 },
 					{ "name": "ChargeWeapon", "interval": 500, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "MonkeJump", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "SummonArmy", "interval": 80, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Teleport", "interval": 200, "dmg": 200, "radius": 350, "stamina": 500 },
+					{ "name": "SummonArmy", "interval": 60, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Teleport", "interval": 140, "dmg": 200, "radius": 350, "stamina": 500 },
 					{ "name": "TeleportSlam", "interval": 120, "dmg": 500, "radius": 400, "stamina": 0 },
-					{ "name": "BeegSlam", "interval": 300, "dmg": 500, "radius": 350, "stamina": 500 }
+					{ "name": "BeegSlam", "interval": 240, "dmg": 500, "radius": 350, "stamina": 500 }
 				]
 			},
 			"death": {
@@ -3127,7 +3127,7 @@
 						"item": "/Game/Mods/Pyria/Creatures/Ferals/Squatch/Enemy/Grungyr/DinoDropInventoryComponent_Carnivore_Large_GSBossGrungyr.DinoDropInventoryComponent_Carnivore_Large_GSBossGrungyr"
 					}
 				],
-				"baseXP": 2
+				"baseXP": 15000
 			}
 		},
 		{
@@ -5429,7 +5429,14 @@
 				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ]
+				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
+				"mutagenCost": 48
+			},
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
@@ -5490,6 +5497,13 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": { "mutagenCost": 48 },
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5549,6 +5563,13 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": { "mutagenCost": 48 },
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -5596,9 +5617,9 @@
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Briarwood/BriarKnight_Character_BP.BriarKnight_Character_BP_C",
 			"dinoNameTag": "SkeletalUndead",
 			"customTag": "Offhand",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -5607,51 +5628,37 @@
 				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
-				"mutagenCost": 24
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 34 } ],
+				"mutagenCost": 48
 			},
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
-				"dmgMult": 1,
+				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 1050 },
-				"swim": { "base": 300 }
+				"walk": { "base": 240, "sprint": 1020 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 1050 },
-				"swim": { "base": 300 }
+				"walk": { "base": 240, "sprint": 1020 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "MeleeBasic", "interval": 0.2, "dmg": 75, "radius": 400, "stamina": 0 },
-					{ "name": "MeleeAoE", "interval": 10, "dmg": 50, "radius": 400, "stamina": 0 },
-					{ "name": "MeleeKnockUp", "interval": 15, "dmg": 75, "radius": 320, "stamina": 0 },
-					{ "name": "RetreatingSlash", "interval": 18, "dmg": 75, "radius": 320, "stamina": 0 }
+					{ "name": "Melee Attacks", "interval": 0.2, "dmg": 62, "radius": 250, "stamina": 0 },
+					{ "name": "Retreating", "interval": 8, "dmg": 62, "radius": 250, "stamina": 25 },
+					{ "name": "RedoneSpin", "interval": 15, "dmg": 75, "radius": 400, "stamina": 250 },
+					{ "name": "Uppercut", "interval": 8, "dmg": 65, "radius": 250, "stamina": 25 }
 				]
 			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Creatures/Undead/Briarwood/DinoDropInventoryComponent_Pyria_Race_Undead_BriarwoodKnight.DinoDropInventoryComponent_Pyria_Race_Undead_BriarwoodKnight"
-					}
-				],
-				"baseXP": 3
-			}
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Briarwood Knight (E)",
@@ -5659,8 +5666,8 @@
 			"dinoNameTag": "SkeletalUndead",
 			"customTag": "Offhand",
 			"targetingTeamName": "TargetOnlyPlayers",
-			"mass": 165,
-			"dragWeight": 85,
+			"mass": 195,
+			"dragWeight": 120,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -5668,66 +5675,44 @@
 				"canDrag",
 				"isCarnivore"
 			],
-			"leveling": {
-				"wildLevelTable": [
-					{ "chance": 0.5405405, "min": 1, "max": 5 },
-					{ "chance": 0.2702703, "min": 6, "max": 12 },
-					{ "chance": 0.1351351, "min": 13, "max": 20 },
-					{ "chance": 0.05405405, "min": 21, "max": 38 }
-				],
-				"mutagenCost": 24
-			},
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
-				"dmgMult": 1,
+				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 1050 },
-				"swim": { "base": 300 }
+				"walk": { "base": 240, "sprint": 1020 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 1050 },
-				"swim": { "base": 300 }
+				"walk": { "base": 240, "sprint": 1020 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "MeleeBasic", "interval": 0.2, "dmg": 75, "radius": 400, "stamina": 0 },
-					{ "name": "MeleeAoE", "interval": 10, "dmg": 50, "radius": 400, "stamina": 0 },
-					{ "name": "MeleeKnockUp", "interval": 15, "dmg": 75, "radius": 320, "stamina": 0 },
-					{ "name": "RetreatingSlash", "interval": 18, "dmg": 75, "radius": 320, "stamina": 0 }
+					{ "name": "Melee Attacks", "interval": 0.2, "dmg": 62, "radius": 250, "stamina": 0 },
+					{ "name": "Retreating", "interval": 8, "dmg": 62, "radius": 250, "stamina": 25 },
+					{ "name": "RedoneSpin", "interval": 15, "dmg": 75, "radius": 400, "stamina": 250 },
+					{ "name": "Uppercut", "interval": 8, "dmg": 65, "radius": 250, "stamina": 25 }
 				]
 			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Creatures/Undead/Briarwood/DinoDropInventoryComponent_Pyria_Race_Undead_BriarwoodKnight.DinoDropInventoryComponent_Pyria_Race_Undead_BriarwoodKnight"
-					}
-				],
-				"baseXP": 3
-			}
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Briarwood Knight",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Briarwood/BriarKnight_Character_BP_Wild.BriarKnight_Character_BP_Wild_C",
 			"dinoNameTag": "SkeletalUndead",
 			"customTag": "Offhand",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
 			"flags": [
 				"allowMountedWeaponry",
 				"allowRiding",
@@ -5735,57 +5720,35 @@
 				"canDrag",
 				"isCarnivore"
 			],
-			"leveling": {
-				"wildLevelTable": [
-					{ "chance": 0.5405405, "min": 1, "max": 5 },
-					{ "chance": 0.2702703, "min": 6, "max": 12 },
-					{ "chance": 0.1351351, "min": 13, "max": 20 },
-					{ "chance": 0.05405405, "min": 21, "max": 38 }
-				],
-				"mutagenCost": 24
-			},
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
-				"dmgMult": 1,
+				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 1050 },
-				"swim": { "base": 300 }
+				"walk": { "base": 240, "sprint": 1020 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 1050 },
-				"swim": { "base": 300 }
+				"walk": { "base": 240, "sprint": 1020 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "MeleeBasic", "interval": 0.2, "dmg": 75, "radius": 400, "stamina": 0 },
-					{ "name": "MeleeAoE", "interval": 10, "dmg": 50, "radius": 400, "stamina": 0 },
-					{ "name": "MeleeKnockUp", "interval": 15, "dmg": 75, "radius": 320, "stamina": 0 },
-					{ "name": "RetreatingSlash", "interval": 18, "dmg": 75, "radius": 320, "stamina": 0 }
+					{ "name": "Melee Attacks", "interval": 0.2, "dmg": 62, "radius": 250, "stamina": 0 },
+					{ "name": "Retreating", "interval": 8, "dmg": 62, "radius": 250, "stamina": 25 },
+					{ "name": "RedoneSpin", "interval": 15, "dmg": 75, "radius": 400, "stamina": 250 },
+					{ "name": "Uppercut", "interval": 8, "dmg": 65, "radius": 250, "stamina": 25 }
 				]
 			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Creatures/Undead/Briarwood/DinoDropInventoryComponent_Pyria_Race_Undead_BriarwoodKnight.DinoDropInventoryComponent_Pyria_Race_Undead_BriarwoodKnight"
-					}
-				],
-				"baseXP": 3
-			}
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Dread Knight (Greatsword)",
@@ -5797,12 +5760,11 @@
 			"dragWeight": 250,
 			"flags": [
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
 				"isBigDino",
-				"isCarnivore",
-				"isTameable"
+				"isCarnivore"
 			],
 			"leveling": {
 				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
@@ -5819,17 +5781,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 215, "sprint": 1075 },
-				"swim": { "base": 300 }
+				"walk": { "base": 215, "sprint": 1075 }
 			},
 			"movementD": {
-				"walk": { "base": 215, "sprint": 1075 },
-				"swim": { "base": 300 }
+				"walk": { "base": 215, "sprint": 1075 }
 			},
-			"staminaRates": {
-				"sprint": -38,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
@@ -5854,11 +5811,9 @@
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
 				"isBigDino",
-				"isCarnivore",
-				"isTameable"
+				"isCarnivore"
 			],
 			"leveling": {
 				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
@@ -5875,17 +5830,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 215, "sprint": 1075 },
-				"swim": { "base": 300 }
+				"walk": { "base": 215, "sprint": 1075 }
 			},
 			"movementD": {
-				"walk": { "base": 215, "sprint": 1075 },
-				"swim": { "base": 300 }
+				"walk": { "base": 215, "sprint": 1075 }
 			},
-			"staminaRates": {
-				"sprint": -38,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
@@ -5908,12 +5858,11 @@
 			"dragWeight": 250,
 			"flags": [
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
 				"isBigDino",
-				"isCarnivore",
-				"isTameable"
+				"isCarnivore"
 			],
 			"leveling": {
 				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
@@ -5930,17 +5879,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 215, "sprint": 1075 },
-				"swim": { "base": 300 }
+				"walk": { "base": 215, "sprint": 1075 }
 			},
 			"movementD": {
-				"walk": { "base": 215, "sprint": 1075 },
-				"swim": { "base": 300 }
+				"walk": { "base": 215, "sprint": 1075 }
 			},
-			"staminaRates": {
-				"sprint": -38,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
@@ -5969,11 +5913,9 @@
 				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
-				"canBeTorpid",
 				"canDrag",
 				"isBigDino",
-				"isCarnivore",
-				"isTameable"
+				"isCarnivore"
 			],
 			"leveling": {
 				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
@@ -5990,17 +5932,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 215, "sprint": 1075 },
-				"swim": { "base": 300 }
+				"walk": { "base": 215, "sprint": 1075 }
 			},
 			"movementD": {
-				"walk": { "base": 215, "sprint": 1075 },
-				"swim": { "base": 300 }
+				"walk": { "base": 215, "sprint": 1075 }
 			},
-			"staminaRates": {
-				"sprint": -38,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 45,
 				"defaultSwingRadius": 260,
@@ -6195,256 +6132,180 @@
 			"name": "Fallen",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP.Fallen_Character_BP_C",
 			"dinoNameTag": "SkeletalUndead",
-			"customTag": "Offhand",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 100,
-			"dragWeight": 125,
-			"flags": [ "canBeDragged", "isCarnivore" ],
+			"customTag": "Phiomia",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
-				"mutagenCost": 79
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 34 } ],
+				"mutagenCost": 48
 			},
 			"cloning": {
-				"costBase": 1975,
-				"costLevel": 0,
-				"timeBase": 13825,
-				"timeLevel": 0
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 2000
+				"dmgMult": 80,
+				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 175 }
+				"walk": { "base": 250, "sprint": 925 }
 			},
 			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 175 }
+				"walk": { "base": 250, "sprint": 925 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 10,
-				"defaultSwingRadius": 145,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "Sword", "interval": 1, "dmg": 1, "radius": 325, "stamina": 5 },
-					{ "name": "BigSword", "interval": 12, "dmg": 70, "radius": 240, "stamina": 5 }
+					{ "name": "Melee Attacks", "interval": 0.5, "dmg": 25, "radius": 160, "stamina": 0 },
+					{ "name": "BeegMelee", "interval": 10, "dmg": 45, "radius": 160, "stamina": 0 },
+					{ "name": "FalconPunches", "interval": 0, "dmg": 5, "radius": 160, "stamina": 0 }
 				]
 			},
-			"death": { "baseXP": 2 }
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Fallen (E)",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_HordeEvent.Fallen_Character_BP_HordeEvent_C",
 			"dinoNameTag": "SkeletalUndead",
-			"customTag": "Offhand",
+			"customTag": "Phiomia",
 			"targetingTeamName": "TargetOnlyPlayers",
-			"mass": 100,
-			"dragWeight": 125,
-			"flags": [ "canBeDragged", "isCarnivore" ],
-			"leveling": { "mutagenCost": 79 },
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 1975,
-				"costLevel": 0,
-				"timeBase": 13825,
-				"timeLevel": 0
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 2000
+				"dmgMult": 80,
+				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600, "sprint": 960 },
-				"swim": { "base": 175 }
+				"walk": { "base": 250, "sprint": 925 }
 			},
 			"movementD": {
-				"walk": { "base": 600, "sprint": 960 },
-				"swim": { "base": 175 }
+				"walk": { "base": 250, "sprint": 925 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 10,
-				"defaultSwingRadius": 145,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "Sword", "interval": 1, "dmg": 35, "radius": 325, "stamina": 5 },
-					{ "name": "BigSword", "interval": 12, "dmg": 80, "radius": 240, "stamina": 5 }
+					{ "name": "Melee Attacks", "interval": 0.5, "dmg": 25, "radius": 160, "stamina": 0 },
+					{ "name": "BeegMelee", "interval": 10, "dmg": 45, "radius": 160, "stamina": 0 },
+					{ "name": "FalconPunches", "interval": 0, "dmg": 5, "radius": 160, "stamina": 0 }
 				]
 			},
-			"death": { "baseXP": 2 }
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Fallen",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_WildNew.Fallen_Character_BP_WildNew_C",
 			"dinoNameTag": "SkeletalUndead",
-			"customTag": "Offhand",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 100,
-			"dragWeight": 125,
-			"flags": [ "canBeDragged", "isCarnivore" ],
-			"leveling": { "mutagenCost": 79 },
+			"customTag": "Phiomia",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 1975,
-				"costLevel": 0,
-				"timeBase": 13825,
-				"timeLevel": 0
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 2000
+				"dmgMult": 80,
+				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 175 }
+				"walk": { "base": 250, "sprint": 925 }
 			},
 			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 175 }
+				"walk": { "base": 250, "sprint": 925 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 10,
-				"defaultSwingRadius": 145,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "Sword", "interval": 1, "dmg": 35, "radius": 325, "stamina": 5 },
-					{ "name": "BigSword", "interval": 12, "dmg": 80, "radius": 240, "stamina": 5 }
+					{ "name": "Melee Attacks", "interval": 0.5, "dmg": 25, "radius": 160, "stamina": 0 },
+					{ "name": "BeegMelee", "interval": 10, "dmg": 45, "radius": 160, "stamina": 0 },
+					{ "name": "FalconPunches", "interval": 0, "dmg": 5, "radius": 160, "stamina": 0 }
 				]
 			},
-			"death": { "baseXP": 2 }
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Fallen",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Fallen/Fallen_Character_BP_WildNew_Cave.Fallen_Character_BP_WildNew_Cave_C",
 			"dinoNameTag": "SkeletalUndead",
-			"customTag": "Offhand",
+			"customTag": "Phiomia",
 			"targetingTeamName": "Carnivores_Medium",
-			"mass": 100,
-			"dragWeight": 125,
-			"flags": [ "canBeDragged", "isCarnivore" ],
-			"leveling": { "mutagenCost": 79 },
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 1975,
-				"costLevel": 0,
-				"timeBase": 13825,
-				"timeLevel": 0
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 2000
+				"dmgMult": 80,
+				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 175 }
+				"walk": { "base": 250, "sprint": 925 }
 			},
 			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 175 }
+				"walk": { "base": 250, "sprint": 925 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 10,
-				"defaultSwingRadius": 145,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "Sword", "interval": 1, "dmg": 35, "radius": 325, "stamina": 5 },
-					{ "name": "BigSword", "interval": 12, "dmg": 80, "radius": 240, "stamina": 5 }
+					{ "name": "Melee Attacks", "interval": 0.5, "dmg": 25, "radius": 160, "stamina": 0 },
+					{ "name": "BeegMelee", "interval": 10, "dmg": 45, "radius": 160, "stamina": 0 },
+					{ "name": "FalconPunches", "interval": 0, "dmg": 5, "radius": 160, "stamina": 0 }
 				]
 			},
-			"death": { "baseXP": 2 }
-		},
-		{
-			"name": "Flaming Skeleton",
-			"bp": "/Game/Mods/Pyria/Creatures/Undead/FlaminBones/FlamingSkeleton_Character_BP.FlamingSkeleton_Character_BP_C",
-			"dinoNameTag": "SkeletalUndead",
-			"customTag": "Offhand",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 100,
-			"dragWeight": 125,
-			"flags": [ "canBeDragged", "isCarnivore" ],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
-				"mutagenCost": 79
-			},
-			"cloning": {
-				"costBase": 1975,
-				"costLevel": 0,
-				"timeBase": 13825,
-				"timeLevel": 0
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 2000
-			},
-			"movementW": {
-				"walk": { "base": 600, "sprint": 1170 },
-				"swim": { "base": 175 }
-			},
-			"movementD": {
-				"walk": { "base": 600, "sprint": 1170 },
-				"swim": { "base": 175 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 10,
-				"defaultSwingRadius": 145,
-				"attacks": [ { "name": "Sword", "interval": 1, "dmg": 5, "radius": 325, "stamina": 5 } ]
-			},
-			"death": { "baseXP": 2 }
-		},
-		{
-			"name": "Flaming Skeleton (E)",
-			"bp": "/Game/Mods/Pyria/Creatures/Undead/FlaminBones/FlamingSkeleton_Character_BP_HordeEvent.FlamingSkeleton_Character_BP_HordeEvent_C",
-			"dinoNameTag": "SkeletalUndead",
-			"customTag": "Offhand",
-			"targetingTeamName": "TargetOnlyPlayers",
-			"mass": 100,
-			"dragWeight": 125,
-			"flags": [ "canBeDragged", "isCarnivore" ],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
-				"mutagenCost": 79
-			},
-			"cloning": {
-				"costBase": 1975,
-				"costLevel": 0,
-				"timeBase": 13825,
-				"timeLevel": 0
-			},
-			"falling": {
-				"dmgMult": 0,
-				"maxSpeed": 2000
-			},
-			"movementW": {
-				"walk": { "base": 600, "sprint": 1170 },
-				"swim": { "base": 175 }
-			},
-			"movementD": {
-				"walk": { "base": 600, "sprint": 1170 },
-				"swim": { "base": 175 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 10,
-				"defaultSwingRadius": 145,
-				"attacks": [ { "name": "Sword", "interval": 1, "dmg": 5, "radius": 325, "stamina": 5 } ]
-			},
-			"death": { "baseXP": 2 }
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Flesh Horror",
@@ -6456,6 +6317,7 @@
 			"dragWeight": 300,
 			"flags": [
 				"allowCarryFlyerDinos",
+				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
@@ -6464,17 +6326,24 @@
 				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ]
+				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
+				"mutagenCost": 48
+			},
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 500, "sprint": 2500 }
+				"walk": { "base": 525, "sprint": 2625 }
 			},
 			"movementD": {
-				"walk": { "base": 500, "sprint": 2500 }
+				"walk": { "base": 525, "sprint": 2625 }
 			},
 			"staminaRates": { "sprint": -25 },
 			"attack": {
@@ -6513,6 +6382,7 @@
 			"mass": 1000,
 			"dragWeight": 450,
 			"flags": [
+				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
@@ -6521,7 +6391,14 @@
 				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ]
+				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
+				"mutagenCost": 48
+			},
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
@@ -6533,7 +6410,7 @@
 			"movementD": {
 				"walk": { "base": 325, "sprint": 1105 }
 			},
-			"staminaRates": { "sprint": -25 },
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -6566,6 +6443,7 @@
 			"mass": 1000,
 			"dragWeight": 450,
 			"flags": [
+				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
@@ -6574,7 +6452,14 @@
 				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ]
+				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
+				"mutagenCost": 48
+			},
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
@@ -6586,7 +6471,7 @@
 			"movementD": {
 				"walk": { "base": 325, "sprint": 1105 }
 			},
-			"staminaRates": { "sprint": -25 },
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -6615,6 +6500,7 @@
 			"mass": 1000,
 			"dragWeight": 450,
 			"flags": [
+				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
@@ -6622,6 +6508,13 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": { "mutagenCost": 48 },
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6632,7 +6525,7 @@
 			"movementD": {
 				"walk": { "base": 325, "sprint": 1105 }
 			},
-			"staminaRates": { "sprint": -25 },
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -6661,6 +6554,7 @@
 			"mass": 1000,
 			"dragWeight": 450,
 			"flags": [
+				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
@@ -6668,6 +6562,13 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": { "mutagenCost": 48 },
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6678,7 +6579,7 @@
 			"movementD": {
 				"walk": { "base": 325, "sprint": 1105 }
 			},
-			"staminaRates": { "sprint": -25 },
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -6707,6 +6608,7 @@
 			"mass": 1000,
 			"dragWeight": 450,
 			"flags": [
+				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
@@ -6714,6 +6616,13 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": { "mutagenCost": 48 },
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6724,7 +6633,7 @@
 			"movementD": {
 				"walk": { "base": 325, "sprint": 1105 }
 			},
-			"staminaRates": { "sprint": -25 },
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -6757,6 +6666,7 @@
 			"mass": 1000,
 			"dragWeight": 450,
 			"flags": [
+				"allowMountedWeaponry",
 				"allowRiding",
 				"canBeDragged",
 				"canDrag",
@@ -6764,6 +6674,13 @@
 				"isBigDino",
 				"isCarnivore"
 			],
+			"leveling": { "mutagenCost": 48 },
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
@@ -6774,7 +6691,7 @@
 			"movementD": {
 				"walk": { "base": 325, "sprint": 1105 }
 			},
-			"staminaRates": { "sprint": -25 },
+			"staminaRates": { "sprint": -10 },
 			"attack": {
 				"defaultDmg": 40,
 				"defaultSwingRadius": 300,
@@ -6809,6 +6726,7 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"isCarnivore",
@@ -6869,6 +6787,7 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"isCarnivore",
@@ -6930,6 +6849,7 @@
 			"flags": [
 				"allowFlyerLandedRider",
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"isCarnivore",
@@ -7284,6 +7204,7 @@
 			"dragWeight": 1000,
 			"flags": [
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"canMountOnHumans",
@@ -7344,6 +7265,7 @@
 			"dragWeight": 25,
 			"flags": [
 				"allowMountedWeaponry",
+				"allowRiding",
 				"canBeDragged",
 				"canDrag",
 				"canMountOnHumans",
@@ -7647,41 +7569,76 @@
 			}
 		},
 		{
+			"name": "Unded",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Undead_Character_BP.Undead_Character_BP_C",
+			"dinoNameTag": "SkeletalUndead",
+			"customTag": "Phiomia",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"isCarnivore"
+			],
+			"leveling": { "mutagenCost": 48 },
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 175, "sprint": 647.5 }
+			},
+			"movementD": {
+				"walk": { "base": 175, "sprint": 647.5 }
+			},
+			"staminaRates": { "sprint": -10 },
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 10, "radius": 160, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 1 }
+		},
+		{
 			"name": "Withered",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP.Withered_Character_BP_C",
-			"dinoNameTag": "ZombieUndead",
-			"customTag": "Wiithered",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
+			"dinoNameTag": "SkeletalUndead",
+			"customTag": "Phiomia",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
-			"leveling": { "mutagenCost": 24 },
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 175, "sprint": 647.5 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 175, "sprint": 647.5 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 250, "stamina": 0 } ]
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 10, "radius": 160, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -7691,93 +7648,40 @@
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
 					}
 				],
-				"baseXP": 3
+				"baseXP": 1
 			}
 		},
 		{
 			"name": "Withered",
-			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_Cave.Withered_Character_BP_Cave_C",
-			"dinoNameTag": "ZombieUndead",
-			"customTag": "Wiithered",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
-			"leveling": { "mutagenCost": 24 },
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 250, "stamina": 0 } ]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
-			"name": "Withered (E)",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_HordeEvent.Withered_Character_BP_HordeEvent_C",
-			"dinoNameTag": "ZombieUndead",
-			"customTag": "Wiithered",
+			"dinoNameTag": "SkeletalUndead",
+			"customTag": "Phiomia",
 			"targetingTeamName": "TargetOnlyPlayers",
-			"mass": 165,
-			"dragWeight": 85,
+			"mass": 195,
+			"dragWeight": 120,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
-			"leveling": { "mutagenCost": 24 },
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 175, "sprint": 647.5 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 175, "sprint": 647.5 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 250, "stamina": 0 } ]
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 10, "radius": 160, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -7787,97 +7691,41 @@
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
 					}
 				],
-				"baseXP": 3
+				"baseXP": 1
 			}
 		},
 		{
-			"name": "Enslaved Withered",
+			"name": "Withered",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_Minion.Withered_Character_BP_Minion_C",
-			"dinoNameTag": "WitheredMinion",
-			"customTag": "WiitheredMinion",
+			"dinoNameTag": "SkeletalUndead",
+			"customTag": "Phiomia",
 			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
+			"mass": 195,
+			"dragWeight": 120,
 			"variants": [ "Minion" ],
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
-			"leveling": { "mutagenCost": 24 },
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 175, "sprint": 647.5 }
 			},
 			"movementD": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
+				"walk": { "base": 175, "sprint": 647.5 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 250, "stamina": 0 } ]
-			},
-			"death": {
-				"lootBagChance": 0.3,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
-			"name": "Withered",
-			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_created.Withered_Character_BP_created_C",
-			"dinoNameTag": "ZombieUndead",
-			"customTag": "Wiithered",
-			"targetingTeamName": "Carnivores_Medium",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
-				"mutagenCost": 24
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 200, "sprint": 600 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [ { "name": "Melee", "interval": 0.2, "dmg": 15, "radius": 250, "stamina": 0 } ]
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 10, "radius": 160, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -7887,329 +7735,225 @@
 						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
 					}
 				],
-				"baseXP": 3
+				"baseXP": 1
+			}
+		},
+		{
+			"name": "Withered",
+			"bp": "/Game/Mods/Pyria/Creatures/Undead/Withered/Withered_Character_BP_created.Withered_Character_BP_Created_C",
+			"dinoNameTag": "SkeletalUndead",
+			"customTag": "Phiomia",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 34 } ],
+				"mutagenCost": 48
+			},
+			"cloning": {
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 175, "sprint": 647.5 }
+			},
+			"movementD": {
+				"walk": { "base": 175, "sprint": 647.5 }
+			},
+			"staminaRates": { "sprint": -10 },
+			"attack": {
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
+				"attacks": [ { "name": "Melee Attacks", "interval": 0.2, "dmg": 10, "radius": 160, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Pyria/Alchemy/DropInventoryComponents/DinoDropInventoryComponent_Pyria_Race_Undead.DinoDropInventoryComponent_Pyria_Race_Undead"
+					}
+				],
+				"baseXP": 1
 			}
 		},
 		{
 			"name": "Wraith",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Wraith/Wraith_Character_BP.Wraith_Character_BP_C",
 			"dinoNameTag": "Spirit",
-			"customTag": "Undeath",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
+			"customTag": "SkeletalUndead",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
-				"mutagenCost": 24
+				"wildLevelTable": [ { "chance": 1, "min": 21, "max": 30 } ],
+				"mutagenCost": 48
 			},
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 650, "sprint": 1300 }
 			},
 			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 650, "sprint": 1300 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 325, "stamina": 0 },
+					{ "name": "Melee Attacks", "interval": 0.2, "dmg": 32, "radius": 250, "stamina": 0 },
 					{
-						"name": "Projectile", "interval": 2, "dmg": 0, "radius": 0, "stamina": 25,
+						"name": "Ranged", "interval": 5, "dmg": 0, "radius": 0, "stamina": 50,
 						"isProjectile": true
 					},
-					{ "name": "Invis", "interval": 65, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "TestWarp", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{
-						"name": "AIProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
+					{ "name": "Invisibruh", "interval": 65, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Blink", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Creatures/Undead/Wraith/DinoDropInventoryComponent_Pyria_Race_Undead_DarkSoul.DinoDropInventoryComponent_Pyria_Race_Undead_DarkSoul"
-					}
-				],
-				"baseXP": 3
-			}
+			"death": { "baseXP": 1 }
 		},
 		{
-			"name": "Wraith",
-			"bp": "/Game/Mods/Pyria/Creatures/Undead/Wraith/Wraith_Character_BP_Avatar.Wraith_Character_BP_Avatar_C",
-			"dinoNameTag": "Spirit",
-			"customTag": "Undeath",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
-				"mutagenCost": 24
-			},
-			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
-			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
-				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 325, "stamina": 0 },
-					{
-						"name": "Projectile", "interval": 2, "dmg": 0, "radius": 0, "stamina": 25,
-						"isProjectile": true
-					},
-					{ "name": "Invis", "interval": 65, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "TestWarp", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{
-						"name": "AIProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
-				]
-			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Creatures/Undead/Wraith/DinoDropInventoryComponent_Pyria_Race_Undead_DarkSoul.DinoDropInventoryComponent_Pyria_Race_Undead_DarkSoul"
-					}
-				],
-				"baseXP": 3
-			}
-		},
-		{
-			"name": "Blood-Fiend of the Wailing Hill",
+			"name": "Blood-Fiend of Wailing Hill",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Wraith/Wraith_Character_BP_Boss.Wraith_Character_BP_Boss_C",
 			"dinoNameTag": "Spirit",
-			"customTag": "Undeath",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
-			"flags": [
-				"allowMountedWeaponry",
-				"allowRiding",
-				"canBeDragged",
-				"canDrag",
-				"isCarnivore"
-			],
-			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 28, "max": 38 } ],
-				"mutagenCost": 24
-			},
+			"customTag": "SkeletalUndead",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
+			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 650, "sprint": 1300 }
 			},
 			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 650, "sprint": 1300 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 32, "radius": 325, "stamina": 0 },
+					{ "name": "Melee Attacks", "interval": 0.2, "dmg": 64, "radius": 250, "stamina": 0 },
 					{
-						"name": "Projectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 25,
+						"name": "Ranged", "interval": 5, "dmg": 0, "radius": 0, "stamina": 50,
 						"isProjectile": true
 					},
-					{ "name": "Invis", "interval": 65, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "TestWarp", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{
-						"name": "AIProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
+					{ "name": "Invisibruh", "interval": 65, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Blink", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Creatures/Undead/Wraith/DinoDropInventoryComponent_Carnivore_Large_GSBoss.DinoDropInventoryComponent_Carnivore_Large_GSBoss"
-					}
-				],
-				"baseXP": 460
-			}
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Wraith (E)",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Wraith/Wraith_Character_BP_HordeEvent.Wraith_Character_BP_HordeEvent_C",
 			"dinoNameTag": "Spirit",
-			"customTag": "Undeath",
+			"customTag": "SkeletalUndead",
 			"targetingTeamName": "TargetOnlyPlayers",
-			"mass": 165,
-			"dragWeight": 85,
+			"mass": 195,
+			"dragWeight": 120,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
-			"leveling": { "mutagenCost": 24 },
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 650, "sprint": 1300 }
 			},
 			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 650, "sprint": 1300 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 325, "stamina": 0 },
+					{ "name": "Melee Attacks", "interval": 0.2, "dmg": 32, "radius": 250, "stamina": 0 },
 					{
-						"name": "Projectile", "interval": 2, "dmg": 0, "radius": 0, "stamina": 25,
+						"name": "Ranged", "interval": 5, "dmg": 0, "radius": 0, "stamina": 50,
 						"isProjectile": true
 					},
-					{ "name": "Invis", "interval": 65, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "TestWarp", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{
-						"name": "AIProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
+					{ "name": "Invisibruh", "interval": 65, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Blink", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Creatures/Undead/Wraith/DinoDropInventoryComponent_Pyria_Race_Undead_DarkSoul.DinoDropInventoryComponent_Pyria_Race_Undead_DarkSoul"
-					}
-				],
-				"baseXP": 3
-			}
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Wraith",
 			"bp": "/Game/Mods/Pyria/Creatures/Undead/Wraith/Wraith_Character_BP_Wild.Wraith_Character_BP_Wild_C",
 			"dinoNameTag": "Spirit",
-			"customTag": "Undeath",
-			"targetingTeamName": "Carnivore_Water",
-			"mass": 165,
-			"dragWeight": 85,
+			"customTag": "SkeletalUndead",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 195,
+			"dragWeight": 120,
 			"flags": [ "allowMountedWeaponry", "canBeDragged", "canDrag", "isCarnivore" ],
-			"leveling": { "mutagenCost": 24 },
+			"leveling": { "mutagenCost": 48 },
 			"cloning": {
-				"costBase": 575,
-				"costLevel": 55,
-				"timeBase": 4025,
-				"timeLevel": 385
+				"costBase": 1175,
+				"costLevel": 44,
+				"timeBase": 8225,
+				"timeLevel": 308
 			},
 			"falling": {
 				"dmgMult": 80,
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 650, "sprint": 1300 }
 			},
 			"movementD": {
-				"walk": { "base": 600, "sprint": 1200 },
-				"swim": { "base": 300 }
+				"walk": { "base": 650, "sprint": 1300 }
 			},
-			"staminaRates": {
-				"sprint": -10,
-				"swimOrFly": -3
-			},
+			"staminaRates": { "sprint": -10 },
 			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 65,
+				"defaultDmg": 10,
+				"defaultSwingRadius": 160,
 				"attacks": [
-					{ "name": "Melee", "interval": 0.2, "dmg": 25, "radius": 325, "stamina": 0 },
+					{ "name": "Melee Attacks", "interval": 0.2, "dmg": 32, "radius": 250, "stamina": 0 },
 					{
-						"name": "Projectile", "interval": 2, "dmg": 0, "radius": 0, "stamina": 25,
+						"name": "Ranged", "interval": 5, "dmg": 0, "radius": 0, "stamina": 50,
 						"isProjectile": true
 					},
-					{ "name": "Invis", "interval": 65, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "TestWarp", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
-					{
-						"name": "AIProjectile", "interval": 10, "dmg": 0, "radius": 0, "stamina": 0,
-						"isProjectile": true
-					}
+					{ "name": "Invisibruh", "interval": 65, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Blink", "interval": 2, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
-			"death": {
-				"lootBagChance": 1,
-				"lootBags": [
-					{
-						"chance": 1,
-						"item": "/Game/Mods/Pyria/Creatures/Undead/Wraith/DinoDropInventoryComponent_Pyria_Race_Undead_DarkSoul.DinoDropInventoryComponent_Pyria_Race_Undead_DarkSoul"
-					}
-				],
-				"baseXP": 3
-			}
+			"death": { "baseXP": 1 }
 		},
 		{
 			"name": "Arcane Baryonyx",
