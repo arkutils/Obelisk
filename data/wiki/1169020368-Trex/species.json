@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1700597183",
+	"version": "358.17.1700717329",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -20019,7 +20019,7 @@
 			"death": { "baseXP": 1 }
 		},
 		{
-			"name": "Alpha Plesiosaur",
+			"name": "Alpha Elasmosaurus (Plesiosaur)",
 			"bp": "/Game/Mods/Trex/Dinos/Plesio/Alpha/AlphaPlesiosaur_Character_BP_ADO.AlphaPlesiosaur_Character_BP_ADO_C",
 			"dinoNameTag": "Plesiosaur",
 			"customTag": "AlphaPlesio",
@@ -20082,7 +20082,7 @@
 			}
 		},
 		{
-			"name": "Prime Alpha Plesiosaur",
+			"name": "Prime Alpha Elasmosaurus (Plesiosaur)",
 			"bp": "/Game/Mods/Trex/Dinos/Plesio/Alpha/PrimeAlphaPlesiosaur_Character_BP_ADO.PrimeAlphaPlesiosaur_Character_BP_ADO_C",
 			"dinoNameTag": "Plesiosaur",
 			"customTag": "AlphaPlesio",
@@ -20140,7 +20140,7 @@
 			}
 		},
 		{
-			"name": "Champion Plesiosaur",
+			"name": "Champion Elasmosaurus (Plesiosaur)",
 			"bp": "/Game/Mods/Trex/Dinos/Plesio/Champ/ChampPlesiosaur_Character_BP.ChampPlesiosaur_Character_BP_C",
 			"dinoNameTag": "Plesiosaur",
 			"customTag": "Plesiosaur",
@@ -20200,7 +20200,7 @@
 			}
 		},
 		{
-			"name": "Plesiosaur",
+			"name": "Elasmosaurus (Plesiosaur)",
 			"bp": "/Game/Mods/Trex/Dinos/Plesio/Plesiosaur_Character_BP_ADO.Plesiosaur_Character_BP_ADO_C",
 			"dinoNameTag": "Plesiosaur",
 			"customTag": "Plesiosaur",
@@ -22727,6 +22727,94 @@
 				],
 				"engrams": [ "PrimalItemArmor_WardenHelm_C" ],
 				"baseXP": 1500
+			}
+		},
+		{
+			"name": "Rhyniognatha",
+			"bp": "/Game/Mods/Trex/Dinos/Rhyniognatha/Rhynio_Character_BP_Child.Rhynio_Character_BP_Child_C",
+			"dinoNameTag": "Rhynio",
+			"customTag": "Rhynio",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 190,
+			"dragWeight": 500,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"preventNeuter"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 5, "max": 10 },
+					{ "chance": 0.2702703, "min": 12, "max": 24 },
+					{ "chance": 0.1351351, "min": 26, "max": 40 },
+					{ "chance": 0.05405405, "min": 42, "max": 60 }
+				],
+				"mutagenCost": 98
+			},
+			"cloning": {
+				"costBase": 2450,
+				"costLevel": 550,
+				"timeBase": 17150,
+				"timeLevel": 3850
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 950, "sprint": 2375 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"movementD": {
+				"walk": { "base": 500, "sprint": 1250 },
+				"fly": { "base": 950, "sprint": 2375 },
+				"swim": { "base": 1000, "sprint": 2500 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 30,
+				"defaultSwingRadius": 300,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.6, "dmg": 110, "radius": 300, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 0, "radius": 300, "stamina": 60 },
+					{ "name": "Taunt", "interval": 30, "dmg": 0, "radius": 0, "stamina": 60 },
+					{
+						"name": "Resin Ball", "interval": 1, "dmg": 0, "radius": 0, "stamina": 5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Glob", "interval": 4, "dmg": 0, "radius": 0, "stamina": 7.5,
+						"isProjectile": true
+					},
+					{
+						"name": "Resin Bomb", "interval": 8, "dmg": 0, "radius": 0, "stamina": 10,
+						"isProjectile": true
+					},
+					{ "name": "Impregnate", "interval": 30, "dmg": 110, "radius": 400, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1231,
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/Dinos/Rhyniognatha/DinoDropInventoryComponent_Carnivore_Rhynio.DinoDropInventoryComponent_Carnivore_Rhynio"
+					}
+				],
+				"baseXP": 3
 			}
 		},
 		{
@@ -31237,6 +31325,63 @@
 					}
 				],
 				"baseXP": 5
+			}
+		},
+		{
+			"name": "Argentinosaurus",
+			"bp": "/Game/Mods/Trex/Dinos/Titano/Titanosaur_Character_BP_ADO.Titanosaur_Character_BP_ADO_C",
+			"dinoNameTag": "Titan",
+			"customTag": "Titan",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 2000,
+			"dragWeight": 3000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1, "max": 2 },
+					{ "chance": 0.2702703, "min": 3, "max": 4 },
+					{ "chance": 0.1351351, "min": 5, "max": 7 },
+					{ "chance": 0.05405405, "min": 8, "max": 10 }
+				]
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 280, "sprint": 450.8 }
+			},
+			"movementD": {
+				"walk": { "base": 280, "sprint": 392 }
+			},
+			"staminaRates": { "sprint": -29 },
+			"attack": {
+				"defaultDmg": 5000,
+				"defaultSwingRadius": 1000,
+				"attacks": [
+					{ "name": "Melee Front", "interval": 0.85, "dmg": 5000, "radius": 1000, "stamina": 200 },
+					{ "name": "Melee Back", "interval": 0.85, "dmg": 5000, "radius": 1000, "stamina": 200 },
+					{ "name": "Swimming Melee", "interval": 1, "dmg": 5000, "radius": 1500, "stamina": 200 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Huge_Sauro.DinoDropInventoryComponent_Carnivore_Huge_Sauro"
+					}
+				],
+				"baseXP": 5000
 			}
 		},
 		{
@@ -41417,12 +41562,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 120, "sprint": 264 },
-				"swim": { "base": 300 }
+				"walk": { "base": 200, "sprint": 440 },
+				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 120, "sprint": 264 },
-				"swim": { "base": 300 }
+				"walk": { "base": 200, "sprint": 440 },
+				"swim": { "base": 400 }
 			},
 			"staminaRates": {
 				"sprint": -3,
