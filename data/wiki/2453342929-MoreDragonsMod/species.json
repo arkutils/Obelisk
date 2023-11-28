@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.11.1691443191",
+	"version": "358.17.1701039233",
 	"format": "4",
 	"mod": {
 		"id": "2453342929",
@@ -799,8 +799,8 @@
 				"defaultDmg": 42,
 				"defaultSwingRadius": 110,
 				"attacks": [
-					{ "name": "ClawAttack", "interval": 0.1, "dmg": 26, "radius": 450, "stamina": 12 },
-					{ "name": "BiteHarvest", "interval": 0.5, "dmg": 31, "radius": 376, "stamina": 0 },
+					{ "name": "ClawAttack", "interval": 0, "dmg": 26, "radius": 450, "stamina": 12 },
+					{ "name": "BiteHarvest", "interval": 2, "dmg": 31, "radius": 376, "stamina": 0 },
 					{ "name": "KickAttack", "interval": 15, "dmg": 60, "radius": 425, "stamina": 60 },
 					{ "name": "ClawPunch", "interval": 5, "dmg": 48, "radius": 490, "stamina": 21 },
 					{ "name": "Intimidation", "interval": 15, "dmg": 0, "radius": 0, "stamina": 30 },
@@ -1094,6 +1094,62 @@
 					{ "name": "Tongue", "interval": 0.5, "dmg": 16, "radius": 290, "stamina": 0 },
 					{ "name": "Tail Spin", "interval": 14, "dmg": 13, "radius": 190, "stamina": 180 },
 					{ "name": "Roar", "interval": 14, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 20 }
+		},
+		{
+			"name": "Poisontail",
+			"bp": "/Game/Mods/MoreDragonsMod/Dinos/Charmander/PoisonTail/PoisontailChar_Character_BP.PoisontailChar_Character_BP_C",
+			"dinoNameTag": "Megalania",
+			"customTag": "Carno",
+			"targetingTeamName": "Herbivores",
+			"mass": 222,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 27 },
+			"cloning": {
+				"costBase": 650,
+				"costLevel": 55,
+				"timeBase": 4550,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 410, "sprint": 1455.5 },
+				"swim": { "base": 425 }
+			},
+			"movementD": {
+				"walk": { "base": 410, "sprint": 1455.5 },
+				"swim": { "base": 425 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 23,
+				"defaultSwingRadius": 110,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 22, "radius": 290, "stamina": 0 },
+					{ "name": "Tongue", "interval": 0.5, "dmg": 13, "radius": 290, "stamina": 0 },
+					{ "name": "Tail Spin", "interval": 14, "dmg": 13, "radius": 190, "stamina": 80 },
+					{ "name": "Roar", "interval": 14, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "Spit Proj", "interval": 14, "dmg": 0, "radius": 0, "stamina": 50,
+						"isProjectile": true
+					},
+					{ "name": "Poison Tail", "interval": 15, "dmg": 0, "radius": 0, "stamina": 180 }
 				]
 			},
 			"death": { "baseXP": 20 }
@@ -4142,7 +4198,7 @@
 						"name": "Sapphire Dragon's Fury", "interval": 90, "dmg": 0, "radius": 0, "stamina": 100,
 						"isProjectile": true
 					},
-					{ "name": "Consume Element", "interval": 4, "dmg": 80, "radius": 495, "stamina": 10 }
+					{ "name": "Consume Element", "interval": 5, "dmg": 80, "radius": 495, "stamina": 10 }
 				]
 			},
 			"death": {
@@ -6630,6 +6686,53 @@
 			}
 		},
 		{
+			"name": "Frenzy Dimorphodon",
+			"bp": "/Game/Mods/MoreDragonsMod/Dinos/Pesutobeara/Minions/Dimorph_Frenzy_Character_BP.Dimorph_Frenzy_Character_BP_C",
+			"dinoNameTag": "Dimorph",
+			"customTag": "Dimorph",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 70,
+			"dragWeight": 70,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canMountOnHumans",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 29 },
+			"cloning": {
+				"costBase": 700,
+				"costLevel": 55,
+				"timeBase": 4900,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"movementD": {
+				"walk": { "base": 80, "sprint": 144 },
+				"fly": { "base": 450, "sprint": 810 },
+				"swim": { "base": 450 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 23,
+				"defaultSwingRadius": 200,
+				"attacks": [ { "name": "Bite", "interval": 0, "dmg": 23, "radius": 400, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Frenzy Giganotosaurus",
 			"bp": "/Game/Mods/MoreDragonsMod/Dinos/Pesutobeara/Minions/Gigant_Infected_Character_BP.Gigant_Infected_Character_BP_C",
 			"dinoNameTag": "Gigant",
@@ -6661,10 +6764,10 @@
 				"defaultDmg": 90,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0.1, "dmg": 90, "radius": 850, "stamina": 15 },
+					{ "name": "Bite", "interval": 0.1, "dmg": 90, "radius": 650, "stamina": 15 },
 					{ "name": "Roar", "interval": 25, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Tentacle Proj", "interval": 2.5, "dmg": 0, "radius": 0, "stamina": 100 },
-					{ "name": "Headbutt", "interval": 6, "dmg": 107, "radius": 850, "stamina": 15 },
+					{ "name": "Headbutt", "interval": 6, "dmg": 107, "radius": 650, "stamina": 15 },
 					{ "name": "Xeno Roar", "interval": 19, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -6762,12 +6865,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 525, "sprint": 1202.9 },
-				"swim": { "base": 600, "sprint": 1374.7 }
+				"walk": { "base": 750, "sprint": 1293.7 },
+				"swim": { "base": 800, "sprint": 1380 }
 			},
 			"movementD": {
-				"walk": { "base": 525, "sprint": 1202.9 },
-				"swim": { "base": 600, "sprint": 1374.7 }
+				"walk": { "base": 750, "sprint": 1293.7 },
+				"swim": { "base": 800, "sprint": 1380 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -6784,7 +6887,8 @@
 					{ "name": "Summon Minions", "interval": 85, "dmg": 0, "radius": 0, "stamina": 400 },
 					{ "name": "(TAMED) Summon Minions (GIGA)", "interval": 140, "dmg": 0, "radius": 0, "stamina": 500 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "(BOSS) Summon Minions (GIGA)", "interval": 3000, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "(BOSS) Summon Minions (GIGA)", "interval": 3000, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Spitball", "interval": 5, "dmg": 0, "radius": 0, "stamina": 100 }
 				]
 			},
 			"death": { "baseXP": 375 }
@@ -8255,7 +8359,7 @@
 					{ "name": "Bite", "interval": 0, "dmg": 61, "radius": 475, "stamina": 5 },
 					{ "name": "Claw Slash", "interval": 7, "dmg": 70, "radius": 510, "stamina": 30 },
 					{ "name": "Pounce", "interval": 22, "dmg": 50, "radius": 515, "stamina": 95 },
-					{ "name": "Tail Swipe", "interval": 10, "dmg": 75, "radius": 525, "stamina": 50 },
+					{ "name": "Tail Swipe", "interval": 10, "dmg": 25, "radius": 525, "stamina": 50 },
 					{
 						"name": "Tail Shot", "interval": 11, "dmg": 0, "radius": 0, "stamina": 120,
 						"isProjectile": true
@@ -8342,7 +8446,7 @@
 					{ "name": "Bite", "interval": 0, "dmg": 61, "radius": 475, "stamina": 5 },
 					{ "name": "Claw Slash", "interval": 7, "dmg": 70, "radius": 510, "stamina": 30 },
 					{ "name": "Pounce", "interval": 22, "dmg": 50, "radius": 515, "stamina": 95 },
-					{ "name": "Tail Swipe", "interval": 10, "dmg": 75, "radius": 525, "stamina": 50 },
+					{ "name": "Tail Swipe", "interval": 10, "dmg": 25, "radius": 525, "stamina": 50 },
 					{
 						"name": "Tail Shot", "interval": 11, "dmg": 0, "radius": 0, "stamina": 120,
 						"isProjectile": true
@@ -8460,12 +8564,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 450, "sprint": 1423.1 },
-				"swim": { "base": 375, "sprint": 1209.7 }
+				"walk": { "base": 450, "sprint": 1080 },
+				"swim": { "base": 375, "sprint": 918 }
 			},
 			"movementD": {
-				"walk": { "base": 450, "sprint": 1423.1 },
-				"swim": { "base": 375, "sprint": 1209.7 }
+				"walk": { "base": 450, "sprint": 1080 },
+				"swim": { "base": 375, "sprint": 918 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -8476,8 +8580,8 @@
 				"defaultSwingRadius": 310,
 				"attacks": [
 					{ "name": "Bite", "interval": 0, "dmg": 50, "radius": 310, "stamina": 5 },
-					{ "name": "Headbutt", "interval": 7, "dmg": 226, "radius": 424, "stamina": 40 },
-					{ "name": "TailWhip", "interval": 12, "dmg": 47, "radius": 425, "stamina": 55 },
+					{ "name": "Headbutt", "interval": 7, "dmg": 80, "radius": 424, "stamina": 40 },
+					{ "name": "TailWhip", "interval": 12, "dmg": 85, "radius": 425, "stamina": 55 },
 					{ "name": "Open Shell", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -8714,10 +8818,10 @@
 				"defaultSwingRadius": 200,
 				"attacks": [
 					{ "name": "Bite", "interval": 0, "dmg": 38, "radius": 300, "stamina": 0 },
-					{ "name": "StunAttack", "interval": 10, "dmg": 25, "radius": 300, "stamina": 100 },
-					{ "name": "Bigger Bite", "interval": 10, "dmg": 45, "radius": 360, "stamina": 145 },
-					{ "name": "Claw", "interval": 0.5, "dmg": 27, "radius": 260, "stamina": 40 },
-					{ "name": "Water Breath", "interval": 25, "dmg": 0, "radius": 0, "stamina": 400 },
+					{ "name": "StunAttack", "interval": 10, "dmg": 25, "radius": 300, "stamina": 80 },
+					{ "name": "Bigger Bite", "interval": 10, "dmg": 45, "radius": 360, "stamina": 75 },
+					{ "name": "Claw", "interval": 0.5, "dmg": 27, "radius": 260, "stamina": 10 },
+					{ "name": "Water Breath", "interval": 25, "dmg": 0, "radius": 0, "stamina": 100 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -8928,7 +9032,7 @@
 					{ "name": "Wing Blast", "interval": 20, "dmg": 12, "radius": 1100, "stamina": 10 },
 					{ "name": "Claw Double", "interval": 4, "dmg": 20, "radius": 475, "stamina": 25 },
 					{ "name": "Bigger Bite", "interval": 14, "dmg": 62, "radius": 370, "stamina": 100 },
-					{ "name": "Headbutt", "interval": 14, "dmg": 40, "radius": 395, "stamina": 45 },
+					{ "name": "Headbutt", "interval": 5, "dmg": 40, "radius": 395, "stamina": 45 },
 					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
