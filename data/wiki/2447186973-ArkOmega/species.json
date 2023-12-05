@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1697907008",
+	"version": "358.17.1701673974",
 	"format": "4",
 	"mod": {
 		"id": "2447186973",
@@ -630,6 +630,69 @@
 					}
 				],
 				"baseXP": 15000
+			}
+		},
+		{
+			"name": "Deinonychus",
+			"bp": "/Game/Mods/ArkOmega/Classes/Base/Alpha/MegaDeinonychus_Character_BP.MegaDeinonychus_Character_BP_C",
+			"dinoNameTag": "Deinonychus",
+			"customTag": "Deinonychus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 165,
+			"dragWeight": 85,
+			"variants": [ "Alpha" ],
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 24 },
+			"cloning": {
+				"costBase": 575,
+				"costLevel": 55,
+				"timeBase": 4025,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 480, "sprint": 1296 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 480, "sprint": 1440 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 150,
+				"defaultSwingRadius": 65,
+				"attacks": [
+					{ "name": "Melee", "interval": 0.2, "dmg": 150, "radius": 525, "stamina": 0 },
+					{ "name": "Pounce", "interval": 9, "dmg": 150, "radius": 450, "stamina": 5 },
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Melee_Pounce", "interval": 0.2, "dmg": 150, "radius": 270, "stamina": 0 }
+				]
+			},
+			"death": {
+				"dossierId": 1222,
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Small.DinoDropInventoryComponent_Carnivore_Small"
+					}
+				],
+				"baseXP": 3
 			}
 		},
 		{
