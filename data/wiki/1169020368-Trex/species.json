@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1701004683",
+	"version": "358.17.1703269186",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -8755,6 +8755,87 @@
 			}
 		},
 		{
+			"name": "Corrupted Wyvern Minion",
+			"bp": "/Game/Mods/Trex/Dinos/Bosses/Minnions/Wyvern_Character_BP_Fire_Minions_ADO.Wyvern_Character_BP_Fire_Minions_ADO_C",
+			"dinoNameTag": "Wyvern",
+			"customTag": "Wyvern",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 800,
+			"dragWeight": 550,
+			"variants": [ "Corrupted", "Minion" ],
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isCorrupted",
+				"isFlyerDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.4, "min": 5, "max": 10 },
+					{ "chance": 0.2, "min": 12, "max": 24 },
+					{ "chance": 0.2, "min": 26, "max": 40 },
+					{ "chance": 0.2, "min": 42, "max": 76 }
+				],
+				"mutagenCost": 82
+			},
+			"cloning": {
+				"costBase": 2050,
+				"costLevel": 55,
+				"timeBase": 14350,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementD": {
+				"walk": { "base": 690, "sprint": 796.9 },
+				"fly": { "base": 3000, "sprint": 2310 },
+				"swim": { "base": 3000 }
+			},
+			"movementR": {
+				"walk": { "base": 572.7, "sprint": 1157.5 },
+				"fly": { "base": 2490, "sprint": 3355.3 },
+				"swim": { "base": 2490 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 2000,
+				"defaultSwingRadius": 1200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.5, "dmg": 1500, "radius": 495, "stamina": 10 },
+					{ "name": "Flame", "interval": 5, "dmg": 0, "radius": 0, "stamina": 160 },
+					{ "name": "Grab", "interval": 1, "dmg": 1000, "radius": 300, "stamina": 40 },
+					{ "name": "Taunt", "interval": 0, "dmg": 1500, "radius": 2000, "stamina": 2 },
+					{ "name": "Bite (AI)", "interval": 0.5, "dmg": 2000, "radius": 614, "stamina": 10 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Extinction/CoreBlueprints/ItemLootSets/DinoDropInventoryComponent_Corrupted_Huge_Wyvern.DinoDropInventoryComponent_Corrupted_Huge_Wyvern"
+					}
+				],
+				"baseXP": 250
+			}
+		},
+		{
 			"name": "Lystrix, The Mega Spyder",
 			"bp": "/Game/Mods/Trex/Dinos/Bosses/SpiderL_Character_BP_Boss_ADO.SpiderL_Character_BP_Boss_ADO_C",
 			"dinoNameTag": "BroodmotherBoss",
@@ -9457,7 +9538,7 @@
 				"defaultDmg": 4500,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0, "dmg": 4000, "radius": 700, "stamina": 5 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 4000, "radius": 700, "stamina": 5 },
 					{ "name": "Tailspin", "interval": 1.25, "dmg": 3500, "radius": 900, "stamina": 40 },
 					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -9526,7 +9607,7 @@
 				"defaultDmg": 450,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0, "dmg": 230, "radius": 700, "stamina": 5 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 230, "radius": 700, "stamina": 5 },
 					{ "name": "Tailspin", "interval": 1.25, "dmg": 175, "radius": 900, "stamina": 40 },
 					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -9595,7 +9676,7 @@
 				"defaultDmg": 2200,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0, "dmg": 1750, "radius": 700, "stamina": 5 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 1750, "radius": 700, "stamina": 5 },
 					{ "name": "Tailspin", "interval": 1.25, "dmg": 1250, "radius": 900, "stamina": 40 },
 					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -9664,7 +9745,7 @@
 				"defaultDmg": 440,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0, "dmg": 220, "radius": 700, "stamina": 5 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 220, "radius": 700, "stamina": 5 },
 					{ "name": "Tailspin", "interval": 1.25, "dmg": 175, "radius": 900, "stamina": 40 },
 					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -9733,7 +9814,7 @@
 				"defaultDmg": 1300,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0, "dmg": 1000, "radius": 700, "stamina": 5 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 1000, "radius": 700, "stamina": 5 },
 					{ "name": "Tailspin", "interval": 1.25, "dmg": 800, "radius": 900, "stamina": 40 },
 					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -9802,7 +9883,7 @@
 				"defaultDmg": 880,
 				"defaultSwingRadius": 850,
 				"attacks": [
-					{ "name": "Bite", "interval": 0, "dmg": 450, "radius": 700, "stamina": 5 },
+					{ "name": "Bite", "interval": 0.4, "dmg": 450, "radius": 700, "stamina": 5 },
 					{ "name": "Tailspin", "interval": 1.25, "dmg": 385, "radius": 900, "stamina": 40 },
 					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
