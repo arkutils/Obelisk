@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "358.17.1696625914",
+	"version": "358.17.1705110964",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -2720,7 +2720,6 @@
 				"recipe": [
 					{ "qty": 100, "type": "PrimalItemResource_Genome_AC2Spino_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Genome_Bary_C" },
-					{ "qty": 75, "type": "PrimalItemResource_Genome_Oxa_C" },
 					{ "qty": 75, "type": "PrimalItemResource_Genome_Succ_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Genome_ValleyGirl_C" }
 				]
@@ -2746,7 +2745,6 @@
 				"recipe": [
 					{ "qty": 100, "type": "PrimalItemResource_Genome_AC2Spino_Aberrant_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Genome_Bary_Aberrant_C" },
-					{ "qty": 75, "type": "PrimalItemResource_Genome_Oxa_Aberrant_C" },
 					{ "qty": 75, "type": "PrimalItemResource_Genome_Succ_Aberrant_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Genome_ValleyGirl_C" }
 				]
@@ -2772,7 +2770,6 @@
 				"recipe": [
 					{ "qty": 100, "type": "PrimalItemResource_Genome_AC2Spino_Bog_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Genome_Bary_C" },
-					{ "qty": 75, "type": "PrimalItemResource_Genome_Oxa_C" },
 					{ "qty": 75, "type": "PrimalItemResource_Genome_Succ_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Genome_ValleyGirl_C" }
 				]
@@ -2798,7 +2795,6 @@
 				"recipe": [
 					{ "qty": 100, "type": "PrimalItemResource_Genome_AC2Spino_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Genome_Bary_C" },
-					{ "qty": 75, "type": "PrimalItemResource_Genome_Oxa_C" },
 					{ "qty": 75, "type": "PrimalItemResource_Genome_Succ_C" },
 					{ "qty": 25, "type": "PrimalItemResource_Genome_ValleyGirl_C" }
 				]
@@ -2943,15 +2939,7 @@
 			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
 			"weight": 0.1,
 			"stackSize": 1000,
-			"spoilsIn": 600,
-			"crafting": {
-				"xp": 1,
-				"time": 30,
-				"levelReq": 0,
-				"productCount": 5,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Oxa_Fertilized_C" } ]
-			}
+			"spoilsIn": 600
 		},
 		{
 			"name": "Aberrant Oxalaia Genome",
@@ -2963,15 +2951,7 @@
 			"folders": [ "Genetics", "DNA", "Theropoda", "Spinosaurid" ],
 			"weight": 0.1,
 			"stackSize": 1000,
-			"spoilsIn": 600,
-			"crafting": {
-				"xp": 1,
-				"time": 30,
-				"levelReq": 0,
-				"productCount": 5,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [ { "qty": 1, "type": "PrimalItemConsumable_Egg_Oxa_Fertilized_Aberrant_C" } ]
-			}
+			"spoilsIn": 600
 		},
 		{
 			"name": "Suchomimus Genome",
@@ -5051,85 +5031,6 @@
 			"egg": {
 				"dinoClass": "/Game/Mods/AC2/Ourano/Ourano_Character_BP.Ourano_Character_BP_C",
 				"temperature": { "min": 24, "max": 28 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Oxalaia Saddle",
-			"description": "Equip an Oxalaia with this to ride it.",
-			"bp": "/Game/Mods/AC2/Oxa/PrimalItemArmor_OxaSaddle.PrimalItemArmor_OxaSaddle_C",
-			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
-			"icon": "/Game/PrimalEarth/Dinos/Spino/Saddle/HUD_SpinoSaddle_Colorize_MIC.HUD_SpinoSaddle_Colorize_MIC",
-			"type": "Equipment/DinoSaddle",
-			"folders": [ "Saddles" ],
-			"weight": 20,
-			"stackSize": 1,
-			"crafting": {
-				"xp": 62.8,
-				"time": 10,
-				"levelReq": 0,
-				"productCount": 1,
-				"skillQualityMult": { "min": 0, "max": 0.05 },
-				"recipe": [
-					{ "qty": 290, "type": "PrimalItemResource_Hide_C" },
-					{ "qty": 155, "type": "PrimalItemResource_Fibers_C" },
-					{ "qty": 20, "type": "PrimalItemResource_MetalIngot_C" }
-				]
-			}
-		},
-		{
-			"name": "Fertilized Oxa Egg",
-			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AC2/Oxa/PrimalItemConsumable_Egg_Oxa_Fertilized.PrimalItemConsumable_Egg_Oxa_Fertilized_C",
-			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Spino.PrimalItemConsumable_Egg_Spino_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 12,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
-				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
-				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AC2/Oxa/Ox_Character_BP.Ox_Character_BP_C",
-				"temperature": { "min": 30, "max": 32 }
-			},
-			"cooking": {
-				"health": 0.8,
-				"stamina": 0.8,
-				"food": 0.8,
-				"weight": 0.3,
-				"water": 0.01
-			}
-		},
-		{
-			"name": "Fertilized Aberrant Oxalaia Egg",
-			"description": "Tremendously nourishing by itself, this egg provides superior nutritional value in many cooking recipes.",
-			"bp": "/Game/Mods/AC2/Oxa/PrimalItemConsumable_Egg_Oxa_Fertilized_Aberrant.PrimalItemConsumable_Egg_Oxa_Fertilized_Aberrant_C",
-			"parent": "/Game/Mods/AC2/Oxa/PrimalItemConsumable_Egg_Oxa_Fertilized.PrimalItemConsumable_Egg_Oxa_Fertilized_C",
-			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Spino.HUD_DinoEgg_MIC_Inst_Spino",
-			"type": "MiscConsumable/Food",
-			"folders": [ "Consumables", "Eggs" ],
-			"weight": 12,
-			"stackSize": 1,
-			"spoilsIn": 691200,
-			"statEffects": [
-				{ "stat": "food", "value": 55, "useItemQuality": true, "duration": 13.75 },
-				{ "stat": "health", "value": 55, "useItemQuality": true, "duration": 13.75 },
-				{ "stat": "stamina", "value": 55, "useItemQuality": true, "duration": 13.75 }
-			],
-			"egg": {
-				"dinoClass": "/Game/Mods/AC2/Oxa/Ox_Character_BP_Aberrant.Ox_Character_BP_Aberrant_C",
-				"temperature": { "min": 30, "max": 32 }
 			},
 			"cooking": {
 				"health": 0.8,
