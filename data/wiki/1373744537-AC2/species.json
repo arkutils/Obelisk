@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1705110964",
+	"version": "358.24.1713491648",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -87,6 +87,66 @@
 				],
 				"baseXP": 120
 			}
+		},
+		{
+			"name": "Aerosteon",
+			"bp": "/Game/Mods/AC2/Aerosteon/BloodyAeros_Character_BP.BloodyAeros_Character_BP_C",
+			"dinoNameTag": "BloodyAeros",
+			"customTag": "BloodyAeros",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 560, "sprint": 2400 },
+				"swim": { "base": 210 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 2400 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 35, "radius": 300, "stamina": 0 },
+					{ "name": "Claws", "interval": 0.2, "dmg": 58, "radius": 300, "stamina": 25 },
+					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Jump", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 75 },
+					{ "name": "Evasive", "interval": 0.2, "dmg": 35, "radius": 300, "stamina": 100 },
+					{ "name": "SavageEvasive", "interval": 0.2, "dmg": 95, "radius": 300, "stamina": 100 },
+					{ "name": "Impale", "interval": 0.2, "dmg": 50, "radius": 300, "stamina": 100 },
+					{ "name": "WildSlash", "interval": 0.2, "dmg": 115, "radius": 300, "stamina": 100 },
+					{ "name": "Taunt", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "EnterFrenzy", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 30 }
 		},
 		{
 			"name": "Anteosaurus",
@@ -400,8 +460,8 @@
 					{ "name": "Bite", "interval": 0.1, "dmg": 30, "radius": 480, "stamina": 0 },
 					{ "name": "Stomp", "interval": 8, "dmg": 95, "radius": 700, "stamina": 100 },
 					{ "name": "BackStomp", "interval": 8, "dmg": 45, "radius": 400, "stamina": 0 },
-					{ "name": "TailWhipLeft", "interval": 0.4, "dmg": 55, "radius": 625, "stamina": 0 },
-					{ "name": "TailWhipRight", "interval": 0.4, "dmg": 55, "radius": 625, "stamina": 0 },
+					{ "name": "TailWhipLeft", "interval": 0.4, "dmg": 65, "radius": 625, "stamina": 0 },
+					{ "name": "TailWhipRight", "interval": 0.4, "dmg": 65, "radius": 625, "stamina": 0 },
 					{ "name": "Roar", "interval": 5, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -493,6 +553,118 @@
 			"death": { "baseXP": 4 }
 		},
 		{
+			"name": "Magnapaulia",
+			"bp": "/Game/Mods/AC2/BigPaul/BigPaul_Character_BP.BigPaul_Character_BP_C",
+			"dinoNameTag": "BigPaul",
+			"customTag": "BigPaul",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 490, "sprint": 1960 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 490, "sprint": 1960 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 35, "radius": 425, "stamina": 0 },
+					{ "name": "Hipcheck", "interval": 30, "dmg": 80, "radius": 450, "stamina": 150 },
+					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Jabs Begin", "interval": 0.2, "dmg": 58, "radius": 400, "stamina": 75 },
+					{ "name": "Jabs End", "interval": 0.2, "dmg": 75, "radius": 325, "stamina": 0 },
+					{ "name": "HealRoar", "interval": 45, "dmg": 80, "radius": 600, "stamina": 100 },
+					{ "name": "AIJabs", "interval": 6, "dmg": 58, "radius": 400, "stamina": 75 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
+			"name": "X-Magnapaulia",
+			"bp": "/Game/Mods/AC2/BigPaul/Volcano_BigPaul_Character_BP.Volcano_BigPaul_Character_BP_C",
+			"dinoNameTag": "BigPaul",
+			"customTag": "BigPaul",
+			"targetingTeamName": "Herbivores_Large_Aggressive",
+			"mass": 330,
+			"dragWeight": 550,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 0,
+				"timeBase": 11725,
+				"timeLevel": 0
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 490, "sprint": 1960 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 490, "sprint": 1960 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -15,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45,
+				"defaultSwingRadius": 260,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.2, "dmg": 35, "radius": 425, "stamina": 0 },
+					{ "name": "Hipcheck", "interval": 30, "dmg": 80, "radius": 450, "stamina": 150 },
+					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Jabs Begin", "interval": 0.2, "dmg": 58, "radius": 400, "stamina": 75 },
+					{ "name": "Jabs End", "interval": 0.2, "dmg": 75, "radius": 325, "stamina": 0 },
+					{ "name": "HealRoar", "interval": 45, "dmg": 80, "radius": 600, "stamina": 100 },
+					{ "name": "AIJabs", "interval": 6, "dmg": 58, "radius": 400, "stamina": 75 }
+				]
+			},
+			"death": { "baseXP": 30 }
+		},
+		{
 			"name": "Brachauchenius",
 			"bp": "/Game/Mods/AC2/Brachau/Brachau_Character_BP.Brachau_Character_BP_C",
 			"dinoNameTag": "Brachau",
@@ -579,7 +751,7 @@
 				"attacks": [
 					{ "name": "Necc", "interval": 3, "dmg": 42, "radius": 400, "stamina": 0 },
 					{ "name": "Stomp", "interval": 0.4, "dmg": 35, "radius": 400, "stamina": 0 },
-					{ "name": "KickStomp", "interval": 6, "dmg": 68, "radius": 450, "stamina": 150 },
+					{ "name": "KickStomp", "interval": 6, "dmg": 80, "radius": 450, "stamina": 150 },
 					{ "name": "Bellow", "interval": 6, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -628,7 +800,7 @@
 				"attacks": [
 					{ "name": "Necc", "interval": 3, "dmg": 42, "radius": 400, "stamina": 0 },
 					{ "name": "Stomp", "interval": 0.4, "dmg": 35, "radius": 400, "stamina": 0 },
-					{ "name": "KickStomp", "interval": 6, "dmg": 68, "radius": 450, "stamina": 150 },
+					{ "name": "KickStomp", "interval": 6, "dmg": 80, "radius": 450, "stamina": 150 },
 					{ "name": "Bellow", "interval": 6, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
 			},
@@ -5047,7 +5219,7 @@
 				"defaultSwingRadius": 260,
 				"attacks": [
 					{ "name": "TailDirectional", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
-					{ "name": "TailSlam", "interval": 0.2, "dmg": 50, "radius": 450, "stamina": 0 },
+					{ "name": "TailSlam", "interval": 0.2, "dmg": 70, "radius": 450, "stamina": 75 },
 					{ "name": "Bite", "interval": 0.2, "dmg": 25, "radius": 450, "stamina": 0 },
 					{ "name": "TailSpecial", "interval": 10, "dmg": 68, "radius": 450, "stamina": 50 },
 					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }
@@ -5100,7 +5272,7 @@
 				"defaultSwingRadius": 260,
 				"attacks": [
 					{ "name": "TailDirectional", "interval": 0.2, "dmg": 45, "radius": 450, "stamina": 0 },
-					{ "name": "TailSlam", "interval": 0.2, "dmg": 50, "radius": 450, "stamina": 0 },
+					{ "name": "TailSlam", "interval": 0.2, "dmg": 70, "radius": 450, "stamina": 75 },
 					{ "name": "Bite", "interval": 0.2, "dmg": 25, "radius": 450, "stamina": 0 },
 					{ "name": "TailSpecial", "interval": 10, "dmg": 68, "radius": 450, "stamina": 50 },
 					{ "name": "Roar", "interval": 0.2, "dmg": 0, "radius": 0, "stamina": 0 }

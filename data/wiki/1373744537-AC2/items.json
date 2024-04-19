@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "358.17.1705110964",
+	"version": "358.24.1713491648",
 	"format": "4",
 	"mod": {
 		"id": "1373744537",
@@ -57,6 +57,34 @@
 					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
 					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
 				]
+			}
+		},
+		{
+			"name": "Fertilized Aerosteon Egg",
+			"description": "Tremendously nourishing by itself, this egg provides extraordinary nutritional value in many cooking recipes.",
+			"bp": "/Game/Mods/AC2/Aerosteon/PrimalItemConsumable_Egg_BloodyAeros_Fertilized.PrimalItemConsumable_Egg_BloodyAeros_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Yuty.PrimalItemConsumable_Egg_Yuty_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Yuty.HUD_DinoEgg_MIC_Inst_Yuty",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 15,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "health", "value": 80, "useItemQuality": true, "duration": 20 },
+				{ "stat": "stamina", "value": 80, "useItemQuality": true, "duration": 20 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/Aerosteon/BloodyAeros_Character_BP.BloodyAeros_Character_BP_C",
+				"temperature": { "min": 32, "max": 34 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
@@ -373,6 +401,76 @@
 				"food": 0.0375,
 				"weight": 0.01,
 				"water": 0.025
+			}
+		},
+		{
+			"name": "Magnapaulia Saddle",
+			"description": "Equip a Magnapaulia with this to ride it.",
+			"bp": "/Game/Mods/AC2/BigPaul/PrimalItemArmor_MegapauliaSaddle.PrimalItemArmor_MegapauliaSaddle_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Armor/Base/PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C",
+			"icon": "/Game/PrimalEarth/Dinos/Giganotosaurus/GigantosaurusSaddle/HUD_GigantoSaddle_Colorize_MIC.HUD_GigantoSaddle_Colorize_MIC",
+			"type": "Equipment/DinoSaddle",
+			"folders": [ "Saddles" ],
+			"weight": 20,
+			"stackSize": 1,
+			"crafting": {
+				"xp": 86,
+				"time": 10,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "qty": 380, "type": "PrimalItemResource_Hide_C" },
+					{ "qty": 200, "type": "PrimalItemResource_Fibers_C" },
+					{ "qty": 50, "type": "PrimalItemResource_MetalIngot_C" }
+				]
+			}
+		},
+		{
+			"name": "A Worthy Challenge",
+			"description": "Use on your mount to initiate the taming process for Magnapaulia:\n\n- Cannot be used on Carnivores, Flyers or Players\n- Cannot dismount your creature during the process until Magnapaulia is downed.",
+			"bp": "/Game/Mods/AC2/BigPaul/PrimalItemConsumable_ChallengePaul.PrimalItemConsumable_ChallengePaul_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric_C",
+			"icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Condition_Befriended_Icon.Condition_Befriended_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Drugs" ],
+			"weight": 0.1,
+			"stackSize": 100,
+			"crafting": {
+				"xp": 1000,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [ { "qty": 3, "type": "PrimalItemArtifactGeneric_C" } ]
+			}
+		},
+		{
+			"name": "Fertilized Magnapaulia Egg",
+			"description": "",
+			"bp": "/Game/Mods/AC2/BigPaul/PrimalItemConsumable_Egg_Paul_Fertilized.PrimalItemConsumable_Egg_Paul_Fertilized_C",
+			"parent": "/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Diplo.PrimalItemConsumable_Egg_Diplo_C",
+			"icon": "/Game/PrimalEarth/Items/DinoEgg/HUD_DinoEgg_MIC_Inst_Diplo.HUD_DinoEgg_MIC_Inst_Diplo",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Eggs" ],
+			"weight": 15,
+			"stackSize": 1,
+			"spoilsIn": 691200,
+			"statEffects": [
+				{ "stat": "food", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "health", "value": 100, "useItemQuality": true, "duration": 25 },
+				{ "stat": "stamina", "value": 100, "useItemQuality": true, "duration": 25 }
+			],
+			"egg": {
+				"dinoClass": "/Game/Mods/AC2/BigPaul/BigPaul_Character_BP.BigPaul_Character_BP_C",
+				"temperature": { "min": 26, "max": 29 }
+			},
+			"cooking": {
+				"health": 0.8,
+				"stamina": 0.8,
+				"food": 0.8,
+				"weight": 0.3,
+				"water": 0.01
 			}
 		},
 		{
