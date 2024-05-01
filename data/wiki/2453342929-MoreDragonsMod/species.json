@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1710448541",
+	"version": "358.24.1714424674",
 	"format": "4",
 	"mod": {
 		"id": "2453342929",
@@ -564,13 +564,21 @@
 				"defaultSwingRadius": 1200,
 				"attacks": [
 					{ "name": "Bite", "interval": 0, "dmg": 82, "radius": 325, "stamina": 0 },
-					{ "name": "Flame", "interval": 15, "dmg": 0, "radius": 0, "stamina": 350 },
-					{ "name": "Claw Explosive Punch", "interval": 5, "dmg": 38, "radius": 512, "stamina": 80 },
+					{
+						"name": "Flame", "interval": 15, "dmg": 0, "radius": 0, "stamina": 350,
+						"isProjectile": true
+					},
+					{ "name": "Claw Explosive Punch", "interval": 30, "dmg": 200, "radius": 512, "stamina": 80 },
 					{ "name": "Wing Blast", "interval": 10, "dmg": 15, "radius": 990, "stamina": 100 },
 					{ "name": "Enrage", "interval": 38, "dmg": 5, "radius": 1225, "stamina": 100 },
 					{ "name": "Bigger Bite", "interval": 12, "dmg": 160, "radius": 325, "stamina": 95 },
 					{ "name": "Electric Breath", "interval": 15, "dmg": 0, "radius": 0, "stamina": 350 },
-					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "Roar", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "Cyclone Spin", "interval": 40, "dmg": 150, "radius": 900, "stamina": 150 },
+					{
+						"name": "Magna Beam", "interval": 35, "dmg": 0, "radius": 0, "stamina": 295,
+						"isProjectile": true
+					}
 				]
 			},
 			"death": { "baseXP": 375 }
@@ -616,14 +624,14 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 690, "sprint": 796.9 },
-				"fly": { "base": 2400, "sprint": 2772 },
-				"swim": { "base": 2400 }
+				"walk": { "base": 690, "sprint": 948.8 },
+				"fly": { "base": 1000, "sprint": 2750 },
+				"swim": { "base": 1000 }
 			},
 			"movementD": {
-				"walk": { "base": 690, "sprint": 796.9 },
-				"fly": { "base": 2400, "sprint": 2772 },
-				"swim": { "base": 2400 }
+				"walk": { "base": 690, "sprint": 948.8 },
+				"fly": { "base": 1000, "sprint": 2750 },
+				"swim": { "base": 1000 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -638,7 +646,8 @@
 						"name": "Banshee Spit", "interval": 11, "dmg": 0, "radius": 0, "stamina": 90,
 						"isProjectile": true
 					},
-					{ "name": "Claw Strike", "interval": 10, "dmg": 24, "radius": 500, "stamina": 40 },
+					{ "name": "Wing Blast", "interval": 15, "dmg": 60, "radius": 2000, "stamina": 35 },
+					{ "name": "Claw Strike", "interval": 10, "dmg": 25, "radius": 500, "stamina": 40 },
 					{ "name": "Banshee Shriek", "interval": 16, "dmg": 1, "radius": 2000, "stamina": 120 },
 					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 }
 				]
@@ -994,7 +1003,6 @@
 					{ "name": "Tail Spin (LAND)", "interval": 14, "dmg": 13, "radius": 190, "stamina": 180 },
 					{ "name": "Tail Spin (WATER)", "interval": 14, "dmg": 15, "radius": 190, "stamina": 180 },
 					{ "name": "Aqua Brine Breath (VS Enemy) (TAMED)", "interval": 17, "dmg": 0, "radius": 0, "stamina": 80 },
-					{ "name": "Aqua Brine Breath (Allow Friendly Fire)", "interval": 17, "dmg": 0, "radius": 0, "stamina": 80 },
 					{ "name": "Roar", "interval": 14, "dmg": 0, "radius": 0, "stamina": 0 },
 					{ "name": "Aqua Brine Breath (VS Enemy) (WILD)", "interval": 8, "dmg": 0, "radius": 0, "stamina": 80 }
 				]
@@ -1948,10 +1956,7 @@
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "Impale", "interval": 0, "dmg": 29, "radius": 275, "stamina": 0 },
-					{ "name": "Group Healing", "interval": 0, "dmg": 28, "radius": 275, "stamina": 10 },
-					{ "name": "Group Healing Wild", "interval": 20, "dmg": 28, "radius": 275, "stamina": 10 },
-					{ "name": "Passive Healing", "interval": 0, "dmg": 1, "radius": 1, "stamina": 10 },
-					{ "name": "Short Attack Healing", "interval": 0, "dmg": 28, "radius": 275, "stamina": 10 },
+					{ "name": "Healing AOE", "interval": 5, "dmg": 28, "radius": 275, "stamina": 10 },
 					{ "name": "Smash", "interval": 5, "dmg": 32, "radius": 275, "stamina": 20 },
 					{ "name": "AOE", "interval": 22, "dmg": 5, "radius": 1070, "stamina": 180 },
 					{ "name": "Cut", "interval": 6, "dmg": 28, "radius": 275, "stamina": 15 },
@@ -2005,10 +2010,7 @@
 				"defaultSwingRadius": 160,
 				"attacks": [
 					{ "name": "Impale", "interval": 0, "dmg": 29, "radius": 275, "stamina": 0 },
-					{ "name": "Group Healing", "interval": 0, "dmg": 28, "radius": 275, "stamina": 10 },
-					{ "name": "Group Healing Wild", "interval": 20, "dmg": 28, "radius": 275, "stamina": 10 },
-					{ "name": "Passive Healing", "interval": 0, "dmg": 1, "radius": 1, "stamina": 10 },
-					{ "name": "Short Attack Healing", "interval": 0, "dmg": 28, "radius": 275, "stamina": 10 },
+					{ "name": "Healing AOE", "interval": 5, "dmg": 28, "radius": 275, "stamina": 10 },
 					{ "name": "Smash", "interval": 5, "dmg": 32, "radius": 275, "stamina": 20 },
 					{ "name": "AOE", "interval": 22, "dmg": 5, "radius": 1070, "stamina": 180 },
 					{ "name": "Cut", "interval": 6, "dmg": 28, "radius": 275, "stamina": 15 },
@@ -4177,12 +4179,12 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 800, "sprint": 2400 },
+				"walk": { "base": 890, "sprint": 2670 },
 				"fly": { "base": 1200, "sprint": 2520 },
 				"swim": { "base": 1200 }
 			},
 			"movementD": {
-				"walk": { "base": 800, "sprint": 2400 },
+				"walk": { "base": 890, "sprint": 2670 },
 				"fly": { "base": 1200, "sprint": 2520 },
 				"swim": { "base": 1200 }
 			},
@@ -4889,7 +4891,8 @@
 					{ "name": "Roar", "interval": 30, "dmg": 30, "radius": 3300, "stamina": 100 },
 					{ "name": "Breath", "interval": 25, "dmg": 0, "radius": 0, "stamina": 100 },
 					{ "name": "AOE", "interval": 35, "dmg": 50, "radius": 0, "stamina": 100 },
-					{ "name": "Roar Tek", "interval": 45, "dmg": 0, "radius": 0, "stamina": 100 }
+					{ "name": "Roar Tek", "interval": 45, "dmg": 0, "radius": 0, "stamina": 100 },
+					{ "name": "Bite Heavy", "interval": 5, "dmg": 200, "radius": 300, "stamina": 0 }
 				]
 			},
 			"death": {
@@ -6814,13 +6817,13 @@
 			},
 			"movementW": {
 				"walk": { "base": 490, "sprint": 980 },
-				"fly": { "base": 1800, "sprint": 2934 },
-				"swim": { "base": 1800 }
+				"fly": { "base": 1000, "sprint": 1630 },
+				"swim": { "base": 1000 }
 			},
 			"movementD": {
 				"walk": { "base": 490, "sprint": 980 },
-				"fly": { "base": 1800, "sprint": 2934 },
-				"swim": { "base": 1800 }
+				"fly": { "base": 1000, "sprint": 1630 },
+				"swim": { "base": 1000 }
 			},
 			"staminaRates": {
 				"sprint": -6,
@@ -6903,7 +6906,8 @@
 					{ "name": "Grab", "interval": 10, "dmg": 24, "radius": 256, "stamina": 42 },
 					{ "name": "Intimidating Roar", "interval": 35, "dmg": 24, "radius": 250, "stamina": 60 },
 					{ "name": "Taunting Roar", "interval": 50, "dmg": 22, "radius": 2000, "stamina": 30 },
-					{ "name": "Rawr", "interval": 0, "dmg": 22, "radius": 250, "stamina": 0 }
+					{ "name": "Rawr", "interval": 0, "dmg": 22, "radius": 250, "stamina": 0 },
+					{ "name": "Tail Slam", "interval": 5, "dmg": 50, "radius": 300, "stamina": 25 }
 				]
 			},
 			"death": {
@@ -7121,7 +7125,8 @@
 					{ "name": "Tail Stab", "interval": 18, "dmg": 125, "radius": 700, "stamina": 15 },
 					{ "name": "Summoning", "interval": 120, "dmg": 0, "radius": 0, "stamina": 250 },
 					{ "name": "Summoning Phase 2", "interval": 0, "dmg": 0, "radius": 0, "stamina": 250 },
-					{ "name": "BiteAttack (Swimming)", "interval": 12, "dmg": 85, "radius": 600, "stamina": 5 }
+					{ "name": "BiteAttack (Swimming)", "interval": 12, "dmg": 85, "radius": 600, "stamina": 5 },
+					{ "name": "Acid Pool", "interval": 45, "dmg": 50, "radius": 600, "stamina": 80 }
 				]
 			},
 			"death": {
