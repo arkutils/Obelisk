@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1698102845",
+	"version": "358.24.1720347505",
 	"format": "4",
 	"mod": {
 		"id": "2212177129",
@@ -653,7 +653,7 @@
 			"death": { "baseXP": 50 }
 		},
 		{
-			"name": "Ursobee",
+			"name": "Bumblebear",
 			"bp": "/Game/Mods/Hybridthing/Beear/Beear_Character_BP.Beear_Character_BP_C",
 			"dinoNameTag": "BeerOrBeear",
 			"customTag": "BeerOrBeear",
@@ -2392,7 +2392,7 @@
 				"defaultSwingRadius": 110,
 				"attacks": [
 					{ "name": "Bite", "interval": 0.6, "dmg": 35, "radius": 110, "stamina": 0 },
-					{ "name": "Gore", "interval": 0.5, "dmg": 36, "radius": 120, "stamina": 125 },
+					{ "name": "Gore", "interval": 0.5, "dmg": 36, "radius": 120, "stamina": 60 },
 					{ "name": "None", "interval": 8, "dmg": 27, "radius": 200, "stamina": 50 },
 					{ "name": "HumpAttack", "interval": 65, "dmg": 0, "radius": 0, "stamina": 10 }
 				]
@@ -2903,8 +2903,11 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0.6, "dmg": 156, "radius": 110, "stamina": 0 },
 					{ "name": "Gore", "interval": 6, "dmg": 133, "radius": 420, "stamina": 30 },
-					{ "name": "None", "interval": 6, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Hump Attack", "interval": 50, "dmg": 0, "radius": 0, "stamina": 0 }
+					{ "name": "None", "interval": 25, "dmg": 0, "radius": 0, "stamina": 0 },
+					{
+						"name": "Tail needles", "interval": 12, "dmg": 5, "radius": 2000, "stamina": 0,
+						"isProjectile": true
+					}
 				]
 			},
 			"death": {
@@ -3870,7 +3873,7 @@
 					{ "name": "Bite", "interval": 0.6, "dmg": 215, "radius": 245, "stamina": 0 },
 					{ "name": "Gore", "interval": 5, "dmg": 320, "radius": 450, "stamina": 0 },
 					{
-						"name": "None", "interval": 9, "dmg": 0, "radius": 0, "stamina": 0,
+						"name": "None", "interval": 9, "dmg": 0, "radius": 0, "stamina": 40,
 						"isProjectile": true
 					},
 					{ "name": "HumpAttack", "interval": 25, "dmg": 0, "radius": 0, "stamina": 0 },
@@ -6480,8 +6483,9 @@
 				"attacks": [
 					{ "name": "Bite", "interval": 0, "dmg": 181, "radius": 250, "stamina": 0 },
 					{ "name": "Gore", "interval": 2, "dmg": 225, "radius": 350, "stamina": 0 },
-					{ "name": "None", "interval": 1, "dmg": 0, "radius": 0, "stamina": 0 },
-					{ "name": "Hump Attack", "interval": 15, "dmg": 0, "radius": 0, "stamina": 350 }
+					{ "name": "None", "interval": 1, "dmg": 98, "radius": 0, "stamina": 15 },
+					{ "name": "Hump Attack", "interval": 46, "dmg": 197, "radius": 900, "stamina": 270 },
+					{ "name": "Fire", "interval": 30, "dmg": 0, "radius": 0, "stamina": 15 }
 				]
 			},
 			"death": {
@@ -6694,7 +6698,7 @@
 				"swim": { "base": 750, "sprint": 1470 }
 			},
 			"staminaRates": {
-				"sprint": -2,
+				"sprint": -8,
 				"swimOrFly": -2
 			},
 			"attack": {
@@ -7386,68 +7390,6 @@
 					{ "name": "Bite", "interval": 0.6, "dmg": 80, "radius": 200, "stamina": 0 },
 					{ "name": "Grasp", "interval": 15, "dmg": 18, "radius": 200, "stamina": 40 },
 					{ "name": "Wing Slappa", "interval": 2, "dmg": 100, "radius": 350, "stamina": 0 },
-					{ "name": "Wing Rolla", "interval": 5, "dmg": 50, "radius": 300, "stamina": 0 },
-					{ "name": "Wing Clappa", "interval": 4, "dmg": 1, "radius": 1500, "stamina": 0 },
-					{ "name": "Taunt", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
-				]
-			},
-			"death": { "baseXP": 3 }
-		},
-		{
-			"name": "Spinojalosaurus",
-			"bp": "/Game/Mods/Hybridthing/Spinojara/Spinojara_Character_BP.Spinojara_Character_BP_C",
-			"dinoNameTag": "Spinojara",
-			"customTag": "Tapejara",
-			"targetingTeamName": "Herbivores_Medium_Aggressive",
-			"mass": 190,
-			"dragWeight": 149,
-			"flags": [
-				"allowCarryFlyerDinos",
-				"allowFlyerLandedRider",
-				"allowRiding",
-				"canBeDragged",
-				"canBeTorpid",
-				"canDrag",
-				"isFlyerDino",
-				"isTameable"
-			],
-			"leveling": { "mutagenCost": 67 },
-			"cloning": {
-				"costBase": 1675,
-				"costLevel": 55,
-				"timeBase": 11725,
-				"timeLevel": 385
-			},
-			"falling": {
-				"dmgMult": 80,
-				"maxSpeed": 1550
-			},
-			"movementW": {
-				"walk": { "base": 300, "sprint": 525 },
-				"fly": { "base": 1200, "sprint": 2100 },
-				"swim": { "base": 300 }
-			},
-			"movementD": {
-				"walk": { "base": 300, "sprint": 525 },
-				"fly": { "base": 1200, "sprint": 2100 },
-				"swim": { "base": 300 }
-			},
-			"movementR": {
-				"walk": { "base": 337.5, "sprint": 590.6 },
-				"fly": { "base": 1350, "sprint": 2362.5 },
-				"swim": { "base": 337.5 }
-			},
-			"staminaRates": {
-				"sprint": -6,
-				"swimOrFly": -0.325
-			},
-			"attack": {
-				"defaultDmg": 15,
-				"defaultSwingRadius": 200,
-				"attacks": [
-					{ "name": "Bite", "interval": 0.6, "dmg": 88, "radius": 200, "stamina": 0 },
-					{ "name": "Grasp", "interval": 15, "dmg": 18, "radius": 200, "stamina": 40 },
-					{ "name": "Wing Slappa", "interval": 2, "dmg": 123, "radius": 350, "stamina": 10 },
 					{ "name": "Wing Rolla", "interval": 5, "dmg": 50, "radius": 300, "stamina": 0 },
 					{ "name": "Wing Clappa", "interval": 4, "dmg": 1, "radius": 1500, "stamina": 0 },
 					{ "name": "Taunt", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 }
