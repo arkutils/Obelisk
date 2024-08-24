@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.17.1696180721",
+	"version": "358.24.1724465652",
 	"format": "4",
 	"mod": {
 		"id": "1754846792",
@@ -1918,6 +1918,68 @@
 			}
 		},
 		{
+			"name": "Skeletal Desmodus",
+			"bp": "/Game/Mods/Zythara_Critters/AO/Desmodus_Character_BP_Skeletal_AO.Desmodus_Character_BP_Skeletal_AO_C",
+			"dinoNameTag": "Desmodus",
+			"customTag": "Desmodus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 529.2 },
+				"fly": { "base": 850, "sprint": 1836 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 245, "sprint": 441 },
+				"fly": { "base": 850, "sprint": 1530 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 40, "radius": 500, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 500, "stamina": 40 },
+					{ "name": "Scream", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 100 },
+					{ "name": "ToggleLifeSteal", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 50 },
+					{ "name": "Grab Wild", "interval": 10, "dmg": 18, "radius": 500, "stamina": 40 },
+					{ "name": "Swipe", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Scream", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 1e-05 }
+				]
+			},
+			"death": {
+				"dossierId": 1228,
+				"baseXP": 3
+			}
+		},
+		{
 			"name": "Tek Direwolf",
 			"bp": "/Game/Mods/Zythara_Critters/AO/Direwolf_Character_BP_robot_AO.Direwolf_Character_BP_robot_AO_C",
 			"dinoNameTag": "Direwolf",
@@ -2577,6 +2639,56 @@
 			}
 		},
 		{
+			"name": "Tek Otter",
+			"bp": "/Game/Mods/Zythara_Critters/AO/Otter_Character_BP_Robot_AO.Otter_Character_BP_Robot_AO_C",
+			"dinoNameTag": "Otter",
+			"customTag": "Otter",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 70,
+			"dragWeight": 35,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 84 },
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 229.5, "sprint": 344.3 },
+				"swim": { "base": 337.5 }
+			},
+			"movementD": {
+				"walk": { "base": 170, "sprint": 255 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 28,
+				"defaultSwingRadius": 240,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.3, "dmg": 10, "radius": 100, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
 			"name": "Quadlodon",
 			"bp": "/Game/Mods/Zythara_Critters/AO/Quadlodon_Character_BP_ZC_AO.Quadlodon_Character_BP_ZC_AO_C",
 			"dinoNameTag": "Quadlodon",
@@ -3038,6 +3150,68 @@
 					}
 				],
 				"baseXP": 18
+			}
+		},
+		{
+			"name": "Tek Thorny Dragon",
+			"bp": "/Game/Mods/Zythara_Critters/AO/SpineyLizard_Character_BP_Robot_AO.SpineyLizard_Character_BP_Robot_AO_C",
+			"dinoNameTag": "SpineyLizard",
+			"customTag": "SpineyLizard",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 150,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 49 },
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 196, "sprint": 693.8 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 196, "sprint": 588 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 150,
+				"attacks": [
+					{ "name": "Claws", "interval": 0.08, "dmg": 40, "radius": 150, "stamina": 5 },
+					{
+						"name": "Tail needles", "interval": 7.5, "dmg": 10, "radius": 2000, "stamina": 120,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 6
 			}
 		},
 		{
@@ -5342,6 +5516,56 @@
 			}
 		},
 		{
+			"name": "Tek Otter",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_Otter/Otter_Character_BP_Robot.Otter_Character_BP_Robot_C",
+			"dinoNameTag": "Otter",
+			"customTag": "Otter",
+			"targetingTeamName": "Carnivores_Low",
+			"mass": 70,
+			"dragWeight": 35,
+			"flags": [
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isAmphibious",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 84 },
+			"cloning": {
+				"costBase": 2100,
+				"costLevel": 55,
+				"timeBase": 14700,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 229.5, "sprint": 344.3 },
+				"swim": { "base": 337.5 }
+			},
+			"movementD": {
+				"walk": { "base": 170, "sprint": 255 },
+				"swim": { "base": 250 }
+			},
+			"staminaRates": {
+				"sprint": -5,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 28,
+				"defaultSwingRadius": 240,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.3, "dmg": 10, "radius": 100, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 4 }
+		},
+		{
 			"name": "Tek Pegomastax",
 			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_Pego/Pegomastax_Character_BP_robot.Pegomastax_Character_BP_robot_C",
 			"dinoNameTag": "Pegomastax",
@@ -6444,6 +6668,68 @@
 			}
 		},
 		{
+			"name": "Tek Thorny Dragon",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_ThornyDragon/SpineyLizard_Character_BP_Robot.SpineyLizard_Character_BP_Robot_C",
+			"dinoNameTag": "SpineyLizard",
+			"customTag": "SpineyLizard",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 195,
+			"dragWeight": 150,
+			"flags": [
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 49 },
+			"cloning": {
+				"costBase": 1200,
+				"costLevel": 55,
+				"timeBase": 8400,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 196, "sprint": 693.8 },
+				"swim": { "base": 240 }
+			},
+			"movementD": {
+				"walk": { "base": 196, "sprint": 588 },
+				"swim": { "base": 240 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 40,
+				"defaultSwingRadius": 150,
+				"attacks": [
+					{ "name": "Claws", "interval": 0.08, "dmg": 40, "radius": 150, "stamina": 5 },
+					{
+						"name": "Tail needles", "interval": 7.5, "dmg": 10, "radius": 2000, "stamina": 120,
+						"isProjectile": true
+					}
+				]
+			},
+			"death": {
+				"lootBagChance": 0.3,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_Carnivore_Medium.DinoDropInventoryComponent_Carnivore_Medium"
+					}
+				],
+				"baseXP": 6
+			}
+		},
+		{
 			"name": "Tek Tusoteuthis",
 			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_Tuso/Tusoteuthis_Character_BP_Robot.Tusoteuthis_Character_BP_Robot_C",
 			"dinoNameTag": "Tusoteuthis",
@@ -7182,6 +7468,67 @@
 					"PrimalItemStructure_TriRoof_Tek_C"
 				],
 				"baseXP": 8
+			}
+		},
+		{
+			"name": "Skeletal Desmodus",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Skeletal_Desmodus/Desmodus_Character_BP_Skeletal.Desmodus_Character_BP_Skeletal_C",
+			"dinoNameTag": "Desmodus",
+			"customTag": "Desmodus",
+			"targetingTeamName": "Carnivores_Medium",
+			"mass": 190,
+			"dragWeight": 149,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowMountedWeaponry",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"flyerAllowRidingInCaves",
+				"isFlyerDino"
+			],
+			"leveling": { "mutagenCost": 67 },
+			"cloning": {
+				"costBase": 1675,
+				"costLevel": 55,
+				"timeBase": 11725,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 245, "sprint": 529.2 },
+				"fly": { "base": 850, "sprint": 1836 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 245, "sprint": 441 },
+				"fly": { "base": 850, "sprint": 1530 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -0.325
+			},
+			"attack": {
+				"defaultDmg": 15,
+				"defaultSwingRadius": 200,
+				"attacks": [
+					{ "name": "Bite", "interval": 0.6, "dmg": 40, "radius": 500, "stamina": 0 },
+					{ "name": "Grab", "interval": 1, "dmg": 18, "radius": 500, "stamina": 40 },
+					{ "name": "Scream", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 100 },
+					{ "name": "ToggleLifeSteal", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 50 },
+					{ "name": "Grab Wild", "interval": 10, "dmg": 18, "radius": 500, "stamina": 40 },
+					{ "name": "Swipe", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 0 },
+					{ "name": "Scream", "interval": 0.6, "dmg": 18, "radius": 200, "stamina": 1e-05 }
+				]
+			},
+			"death": {
+				"dossierId": 1228,
+				"baseXP": 3
 			}
 		},
 		{
