@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.24.1724465652",
+	"version": "358.24.1730043250",
 	"format": "4",
 	"mod": {
 		"id": "1754846792",
@@ -2112,6 +2112,60 @@
 				],
 				"baseXP": 6
 			}
+		},
+		{
+			"name": "Tek Dragon",
+			"bp": "/Game/Mods/Zythara_Critters/AO/Dragon_Character_BP_Robot_AO.Dragon_Character_BP_Robot_AO_C",
+			"dinoNameTag": "Dragon",
+			"customTag": "Dragon",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1200,
+			"dragWeight": 150,
+			"flags": [
+				"allowFlyerLandedRider",
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isBigDino",
+				"isCarnivore",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": { "mutagenCost": 99000001 },
+			"cloning": {
+				"costBase": 2500000000,
+				"costLevel": 5500000000,
+				"timeBase": 17500000000,
+				"timeLevel": 38500000000
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 450, "sprint": 1350 },
+				"fly": { "base": 2500, "sprint": 4125 },
+				"swim": { "base": 2500 }
+			},
+			"movementD": {
+				"walk": { "base": 450, "sprint": 1350 },
+				"fly": { "base": 2500, "sprint": 4125 },
+				"swim": { "base": 2500 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 540,
+				"defaultSwingRadius": 180,
+				"attacks": [
+					{ "name": "Spino Bite", "interval": 0.4, "dmg": 540, "radius": 600, "stamina": 30 },
+					{ "name": "Flame", "interval": 5, "dmg": 540, "radius": 180, "stamina": 100 }
+				]
+			},
+			"death": { "baseXP": 3000 }
 		},
 		{
 			"name": "Geode",
@@ -5225,6 +5279,63 @@
 				]
 			},
 			"death": { "baseXP": 1 }
+		},
+		{
+			"name": "Tek Featherlight",
+			"bp": "/Game/Mods/Zythara_Critters/Creatures/Robot_Featherlight/LanternBird_Character_BP_Robot.LanternBird_Character_BP_Robot_C",
+			"dinoNameTag": "Lantern Bird",
+			"customTag": "Lantern Bird",
+			"targetingTeamName": "Herbivores",
+			"mass": 80,
+			"dragWeight": 25,
+			"flags": [
+				"allowFlyerLandedRider",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"canMountOnHumans",
+				"isFlyerDino",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 1.2, "max": 6 },
+					{ "chance": 0.2702703, "min": 7.2, "max": 14.4 },
+					{ "chance": 0.1351351, "min": 15.6, "max": 24 },
+					{ "chance": 0.05405405, "min": 25.2, "max": 36 }
+				],
+				"mutagenCost": 6
+			},
+			"cloning": {
+				"costBase": 125,
+				"costLevel": 55,
+				"timeBase": 875,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 60, "sprint": 165 },
+				"fly": { "base": 300, "sprint": 825 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 60, "sprint": 165 },
+				"fly": { "base": 300, "sprint": 825 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -4,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 3,
+				"defaultSwingRadius": 350,
+				"attacks": [ { "name": "BiteAttack", "interval": 0.4, "dmg": 3, "radius": 100, "stamina": 0 } ]
+			},
+			"death": { "baseXP": 2 }
 		},
 		{
 			"name": "Tek Griffin",
