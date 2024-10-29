@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.24.1729453808",
+	"version": "358.24.1730042845",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -8338,6 +8338,76 @@
 			}
 		},
 		{
+			"name": "Poopy, the Mega Dinopithecus King",
+			"bp": "/Game/Mods/Trex/Dinos/Bosses/Dinopithecus_Character_BP_Boss.Dinopithecus_Character_BP_Boss_C",
+			"dinoNameTag": "Dinopithecus",
+			"customTag": "Dinopithecus",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 1000,
+			"dragWeight": 1200,
+			"variants": [ "Boss" ],
+			"flags": [
+				"allowRiding",
+				"canBeTorpid",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino",
+				"isBossDino",
+				"isCarnivore",
+				"isTameable"
+			],
+			"falling": {
+				"dmgMult": 0,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 800, "sprint": 3200 },
+				"swim": { "base": 150 }
+			},
+			"movementD": {
+				"walk": { "base": 800, "sprint": 3200 },
+				"swim": { "base": 150 }
+			},
+			"staminaRates": {
+				"sprint": -10,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 45000,
+				"defaultSwingRadius": 700,
+				"attacks": [
+					{ "name": "Claw", "interval": 1, "dmg": 45000, "radius": 700, "stamina": 30 },
+					{
+						"name": "Grenade", "interval": 10, "dmg": 0, "radius": 600, "stamina": 30,
+						"isProjectile": true
+					},
+					{ "name": "Bite", "interval": 6, "dmg": 30000, "radius": 600, "stamina": 30 },
+					{ "name": "Roar", "interval": 1, "dmg": 0, "radius": 600, "stamina": 0 },
+					{
+						"name": "EMB", "interval": 3, "dmg": 0, "radius": 600, "stamina": 30,
+						"isProjectile": true
+					},
+					{ "name": "Pound", "interval": 20, "dmg": 100000, "radius": 700, "stamina": 30 },
+					{ "name": "Pound", "interval": 20, "dmg": 0, "radius": 700, "stamina": 30 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Trex/Loots/DinoDropInventoryComponent_BossDodorex.DinoDropInventoryComponent_BossDodorex"
+					}
+				],
+				"engrams": [
+					"PrimalItemArmor_ImprovedDinopithecSaddle_ADO_C",
+					"PrimalItemStructure_TekReplicator_ADO_C",
+					"PrimalItem_WeaponTekBow_Warden_C"
+				],
+				"baseXP": 3000
+			}
+		},
+		{
 			"name": "Vulthuryol, the Mega Dodowyvern",
 			"bp": "/Game/Mods/Trex/Dinos/Bosses/DodoWyvern_Character_BP_Boss.DodoWyvern_Character_BP_Boss_C",
 			"dinoNameTag": "DodoWyvern",
@@ -10310,7 +10380,7 @@
 				"swim": { "base": 300 }
 			},
 			"movementD": {
-				"walk": { "base": 425, "sprint": 637.5 },
+				"walk": { "base": 425, "sprint": 850 },
 				"swim": { "base": 300 }
 			},
 			"staminaRates": {
@@ -49292,7 +49362,7 @@
 			"name": "Ghost Dinopithecus King",
 			"bp": "/Game/Mods/Trex/Ubers/Dinopithecus/GhostDinopithecus_Character_BP.GhostDinopithecus_Character_BP_C",
 			"dinoNameTag": "Dinopithecus",
-			"customTag": "Dinopithecus",
+			"customTag": "Dinopithecus king",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
 			"dragWeight": 1200,
@@ -49527,7 +49597,7 @@
 			"name": "Dinopithecus King",
 			"bp": "/Game/Mods/Trex/Ubers/Dinopithecus/UberDinopithecus_Character_BP.UberDinopithecus_Character_BP_C",
 			"dinoNameTag": "Dinopithecus",
-			"customTag": "Dinopithecus",
+			"customTag": "Dinopithecus king",
 			"targetingTeamName": "Carnivores_High",
 			"mass": 1000,
 			"dragWeight": 1200,
