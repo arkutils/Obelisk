@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/items.json",
-	"version": "358.11.1691443191",
+	"version": "358.24.1735281960",
 	"format": "4",
 	"mod": {
 		"id": "2453342929",
@@ -98,7 +98,8 @@
 					{ "qty": 1, "type": "PrimalItemConsumableEatable_WaterContainer_C" },
 					{ "qty": 50, "type": "PrimalItemResource_Charcoal_C" },
 					{ "qty": 5, "type": "PrimalItemResource_Wood_C" },
-					{ "qty": 20, "type": "PrimalItemConsumable_RawMeat_C" },
+					{ "qty": 40, "type": "PrimalItemConsumable_RawMeat_C" },
+					{ "qty": 20, "type": "PrimalItemConsumable_RawPrimeMeat_C" },
 					{ "qty": 2, "type": "PrimalItemResource_Crystal_C" }
 				]
 			},
@@ -190,7 +191,9 @@
 					{ "qty": 25, "type": "PrimalItemConsumable_Berry_Mejoberry_C" },
 					{ "qty": 55, "type": "PrimalItemConsumable_Berry_Amarberry_C" },
 					{ "qty": 55, "type": "PrimalItemConsumable_Berry_Tintoberry_C" },
-					{ "qty": 55, "type": "PrimalItemConsumable_Berry_Azulberry_C" }
+					{ "qty": 55, "type": "PrimalItemConsumable_Berry_Azulberry_C" },
+					{ "qty": 55, "type": "PrimalItemConsumable_Berry_Stimberry_C" },
+					{ "qty": 5, "type": "PrimalItemConsumable_Honey_C" }
 				]
 			},
 			"statEffects": [
@@ -245,6 +248,78 @@
 				{ "stat": "torpidity", "value": -40, "useItemQuality": true, "duration": 8 },
 				{ "stat": "water", "value": -15, "useItemQuality": true, "duration": 1 }
 			]
+		},
+		{
+			"name": "Raw Salted Fish Meat",
+			"description": "Eating raw food will SLIGHTLY sate hunger, but is unhealthy for humans.  Most wild carnivores prefer raw meat to cooked meat.",
+			"bp": "/Game/Mods/MoreDragonsMod/CoreBlueprints/Items/Consumables/TamingItems/FishMeat/PrimalItemConsumable_RawMeat_Fish_Salty.PrimalItemConsumable_RawMeat_Fish_Salty_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawMeat_Fish.PrimalItemConsumable_RawMeat_Fish_C",
+			"icon": "/Game/Mods/MoreDragonsMod/CoreBlueprints/Items/Consumables/TamingItems/FishMeat/Icons/RawSaltedFishMeat_Icon.RawSaltedFishMeat_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Meat" ],
+			"weight": 0.1,
+			"stackSize": 40,
+			"spoilsIn": 1200,
+			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C",
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "exact": true, "qty": 1, "type": "PrimalItemConsumable_RawMeat_Fish_C" },
+					{ "qty": 10, "type": "PrimalItemResource_RawSalt_C" }
+				]
+			},
+			"statEffects": [
+				{ "stat": "food", "value": 5, "useItemQuality": true, "duration": 1 },
+				{ "stat": "water", "value": -5, "useItemQuality": true, "duration": 1 },
+				{ "stat": "health", "value": -1.5, "useItemQuality": true, "duration": 0.375 }
+			],
+			"cooking": {
+				"health": 0.11,
+				"stamina": 0.01,
+				"food": 0.15,
+				"weight": 0.02,
+				"water": 0.01
+			}
+		},
+		{
+			"name": "Raw Sweetened Fish Meat",
+			"description": "Eating raw food will SLIGHTLY sate hunger, but is unhealthy for humans.  Most wild carnivores prefer raw meat to cooked meat.",
+			"bp": "/Game/Mods/MoreDragonsMod/CoreBlueprints/Items/Consumables/TamingItems/FishMeat/PrimalItemConsumable_RawMeat_Fish_Sweetened.PrimalItemConsumable_RawMeat_Fish_Sweetened_C",
+			"parent": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawMeat_Fish.PrimalItemConsumable_RawMeat_Fish_C",
+			"icon": "/Game/Mods/MoreDragonsMod/CoreBlueprints/Items/Consumables/TamingItems/FishMeat/Icons/RawSweetFishMeat_Icon.RawSweetFishMeat_Icon",
+			"type": "MiscConsumable/Food",
+			"folders": [ "Consumables", "Meat" ],
+			"weight": 0.1,
+			"stackSize": 40,
+			"spoilsIn": 1200,
+			"spoilsTo": "/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat_C",
+			"crafting": {
+				"xp": 1,
+				"time": 5,
+				"levelReq": 0,
+				"productCount": 1,
+				"skillQualityMult": { "min": 0, "max": 0.05 },
+				"recipe": [
+					{ "exact": true, "qty": 1, "type": "PrimalItemConsumable_RawMeat_Fish_C" },
+					{ "qty": 1, "type": "PrimalItemConsumable_Honey_C" }
+				]
+			},
+			"statEffects": [
+				{ "stat": "food", "value": 5, "useItemQuality": true, "duration": 1 },
+				{ "stat": "stamina", "value": 2.5, "useItemQuality": true, "duration": 0.5 },
+				{ "stat": "health", "value": -1.5, "useItemQuality": true, "duration": 0.375 }
+			],
+			"cooking": {
+				"health": 0.11,
+				"stamina": 0.01,
+				"food": 0.15,
+				"weight": 0.02,
+				"water": 0.01
+			}
 		},
 		{
 			"name": "Black Pearl",
