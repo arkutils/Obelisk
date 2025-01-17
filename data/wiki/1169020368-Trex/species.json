@@ -1,6 +1,6 @@
 {
 	"$schema": "../.schema/species.json",
-	"version": "358.24.1735738194",
+	"version": "358.24.1737045997",
 	"format": "4",
 	"mod": {
 		"id": "1169020368",
@@ -8839,12 +8839,7 @@
 				"isFlyerDino"
 			],
 			"leveling": {
-				"wildLevelTable": [
-					{ "chance": 0.4, "min": 5, "max": 10 },
-					{ "chance": 0.2, "min": 12, "max": 24 },
-					{ "chance": 0.2, "min": 26, "max": 40 },
-					{ "chance": 0.2, "min": 42, "max": 76 }
-				],
+				"wildLevelTable": [ { "chance": 1, "min": 120, "max": 120 } ],
 				"mutagenCost": 82
 			},
 			"cloning": {
@@ -13662,6 +13657,66 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Alpha Dunkleosteus",
+			"bp": "/Game/Mods/Trex/Dinos/Dunkleo/Alpha/AlphaDunkle_Character_BP_ADO.AlphaDunkle_Character_BP_ADO_C",
+			"dinoNameTag": "Dunkle",
+			"customTag": "AlphaDunkle",
+			"targetingTeamName": "Carnivore_Water",
+			"mass": 300,
+			"dragWeight": 250,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canBeTorpid",
+				"canDrag",
+				"isCarnivore",
+				"isWaterDino",
+				"dieIfLeftWater",
+				"isTameable"
+			],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ],
+				"mutagenCost": 44
+			},
+			"cloning": {
+				"costBase": 1075,
+				"costLevel": 55,
+				"timeBase": 7525,
+				"timeLevel": 385
+			},
+			"falling": {
+				"dmgMult": 80,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 900, "sprint": 1530 },
+				"swim": { "base": 650 }
+			},
+			"movementD": {
+				"walk": { "base": 900, "sprint": 1530 },
+				"swim": { "base": 650 }
+			},
+			"staminaRates": {
+				"sprint": -20,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 600,
+				"defaultSwingRadius": 350,
+				"attacks": [ { "name": "None", "interval": 0.2, "dmg": 600, "radius": 350, "stamina": 0 } ]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/Mods/Trex/Blueprints/DinoDropInventoryComponent_Carnivore_Medium_Alpha.DinoDropInventoryComponent_Carnivore_Medium_Alpha"
+					}
+				],
+				"baseXP": 12
+			}
+		},
+		{
 			"name": "Dunkleosteus",
 			"bp": "/Game/Mods/Trex/Dinos/Dunkleo/Dunkle_Character_BP_ADO.Dunkle_Character_BP_ADO_C",
 			"dinoNameTag": "Dunkle",
@@ -17023,11 +17078,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 1485 },
+				"walk": { "base": 75, "sprint": 495 },
 				"swim": { "base": 225, "sprint": 1485 }
 			},
 			"movementD": {
-				"walk": { "base": 1440, "sprint": 2376 },
+				"walk": { "base": 480, "sprint": 792 },
 				"swim": { "base": 1440, "sprint": 2376 }
 			},
 			"staminaRates": {
@@ -17037,7 +17092,7 @@
 			"attack": {
 				"defaultDmg": 115,
 				"defaultSwingRadius": 930,
-				"attacks": [ { "name": "Bite", "interval": 10, "dmg": 115, "radius": 650, "stamina": 0 } ]
+				"attacks": [ { "name": "Bite", "interval": 1, "dmg": 115, "radius": 650, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -17075,11 +17130,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 225, "sprint": 1485 },
+				"walk": { "base": 112.5, "sprint": 742.5 },
 				"swim": { "base": 225, "sprint": 1485 }
 			},
 			"movementD": {
-				"walk": { "base": 1440, "sprint": 2376 },
+				"walk": { "base": 720, "sprint": 1188 },
 				"swim": { "base": 1440, "sprint": 2376 }
 			},
 			"staminaRates": {
@@ -18535,11 +18590,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1100, "sprint": 1540 },
+				"walk": { "base": 550, "sprint": 770 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 1760, "sprint": 3520 },
+				"walk": { "base": 880, "sprint": 1760 },
 				"swim": { "base": 1760 }
 			},
 			"staminaRates": {
@@ -18596,11 +18651,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1100, "sprint": 1540 },
+				"walk": { "base": 550, "sprint": 770 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 1760, "sprint": 3520 },
+				"walk": { "base": 880, "sprint": 1760 },
 				"swim": { "base": 1760 }
 			},
 			"staminaRates": {
@@ -18716,11 +18771,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1100, "sprint": 1540 },
+				"walk": { "base": 550, "sprint": 770 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 1760, "sprint": 3520 },
+				"walk": { "base": 880, "sprint": 1760 },
 				"swim": { "base": 1760 }
 			},
 			"staminaRates": {
@@ -18773,11 +18828,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1100, "sprint": 1540 },
+				"walk": { "base": 550, "sprint": 770 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 1760, "sprint": 3520 },
+				"walk": { "base": 880, "sprint": 1760 },
 				"swim": { "base": 1760 }
 			},
 			"staminaRates": {
@@ -18842,11 +18897,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 1100, "sprint": 1540 },
+				"walk": { "base": 550, "sprint": 770 },
 				"swim": { "base": 1100 }
 			},
 			"movementD": {
-				"walk": { "base": 1760, "sprint": 3520 },
+				"walk": { "base": 880, "sprint": 1760 },
 				"swim": { "base": 1760 }
 			},
 			"staminaRates": {
@@ -27925,7 +27980,7 @@
 		},
 		{
 			"name": "Alpha Megalodon",
-			"bp": "/Game/Mods/Trex/Dinos/Shark/Alpha/AlphaMegalodon_Character_BP_ADO_2.AlphaMegalodon_Character_BP_ADO_2_C",
+			"bp": "/Game/Mods/Trex/Dinos/Shark/Alpha/AlphaMegalodon_Character_BP_ADO.AlphaMegalodon_Character_BP_ADO_C",
 			"dinoNameTag": "Mega",
 			"customTag": "AlphaMegalodon",
 			"targetingTeamName": "Carnivore_Water",
@@ -27956,11 +28011,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 570.4 },
+				"walk": { "base": 550, "sprint": 784.3 },
 				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 900, "sprint": 2070 },
+				"walk": { "base": 1237.5, "sprint": 2846.2 },
 				"swim": { "base": 900 }
 			},
 			"staminaRates": {
@@ -28017,11 +28072,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 570.4 },
+				"walk": { "base": 750, "sprint": 1069.5 },
 				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 900, "sprint": 2070 },
+				"walk": { "base": 1687.5, "sprint": 3881.2 },
 				"swim": { "base": 900 }
 			},
 			"staminaRates": {
@@ -28031,7 +28086,7 @@
 			"attack": {
 				"defaultDmg": 16000,
 				"defaultSwingRadius": 190,
-				"attacks": [ { "name": "None", "interval": 0.35, "dmg": 16000, "radius": 400, "stamina": 0 } ]
+				"attacks": [ { "name": "None", "interval": 1350, "dmg": 16000, "radius": 400, "stamina": 0 } ]
 			},
 			"death": {
 				"lootBagChance": 1,
@@ -28082,11 +28137,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 570.4 },
+				"walk": { "base": 500, "sprint": 713 },
 				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 900, "sprint": 2070 },
+				"walk": { "base": 1125, "sprint": 2587.5 },
 				"swim": { "base": 900 }
 			},
 			"staminaRates": {
@@ -28207,11 +28262,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 570.4 },
+				"walk": { "base": 550, "sprint": 784.3 },
 				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 900, "sprint": 2070 },
+				"walk": { "base": 1237.5, "sprint": 2846.2 },
 				"swim": { "base": 900 }
 			},
 			"staminaRates": {
@@ -28329,11 +28384,11 @@
 				"maxSpeed": 1550
 			},
 			"movementW": {
-				"walk": { "base": 400, "sprint": 570.4 },
+				"walk": { "base": 650, "sprint": 926.9 },
 				"swim": { "base": 400 }
 			},
 			"movementD": {
-				"walk": { "base": 900, "sprint": 2070 },
+				"walk": { "base": 1462.5, "sprint": 3363.7 },
 				"swim": { "base": 900 }
 			},
 			"staminaRates": {
@@ -39858,6 +39913,70 @@
 			"death": { "baseXP": 2 }
 		},
 		{
+			"name": "Mini Tek Harvester",
+			"bp": "/Game/Mods/Trex/Gen2/Dinos/TekStrider/ResourceTekStrider_Character_BP_mini.ResourceTekStrider_Character_BP_mini_C",
+			"dinoNameTag": "TekStrider",
+			"customTag": "TekStrider",
+			"targetingTeamName": "Herbivores_Large",
+			"mass": 360,
+			"dragWeight": 1000,
+			"flags": [
+				"allowRiding",
+				"canBeDragged",
+				"canDrag",
+				"doStepDamage",
+				"isBigDino"
+			],
+			"leveling": {
+				"wildLevelTable": [
+					{ "chance": 0.5405405, "min": 5, "max": 10 },
+					{ "chance": 0.2702703, "min": 12, "max": 24 },
+					{ "chance": 0.1351351, "min": 26, "max": 40 },
+					{ "chance": 0.05405405, "min": 42, "max": 60 }
+				]
+			},
+			"falling": {
+				"dmgMult": 2,
+				"maxSpeed": 1550
+			},
+			"movementW": {
+				"walk": { "base": 180, "sprint": 630 }
+			},
+			"movementD": {
+				"walk": { "base": 180, "sprint": 630 }
+			},
+			"staminaRates": { "sprint": -4 },
+			"attack": {
+				"defaultDmg": 0,
+				"defaultSwingRadius": 90,
+				"attacks": [
+					{ "name": "LeftClickMeleeAdjustIndex", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "UseHeadAttachment", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "UseChestAttachment", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "None", "interval": 0, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "stomp back", "interval": 0.375, "dmg": 135, "radius": 1000, "stamina": 5 },
+					{ "name": "stomp back right", "interval": 0.375, "dmg": 135, "radius": 900, "stamina": 5 },
+					{ "name": "stomp front right", "interval": 0.375, "dmg": 135, "radius": 900, "stamina": 5 },
+					{ "name": "stomp front", "interval": 0.375, "dmg": 135, "radius": 900, "stamina": 5 },
+					{ "name": "stomp front left", "interval": 0.375, "dmg": 135, "radius": 900, "stamina": 5 },
+					{ "name": "stomp back left", "interval": 0.375, "dmg": 135, "radius": 900, "stamina": 5 },
+					{ "name": "Hacking Fail Electricution", "interval": 0.15, "dmg": 0, "radius": 4000, "stamina": 0 },
+					{ "name": "SwimAttack", "interval": 0.375, "dmg": 135, "radius": 900, "stamina": 5 },
+					{ "name": "AIDetermineStomp", "interval": 0.15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildShootHeavyCannon", "interval": 0.15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildToggleDirectionalShield", "interval": 0.15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildShootSilencer", "interval": 0.15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildShootLazers", "interval": 0.15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildToggleOmniShield", "interval": 0.15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildShootRadar", "interval": 0.15, "dmg": 0, "radius": 0, "stamina": 0 },
+					{ "name": "WildShootHarvester", "interval": 0.15, "dmg": 0, "radius": 0, "stamina": 0 }
+				]
+			},
+			"death": { "baseXP": 2 }
+		},
+		{
 			"name": "Tek Stryder",
 			"bp": "/Game/Mods/Trex/Gen2/Dinos/TekStrider/TekStrider_Character_BP_ADO.TekStrider_Character_BP_ADO_C",
 			"dinoNameTag": "TekStrider",
@@ -48145,6 +48264,61 @@
 			}
 		},
 		{
+			"name": "Purple Tribesman with Poison Grenade",
+			"bp": "/Game/Mods/Trex/Tribesmans/Purple/Purple_Tribesman_Character_BP_F_Grenade.Purple_Tribesman_Character_BP_F_Grenade_C",
+			"dinoNameTag": "Tribesman",
+			"customTag": "Tribesman",
+			"targetingTeamName": "Carnivores_High",
+			"mass": 100,
+			"dragWeight": 35,
+			"flags": [ "canBeTorpid", "isAmphibious", "isTameable" ],
+			"leveling": {
+				"wildLevelTable": [ { "chance": 1, "min": 5, "max": 60 } ]
+			},
+			"falling": {
+				"dmgMult": 1.5,
+				"maxSpeed": 1200
+			},
+			"movementW": {
+				"walk": { "base": 325, "sprint": 650 },
+				"swim": { "base": 300 }
+			},
+			"movementD": {
+				"walk": { "base": 325, "sprint": 650 },
+				"swim": { "base": 300 }
+			},
+			"staminaRates": {
+				"sprint": -6,
+				"swimOrFly": -3
+			},
+			"attack": {
+				"defaultDmg": 200,
+				"defaultSwingRadius": 0,
+				"attacks": [
+					{
+						"name": "None", "interval": 0.5, "dmg": 200, "radius": 360, "stamina": 10,
+						"isProjectile": true
+					},
+					{ "name": "None", "interval": 1, "dmg": 200, "radius": 360, "stamina": 10 },
+					{
+						"name": "None", "interval": 30, "dmg": 200, "radius": 360, "stamina": 10,
+						"isProjectile": true
+					},
+					{ "name": "Summon Minions", "interval": 60, "dmg": 0, "radius": 0, "stamina": 50 }
+				]
+			},
+			"death": {
+				"lootBagChance": 1,
+				"lootBags": [
+					{
+						"chance": 1,
+						"item": "/Game/PrimalEarth/CoreBlueprints/Inventories/DinoDropInventoryComponent_BP_Base.DinoDropInventoryComponent_BP_Base"
+					}
+				],
+				"baseXP": 2
+			}
+		},
+		{
 			"name": "Purple Tribesman with Longneck",
 			"bp": "/Game/Mods/Trex/Tribesmans/Purple/Purple_Tribesman_Character_BP_F_Longneck.Purple_Tribesman_Character_BP_F_Longneck_C",
 			"dinoNameTag": "Tribesman",
@@ -49730,7 +49904,7 @@
 				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 50, "max": 50 } ]
+				"wildLevelTable": [ { "chance": 1, "min": 60, "max": 60 } ]
 			},
 			"falling": {
 				"dmgMult": 0,
@@ -49790,7 +49964,7 @@
 				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 50, "max": 50 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 60, "max": 60 } ],
 				"mutagenCost": 990001
 			},
 			"cloning": {
@@ -49857,7 +50031,7 @@
 				"isCarnivore"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 50, "max": 50 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 60, "max": 60 } ],
 				"mutagenCost": 990001
 			},
 			"cloning": {
@@ -50241,7 +50415,7 @@
 				"preventCharacterBasing"
 			],
 			"leveling": {
-				"wildLevelTable": [ { "chance": 1, "min": 50, "max": 50 } ],
+				"wildLevelTable": [ { "chance": 1, "min": 60, "max": 60 } ],
 				"mutagenCost": 990001
 			},
 			"cloning": {
